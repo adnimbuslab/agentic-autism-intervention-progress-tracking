@@ -216,3 +216,34 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Frontend / Node
+node_modules/
+.next/
+out/
+coverage/
+
+# Environment / secrets
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# IDE / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Protected / raw research data
+data/raw/
+data/private/
+extracted_data/
+*.cha
+
+# Local databases / temporary files
+*.db
+*.sqlite
+*.sqlite3
+tmp/
+temp/
