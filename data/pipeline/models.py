@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import enum
 from datetime import date
 from typing import Optional
 
@@ -65,3 +66,85 @@ class UnifiedRow(BaseModel):
     tier_spa: Optional[str] = None
     tier_act: Optional[str] = None
     tier_gpx: Optional[str] = None
+
+
+class DeidentificationReport(BaseModel):
+    """Summary of deidentification operations performed on a corpus."""
+
+    total_sessions: int = 0
+    replacement_count: int = 0
+    flagged_items: list[str] = Field(default_factory=list)
+
+
+class DeidentifiedResult(BaseModel):
+    """Container for deidentified sessions and their report."""
+
+    sessions: list[Session] = Field(default_factory=list)
+    report: DeidentificationReport = Field(default_factory=DeidentificationReport)
+
+
+class EpisodeType(str, enum.Enum):
+    """Communicative/behavioral episode category."""
+
+    REQUEST = "request"
+    IMITATION = "imitation"
+    JOINT_ATTENTION = "joint_attention"
+    PROTEST = "protest"
+    RESPONSE = "response"
+    INITIATION = "initiation"
+    PLAY = "play"
+    OTHER = "other"
+
+
+class Episode(BaseModel):
+    """A coherent multi-turn behavioral episode extracted from a session."""
+
+    episode_id: str
+    corpus: str
+    child_id: str
+    session_id: str
+    source_file: str
+    episode_type: EpisodeType
+    utterances: list[Utterance]
+    start_line: int
+    end_line: int
+
+
+class SegmentTurn(BaseModel):
+    """A single turn within a behavioral segment, with tier annotations."""
+
+    speaker: str
+    text: str
+    spa: Optional[str] = None
+    act: Optional[str] = None
+    gpx: Optional[str] = None
+
+
+class SegmentSource(BaseModel):
+    """Provenance information for a behavioral segment."""
+
+    corpus: str
+    child_id: str
+    session_id: str
+    source_file: str
+    turns: list[SegmentTurn]
+
+
+class ProvisionalExtraction(BaseModel):
+    """Placeholder for future LLM-based structured extraction."""
+
+    status: str = "provisional_llm"
+    structured_record: None = None
+    provider: None = None
+    model: None = None
+    prompt_version: None = None
+    schema_version: None = None
+    generated_at: None = None
+
+
+class BehavioralSegment(BaseModel):
+    """A selected behavioral segment ready for downstream extraction."""
+
+    segment_id: str
+    source: SegmentSource
+    provisional_extraction: ProvisionalExtraction = Field(default_factory=ProvisionalExtraction)
