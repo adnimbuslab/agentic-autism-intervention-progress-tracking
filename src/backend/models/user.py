@@ -35,4 +35,5 @@ class User(Base):
 
     actor_assignments: Mapped[list["ActorAssignment"]] = relationship(  # noqa: F821
         back_populates="user",
+        foreign_keys="[ActorAssignment.user_id]",
     )

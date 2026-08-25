@@ -20,6 +20,9 @@ class Settings(BaseSettings):
     extraction_provider: Literal["temporary_llm", "finetuned_model"] = "temporary_llm"
     anthropic_api_key: str = ""
 
+    # Observation workflow
+    clarification_max_turns: int = 3
+
     # Application
     app_env: Literal["development", "staging", "production"] = "development"
     app_debug: bool = True
