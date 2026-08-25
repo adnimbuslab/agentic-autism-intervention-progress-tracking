@@ -23,6 +23,16 @@ class Settings(BaseSettings):
     # Observation workflow
     clarification_max_turns: int = 3
 
+    # Adequacy thresholds
+    adequacy_min_observations: int = 5
+    adequacy_limited_observations: int = 3
+    adequacy_field_completeness_threshold: float = 0.7
+    adequacy_temporal_cluster_max_ratio: float = 0.8
+
+    # Reporting
+    reporting_model: str = "claude-sonnet-4-20250514"
+    reporting_prompt_version: str = "1.0"
+
     # Application
     app_env: Literal["development", "staging", "production"] = "development"
     app_debug: bool = True

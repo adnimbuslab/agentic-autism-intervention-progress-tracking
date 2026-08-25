@@ -44,6 +44,12 @@ class ValidationResult(BaseModel):
 # --- Adequacy ---
 
 
+class AdequacyLevel(str, enum.Enum):
+    ADEQUATE = "adequate"
+    LIMITED = "limited"
+    INSUFFICIENT = "insufficient"
+
+
 class AdequacyCheck(str, enum.Enum):
     COVERAGE = "coverage"
     TIMELINESS = "timeliness"
@@ -51,6 +57,8 @@ class AdequacyCheck(str, enum.Enum):
     CONTRIBUTOR_REPRESENTATION = "contributor_representation"
     FIELD_COMPLETENESS = "field_completeness"
     CONSISTENCY = "consistency"
+    GOAL_COVERAGE = "goal_coverage"
+    TEMPORAL_DISTRIBUTION = "temporal_distribution"
 
 
 class AdequacyCheckResult(BaseModel):
@@ -62,9 +70,11 @@ class AdequacyCheckResult(BaseModel):
 
 
 class AdequacyResult(BaseModel):
+    level: AdequacyLevel = AdequacyLevel.INSUFFICIENT
     eligible: bool
     checks: list[AdequacyCheckResult] = Field(default_factory=list)
     partial_abstentions: dict[str, str] = Field(default_factory=dict)
+    quality_flags: list[str] = Field(default_factory=list)
 
 
 # --- Analytics ---
@@ -96,11 +106,20 @@ class AnalyticsResult(BaseModel):
 class EvidencePacket(BaseModel):
     child_id: str
     review_period_id: str
+    review_period_start: str
+    review_period_end: str
     goals: list[dict[str, object]] = Field(default_factory=list)
     structured_records: list[dict[str, object]] = Field(default_factory=list)
-    analytics: AnalyticsResult
+    record_ids: list[str] = Field(default_factory=list)
+    record_versions: dict[str, int] = Field(default_factory=dict)
+    analytics: Optional[AnalyticsResult] = None
     adequacy: AdequacyResult
     quality_flags: list[str] = Field(default_factory=list)
+    contributor_summary: dict[str, int] = Field(default_factory=dict)
+    setting_summary: dict[str, int] = Field(default_factory=dict)
+    observation_count: int = 0
+    abstained_count: int = 0
+    review_count: int = 0
 
 
 class ReportSection(BaseModel):
@@ -110,12 +129,13 @@ class ReportSection(BaseModel):
     abstention_note: Optional[str] = None
 
 
-class GeneratedReport(BaseModel):
+class GeneratedReportData(BaseModel):
     child_id: str
     review_period_id: str
     sections: list[ReportSection] = Field(default_factory=list)
     generated_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     provider: str
     model: str
+    prompt_version: str = "1.0"
     validation_passed: bool = False
     validation_errors: list[str] = Field(default_factory=list)

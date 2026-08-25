@@ -34,6 +34,8 @@ class GeneratedReport(Base):
     evidence_packet_json: Mapped[dict] = mapped_column(JSONB, nullable=False)
     provider: Mapped[str] = mapped_column(String(64), nullable=False)
     model: Mapped[str] = mapped_column(String(128), nullable=False)
+    prompt_version: Mapped[str] = mapped_column(String(32), nullable=False, default="1.0")
+    version: Mapped[int] = mapped_column(default=1, nullable=False)
     validation_passed: Mapped[bool] = mapped_column(nullable=False, default=False)
     validation_errors: Mapped[dict | None] = mapped_column(JSONB, nullable=True)
     flagged: Mapped[bool] = mapped_column(default=False, nullable=False)

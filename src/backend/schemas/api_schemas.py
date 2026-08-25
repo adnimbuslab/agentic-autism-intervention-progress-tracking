@@ -278,3 +278,131 @@ class PaginatedResponse(BaseModel):
     total: int
     page: int = 1
     page_size: int = 50
+
+
+# --- Analytics (Phase 4) ---
+
+
+class AnalyticsRequest(BaseModel):
+    review_period_id: uuid.UUID
+    goal_id: Optional[uuid.UUID] = None
+
+
+class KpiResponse(BaseModel):
+    name: str
+    numerator: float
+    denominator: float
+    value: Optional[float] = None
+    abstained: bool = False
+    abstention_reason: Optional[str] = None
+    display_eligible: bool = True
+
+
+class AdequacyCheckResponse(BaseModel):
+    check: str
+    passed: bool
+    detail: str
+    value: Optional[float] = None
+    threshold: Optional[float] = None
+
+
+class AdequacyResponse(BaseModel):
+    level: str
+    eligible: bool
+    checks: list[AdequacyCheckResponse] = Field(default_factory=list)
+    partial_abstentions: dict[str, str] = Field(default_factory=dict)
+    quality_flags: list[str] = Field(default_factory=list)
+
+
+class AnalyticsResponse(BaseModel):
+    child_id: uuid.UUID
+    review_period_id: uuid.UUID
+    goal_id: Optional[uuid.UUID] = None
+    kpis: list[KpiResponse] = Field(default_factory=list)
+    adequacy: AdequacyResponse
+    computed_at: datetime
+
+
+# --- Reports (Phase 4) ---
+
+
+class ReportGenerateRequest(BaseModel):
+    review_period_id: uuid.UUID
+    goal_id: Optional[uuid.UUID] = None
+
+
+class ReportSectionResponse(BaseModel):
+    heading: str
+    body: str
+    evidence_refs: list[str] = Field(default_factory=list)
+    abstention_note: Optional[str] = None
+
+
+class ReportResponse(BaseModel):
+    id: uuid.UUID
+    child_id: uuid.UUID
+    review_period_id: uuid.UUID
+    sections: list[ReportSectionResponse] = Field(default_factory=list)
+    provider: str
+    model: str
+    prompt_version: str
+    version: int
+    validation_passed: bool
+    validation_errors: Optional[dict] = None
+    flagged: bool
+    flagged_reason: Optional[str] = None
+    flagged_by: Optional[uuid.UUID] = None
+    generated_at: datetime
+
+    model_config = {"from_attributes": True}
+
+
+class ReportListItem(BaseModel):
+    id: uuid.UUID
+    child_id: uuid.UUID
+    review_period_id: uuid.UUID
+    version: int
+    validation_passed: bool
+    flagged: bool
+    generated_at: datetime
+
+    model_config = {"from_attributes": True}
+
+
+class ReportFlagRequest(BaseModel):
+    reason: str = Field(min_length=1)
+
+
+class EvidencePacketResponse(BaseModel):
+    child_id: str
+    review_period_id: str
+    review_period_start: str
+    review_period_end: str
+    goals: list[dict] = Field(default_factory=list)
+    record_ids: list[str] = Field(default_factory=list)
+    record_versions: dict[str, int] = Field(default_factory=dict)
+    contributor_summary: dict[str, int] = Field(default_factory=dict)
+    setting_summary: dict[str, int] = Field(default_factory=dict)
+    observation_count: int = 0
+    abstained_count: int = 0
+    review_count: int = 0
+    quality_flags: list[str] = Field(default_factory=list)
+
+
+# --- Review Periods ---
+
+
+class ReviewPeriodCreate(BaseModel):
+    start_date: date
+    end_date: date
+
+
+class ReviewPeriodResponse(BaseModel):
+    id: uuid.UUID
+    child_id: uuid.UUID
+    start_date: date
+    end_date: date
+    is_active: bool
+    created_at: datetime
+
+    model_config = {"from_attributes": True}

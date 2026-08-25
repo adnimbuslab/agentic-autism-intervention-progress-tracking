@@ -103,8 +103,9 @@ class TestContributorDeniedEndpoints:
     async def test_contributor_cannot_view_analytics(
         self, contributor_client
     ):
-        resp = await contributor_client.get(
-            f"/children/{uuid.uuid4()}/analytics"
+        resp = await contributor_client.post(
+            f"/children/{uuid.uuid4()}/analytics",
+            json={"review_period_id": str(uuid.uuid4())},
         )
         assert resp.status_code == 403
 
