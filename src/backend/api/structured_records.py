@@ -28,6 +28,26 @@ async def list_records(
     return [RecordResponse.model_validate(r) for r in records]
 
 
+@router.get("/records/{record_id}", response_model=RecordResponse)
+async def get_record(
+    record_id: uuid.UUID,
+    user: RequireInterventionist,
+    db: DBSession,
+) -> RecordResponse:
+    record = await observation_service.get_record(db, record_id)
+    if record is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Record not found",
+        )
+    observation = await observation_service.get_observation(db, record.observation_id)
+    if observation is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Parent observation not found",
+        )
+    await authorize_child_access(user, observation.child_id, db)
+    return RecordResponse.model_validate(record)
+
+
 @router.post("/records/{record_id}/correct", response_model=RecordResponse)
 async def correct_record(
     record_id: uuid.UUID,
