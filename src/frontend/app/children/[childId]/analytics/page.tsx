@@ -3,7 +3,10 @@
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import { useAnalytics } from "@/lib/hooks/useAnalytics";
-import { useCreateReviewPeriod } from "@/lib/hooks/useReviewPeriods";
+import {
+  useReviewPeriods,
+  useCreateReviewPeriod,
+} from "@/lib/hooks/useReviewPeriods";
 import { LoadingState } from "@/components/common/LoadingState";
 import { ErrorState } from "@/components/common/ErrorState";
 import { EmptyState } from "@/components/common/EmptyState";
@@ -14,12 +17,26 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 
+function formatDate(iso: string): string {
+  return new Date(iso + "T00:00:00").toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
 export default function AnalyticsPage() {
   const { childId } = useParams<{ childId: string }>();
   const [reviewPeriodId, setReviewPeriodId] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [showCreate, setShowCreate] = useState(false);
+
+  const {
+    data: periods,
+    isLoading: periodsLoading,
+    error: periodsError,
+  } = useReviewPeriods(childId);
   const createPeriod = useCreateReviewPeriod();
 
   const {
@@ -36,20 +53,67 @@ export default function AnalyticsPage() {
     });
     setReviewPeriodId(result.id);
     setShowCreate(false);
+    setStartDate("");
+    setEndDate("");
   }
 
   if (!reviewPeriodId) {
     return (
       <div className="space-y-6">
         <h2 className="text-xl font-semibold">Analytics</h2>
-        {!showCreate ? (
-          <EmptyState
-            title="Select or create a review period"
-            description="Analytics require a review period to define the time window for analysis."
-            actionLabel="Create Review Period"
-            onAction={() => setShowCreate(true)}
-          />
-        ) : (
+
+        {periodsLoading && <LoadingState message="Loading review periods..." />}
+        {periodsError && <ErrorState error={periodsError} />}
+
+        {!periodsLoading && !periodsError && periods && periods.length > 0 && (
+          <Card title="Select a Review Period">
+            <ul className="divide-y divide-gray-200" role="list">
+              {periods.map((p) => (
+                <li key={p.id}>
+                  <button
+                    type="button"
+                    onClick={() => setReviewPeriodId(p.id)}
+                    className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors flex items-center justify-between"
+                    data-testid={`period-${p.id}`}
+                  >
+                    <span className="text-sm font-medium text-gray-900">
+                      {formatDate(p.start_date)} &ndash; {formatDate(p.end_date)}
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      {p.is_active ? "Active" : "Inactive"}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </Card>
+        )}
+
+        {!periodsLoading &&
+          !periodsError &&
+          (!periods || periods.length === 0) &&
+          !showCreate && (
+            <EmptyState
+              title="No review periods"
+              description="Create a review period to define the time window for analysis."
+              actionLabel="Create Review Period"
+              onAction={() => setShowCreate(true)}
+            />
+          )}
+
+        {!showCreate && periods && periods.length > 0 && (
+          <div className="flex justify-end">
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={() => setShowCreate(true)}
+            >
+              Create New Period
+            </Button>
+          </div>
+        )}
+
+        {showCreate && (
           <Card title="Create Review Period">
             <form onSubmit={handleCreatePeriod} className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">

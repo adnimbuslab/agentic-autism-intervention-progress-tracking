@@ -121,6 +121,69 @@ def make_evidence_packet(
     )
 
 
+def make_rich_evidence_packet(
+    child_id: str | None = None,
+    review_period_id: str | None = None,
+    adequacy: AdequacyResult | None = None,
+) -> EvidencePacket:
+    """Evidence packet with the full set of KPIs for fallback report testing."""
+    records = [
+        make_record_dict(prompt_level="independent", outcome="correct", domain="social_communication", modality="verbal", setting="home", contributor_role="parent", observation_date="2026-06-05"),
+        make_record_dict(prompt_level="verbal", outcome="correct", domain="social_communication", modality="verbal", setting="home", contributor_role="parent", observation_date="2026-06-08"),
+        make_record_dict(prompt_level="independent", outcome="partial", domain="daily_living", modality="gestural", setting="school", contributor_role="teacher", observation_date="2026-06-12"),
+        make_record_dict(prompt_level="physical", outcome="no_response", domain="social_communication", modality="verbal", setting="school", contributor_role="teacher", observation_date="2026-06-15"),
+        make_record_dict(prompt_level="independent", outcome="correct", domain="daily_living", modality="verbal", setting="home", contributor_role="parent", observation_date="2026-06-20"),
+        make_record_dict(prompt_level="verbal", outcome="correct", domain="social_communication", modality="gestural", setting="school", contributor_role="teacher", observation_date="2026-06-22"),
+        make_record_dict(prompt_level="independent", outcome="approximation", domain="daily_living", modality="verbal", setting="home", contributor_role="parent", observation_date="2026-06-25"),
+        make_record_dict(prompt_level="independent", outcome="correct", domain="social_communication", modality="verbal", setting="home", contributor_role="parent", observation_date="2026-06-28"),
+    ]
+    _adequacy = adequacy or make_adequate_result()
+    _cid = child_id or str(uuid.uuid4())
+    _rpid = review_period_id or str(uuid.uuid4())
+    kpis = [
+        KpiResult(name="observation_count", numerator=8.0, denominator=1.0, value=8.0),
+        KpiResult(name="independence_rate", numerator=5.0, denominator=8.0, value=0.625),
+        KpiResult(name="positive_outcome_rate", numerator=6.0, denominator=7.0, value=0.8571),
+        KpiResult(name="domain_distribution", numerator=2.0, denominator=8.0, value=2.0),
+        KpiResult(name="modality_distribution", numerator=2.0, denominator=8.0, value=2.0),
+        KpiResult(name="prompt_level_distribution", numerator=3.0, denominator=8.0, value=3.0),
+        KpiResult(name="outcome_distribution", numerator=4.0, denominator=8.0, value=4.0),
+        KpiResult(name="missing_data_rate", numerator=0.0, denominator=40.0, value=0.0),
+        KpiResult(name="contributor_distribution", numerator=2.0, denominator=8.0, value=2.0),
+        KpiResult(name="setting_distribution", numerator=2.0, denominator=8.0, value=2.0),
+        KpiResult(name="prompt_support_trend", numerator=3.0, denominator=4.0, value=0.25),
+        KpiResult(name="outcome_trend", numerator=3.0, denominator=4.0, value=0.0833),
+        KpiResult(name="cross_setting_comparison", numerator=2.0, denominator=8.0, value=2.0),
+        KpiResult(name="cross_contributor_comparison", numerator=2.0, denominator=8.0, value=2.0),
+    ]
+    return EvidencePacket(
+        child_id=_cid,
+        review_period_id=_rpid,
+        review_period_start="2026-06-01",
+        review_period_end="2026-06-30",
+        goals=[
+            {"id": str(uuid.uuid4()), "domain": "social_communication", "title": "Improve requests"},
+            {"id": str(uuid.uuid4()), "domain": "daily_living", "title": "Self-care routines"},
+        ],
+        structured_records=records,
+        record_ids=[r["_record_id"] for r in records],
+        record_versions={r["_record_id"]: r["_version"] for r in records},
+        analytics=AnalyticsResult(
+            child_id=_cid,
+            review_period_id=_rpid,
+            kpis=kpis,
+            adequacy=_adequacy,
+        ),
+        adequacy=_adequacy,
+        quality_flags=_adequacy.quality_flags,
+        contributor_summary={"parent": 5, "teacher": 3},
+        setting_summary={"home": 5, "school": 3},
+        observation_count=8,
+        abstained_count=0,
+        review_count=1,
+    )
+
+
 @pytest.fixture
 def interventionist_user() -> Mock:
     return make_user(Role.INTERVENTIONIST)

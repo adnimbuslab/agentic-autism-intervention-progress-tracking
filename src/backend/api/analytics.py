@@ -86,6 +86,39 @@ async def get_analytics(
     )
 
 
+@router.get("/children/{child_id}/review-periods", response_model=list[ReviewPeriodResponse])
+async def list_review_periods(
+    child_id: uuid.UUID,
+    user: RequireInterventionist,
+    db: DBSession,
+) -> list[ReviewPeriodResponse]:
+    await authorize_child_access(user, child_id, db)
+
+    from sqlalchemy import select as sa_select
+
+    from src.backend.models.goal import ReviewPeriod
+
+    stmt = (
+        sa_select(ReviewPeriod)
+        .where(ReviewPeriod.child_id == child_id)
+        .order_by(ReviewPeriod.created_at.desc())
+    )
+    result = await db.execute(stmt)
+    periods = list(result.scalars().all())
+
+    return [
+        ReviewPeriodResponse(
+            id=p.id,
+            child_id=p.child_id,
+            start_date=p.start_date,
+            end_date=p.end_date,
+            is_active=p.is_active,
+            created_at=p.created_at,
+        )
+        for p in periods
+    ]
+
+
 @router.post("/children/{child_id}/review-periods", response_model=ReviewPeriodResponse, status_code=status.HTTP_201_CREATED)
 async def create_review_period(
     child_id: uuid.UUID,
