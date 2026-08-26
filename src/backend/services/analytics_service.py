@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import uuid
 from collections import Counter
-from datetime import date
+from datetime import UTC, date, datetime, time
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -49,8 +49,8 @@ async def get_current_version_records(
         .where(
             Observation.child_id == child_id,
             Observation.status == ObservationStatus.FINALIZED,
-            Observation.submitted_at >= start_date.isoformat(),
-            Observation.submitted_at <= (end_date.isoformat() + "T23:59:59"),
+            Observation.submitted_at >= datetime.combine(start_date, time.min, tzinfo=UTC),
+            Observation.submitted_at <= datetime.combine(end_date, time.max, tzinfo=UTC),
             StructuredRecord.status.in_([RecordStatus.VALIDATED, RecordStatus.CORRECTED]),
         )
         .order_by(StructuredRecord.created_at)
@@ -156,8 +156,8 @@ async def build_evidence_packet(
         .join(Observation, StructuredRecord.observation_id == Observation.id)
         .where(
             Observation.child_id == child_id,
-            Observation.submitted_at >= period.start_date.isoformat(),
-            Observation.submitted_at <= (period.end_date.isoformat() + "T23:59:59"),
+            Observation.submitted_at >= datetime.combine(period.start_date, time.min, tzinfo=UTC),
+            Observation.submitted_at <= datetime.combine(period.end_date, time.max, tzinfo=UTC),
         )
     )
     all_result = await db.execute(all_obs_stmt)

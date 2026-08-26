@@ -15,28 +15,23 @@ from src.backend.models.user import Role
 
 class TestPasswordHashing:
     def test_hash_password_returns_different_from_plain(self):
-        with patch("src.backend.services.auth_service._pwd_context") as ctx:
-            ctx.hash.return_value = "$2b$12$mockedhash"
-            from src.backend.services.auth_service import hash_password
+        from src.backend.services.auth_service import hash_password
 
-            result = hash_password("securepass123")
-            ctx.hash.assert_called_once_with("securepass123")
-            assert result == "$2b$12$mockedhash"
+        result = hash_password("securepass123")
+        assert result != "securepass123"
+        assert result.startswith("$2b$")
 
-    def test_verify_password_delegates_to_context(self):
-        with patch("src.backend.services.auth_service._pwd_context") as ctx:
-            ctx.verify.return_value = True
-            from src.backend.services.auth_service import verify_password
+    def test_verify_password_correct(self):
+        from src.backend.services.auth_service import hash_password, verify_password
 
-            assert verify_password("plain", "hashed") is True
-            ctx.verify.assert_called_once_with("plain", "hashed")
+        hashed = hash_password("plain")
+        assert verify_password("plain", hashed) is True
 
     def test_verify_password_wrong_returns_false(self):
-        with patch("src.backend.services.auth_service._pwd_context") as ctx:
-            ctx.verify.return_value = False
-            from src.backend.services.auth_service import verify_password
+        from src.backend.services.auth_service import hash_password, verify_password
 
-            assert verify_password("wrong", "hashed") is False
+        hashed = hash_password("correct")
+        assert verify_password("wrong", hashed) is False
 
 
 class TestCreateAccessToken:

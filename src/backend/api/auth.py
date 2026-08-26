@@ -25,8 +25,14 @@ async def login(request: Request, db: DBSession) -> TokenResponse:
         email = str(form.get("username", ""))
         password = str(form.get("password", ""))
     else:
-        body = await request.json()
-        parsed = LoginRequest(**body)
+        try:
+            body = await request.json()
+            parsed = LoginRequest(**body)
+        except Exception:
+            raise HTTPException(
+                status_code=422,
+                detail="Invalid request body: expected JSON with 'email' and 'password'",
+            )
         email = parsed.email
         password = parsed.password
 

@@ -132,13 +132,16 @@ async def _handle_routing(
             observation.finalized_at = datetime.now(UTC)
             return RoutingDecision.RETAIN_WITH_UNKNOWN.value, None
 
-        router = AbstentionRouter()
-        if extraction.observations:
-            questions = router.generate_clarification_questions(
-                extraction.observations[0], validation
-            )
+        if extraction.clarification_questions:
+            questions = extraction.clarification_questions
         else:
-            questions = []
+            router = AbstentionRouter()
+            if extraction.observations:
+                questions = router.generate_clarification_questions(
+                    extraction.observations[0], validation
+                )
+            else:
+                questions = []
         question = questions[0] if questions else None
 
         if question:
@@ -174,21 +177,35 @@ async def _handle_routing(
     return routing.value, question
 
 
-def build_conversation_json(observation: Observation) -> dict:
-    turns: list[dict] = []
-    if observation.clarification_turns:
-        for ct in observation.clarification_turns:
-            entry: dict = {
-                "turn": ct.turn_number,
-                "question": ct.question,
-                "answer": ct.answer,
-                "asked_at": ct.created_at.isoformat() if ct.created_at else None,
-                "answered_at": ct.answered_at.isoformat() if ct.answered_at else None,
-            }
-            turns.append(entry)
+def build_conversation_json(
+    observation: Observation,
+    clarification_turns: list[ClarificationTurn] | None = None,
+) -> dict:
+    turns_list: list[dict] = []
+    if clarification_turns is not None:
+        ct_source = clarification_turns
+    else:
+        from sqlalchemy import inspect as sa_inspect
+        try:
+            insp = sa_inspect(observation)
+            if "clarification_turns" not in insp.unloaded:
+                ct_source = observation.clarification_turns or []
+            else:
+                ct_source = []
+        except Exception:
+            ct_source = getattr(observation, "clarification_turns", None) or []
+    for ct in ct_source:
+        entry: dict = {
+            "turn": ct.turn_number,
+            "question": ct.question,
+            "answer": ct.answer,
+            "asked_at": ct.created_at.isoformat() if ct.created_at else None,
+            "answered_at": ct.answered_at.isoformat() if ct.answered_at else None,
+        }
+        turns_list.append(entry)
     return {
         "raw_text": observation.raw_text,
-        "clarifications": turns,
+        "clarifications": turns_list,
     }
 
 

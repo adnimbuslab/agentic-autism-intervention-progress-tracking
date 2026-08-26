@@ -4,7 +4,7 @@ import enum
 import uuid
 from datetime import datetime
 
-from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, text
+from sqlalchemy import DateTime, Enum as SAEnum, ForeignKey, Integer, String, Text, text
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
@@ -46,6 +46,7 @@ class Observation(Base):
     source_type: Mapped[str] = mapped_column(String(32), nullable=False)
     setting: Mapped[str] = mapped_column(String(32), nullable=False)
     status: Mapped[ObservationStatus] = mapped_column(
+        SAEnum(ObservationStatus, values_callable=lambda e: [x.value for x in e]),
         nullable=False,
         default=ObservationStatus.PENDING,
     )
@@ -131,6 +132,7 @@ class StructuredRecord(Base):
     )
     version: Mapped[int] = mapped_column(Integer, nullable=False, default=1)
     status: Mapped[RecordStatus] = mapped_column(
+        SAEnum(RecordStatus, values_callable=lambda e: [x.value for x in e]),
         nullable=False,
         default=RecordStatus.PENDING,
     )

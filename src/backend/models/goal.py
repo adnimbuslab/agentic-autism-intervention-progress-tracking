@@ -4,7 +4,7 @@ import enum
 import uuid
 from datetime import date, datetime
 
-from sqlalchemy import Date, DateTime, ForeignKey, String, Text, text
+from sqlalchemy import Date, DateTime, Enum as SAEnum, ForeignKey, String, Text, text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
@@ -32,8 +32,14 @@ class Goal(Base):
         nullable=False,
         index=True,
     )
-    goal_type: Mapped[GoalType] = mapped_column(nullable=False)
-    domain: Mapped[Domain] = mapped_column(nullable=False)
+    goal_type: Mapped[GoalType] = mapped_column(
+        SAEnum(GoalType, values_callable=lambda e: [x.value for x in e]),
+        nullable=False,
+    )
+    domain: Mapped[Domain] = mapped_column(
+        SAEnum(Domain, values_callable=lambda e: [x.value for x in e]),
+        nullable=False,
+    )
     title: Mapped[str] = mapped_column(String(512), nullable=False)
     description: Mapped[str] = mapped_column(Text, nullable=False)
     criteria: Mapped[str | None] = mapped_column(Text, nullable=True)

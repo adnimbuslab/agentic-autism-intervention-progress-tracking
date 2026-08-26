@@ -3,7 +3,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime
 
-from sqlalchemy import DateTime, ForeignKey, String, UniqueConstraint, text
+from sqlalchemy import DateTime, Enum as SAEnum, ForeignKey, String, UniqueConstraint, text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
@@ -35,7 +35,10 @@ class ActorAssignment(Base):
         nullable=False,
         index=True,
     )
-    role: Mapped[Role] = mapped_column(nullable=False)
+    role: Mapped[Role] = mapped_column(
+        SAEnum(Role, values_callable=lambda e: [x.value for x in e]),
+        nullable=False,
+    )
     invited_by: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True),
         ForeignKey("users.id"),

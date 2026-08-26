@@ -3,7 +3,7 @@ from __future__ import annotations
 import enum
 import uuid
 
-from sqlalchemy import String, text
+from sqlalchemy import Enum as SAEnum, String, text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -30,7 +30,10 @@ class User(Base):
     email: Mapped[str] = mapped_column(String(320), unique=True, nullable=False, index=True)
     hashed_password: Mapped[str] = mapped_column(String(256), nullable=False)
     full_name: Mapped[str] = mapped_column(String(256), nullable=False)
-    role: Mapped[Role] = mapped_column(nullable=False)
+    role: Mapped[Role] = mapped_column(
+        SAEnum(Role, values_callable=lambda e: [x.value for x in e]),
+        nullable=False,
+    )
     is_active: Mapped[bool] = mapped_column(default=True, nullable=False)
 
     actor_assignments: Mapped[list["ActorAssignment"]] = relationship(  # noqa: F821

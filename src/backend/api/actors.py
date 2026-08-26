@@ -5,6 +5,7 @@ from __future__ import annotations
 import uuid
 
 from fastapi import APIRouter, HTTPException, status
+from sqlalchemy.exc import IntegrityError
 
 from src.backend.api.deps import (
     DBSession,
@@ -35,14 +36,21 @@ async def invite_actor(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="No user found with that email",
         )
-    assignment = await workspace_service.invite_actor(
-        db,
-        child_id=child_id,
-        user_id=target_user.id,
-        role=body.role,
-        invited_by=user.id,
-        invitation_email=body.email,
-    )
+    try:
+        assignment = await workspace_service.invite_actor(
+            db,
+            child_id=child_id,
+            user_id=target_user.id,
+            role=body.role,
+            invited_by=user.id,
+            invitation_email=body.email,
+        )
+    except IntegrityError:
+        await db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="User is already assigned to this child",
+        )
     await audit_service.log_event(
         db,
         user_id=user.id,

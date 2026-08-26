@@ -247,3 +247,7 @@ extracted_data/
 *.sqlite3
 tmp/
 temp/
+
+# Playwright
+test-results/
+playwright-report/

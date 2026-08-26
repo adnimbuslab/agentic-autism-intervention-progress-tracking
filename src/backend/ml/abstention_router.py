@@ -44,6 +44,16 @@ class AbstentionRouter:
             if observation and self._has_recoverable_fields(observation, validation):
                 return RoutingDecision.CLARIFY
 
+        if (
+            extraction.status == ExtractionStatus.PARTIAL
+            and extraction.clarification_questions
+            and validation.routing in (
+                RoutingDecision.RETAIN_WITH_UNKNOWN,
+                RoutingDecision.INTERVENTIONIST_REVIEW,
+            )
+        ):
+            return RoutingDecision.CLARIFY
+
         return validation.routing
 
     def generate_clarification_questions(
