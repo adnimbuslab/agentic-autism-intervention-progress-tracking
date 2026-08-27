@@ -19,6 +19,7 @@ def _kpi(result, name: str) -> KpiResult:
 
 
 class TestInsufficientAdequacy:
+    # @spec ANALYTICS-001
     def test_returns_single_abstained_kpi(self, engine: AnalyticsEngine):
         adequacy = AdequacyResult(
             level=AdequacyLevel.INSUFFICIENT,
@@ -55,6 +56,7 @@ class TestIndependenceRate:
         kpi = _kpi(result, "independence_rate")
         assert kpi.value == 1.0
 
+    # @spec ANALYTICS-011
     def test_mixed(self, engine: AnalyticsEngine):
         records = [make_record_dict(prompt_level="independent") for _ in range(3)]
         records += [make_record_dict(prompt_level="verbal_prompt") for _ in range(2)]
@@ -62,6 +64,7 @@ class TestIndependenceRate:
         kpi = _kpi(result, "independence_rate")
         assert kpi.value == 0.6
 
+    # @spec ANALYTICS-010
     def test_no_prompt_data_abstains(self, engine: AnalyticsEngine):
         records = [make_record_dict(prompt_level=None) for _ in range(5)]
         result = engine.compute("c1", "rp1", records, make_adequate_result())
@@ -76,6 +79,7 @@ class TestPositiveOutcomeRate:
         kpi = _kpi(result, "positive_outcome_rate")
         assert kpi.value == 1.0
 
+    # @spec ANALYTICS-013
     def test_mixed_outcomes(self, engine: AnalyticsEngine):
         records = [
             make_record_dict(outcome="correct"),
@@ -88,6 +92,7 @@ class TestPositiveOutcomeRate:
         kpi = _kpi(result, "positive_outcome_rate")
         assert kpi.value == 0.6
 
+    # @spec ANALYTICS-012
     def test_no_outcome_data_abstains(self, engine: AnalyticsEngine):
         records = [make_record_dict(outcome=None) for _ in range(5)]
         result = engine.compute("c1", "rp1", records, make_adequate_result())
@@ -96,12 +101,14 @@ class TestPositiveOutcomeRate:
 
 
 class TestMissingDataRate:
+    # @spec ANALYTICS-022
     def test_complete_data_zero_rate(self, engine: AnalyticsEngine):
         records = [make_record_dict() for _ in range(5)]
         result = engine.compute("c1", "rp1", records, make_adequate_result())
         kpi = _kpi(result, "missing_data_rate")
         assert kpi.value == 0.0
 
+    # @spec ANALYTICS-022
     def test_partially_missing(self, engine: AnalyticsEngine):
         records = [make_record_dict() for _ in range(3)]
         records.append(make_record_dict(behavior=None, domain=None, outcome=None))
@@ -112,12 +119,14 @@ class TestMissingDataRate:
 
 
 class TestTrends:
+    # @spec ANALYTICS-014
     def test_prompt_trend_needs_four_records(self, engine: AnalyticsEngine):
         records = [make_record_dict() for _ in range(3)]
         result = engine.compute("c1", "rp1", records, make_adequate_result())
         kpi = _kpi(result, "prompt_support_trend")
         assert kpi.abstained
 
+    # @spec ANALYTICS-015
     def test_prompt_trend_computed_with_four(self, engine: AnalyticsEngine):
         records = [
             make_record_dict(prompt_level="verbal_prompt", observation_date="2026-06-01"),
@@ -130,12 +139,14 @@ class TestTrends:
         assert not kpi.abstained
         assert kpi.value == 1.0
 
+    # @spec ANALYTICS-014
     def test_outcome_trend_needs_four_records(self, engine: AnalyticsEngine):
         records = [make_record_dict() for _ in range(3)]
         result = engine.compute("c1", "rp1", records, make_adequate_result())
         kpi = _kpi(result, "outcome_trend")
         assert kpi.abstained
 
+    # @spec ANALYTICS-015
     def test_outcome_trend_computed(self, engine: AnalyticsEngine):
         records = [
             make_record_dict(outcome="incorrect", observation_date="2026-06-01"),
@@ -150,6 +161,7 @@ class TestTrends:
 
 
 class TestCrossComparisons:
+    # @spec ANALYTICS-020
     def test_cross_setting_abstains_when_partial(self, engine: AnalyticsEngine):
         adequacy = AdequacyResult(
             level=AdequacyLevel.LIMITED,
@@ -162,6 +174,7 @@ class TestCrossComparisons:
         kpi = _kpi(result, "cross_setting_comparison")
         assert kpi.abstained
 
+    # @spec ANALYTICS-021
     def test_cross_contributor_abstains_when_partial(self, engine: AnalyticsEngine):
         adequacy = AdequacyResult(
             level=AdequacyLevel.LIMITED,

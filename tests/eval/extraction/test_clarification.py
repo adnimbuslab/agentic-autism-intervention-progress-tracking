@@ -47,6 +47,7 @@ def _mock_tool_response(tool_input: dict) -> Mock:
 
 @pytest.mark.eval
 class TestClarificationPrompts:
+    # @spec EXTRACT-012
     def test_clarification_history_in_conversational_prompt(self) -> None:
         history = [
             {"question": "What did the child do?", "answer": "She pointed at the cookie"},
@@ -59,6 +60,7 @@ class TestClarificationPrompts:
         assert "Q: Was any prompting provided?" in prompt
         assert "A: No, it was independent" in prompt
 
+    # @spec EXTRACT-012
     def test_clarification_history_in_chat_prompt(self) -> None:
         history = [{"question": "What domain?", "answer": "Communication"}]
         prompt = build_user_prompt_chat_segment("*CHI:\txxx .", history)

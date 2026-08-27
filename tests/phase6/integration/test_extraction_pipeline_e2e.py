@@ -145,6 +145,7 @@ class TestExtractionPipelineE2E:
 
         assert routing == RoutingDecision.ACCEPT
 
+    # @spec ABSTAIN-004
     def test_partial_routes_clarify(self):
         request = self._build_request()
         result = self._build_partial_result(request)

@@ -27,6 +27,7 @@ _QUESTION_TEMPLATES: dict[str, str] = {
 class AbstentionRouter:
     """Final routing gate combining extraction status and validation results."""
 
+    # @spec ABSTAIN-001, ABSTAIN-002, ABSTAIN-003, ABSTAIN-004, ABSTAIN-005, ABSTAIN-006
     def route(
         self,
         extraction: ExtractionResult,
@@ -56,6 +57,7 @@ class AbstentionRouter:
 
         return validation.routing
 
+    # @spec ABSTAIN-010, ABSTAIN-011, ABSTAIN-012, ABSTAIN-013
     def generate_clarification_questions(
         self,
         observation: StructuredObservation,

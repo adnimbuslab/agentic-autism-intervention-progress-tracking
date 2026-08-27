@@ -32,6 +32,7 @@ _VERBAL_KEYWORDS = frozenset({
 class ValidationEngine:
     """Pure deterministic validation for StructuredObservation records."""
 
+    # @spec VALID-001
     def validate(
         self,
         observation: StructuredObservation,
@@ -95,6 +96,7 @@ class ValidationEngine:
                     message=f"Critical field '{field_name}' is missing",
                 ))
 
+    # @spec VALID-020, VALID-021, VALID-022
     @staticmethod
     def _validate_cross_field(
         observation: StructuredObservation,
@@ -132,6 +134,7 @@ class ValidationEngine:
                 message="Outcome is set but behavior is missing",
             ))
 
+    # @spec VALID-023
     @staticmethod
     def _validate_goal_context(
         observation: StructuredObservation,
@@ -148,6 +151,7 @@ class ValidationEngine:
                 message=f"Goal context '{observation.goal_context}' not in known goal IDs",
             ))
 
+    # @spec VALID-024
     @staticmethod
     def _validate_confidence(
         observation: StructuredObservation,
@@ -176,6 +180,7 @@ class ValidationEngine:
             return f"{len(null_fields)}/{len(LLM_EXTRACTED_FIELDS)} extracted fields are null: {', '.join(sorted(null_fields))}"
         return None
 
+    # @spec VALID-010, VALID-011, VALID-012, VALID-013, VALID-014
     @staticmethod
     def _determine_routing(
         observation: StructuredObservation,

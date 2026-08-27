@@ -67,6 +67,7 @@ class TestValidateReport:
         errors = validate_report(sections, ep)
         assert any("Prohibited content" in e for e in errors)
 
+    # @spec REPORT-021
     def test_insufficient_evidence_must_be_acknowledged(self):
         inadequate = make_adequate_result(AdequacyLevel.INSUFFICIENT)
         ep = make_evidence_packet(adequacy=inadequate)
@@ -76,6 +77,7 @@ class TestValidateReport:
         errors = validate_report(sections, ep)
         assert any("insufficient evidence" in e.lower() for e in errors)
 
+    # @spec REPORT-021
     def test_insufficient_acknowledged_passes(self):
         inadequate = make_adequate_result(AdequacyLevel.INSUFFICIENT)
         ep = make_evidence_packet(adequacy=inadequate)
@@ -262,6 +264,7 @@ class TestReportGeneration:
         mock_llm.assert_awaited_once()
 
     @pytest.mark.asyncio
+    # @spec REPORT-010
     async def test_fallback_on_llm_failure(self):
         ep = make_rich_evidence_packet()
         client = ReportingClient(api_key="test-key")
@@ -274,6 +277,7 @@ class TestReportGeneration:
         assert len(report.sections) >= 5
 
     @pytest.mark.asyncio
+    # @spec REPORT-012, REPORT-020
     async def test_validation_errors_recorded(self):
         ep = make_evidence_packet()
         bad_sections = [
@@ -294,6 +298,7 @@ class TestReportGeneration:
         assert len(report.validation_errors) > 0
 
     @pytest.mark.asyncio
+    # @spec REPORT-012
     async def test_validation_runs_on_fallback(self):
         ep = make_rich_evidence_packet()
         client = ReportingClient(api_key="test-key")
@@ -325,6 +330,7 @@ class TestReportProvenance:
         assert report.generated_at is not None
 
     @pytest.mark.asyncio
+    # @spec REPORT-011
     async def test_fallback_provenance(self):
         ep = make_rich_evidence_packet()
         client = ReportingClient(api_key="test-key", model="claude-sonnet-4-20250514")

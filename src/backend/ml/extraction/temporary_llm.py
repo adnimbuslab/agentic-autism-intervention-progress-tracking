@@ -42,6 +42,7 @@ class TemporaryLLMExtractionProvider:
         self._client = AsyncAnthropic(api_key=api_key)
         self._model = model
 
+    # @spec EXTRACT-001, EXTRACT-010, EXTRACT-017, EXTRACT-018
     async def extract(self, request: ExtractionRequest) -> ExtractionResult:
         """Extract structured observation from source text via Claude tool_use."""
         start_ms = _now_ms()
@@ -106,6 +107,7 @@ class TemporaryLLMExtractionProvider:
             version=PROMPT_VERSION,
         )
 
+    # @spec EXTRACT-011, EXTRACT-012
     def _build_user_prompt(self, request: ExtractionRequest) -> str:
         history = request.clarification_history or None
         if request.source_type == SourceType.CHAT_SEGMENT:
@@ -147,6 +149,7 @@ class TemporaryLLMExtractionProvider:
             abstention_reason=tool_input.get("abstention_reason"),
         )
 
+    # @spec EXTRACT-013, EXTRACT-014, EXTRACT-015, EXTRACT-016
     @staticmethod
     def _determine_status(
         tool_input: dict[str, Any],

@@ -45,11 +45,13 @@ class TestProviderFactory:
 
 @pytest.mark.eval
 class TestFineTunedStub:
+    # @spec EXTRACT-030
     async def test_finetuned_extract_raises(self) -> None:
         provider = FineTunedExtractionProvider()
         with pytest.raises(NotImplementedError, match="not yet available"):
             await provider.extract(_make_request())
 
+    # @spec EXTRACT-031
     def test_finetuned_unavailable(self) -> None:
         provider = FineTunedExtractionProvider()
         info = provider.get_info()

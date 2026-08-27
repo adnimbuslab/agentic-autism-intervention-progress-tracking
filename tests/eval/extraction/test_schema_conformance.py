@@ -85,6 +85,7 @@ class TestSchemaConformance:
         assert len(result.observations) == 1
         assert isinstance(result.observations[0], StructuredObservation)
 
+    # @spec EXTRACT-001
     async def test_app_known_fields_preserved(self) -> None:
         request = _make_request(
             child_id="test_child_99",
@@ -160,6 +161,7 @@ class TestSchemaConformance:
         result = await provider.extract(_make_request())
         assert result.raw_llm_response is not None
 
+    # @spec EXTRACT-011
     async def test_conversational_source_type(self) -> None:
         provider = TemporaryLLMExtractionProvider(api_key="test")
         provider._client = Mock()
@@ -173,6 +175,7 @@ class TestSchemaConformance:
         user_content = messages[0]["content"]
         assert "contributor observation" in user_content.lower()
 
+    # @spec EXTRACT-011
     async def test_chat_segment_source_type(self) -> None:
         provider = TemporaryLLMExtractionProvider(api_key="test")
         provider._client = Mock()

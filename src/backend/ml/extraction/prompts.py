@@ -11,6 +11,7 @@ from src.backend.schemas.observation_schema import (
 
 PROMPT_VERSION = "1.0.0"
 
+# @spec EXTRACT-019
 EXTRACTION_TOOL_SCHEMA: dict = {
     "name": "record_observation",
     "description": "Record a structured behavioral observation extracted from the source text.",

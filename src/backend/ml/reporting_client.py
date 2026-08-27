@@ -83,6 +83,7 @@ PROHIBITED_PATTERNS = [
 ]
 
 
+# @spec REPORT-020, REPORT-021, REPORT-022
 def validate_report(
     sections: list[ReportSection],
     evidence_packet: EvidencePacket,
@@ -128,6 +129,7 @@ class ReportingClient:
         self._api_key = api_key or settings.anthropic_api_key
         self._model = model or settings.reporting_model
 
+    # @spec REPORT-001, REPORT-010, REPORT-011, REPORT-012
     async def generate_report(
         self, evidence_packet: EvidencePacket
     ) -> GeneratedReportData:

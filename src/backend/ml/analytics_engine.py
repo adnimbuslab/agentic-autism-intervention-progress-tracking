@@ -19,6 +19,7 @@ class AnalyticsEngine:
     """Computes longitudinal analytics over validated, version-current
     StructuredRecords. Only runs when adequacy allows."""
 
+    # @spec ANALYTICS-001, ANALYTICS-002
     def compute(
         self,
         child_id: str,
@@ -123,6 +124,7 @@ class AnalyticsEngine:
             value=float(len(counts)),
         )
 
+    # @spec ANALYTICS-010, ANALYTICS-011
     def _independence_rate(self, records: list[dict]) -> KpiResult:
         with_prompt = [r for r in records if r.get("prompt_level")]
         if not with_prompt:
@@ -164,6 +166,7 @@ class AnalyticsEngine:
             value=float(len(counts)),
         )
 
+    # @spec ANALYTICS-022
     def _missing_data_rate(self, records: list[dict]) -> KpiResult:
         key_fields = ["behavior", "domain", "modality", "prompt_level", "outcome"]
         total = len(records) * len(key_fields)
@@ -188,6 +191,7 @@ class AnalyticsEngine:
             value=round(rate, 4),
         )
 
+    # @spec ANALYTICS-012, ANALYTICS-013
     def _positive_outcome_rate(self, records: list[dict]) -> KpiResult:
         with_outcome = [r for r in records if r.get("outcome") and r["outcome"] != "unknown"]
         if not with_outcome:
@@ -212,6 +216,7 @@ class AnalyticsEngine:
             value=round(rate, 4),
         )
 
+    # @spec ANALYTICS-020
     def _cross_setting_comparison(
         self, records: list[dict], adequacy: AdequacyResult
     ) -> KpiResult:
@@ -233,6 +238,7 @@ class AnalyticsEngine:
             value=float(len(settings_counter)),
         )
 
+    # @spec ANALYTICS-021
     def _cross_contributor_comparison(
         self, records: list[dict], adequacy: AdequacyResult
     ) -> KpiResult:
@@ -256,6 +262,7 @@ class AnalyticsEngine:
             value=float(len(contributor_counter)),
         )
 
+    # @spec ANALYTICS-014, ANALYTICS-015
     def _prompt_support_trend(self, records: list[dict]) -> KpiResult:
         dated = self._sort_by_date(records)
         with_prompt = [(d, r) for d, r in dated if r.get("prompt_level")]
@@ -284,6 +291,7 @@ class AnalyticsEngine:
             value=change,
         )
 
+    # @spec ANALYTICS-014, ANALYTICS-015
     def _outcome_trend(self, records: list[dict]) -> KpiResult:
         dated = self._sort_by_date(records)
         with_outcome = [

@@ -70,6 +70,7 @@ class TestUnsupportedFields:
         assert obs.goal_context is None
         assert obs.duration_seconds is None
 
+    # @spec EXTRACT-016
     async def test_status_partial_when_critical_missing(self) -> None:
         provider = _provider_with_mock({
             "domain": "language",
@@ -82,6 +83,7 @@ class TestUnsupportedFields:
         result = await provider.extract(_make_request())
         assert result.status == ExtractionStatus.PARTIAL
 
+    # @spec EXTRACT-015
     async def test_status_success_when_complete(self) -> None:
         provider = _provider_with_mock({
             "domain": "social_communication",
@@ -107,6 +109,7 @@ class TestUnsupportedFields:
         result = await provider.extract(_make_request())
         assert result.status == ExtractionStatus.ABSTAINED
 
+    # @spec EXTRACT-014
     async def test_status_abstained_many_nulls(self) -> None:
         provider = _provider_with_mock({
             "domain": None,

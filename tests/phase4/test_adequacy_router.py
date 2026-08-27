@@ -35,16 +35,19 @@ def _records(n: int, **overrides) -> list[dict]:
 
 
 class TestAdequacyLevel:
+    # @spec ADEQ-010, ADEQ-016
     def test_zero_records_insufficient(self, router: AdequacyRouter):
         result = router.assess([], [], date(2026, 6, 1), date(2026, 6, 30))
         assert result.level == AdequacyLevel.INSUFFICIENT
         assert not result.eligible
 
+    # @spec ADEQ-011
     def test_below_limited_threshold_insufficient_with_critical_fail(self, router: AdequacyRouter):
         recs = _records(2)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
         assert result.level in (AdequacyLevel.INSUFFICIENT, AdequacyLevel.LIMITED)
 
+    # @spec ADEQ-014, ADEQ-016
     def test_five_records_diverse_adequate(self, router: AdequacyRouter):
         recs = _records(3, setting="home", contributor_role="parent")
         recs += _records(2, setting="school", contributor_role="teacher")
@@ -53,11 +56,13 @@ class TestAdequacyLevel:
         assert result.level == AdequacyLevel.ADEQUATE
         assert result.eligible
 
+    # @spec ADEQ-030
     def test_single_contributor_limited(self, router: AdequacyRouter):
         recs = _records(5)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
         assert "cross_contributor_comparison" in result.partial_abstentions
 
+    # @spec ADEQ-031
     def test_single_setting_partial_abstention(self, router: AdequacyRouter):
         recs = _records(5)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
@@ -65,12 +70,14 @@ class TestAdequacyLevel:
 
 
 class TestCoverageCheck:
+    # @spec ADEQ-020
     def test_passes_at_threshold(self, router: AdequacyRouter):
         recs = _records(5)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
         coverage = next(c for c in result.checks if c.check.value == "coverage")
         assert coverage.passed
 
+    # @spec ADEQ-020
     def test_fails_below_threshold(self, router: AdequacyRouter):
         recs = _records(3)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
@@ -79,6 +86,7 @@ class TestCoverageCheck:
 
 
 class TestTemporalDistribution:
+    # @spec ADEQ-022
     def test_clustered_fails(self, router: AdequacyRouter):
         recs = [
             {**_records(1)[0], "observation_date": "2026-06-15"}
@@ -88,6 +96,7 @@ class TestTemporalDistribution:
         temporal = next(c for c in result.checks if c.check.value == "temporal_distribution")
         assert not temporal.passed
 
+    # @spec ADEQ-022
     def test_spread_passes(self, router: AdequacyRouter):
         recs = _records(5)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
@@ -96,12 +105,14 @@ class TestTemporalDistribution:
 
 
 class TestGoalCoverage:
+    # @spec ADEQ-025
     def test_no_goals_passes(self, router: AdequacyRouter):
         recs = _records(5)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
         goal_check = next(c for c in result.checks if c.check.value == "goal_coverage")
         assert goal_check.passed
 
+    # @spec ADEQ-025
     def test_uncovered_goal_domain_fails(self, router: AdequacyRouter):
         recs = _records(5, domain="social_communication")
         goals = [
@@ -113,6 +124,7 @@ class TestGoalCoverage:
         goal_check = next(c for c in result.checks if c.check.value == "goal_coverage")
         assert not goal_check.passed
 
+    # @spec ADEQ-025
     def test_majority_covered_passes(self, router: AdequacyRouter):
         recs = _records(3, domain="social_communication")
         recs += _records(2, domain="behavior_regulation")
@@ -126,12 +138,14 @@ class TestGoalCoverage:
 
 
 class TestFieldCompleteness:
+    # @spec ADEQ-026
     def test_complete_records_pass(self, router: AdequacyRouter):
         recs = _records(5)
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
         fc = next(c for c in result.checks if c.check.value == "field_completeness")
         assert fc.passed
 
+    # @spec ADEQ-026
     def test_missing_fields_fail(self, router: AdequacyRouter):
         recs = [{"observation_date": "2026-06-15"} for _ in range(5)]
         result = router.assess(recs, [], date(2026, 6, 1), date(2026, 6, 30))
