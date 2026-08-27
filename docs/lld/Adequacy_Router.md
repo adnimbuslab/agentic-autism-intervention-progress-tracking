@@ -1,5 +1,6 @@
 ---
 parent: high-level-design
+prefix: ADEQ
 ---
 
 # Adequacy Router (batch)

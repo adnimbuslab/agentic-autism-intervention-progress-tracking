@@ -1,5 +1,6 @@
 ---
 parent: high-level-design
+prefix: ABSTAIN
 ---
 
 # Abstention Router (real-time)

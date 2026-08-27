@@ -1,5 +1,6 @@
 ---
 parent: high-level-design
+prefix: REPORT
 ---
 
 # Reporting LLM (ReportingClient)
