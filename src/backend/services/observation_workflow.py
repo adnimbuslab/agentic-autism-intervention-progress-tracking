@@ -57,7 +57,7 @@ async def extract_node(state: ObservationWorkflowState) -> dict:
     try:
         provider = get_extraction_provider(
             settings.extraction_provider,
-            api_key=settings.anthropic_api_key,
+            **settings.extraction_provider_kwargs,
         )
         request = ExtractionRequest(
             source_type=SourceType(state["source_type"]),

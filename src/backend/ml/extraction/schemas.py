@@ -86,7 +86,7 @@ class ProviderInfo(BaseModel):
     """Metadata about an extraction provider."""
 
     name: str
-    provider_type: Literal["temporary_llm", "finetuned_model"]
+    provider_type: Literal["temporary_llm", "ollama", "finetuned_model"]
     model_id: str
     version: str
     is_available: bool = True

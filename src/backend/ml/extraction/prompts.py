@@ -71,6 +71,22 @@ EXTRACTION_TOOL_SCHEMA: dict = {
 }
 
 
+# OpenAI-compatible (function-calling) tool schema, derived from
+# EXTRACTION_TOOL_SCHEMA above. The Anthropic and OpenAI tool-call shapes
+# differ at the envelope level ("input_schema" vs. "function.parameters")
+# but both use standard JSON Schema for the body, so the field list is
+# reused rather than duplicated -- keeps the two vendor schemas from
+# drifting out of sync with each other.
+EXTRACTION_TOOL_SCHEMA_OPENAI: dict = {
+    "type": "function",
+    "function": {
+        "name": EXTRACTION_TOOL_SCHEMA["name"],
+        "description": EXTRACTION_TOOL_SCHEMA["description"],
+        "parameters": EXTRACTION_TOOL_SCHEMA["input_schema"],
+    },
+}
+
+
 def build_system_prompt() -> str:
     """System prompt shared by both source types."""
     domain_values = ", ".join(e.value for e in Domain)

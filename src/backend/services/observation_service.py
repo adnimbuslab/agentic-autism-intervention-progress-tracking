@@ -85,7 +85,7 @@ async def _run_pipeline(
     )
     provider = get_extraction_provider(
         settings.extraction_provider,
-        api_key=settings.anthropic_api_key,
+        **settings.extraction_provider_kwargs,
     )
     extraction = await provider.extract(request)
 

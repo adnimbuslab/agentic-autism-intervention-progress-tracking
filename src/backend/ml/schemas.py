@@ -129,6 +129,35 @@ class ReportSection(BaseModel):
     abstention_note: Optional[str] = None
 
 
+# --- Goal-Attainment Forecasting (Phase 1: deterministic trajectory only) ---
+
+
+class GoalForecastResult(BaseModel):
+    """Phase 1 deterministic trajectory projection for one KPI toward a goal's
+    target threshold. No ML model is involved -- see docs/lld/Goal_Attainment_Forecasting.md.
+
+    ``attainment_window`` is always ``None`` in Phase 1: the uncertainty-quantification
+    method is an explicitly undefined open question in the owning LLD, and this
+    component abstains on it rather than fabricating a band.
+    """
+
+    goal_id: Optional[str] = None
+    kpi_name: str
+    current_value: Optional[float] = None
+    target_threshold: float
+    slope_per_week: Optional[float] = None
+    already_met: bool = False
+    projected_weeks_to_threshold: Optional[float] = None
+    projected_crossing_date: Optional[str] = None
+    attainment_window: Optional[tuple[str, str]] = None
+    abstained: bool = False
+    abstention_reason: Optional[str] = None
+    caveat: str = (
+        "This is a trajectory estimate conditional on the recent trend, "
+        "not a committed prediction or clinical outcome."
+    )
+
+
 class GeneratedReportData(BaseModel):
     child_id: str
     review_period_id: str

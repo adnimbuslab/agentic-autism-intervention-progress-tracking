@@ -253,7 +253,7 @@ class TestReportGeneration:
             },
         ]
 
-        client = ReportingClient(api_key="test-key")
+        client = ReportingClient(api_key="test-key", provider="anthropic")
         with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
             mock_llm.return_value = mock_sections
             report = await client.generate_report(ep)
@@ -315,7 +315,9 @@ class TestReportProvenance:
     @pytest.mark.asyncio
     async def test_llm_success_provenance(self):
         ep = make_evidence_packet()
-        client = ReportingClient(api_key="test-key", model="claude-sonnet-4-20250514")
+        client = ReportingClient(
+            api_key="test-key", model="claude-sonnet-4-20250514", provider="anthropic",
+        )
 
         mock_sections = [
             {"heading": "Summary", "body": "Report content.", "evidence_refs": [], "abstention_note": None},
@@ -328,6 +330,23 @@ class TestReportProvenance:
         assert report.model == "claude-sonnet-4-20250514"
         assert report.prompt_version == "1.0"
         assert report.generated_at is not None
+
+    @pytest.mark.asyncio
+    async def test_llm_success_provenance_ollama(self):
+        ep = make_evidence_packet()
+        client = ReportingClient(
+            api_key="test-key", model="llama3.2:latest", provider="ollama",
+        )
+
+        mock_sections = [
+            {"heading": "Summary", "body": "Report content.", "evidence_refs": [], "abstention_note": None},
+        ]
+        with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
+            mock_llm.return_value = mock_sections
+            report = await client.generate_report(ep)
+
+        assert report.provider == "ollama"
+        assert report.model == "llama3.2:latest"
 
     @pytest.mark.asyncio
     # @spec REPORT-011

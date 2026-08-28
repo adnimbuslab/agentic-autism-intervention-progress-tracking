@@ -119,15 +119,31 @@ def validate_report(
 
 
 class ReportingClient:
-    """Generates progress reports using the configured LLM provider."""
+    """Generates progress reports using the configured LLM provider.
+
+    ``provider`` selects the vendor SDK ``_call_llm`` uses ("anthropic" or
+    "ollama" -- an OpenAI-compatible endpoint, Ollama by default). The
+    method signature and return shape of ``_call_llm`` are identical across
+    both, so callers (and tests that patch ``_call_llm`` directly) are
+    unaffected by which provider is active.
+    """
 
     def __init__(
         self,
         api_key: str | None = None,
         model: str | None = None,
+        provider: str | None = None,
+        base_url: str | None = None,
     ):
-        self._api_key = api_key or settings.anthropic_api_key
-        self._model = model or settings.reporting_model
+        self._provider = provider or settings.reporting_provider
+        if self._provider == "ollama":
+            self._api_key = api_key or settings.ollama_api_key
+            self._model = model or settings.ollama_model
+            self._base_url = base_url or settings.ollama_base_url
+        else:
+            self._api_key = api_key or settings.anthropic_api_key
+            self._model = model or settings.reporting_model
+            self._base_url = base_url
 
     # @spec REPORT-001, REPORT-010, REPORT-011, REPORT-012
     async def generate_report(
@@ -151,7 +167,7 @@ class ReportingClient:
             model = "deterministic_fallback_v1"
             prompt_version = "N/A"
         else:
-            provider = "anthropic"
+            provider = self._provider
             model = self._model
             prompt_version = settings.reporting_prompt_version
 
@@ -168,6 +184,20 @@ class ReportingClient:
         )
 
     async def _call_llm(self, user_message: str) -> list[dict]:
+        if self._provider == "ollama":
+            text = await self._call_llm_openai_compatible(user_message)
+        else:
+            text = await self._call_llm_anthropic(user_message)
+
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            json_match = re.search(r"\[.*\]", text, re.DOTALL)
+            if json_match:
+                return json.loads(json_match.group())
+            raise
+
+    async def _call_llm_anthropic(self, user_message: str) -> str:
         import anthropic
 
         client = anthropic.AsyncAnthropic(api_key=self._api_key)
@@ -177,15 +207,20 @@ class ReportingClient:
             system=REPORTING_SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_message}],
         )
+        return response.content[0].text
 
-        text = response.content[0].text
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            json_match = re.search(r"\[.*\]", text, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group())
-            raise
+    async def _call_llm_openai_compatible(self, user_message: str) -> str:
+        import openai
+
+        client = openai.AsyncOpenAI(base_url=self._base_url, api_key=self._api_key)
+        response = await client.chat.completions.create(
+            model=self._model,
+            messages=[
+                {"role": "system", "content": REPORTING_SYSTEM_PROMPT},
+                {"role": "user", "content": user_message},
+            ],
+        )
+        return response.choices[0].message.content
 
     def _parse_sections(self, raw_sections: list[dict]) -> list[ReportSection]:
         sections: list[ReportSection] = []
