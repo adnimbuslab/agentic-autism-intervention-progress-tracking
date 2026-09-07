@@ -1,0 +1,110 @@
+{
+  "source_batch": "annotation_batch.json",
+  "batch_generated_at": "2026-09-07T19:15:59.075199+00:00",
+  "n_segments": 330,
+  "models": [
+    "llama3.2:latest",
+    "qwen2.5:3b",
+    "qwen2.5:7b"
+  ],
+  "admission": "MARS-029 (SUCCESS/PARTIAL)",
+  "batch_admission": "judgeable",
+  "branches": {
+    "rerank_required": 165,
+    "single_candidate": 123,
+    "no_reviewable_candidate": 42
+  },
+  "branch_share": {
+    "rerank_required": 0.5,
+    "single_candidate": 0.3727,
+    "no_reviewable_candidate": 0.1273
+  },
+  "distinct_candidates_per_segment": {
+    "0": 42,
+    "1": 123,
+    "2": 124,
+    "3": 41
+  },
+  "admitted_generators_per_segment": {
+    "0": 42,
+    "1": 123,
+    "2": 124,
+    "3": 41
+  },
+  "admitted_by_model": {
+    "qwen2.5:3b": 101,
+    "qwen2.5:7b": 260,
+    "llama3.2:latest": 133
+  },
+  "single_candidate_multiplicity": {
+    "1": 123
+  },
+  "judge_roster": [
+    "llama3.2:latest",
+    "qwen2.5:3b",
+    "qwen2.5:7b",
+    "mistral:latest"
+  ],
+  "eligible_judges_on_rerank_segments": {
+    "1": 41,
+    "2": 124
+  },
+  "per_child_branches": {
+    "brett": {
+      "rerank_required": 23,
+      "single_candidate": 7
+    },
+    "carl": {
+      "rerank_required": 12,
+      "single_candidate": 15,
+      "no_reviewable_candidate": 3
+    },
+    "jack": {
+      "rerank_required": 20,
+      "single_candidate": 8,
+      "no_reviewable_candidate": 2
+    },
+    "josh": {
+      "rerank_required": 10,
+      "single_candidate": 13,
+      "no_reviewable_candidate": 7
+    },
+    "mark": {
+      "rerank_required": 22,
+      "single_candidate": 7,
+      "no_reviewable_candidate": 1
+    },
+    "mars": {
+      "single_candidate": 16,
+      "rerank_required": 5,
+      "no_reviewable_candidate": 9
+    },
+    "rick": {
+      "rerank_required": 20,
+      "single_candidate": 9,
+      "no_reviewable_candidate": 1
+    },
+    "roger_flusberg": {
+      "single_candidate": 14,
+      "rerank_required": 16
+    },
+    "roger_rollins": {
+      "single_candidate": 13,
+      "no_reviewable_candidate": 11,
+      "rerank_required": 6
+    },
+    "sid": {
+      "single_candidate": 16,
+      "rerank_required": 7,
+      "no_reviewable_candidate": 7
+    },
+    "stuart": {
+      "rerank_required": 24,
+      "single_candidate": 5,
+      "no_reviewable_candidate": 1
+    }
+  },
+  "rebuild_failures": [],
+  "caveat": "Candidates carry only the 5 fields the batch recorded; goal_context, prompt_context, duration_seconds replay as None. single_candidate is therefore an upper bound and rerank_required a lower bound.",
+  "not_measured": "MARS accuracy, coverage and abstention reason codes are absent: no live JudgeProvider exists, and no adjudicated labels exist. This file reports only the candidate set MARS would be handed."
+}

@@ -88,39 +88,100 @@ def interpret(kappa: float | None) -> str:
     return "almost perfect"
 
 
+class MismatchedAnnotationItemsError(Exception):
+    """Two annotators judged different model outputs under the same key.
+
+    Pairing those would report a disagreement between two *models* as a
+    disagreement between two *people*, which is a wrong kappa rather than a
+    missing one. Annotation keys carry the model precisely so this cannot
+    happen silently; the check stays because a hand-edited or legacy file can
+    still violate it.
+    """
+
+
 def paired_judgments(
-    first: dict[str, Any], second: dict[str, Any], field: str
+    first: dict[str, Any],
+    second: dict[str, Any],
+    field: str,
+    keys: list[str] | None = None,
 ) -> list[tuple[str, str]]:
-    """Judgments for one field on every segment both annotators covered."""
-    shared = sorted(set(first) & set(second))
+    """Judgments for one field on every item both annotators covered.
+
+    ``keys`` restricts the pairing to a subset (one generator's items, say);
+    omitting it pairs everything the two annotators share.
+    """
+    if keys is None:
+        keys = shared_keys(first, second)
     pairs: list[tuple[str, str]] = []
-    for segment_id in shared:
-        a = first[segment_id].get("field_judgments", {}).get(field)
-        b = second[segment_id].get("field_judgments", {}).get(field)
+    for key in keys:
+        a = first[key].get("field_judgments", {}).get(field)
+        b = second[key].get("field_judgments", {}).get(field)
         if a is not None and b is not None:
             pairs.append((a, b))
     return pairs
 
 
-def build_report(first: dict[str, Any], second: dict[str, Any]) -> dict[str, Any]:
-    overlap = sorted(set(first) & set(second))
-    per_field = {}
+def shared_keys(first: dict[str, Any], second: dict[str, Any]) -> list[str]:
+    """Items both annotators judged, verified to be the same item.
+
+    An annotation key is ``<segment_id>::<model>``; the guard is against files
+    that predate that scheme or were edited by hand.
+    """
+    keys = sorted(set(first) & set(second))
+    mismatched = [
+        key for key in keys
+        if first[key].get("model") != second[key].get("model")
+    ]
+    if mismatched:
+        raise MismatchedAnnotationItemsError(
+            f"{len(mismatched)} key(s) name different models across the two "
+            f"annotation files, e.g. {mismatched[0]!r}: "
+            f"{first[mismatched[0]].get('model')!r} vs "
+            f"{second[mismatched[0]].get('model')!r}. These are not the same "
+            "item and must not be paired."
+        )
+    return keys
+
+
+def per_field_report(
+    first: dict[str, Any], second: dict[str, Any], keys: list[str]
+) -> dict[str, Any]:
+    report = {}
     for field in FIELDS:
-        pairs = paired_judgments(first, second, field)
-        per_field[field] = {
+        pairs = paired_judgments(first, second, field, keys)
+        kappa = cohens_kappa(pairs)
+        report[field] = {
             "n": len(pairs),
             "observed_agreement": round(observed_agreement(pairs), 4) if pairs else None,
             "expected_agreement": round(expected_agreement(pairs), 4) if pairs else None,
-            "kappa": (round(k, 4) if (k := cohens_kappa(pairs)) is not None else None),
-            "interpretation": interpret(cohens_kappa(pairs)),
+            "kappa": round(kappa, 4) if kappa is not None else None,
+            "interpretation": interpret(kappa),
         }
+    return report
+
+
+def build_report(first: dict[str, Any], second: dict[str, Any]) -> dict[str, Any]:
+    overlap = shared_keys(first, second)
+    per_field = per_field_report(first, second, overlap)
+
+    # Kappa pooled across generators answers "do these two people agree"; per
+    # generator it answers "on whose output do they agree", which is the one
+    # that tells you whether a low pooled kappa is a protocol problem or a
+    # property of one model's output.
+    by_model: dict[str, list[str]] = {}
+    for key in overlap:
+        by_model.setdefault(first[key].get("model") or "unspecified", []).append(key)
+    per_model = {
+        model: {"n_items": len(keys), "per_field": per_field_report(first, second, keys)}
+        for model, keys in sorted(by_model.items())
+    }
 
     disputed = [
-        segment_id
-        for segment_id in overlap
+        key
+        for key in overlap
         if any(
-            first[segment_id].get("field_judgments", {}).get(f)
-            != second[segment_id].get("field_judgments", {}).get(f)
+            first[key].get("field_judgments", {}).get(f)
+            != second[key].get("field_judgments", {}).get(f)
             for f in FIELDS
         )
     ]
@@ -130,6 +191,7 @@ def build_report(first: dict[str, Any], second: dict[str, Any]) -> dict[str, Any
         "n_annotator_a_only": len(set(first) - set(second)),
         "n_annotator_b_only": len(set(second) - set(first)),
         "per_field": per_field,
+        "per_model": per_model,
         "n_disputed_segments": len(disputed),
         "disputed_segments": disputed,
         "note": (
@@ -156,7 +218,10 @@ def main() -> None:
             )
         loaded.append(json.loads(path.read_text()))
 
-    report = build_report(*loaded)
+    try:
+        report = build_report(*loaded)
+    except MismatchedAnnotationItemsError as exc:
+        raise SystemExit(f"Refusing to compute kappa: {exc}") from exc
     out = RESULTS_DIR / f"agreement_{names[0]}_{names[1]}.json"
     out.write_text(json.dumps(report, indent=2))
 
@@ -176,6 +241,15 @@ def main() -> None:
             f"  {field:14s} {stats['n']:5d} {observed:>9s} "
             f"{kappa:>7s}  {stats['interpretation']}"
         )
+    if len(report["per_model"]) > 1:
+        print("\n  per generator:")
+        for model, stats in report["per_model"].items():
+            kappas = [
+                f["kappa"] for f in stats["per_field"].values() if f["kappa"] is not None
+            ]
+            pooled = f"{sum(kappas) / len(kappas):.3f}" if kappas else "n/a"
+            print(f"    {model:22s} items={stats['n_items']:5d}  mean kappa={pooled}")
+
     print(f"\nWrote {out}")
 
 

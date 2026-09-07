@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-09-07T20:50:30.288763+00:00",
+  "source_batch": "annotation_batch.json",
+  "generators": [
+    "llama3.2:latest",
+    "qwen2.5:3b",
+    "qwen2.5:7b"
+  ],
+  "generator_source": "replayed from annotation_batch.json",
+  "judges": [
+    "mistral:latest"
+  ],
+  "agreement_threshold": 0.5,
+  "min_eligible_judges": 1,
+  "min_valid_judge_responses": 1,
+  "generator_confidence_policy": "minimum",
+  "run_seed": "mars-eval-1",
+  "n_segments": 8,
+  "statuses": {
+    "success": 8
+  },
+  "abstention_reasons": {}
+}

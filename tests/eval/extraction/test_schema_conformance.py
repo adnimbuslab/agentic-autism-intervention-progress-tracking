@@ -128,7 +128,10 @@ class TestSchemaConformance:
 
         result = await provider.extract(_make_request())
         assert result.provider == "temporary_llm_extraction"
-        assert result.model == "claude-sonnet-4-20250514"
+        # The assertion is that the configured model is recorded, not that it
+        # is one particular string -- pinning the literal here turned a routine
+        # model upgrade into a test failure in an unrelated suite.
+        assert result.model == TemporaryLLMExtractionProvider.DEFAULT_MODEL
         assert result.prompt_version == PROMPT_VERSION
 
     async def test_token_usage_recorded(self) -> None:

@@ -33,6 +33,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import os
 import random
 from collections import defaultdict
 from datetime import UTC, date, datetime
@@ -41,7 +42,12 @@ from typing import Any
 
 from src.backend.ml.extraction.ollama_llm import OllamaExtractionProvider
 from src.backend.ml.extraction.schemas import ExtractionRequest, ExtractionStatus, SourceType
-from src.backend.schemas.observation_schema import ContributorRole, Setting
+from src.backend.ml.extraction.temporary_llm import TemporaryLLMExtractionProvider
+from src.backend.schemas.observation_schema import (
+    LLM_EXTRACTED_FIELDS,
+    ContributorRole,
+    Setting,
+)
 from tests.eval.extraction.sample_real_segments import (
     load_real_segments,
     render_segment_to_chat_text,
@@ -56,9 +62,8 @@ OLLAMA_API_KEY = "ollama"
 
 FIELDS = ["domain", "behavior", "modality", "prompt_level", "outcome"]
 
-# Not every segment yields a reviewable extraction -- the pilot observed roughly
-# a 24% SUCCESS/PARTIAL yield. The pool is oversampled by this factor so the
-# post-extraction batch still reaches the per-child target.
+# Not every segment yields an admissible extraction. The pool is oversampled by
+# this factor so the post-extraction batch still reaches the per-child target.
 YIELD_HEADROOM = 4
 
 DEFAULT_PER_CHILD = 30
@@ -126,12 +131,59 @@ def build_pool(
 # Stage 2 -- extraction (real model calls)
 # --------------------------------------------------------------------------
 
+def is_admissible(result, policy: str) -> bool:
+    """Whether a provider response belongs in the annotation batch.
+
+    ``reviewable`` mirrors MARS-029: only SUCCESS/PARTIAL. Correct for MARS at
+    *runtime* -- there is no sense reranking a candidate its own generator
+    disowned.
+
+    ``judgeable`` admits any response carrying at least one populated extracted
+    field, whatever status the provider assigned. The annotation task has a
+    different purpose from the runtime gate: it measures how good the extracted
+    values are, and a model that filled every field while self-reporting
+    confidence 0.0 has produced something an annotator can judge. Discarding it
+    would keep only the segments the model found easy and report accuracy on
+    those, which is a difficulty-biased sample rather than a corpus estimate.
+    The provider's status is recorded per candidate either way, so accuracy
+    conditional on status stays analysable.
+    """
+    if not result.observations:
+        return False
+    if policy == "reviewable":
+        return result.status in (ExtractionStatus.SUCCESS, ExtractionStatus.PARTIAL)
+    observation = result.observations[0]
+    return any(getattr(observation, f, None) is not None for f in LLM_EXTRACTED_FIELDS)
+
+
+def build_provider(model: str, base_url: str = OLLAMA_BASE_URL):
+    """Route a model name to the provider that serves it.
+
+    Both providers satisfy the same `ExtractionProvider` contract and return the
+    same `ExtractionResult`, which is what lets a frontier arm sit beside the
+    local ones in a single run without the comparison logic knowing the
+    difference. The routing lives here, at the call site, rather than inside
+    either provider: backend business logic must not select a vendor.
+
+    A `claude-` name needs a key. Resolution is left to the SDK -- it reads
+    ANTHROPIC_API_KEY, then ANTHROPIC_AUTH_TOKEN, then an `ant auth login`
+    profile -- so the absence of the environment variable is not by itself an
+    error, and passing an empty string here would defeat that chain.
+    """
+    if model.startswith("claude-"):
+        return TemporaryLLMExtractionProvider(
+            api_key=os.environ.get("ANTHROPIC_API_KEY"), model=model
+        )
+    return OllamaExtractionProvider(base_url=base_url, api_key=OLLAMA_API_KEY, model=model)
+
+
 async def extract_candidates(
     pool: list[dict[str, Any]],
     models: list[str],
     per_child: int,
     base_url: str = OLLAMA_BASE_URL,
     require: str = "all",
+    admit: str = "judgeable",
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Run each model over the pool, stopping per child once the target is met.
 
@@ -151,10 +203,7 @@ async def extract_candidates(
     n, but per-model accuracy denominators then differ and the oracle ceiling is
     no longer computable on a common set.
     """
-    providers = {
-        m: OllamaExtractionProvider(base_url=base_url, api_key=OLLAMA_API_KEY, model=m)
-        for m in models
-    }
+    providers = {m: build_provider(m, base_url) for m in models}
 
     kept: list[dict[str, Any]] = []
     kept_per_child: dict[str, int] = defaultdict(int)
@@ -180,7 +229,7 @@ async def extract_candidates(
         candidates: dict[str, Any] = {}
         for model, provider in providers.items():
             result = await provider.extract(request)
-            if result.status not in (ExtractionStatus.SUCCESS, ExtractionStatus.PARTIAL):
+            if not is_admissible(result, admit):
                 continue
             per_model_success[model] += 1
             obs = result.observations[0]
@@ -214,6 +263,7 @@ async def extract_candidates(
 
     stats = {
         "require": require,
+        "admit": admit,
         "segments_attempted": attempted,
         "segments_kept": len(kept),
         "joint_yield": round(len(kept) / attempted, 4) if attempted else None,
@@ -308,6 +358,15 @@ async def main() -> None:
         ),
     )
     parser.add_argument(
+        "--admit",
+        choices=["judgeable", "reviewable"],
+        default="judgeable",
+        help=(
+            "judgeable: any response with at least one populated field (default). "
+            "reviewable: only SUCCESS/PARTIAL, mirroring the MARS runtime gate."
+        ),
+    )
+    parser.add_argument(
         "--pilot",
         type=int,
         default=None,
@@ -333,9 +392,27 @@ async def main() -> None:
 
     pool = pool_payload["pool"]
     if args.pilot:
-        print(f"\nYIELD PILOT: {args.pilot} segments, models={args.models}, require={args.require}")
+        # Round-robin across children. The pool is grouped by child, so the
+        # first N entries would all belong to one child and measure that
+        # child's yield rather than the corpus's.
+        by_child: dict[str, list] = defaultdict(list)
+        for entry in pool:
+            by_child[entry["child_id"]].append(entry)
+        interleaved: list[dict[str, Any]] = []
+        for i in range(max(len(v) for v in by_child.values())):
+            for child_id in sorted(by_child):
+                if i < len(by_child[child_id]):
+                    interleaved.append(by_child[child_id][i])
+        pool = interleaved
+    if args.pilot:
+        children = len({e["child_id"] for e in pool[: args.pilot]})
+        print(
+            f"\nYIELD PILOT: {args.pilot} segments across {children} children, "
+            f"models={args.models}, require={args.require}, admit={args.admit}"
+        )
         _, stats = await extract_candidates(
-            pool[: args.pilot], args.models, per_child=10**6, require=args.require
+            pool[: args.pilot], args.models, per_child=10**6,
+            require=args.require, admit=args.admit,
         )
         print("\nYield:")
         print(f"  attempted        {stats['segments_attempted']}")
@@ -355,7 +432,7 @@ async def main() -> None:
 
     print(f"\nRunning extraction over the pool with {args.models}...")
     candidates, yield_stats = await extract_candidates(
-        pool, args.models, args.per_child, require=args.require
+        pool, args.models, args.per_child, require=args.require, admit=args.admit
     )
     assignments = assign_annotators(
         candidates, args.annotators, args.overlap, seed=args.seed

@@ -9,8 +9,12 @@ the double-annotated overlap stays genuinely independent. Blind by default: the
 annotator is not told which model produced a candidate, nor what the other
 annotator said.
 
+One pass judges one model. A batch holding several generators needs one pass
+per generator per annotator; passes are keyed independently, so they can be run
+in any order and resumed at any point.
+
 Usage:
-    uv run python -m tests.eval.extraction.annotate_batch annotator_a
+    uv run python -m tests.eval.extraction.annotate_batch annotator_a --model qwen2.5:7b
     uv run python -m tests.eval.extraction.annotate_batch annotator_a --model llama3.2:latest
 """
 
@@ -45,6 +49,20 @@ JUDGMENT_HELP = """
 
 def annotations_path(annotator: str) -> Path:
     return RESULTS_DIR / f"annotations_{annotator}.json"
+
+
+def annotation_key(segment_id: str, model: str) -> str:
+    """Identity of one judgeable item: a segment *and* the model that produced it.
+
+    Keying on segment_id alone silently broke multi-model annotation two ways.
+    A second pass over the same batch with a different ``--model`` found every
+    segment already present and reported nothing left to do, so only one
+    generator could ever be judged. And two annotators who happened to pass
+    different ``--model`` values produced files that paired segment-to-segment,
+    which `agreement_report` would have read as inter-rater disagreement when
+    it was really two models' outputs being compared.
+    """
+    return f"{segment_id}::{model}"
 
 
 def load_batch() -> dict[str, Any]:
@@ -124,14 +142,24 @@ def main() -> None:
         json.loads(out_path.read_text()) if out_path.exists() else {}
     )
 
-    remaining = [c for c in candidates if c["segment_id"] not in annotations]
+    remaining = [
+        c for c in candidates
+        if annotation_key(c["segment_id"], model) not in annotations
+    ]
     print(f"Annotator: {args.annotator}   model under judgment: {model}")
     print(
         f"Assigned: {len(candidates)}   done: {len(candidates) - len(remaining)}   "
         f"remaining: {len(remaining)}"
     )
+    unjudged = [
+        m for m in batch.get("models", [])
+        if any(annotation_key(c["segment_id"], m) not in annotations for c in candidates)
+        and m != model
+    ]
+    if unjudged:
+        print(f"Other models still unjudged by {args.annotator}: {', '.join(unjudged)}")
     if not remaining:
-        print("Nothing left to annotate.")
+        print(f"Nothing left to annotate for {model}.")
         return
     print(JUDGMENT_HELP)
     print("Ctrl-C to stop; progress is saved after every segment.")
@@ -143,7 +171,8 @@ def main() -> None:
             judgments = {f: prompt_field(f, fields.get(f)) for f in FIELDS}
             notes = input("  notes (optional): ").strip()
 
-            annotations[candidate["segment_id"]] = {
+            annotations[annotation_key(candidate["segment_id"], model)] = {
+                "segment_id": candidate["segment_id"],
                 "field_judgments": judgments,
                 "notes": notes,
                 "child_id": candidate["child_id"],

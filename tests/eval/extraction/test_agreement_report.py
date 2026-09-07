@@ -10,12 +10,14 @@ from __future__ import annotations
 import pytest
 
 from tests.eval.extraction.agreement_report import (
+    MismatchedAnnotationItemsError,
     build_report,
     cohens_kappa,
     expected_agreement,
     observed_agreement,
     paired_judgments,
 )
+from tests.eval.extraction.annotate_batch import annotation_key
 
 
 def _annotations(**segments: dict) -> dict:
@@ -212,3 +214,59 @@ class TestBatchAssignment:
         from tests.eval.extraction.annotate_batch import choose_model
 
         assert choose_model(self._batch(), None) == "llama3.2:latest"
+
+
+def _model_annotations(*items: tuple[str, str, dict]) -> dict:
+    """Annotations keyed the way annotate_batch writes them."""
+    return {
+        annotation_key(segment_id, model): {
+            "segment_id": segment_id,
+            "model": model,
+            "field_judgments": judgments,
+        }
+        for segment_id, model, judgments in items
+    }
+
+
+class TestModelAwareness:
+    """A judgement is about one model's output, not about a segment.
+
+    Keying on segment alone let a second generator's pass be skipped as
+    already-done, and let two annotators' files pair across different models.
+    """
+
+    def test_the_same_segment_under_two_models_is_two_items(self) -> None:
+        first = _model_annotations(
+            ("s1", "model_a", {"domain": "correct"}),
+            ("s1", "model_b", {"domain": "incorrect"}),
+        )
+        report = build_report(first, first)
+
+        assert report["n_overlap_segments"] == 2
+        assert sorted(report["per_model"]) == ["model_a", "model_b"]
+
+    def test_kappa_is_reported_per_generator(self) -> None:
+        judged = _model_annotations(
+            ("s1", "model_a", {"domain": "correct"}),
+            ("s2", "model_a", {"domain": "incorrect"}),
+            ("s1", "model_b", {"domain": "correct"}),
+            ("s2", "model_b", {"domain": "incorrect"}),
+        )
+        report = build_report(judged, judged)
+
+        assert report["per_model"]["model_a"]["n_items"] == 2
+        assert report["per_model"]["model_a"]["per_field"]["domain"]["n"] == 2
+
+    def test_pairing_different_models_under_one_key_is_refused(self) -> None:
+        first = {"s1::model_a": {"model": "model_a", "field_judgments": {"domain": "correct"}}}
+        second = {"s1::model_a": {"model": "model_b", "field_judgments": {"domain": "correct"}}}
+
+        with pytest.raises(MismatchedAnnotationItemsError):
+            build_report(first, second)
+
+    def test_a_disputed_item_names_the_model(self) -> None:
+        first = _model_annotations(("s1", "model_a", {"domain": "correct"}))
+        second = _model_annotations(("s1", "model_a", {"domain": "hallucinated"}))
+        report = build_report(first, second)
+
+        assert report["disputed_segments"] == ["s1::model_a"]
