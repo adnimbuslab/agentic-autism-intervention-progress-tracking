@@ -1,0 +1,23 @@
+Instructions for the annotator
+==============================
+
+Fill one row per transcript segment. Read the transcript in the `transcript`
+column and record ONLY what that transcript supports.
+
+  domain, behavior, modality, prompt_level, outcome
+
+  - Type the value exactly as listed in VALUE_REFERENCE.csv (copy/paste is
+    safest). Capitalisation and surrounding spaces do not matter.
+  - `behavior` is free text: describe what the child did, in your own words.
+  - Write `none` when the transcript does not support any value for a
+    field. This is a real answer, not a gap -- please do not guess to fill a
+    field. An uncertain value and a `none` are different claims, and the
+    second is the honest one where the evidence is absent.
+  - Leave a cell EMPTY only if you have not done that row yet.
+  - `notes` is optional and free text. Notes on why a call was difficult are
+    valuable; they inform the adjudication step.
+
+Do not reorder, rename, add or delete columns, and do not change the
+`segment_id` column -- it is how your work is matched back up.
+
+Save as CSV (keep the same file name) and send it back.

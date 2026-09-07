@@ -1,135 +1,128 @@
-"""Tests for gold-standard assembly from two annotators' judgements.
+"""Tests for gold-standard assembly from two annotators' field values.
 
-The risk this file guards is not a crash. It is a gold standard that quietly
-contains labels no human made -- from a tie-break rule, a partially resolved
-item, or two annotators' files that were never about the same thing.
+The risk here is not a crash. It is a gold standard that quietly contains
+values nobody chose -- from a tie-break rule, a partially resolved segment, or
+a null treated as an absence.
 """
 
 from __future__ import annotations
 
-import pytest
+from tests.eval.extraction.adjudicate import build_gold, split_by_consensus
+from tests.eval.extraction.agreement_report import FIELDS
 
-from tests.eval.extraction.adjudicate import (
-    FIELDS,
-    build_gold,
-    split_by_consensus,
-)
-from tests.eval.extraction.annotate_batch import annotation_key
-
-
-def _judged(**fields: str) -> dict:
-    complete = {f: "correct" for f in FIELDS}
-    complete.update(fields)
-    return complete
+COMPLETE = {
+    "domain": "language",
+    "behavior": "asks for juice",
+    "modality": "verbal",
+    "prompt_level": "independent",
+    "outcome": "correct",
+}
 
 
-def _annotations(*items: tuple[str, str, dict]) -> dict:
+def _annotations(**segments: dict) -> dict:
     return {
-        annotation_key(segment_id, model): {
-            "segment_id": segment_id,
-            "model": model,
-            "field_judgments": judgments,
-        }
-        for segment_id, model, judgments in items
+        segment_id: {"segment_id": segment_id, "child_id": "c1", "field_values": values}
+        for segment_id, values in segments.items()
     }
 
 
 class TestConsensus:
-    def test_identical_judgements_are_all_agreed(self) -> None:
-        annotations = _annotations(("s1", "m", _judged()))
-        agreed, conflicts = split_by_consensus(
-            annotations, annotations, list(annotations)
-        )
+    def test_identical_values_are_all_agreed(self) -> None:
+        annotations = _annotations(s1=COMPLETE)
+        agreed, conflicts = split_by_consensus(annotations, annotations, ["s1"])
 
-        assert agreed["s1::m"] == _judged()
+        assert agreed["s1"] == COMPLETE
         assert conflicts == {}
 
     def test_only_the_differing_field_is_a_conflict(self) -> None:
-        first = _annotations(("s1", "m", _judged(outcome="correct")))
-        second = _annotations(("s1", "m", _judged(outcome="hallucinated")))
-        agreed, conflicts = split_by_consensus(first, second, list(first))
+        first = _annotations(s1=COMPLETE)
+        second = _annotations(s1={**COMPLETE, "outcome": "partial"})
+        agreed, conflicts = split_by_consensus(first, second, ["s1"])
 
-        assert conflicts == {"s1::m": ["outcome"]}
-        assert "outcome" not in agreed["s1::m"]
-        assert agreed["s1::m"]["domain"] == "correct"
+        assert conflicts == {"s1": ["outcome"]}
+        assert "outcome" not in agreed["s1"]
+        assert agreed["s1"]["domain"] == "language"
+
+    def test_casing_differences_are_not_conflicts(self) -> None:
+        first = _annotations(s1=COMPLETE)
+        second = _annotations(s1={**COMPLETE, "domain": "Language"})
+        _, conflicts = split_by_consensus(first, second, ["s1"])
+
+        assert conflicts == {}
+
+    def test_two_nulls_agree_rather_than_both_being_absent(self) -> None:
+        nulled = {**COMPLETE, "prompt_level": None}
+        annotations = _annotations(s1=nulled)
+        agreed, conflicts = split_by_consensus(annotations, annotations, ["s1"])
+
+        assert conflicts == {}
+        assert agreed["s1"]["prompt_level"] is None
+
+    def test_a_null_against_a_value_is_a_conflict(self) -> None:
+        first = _annotations(s1={**COMPLETE, "prompt_level": None})
+        second = _annotations(s1=COMPLETE)
+        _, conflicts = split_by_consensus(first, second, ["s1"])
+
+        assert conflicts == {"s1": ["prompt_level"]}
 
 
 class TestGoldAssembly:
-    def test_agreed_items_enter_the_gold_keyed_by_segment_and_model(self) -> None:
-        annotations = _annotations(("s1", "model_a", _judged()))
-        agreed, _ = split_by_consensus(annotations, annotations, list(annotations))
+    def test_agreed_segments_enter_the_gold_with_their_values(self) -> None:
+        annotations = _annotations(s1=COMPLETE)
+        agreed, _ = split_by_consensus(annotations, annotations, ["s1"])
         gold, counts = build_gold(agreed, {}, annotations)
 
-        assert gold == {"s1": {"model_a": _judged()}}
+        assert gold["s1"]["field_values"] == COMPLETE
+        assert gold["s1"]["source"] == "agreed"
         assert counts["agreed"] == 1
 
-    def test_one_segment_holds_a_label_per_model(self) -> None:
-        annotations = _annotations(
-            ("s1", "model_a", _judged()),
-            ("s1", "model_b", _judged(domain="incorrect")),
-        )
-        agreed, _ = split_by_consensus(annotations, annotations, list(annotations))
+    def test_gold_is_one_value_set_per_segment_not_per_model(self) -> None:
+        """The property that lets one reference score every generator."""
+        annotations = _annotations(s1=COMPLETE)
+        agreed, _ = split_by_consensus(annotations, annotations, ["s1"])
         gold, _ = build_gold(agreed, {}, annotations)
 
-        assert sorted(gold["s1"]) == ["model_a", "model_b"]
-        assert gold["s1"]["model_b"]["domain"] == "incorrect"
+        assert set(gold["s1"]["field_values"]) == set(FIELDS)
+        assert "model" not in gold["s1"]
 
     def test_an_unresolved_conflict_is_excluded_not_defaulted(self) -> None:
-        first = _annotations(("s1", "m", _judged(outcome="correct")))
-        second = _annotations(("s1", "m", _judged(outcome="hallucinated")))
-        agreed, conflicts = split_by_consensus(first, second, list(first))
+        first = _annotations(s1=COMPLETE)
+        second = _annotations(s1={**COMPLETE, "outcome": "partial"})
+        agreed, _ = split_by_consensus(first, second, ["s1"])
 
         gold, counts = build_gold(agreed, {}, first)
 
-        assert conflicts == {"s1::m": ["outcome"]}
         assert gold == {}
         assert counts["unresolved"] == 1
 
-    def test_an_adjudicated_conflict_enters_the_gold_with_the_resolved_value(
-        self,
-    ) -> None:
-        first = _annotations(("s1", "m", _judged(outcome="correct")))
-        second = _annotations(("s1", "m", _judged(outcome="hallucinated")))
-        agreed, _ = split_by_consensus(first, second, list(first))
+    def test_an_adjudicated_conflict_enters_with_the_resolved_value(self) -> None:
+        first = _annotations(s1=COMPLETE)
+        second = _annotations(s1={**COMPLETE, "outcome": "partial"})
+        agreed, _ = split_by_consensus(first, second, ["s1"])
 
-        gold, counts = build_gold(agreed, {"s1::m": {"outcome": "missing"}}, first)
+        gold, counts = build_gold(agreed, {"s1": {"outcome": "approximation"}}, first)
 
-        assert gold["s1"]["m"]["outcome"] == "missing"
+        assert gold["s1"]["field_values"]["outcome"] == "approximation"
+        assert gold["s1"]["source"] == "adjudicated"
+        assert counts["adjudicated"] == 1
+
+    def test_an_adjudicated_null_is_a_resolution_not_an_omission(self) -> None:
+        first = _annotations(s1=COMPLETE)
+        second = _annotations(s1={**COMPLETE, "prompt_level": "verbal"})
+        agreed, _ = split_by_consensus(first, second, ["s1"])
+
+        gold, counts = build_gold(agreed, {"s1": {"prompt_level": None}}, first)
+
+        assert gold["s1"]["field_values"]["prompt_level"] is None
         assert counts["adjudicated"] == 1
         assert counts["unresolved"] == 0
 
-    def test_a_partially_adjudicated_item_stays_out(self) -> None:
-        """Two disputed fields, one resolved: still not a label."""
-        first = _annotations(("s1", "m", _judged(outcome="correct", domain="correct")))
-        second = _annotations(
-            ("s1", "m", _judged(outcome="hallucinated", domain="incorrect"))
-        )
-        agreed, _ = split_by_consensus(first, second, list(first))
+    def test_a_partially_adjudicated_segment_stays_out(self) -> None:
+        first = _annotations(s1=COMPLETE)
+        second = _annotations(s1={**COMPLETE, "outcome": "partial", "domain": "play"})
+        agreed, _ = split_by_consensus(first, second, ["s1"])
 
-        gold, counts = build_gold(agreed, {"s1::m": {"outcome": "missing"}}, first)
+        gold, counts = build_gold(agreed, {"s1": {"outcome": "correct"}}, first)
 
         assert gold == {}
         assert counts["unresolved"] == 1
-
-
-class TestEndToEnd:
-    """The assembled gold must be the shape mars_evaluation consumes."""
-
-    def test_gold_feeds_the_evaluation_metrics(self) -> None:
-        from tests.eval.extraction.mars_evaluation import (
-            oracle_ceiling,
-            per_model_accuracy,
-        )
-
-        annotations = _annotations(
-            ("s1", "model_a", _judged()),
-            ("s1", "model_b", _judged(domain="hallucinated")),
-        )
-        agreed, _ = split_by_consensus(annotations, annotations, list(annotations))
-        gold, _ = build_gold(agreed, {}, annotations)
-
-        accuracy = per_model_accuracy(gold, ["model_a", "model_b"])
-
-        assert accuracy["model_a"] == pytest.approx(1.0)
-        assert accuracy["model_b"] == pytest.approx(0.0)
-        assert oracle_ceiling(gold, ["model_a", "model_b"]) == pytest.approx(1.0)

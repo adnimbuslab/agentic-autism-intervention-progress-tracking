@@ -15,6 +15,15 @@ refusal to default them. The agreement threshold in particular is an open
 question -- a default here would settle it invisibly, in the layer least
 visible to whoever should be deciding.
 
+**A single-judge run is an ablation, not the system.** With one judge, top-choice
+support is 1.0 by construction: there is no second opinion for the agreement
+gate to disagree with, so the gate cannot reject anything and its threshold is
+inert whatever it is set to. Such a run measures generation plus a one-model
+ranking, and no claim about agreement gating can rest on it. The runner records
+the panel size in the summary so a reader cannot mistake one for the other;
+`--judges` should name about three eligible models before the gate is reported
+on.
+
 Usage:
     uv run python -m tests.eval.extraction.run_mars --judges mistral:latest \\
         --agreement-threshold 0.5 --min-eligible-judges 1 --min-valid-responses 1
@@ -208,6 +217,11 @@ async def run(
         "generator_confidence_policy": policy.value,
         "run_seed": run_seed,
         "n_segments": len(entries),
+        "n_judges_configured": len(judge_models),
+        # Eligibility is per segment (MARS-027), so a configured judge is not
+        # always a usable one; this flag reflects the roster, which is what
+        # determines whether the agreement gate could ever bind.
+        "single_judge_ablation": len(judge_models) < 2,
         "statuses": dict(statuses),
         "abstention_reasons": dict(reasons),
     }
@@ -254,6 +268,12 @@ def main() -> None:
     OUTCOMES_PATH.write_text(json.dumps(outcomes, indent=2) + "\n")
     (RESULTS_DIR / "mars_run_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
 
+    if summary["single_judge_ablation"]:
+        print(
+            "\n  NOTE: single-judge run -- top-choice support is 1.0 by "
+            "construction and the agreement gate cannot bind. This is an "
+            "ablation; report no gating claim from it."
+        )
     print(f"\nSegments: {summary['n_segments']}")
     print(f"  statuses:  {summary['statuses']}")
     print(f"  abstained: {summary['abstention_reasons'] or 'none'}")

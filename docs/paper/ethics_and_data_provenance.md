@@ -81,10 +81,16 @@ decision, and the manuscript must:
    the time of the run **[CONFIRM against current terms — do not cite from
    memory]**.
 
-If the comparator arm is dropped, say that no data left local infrastructure,
-which is a cleaner statement and worth preferring where the science allows.
+The frontier arm is **held outside the primary experiment** until items 1-3 are
+documented. The primary three-generator comparison therefore carries the clean
+statement that no data left local infrastructure; the Claude arm, if run, is
+reported separately as a secondary benchmark with its own disclosure.
 
 ## Annotation
+
+Two annotators each independently author gold field values for all 330
+segments by reading the transcript, with no model output shown. They do not
+judge model candidates.
 
 **[CONFIRM]** who the annotators are and what qualifies them. For autism
 intervention constructs (`domain`, `modality`, `prompt_level`, `outcome`) a
@@ -94,10 +100,12 @@ specialist — and will want:
 - number of annotators, their credentials, and their independence from the
   system's development;
 - the training or calibration they received before annotating;
-- whether they were blind to which model produced each candidate (the tooling
-  is blind by default) and to each other's judgements (they are: each writes a
-  separate file);
-- the adjudication procedure for disagreements.
+- that they were blind to all model output (structurally: the annotation tool
+  reads the transcript and never reads the candidates) and to each other's
+  values (each writes a separate file);
+- the adjudication procedure for disagreements, and that segments left
+  unresolved on any field are excluded from the gold standard rather than
+  resolved by rule.
 
 The current identifiers `annotator_a` / `annotator_b` are placeholders and must
 be replaced with a described role in the manuscript. Annotation labour was

@@ -44,9 +44,67 @@ only stage 2 calls models.
    `qwen2.5:7b` — each extract from every pooled segment. A segment is retained
    only where all three produced an admissible response (`require=all`), so
    every batch item carries a complete candidate set.
-3. **Annotator assignment.** Two annotators, overlap 1.0: both judge all 330
-   items, so inter-rater reliability is estimable over the whole batch rather
-   than a subset.
+3. **Annotation frame.** The batch is frozen at this point and is not
+   regenerated.
+
+### Annotation design
+
+Gold is authored **from the source, independent of any model**. Two annotators
+each read all 330 transcript segments and record the field values the
+transcript supports, with no model output shown. They do not judge candidates.
+
+Three consequences follow, and they are the reason for the design:
+
+- **One common reference.** All three generators are scored against the same
+  gold, so per-generator accuracy and the oracle ceiling are computed over a
+  common set. A fourth generator can be added later with no new annotation.
+- **No anchoring.** An annotator shown a model's answer is more likely to
+  accept it, which would make each generator's measured accuracy partly a
+  function of how persuasive its output looked. Blindness here is structural:
+  the annotation tool reads `chat_text` and never touches `candidates`.
+- **A third of the human cost.** 330 segments per annotator rather than
+  330 x 3 candidate judgements, with no loss to the three-model comparison or
+  the ceiling.
+
+Both annotators cover all 330 segments, so the double-annotated overlap is the
+whole batch and reliability is estimated over it rather than a subset.
+
+Nulls are recorded explicitly. A null is the claim "this transcript supports no
+value for this field", which is what makes an unsupported model value
+measurable as a hallucination rather than being scored as an ordinary miss.
+
+**Deriving per-generator judgements.** Gold holds values; the metrics are
+defined over judgements. The mapping is mechanical, with no further human step:
+
+| gold | model | judgement |
+|---|---|---|
+| null | null | `correctly_null` |
+| null | value | `hallucinated` |
+| value | null | `missing` |
+| value | equal value | `correct` |
+| value | different value | `incorrect` |
+
+**Free-text `behavior`.** Exact string match on prose understates agreement for
+reasons of wording rather than substance, and would drag whole-record
+correctness toward zero. Agreement for `behavior` is therefore reported
+descriptively (exact-match and mean token overlap) and excluded from the mean
+kappa; for scoring, the match rule is an explicit, recorded parameter
+(`--behavior-match`, default token overlap at 0.5, with `exact` and `excluded`
+available). **[REPORT the rule used and its threshold in Methods.]**
+
+**Reliability statistics.** Cohen's kappa per field, over the value categories
+(nulls included as a category). Kappa is deliberately **not** pooled across
+fields by concatenating labels: the fields draw on different category sets, so
+a pooled confusion matrix would treat `verbal`-the-modality and
+`verbal`-the-prompt-level as one category and compute a chance correction over
+a distribution no annotator ever drew from. The overall figures reported are
+the mean of the per-field kappas across the four categorical fields, and a
+record-level exact-agreement rate, each stating what it aggregates.
+
+Disagreements are adjudicated. A segment left unresolved on any field is
+**excluded** from the gold standard rather than resolved by rule -- every
+tie-break rule invents a value, and accuracy computed against invented values
+measures the rule.
 
 ### Admission policy
 
@@ -77,7 +135,7 @@ conditional on status remains analysable.
 | generators | llama3.2, qwen2.5:3b, qwen2.5:7b |
 | segments attempted | 506 |
 | joint yield (`require=all`, `admit=judgeable`) | 65.2% |
-| annotators | 2, overlap 1.0 (660 candidate-set judgements) |
+| annotators | 2, both covering all 330 segments (source-level gold) |
 | sampling seed | 42 |
 
 Pilot sizing held: a 60-segment pilot projected ~519 segments would be consumed
@@ -144,12 +202,24 @@ the annotation measures.
 
 ### MARS candidate stage
 
-MARS has not been run end-to-end: no live `JudgeProvider` implementation exists
-outside the unit-test stub, so no MARS accuracy, coverage or reason-code
-distribution is reported. What can be established without a judge is the
-candidate set MARS would be handed, obtained by replaying the recorded
-generator responses through the production `build_candidates` / `classify_branch`
-path under the MARS-029 runtime gate (**Figure 9A**).
+MARS now runs end-to-end against live judges, with generators **replayed** from
+the frozen batch so it selects from exactly the candidates the annotators saw.
+No MARS accuracy is reported here, because accuracy requires the adjudicated
+gold standard.
+
+The candidate set MARS is handed can be established without any judge, by
+replaying the recorded generator responses through the production
+`build_candidates` / `classify_branch` path under the MARS-029 runtime gate
+(**Figure 9A**).
+
+**Judge panel size is a reporting constraint, not a detail.** With a single
+judge, top-choice support is 1.0 by construction: there is no second opinion
+for the agreement gate to disagree with, so the gate cannot reject anything and
+its threshold is inert at any setting. A single-judge run measures generation
+plus a one-model ranking and **no agreement-gating claim can rest on it**; it
+is reported as an ablation. Roughly three eligible judges are required before
+the gate is reported on, and the local roster does not currently supply them
+(below).
 
 **Table 4 — MARS candidate-stage branch distribution (n = 330)**
 
@@ -204,17 +274,29 @@ State of the evidence, recorded so that no reader infers more than exists:
 
 | quantity | status | blocked on |
 |---|---|---|
-| per-generator field accuracy | not measured | adjudicated labels |
-| inter-rater reliability (κ) | not measured | both annotators' judgements |
-| oracle candidate ceiling | not measured | adjudicated labels |
-| MARS accuracy / capture rate | not measured | labels **and** a live `JudgeProvider` |
-| MARS coverage, reason codes | not measured | a live `JudgeProvider` |
+| per-generator field accuracy | not measured | adjudicated gold |
+| inter-rater reliability (κ) | not measured | both annotators' gold values |
+| oracle candidate ceiling | not measured | adjudicated gold |
+| MARS accuracy / capture rate | not measured | adjudicated gold |
+| MARS agreement-gate behaviour | not reportable | a panel of ~3 eligible judges |
+| frontier-model comparison | out of the primary experiment | corpus terms confirmation |
+
+MARS coverage, abstention reason codes and selection behaviour are now
+measurable — the pipeline runs — but are reported only from a run whose judge
+panel is stated, and never from the single-judge ablation.
 
 The evaluation harness for all of these already exists
 (`tests/eval/extraction/mars_evaluation.py`) and reports single-best-generator
 accuracy, MARS accuracy, the oracle ceiling and the capture rate together,
 because any one alone is misleading: a gain from 75% to 82% does not say whether
 reranking left six points on the table or almost none.
+
+**Frontier comparator.** A `claude-*` generator can enter the batch through the
+same `ExtractionProvider` contract as the local models. It is held **outside the
+primary experiment** until the corpora's terms are confirmed to permit
+transmitting segments to a third-party API (see the ethics section), and will
+then be reported as a secondary frontier benchmark rather than folded into the
+primary three-generator comparison.
 
 ## Limitations
 
@@ -227,8 +309,18 @@ reranking left six points on the table or almost none.
 - **Generator roster.** Three small local models. Results characterise this
   roster, not extraction quality achievable in general, and the divergence rates
   in Table 3 would not transfer to a stronger or more homogeneous roster.
-- **Free-text fields.** `behavior` agreement is exact-match and understates
-  semantic agreement.
+- **Free-text fields.** `behavior` is compared by a stated rule rather than by
+  meaning. Token overlap accepts rewording but cannot detect two descriptions
+  that share words while describing different things, and `exact` understates
+  agreement badly. The rule and threshold are recorded with every scored run.
+- **Judge panel.** The agreement gate is unreported until a panel of about
+  three eligible judges exists. Judge eligibility disqualifies exact generator
+  identities, so a roster of four local models leaves 1-2 eligible judges per
+  segment — not enough to report gating.
+- **Gold subset.** Accuracy is conditional on the adjudicated subset. Segments
+  left unresolved on any field are excluded, so the denominator is the
+  adjudicated set and not the full 330; the counts are recorded in
+  `gold_labels.json`.
 - **Statuses are self-reported.** Table 2's status columns describe what the
   models claimed, which Figure 6 shows is a poor guide to what they produced.
 - **No held-out research split yet.** The batch preserves real `child_id` on

@@ -37,34 +37,46 @@ FIELDS = ["domain", "behavior", "modality", "prompt_level", "outcome"]
 ACCEPTABLE = {"correct", "correctly_null"}
 
 
-def is_fully_correct(field_judgments: dict[str, str]) -> bool:
+def is_fully_correct(
+    field_judgments: dict[str, str], fields: list[str] | None = None
+) -> bool:
     """Whole-extraction correctness.
 
-    Deliberately strict: every field must be acceptable. A partially correct
-    record is not a usable record for an interventionist, and MARS selects
-    whole candidates rather than fields, so whole-record correctness is the
-    unit that matches what the system actually returns.
+    Deliberately strict: every scored field must be acceptable. A partially
+    correct record is not a usable record for an interventionist, and MARS
+    selects whole candidates rather than fields, so whole-record correctness is
+    the unit that matches what the system actually returns.
+
+    ``fields`` is the scored set. It is a parameter because free-text
+    `behavior` may be excluded by the scoring policy, and holding it fixed
+    would then fail every record on a field the study had decided not to score.
     """
     if not field_judgments:
         return False
-    return all(field_judgments.get(f) in ACCEPTABLE for f in FIELDS)
+    return all(field_judgments.get(f) in ACCEPTABLE for f in (fields or FIELDS))
 
 
 def per_model_accuracy(
-    gold: dict[str, dict[str, dict[str, str]]], models: list[str]
+    gold: dict[str, dict[str, dict[str, str]]],
+    models: list[str],
+    fields: list[str] | None = None,
 ) -> dict[str, float | None]:
     """Fraction of judged segments each generator got fully correct."""
     accuracy: dict[str, float | None] = {}
     for model in models:
         judged = [g[model] for g in gold.values() if model in g]
         accuracy[model] = (
-            sum(1 for j in judged if is_fully_correct(j)) / len(judged) if judged else None
+            sum(1 for j in judged if is_fully_correct(j, fields)) / len(judged)
+            if judged
+            else None
         )
     return accuracy
 
 
 def oracle_ceiling(
-    gold: dict[str, dict[str, dict[str, str]]], models: list[str]
+    gold: dict[str, dict[str, dict[str, str]]],
+    models: list[str],
+    fields: list[str] | None = None,
 ) -> float | None:
     """Fraction of segments where *at least one* generator was fully correct.
 
@@ -76,7 +88,7 @@ def oracle_ceiling(
     hits = sum(
         1
         for judgments in gold.values()
-        if any(is_fully_correct(judgments[m]) for m in models if m in judgments)
+        if any(is_fully_correct(judgments[m], fields) for m in models if m in judgments)
     )
     return hits / len(gold)
 
@@ -104,6 +116,7 @@ def oracle_capture_rate(
 def mars_accuracy(
     gold: dict[str, dict[str, dict[str, str]]],
     outcomes: dict[str, dict[str, Any]],
+    fields: list[str] | None = None,
 ) -> dict[str, Any]:
     """Accuracy over returned records, plus the coverage it is conditional on.
 
@@ -125,7 +138,7 @@ def mars_accuracy(
         # A deduplicated candidate has several generators that produced
         # identical fields, so any of them carries the same judgment.
         selected = next((judgments[m] for m in generators if m in judgments), None)
-        if selected and is_fully_correct(selected):
+        if selected and is_fully_correct(selected, fields):
             correct += 1
 
     total = len(outcomes)
@@ -147,17 +160,19 @@ def build_evaluation(
     gold: dict[str, dict[str, dict[str, str]]],
     models: list[str],
     outcomes: dict[str, dict[str, Any]],
+    fields: list[str] | None = None,
 ) -> dict[str, Any]:
-    generators = per_model_accuracy(gold, models)
+    generators = per_model_accuracy(gold, models, fields)
     scored = {m: a for m, a in generators.items() if a is not None}
     best_model = max(scored, key=lambda m: scored[m]) if scored else None
     best = scored.get(best_model) if best_model else None
-    ceiling = oracle_ceiling(gold, models)
-    mars = mars_accuracy(gold, outcomes)
+    ceiling = oracle_ceiling(gold, models, fields)
+    mars = mars_accuracy(gold, outcomes, fields)
 
     return {
         "n_gold_segments": len(gold),
         "models": models,
+        "scoring_fields": fields or FIELDS,
         "per_generator_accuracy": generators,
         "best_generator": best_model,
         "best_generator_accuracy": best,
@@ -202,19 +217,26 @@ def _render(report: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    gold_path = RESULTS_DIR / "gold_labels.json"
+    # The derived judgements, not gold_labels.json: gold holds field *values*,
+    # and score_against_gold turns those into the per-model judgements these
+    # metrics are defined over.
+    scored_path = RESULTS_DIR / "scored_against_gold.json"
     outcomes_path = RESULTS_DIR / "mars_outcomes.json"
-    for path in (gold_path, outcomes_path):
+    for path, hint in (
+        (scored_path, "tests.eval.extraction.score_against_gold"),
+        (outcomes_path, "tests.eval.extraction.run_mars ..."),
+    ):
         if not path.exists():
             raise SystemExit(
-                f"{path} not found. Adjudicated gold labels and MARS outcomes are "
-                "required; this script computes metrics, it does not create labels."
+                f"{path} not found. Run `uv run python -m {hint}` first; this "
+                "script computes metrics, it does not create labels."
             )
 
-    gold_payload = json.loads(gold_path.read_text())
+    scored = json.loads(scored_path.read_text())
     report = build_evaluation(
-        gold_payload["gold"], gold_payload["models"],
+        scored["gold"], scored["models"],
         json.loads(outcomes_path.read_text()),
+        scored.get("scoring_fields"),
     )
     out = RESULTS_DIR / "mars_evaluation.json"
     out.write_text(json.dumps(report, indent=2))

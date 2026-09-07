@@ -1,4 +1,19 @@
-"""Interactive annotation over a child-stratified batch, one annotator at a time.
+"""SUPERSEDED -- candidate-level judging, retained for provenance only.
+
+The study annotates at the source/gold level instead: annotators author field
+values from the transcript with no model output shown (`annotate_gold`), and
+every generator is scored against that one reference by `score_against_gold`.
+That design is model-independent, removes anchoring on model output, costs one
+pass per annotator rather than one per generator, and lets a fourth generator
+be added later without any new annotation.
+
+Do not run this for the reported study. It is kept because the batch it reads
+is frozen and its judgement vocabulary is still the vocabulary
+`score_against_gold` derives.
+
+---
+
+Interactive annotation over a child-stratified batch, one annotator at a time.
 
 Supersedes annotate.py, which read the flat pilot candidate file, had no
 per-annotator assignment, and wrote every annotator's judgments to one file --

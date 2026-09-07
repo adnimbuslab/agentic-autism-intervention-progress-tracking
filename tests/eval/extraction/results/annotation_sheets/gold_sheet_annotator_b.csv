@@ -1,0 +1,3390 @@
+﻿segment_id,child_id,corpus,session_id,transcript,domain,behavior,modality,prompt_level,outcome,notes
+mark_flusberg_mark_070700.cha_seg_074,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	what is the horse wearing ?
+*CHI:	mhm .
+*MOT:	[NAME] .
+*MOT:	what is the horse wearing ?
+*CHI:	hat .
+*MOT:	do horses wear hats ?
+*CHI:	no .
+*MOT:	no , that's kind of silly , &~is [/] (is)n't it ?",,,,,,
+mark_flusberg_mark_070812.cha_seg_001,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	today what ?
+*CHI:	is [/] thursday ?
+*MOT:	that's right .
+*CHI:	today is [/] thursday .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_015,roger_flusberg,flusberg,flusberg_roger_flusberg_040518.cha,"*MOT:	you want the abc puzzle ?
+*CHI:	abc [/] puzzle .
+*CHI:	<oh oh> [/] where is it ?
+*CHI:	I don't know .",,,,,,
+rick_flusberg_rick_060308.cha_seg_001,rick,flusberg,flusberg_rick_060308.cha,"*MOT:	sit over here with mama .
+*CHI:	come sit .
+*MOT:	[NAME] , can you play these quietly ?
+*CHI:	cymbal .",,,,,,
+mark_flusberg_mark_080915.cha_seg_008,mark,flusberg,flusberg_mark_080915.cha,"*MOT:	well let's make another play-doh star .
+*CHI:	throw that away ?
+*CHI:	don't throw star away .
+*MOT:	no , don't throw star away .
+*CHI:	not a boomerang .
+*MOT:	not a what ?
+*CHI:	booma [/] boomerang .
+*MOT:	is [/] it a boomerang ?",,,,,,
+mars_rollins_mars_030100.cha_seg_034,mars,rollins,rollins_mars_030100.cha,"*INV:	turn it .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	moves a piece
+*INV:	there's one .
+%spa:	$NIA:MK
+*CHI:	0 .
+%act:	tries to put the piece in
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*INV:	you got it .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	puts the piece in
+*INV:	there's that one .
+%spa:	$NIA:MK",,,,,,
+carl_rollins_carl_021100.cha_seg_070,carl,rollins,rollins_carl_021100.cha,"*INV:	that was nice .
+%spa:	$NIA:AB
+*CHI:	0 .
+%act:	kisses the dog again
+*CHI:	&=laughs .
+*INV:	you're silly .
+%spa:	$DHS:ST
+*CHI:	0 .
+%act:	makes the dog eat
+*INV:	xxx . [+ trn]
+%spa:	$DFW:PR
+%act:	pretends to eat him
+*CHI:	&=laughs .
+*INV:	&=laughs .",,,,,,
+mark_flusberg_mark_080915.cha_seg_010,mark,flusberg,flusberg_mark_080915.cha,"*MOT:	five ?
+*CHI:	buy a kite .
+*CHI:	<bl bl> [/] balloon .
+*CHI:	got balloon .
+*CHI:	got balloon .",,,,,,
+mark_flusberg_mark_070700.cha_seg_081,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	read it .
+*CHI:	jam .
+*CHI:	lantern .
+*CHI:	jam .
+*CHI:	lantern .
+*MOT:	is [/] that jam ?
+*CHI:	no .
+*MOT:	read it .",,,,,,
+brett_flusberg_brett_060207.cha_seg_011,brett,flusberg,flusberg_brett_060207.cha,"*MOT:	what's she wearing ?
+*CHI:	she's wearing a orange shirt , playing the guitar while she looks at it .
+*MOT:	that's right .
+*MOT:	is she inside or outside ?
+*CHI:	she's inside .
+*MOT:	right .
+*MOT:	why ?
+*CHI:	she's playing the guitar .",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_006,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	no .
+*CHI:	cracker .
+*MOT:	[NAME] , what's this ?
+*CHI:	hair .",,,,,,
+stuart_flusberg_stuart_040306.cha_seg_018,stuart,flusberg,flusberg_stuart_040306.cha,"*MOT:	put the cover on .
+*CHI:	cover .
+*MOT:	put the cover on .
+*MOT:	push .
+*CHI:	push .
+*MOT:	that's right .
+*MOT:	wanna play with your toys ?
+*CHI:	yeah .",,,,,,
+rick_flusberg_rick_060818.cha_seg_013,rick,flusberg,flusberg_rick_060818.cha,"*MOT:	that's a good job .
+*CHI:	put in .
+*MOT:	[NAME] what are you doing ?
+*CHI:	I play eraser .
+*MOT:	[NAME] look .
+*MOT:	what are you doing ?
+*CHI:	I play eraser .",,,,,,
+rick_flusberg_rick_040700.cha_seg_021,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	put it down [NAME] .
+*CHI:	xxx .
+*MOT:	[NAME] look .",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_019,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	can you say frog ?
+*CHI:	frog .
+*MOT:	frog .",,,,,,
+rick_flusberg_rick_040700.cha_seg_062,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	[NAME] look .
+*CHI:	xxx .
+*CHI:	want Dan .
+*CHI:	want Dan .",,,,,,
+brett_flusberg_brett_051002.cha_seg_046,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	do you wanna do this ?
+*CHI:	yes .
+*MOT:	no ?",,,,,,
+sid_rollins_sid_030200.cha_seg_004,sid,rollins,rollins_sid_030200.cha,"*INV:	do you want me to tie it ?
+%spa:	$DCC:YQ
+*CHI:	xxx . [+ trn]
+%spa:	$DCC:AN:NO
+%act:	grabs the balloon
+*INV:	0 .
+%act:	lets go of the balloon
+*INV:	&-uh .
+%spa:	$MRK:MK
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:EM:VCA
+%gpx:	stomps his feet and points to where the balloon landed
+*INV:	get it .
+%spa:	$NIA:RP
+%gpx:	points to the balloon
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:EM:VO
+%act:	gets the balloon
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:EM:VNO
+%act:	brings the balloon back",,,,,,
+josh_rollins_josh_020800.cha_seg_046,josh,rollins,rollins_josh_020800.cha,"*INV:	can you push it in ?
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	moves hand to juice
+*INV:	I'll help .
+%spa:	$NIA:SI
+%act:	moves piece to right on top of space
+*CHI:	0 .
+%act:	puts hand on top of piece
+*CHI:	0 .
+%act:	looks around",,,,,,
+mars_rollins_mars_030800.cha_seg_010,mars,rollins,rollins_mars_030800.cha,"*INV:	that's right .
+%spa:	$PRO:AP
+*CHI:	0 .
+%act:	puts it in the puzzle
+*INV:	a car .
+%spa:	$DHA:ST
+%act:	holds up a piece",,,,,,
+mars_rollins_mars_030100.cha_seg_024,mars,rollins,rollins_mars_030100.cha,"*INV:	lets come feed the chickens .
+%spa:	$NIA:RP
+%act:	grabs CHI's hand and begins to lead him back to the chicken coop
+*CHI:	0 .
+%act:	stares at video camera
+*INV:	that's the camera .
+%spa:	$DJF:ST",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_060,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	there it is .
+%spa:	$NIA:ST
+%act:	turns to look at balloon
+%gpx:	points to balloon
+*CHI:	0 .
+%act:	picks up balloon and hands it to EXP
+*INV:	there it is .
+%spa:	$NIA:ST",,,,,,
+brett_flusberg_brett_051002.cha_seg_040,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	what color is that truck ?
+*CHI:	orange .
+*MOT:	yeah , what color is this truck ?
+*CHI:	yellow .
+*MOT:	yeah , and what color is this car ?
+*CHI:	blue .
+*MOT:	what color is this car that's driving on your arm ?
+*CHI:	blue .",,,,,,
+sid_rollins_sid_020200.cha_seg_060,sid,rollins,rollins_sid_020200.cha,"*INV:	stand up ?
+%spa:	$DCC:YQ
+%gpx:	motions upward with both hands
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RP:VNO
+*INV:	okay Chi .
+%spa:	$NIA:AD
+*INV:	I'll stand up .
+%spa:	$NIA:SI
+*INV:	put the blocks away ?
+%spa:	$NIA:RQ
+%act:	stands
+*CHI:	0 .
+%act:	starts walking away
+*INV:	Chi .
+%spa:	$NCS:CL
+*CHI:	0 .
+%act:	turns back",,,,,,
+brett_flusberg_brett_051002.cha_seg_035,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	ohboy [/] [NAME] !
+*CHI:	you got your cars and trucks [NAME] .
+*MOT:	yes !
+*MOT:	whose cars and trucks are those ?
+*CHI:	yours .
+*MOT:	no .
+*CHI:	Shannon's .
+*MOT:	whose [/] whose cars and trucks are these ?",,,,,,
+jack_flusberg_jack_071001.cha_seg_009,jack,flusberg,flusberg_jack_071001.cha,"*MOT:	what do I do ?
+*CHI:	xxx .
+*MOT:	you roll it nice and flat .
+*CHI:	want play-doh .
+*MOT:	can you do that ?
+*CHI:	xxx .
+*MOT:	go ahead you do it .
+*CHI:	I +/.",,,,,,
+mark_flusberg_mark_070700.cha_seg_019,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	what's broken ?
+*CHI:	that broken .
+*MOT:	is [/] it broken ?
+*CHI:	no .
+*MOT:	what's the problem ?
+*CHI:	broken .",,,,,,
+mars_rollins_mars_030300.cha_seg_006,mars,rollins,rollins_mars_030300.cha,"*INV:	you want a marker ?
+%spa:	$NIA:RQ
+%act:	holds up two markers
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*INV:	do you want one ?
+%spa:	$NIA:RQ
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO",,,,,,
+mars_rollins_mars_030100.cha_seg_038,mars,rollins,rollins_mars_030100.cha,"*INV:	<slide slide> [/] slide .
+%spa:	$NIA:SI
+%act:	pulls him
+*CHI:	0 .
+%act:	stands and walks towards the camera
+*CHI:	xxx .
+%act:	waves his hands
+*CHI:	xxx .
+%act:	goes to the bottom of the slide
+*CHI:	0 .
+%act:	climbs onto the slide
+*INV:	climb up Chi .
+%spa:	$NIA:RP
+*CHI:	xxx [=! voc] [=! voc] [=! voc] [=! voc] .
+%act:	climbs up the slide
+*INV:	<up up up> [/] up .
+%spa:	$NIA:SI",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_027,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	thank you .
+%spa:	$MRK:MK
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:NO
+%act:	picks up other balloon off of floor and shows to EXP
+*INV:	the balloon is flat .
+%spa:	$DJF:ST
+*INV:	it's flat .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	still looking at balloon
+*INV:	let's get you a new balloon .
+%spa:	$DJF:RP
+%act:	stands up
+*INV:	let's get a new balloon .
+%spa:	$DJF:SI
+%act:	getting new balloon
+*CHI:	0 .
+%act:	follows EXP",,,,,,
+mark_flusberg_mark_070700.cha_seg_055,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	who is in the boat ?
+*CHI:	boy .
+*MOT:	and who else ?
+*CHI:	bear .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010,roger_flusberg,flusberg,flusberg_roger_flusberg_050006.cha,"*MOT:	what school do you go to ?
+*CHI:	school .
+*MOT:	what school ?
+*MOT:	the lau +/.
+*CHI:	school .
+*MOT:	Laura +/.
+*CHI:	Lee_School .
+*MOT:	do the puzzle .",,,,,,
+mars_rollins_mars_030300.cha_seg_060,mars,rollins,rollins_mars_030300.cha,"*INV:	that's why you're not doing things .
+%spa:	$NIA:ST
+*CHI:	xxx .
+%act:	tries to open toy
+*INV:	open it .
+%spa:	$NIA:RP
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*CHI:	0 .
+%gpx:	hits top of the toy
+*INV:	open it .
+%spa:	$NIA:RP
+%gpx:	points to the toy
+*CHI:	0 .
+%act:	sits back and looks at things
+*INV:	open it .
+%spa:	$NIA:RP",,,,,,
+carl_rollins_carl_021100.cha_seg_088,carl,rollins,rollins_carl_021100.cha,"*INV:	I don't see them .
+%spa:	$DJF:ST
+%act:	looks back at CHI
+*CHI:	0 .
+%act:	runs up
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VNO
+%gpx:	stomps
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VNO
+%gpx:	stomps and turns away
+*CHI:	0 .
+%act:	runs off
+*INV:	no book ?
+%spa:	$NIA:YQ
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*INV:	we needta close the cabinet .
+%spa:	$NIA:RP",,,,,,
+rick_flusberg_rick_061012.cha_seg_007,rick,flusberg,flusberg_rick_061012.cha,"*MOT:	what are you taking ?
+*CHI:	off .
+*MOT:	what are you taking out ?
+*CHI:	off .
+*MOT:	football .
+*MOT:	what are you gonna do with that ?
+*CHI:	whoops .",,,,,,
+sid_rollins_sid_030200.cha_seg_013,sid,rollins,rollins_sid_030200.cha,"*INV:	0 . [+ trn]
+%spa:	$DHA:YY:CO
+%act:	holds up the other person
+*CHI:	0 .
+%act:	takes the other person
+*INV:	blue .
+%spa:	$NIA:ST
+*INV:	0 . [+ trn]
+%spa:	$DHA:RP:CP
+%gpx:	points
+*CHI:	0 .
+%act:	starts to put him in the fire truck
+*INV:	put him in the fire truck .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	puts the person in the fire truck
+*INV:	there you go .
+%spa:	$NIA:AB",,,,,,
+mark_flusberg_mark_070812.cha_seg_004,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	did you go to school this morning ?
+*CHI:	yes .
+*MOT:	who drove you to school this morning ?
+*MOT:	[NAME] ?
+*MOT:	who drove you to school this morning ?
+*CHI:	Pape .
+*MOT:	yeah , can you give me a full sentence ?
+*CHI:	Pape .",,,,,,
+brett_flusberg_brett_050800.cha_seg_025,brett,flusberg,flusberg_brett_050800.cha,"*MOT:	come here .
+*CHI:	hafta look at that .
+*CHI:	take a movie .
+*CHI:	put the movie on .",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_009,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	<tickle tickle> [/] tickle .
+*CHI:	cracker .
+*CHI:	cracker .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_078,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*CHI:	0 .
+%act:	looks in the trash can
+*INV:	there's the trash .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	hits the trash with his wrench
+*INV:	there's the trash .
+%spa:	$DJF:ST
+*CHI:	xxx .
+*INV:	trash .
+%spa:	$DJF:ST
+%act:	hits the side with her hammer
+*CHI:	xxx .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010,roger_flusberg,flusberg,flusberg_roger_flusberg_040518.cha,"*MOT:	what's this , [NAME] ?
+*CHI:	tower .
+*MOT:	wanna build a tower ?
+*CHI:	yes .
+*MOT:	okay .
+*CHI:	tower .
+*MOT:	let's build a tower .
+*CHI:	build a tower .",,,,,,
+brett_flusberg_brett_060819.cha_seg_022,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	what song did you sing in circle time ?
+*CHI:	all covered with cheese .
+*MOT:	you sang On_Top_of_Spagetti ?
+*CHI:	and I said it rolled off the table .
+*MOT:	and what [/] what happened ?
+*CHI:	it went , it rolled out of the doors .
+*CHI:	happened to the meatballs at Beverly's xxx ?
+*MOT:	I don't know .",,,,,,
+sid_rollins_sid_021100.cha_seg_053,sid,rollins,rollins_sid_021100.cha,"*INV:	here's the black pg .
+%spa:	$NIA:TO
+%act:	places by CHI
+*CHI:	0 .
+%act:	puts pig in the pen
+*INV:	can he go in there too ?
+%spa:	$NIA:QN
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	knocks down the fence while trying to put pig in pen
+*CHI:	0 .
+%act:	tries to fix fence
+*INV:	yeah you can get him in .
+%spa:	$NIA:ST
+*CHI:	xxx .
+%act:	still trying to put up fence
+*CHI:	xxx .",,,,,,
+mars_rollins_mars_030300.cha_seg_044,mars,rollins,rollins_mars_030300.cha,"*INV:	whee .
+%spa:	$NIA:PR
+%act:	wipes the mirror with a paper towel
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	come on .
+%spa:	$NIA:RP",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_062,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	there it is .
+%spa:	$NIA:ST
+%gpx:	points to balloon
+*CHI:	0 .
+%act:	runs and picks up balloon
+*INV:	there it is .
+%spa:	$NIA:ST
+*CHI:	0 . [+ trn]
+%spa:	$NIA:TO:CO
+%gpx:	gives balloon to EXP plus active gaze
+*INV:	thank you .
+%spa:	$MRK:MK
+*INV:	blow it up .
+%spa:	$NIA:SI
+%act:	blows up balloon
+*CHI:	0 .
+%act:	puts balloon to mouth
+*INV:	0 .
+%act:	holds balloon while looking at CHI",,,,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_013,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	let's dump it out .
+%spa:	$NIA:RP
+*CHI:	car [/] car .
+%spa:	$DHA:YY:WD
+*INV:	car ?
+%spa:	$DCC:RT
+%gpx:	points to the bus
+*INV:	car .
+%spa:	$DJF:ST
+%gpx:	points to the bus
+*CHI:	car .
+%spa:	$DJF:ST:WD
+%gpx:	points
+*INV:	car .
+%spa:	$DJF:RT
+%gpx:	points
+*CHI:	yyy [= jargon] [>] .
+%spa:	$DJF:YY:VJ",,,,,,
+sid_rollins_sid_020200.cha_seg_007,sid,rollins,rollins_sid_020200.cha,"*INV:	ready to blow ?
+%spa:	$NIA:RQ
+*CHI:	0 . [+ trn]
+%spa:	$NIA:AD:NO
+%gpx:	tries to put it in her mouth
+*INV:	you want me to blow ?
+%spa:	$DCA:YQ
+%act:	takes the balloon from him",,,,,,
+jack_flusberg_jack_061028.cha_seg_027,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	and I have the big jeep car .
+*CHI:	xxx Ford .
+*MOT:	and I have Alvin .
+*MOT:	wanna play with Alvin ?
+*CHI:	it's Ford .
+*CHI:	xxx is better .
+*MOT:	I have Alvin the angel over here .
+*CHI:	xxx .",,,,,,
+sid_rollins_sid_030200.cha_seg_014,sid,rollins,rollins_sid_030200.cha,"*INV:	&-uh oh .
+%spa:	$MRK:MK
+%act:	wipes his nose
+*CHI:	xxx .
+%act:	begins rebuilding the gas station
+*INV:	0 .
+%act:	holds part of the structure down so he can take it apart
+*CHI:	xxx .
+%act:	still building
+*INV:	0 .
+%act:	holds the gas station so it won't fall while he builds
+*CHI:	0 .
+%act:	rolls the fire truck around the gas station
+*INV:	you need a driver Chi .
+%spa:	$NIA:ST
+%gpx:	points in the truck
+*CHI:	0 .
+%act:	puts a person in the truck",,,,,,
+rick_flusberg_rick_060107.cha_seg_002,rick,flusberg,flusberg_rick_060107.cha,"*MOT:	what are you doing ?
+*CHI:	doing the chalk .
+*MOT:	say , I play .
+*CHI:	I play .
+*MOT:	good boy .
+*CHI:	get xxx .
+*CHI:	<get out> [/] get out .
+*CHI:	xxx .",,,,,,
+carl_rollins_carl_021100.cha_seg_055,carl,rollins,rollins_carl_021100.cha,"*CHI:	yyy .
+%spa:	$NIA:SI:WD
+%act:	puts a toy in the barn
+*CHI:	yyy .
+%spa:	$NIA:SI:WD
+%act:	puts a toy in the barn
+*CHI:	yyy .
+%spa:	$NIA:SI:WD
+%act:	puts a toy in the barn
+*CHI:	a horse .
+%spa:	$NIA:SI:WD
+%act:	puts the horses in
+*CHI:	a horse .
+%spa:	$NIA:SI:WD
+*CHI:	a sheep .
+%spa:	$NIA:SI:WD
+%act:	puts a toy in the barn
+*CHI:	a chicken .
+%spa:	$NIA:SI:WD
+%act:	puts a toy in the barn
+*CHI:	0 .
+%act:	gets the people out of the bus and puts them in the barn",,,,,,
+josh_rollins_josh_021100.cha_seg_020,josh,rollins,rollins_josh_021100.cha,"*INV:	down .
+%spa:	$NIA:ST
+*CHI:	xxx .
+%act:	gets another block off the other table
+*INV:	did you find more blocks ?
+%spa:	$NIA:YQ
+%gpx:	points to the other table
+*CHI:	xxx .
+%spa:	$YYY:YY:VO
+%act:	throws one in the hole
+*INV:	did you find more ?
+%spa:	$NIA:YQ
+%gpx:	points to the blocks
+*CHI:	xxx .
+%spa:	$YYY:YY:VO
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+%act:	covers the hole
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	tries to put a block in the hole",,,,,,
+carl_rollins_carl_030000.cha_seg_002,carl,rollins,rollins_carl_030000.cha,"*INV:	let's dump it out .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	dumps the puzzle
+*INV:	oop .
+%spa:	$MRK:MK",,,,,,
+mars_rollins_mars_030100.cha_seg_035,mars,rollins,rollins_mars_030100.cha,"*INV:	take her head out .
+%spa:	$NIA:RP
+%gpx:	taps a piece
+*CHI:	0 .
+%act:	takes out a different piece
+*INV:	look .
+%spa:	$DHA:RP
+*CHI:	0 .
+%act:	takes out another piece",,,,,,
+sid_rollins_sid_020200.cha_seg_039,sid,rollins,rollins_sid_020200.cha,"*INV:	the lights are on .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	turns them back off again
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*INV:	now they're off .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	turns toward door",,,,,,
+sid_rollins_sid_030200.cha_seg_003,sid,rollins,rollins_sid_030200.cha,"*INV:	how about on this one ?
+%spa:	$NIA:RP
+%act:	starts to do something else with the lego
+*CHI:	0 . [+ trn]
+%spa:	$NIA:PF:NO
+%gpx:	pushes the lego back
+*INV:	no .
+%spa:	$NIA:AC
+%act:	puts the lego down",,,,,,
+josh_rollins_josh_020500.cha_seg_019,josh,rollins,rollins_josh_020500.cha,"*INV:	turn it on .
+%spa:	$NIA:SI
+%act:	turns it slower
+*CHI:	yyy yyy yyy .
+%act:	puts hands under water
+*CHI:	xxx .
+*INV:	let's pull up your sleeves .
+%spa:	$NIA:SI
+%act:	pulls up chi's sleeves
+*INV:	let's pull up your sleeves .
+%spa:	$NIA:SI
+%act:	pulls up sleeves
+*CHI:	0 .
+%act:	plays in the water
+*INV:	it's cold .
+%spa:	$DJF:ST
+%act:	hand under water
+*INV:	turn it off .
+%spa:	$NIA:SI
+%act:	turns off the water",,,,,,
+sid_rollins_sid_021100.cha_seg_040,sid,rollins,rollins_sid_021100.cha,"*INV:	a door .
+%spa:	$NIA:ST
+%act:	hands chalk to child
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	draws on board
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:NO
+%gpx:	turns toward Clinician
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VCP
+%gpx:	points to board
+*INV:	what do you want ?
+%spa:	$DCC:QN
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VCP
+%gpx:	repeats point to board
+*INV:	some arms for Chi .
+%spa:	$NIA:SI
+%act:	draws on chalkboard
+*INV:	hands .
+%spa:	$NIA:SI",,,,,,
+mark_flusberg_mark_070812.cha_seg_029,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	I know that doesn't look right , you're right .
+*CHI:	in .
+*MOT:	in [/] in , that's an in .
+*MOT:	i@l n@l .
+*MOT:	okay .
+*CHI:	sit in back seat of car .
+*MOT:	when you got home from school , who was here ?
+*MOT:	who's here at the house ?",,,,,,
+jack_flusberg_jack_060900.cha_seg_076,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	did you play today in school ?
+*CHI:	yes .
+*MOT:	okay .
+*MOT:	did you do any number work today ?
+*MOT:	did you do any number work today ?
+*CHI:	yes .
+*MOT:	what number did you work with ?
+*MOT:	can you tell me the number ?",,,,,,
+mars_rollins_mars_030600.cha_seg_006,mars,rollins,rollins_mars_030600.cha,"*INV:	are you lining them up ?
+%spa:	$DCA:YQ
+*CHI:	bye .
+%spa:	$MRK:MK:WD
+*INV:	where are they going ?
+%spa:	$NIA:QN
+*CHI:	bye .
+%spa:	$MRK:MK:WD
+*CHI:	0 .
+%act:	reaches past EXP
+*INV:	you gonna take the car out ?
+%spa:	$DCA:YQ
+*CHI:	bye .
+%spa:	$MRK:MK:WD
+%act:	tries to put a figure in the garage",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_008,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	say bear .
+*CHI:	bear .
+*MOT:	that's right , good boy .
+*MOT:	what's he doing ?
+*CHI:	xxx .
+*MOT:	he's sleeping .
+*CHI:	sleep .",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_061,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	say bunny .
+*CHI:	bunny .
+*MOT:	see , the baby's in bed .
+*CHI:	xxx .",,,,,,
+brett_flusberg_brett_051002.cha_seg_016,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	you +/.
+*CHI:	you are putting lemon .
+*MOT:	close enough .
+*MOT:	I am stuffing the artichoke .
+*MOT:	what is Jenny doing ?
+*CHI:	Jenny's doing .
+*MOT:	where is Jenny ?
+*CHI:	in the stool .",,,,,,
+brett_flusberg_brett_060819.cha_seg_024,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	what kind of tree ?
+*CHI:	a big tree .
+*MOT:	what was on the tree ?
+*CHI:	meatballs .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_022,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	no it's not raining .
+*CHI:	not rain .
+*MOT:	[NAME] ?
+*MOT:	look at me .
+*MOT:	take his pants off .
+*CHI:	take pants .
+*CHI:	take a kaka .
+*CHI:	take a kaka .",,,,,,
+carl_rollins_carl_020800.cha_seg_046,carl,rollins,rollins_carl_020800.cha,"*INV:	0 . [+ trn]
+%spa:	$NIA:PR
+%act:	smacks
+*CHI:	0 .
+%act:	turns the sheep's head
+*CHI:	0 .
+%act:	knocks the pig off the table
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+%act:	looks on the floor
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+*CHI:	0 .
+%act:	looks on the floor
+*INV:	where's the pg ?
+%spa:	$DHA:QN
+*CHI:	0 .
+%act:	looks at others in room who are playing with a balloon again",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_056,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	how do we roll em ?
+*CHI:	clap .
+*MOT:	roll em .
+*CHI:	clap .",,,,,,
+mark_flusberg_mark_080700.cha_seg_003,mark,flusberg,flusberg_mark_080700.cha,"*MOT:	do you play ball at school ?
+*CHI:	yeah .
+*MOT:	who do you play ball with in school ?",,,,,,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_028,roger_flusberg,flusberg,flusberg_roger_flusberg_030900.cha,"*MOT:	you play with the blocks .
+*CHI:	play your blocks .
+*CHI:	play your blocks .
+*MOT:	build a building [NAME] .
+*CHI:	build a building .
+*CHI:	build a building .
+*CHI:	brown .
+*CHI:	red .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	time to close the doors .
+*CHI:	I +/.
+*MOT:	get strawberry .
+*CHI:	go to sleep .
+*MOT:	good_night .
+*CHI:	good_night .
+*CHI:	good_night strawberry .
+*CHI:	good_night .",,,,,,
+mark_flusberg_mark_080700.cha_seg_002,mark,flusberg,flusberg_mark_080700.cha,"*MOT:	another se [/] &-uh [/] full sentence .
+*CHI:	[NAME] play ball .
+*MOT:	who do you play ball with ?
+*CHI:	[NAME] .
+*MOT:	no .
+*MOT:	[NAME] plays ball with ?
+*CHI:	with .
+*CHI:	Tim [/] mommy .",,,,,,
+carl_rollins_carl_030700.cha_seg_005,carl,rollins,rollins_carl_030700.cha,"*INV:	now he can stand up .
+%spa:	$DJF:ST
+*CHI:	&-um his mouth .
+%spa:	$DJF:YY:WD
+%act:	gets a mouth out of the box
+*CHI:	it's daddy !
+%spa:	$DHA:ST:WD
+%act:	gets a third potato out of the box
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*INV:	is that the daddy potato head ?
+%spa:	$DJF:YQ
+*CHI:	yes .
+%spa:	$DJF:AA:WD
+%act:	looks in the box
+*CHI:	0 .
+%act:	gets another pair of shoes
+*CHI:	0 .
+%act:	puts the shoes on the potato",,,,,,
+jack_flusberg_jack_071001.cha_seg_022,jack,flusberg,flusberg_jack_071001.cha,"*MOT:	[NAME] doesn't wanna play anymore with the play-doh ?
+*CHI:	xxx .
+*MOT:	can I write with you ?
+*MOT:	can mama write ?
+*CHI:	stop .
+*MOT:	can I write ?
+*CHI:	stop !
+*MOT:	stop what ?",,,,,,
+mars_rollins_mars_030300.cha_seg_039,mars,rollins,rollins_mars_030300.cha,"*INV:	m@l .
+%spa:	$DJF:EI
+%act:	draws another M
+*CHI:	xxx .
+%act:	continues scribbling
+*INV:	m@l for Chi .
+%spa:	$DJF:ST
+*INV:	whee .
+%spa:	$NIA:PR
+*INV:	whee .
+%spa:	$NIA:PR
+%gpx:	points to what he has scribbled on the mirror
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*INV:	m@l [/] m@l .
+%spa:	$NIA:CT
+%act:	draws another m@l",,,,,,
+jack_flusberg_jack_070315.cha_seg_002,jack,flusberg,flusberg_jack_070315.cha,"*MOT:	what's that say ?
+*CHI:	inside was a toy kangaroo .
+*MOT:	inside was a funny toy kangaroo .",,,,,,
+carl_rollins_carl_021100.cha_seg_064,carl,rollins,rollins_carl_021100.cha,"*INV:	&~mm .
+%spa:	$DFW:ST
+%act:	rubs his tummy
+*CHI:	0 .
+%act:	rubs his tummy
+*INV:	the horsie is hungry too .
+%spa:	$DFW:ST
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+%act:	puts the horse's head in the troft
+*INV:	xxx . [+ trn]
+%spa:	$DFW:PR
+%act:	pretends to eat him
+*CHI:	&=laughs .
+*INV:	xxx . [+ trn]
+%spa:	$DFW:PR
+%act:	pretends to eat him
+*CHI:	&=laughs .",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_041,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	what's this ?
+*CHI:	belly .
+*MOT:	good boy , [NAME] .",,,,,,
+mars_rollins_mars_030300.cha_seg_018,mars,rollins,rollins_mars_030300.cha,"*INV:	will you push ?
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	plays in the glue stuck on top of the bottle
+*INV:	it's sticky .
+%spa:	$NIA:ST
+%act:	picks up the glue bottle and plays with the glue mess also
+*INV:	it's sticky .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	plays with the glue again
+*CHI:	0 .
+%act:	tries to turn the bottle over",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_022,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	there it is .
+%spa:	$DHA:RT
+*CHI:	0 .
+%act:	squishes and rolls own balloon
+*CHI:	0 .
+%act:	watches as balloon floats in air
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*INV:	<up up up> [/] up .
+%spa:	$NIA:PR
+*CHI:	0 .
+%act:	stands up to get balloon
+*INV:	up (.) up .
+%spa:	$NIA:PR
+*CHI:	0 .
+%gpx:	reaches up for balloon",,,,,,
+jack_flusberg_jack_061028.cha_seg_018,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	one day that goat .
+*CHI:	will xxx .
+*MOT:	will xxx .
+*MOT:	ate three red shirts .
+*MOT:	ate three red shirts .
+*CHI:	radio .
+*MOT:	is that a radio ?
+*CHI:	seven and eleven .",,,,,,
+roger_rollins_rollins_roger_rollins_030300.cha_seg_015,roger_rollins,rollins,rollins_roger_rollins_030300.cha,"*INV:	roll it out .
+%spa:	$NIA:SI
+%act:	places play+doh on the counter again to be rolled out
+*CHI:	0 .
+%act:	wraps the play+doh around the pin
+*INV:	&=laughs .
+*INV:	there's his shirt on .
+%spa:	$NIA:ST
+%act:	wraps one hand around the play+doh on the rolling pin
+*CHI:	0 .
+%act:	stands rolling pin upright and presses the play+doh around the pin
+*INV:	there's his shirt .
+%spa:	$DHA:ST
+%gpx:	points to the play+doh on the rolling pin
+*CHI:	0 .
+%act:	takes the play+doh off the rolling pin
+*CHI:	0 .
+%act:	places the play+doh onto the rolling pin and presses firmly",,,,,,
+rick_flusberg_rick_040700.cha_seg_033,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	hot+cakes .
+*CHI:	hot+cakes .
+*MOT:	okay , make some hot+cakes .
+*CHI:	it cook .
+*CHI:	it cook .
+*CHI:	hot+cake .
+*CHI:	hot+cake .
+*CHI:	cake .",,,,,,
+mars_rollins_mars_030300.cha_seg_005,mars,rollins,rollins_mars_030300.cha,"*INV:	four .
+%spa:	$DJF:CN
+*CHI:	0 .
+%act:	starts to get up
+*INV:	five trucks .
+%spa:	$DHA:ST
+%act:	holds the book in front of him
+*CHI:	0 .
+%act:	stands and runs off
+*INV:	&-uh &-uh Chi .
+%spa:	$NIA:CL
+*CHI:	0 .
+%act:	turns back",,,,,,
+jack_flusberg_jack_070106.cha_seg_004,jack,flusberg,flusberg_jack_070106.cha,"*MOT:	wanna put the tennis ball in his other hand ?
+*CHI:	Nanny_Bartlane .
+*MOT:	Nanny_Bartlane .
+*MOT:	what's Nanny_Bartlane hafta do with this ?
+*CHI:	Bartlane .",,,,,,
+brett_flusberg_brett_051002.cha_seg_033,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	what ?
+*CHI:	can I have a cookie ?
+*MOT:	no .
+*CHI:	that knife can cut you badly .
+*MOT:	what can the knife do ?
+*CHI:	can cut you badly .",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_045,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	do this .
+*CHI:	do this .
+*CHI:	do this .",,,,,,
+mars_rollins_mars_030100.cha_seg_030,mars,rollins,rollins_mars_030100.cha,"*INV:	let's do this one .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	falls off the mat
+*INV:	whoa .
+%spa:	$MRK:MK
+*INV:	here Chi .
+%spa:	$NIA:TO
+*INV:	here are all your pieces .
+%spa:	$NIA:TO
+%act:	pushes the puzzle pieces towards him
+*CHI:	0 .
+%act:	lays on the floor
+*INV:	look .
+%spa:	$DHA:RP
+*CHI:	xxx .",,,,,,
+josh_rollins_josh_020800.cha_seg_027,josh,rollins,rollins_josh_020800.cha,"*INV:	good job .
+%spa:	$NIA:PM
+*CHI:	0 .
+%act:	reaches for juice
+*INV:	you put the pigs in .
+%spa:	$DRE:ST
+%gpx:	points to puzzle
+*CHI:	pg .
+%spa:	$DRE:RT:WD
+%act:	grabs juice
+*CHI:	0 .
+%act:	drinks juice
+*INV:	that's right .
+%spa:	$DRE:AC
+*INV:	you put the pigs in .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	puts juice down",,,,,,
+sid_rollins_sid_020200.cha_seg_034,sid,rollins,rollins_sid_020200.cha,"*INV:	it stopped .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	turns and walks away
+*CHI:	0 .
+%act:	jumps on trampoline",,,,,,
+brett_flusberg_brett_060406.cha_seg_001,brett,flusberg,flusberg_brett_060406.cha,"*MOT:	xxx .
+*CHI:	I wanna make mine .
+*MOT:	do you wanna play later on ?
+*CHI:	yeah .",,,,,,
+josh_rollins_josh_021100.cha_seg_003,josh,rollins,rollins_josh_021100.cha,"*INV:	those aren't dots .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	taps the wall as he walks along
+*INV:	more dots .
+%spa:	$DJF:ST",,,,,,
+jack_flusberg_jack_070106.cha_seg_005,jack,flusberg,flusberg_jack_070106.cha,"*MOT:	what's that ?
+*CHI:	dolly .
+*MOT:	it looks like a doll but it's a gingerbread [/] gingerbread man .
+*CHI:	gingerbread .
+*MOT:	and what's this down here ?
+*CHI:	giraffe .
+*MOT:	what is it ?
+*CHI:	a giraffe .",,,,,,
+mark_flusberg_mark_080224.cha_seg_004,mark,flusberg,flusberg_mark_080224.cha,"*MOT:	okay , tell me .
+*CHI:	boy +/.
+*MOT:	boy .
+*CHI:	holding balloon .
+*MOT:	okay , what color balloon is it ?
+*CHI:	blue balloon .
+*MOT:	whole sentence .
+*CHI:	blue balloon .",,,,,,
+jack_flusberg_jack_060900.cha_seg_074,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	[NAME] , you wanna come over here and play with your chipmunks ?
+*CHI:	I'll get the chipmunks .
+*MOT:	[NAME] , right there .
+*MOT:	there's one .
+*CHI:	Alvin , Simon , and Theodore .",,,,,,
+mark_flusberg_mark_080700.cha_seg_017,mark,flusberg,flusberg_mark_080700.cha,"*MOT:	Miss_Jillson and Rose_Marie .
+*CHI:	xxx .
+*MOT:	huh ?
+*MOT:	what else did you play with ?
+*CHI:	slide .
+*MOT:	slide .
+*MOT:	what else ?
+*CHI:	swing .",,,,,,
+sid_rollins_sid_020200.cha_seg_038,sid,rollins,rollins_sid_020200.cha,"*INV:	on the board .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	lays on top of the board then rolls on over
+*INV:	over .
+%spa:	$NIA:SI
+*INV:	you went over the board Chi .
+%spa:	$DRE:ST
+*INV:	I'm stepping over .
+%spa:	$NIA:SI
+%act:	steps over the board
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	walks across room
+*INV:	ready to go ?
+%spa:	$DCC:YQ
+*CHI:	0 .
+%act:	pushes on the door",,,,,,
+sid_rollins_sid_020200.cha_seg_001,sid,rollins,rollins_sid_020200.cha,"*CHI:	xxx . [+ trn]
+%spa:	$NIA:RP:VNR
+%gpx:	reaches upward
+*INV:	you want the toy ?
+%spa:	$DCC:YQ
+%act:	hands him the toy
+*CHI:	0 . [+ trn]
+%spa:	$DCC:AN:NO
+%gpx:	brushes away toy
+*INV:	no toy .
+%spa:	$DCA:ST
+%act:	returns toy
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RP:VNR
+%gpx:	continues looking up
+*INV:	you want the puzzle ?
+%spa:	$DCC:YQ
+%act:	hands him the puzzle
+*CHI:	0 . [+ trn]
+%spa:	$DCC:AN:NO
+%gpx:	brushes away puzzle
+*INV:	no puzzle .
+%spa:	$DCC:ST
+%act:	returns puzzle",,,,,,
+carl_rollins_carl_030000.cha_seg_025,carl,rollins,rollins_carl_030000.cha,"*INV:	thank you .
+%spa:	$MRK:MK
+%act:	takes the puzzle
+*CHI:	thank you .
+%spa:	$MRK:RT:WDE
+*INV:	0 .
+%act:	puts the puzzle on the shelf
+*INV:	I guess someone else has the airplane puzzle .
+%spa:	$DRP:ST
+*CHI:	airplane .
+%spa:	$NIA:RT:WDE
+%gpx:	reaches up towards the shelf
+*INV:	it's not up here .
+%spa:	$NIA:ST
+*CHI:	up here .
+%spa:	$NIA:RT:WDE
+*INV:	here's a Sesame Street .
+%spa:	$NIA:ST
+%act:	gets a puzzle down",,,,,,
+jack_flusberg_jack_070726.cha_seg_002,jack,flusberg,flusberg_jack_070726.cha,"*MOT:	did [NAME] play with Bassillio ?
+*CHI:	okay .
+*MOT:	did [NAME] play with Nathaniel ?",,,,,,
+jack_flusberg_jack_060900.cha_seg_065,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	they're all dinosaurs .
+*CHI:	that's yours ?
+*MOT:	yeah .",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_027,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	say hello to papa .
+*CHI:	papa .
+*CHI:	papa .
+*MOT:	say hello .
+*CHI:	hello .
+*CHI:	hello .
+*CHI:	no !
+*CHI:	cracker .",,,,,,
+carl_rollins_carl_021100.cha_seg_083,carl,rollins,rollins_carl_021100.cha,"*INV:	I have the (.) +/.
+%spa:	$DJF:EC
+*CHI:	airplane .
+%spa:	$DJF:SC:WD
+*INV:	I have the airplane .
+%spa:	$DJF:ST
+*CHI:	airplane .
+%spa:	$DJF:RP:WCR
+%act:	takes the airplane
+*INV:	airplane .
+%spa:	$DJF:AP
+*CHI:	varoom@o .
+%spa:	$NIA:PR:VO
+%act:	flies the airplane around
+*INV:	varoom@o .
+%spa:	$NIA:PR
+%act:	makes hand motions like she is also flying an airplane
+*INV:	flying .
+%spa:	$NIA:SI
+%act:	sits on the floor",,,,,,
+sid_rollins_sid_030200.cha_seg_031,sid,rollins,rollins_sid_030200.cha,"*INV:	it came back down .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	gets the balloon and puts it back over the vent
+*CHI:	0 .
+%act:	steps back so he can watch the balloon
+*INV:	up .
+%spa:	$DJF:ST
+*INV:	down .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	scoots the balloon back over the vent",,,,,,
+jack_flusberg_jack_061028.cha_seg_019,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	that's with the dice .
+*CHI:	stay tuned for operation identification .
+*MOT:	operation identification ?
+*MOT:	is that on the television ?
+*MOT:	that's on the television .
+*CHI:	Freddie [/] Freddie .
+*MOT:	you like Freddie .
+*MOT:	you like Freddie_Rogers .",,,,,,
+rick_flusberg_rick_040700.cha_seg_096,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	[NAME] , what's this ?
+*CHI:	dog .
+*MOT:	no , who's that [NAME] ?
+*CHI:	kitty+cats .
+*MOT:	kitty+cat .
+*MOT:	what does a kitty+cat say ?
+*CHI:	meow .",,,,,,
+jack_flusberg_jack_060900.cha_seg_006,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	choose .
+*CHI:	the .
+*MOT:	the .
+*CHI:	right .
+*MOT:	right .
+*CHI:	colors .
+*MOT:	colors .
+*CHI:	that's right .",,,,,,
+mars_rollins_mars_031100.cha_seg_001,mars,rollins,rollins_mars_031100.cha,"*INV:	tractor out .
+%spa:	$NIA:SI
+*CHI:	xxx .
+%act:	takes tractor out of barn
+*CHI:	0 .
+%act:	tries to put cart on tractor
+*INV:	the cart's on the tractor ?
+%spa:	$DCA:YQ
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	touching cart
+*INV:	do you need help ?
+%spa:	$NIA:RQ
+%gpx:	holds out hand
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	plays with tractor
+*CHI:	&-uh oh .
+%spa:	$MRK:MK:WD
+%gpx:	reaches for toy",,,,,,
+sid_rollins_sid_030200.cha_seg_054,sid,rollins,rollins_sid_030200.cha,"*INV:	where did it go ?
+%spa:	$DJF:QN
+*CHI:	0 .
+%act:	looks up at the examiner back up
+*INV:	I see it Chi .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	stands close to the wall and looks straight up
+*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VCA
+%gpx:	steps back and points up
+*INV:	I think it's gone .
+%spa:	$DSS:ST
+*CHI:	0 .
+%act:	stands close to the wall to look again
+*INV:	maybe it'll come down .
+%spa:	$DJF:ST",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_051,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	thank you .
+%spa:	$MRK:MK
+*CHI:	0 .
+%act:	tries to put balloon back on vent
+*INV:	down .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	picks up balloon and walks away from vent
+*CHI:	0 .
+%act:	walks over to another child",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_012,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	you want more tickles ?
+*CHI:	tickle .
+*CHI:	no .
+*MOT:	no ?
+*MOT:	what do you want ?
+*CHI:	cracker .
+*MOT:	more crackers .
+*CHI:	cracker .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070,roger_flusberg,flusberg,flusberg_roger_flusberg_031020.cha,"*MOT:	which one's Ann's car ?
+*CHI:	good boy .
+*MOT:	wanna play with the blocks ?",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_009,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	what is it ?
+*CHI:	baby .
+*MOT:	[NAME] , say pants .
+*MOT:	look .
+*MOT:	say pants .
+*CHI:	pants .
+*MOT:	good boy .
+*MOT:	what's this ?",,,,,,
+stuart_flusberg_stuart_030806.cha_seg_020,stuart,flusberg,flusberg_stuart_030806.cha,"*MOT:	toy .
+*CHI:	toy .
+*MOT:	what's this ?
+*CHI:	toy .
+*MOT:	good job .
+*MOT:	what's that ?
+*CHI:	horsie .
+*MOT:	horsie .",,,,,,
+mars_rollins_mars_030600.cha_seg_018,mars,rollins,rollins_mars_030600.cha,"*INV:	thank you .
+%spa:	$MRK:MK
+*CHI:	0 .
+%act:	sits at the table
+*INV:	0 .
+%act:	sits at the table
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*INV:	choo [/] choo .
+%spa:	$NIA:PR
+*INV:	open the house .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	opens the garage door and tries to put the train in
+*INV:	oop .
+%spa:	$MRK:MK",,,,,,
+jack_flusberg_jack_060900.cha_seg_019,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	[NAME] , what letter is that [NAME] ?
+*CHI:	i .
+*MOT:	i [/] right .
+*MOT:	and what does that say ?
+*CHI:	i the indian .
+*MOT:	say indian .
+*CHI:	indian .",,,,,,
+carl_rollins_carl_030000.cha_seg_016,carl,rollins,rollins_carl_030000.cha,"*INV:	now put the wheel there .
+%spa:	$NIA:RP
+%gpx:	points to the place for the wheel
+*CHI:	0 .
+%act:	puts the wheel in
+*INV:	&-uh (.) upside down .
+%spa:	$NIA:CR
+*CHI:	0 .
+%act:	turns the wheel over
+*CHI:	there .
+%spa:	$NIA:MK:WD
+*INV:	there .
+%spa:	$NIA:RT
+*CHI:	0 .
+%act:	gets another piece
+*CHI:	yyy [= jargon] .
+%spa:	$NIA:YY:VJ
+%act:	tries to put the piece in",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_062,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	the baby's sleeping .
+*CHI:	baby .
+*MOT:	and close the door .
+*CHI:	close door .",,,,,,
+rick_flusberg_rick_061012.cha_seg_013,rick,flusberg,flusberg_rick_061012.cha,"*MOT:	who's on the box ?
+*CHI:	guitar .
+*MOT:	yeah .
+*MOT:	who's playing the guitar ?
+*CHI:	Big_Bird .",,,,,,
+rick_flusberg_rick_040700.cha_seg_019,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	what's this ?
+*CHI:	moo .
+*MOT:	what's that ?
+*CHI:	what ?
+*MOT:	horse .
+*CHI:	horse .
+*MOT:	yeah .
+*MOT:	do you like the cars ?",,,,,,
+brett_flusberg_brett_050800.cha_seg_020,brett,flusberg,flusberg_brett_050800.cha,"*MOT:	what animal is this ?
+*CHI:	the animal .
+*MOT:	what animal ?
+*CHI:	the animal .
+*MOT:	what kind of animal ?
+*CHI:	animals .
+*MOT:	it's a horse .
+*CHI:	horse .",,,,,,
+sid_rollins_sid_030200.cha_seg_017,sid,rollins,rollins_sid_030200.cha,"*INV:	it's all gone .
+%spa:	$DJF:ST
+%gpx:	points to his fingers
+*CHI:	0 . [+ trn]
+%spa:	$DHA:YY:CT
+%gpx:	points to her finger
+*INV:	mhm .
+%spa:	$DJF:AC
+*INV:	that's my finger .
+%spa:	$DJF:ST
+*CHI:	xxx . [+ trn]
+%spa:	$DHA:YY:VCT
+*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VCT
+%gpx:	points to his finger
+*INV:	that's your finger .
+%spa:	$DJF:ST
+%gpx:	points to his finger
+*INV:	let's pick this up and get ready for snack .
+%spa:	$NIA:RP",,,,,,
+josh_rollins_josh_020500.cha_seg_035,josh,rollins,rollins_josh_020500.cha,"*INV:	0 .
+%act:	stands up
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*CHI:	0 .
+%act:	turns around to Clinician , grabs her hand
+*INV:	0 .
+%act:	moves away
+*CHI:	0 .
+%act:	grabs doorknob
+*INV:	let's go downstairs .
+%spa:	$NIA:RP
+%gpx:	gestures for chi to go
+*CHI:	0 .
+%act:	tries to pull door open
+*INV:	we can't go in there .
+%spa:	$NIA:PF
+%act:	walks to chi",,,,,,
+brett_flusberg_brett_060622.cha_seg_015,brett,flusberg,flusberg_brett_060622.cha,"*MOT:	hey [/] [NAME] .
+*CHI:	xxx .
+*MOT:	[NAME] ?
+*MOT:	what [/] what did you work on in school today ?
+*CHI:	letters .
+*CHI:	want +/.
+*CHI:	don't talk to you .
+*MOT:	do you wanna play with your play-doh ?",,,,,,
+carl_rollins_carl_021100.cha_seg_043,carl,rollins,rollins_carl_021100.cha,"*CHI:	0 .
+%act:	takes the apple apart
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*INV:	0 .
+%act:	moves the house card
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*CHI:	a house .
+%spa:	$DHA:ST:WD
+*CHI:	a house .
+%spa:	$DHA:ST:WD
+%act:	puts the house in the card
+*INV:	a house .
+%spa:	$DJF:AP
+%gpx:	nods
+*INV:	is that your house ?
+%spa:	$DJF:YQ
+%gpx:	points to the house",,,,,,
+jack_flusberg_jack_061028.cha_seg_026,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	you want the dukes ?
+*CHI:	world of Toyota .
+*CHI:	world of xxx .
+*CHI:	it's Ford .
+*MOT:	what else do I have here ?
+*MOT:	I have the tow truck .
+*CHI:	it's Ford .
+*CHI:	xxx is better .",,,,,,
+rick_flusberg_rick_050904.cha_seg_013,rick,flusberg,flusberg_rick_050904.cha,"*MOT:	you want some more ?
+*CHI:	more .
+*MOT:	say “more fence” .
+*CHI:	want fence .
+*CHI:	want fence .",,,,,,
+rick_flusberg_rick_060308.cha_seg_005,rick,flusberg,flusberg_rick_060308.cha,"*MOT:	oh , [NAME] look .
+*CHI:	help please .
+*CHI:	present .
+*MOT:	oh , puzzles .
+*CHI:	open .
+*CHI:	open .
+*MOT:	do you need help ?
+*CHI:	yes .",,,,,,
+jack_flusberg_jack_060900.cha_seg_027,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	let's you and I go in the living room .
+*CHI:	bye .
+*CHI:	byebye .",,,,,,
+sid_rollins_sid_020200.cha_seg_022,sid,rollins,rollins_sid_020200.cha,"*INV:	0 .
+%act:	gives him other book
+*CHI:	0 [=! cries] . [+ trn]
+%spa:	$NIA:EM:VO
+%act:	looks at book
+*INV:	Ernie .
+%spa:	$DHA:ST
+*CHI:	0 .
+%act:	sits down
+*INV:	and Bert .
+%spa:	$DHA:ST
+*INV:	he's drying the dishes .
+%spa:	$DJF:ST
+*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VO
+*INV:	he's drying +//.
+%spa:	$DJF:ST",,,,,,
+carl_rollins_carl_030000.cha_seg_021,carl,rollins,rollins_carl_030000.cha,"*CHI:	yyy [= jargon] .
+%spa:	$NIA:YY:VJ
+%act:	tries to put the piece in
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+*INV:	this one's a little hard isn't it ?
+%spa:	$NIA:ST $NIA:YQ
+*CHI:	yyy stop .
+%spa:	$NIA:ST:WD
+%act:	picks up the stop sign
+*INV:	that's right .
+%spa:	$NIA:AP
+*INV:	a stop sign .
+%spa:	$NIA:ST
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	puts the stop sign back in the puzzle
+*INV:	the red stop sign .
+%spa:	$NIA:ST",,,,,,
+brett_flusberg_brett_051002.cha_seg_063,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	what ?
+*CHI:	can I go to your father's ?
+*MOT:	on friday you can go to your father's not my father's .
+*CHI:	I don't want that .
+*CHI:	you hafta +/.
+*CHI:	I don't wanna go to the +/.",,,,,,
+brett_flusberg_brett_060819.cha_seg_014,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	want me to make your red clay into a ball ?
+*CHI:	n@l [/] yeah .
+*MOT:	hey [/] [NAME] .",,,,,,
+mars_rollins_mars_030600.cha_seg_005,mars,rollins,rollins_mars_030600.cha,"*INV:	what did you find ?
+%spa:	$NMA:QN
+*CHI:	0 .
+%act:	picks up a train
+*INV:	choo [/] choo .
+%spa:	$NIA:PR
+%gpx:	points to the train",,,,,,
+carl_rollins_carl_021100.cha_seg_023,carl,rollins,rollins_carl_021100.cha,"*INV:	on your hand too .
+%spa:	$DJF:ST
+%gpx:	touches his palm
+*CHI:	0 . [+ trn]
+%spa:	$DHA:YY:CO
+*CHI:	on hand .
+%spa:	$DJF:ST:WD
+*INV:	on your hand .
+%spa:	$DJF:RT
+%gpx:	nods
+*CHI:	0 .
+%act:	brushes his hand",,,,,,
+roger_rollins_rollins_roger_rollins_020800.cha_seg_010,roger_rollins,rollins,rollins_roger_rollins_020800.cha,"*INV:	here's the <heart cookie for Amy> [<] .
+%spa:	$NIA:ST
+%act:	picks out the heart cookie
+*CHI:	xxx .
+*INV:	I'm going to (.) put it in .
+%spa:	$NIA:SI
+%act:	puts it through the hole
+*INV:	mmmm@o .
+%spa:	$PRO:PR
+%act:	opens and closes mouth
+*CHI:	xxx . [+ trn]
+%spa:	$PRO:PR:VO
+*INV:	here's the square cookie .
+%spa:	$DHA:ST
+%act:	holds the cookie out
+*INV:	for Riley .
+%spa:	$NIA:TO
+*CHI:	0 .
+%act:	picks up cookie monster",,,,,,
+mark_flusberg_mark_080224.cha_seg_013,mark,flusberg,flusberg_mark_080224.cha,"*MOT:	the balloon +/.
+*CHI:	blowing .
+*CHI:	blowing .
+*CHI:	blowing .
+*CHI:	blowing .",,,,,,
+mars_rollins_mars_030300.cha_seg_054,mars,rollins,rollins_mars_030300.cha,"*INV:	five trucks .
+%spa:	$DJF:ST
+*CHI:	five trucks .
+%spa:	$DJF:RT:WD
+*INV:	five trucks .
+%spa:	$DJF:CT
+*CHI:	five trucks .
+%spa:	$DJF:RT:WD
+*INV:	one .
+%spa:	$DJF:CN
+%gpx:	points in the book
+*CHI:	five trucks .
+%spa:	$DJF:YY:WD",,,,,,
+rick_flusberg_rick_040700.cha_seg_071,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	make her walk .
+*CHI:	stairs .
+*MOT:	up the stairs .
+*CHI:	stairs .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_006,roger_flusberg,flusberg,flusberg_roger_flusberg_041007.cha,"*MOT:	no , that's [NAME]'s car .
+*CHI:	[NAME]'s car .
+*MOT:	come here .
+*CHI:	come here .
+*MOT:	[NAME] sit down and play .
+*CHI:	sit down and play .
+*CHI:	stay in kitchen .
+*CHI:	xxx .",,,,,,
+jack_flusberg_jack_071001.cha_seg_011,jack,flusberg,flusberg_jack_071001.cha,"*MOT:	yes ?
+*CHI:	one , okay .
+*MOT:	does [NAME] wanna make pretend pizza ?
+*CHI:	okay .
+*MOT:	here , you make it .
+*CHI:	I wanna put .
+*CHI:	i [/] The_Amazing_Spiderman on the play-doh .
+*MOT:	the amazing what ?",,,,,,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_027,roger_flusberg,flusberg,flusberg_roger_flusberg_030900.cha,"*MOT:	what's that ?
+*CHI:	prestos .
+*CHI:	play xxx .
+*CHI:	play xxx .
+*MOT:	what ?
+*CHI:	xxx .
+*CHI:	xxx .
+*MOT:	what's this ?",,,,,,
+jack_flusberg_jack_070106.cha_seg_016,jack,flusberg,flusberg_jack_070106.cha,"*MOT:	wanna play with Tonka ?
+*CHI:	no .
+*MOT:	oh , you don't .
+*MOT:	how about He_Man , lookit and castle gray skull .
+*CHI:	lay down .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	what's that ?
+*CHI:	Etch_A_Sketch .
+*MOT:	you're making mountains .
+*CHI:	stairs .
+*MOT:	that's right .
+*MOT:	you made a stair .
+*CHI:	leave the stairs alone .
+*CHI:	leave the stairs alone .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053,roger_flusberg,flusberg,flusberg_roger_flusberg_031020.cha,"*MOT:	you're all done Kermit .
+*CHI:	yeah .
+*CHI:	want a bite ?",,,,,,
+carl_rollins_carl_030700.cha_seg_003,carl,rollins,rollins_carl_030700.cha,"*CHI:	xxx .
+*CHI:	I broke it .
+%spa:	$DRE:ST:WD
+%act:	looks at the feet and the baby
+*CHI:	I broke a [=? the] [*] baby .
+%spa:	$DRE:ST:WD
+*INV:	did you break it or you just pulled the shoes off ?
+%spa:	$DRE:TQ
+%gpx:	makes pulling motion in the air
+*INV:	you didn't break it .
+%spa:	$DRE:TA
+*CHI:	0 .
+%act:	sticks the shoes back on
+*INV:	you can stick it back on .
+%spa:	$NIA:ST
+*CHI:	a [=? the] [*] pipe is inside .
+%spa:	$DNP:ST:WD
+%act:	tries to open the back of the baby",,,,,,
+rick_flusberg_rick_050904.cha_seg_005,rick,flusberg,flusberg_rick_050904.cha,"*MOT:	[NAME] , what color is this ?
+*CHI:	blue .
+*MOT:	good boy .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018,roger_flusberg,flusberg,flusberg_roger_flusberg_041007.cha,"*MOT:	okay , put them away .
+*CHI:	put them away .
+*MOT:	[NAME] , what do you wanna do ?
+*CHI:	&-um [/] I play car please .
+*MOT:	okay .
+*MOT:	here , play with this car .
+*CHI:	play with car .
+*MOT:	you needta play in here though .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014,roger_flusberg,flusberg,flusberg_roger_flusberg_050006.cha,"*MOT:	we can play a game [NAME] .
+*CHI:	I'm put those +/.
+*CHI:	I'm do the puzzle .
+*MOT:	okay , put the puzzle away and get the color forms .
+*CHI:	do wanna color ?
+*MOT:	do you wanna color ?
+*CHI:	do want color afternoon .
+*MOT:	okay .",,,,,,
+mars_rollins_mars_030300.cha_seg_014,mars,rollins,rollins_mars_030300.cha,"*INV:	right there .
+%spa:	$NIA:ST
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RD:VNO
+%act:	turns the box back over
+*INV:	no ?
+%spa:	$DCC:YQ
+*CHI:	0 .
+%act:	tries to put it in a hole
+*INV:	it won't go in there .
+%spa:	$NIA:ST
+*INV:	you needta put it right here .
+%spa:	$NIA:ST
+%act:	takes the shape and turns the box over again
+*CHI:	0 .
+%act:	pushes the shape through the hole
+*INV:	there it goes .
+%spa:	$NIA:MK",,,,,,
+carl_rollins_carl_021100.cha_seg_108,carl,rollins,rollins_carl_021100.cha,"*INV:	and .
+%spa:	$DJF:EC
+%gpx:	points to a card
+*CHI:	a ted(dy) bear .
+%spa:	$DJF:SC:WD
+*INV:	a teddy_bear bear .
+%spa:	$DJF:AP
+%gpx:	nods
+*INV:	and what else ?
+%spa:	$NIA:QN
+*INV:	and .
+%spa:	$DHA:RP
+%gpx:	points to another card
+*CHI:	a house .
+%spa:	$DJF:ST:WD
+*INV:	house .
+%spa:	$DJF:AP
+%gpx:	nods
+*CHI:	bicycle .
+%spa:	$DJF:ST
+%act:	takes apart the house card",,,,,,
+mark_flusberg_mark_080915.cha_seg_011,mark,flusberg,flusberg_mark_080915.cha,"*MOT:	you want balloons in the sky ?
+*CHI:	yes .
+*MOT:	yes ?
+*MOT:	what else can we put in the sky ?
+*CHI:	balloon .",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_049,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	do this .
+*CHI:	nose .
+*MOT:	good boy .
+*CHI:	cracker .
+*MOT:	push the car nice .
+*CHI:	car .",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_054,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	in the car ?
+*CHI:	car .
+*MOT:	yeah .
+*CHI:	go car .
+*MOT:	yeah , where do you go in the car ?
+*CHI:	car .
+*MOT:	go byebye car .
+*CHI:	byebye car .",,,,,,
+roger_rollins_rollins_roger_rollins_030300.cha_seg_002,roger_rollins,rollins,rollins_roger_rollins_030300.cha,"*INV:	soap ?
+%spa:	$DCC:RT
+%act:	looks into the open cabinet
+*CHI:	0 .
+%act:	takes a container of play+doh out of the cabinet and places it on the counter .
+*INV:	more Play_doh ?
+%spa:	$NIA:YQ
+*INV:	more Play_doh ?
+%spa:	$NIA:YQ
+%act:	closes cabinet door
+*CHI:	0 .
+%act:	tries to open container with one hand
+*INV:	0 .
+%act:	closes container then hands it back to the CHI
+*CHI:	0 .
+%act:	tries to open container while holding the rolling pin
+*INV:	take the top off .
+%spa:	$NIA:RP",,,,,,
+brett_flusberg_brett_060622.cha_seg_009,brett,flusberg,flusberg_brett_060622.cha,"*MOT:	[NAME] , we're not gonna do any work from the work box today .
+*CHI:	can I play ?
+*MOT:	well , I want you to stay here with me for a little while .",,,,,,
+brett_flusberg_brett_051002.cha_seg_018,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	what is Jenny doing ?
+*CHI:	Jenny's on the stool .
+*MOT:	is she sitting on the stool ?
+*CHI:	yes .
+*MOT:	where is Shannon ?
+*CHI:	&~mm .
+*MOT:	where is Shannon ?
+*CHI:	in school .",,,,,,
+rick_flusberg_rick_070013.cha_seg_007,rick,flusberg,flusberg_rick_070013.cha,"*MOT:	[NAME] look .
+*CHI:	head , shoulders knees toes .
+*MOT:	that's better .
+*MOT:	are you ready to behave ?
+*CHI:	yes .
+*CHI:	play this ?
+*MOT:	alright , you can play with that now .
+*CHI:	that one .",,,,,,
+mark_flusberg_mark_070812.cha_seg_033,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	sleep .
+*CHI:	good .
+*MOT:	you sleep good .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_063,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	there he is .
+%spa:	$DJF:ST
+*CHI:	0 . [+ trn]
+%spa:	$DJF:YY:CP
+%gpx:	points to himself in the mirror
+*INV:	Chi with the balloon .
+%spa:	$DJF:ST
+%gpx:	points to the balloon
+*INV:	0 .
+%act:	starts to blow up the ballon
+*CHI:	0 .
+%act:	looks up at the Clinician
+*CHI:	0 .
+%act:	plays with balloon in his mouth
+*CHI:	0 .
+%act:	takes balloon out of mouth
+*INV:	0 .
+%act:	sits on the floor",,,,,,
+mars_rollins_mars_030300.cha_seg_004,mars,rollins,rollins_mars_030300.cha,"*INV:	one .
+%spa:	$DJF:EC
+%act:	turns the page
+*CHI:	two .
+%spa:	$DJF:SC:WD
+*INV:	two [>] .
+%spa:	$DJF:CN
+%act:	turns the page
+*CHI:	three [<] .
+%spa:	$DJF:CN:WD
+*INV:	three [>] .
+%spa:	$DJF:CN
+%act:	turns the page
+*CHI:	four [<] .
+%spa:	$DJF:CN:WD",,,,,,
+brett_flusberg_brett_060819.cha_seg_017,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	where do you throw it ?
+*CHI:	in the bowling alley .
+*MOT:	right .
+*MOT:	do you throw it in the gutter ?
+*CHI:	no .
+*MOT:	no .
+*MOT:	<what happens> [/] what happens if you throw the ball in the gutter ?
+*CHI:	<it won't> [/] the pins won't get knocked down .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_011,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	on the shelf .
+%spa:	$NIA:SI
+%act:	takes some blocks to the shelf
+*CHI:	xxx .
+%act:	walks across room and past examiner
+*INV:	on the shelf .
+%spa:	$NIA:SI
+*INV:	Chi .
+%spa:	$NMA:CL
+*CHI:	0 .
+%act:	looks in a toy box
+*INV:	let's put the blocks on the shelf .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	gets a hammer out of the box and walks back",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_060,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	what is this ?
+*CHI:	bag .
+*MOT:	bag , good boy .
+*MOT:	and what's this ?
+*MOT:	pillow ?
+*CHI:	pillow .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003,roger_flusberg,flusberg,flusberg_roger_flusberg_040518.cha,"*MOT:	[NAME] , what are you doing ?
+*CHI:	I play .
+*CHI:	setting the table .
+*MOT:	okay .
+*CHI:	you sit at the table .
+*CHI:	eat .
+*CHI:	it's time to be eating the supper .
+*CHI:	time to eat &~mm .",,,,,,
+mars_rollins_mars_030100.cha_seg_045,mars,rollins,rollins_mars_030100.cha,"*INV:	it's going in .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	moves the jug and the faucet comes out
+*INV:	put it in .
+%spa:	$NIA:RP
+*INV:	you gotta push it in the hole .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	puts the faucet back in
+*INV:	okay turn off the water Chi .
+%spa:	$NIA:RP
+%gpx:	taps the faucet handle
+*CHI:	xxx .
+*INV:	turn off the water .
+%spa:	$NIA:RP",,,,,,
+mark_flusberg_mark_080700.cha_seg_014,mark,flusberg,flusberg_mark_080700.cha,"*MOT:	look at me .
+*CHI:	stop xxx .
+*CHI:	block .",,,,,,
+rick_flusberg_rick_040700.cha_seg_039,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	who's this ?
+*CHI:	that Bert .
+*MOT:	good boy .
+*CHI:	xxx .",,,,,,
+sid_rollins_sid_020200.cha_seg_049,sid,rollins,rollins_sid_020200.cha,"*INV:	it's okay .
+%spa:	$CMO:CM
+*CHI:	0 .
+%act:	rolls ball in tray again
+*INV:	roll it .
+%spa:	$NIA:SI
+*INV:	okay Chi .
+%spa:	$MRK:MK
+*INV:	let's get your ball .
+%spa:	$NIA:SI
+*CHI:	0 [=! cries] . [+ trn]
+%spa:	$NIA:EM:VO",,,,,,
+rick_flusberg_rick_040700.cha_seg_055,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	you want Dan ?
+*CHI:	Dan .
+*MOT:	oh , Danny's not in here [NAME] .",,,,,,
+rick_flusberg_rick_040700.cha_seg_082,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	what ?
+*CHI:	get page .
+*CHI:	page [/] page .
+*CHI:	get page .
+*CHI:	page .
+*MOT:	what's this [NAME] ?
+*CHI:	water .
+*MOT:	water .",,,,,,
+rick_flusberg_rick_040700.cha_seg_046,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	yeah .
+*CHI:	ah .
+*MOT:	take the bear .
+*MOT:	in the basket .
+*CHI:	basket ?
+*MOT:	yeah .
+*CHI:	basket ?",,,,,,
+josh_rollins_josh_020800.cha_seg_048,josh,rollins,rollins_josh_020800.cha,"*INV:	put it in ?
+%spa:	$NIA:RP
+*CHI:	put in .
+%spa:	$NIA:RT:WD
+%act:	gets juice and drinks it
+*INV:	put it in .
+%spa:	$NIA:SI
+%act:	starts to push piece in
+*CHI:	0 .
+%act:	pushes piece down
+*INV:	you put it in .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	puts juice down
+*CHI:	0 .
+%act:	bangs juice on wall/table
+*CHI:	0 .
+%act:	looks around",,,,,,
+carl_rollins_carl_021100.cha_seg_029,carl,rollins,rollins_carl_021100.cha,"*INV:	will it go ?
+%spa:	$DJF:YQ
+*CHI:	yyy [= jargon] .
+%spa:	$DJF:YY:VJ
+%act:	puts it in
+*INV:	okay .
+%spa:	$NIA:MK
+*CHI:	done .
+%spa:	$NIA:DC:WD",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_061,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	what do you want ?
+*CHI:	more bubble .
+*MOT:	want .
+*CHI:	more bubble .
+*MOT:	look , want .
+*CHI:	want bubble .",,,,,,
+rick_flusberg_rick_061012.cha_seg_008,rick,flusberg,flusberg_rick_061012.cha,"*MOT:	oh , who's got the xxx .
+*CHI:	I give a count .
+*MOT:	the count is gonna play the guitar ?
+*MOT:	boy , he's talented .
+*CHI:	I give a Guy_Smiley .",,,,,,
+josh_rollins_josh_020500.cha_seg_018,josh,rollins,rollins_josh_020500.cha,"*INV:	0 .
+%act:	moves around
+*CHI:	0 .
+%act:	plays with holes and looks around
+*INV:	0 .
+%act:	puts hand up to pole
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	pulls pole down
+*INV:	0 .
+%act:	pulls pole back
+*CHI:	xxx .
+%act:	pushes poles
+*INV:	0 .
+%act:	holds on to pole
+*CHI:	0 .
+%act:	walks away from pole",,,,,,
+rick_flusberg_rick_040700.cha_seg_034,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	[NAME] .
+*CHI:	cake .
+*CHI:	cake .
+*MOT:	[NAME] look .
+*CHI:	it cook .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_028,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*CHI:	0 .
+%act:	puts unblown balloon to face
+*CHI:	0 .
+%act:	bites on balloon
+*INV:	0 .
+%act:	finishes blowing balloon and show to CHI
+*CHI:	0 .
+%act:	looks at balloon
+*CHI:	xxx .
+%act:	picks up his blown up balloon
+*INV:	one .
+%spa:	$PRO:PR
+%act:	holds on to balloon
+*INV:	two .
+%spa:	$PRO:PR
+*CHI:	0 .
+%act:	looking down at balloon",,,,,,
+brett_flusberg_brett_060819.cha_seg_020,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	no , tell me all about Everett .
+*CHI:	I work , I played +/.
+*CHI:	made a j@l .
+*CHI:	made the j@l .
+*MOT:	did we eat easter dinner up there ?
+*CHI:	yeah .
+*MOT:	what did we eat ?
+*CHI:	eat the dinner .",,,,,,
+sid_rollins_sid_030200.cha_seg_025,sid,rollins,rollins_sid_030200.cha,"*INV:	go ahead .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	lets the balloon go over the vent
+*CHI:	0 .
+%act:	stands with his face over the vent
+*CHI:	0 .
+%act:	sits
+*INV:	here comes the balloon .
+%spa:	$DHA:ST
+*CHI:	0 .
+%act:	watches the people at the closet
+*INV:	0 . [+ trn]
+%spa:	$DHA:YY:CO
+%act:	throws the balloon in his lap
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VCA
+%gpx:	points across the room",,,,,,
+josh_rollins_josh_020500.cha_seg_025,josh,rollins,rollins_josh_020500.cha,"*INV:	the kangaroo goes <hop hop> [/] hop .
+%spa:	$NIA:ST
+%act:	bounces chi
+*CHI:	xxx .
+*INV:	<hop hop> [/] hop .
+%spa:	$NIA:PR
+%act:	bounces chi
+*CHI:	0 .
+%act:	hangs from railing",,,,,,
+carl_rollins_carl_020800.cha_seg_040,carl,rollins,rollins_carl_020800.cha,"*INV:	here he comes .
+%spa:	$NIA:SI
+%act:	starts to pull out the tractor
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RD:NO
+%act:	pushes the tractor back in
+*INV:	back in .
+%spa:	$NIA:SI
+*INV:	inside .
+%spa:	$NIA:ST
+*INV:	good bye .
+%spa:	$MRK:MK
+*CHI:	0 .
+%act:	closes the barn door
+*INV:	close it up .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	picks up the pig",,,,,,
+brett_flusberg_brett_060207.cha_seg_005,brett,flusberg,flusberg_brett_060207.cha,"*MOT:	you sure are a good player .
+*CHI:	space .
+*MOT:	lookit .
+*MOT:	I got a red space too .
+*MOT:	look at that .
+*CHI:	<i got> [/] I got two green spaces .
+*MOT:	oh , good for you .
+*CHI:	one two .",,,,,,
+mark_flusberg_mark_070700.cha_seg_047,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	come here .
+*CHI:	xxx .
+*CHI:	no .
+*CHI:	no .
+*MOT:	you wanna look at this book ?
+*MOT:	you wanna read this book to me ?
+*CHI:	yes .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_009,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	he's gonna +/.
+*CHI:	jump .
+*MOT:	oh , .
+*MOT:	[NAME] .
+*MOT:	do you need help ?
+*CHI:	need help .
+*MOT:	you hafta ask .
+*MOT:	look at me .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_059,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*CHI:	yyy .
+%spa:	$PRO:SS:WD
+*CHI:	yyy .
+%spa:	$PRO:SS:WD
+*CHI:	go .
+%spa:	$PRO:SS:WD
+*INV:	go .
+%spa:	$PRO:RT
+%act:	pushes the truck
+*CHI:	0 .
+%act:	pushes his truck
+*INV:	0 .
+%act:	crawls after her truck
+*CHI:	0 .
+%act:	plays with the truck
+*CHI:	yyy .
+%spa:	$PRO:SS:WD",,,,,,
+josh_rollins_josh_020500.cha_seg_046,josh,rollins,rollins_josh_020500.cha,"*CHI:	yyy yyy yyy .
+%spa:	$YYY:YY:VO
+%act:	looks to Clinician
+*CHI:	0 .
+%act:	walks to cubby
+*CHI:	0 .
+%act:	reaches for juice
+*INV:	you need more juice ?
+%spa:	$DCA:YQ
+%act:	looks into cubby
+*CHI:	0 .
+%act:	reaching for juice
+*INV:	you want more juice ?
+%spa:	$DCA:YQ
+*CHI:	0 .
+%act:	takes juice from cubby
+*CHI:	0 .
+%act:	gives juice to Clinician",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_020,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	see the squirrel ?
+*CHI:	squirrel .
+*MOT:	and the two bears .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_011,roger_flusberg,flusberg,flusberg_roger_flusberg_030900.cha,"*MOT:	what's this ?
+*CHI:	horsie .
+*MOT:	horsies ?
+*MOT:	what's that ?
+*MOT:	it's a cow .
+*CHI:	cow .
+*MOT:	let's open it [NAME] .
+*CHI:	ooh .",,,,,,
+stuart_flusberg_stuart_031009.cha_seg_002,stuart,flusberg,flusberg_stuart_031009.cha,"*MOT:	what is [/] it ?
+*CHI:	xxx .
+*MOT:	toy .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_013,roger_flusberg,flusberg,flusberg_roger_flusberg_030900.cha,"*MOT:	what's this ?
+*CHI:	horsie .
+*MOT:	right .
+*CHI:	right .
+*MOT:	what's this ?
+*MOT:	what are these ?
+*CHI:	what are these ?
+*MOT:	birds .",,,,,,
+jack_flusberg_jack_060900.cha_seg_064,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	what [/] what have you got ?
+*CHI:	guy .
+*MOT:	nope .
+*MOT:	what is it ?
+*MOT:	what are these ?
+*CHI:	guys .
+*MOT:	<what's this> [/] what's this one ?
+*CHI:	dinosaur .",,,,,,
+mark_flusberg_mark_070812.cha_seg_017,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	front .
+*CHI:	front .
+*MOT:	front seat , yes .",,,,,,
+jack_flusberg_jack_060900.cha_seg_037,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	did you do any <did you do any &-um> [/] work on your alphabet ?
+*CHI:	the N_F_L_Today .
+*MOT:	hey .
+*CHI:	write the N_F_L_Today .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_009,roger_flusberg,flusberg,flusberg_roger_flusberg_050006.cha,"*MOT:	what are you doing ?
+*CHI:	look up .
+*MOT:	no , what are you doing ?
+*CHI:	I'm doing puzzle .
+*CHI:	&~mm .",,,,,,
+mark_flusberg_mark_080915.cha_seg_005,mark,flusberg,flusberg_mark_080915.cha,"*MOT:	what are [/] you doing ?
+*CHI:	don't eat play-doh .
+*MOT:	no , we don't eat play-doh .
+*MOT:	it's pretend .
+*CHI:	xxx .
+*CHI:	white .
+*MOT:	it's white , yeah .
+*MOT:	now what do you do with this ?",,,,,,
+josh_rollins_josh_020800.cha_seg_045,josh,rollins,rollins_josh_020800.cha,"*INV:	can you put it in ?
+%spa:	$NIA:RP
+%gpx:	taps puzzle
+*CHI:	0 .
+%act:	looks around
+*CHI:	xxx [>] .
+%act:	looks around
+*INV:	I'll help you [<] .
+%spa:	$NIA:SI
+%act:	moves piece
+*CHI:	0 .
+%act:	looks at puzzle
+*INV:	look .
+%spa:	$DHA:RP
+*INV:	it goes right there .
+%spa:	$NIA:ST
+%act:	moves piece to right spot
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	moves piece and looks at Clinician",,,,,,
+roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_066,roger_flusberg,flusberg,flusberg_roger_flusberg_031020.cha,"*MOT:	oh , .
+*CHI:	it fell down .
+*MOT:	the police car tipped over .
+*MOT:	[NAME] why don't you put [/] put your blocks away ?
+*MOT:	put your blocks away .
+*CHI:	xxx .
+*CHI:	put the blocks away .
+*CHI:	put the +/.",,,,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_019,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	oh .
+%spa:	$MRK:MK
+%act:	pulls him off the horse
+*CHI:	0 .
+%act:	climbs back on the horse
+*INV:	on the horse .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	tries to kneel on the horse
+*INV:	shaky .
+%spa:	$NIA:ST
+*INV:	that horse is shaky .
+%spa:	$NIA:ST
+*CHI:	xxx .
+*CHI:	0 .
+%act:	gets both knees on the horse using the wall for support",,,,,,
+josh_rollins_josh_020500.cha_seg_030,josh,rollins,rollins_josh_020500.cha,"*INV:	let's dry our hands .
+%spa:	$NIA:RP
+%act:	walks out of bath+room
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NO
+%act:	puts hand on doorknob
+*INV:	0 .
+%act:	puts hand on doorknob
+*INV:	open the door .
+%spa:	$NIA:SI
+%act:	turns the doorknob
+*CHI:	0 .
+%act:	pulls the door open
+*CHI:	0 .
+%act:	walks into room
+*INV:	0 .
+%act:	follows chi
+*CHI:	0 .
+%act:	reaches into cubby",,,,,,
+mark_flusberg_mark_070700.cha_seg_059,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	who's on the cow ?
+*CHI:	me .
+*MOT:	who's on the cow ?
+*CHI:	cat .
+*MOT:	is [/] the cat on the cow ?
+*CHI:	no .
+*MOT:	no , I didn't think so .
+*MOT:	who's on the cow ?",,,,,,
+mars_rollins_mars_030800.cha_seg_009,mars,rollins,rollins_mars_030800.cha,"*INV:	put it in .
+%spa:	$NIA:SI
+%act:	puts the bike in the puzzle
+*CHI:	xxx .
+*INV:	0 .
+%act:	hands him a piece",,,,,,
+carl_rollins_carl_021100.cha_seg_086,carl,rollins,rollins_carl_021100.cha,"*INV:	a green truck .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	takes the airplane out again
+*INV:	I think you like the airplane th(e) best .
+%spa:	$DJF:ST
+*CHI:	varoom@o .
+%spa:	$DJF:PR:VO
+%act:	stands and flies the airplane
+*CHI:	0 .
+%act:	runs around the gym with the airplane
+*INV:	Chi .
+%spa:	$NMA:CL
+*INV:	we needta put the puzzle away first .
+%spa:	$NIA:RP
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	runs back",,,,,,
+rick_flusberg_rick_070013.cha_seg_006,rick,flusberg,flusberg_rick_070013.cha,"*MOT:	you're being a good boy .
+*CHI:	<i touch> [/] I play it later .
+*CHI:	you see the Potato_Head ?
+*CHI:	see it ?
+*MOT:	[NAME] .
+*CHI:	<i go> [/] I go to school ?
+*CHI:	I go to school ?
+*MOT:	[NAME] , look at mommy .",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_043,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	this .
+*CHI:	do this .
+*MOT:	[NAME] .
+*MOT:	do this .
+*CHI:	do this .
+*MOT:	okay .
+*MOT:	do this .
+*CHI:	do this .",,,,,,
+sid_rollins_sid_030200.cha_seg_008,sid,rollins,rollins_sid_030200.cha,"*INV:	&-uh oh .
+%spa:	$MRK:MK
+%act:	picks up the gas station
+*CHI:	0 .
+%gpx:	throws down the legos he tried setting on the gas station
+*INV:	let's put it this way Chi .
+%spa:	$NIA:SI
+%act:	puts the legos on top of the gas station
+*CHI:	0 .
+%act:	connects other legos
+*CHI:	0 .
+%act:	picks up the truck and hits it on the floor",,,,,,
+josh_rollins_josh_020800.cha_seg_010,josh,rollins,rollins_josh_020800.cha,"*INV:	we're all done .
+%spa:	$NIA:DC
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	walks toward Clinician
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	touches Clinician's shoulder
+*INV:	should we put the puzzle up first ?
+%spa:	$NIA:RQ
+%act:	grabs puzzle
+*CHI:	0 .
+%act:	looks at puzzle
+*CHI:	xxx .
+%act:	looks at puzzle
+*INV:	0 .
+%act:	stands up
+*INV:	I'm gonna put the puzzle up here on the shelf .
+%spa:	$NIA:SI",,,,,,
+sid_rollins_sid_020200.cha_seg_072,sid,rollins,rollins_sid_020200.cha,"*CHI:	0 .
+%act:	pushes on the door
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*INV:	we needta turn the light off Chi .
+%spa:	$NIA:RP
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NB
+%gpx:	turns toward CLN and hold out arms",,,,,,
+brett_flusberg_brett_051002.cha_seg_014,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	get away from that .
+*CHI:	I wanna pick up the game .
+*CHI:	did you get the games !
+*MOT:	did you pick up your games ?
+*CHI:	yes .
+*MOT:	you know what this is ?
+*CHI:	broccoli .
+*MOT:	no , it's lettuce .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_013,roger_flusberg,flusberg,flusberg_roger_flusberg_040518.cha,"*MOT:	what's he doing ?
+*CHI:	ern +/.
+*MOT:	[NAME] , what's Ernie doing ?
+*CHI:	let's take a bath .
+*MOT:	that's right .
+*MOT:	do the puzzle .
+*CHI:	finger .
+*MOT:	what's this ?",,,,,,
+mark_flusberg_mark_071026.cha_seg_018,mark,flusberg,flusberg_mark_071026.cha,"*MOT:	what's number two ?
+*CHI:	ripping .
+*CHI:	balloon rip .
+*MOT:	the balloon rips ?
+*MOT:	yeah , it does .
+*CHI:	rip .
+*MOT:	yeah .
+*CHI:	broke it .",,,,,,
+sid_rollins_sid_030200.cha_seg_036,sid,rollins,rollins_sid_030200.cha,"*INV:	0 .
+%act:	plays with other legos
+*CHI:	0 .
+%act:	starts to put the ladder on something else
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RP:VCO
+%gpx:	holds the ladder out to the examiner",,,,,,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_019,roger_flusberg,flusberg,flusberg_roger_flusberg_030900.cha,"*MOT:	that's a new one .
+*CHI:	look at it .
+*CHI:	making donut .
+*CHI:	making donut .
+*CHI:	yeah .
+*CHI:	making donut .
+*MOT:	what are you making [NAME] ?
+*MOT:	what's this ?",,,,,,
+carl_rollins_carl_020800.cha_seg_035,carl,rollins,rollins_carl_020800.cha,"*INV:	hi Chi .
+%spa:	$MRK:MK
+%act:	waves over the barn
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*INV:	hi Chi .
+%spa:	$MRK:MK
+%act:	waves
+*CHI:	hi .
+%spa:	$MRK:RT:VCO
+%act:	waves
+*INV:	hi .
+%spa:	$MRK:MK
+*CHI:	0 .
+%act:	plays with barn
+*INV:	hi .
+%spa:	$MRK:MK
+%act:	waves
+*CHI:	0 .
+%act:	looks at camera",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_001,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NT
+%gpx:	takes EXP hand begins to walk
+*CHI:	xxx .
+%act:	leads Clinician by hand over to cabinet
+*CHI:	0 . [+ trn]
+%spa:	$YYY:YY:NR
+%gpx:	reaches towards cabinet while holding EXP hand
+*INV:	up here ?
+%spa:	$DCA:YQ
+%gpx:	pats the lower cabinet
+*CHI:	0 . [+ trn]
+%spa:	$DHA:YY:NR
+%gpx:	waves EXP hand upward",,,,,,
+stuart_flusberg_stuart_030400.cha_seg_022,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	good boy .
+*CHI:	cracker .
+*MOT:	what is this [NAME] ?
+*CHI:	xxx .
+*MOT:	book .
+*MOT:	should we open it ?
+*CHI:	open .",,,,,,
+brett_flusberg_brett_050800.cha_seg_040,brett,flusberg,flusberg_brett_050800.cha,"*MOT:	what color ?
+*CHI:	haha .
+*CHI:	put the gate in the placemats .
+*MOT:	sit up .
+*CHI:	gate .
+*MOT:	no .
+*CHI:	I want the gate in the placemats .
+*MOT:	okay .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_005,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	now try .
+%spa:	$NIA:RP
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RD:VNO
+%act:	hits on door
+*INV:	no ?
+%spa:	$DCA:YQ
+%act:	closes door more",,,,,,
+carl_rollins_carl_021100.cha_seg_085,carl,rollins,rollins_carl_021100.cha,"*INV:	is it a school bus ?
+%spa:	$DJF:YQ
+*CHI:	school bus .
+%spa:	$DJF:RT:WDE
+%act:	puts the bus back
+*INV:	school bus .
+%spa:	$DJF:RT
+*CHI:	airplane .
+%spa:	$DHA:ST:WD
+%act:	takes out the airplane
+*INV:	airplane .
+%spa:	$DJF:AP
+%gpx:	nods
+*CHI:	airplane .
+%spa:	$DJF:RT:WDE
+*INV:	is it flying ?
+%spa:	$DJF:YQ
+*CHI:	varoom@o [/] varoom@o .
+%spa:	$DJF:PR:VO
+%act:	flies the airplane",,,,,,
+jack_flusberg_jack_060900.cha_seg_043,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	why don't you draw a picture .
+*CHI:	I hate that .
+*MOT:	let me show you something .
+*MOT:	why don't you draw a picture of joy ?
+*CHI:	no .
+*CHI:	why not ?",,,,,,
+mars_rollins_mars_030100.cha_seg_009,mars,rollins,rollins_mars_030100.cha,"*INV:	here you go .
+%spa:	$NIA:TO
+*CHI:	0 .
+%act:	gets up and starts to walk off
+*INV:	Chi we're not finished .
+%spa:	$NIA:ST
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	walks up to camera",,,,,,
+stuart_flusberg_stuart_040029.cha_seg_014,stuart,flusberg,flusberg_stuart_040029.cha,"*MOT:	that one doesn't play .
+*CHI:	piano .
+*MOT:	yeah .
+*CHI:	bang .",,,,,,
+sid_rollins_sid_030200.cha_seg_026,sid,rollins,rollins_sid_030200.cha,"*INV2:	hi Chi .
+%spa:	$MRK:MK
+*CHI:	0 . [+ trn]
+%spa:	$YYY:YY:CA
+%gpx:	points
+*INV:	there's Christy .
+%spa:	$DJF:ST
+*INV2:	&=laughs .
+*CHI:	0 .
+%act:	paws at the floor in front of him
+*INV:	0 . [+ trn]
+%spa:	$DHA:YY:CO
+%act:	throws the balloon and hits him in the head with it
+*CHI:	0 .
+%act:	gets up",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_080,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	0 .
+%act:	rolls other truck back and forth
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*CHI:	0 .
+%act:	reaches for the truck she has
+*INV:	on your [NAME] .
+%spa:	$PRO:SS
+*CHI:	0 .
+%act:	holds onto the truck
+*INV:	get set .
+%spa:	$PRO:SS
+*CHI:	go .
+%spa:	$PRO:SC:WD
+*INV:	go .
+%spa:	$PRO:RT
+%act:	tries to push the truck across the room",,,,,,
+brett_flusberg_brett_050800.cha_seg_064,brett,flusberg,flusberg_brett_050800.cha,"*MOT:	is it cold ?
+*CHI:	the fan .
+*MOT:	is it cold .
+*CHI:	yes .
+*MOT:	is it purple ?
+*CHI:	no .
+*MOT:	is it blue ?
+*CHI:	no .",,,,,,
+josh_rollins_josh_021100.cha_seg_009,josh,rollins,rollins_josh_021100.cha,"*INV:	&=gasp you put it in .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	drops the other toy in
+*INV:	you put it in .
+%spa:	$DRE:ST
+%act:	rattles the toys
+*CHI:	xxx .
+%act:	backs off and spins in the walkway
+*CHI:	0 .
+%act:	goes over to the next table",,,,,,
+carl_rollins_carl_021100.cha_seg_101,carl,rollins,rollins_carl_021100.cha,"*INV:	where's the chicken ?
+%spa:	$DNP:QN
+%gpx:	gestures upwards with one hand
+*CHI:	0 .
+%act:	opens the barn door
+*INV:	oh .
+%spa:	$MRK:MK
+*INV:	there he is .
+%spa:	$DJF:ST
+*CHI:	a chicken .
+%spa:	$DJF:ST:WD
+*INV:	chicken .
+%spa:	$DJF:RT
+*CHI:	a chicken .
+%spa:	$DJF:RT:WD
+*INV:	&~mm hm: .
+%spa:	$DJF:AP",,,,,,
+josh_rollins_josh_020800.cha_seg_050,josh,rollins,rollins_josh_020800.cha,"*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	looks away
+*INV:	push it in .
+%spa:	$NIA:RP
+*CHI:	0 .
+%gpx:	reaches up
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%gpx:	reaches up with both hands
+*INV:	0 .
+%act:	pushes piece in
+*INV:	I put it in Chi .
+%spa:	$DRE:ST
+%act:	pushes puzzle
+*CHI:	0 .
+%act:	hangs on doorknob",,,,,,
+stuart_flusberg_stuart_040715.cha_seg_007,stuart,flusberg,flusberg_stuart_040715.cha,"*MOT:	you have a big smile , huh [/] [NAME] ?
+*CHI:	xxx .
+*MOT:	what are [/] you gonna play with ?
+*MOT:	what do you wanna play with ?
+*CHI:	yeah .
+*MOT:	do you wanna play with your truck ?
+*CHI:	yeah .",,,,,,
+mars_rollins_mars_030100.cha_seg_042,mars,rollins,rollins_mars_030100.cha,"*INV:	can you push the door open ?
+%spa:	$NIA:RP
+%act:	turns the doorknob
+*CHI:	bye .
+%spa:	$MRK:MK:WD
+%act:	pushes the door open
+*INV:	thanks .
+%spa:	$MRK:MK",,,,,,
+jack_flusberg_jack_060900.cha_seg_042,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	ah [/] so that's what you want for christmas .
+*CHI:	yes .
+*MOT:	do you wanna go buy the christmas tree with me ?
+*CHI:	yes .",,,,,,
+mark_flusberg_mark_080700.cha_seg_001,mark,flusberg,flusberg_mark_080700.cha,"*MOT:	how about a sentence with play ?
+*CHI:	play a ball .
+*MOT:	full sentence .
+*CHI:	play ball .
+*MOT:	okay .
+*MOT:	who plays ball ?
+*CHI:	[NAME] .
+*MOT:	another se [/] &-uh [/] full sentence .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_040,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	<knock knock> [/] knock .
+%spa:	$NIA:PR
+*CHI:	0 .
+%act:	hits the wrench in the sand
+*INV:	<knock knock> [/] knock .
+%spa:	$NIA:PR",,,,,,
+rick_flusberg_rick_060308.cha_seg_010,rick,flusberg,flusberg_rick_060308.cha,"*MOT:	what do you wanna play ?
+*CHI:	put away .
+*CHI:	put away .
+*MOT:	alright , we can put them right here .
+*MOT:	that's okay .
+*CHI:	bag .
+*MOT:	what do you wanna play [NAME] ?
+*CHI:	play .",,,,,,
+josh_rollins_josh_020500.cha_seg_013,josh,rollins,rollins_josh_020500.cha,"*INV:	bye .
+%spa:	$PRO:MK
+*CHI:	0 .
+%act:	closes the door
+*INV:	there she is .
+%spa:	$PRO:ST
+*INV:	open the door .
+%spa:	$PRO:SI
+%act:	opens the door
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	&=gasp <hi Cam> [>] .
+%spa:	$PRO:MK
+*INV2:	hi [<] .
+%spa:	$PRO:MK
+*CHI:	0 .
+%act:	smiles and grabs Clinician's hand",,,,,,
+stuart_flusberg_stuart_030806.cha_seg_016,stuart,flusberg,flusberg_stuart_030806.cha,"*MOT:	this is a bear .
+*CHI:	bear .
+*MOT:	good boy .
+*MOT:	what's this ?
+*CHI:	what this ?
+*CHI:	ball .",,,,,,
+brett_flusberg_brett_060819.cha_seg_007,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	how do you think it smells ?
+*CHI:	plasticine .
+*CHI:	clay .
+*CHI:	play .
+*MOT:	sound it out .
+*CHI:	ploud@c .
+*MOT:	sound it out .
+*MOT:	p@l .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_012,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	thank you .
+*CHI:	airplane .
+*MOT:	what do you say ?
+*CHI:	here .
+*MOT:	give to mama .
+*MOT:	[NAME] , give me the airplane .
+*CHI:	give me the airplane .
+*MOT:	thank you .",,,,,,
+sid_rollins_sid_020200.cha_seg_042,sid,rollins,rollins_sid_020200.cha,"*INV:	there he is .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	takes book
+*INV:	there's Ernie .
+%spa:	$DHA:ST
+%gpx:	points
+*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VO
+*INV:	Ernie .
+%spa:	$DJF:CT
+*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VO
+*INV:	there's Ernie .
+%spa:	$DHA:ST
+*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VCP
+%gpx:	points to the picture",,,,,,
+rick_flusberg_rick_040700.cha_seg_063,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	[NAME] , who's that ?
+*CHI:	Mickey_Mouse .
+*MOT:	good boy .",,,,,,
+sid_rollins_sid_020200.cha_seg_056,sid,rollins,rollins_sid_020200.cha,"*INV:	with a cookie .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	closes and puts down book
+*CHI:	0 [=! cries] . [+ trn]
+%spa:	$NIA:EM:VO
+%act:	tries to get ball again
+*INV:	let's get another book Chi .
+%spa:	$NIA:RP
+*INV:	let's get another book .
+%spa:	$NIA:RP
+%act:	stands and gets book off shelf
+*CHI:	0 [=! cries] . [+ trn]
+%spa:	$NIA:EM:VO
+*INV:	here's another one .
+%spa:	$NIA:TO
+*INV:	another book for Chi .
+%spa:	$NIA:ST
+%act:	hands him the book",,,,,,
+mark_flusberg_mark_080224.cha_seg_001,mark,flusberg,flusberg_mark_080224.cha,"*MOT:	what happened there ?
+*CHI:	broke it .
+*MOT:	yeah .
+*CHI:	more balloon .
+*MOT:	huh ?
+*CHI:	more balloon .
+*CHI:	more balloon .",,,,,,
+mars_rollins_mars_030300.cha_seg_050,mars,rollins,rollins_mars_030300.cha,"*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+%act:	picks up a shape and pulls the rest out of his reach
+*CHI:	0 .
+%act:	reaches for the shape
+*INV:	you want one ?
+%spa:	$NIA:YQ
+*INV:	0 .
+%act:	holds out a shape to him but doesn't let go
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	tries to get the shape
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	pulls the toy out of her grip
+*INV:	three .
+%spa:	$NIA:CN
+*CHI:	0 .
+%act:	puts the shape in the box",,,,,,
+mark_flusberg_mark_070700.cha_seg_071,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	show me under .
+*CHI:	Ginger_Bread_Man .
+*MOT:	no , Ginger_Bread_Man is on the giraffe .",,,,,,
+jack_flusberg_jack_070106.cha_seg_013,jack,flusberg,flusberg_jack_070106.cha,"*MOT:	and you wanna play on the Big_Wheels when they come up ?
+*CHI:	they'll be back .
+*MOT:	they're gonna come back real soon .
+*MOT:	or we may go down there and visit .
+*MOT:	you wanna go down to Ricky's house ?
+*CHI:	okay .
+*MOT:	good .
+*MOT:	we can go down and visit Ricky and Nicole and play with all their toys .",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_006,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	see all the nice things ?
+*CHI:	key .
+*MOT:	[NAME] , what's this ?
+*CHI:	pillow .",,,,,,
+brett_flusberg_brett_051002.cha_seg_055,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	that's the truth .
+*CHI:	xxx .
+*MOT:	xxx .
+*MOT:	[NAME] .
+*MOT:	do not go near the camera again .
+*CHI:	wanna go night_night .
+*CHI:	take him to bed .
+*MOT:	[NAME] .",,,,,,
+stuart_flusberg_stuart_040029.cha_seg_009,stuart,flusberg,flusberg_stuart_040029.cha,"*MOT:	here's your +/.
+*CHI:	drum [/] drum .
+*MOT:	you like to play with the drum .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_029,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	three .
+%spa:	$PRO:PR
+%act:	still holding balloon
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%gpx:	looking at EXP and balloon
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*INV:	let it go .
+%spa:	$PRO:SI
+%act:	lets go of balloon
+*CHI:	0 .
+%act:	watches balloon fly through air
+*INV:	there it is .
+%spa:	$PRO:ST
+%gpx:	points to balloon
+*CHI:	0 .
+%act:	crawls after balloon
+*INV:	there it is .
+%spa:	$PRO:ST",,,,,,
+carl_rollins_carl_020800.cha_seg_006,carl,rollins,rollins_carl_020800.cha,"*INV:	put him inside .
+%spa:	$NIA:RP
+%act:	helps him get man and tractor in the barn
+*CHI:	xxx .
+%act:	closes the doors
+*INV:	put him inside .
+%spa:	$NIA:RP
+*CHI:	xxx .
+%act:	straightens the stuff in the barn
+*INV:	okay .
+%spa:	$MRK:MK
+*INV:	close it .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	closes both doors",,,,,,
+mars_rollins_mars_030100.cha_seg_052,mars,rollins,rollins_mars_030100.cha,"*INV:	put that in .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	puts the piece in
+*INV:	what about her arms ?
+%spa:	$DHA:QN
+%act:	tries to hand him a piece
+*CHI:	0 .
+%act:	looks at camera",,,,,,
+sid_rollins_sid_030500.cha_seg_001,sid,rollins,rollins_sid_030500.cha,"*INV:	&=gasp +...
+%spa:	$DHA:MK:NV
+%gpx:	points to picture on page and looks at CHI
+*CHI:	yyy .
+%spa:	$DJF:ST:WD
+*INV:	the lion .
+%spa:	$DJF:AP
+*INV:	it says +...
+%spa:	$DJF:EA
+*CHI:	grrrroooow@o .
+%spa:	$DJF:PR:VO",,,,,,
+josh_rollins_josh_021100.cha_seg_011,josh,rollins,rollins_josh_021100.cha,"*INV:	more ?
+%spa:	$NIA:RQ
+*CHI:	more .
+%spa:	$NIA:AD:WDE
+*INV:	more blocks ?
+%spa:	$DCC:YQ
+*INV:	here's more .
+%spa:	$NIA:TO
+%act:	hands him a block
+*CHI:	0 .
+%act:	throws it in
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*INV:	more ?
+%spa:	$DCC:YQ
+*INV:	here's more .
+%spa:	$PRO:TO
+%act:	hands him a block",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011,roger_flusberg,flusberg,flusberg_roger_flusberg_040518.cha,"*MOT:	what are you doing [NAME] ?
+*CHI:	I play tower .
+*MOT:	you forgot one .
+*MOT:	[NAME] look .
+*MOT:	make the tower .
+*CHI:	gonna make a tower .
+*MOT:	and a red .
+*MOT:	and +/.",,,,,,
+josh_rollins_josh_021100.cha_seg_040,josh,rollins,rollins_josh_021100.cha,"*INV:	you want (th)em ?
+%spa:	$NIA:YQ
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+*INV:	yes ?
+%spa:	$NIA:YQ
+*INV:	put it +...
+%spa:	$NIA:EC
+%act:	holds out a lego
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	takes it and throws it in
+*INV:	how many do I have ?
+%spa:	$DJF:QN
+*INV:	one .
+%spa:	$DJF:CN
+%gpx:	points to one of the legos
+*CHI:	yyy [= jargon] [>] .
+%spa:	$YYY:YY:VJ",,,,,,
+carl_rollins_carl_030700.cha_seg_021,carl,rollins,rollins_carl_030700.cha,"*INV:	pop .
+%spa:	$NIA:PR
+*CHI:	xxx .
+%act:	dances around
+*INV:	okay .
+%spa:	$NIA:MK
+*INV:	very good .
+%spa:	$NIA:AB
+*INV:	can you turn the water off ?
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	turns the water off
+*CHI:	xxx . [+ trn]
+%spa:	$MRK:MK:VO
+%act:	sticks his hands in the bubbles still in the sink
+*CHI:	a [=? the] [*] bubbles yyy is gone .
+%spa:	$DJF:ST:WD",,,,,,
+brett_flusberg_brett_050800.cha_seg_045,brett,flusberg,flusberg_brett_050800.cha,"*MOT:	I want the cow .
+*CHI:	I want the cow .
+*MOT:	that's right .
+*CHI:	the horsie .
+*MOT:	who wants the horsie ?
+*MOT:	I'm gonna get the horsie right here .
+*CHI:	I want it right there .
+*CHI:	I don't want those .",,,,,,
+josh_rollins_josh_030100.cha_seg_015,josh,rollins,rollins_josh_030100.cha,"*INV:	watch out .
+%spa:	$NIA:WD
+*CHI:	0 .
+%act:	walks backward into the corner of the coke machine
+*INV:	oh bang@o .
+%spa:	$NIA:PR
+*CHI:	0 [=! cries] .
+%act:	runs around holding his head
+*INV:	bang@o .
+%spa:	$NIA:PR
+*INV:	ouch .
+%spa:	$MRK:MK
+*CHI:	0 [=! cries] .",,,,,,
+carl_rollins_carl_030000.cha_seg_008,carl,rollins,rollins_carl_030000.cha,"*INV:	very good .
+%spa:	$NIA:AB
+*CHI:	yyy <ice cream> [?] .
+%spa:	$DHA:ST:WD
+*INV:	ice cream .
+%spa:	$DJF:RT",,,,,,
+roger_rollins_rollins_roger_rollins_020800.cha_seg_005,roger_rollins,rollins,rollins_roger_rollins_020800.cha,"*INV:	xxx . [+ trn]
+%spa:	$PRO:PR
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NR
+%act:	reaches for another cookie
+*INV:	there's a square cookie .
+%spa:	$NIA:TO
+%act:	hands him a square
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*CHI:	0 .
+%act:	picks up cookie monster
+*CHI:	xxx . [+ trn]
+%spa:	$SDS:PR:VO
+%act:	walks around the room
+*CHI:	get set .
+%spa:	$SDS:PR:WD
+*CHI:	go .
+%spa:	$SDS:PR:WD",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	that's an astronaut .
+*CHI:	duck .
+*CHI:	duck .
+*CHI:	duck .
+*CHI:	it is a duck .
+*CHI:	duck .
+*CHI:	hat .
+*CHI:	&~mm &~mm .",,,,,,
+mark_flusberg_mark_070700.cha_seg_054,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	&~b .
+*CHI:	bear .
+*MOT:	yeah .
+*CHI:	bee .
+*MOT:	bee .
+*CHI:	<but , but> [/] butterfly .
+*MOT:	yeah .
+*CHI:	boy .",,,,,,
+jack_flusberg_jack_060900.cha_seg_077,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	what do you want for christmas ?
+*CHI:	chipmunks .
+*MOT:	you want chipmunks .
+*CHI:	or [/] or +/.
+*MOT:	what else do you want .
+*CHI:	Nerf football .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024,roger_flusberg,flusberg,flusberg_roger_flusberg_030900.cha,"*MOT:	baby's book .
+*CHI:	no .
+*CHI:	kids .",,,,,,
+carl_rollins_carl_020800.cha_seg_020,carl,rollins,rollins_carl_020800.cha,"*INV:	there's Chi .
+%spa:	$DHA:ST
+%act:	draws a face in the circle
+*CHI:	0 .
+%act:	scribbles with both hands
+*INV:	here's Chi .
+%spa:	$DHA:ST
+%act:	draws a nose
+*CHI:	0 .
+%act:	puts his markers down
+*CHI:	xxx .
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	let's put them away .
+%spa:	$NIA:RP
+%act:	puts the lids back on the markers
+*CHI:	0 .
+%act:	walks off",,,,,,
+josh_rollins_josh_030100.cha_seg_022,josh,rollins,rollins_josh_030100.cha,"*INV:	look what I've got .
+%spa:	$DHA:RP
+*CHI:	xxx .
+%act:	chews on the juice bottle
+*INV:	Chi .
+%spa:	$NMA:CL
+*INV:	look Chi .
+%spa:	$NMA:CL
+*CHI:	0 .
+%act:	wanders over to her",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_032,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*CHI:	xxx .
+%gpx:	reaching for balloon and laughing
+*INV:	up [/] up .
+%spa:	$PRO:PR
+*INV:	up [/] up .
+%spa:	$PRO:PR
+*CHI:	0 .
+%act:	looks down and balloon falls on his head",,,,,,
+brett_flusberg_brett_060207.cha_seg_006,brett,flusberg,flusberg_brett_060207.cha,"*MOT:	that you can have what ?
+*CHI:	&-um [/] two raisins .
+*MOT:	why ?
+*CHI:	<because I'm , I> [/] because I played Candy_Land .
+*MOT:	and you passed what ?
+*CHI:	the two .
+*MOT:	right !
+*MOT:	here you go [NAME] .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001,roger_flusberg,flusberg,flusberg_roger_flusberg_041007.cha,"*MOT:	what are you playing with [NAME] ?
+*CHI:	I'm playing with [/] with toys .
+*MOT:	oh , good .
+*CHI:	tap the +/.
+*MOT:	and what's this ?
+*CHI:	your table .
+*MOT:	no .
+*MOT:	my table .",,,,,,
+mark_flusberg_mark_080700.cha_seg_009,mark,flusberg,flusberg_mark_080700.cha,"*MOT:	you say it again .
+*CHI:	the duck +/.
+*MOT:	no I +/.
+*CHI:	play duck toy .
+*MOT:	okay .
+*MOT:	I play duck toy .
+*CHI:	I play duck toy .",,,,,,
+josh_rollins_josh_020800.cha_seg_028,josh,rollins,rollins_josh_020800.cha,"*CHI:	xxx .
+%act:	moves piece
+*CHI:	0 .
+%act:	reaches for juice
+*INV:	the ducks go over here .
+%spa:	$NIA:RP
+%gpx:	points to puzzle
+*CHI:	0 .
+%act:	drinks juice
+*CHI:	0 .
+%act:	puts juice down and smiles at camera
+*CHI:	xxx .
+%act:	puts juice down
+*INV:	look Chi .
+%spa:	$DHA:RP
+%gpx:	takes piece out of puzzle
+*INV:	the ducks (.) go right here .
+%spa:	$NIA:RP
+%act:	taps on puzzle with piece",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_073,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	bye [/] bye sand .
+%spa:	$NIA:MK
+%act:	puts the lid back on
+*CHI:	0 .
+%act:	tries to get the hammer in again
+*INV:	put the lid back on .
+%spa:	$NIA:SI",,,,,,
+josh_rollins_josh_020500.cha_seg_043,josh,rollins,rollins_josh_020500.cha,"*CHI:	0 .
+%act:	walks off
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	bends down
+*INV:	down stairs .
+%spa:	$NIA:ST
+%act:	sits on top stair
+*CHI:	0 .
+%act:	points to elephant's tail on wall
+*INV:	there's the elephant .
+%spa:	$DJF:ST
+%act:	rubs the wall
+*CHI:	0 .
+%act:	puts hand on elephant's body
+*INV:	there's the elephant .
+%spa:	$DJF:ST
+%act:	rubs the wall
+*CHI:	0 .
+%act:	grabs Clinician's arm",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_087,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	come back .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	turns his truck around
+*CHI:	xxx .",,,,,,
+roger_rollins_rollins_roger_rollins_030300.cha_seg_019,roger_rollins,rollins,rollins_roger_rollins_030300.cha,"*INV:	off .
+%spa:	$NIA:ST
+*CHI:	0 .
+%gpx:	reaches toward the open container
+*CHI:	0 .
+%act:	turns container over and bangs it on the counter
+*CHI:	0 .
+%act:	turns container open side up and looks into it",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_044,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	come back truck .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	plays with the truck
+*INV:	xxx . [+ trn]
+%spa:	$NIA:PR
+%act:	rolls the truck and makes car noises",,,,,,
+josh_rollins_josh_020500.cha_seg_034,josh,rollins,rollins_josh_020500.cha,"*INV:	be careful .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	stands up
+*CHI:	0 .
+%act:	sits down and plays with railing stuff
+*INV:	0 .
+%act:	stands up
+*INV:	let's go downstairs .
+%spa:	$NIA:RP
+%gpx:	holds out hand for chi
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	pulls Clinician down
+*INV:	sit down .
+%spa:	$NIA:SI
+%act:	sits down
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	starts to stand up",,,,,,
+rick_flusberg_rick_040700.cha_seg_089,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	and what's this number ?
+*CHI:	four .
+*MOT:	good boy [NAME] .
+*MOT:	what's that number ?
+*CHI:	two .
+*MOT:	no , what's this number ?
+*CHI:	six .
+*MOT:	good boy .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003,roger_flusberg,flusberg,flusberg_roger_flusberg_040727.cha,"*MOT:	oh , wanna do painting ?
+*CHI:	a [/] spaghetti and meatballs .
+*MOT:	oh , that's good .
+*MOT:	[NAME] , do you wanna do some coloring ?
+*CHI:	yes .
+*MOT:	okay , let's put the people away .
+*MOT:	they can go to sleep in the barn , okay ?
+*CHI:	sleep in the barn .",,,,,,
+sid_rollins_sid_020200.cha_seg_017,sid,rollins,rollins_sid_020200.cha,"*INV:	put the eraser away .
+%spa:	$NIA:RP
+%act:	puts the eraser down for him
+*CHI:	0 .
+%act:	continues drawing
+*INV:	let's go .
+%spa:	$NIA:RP
+%act:	takes his hand
+*CHI:	0 .
+%act:	continues drawing with other hand
+*INV:	Chi .
+%spa:	$NMA:CL
+*INV:	let's go .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	hits eraser on chalk holder
+*INV:	<bang bang bang bang> [/] bang .
+%spa:	$NIA:PR
+%act:	hits chalk holder with her hand",,,,,,
+mars_rollins_mars_030100.cha_seg_051,mars,rollins,rollins_mars_030100.cha,"*INV:	what about the girl ?
+%spa:	$NIA:QN
+*CHI:	0 .
+%act:	climbs on the puzzle
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*CHI:	xxx .
+%act:	hits the puzzle
+*INV:	take (th)em out .
+%spa:	$NIA:RP
+*INV:	take her arm out .
+%spa:	$NIA:SI
+%act:	takes out a piece
+*CHI:	0 .
+%act:	takes out a piece
+*INV:	take her head out .
+%spa:	$NIA:RP
+%gpx:	taps a piece",,,,,,
+carl_rollins_carl_020800.cha_seg_018,carl,rollins,rollins_carl_020800.cha,"*INV:	dry them off .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	throws the towels in the trash
+*INV:	throw it away .
+%spa:	$NIA:SI
+*INV:	good .
+%spa:	$NIA:AB
+%act:	claps
+*INV:	let's go .
+%spa:	$NIA:RP
+*CHI:	xxx . [+ trn]
+%spa:	$PRO:YY:VCO
+%act:	runs",,,,,,
+carl_rollins_carl_020800.cha_seg_012,carl,rollins,rollins_carl_020800.cha,"*INV:	hi James .
+%spa:	$MRK:MK
+%act:	waves
+*CHI:	0 .
+%act:	throws the sheep in the bucket
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*INV:	put them away .
+%spa:	$NIA:SI
+*INV:	let's put them in the bucket .
+%spa:	$NIA:RP
+%act:	stands and gets the bucket
+*CHI:	0 .
+%act:	gathers up the toys
+*INV:	0 .
+%act:	puts the bucket in her chair
+*INV:	put them in the bucket .
+%spa:	$NIA:RP
+%gpx:	taps the side of the bucket",,,,,,
+jack_flusberg_jack_060900.cha_seg_025,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	what color is that ?
+*CHI:	blue .
+*MOT:	that's +/.
+*CHI:	orange .
+*MOT:	pink .
+*CHI:	pink .
+*MOT:	good .
+*MOT:	no , that's xxx +/.",,,,,,
+josh_rollins_josh_021100.cha_seg_034,josh,rollins,rollins_josh_021100.cha,"*INV:	you wanna slide again ?
+%spa:	$NIA:RQ
+*CHI:	xxx .
+%act:	looks out the window
+*INV:	climb up .
+%spa:	$NIA:RP
+%act:	taps the slide
+*CHI:	0 .
+%act:	takes her hand and walks away",,,,,,
+carl_rollins_carl_021100.cha_seg_090,carl,rollins,rollins_carl_021100.cha,"*INV:	open .
+%spa:	$NIA:AP
+%gpx:	nods
+*CHI:	0 .
+%act:	opens and closes the door
+*INV:	who goes in the bus ?
+%spa:	$DNP:QN
+*CHI:	0 .
+%act:	rolls the bus back and forth
+*INV:	Carson .
+%spa:	$NMA:CL
+%gpx:	grabs his arm
+*INV:	the kids on the bus go .
+%spa:	$PRO:EX
+*CHI:	0 .
+%act:	rolls the bus
+*INV:	up .
+%spa:	$PRO:EX
+%act:	moves her torso up",,,,,,
+mark_flusberg_mark_080224.cha_seg_015,mark,flusberg,flusberg_mark_080224.cha,"*MOT:	getting +/.
+*CHI:	bigger , the balloon is broken .
+*MOT:	hey [/] that was pretty good !
+*CHI:	done ?",,,,,,
+mark_flusberg_mark_070812.cha_seg_046,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	stayed .
+*CHI:	stayed .
+*MOT:	stayed where ?
+*MOT:	what did you do last night ?
+*MOT:	where did you stay ?
+*CHI:	room .
+*MOT:	that's right .
+*MOT:	you stayed in +/.",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_037,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	<knock knock> [/] knock .
+%spa:	$DJF:PR
+%act:	pats a block at each knock
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:NT
+%act:	takes her hand and leads her to the sandbox
+*CHI:	0 .
+%spa:	$NIA:RP:NT
+%gpx:	puts her hand on the edge of the lid
+*INV:	there's the sand .
+%spa:	$DJF:ST
+*INV:	sand is in there .
+%spa:	$DJF:ST
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:NO
+%act:	pushes up on the lid",,,,,,
+rick_flusberg_rick_060818.cha_seg_008,rick,flusberg,flusberg_rick_060818.cha,"*MOT:	[NAME] what am I doing ?
+*CHI:	xxx .
+*MOT:	look at mommy .
+*MOT:	what am I doing ?
+*CHI:	I playing .
+*MOT:	no .
+*CHI:	pencil .
+*MOT:	[NAME] look .",,,,,,
+roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032,roger_flusberg,flusberg,flusberg_roger_flusberg_041007.cha,"*MOT:	okay , what do you wanna do ?
+*CHI:	I wanna play bus please .
+*MOT:	with the bus ?
+*MOT:	okay .
+*CHI:	wanna lay down and go to sleep .",,,,,,
+brett_flusberg_brett_060819.cha_seg_025,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	what happened to make the meatball fall ?
+*CHI:	it rolled off and somebody sneezed .
+*MOT:	because somebody sneezed .
+*CHI:	&~n .
+*MOT:	[- deu] gesuntheit .
+*MOT:	so , what else did you do in circle time ?
+*CHI:	played .
+*CHI:	how about if I sneeze ?",,,,,,
+mark_flusberg_mark_070812.cha_seg_059,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	do you wanna play a game ?
+*CHI:	yes .
+*MOT:	what game would you like to play ?
+*MOT:	would you like to play a game ?
+*CHI:	yes .",,,,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_004,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	open the door .
+%spa:	$NIA:RP
+*CHI:	a [=? the] [*] door .
+%spa:	$NIA:RT:WDE
+*INV:	push the button .
+%spa:	$NIA:SI
+%act:	pushes on the lock
+*CHI:	door .
+%spa:	$NIA:RP:NT
+%gpx:	guides her hand to the door
+*INV:	open the door .
+%spa:	$NIA:RP
+%act:	grabs the knob
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RP:VO
+*INV:	open the door .
+%spa:	$NIA:SI
+%act:	opens the door
+*CHI:	door .
+%spa:	$NIA:RT:WDE",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018,roger_flusberg,flusberg,flusberg_roger_flusberg_040518.cha,"*MOT:	what's Santa_Claus going to bring [NAME] ?
+*CHI:	toys .
+*MOT:	and what else ?
+*CHI:	and toys .
+*MOT:	toys and a +/.
+*CHI:	and christmas tree .
+*MOT:	yeah .
+*MOT:	and +/.",,,,,,
+sid_rollins_sid_021100.cha_seg_015,sid,rollins,rollins_sid_021100.cha,"*INV:	a tree ?
+%spa:	$NIA:RQ
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*INV:	a tree .
+%spa:	$NIA:SI
+%act:	draws a tree
+*INV:	a tree .
+%spa:	$NIA:SI
+*INV:	a tree .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	takes chalk from Clinician
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VCP
+%gpx:	points to chalkboard
+*INV:	what ?
+%spa:	$DCC:RR",,,,,,
+josh_rollins_josh_020500.cha_seg_031,josh,rollins,rollins_josh_020500.cha,"*INV:	you want some juice ?
+%spa:	$DCA:RQ
+%act:	helps chi pull juice out
+*CHI:	0 .
+%act:	tries to open bottle
+*CHI:	0 .
+%act:	puts his mouth on spout
+*INV:	you needta open it up .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	pulls spout up and drinks
+*INV:	&~mm .
+%spa:	$NIA:PR
+*CHI:	0 .
+%act:	gives juice to Clinician
+*CHI:	yyy yyy yyy .
+%spa:	$YYY:YY:VO
+%act:	looks to Clinician",,,,,,
+rick_flusberg_rick_050904.cha_seg_023,rick,flusberg,flusberg_rick_050904.cha,"*MOT:	say no .
+*CHI:	no .
+*CHI:	no .",,,,,,
+josh_rollins_josh_020500.cha_seg_024,josh,rollins,rollins_josh_020500.cha,"*INV:	the pokey little puppy .
+%spa:	$DJF:ST
+*CHI:	xxx .
+%act:	slaps hand on book
+*INV:	there's the puppies .
+%spa:	$DHA:ST
+%gpx:	points to the book
+*CHI:	0 .
+%act:	turns the page
+*INV:	there's all the puppies .
+%spa:	$DHA:ST
+%gpx:	points to the book
+*CHI:	0 .
+%act:	turns the page
+*CHI:	0 .
+%act:	closes the book
+*INV:	all done .
+%spa:	$NIA:DC
+%act:	looks at chi",,,,,,
+rick_flusberg_rick_060308.cha_seg_003,rick,flusberg,flusberg_rick_060308.cha,"*MOT:	what are you doing [NAME] ?
+*CHI:	I am play drums .
+*MOT:	you're playing the drums .",,,,,,
+brett_flusberg_brett_051002.cha_seg_034,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	get away from the camera [NAME] .
+*CHI:	I don't wanna get away .
+*CHI:	yes .
+*MOT:	you have a present !
+*CHI:	present .
+*CHI:	present .
+*CHI:	open it .
+*MOT:	ohboy [/] [NAME] !",,,,,,
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_042,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	get the bridge .
+*CHI:	get the bridge .
+*MOT:	get the truck .
+*CHI:	where's the truck ?
+*MOT:	in the bag .
+*CHI:	bag .
+*MOT:	in the basket .
+*CHI:	in basket .",,,,,,
+stuart_flusberg_stuart_040715.cha_seg_003,stuart,flusberg,flusberg_stuart_040715.cha,"*MOT:	that's a yellow block .
+*CHI:	mommy .
+*MOT:	on .
+*MOT:	good boy .
+*CHI:	goody !
+*MOT:	on .
+*MOT:	push .
+*CHI:	push .",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_040,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	what's this ?
+*CHI:	hair .
+*MOT:	good boy [NAME] .
+*MOT:	what's this ?
+*CHI:	nose .",,,,,,
+mars_rollins_mars_030300.cha_seg_020,mars,rollins,rollins_mars_030300.cha,"*INV:	let's put the glue on .
+%spa:	$NIA:RP
+%act:	gets the glue
+*CHI:	0 .
+%act:	picks up an eye
+*INV:	put the glue .
+%spa:	$NIA:RP
+%act:	holds the glue over the eye he is holding
+*INV:	squeeze it .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	plays with the eye
+*INV:	I got the eye .
+%spa:	$DRE:ST
+%act:	takes away the eye
+*CHI:	0 .
+%act:	picks up the other eye
+*INV:	&=gasp got it .
+%spa:	$DRE:ST
+%act:	takes the other eye",,,,,,
+carl_rollins_carl_021100.cha_seg_050,carl,rollins,rollins_carl_021100.cha,"*INV:	he's on the water .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	takes the boat
+*CHI:	xxx . [+ trn]
+%spa:	$DJF:RT:WDE
+%act:	puts the boat back in the puzzle
+*CHI:	0 .
+%act:	takes out the airplane
+*CHI:	a airplane .
+%spa:	$DHA:ST:WD
+%act:	holds it up
+*INV:	yep it's an airplane .
+%spa:	$DJF:AP
+*CHI:	airplane .
+%spa:	$DJF:RT:WDE
+*INV:	there's one more we haven't played with .
+%spa:	$DJF:ST
+%gpx:	points to a puzzle piece",,,,,,
+josh_rollins_josh_021100.cha_seg_024,josh,rollins,rollins_josh_021100.cha,"*INV:	are you a boy ?
+%spa:	$DJF:YQ
+%act:	tries to put him down
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*INV:	yes .
+%spa:	$DJF:AA
+*INV:	stand up .
+%spa:	$NIA:RP
+*CHI:	xxx .
+*INV:	stand up .
+%spa:	$NIA:RP
+*INV:	let's go find the doors .
+%spa:	$NIA:RP
+*CHI:	doors .
+%spa:	$NIA:RT:WD",,,,,,
+sid_rollins_sid_030200.cha_seg_055,sid,rollins,rollins_sid_030200.cha,"*INV:	down .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	scoots it back over then jumps up and down some more
+*INV:	down .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	scoots the balloon back
+*CHI:	0 .
+%act:	jumps
+*INV:	what's happening ?
+%spa:	$DJF:QN
+*CHI:	0 .
+%act:	scoots the balloon
+*INV:	push it .
+%spa:	$NIA:RP",,,,,,
+stuart_flusberg_stuart_030610.cha_seg_015,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	with the water .
+*CHI:	ba .
+*MOT:	oop .",,,,,,
+jack_flusberg_jack_070106.cha_seg_017,jack,flusberg,flusberg_jack_070106.cha,"*MOT:	you wanna play with Garfield again ?
+*CHI:	I'm gonna lay down with baby joy .
+*MOT:	you do ?
+*MOT:	are you tired ?
+*CHI:	I'm staying here .
+*MOT:	I'm gonna stay right here .
+*MOT:	we can play with some cars .
+*CHI:	have a nice nap .",,,,,,
+jack_flusberg_jack_070106.cha_seg_009,jack,flusberg,flusberg_jack_070106.cha,"*MOT:	can you say vest ?
+*CHI:	vest .
+*MOT:	vest , right , that's good .
+*MOT:	do you know what that is ?
+*CHI:	ball .
+*MOT:	ball , that's right .
+*CHI:	ball .
+*MOT:	and +/.",,,,,,
+rick_flusberg_rick_070013.cha_seg_004,rick,flusberg,flusberg_rick_070013.cha,"*MOT:	[NAME] , where does this go ?
+*CHI:	I play Gonzo .
+*CHI:	I bite it .
+*MOT:	[NAME] .
+*CHI:	I leave right here .
+*MOT:	no , we'll leave it over here .
+*CHI:	Potato_Head touch ?
+*MOT:	[NAME] , no .",,,,,,
+josh_rollins_josh_020500.cha_seg_016,josh,rollins,rollins_josh_020500.cha,"*INV:	open the door .
+%spa:	$PRO:SI
+%act:	opens the door
+*CHI:	0 .
+%act:	puts drink down and goes to the door
+*INV:	hi Cam .
+%spa:	$PRO:MK
+%act:	waves to camera",,,,,,
+sid_rollins_sid_020200.cha_seg_011,sid,rollins,rollins_sid_020200.cha,"*INV:	Chi I'm going to feed the baby .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	puts a cone in his mouth
+*INV:	0 [=! smacks] . [+ trn]
+%spa:	$NIA:PR
+%act:	holds an ice cream cone to her own mouth
+*CHI:	0 .
+%act:	takes the cone from the CLN and pulls it apart
+*INV:	take it off .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	plays with cone and sticks it on his finger
+*INV:	it's on your finger .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	puts down the cone",,,,,,
+carl_rollins_carl_030000.cha_seg_010,carl,rollins,rollins_carl_030000.cha,"*INV:	that's the top of the school bus .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	puts a wheel in
+*CHI:	0 .
+%act:	gets the other wheel
+*INV:	there's the other wheel .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	has trouble putting it in the right spot
+*INV:	that's right .
+%spa:	$NIA:AB
+*INV:	that one's in the way isn't it ?
+%spa:	$NIA:ST $NIA:YQ
+*CHI:	0 .
+%act:	tries to put the first piece back in its spot",,,,,,
+josh_rollins_josh_030100.cha_seg_018,josh,rollins,rollins_josh_030100.cha,"*INV:	come on .
+%spa:	$NIA:RP
+%act:	tries to grab his hand
+*CHI:	0 [=! cries] .
+%gpx:	moves away from her but toward the gym
+*CHI:	yyy .
+%spa:	$YYY:YY:VO",,,,,,
+mars_rollins_mars_030300.cha_seg_017,mars,rollins,rollins_mars_030300.cha,"*INV:	we needta squeeze .
+%spa:	$NIA:RP
+%act:	squeezes the glue
+*CHI:	0 .
+%act:	helps her squeeze the glue
+*INV:	we needta squeeze .
+%spa:	$NIA:SI",,,,,,
+jack_flusberg_jack_060900.cha_seg_046,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	where's the cars go ?
+*CHI:	road .
+*MOT:	right there ?
+*CHI:	right that way ?
+*CHI:	right that way .
+*MOT:	okay , you wanna draw a picture of the school ?
+*MOT:	league school ?
+*CHI:	yes .",,,,,,
+rick_flusberg_rick_040700.cha_seg_029,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	there are all your dishes .
+*CHI:	dishes .
+*CHI:	green .
+*CHI:	green .
+*CHI:	green .
+*CHI:	xxx .
+*CHI:	xxx .
+*CHI:	go bath+room ?",,,,,,
+mars_rollins_mars_030600.cha_seg_037,mars,rollins,rollins_mars_030600.cha,"*INV:	there's a doggie .
+%spa:	$DJF:ST
+*CHI:	roof [/] roof .
+%spa:	$DJF:PR
+*INV:	there's a doggie .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	gets a ball off the shelf
+*INV:	you've got the ball .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	drops the ball",,,,,,
+jack_flusberg_jack_060900.cha_seg_008,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	and what does that say there ?
+*CHI:	don't be greedy .
+*MOT:	what's that word there [NAME] ?
+*CHI:	greedy .
+*MOT:	what does that say ?
+*CHI:	color .
+*MOT:	color .
+*CHI:	hearts .",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_023,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*CHI:	0 .
+%act:	catches it then lets it go
+*INV:	<up up> [/] up .
+%spa:	$NIA:PR
+*CHI:	0 .
+%act:	grabs the balloon",,,,,,
+josh_rollins_josh_030100.cha_seg_023,josh,rollins,rollins_josh_030100.cha,"*INV:	is he gonna ride the horse ?
+%spa:	$NIA:YQ
+*CHI:	0 .
+%act:	gives up and plays with the horse
+*INV:	can you put the cowboy on the horse Chi ?
+%spa:	$NIA:RP
+%act:	holds up the cowboy
+*CHI:	xxx .
+%act:	plays with the horse
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ",,,,,,
+jack_flusberg_jack_060900.cha_seg_010,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	what's that a picture of ?
+*CHI:	dog .
+*MOT:	yeah , it looks like a dog .
+*MOT:	what does that say ?
+*CHI:	xxx .
+*CHI:	xxx .",,,,,,
+brett_flusberg_brett_050800.cha_seg_066,brett,flusberg,flusberg_brett_050800.cha,"*MOT:	what's the cow doing ?
+*CHI:	orange .
+*MOT:	[NAME] , what is the cow doing ?
+*CHI:	the cow is going .
+*CHI:	it's resting .
+*MOT:	it is resting .
+*MOT:	that's right !
+*CHI:	look at the gate .",,,,,,
+mars_rollins_mars_030300.cha_seg_001,mars,rollins,rollins_mars_030300.cha,"*INV:	this isn't workin(g) .
+%spa:	$NIA:ST
+*CHI:	xxx .
+*INV:	&=gasp . [+ trn]
+%spa:	$DHA:MK",,,,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_057,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	0 .
+%act:	gets a block for him
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	pushes the stack over
+*INV:	knock (th)em down .
+%spa:	$PRO:SI
+*INV:	knock (th)em down .
+%spa:	$PRO:SI
+%act:	pushes a block
+*INV:	knock (th)em down .
+%spa:	$PRO:SI
+*CHI:	0 .
+%act:	stacks two blocks
+*CHI:	0 .
+%act:	stacks another one
+*INV:	on top .
+%spa:	$PRO:SI
+%act:	pats the top",,,,,,
+brett_flusberg_brett_051002.cha_seg_045,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	what noise +/.
+*CHI:	woof !
+*MOT:	what noise does a trombone make ?",,,,,,
+sid_rollins_sid_020200.cha_seg_028,sid,rollins,rollins_sid_020200.cha,"*INV:	&=gasp it's on my finger .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	looks in the big box again
+*CHI:	0 .
+%act:	gets out the carrot
+*INV:	do you wanna feed the baby ?
+%spa:	$NIA:RQ
+*INV:	www .
+*CHI:	0 .
+%act:	stands up
+*INV:	all done ?
+%spa:	$NIA:YQ
+*CHI:	0 .
+%act:	runs off camera",,,,,,

@@ -1,23 +1,23 @@
-"""Turn two annotators' independent judgements into an adjudicated gold standard.
+"""Resolve two annotators' gold field values into one adjudicated gold standard.
 
 `agreement_report` measures whether the annotators agreed. This decides what
-the label *is*, which is a different act and the one `mars_evaluation` consumes.
+the gold value *is*, which is a different act.
 
 Three states, kept distinct because collapsing them is how a gold standard
-quietly acquires labels nobody made:
+quietly acquires values nobody chose:
 
-    agreed        both annotators gave the same judgement -- adopted as-is
+    agreed        both annotators recorded the same value -- adopted as-is
     adjudicated   they differed and a human resolved it -- adopted with a record
     unresolved    they differed and nobody has resolved it -- NOT in the gold
 
 An unresolved disagreement is excluded rather than broken by a rule (first
-annotator wins, majority of one, etc). Every such rule invents a label, and a
-gold standard with invented labels produces an accuracy figure that measures
-the rule instead of the model.
+annotator wins, alphabetical, etc). Every such rule invents a value, and a gold
+standard with invented values produces an accuracy figure that measures the
+rule instead of the models.
 
-Output matches what `mars_evaluation` expects:
-
-    {"models": [...], "gold": {segment_id: {model: {field: judgement}}}}
+Gold is model-independent: one value set per segment, against which all three
+generators are scored and from which the oracle ceiling is computed. Deriving
+each model's per-field judgements is `score_against_gold`'s job, not this one.
 
 Usage:
     uv run python -m tests.eval.extraction.adjudicate annotator_a annotator_b
@@ -34,89 +34,129 @@ from pathlib import Path
 from typing import Any
 
 from tests.eval.extraction.agreement_report import (
-    MismatchedAnnotationItemsError,
+    FIELDS,
     annotations_path,
-    shared_keys,
+    normalize,
+    shared_segments,
+)
+from tests.eval.extraction.annotate_gold import (
+    CATEGORICAL_VALUES,
+    FREE_TEXT_FIELDS,
+    NULL_TOKEN,
 )
 
 RESULTS_DIR = Path(__file__).parent / "results"
 GOLD_PATH = RESULTS_DIR / "gold_labels.json"
 BATCH_PATH = RESULTS_DIR / "annotation_batch.json"
 
-FIELDS = ["domain", "behavior", "modality", "prompt_level", "outcome"]
-JUDGMENTS = {
-    "c": "correct",
-    "i": "incorrect",
-    "h": "hallucinated",
-    "n": "correctly_null",
-    "m": "missing",
-}
-
 
 def split_by_consensus(
-    first: dict[str, Any], second: dict[str, Any], keys: list[str]
-) -> tuple[dict[str, dict[str, str]], dict[str, list[str]]]:
-    """Per item: the fields both annotators agreed on, and the fields they did not."""
-    agreed: dict[str, dict[str, str]] = {}
+    first: dict[str, Any], second: dict[str, Any], segments: list[str]
+) -> tuple[dict[str, dict[str, Any]], dict[str, list[str]]]:
+    """Per segment: the fields both annotators agreed on, and the fields they did not.
+
+    Agreement is on the normalized value, so casing and whitespace do not
+    manufacture a disagreement. The value carried forward is the one the first
+    annotator wrote, preserving their surface form.
+    """
+    agreed: dict[str, dict[str, Any]] = {}
     conflicts: dict[str, list[str]] = {}
-    for key in keys:
-        a = first[key].get("field_judgments", {})
-        b = second[key].get("field_judgments", {})
-        same = {f: a[f] for f in FIELDS if f in a and a.get(f) == b.get(f)}
-        differing = [f for f in FIELDS if a.get(f) != b.get(f)]
-        agreed[key] = same
+    for segment_id in segments:
+        a = first[segment_id].get("field_values", {})
+        b = second[segment_id].get("field_values", {})
+        same = {
+            field: a[field]
+            for field in FIELDS
+            if field in a and field in b and normalize(a[field]) == normalize(b[field])
+        }
+        differing = [f for f in FIELDS if f not in same]
+        agreed[segment_id] = same
         if differing:
-            conflicts[key] = differing
+            conflicts[segment_id] = differing
     return agreed, conflicts
 
 
 def resolve_interactively(
-    key: str,
+    segment_id: str,
     fields: list[str],
     first: dict[str, Any],
     second: dict[str, Any],
     names: tuple[str, str],
-) -> dict[str, str]:
+    chat_text: str | None = None,
+) -> dict[str, Any]:
     """Ask a human to settle each disputed field. Skipping leaves it unresolved."""
-    a = first[key].get("field_judgments", {})
-    b = second[key].get("field_judgments", {})
+    a = first[segment_id].get("field_values", {})
+    b = second[segment_id].get("field_values", {})
     print("\n" + "=" * 72)
-    print(f"{key}")
-    resolved: dict[str, str] = {}
+    print(segment_id)
+    if chat_text:
+        print("-" * 72)
+        print(chat_text)
+    print("=" * 72)
+
+    resolved: dict[str, Any] = {}
     for field in fields:
-        print(f"  {field}: {names[0]}={a.get(field)!r}  {names[1]}={b.get(field)!r}")
-        options = "/".join(sorted(JUDGMENTS))
-        raw = input(f"    adjudicated value [{options}, Enter to leave unresolved]: ")
-        choice = raw.strip().lower()
-        if choice in JUDGMENTS:
-            resolved[field] = JUDGMENTS[choice]
-        elif choice:
-            print(f"    unrecognized {choice!r} -- left unresolved")
+        left, right = a.get(field), b.get(field)
+        print(f"\n  {field}")
+        print(f"    a. {names[0]}: {left!r}")
+        print(f"    b. {names[1]}: {right!r}")
+        if field in FREE_TEXT_FIELDS:
+            hint = f"[a/b, free text, '{NULL_TOKEN}' for none, Enter to leave unresolved]"
+        else:
+            values = CATEGORICAL_VALUES[field]
+            print(f"    or one of: {', '.join(values)}")
+            hint = f"[a/b, a value, '{NULL_TOKEN}' for none, Enter to leave unresolved]"
+        raw = input(f"    adjudicated value {hint}: ").strip()
+
+        if not raw:
+            continue
+        if raw.lower() == "a":
+            resolved[field] = left
+        elif raw.lower() == "b":
+            resolved[field] = right
+        elif raw == NULL_TOKEN:
+            resolved[field] = None
+        elif field in FREE_TEXT_FIELDS:
+            resolved[field] = raw
+        elif raw.lower() in CATEGORICAL_VALUES[field]:
+            resolved[field] = raw.lower()
+        else:
+            print(f"    unrecognized {raw!r} -- left unresolved")
     return resolved
 
 
 def build_gold(
-    agreed: dict[str, dict[str, str]],
-    adjudicated: dict[str, dict[str, str]],
+    agreed: dict[str, dict[str, Any]],
+    adjudicated: dict[str, dict[str, Any]],
     annotations: dict[str, Any],
-) -> tuple[dict[str, dict[str, dict[str, str]]], Counter]:
-    """Assemble the gold mapping, admitting only items complete on every field."""
-    gold: dict[str, dict[str, dict[str, str]]] = {}
+) -> tuple[dict[str, dict[str, Any]], Counter]:
+    """Assemble the gold mapping, admitting only segments complete on every field."""
+    gold: dict[str, dict[str, Any]] = {}
     counts: Counter = Counter()
-    for key, fields in agreed.items():
-        judgments = {**fields, **adjudicated.get(key, {})}
-        if len(judgments) < len(FIELDS):
-            # A partially resolved item is not a label. `is_fully_correct`
-            # treats a missing field as a failure, so admitting one here would
-            # score the model down for a judgement no human ever made.
+    for segment_id, fields in agreed.items():
+        values = {**fields, **adjudicated.get(segment_id, {})}
+        missing = [f for f in FIELDS if f not in values]
+        if missing:
+            # A partially resolved segment is not a gold record. Admitting one
+            # would score every model against a reference that is itself
+            # undecided on those fields.
             counts["unresolved"] += 1
             continue
-        record = annotations[key]
-        segment_id = record.get("segment_id") or key.split("::")[0]
-        model = record.get("model") or "unspecified"
-        gold.setdefault(segment_id, {})[model] = judgments
-        counts["adjudicated" if key in adjudicated else "agreed"] += 1
+        gold[segment_id] = {
+            "field_values": {f: values[f] for f in FIELDS},
+            "child_id": annotations[segment_id].get("child_id"),
+            "source": "adjudicated" if segment_id in adjudicated else "agreed",
+        }
+        counts["adjudicated" if segment_id in adjudicated else "agreed"] += 1
     return gold, counts
+
+
+def load_chat_texts() -> dict[str, str]:
+    """Transcripts for the adjudicator to read. Absent batch is not fatal."""
+    if not BATCH_PATH.exists():
+        return {}
+    batch = json.loads(BATCH_PATH.read_text())
+    return {e["segment_id"]: e["chat_text"] for e in batch["candidates"]}
 
 
 def main() -> None:
@@ -136,59 +176,61 @@ def main() -> None:
         if not path.exists():
             raise SystemExit(
                 f"{path} not found. Both annotators must finish before "
-                "adjudication; this script resolves judgements, it does not "
+                "adjudication; this script resolves values, it does not "
                 "create them."
             )
         loaded.append(json.loads(path.read_text()))
     first, second = loaded
 
-    try:
-        keys = shared_keys(first, second)
-    except MismatchedAnnotationItemsError as exc:
-        raise SystemExit(f"Refusing to adjudicate: {exc}") from exc
-
-    if not keys:
+    segments = shared_segments(first, second)
+    if not segments:
         raise SystemExit(
-            "The two annotators share no items. Gold requires a "
+            "The two annotators share no segments. Gold requires a "
             "double-annotated overlap."
         )
 
-    agreed, conflicts = split_by_consensus(first, second, keys)
+    agreed, conflicts = split_by_consensus(first, second, segments)
     n_conflicted_fields = sum(len(v) for v in conflicts.values())
-    print(f"Double-annotated items: {len(keys)}")
-    print(f"  fully agreed:        {len(keys) - len(conflicts)}")
+    print(f"Double-annotated segments: {len(segments)}")
+    print(f"  fully agreed:        {len(segments) - len(conflicts)}")
     print(f"  with any conflict:   {len(conflicts)} ({n_conflicted_fields} fields)")
 
     if args.report_only:
-        for key, fields in sorted(conflicts.items()):
-            print(f"  {key}: {', '.join(fields)}")
+        for segment_id, fields in sorted(conflicts.items()):
+            print(f"  {segment_id}: {', '.join(fields)}")
         return
 
-    adjudicated: dict[str, dict[str, str]] = {}
+    chat_texts = load_chat_texts()
+    adjudicated: dict[str, dict[str, Any]] = {}
     if conflicts:
         print("\nAdjudicating conflicts. Enter to leave one unresolved.")
         try:
-            for key, fields in sorted(conflicts.items()):
-                resolved = resolve_interactively(key, fields, first, second, names)
+            for segment_id, fields in sorted(conflicts.items()):
+                resolved = resolve_interactively(
+                    segment_id, fields, first, second, names,
+                    chat_texts.get(segment_id),
+                )
                 if resolved:
-                    adjudicated[key] = resolved
+                    adjudicated[segment_id] = resolved
         except KeyboardInterrupt:
-            print("\nStopped -- unresolved items stay out of the gold standard.")
+            print("\nStopped -- unresolved segments stay out of the gold standard.")
 
     gold, counts = build_gold(agreed, adjudicated, first)
-    models = sorted({m for per_model in gold.values() for m in per_model})
     payload = {
         "generated_at": datetime.now(UTC).isoformat(),
         "annotators": list(names),
         "source_batch": BATCH_PATH.name,
-        "models": models,
-        "n_items_double_annotated": len(keys),
-        "n_items_in_gold": sum(counts.values()) - counts["unresolved"],
+        "level": "source_gold",
+        "fields": FIELDS,
+        "n_segments_double_annotated": len(segments),
+        "n_segments_in_gold": len(gold),
         "counts": dict(counts),
         "gold": gold,
         "note": (
-            "Items unresolved on any field are excluded, not defaulted. Accuracy "
-            "computed from this file is conditional on the adjudicated subset."
+            "Gold field values authored from the transcript, model-independent. "
+            "Segments unresolved on any field are excluded, not defaulted. "
+            "Accuracy computed against this file is conditional on the "
+            "adjudicated subset."
         ),
     }
     GOLD_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
@@ -196,8 +238,12 @@ def main() -> None:
     print(f"\n  agreed        {counts['agreed']}")
     print(f"  adjudicated   {counts['adjudicated']}")
     print(f"  unresolved    {counts['unresolved']} (excluded from gold)")
-    print(f"  segments in gold: {len(gold)} across models {models}")
+    print(f"  segments in gold: {len(gold)}")
     print(f"\nWrote {GOLD_PATH}")
+    print(
+        "\nNext: `uv run python -m tests.eval.extraction.score_against_gold` to "
+        "score the generators against it."
+    )
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T20:50:30.288763+00:00",
+  "generated_at": "2026-09-07T21:21:09.514235+00:00",
   "source_batch": "annotation_batch.json",
   "generators": [
     "llama3.2:latest",
@@ -15,9 +15,11 @@
   "min_valid_judge_responses": 1,
   "generator_confidence_policy": "minimum",
   "run_seed": "mars-eval-1",
-  "n_segments": 8,
+  "n_segments": 3,
+  "n_judges_configured": 1,
+  "single_judge_ablation": true,
   "statuses": {
-    "success": 8
+    "success": 3
   },
   "abstention_reasons": {}
 }
