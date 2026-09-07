@@ -5,7 +5,7 @@ prefix: MARS
 
 # MARS — Multi-LLM-Augmented Reranking for Structured Extraction
 
-**Status: designed, not implemented.** Specs in [Mars_Reranking_Specs.md](./Mars_Reranking_Specs.md).
+**Status: implemented** (`src/backend/ml/extraction/mars/`), all 33 `MARS` specs covered by tests. Not yet evaluated on real data: the agreement threshold is still undetermined (Open Question 1), so no accuracy figure produced by this component is comparable across runs until that value is set from the annotated batch. Specs in [Mars_Reranking_Specs.md](./Mars_Reranking_Specs.md).
 
 MARS raises structured-extraction accuracy by generating several candidate extractions for the same source text and using multiple LLM judges to **rank** them, rather than trusting one model's single attempt. The selected candidate is one of the generated candidates, returned verbatim; judges order candidates and never supply field values.
 

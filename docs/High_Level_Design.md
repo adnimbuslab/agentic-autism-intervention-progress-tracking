@@ -74,7 +74,7 @@ flowchart TB
     end
 
     subgraph AIML["AI / ML — real-time ingestion pipeline"]
-        EP[["ExtractionProvider (pluggable)\nTemporaryLLMExtractionProvider [current]\nMarsExtractionProvider [designed]\nFineTunedExtractionProvider [future]"]]
+        EP[["ExtractionProvider (pluggable)\nTemporaryLLMExtractionProvider [current]\nMarsExtractionProvider [implemented]\nFineTunedExtractionProvider [future]"]]
         Val[Deterministic Validation Engine]
         Abst[Abstention Router\nper-observation]
     end
@@ -109,7 +109,7 @@ The ingestion pipeline (`ExtractionProvider → Validation Engine → Abstention
 
 Every arrow into `RecStore` passes through `Val` — there is no path from an extraction provider to persistence that skips deterministic validation.
 
-`MarsExtractionProvider` (designed, not implemented — see `docs/lld/Mars_Reranking.md`) occupies the `EP` position rather than adding a stage: it *implements* the provider protocol while composing several providers behind it, generating multiple candidate extractions and using multiple LLM judges to rank them. Judges emit only an ordering over opaque candidate labels, and the winner is selected by deterministic rank fusion, so no field value originates with a judge and the returned record is one a candidate provider produced. Everything downstream of `EP` is unchanged.
+`MarsExtractionProvider` (implemented — see `docs/lld/Mars_Reranking.md`) occupies the `EP` position rather than adding a stage: it *implements* the provider protocol while composing several providers behind it, generating multiple candidate extractions and using multiple LLM judges to rank them. Judges emit only an ordering over opaque candidate labels, and the winner is selected by deterministic rank fusion, so no field value originates with a judge and the returned record is one a candidate provider produced. Everything downstream of `EP` is unchanged.
 
 ### Secure Retrieval Layer (planned)
 

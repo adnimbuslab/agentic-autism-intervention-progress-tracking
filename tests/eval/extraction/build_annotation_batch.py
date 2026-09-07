@@ -131,11 +131,25 @@ async def extract_candidates(
     models: list[str],
     per_child: int,
     base_url: str = OLLAMA_BASE_URL,
-) -> list[dict[str, Any]]:
+    require: str = "all",
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Run each model over the pool, stopping per child once the target is met.
 
-    A segment is kept only if *every* model produced a reviewable extraction,
-    so each retained segment carries a complete, comparable candidate set.
+    ``require="all"`` keeps a segment only where *every* model produced a
+    reviewable extraction, so each retained segment carries a complete,
+    comparable candidate set. That is what the oracle candidate ceiling needs --
+    "was any generator correct?" is only answerable where every generator was
+    judged on the same segment.
+
+    It is also the expensive option. Single-model yield in the pilot was ~24%,
+    so joint yield across N models can fall off a cliff: three models at 24%
+    each, if roughly independent, retain about 1.4% of the pool. The returned
+    stats report per-model and joint yield so that collapse is visible before
+    an annotation budget is committed to it, rather than after.
+
+    ``require="any"`` keeps a segment where at least one model succeeded. Larger
+    n, but per-model accuracy denominators then differ and the oracle ceiling is
+    no longer computable on a common set.
     """
     providers = {
         m: OllamaExtractionProvider(base_url=base_url, api_key=OLLAMA_API_KEY, model=m)
@@ -144,6 +158,8 @@ async def extract_candidates(
 
     kept: list[dict[str, Any]] = []
     kept_per_child: dict[str, int] = defaultdict(int)
+    attempted = 0
+    per_model_success: dict[str, int] = defaultdict(int)
 
     for entry in pool:
         child_id = entry["child_id"]
@@ -160,12 +176,13 @@ async def extract_candidates(
             setting=Setting.CLINIC,
         )
 
+        attempted += 1
         candidates: dict[str, Any] = {}
         for model, provider in providers.items():
             result = await provider.extract(request)
             if result.status not in (ExtractionStatus.SUCCESS, ExtractionStatus.PARTIAL):
-                candidates = {}
-                break
+                continue
+            per_model_success[model] += 1
             obs = result.observations[0]
             candidates[model] = {
                 "status": result.status.value,
@@ -180,8 +197,14 @@ async def extract_candidates(
                 },
             }
 
-        if not candidates:
-            print(f"  {entry['segment_id']}: no reviewable extraction -- skipped")
+        satisfied = (
+            len(candidates) == len(models) if require == "all" else bool(candidates)
+        )
+        if not satisfied:
+            print(
+                f"  {entry['segment_id']}: {len(candidates)}/{len(models)} models "
+                f"produced output -- skipped (require={require})"
+            )
             continue
 
         kept.append({**entry, "candidates": candidates})
@@ -189,7 +212,17 @@ async def extract_candidates(
         n_kept = kept_per_child[child_id]
         print(f"  {entry['segment_id']} [{child_id}]: kept ({n_kept}/{per_child})")
 
-    return kept
+    stats = {
+        "require": require,
+        "segments_attempted": attempted,
+        "segments_kept": len(kept),
+        "joint_yield": round(len(kept) / attempted, 4) if attempted else None,
+        "per_model_yield": {
+            m: round(per_model_success[m] / attempted, 4) if attempted else None
+            for m in models
+        },
+    }
+    return kept, stats
 
 
 # --------------------------------------------------------------------------
@@ -265,6 +298,24 @@ async def main() -> None:
         action="store_true",
         help="Run stage 1 only -- select the stratified pool without calling any model.",
     )
+    parser.add_argument(
+        "--require",
+        choices=["all", "any"],
+        default="all",
+        help=(
+            "Keep a segment when every model produced output (default, required "
+            "for the oracle candidate ceiling) or when any model did."
+        ),
+    )
+    parser.add_argument(
+        "--pilot",
+        type=int,
+        default=None,
+        help=(
+            "Measure yield on the first N pool segments and stop, without "
+            "writing a batch. Run this before committing annotation effort."
+        ),
+    )
     args = parser.parse_args()
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -280,9 +331,31 @@ async def main() -> None:
         print("\n--pool-only: stopping before extraction.")
         return
 
+    pool = pool_payload["pool"]
+    if args.pilot:
+        print(f"\nYIELD PILOT: {args.pilot} segments, models={args.models}, require={args.require}")
+        _, stats = await extract_candidates(
+            pool[: args.pilot], args.models, per_child=10**6, require=args.require
+        )
+        print("\nYield:")
+        print(f"  attempted        {stats['segments_attempted']}")
+        print(f"  kept             {stats['segments_kept']}")
+        print(f"  joint yield      {stats['joint_yield']}")
+        for model, y in stats["per_model_yield"].items():
+            print(f"  {model:24s} {y}")
+        needed = args.per_child * pool_payload["n_children"]
+        if stats["joint_yield"]:
+            print(
+                f"\n  To reach {needed} candidates at this yield you would need "
+                f"~{round(needed / stats['joint_yield'])} pool segments "
+                f"({len(pool)} available)."
+            )
+        print("\n--pilot: stopping before writing a batch.")
+        return
+
     print(f"\nRunning extraction over the pool with {args.models}...")
-    candidates = await extract_candidates(
-        pool_payload["pool"], args.models, args.per_child
+    candidates, yield_stats = await extract_candidates(
+        pool, args.models, args.per_child, require=args.require
     )
     assignments = assign_annotators(
         candidates, args.annotators, args.overlap, seed=args.seed
@@ -294,6 +367,7 @@ async def main() -> None:
         "seed": args.seed,
         "per_child_target": args.per_child,
         "n_candidates": len(candidates),
+        "yield": yield_stats,
         "overlap": args.overlap,
         "annotators": args.annotators,
         "assignments": assignments,
