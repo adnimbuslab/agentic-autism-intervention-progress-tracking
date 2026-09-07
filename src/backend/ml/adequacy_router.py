@@ -15,7 +15,6 @@ from src.backend.ml.schemas import (
     AdequacyLevel,
     AdequacyResult,
 )
-from src.backend.schemas.observation_schema import LLM_EXTRACTED_FIELDS
 
 
 class AdequacyRouter:

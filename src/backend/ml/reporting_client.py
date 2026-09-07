@@ -266,7 +266,7 @@ class ReportingClient:
         return sections
 
     @staticmethod
-    def _kpi_lookup(ep: EvidencePacket) -> dict[str, "KpiResult"]:
+    def _kpi_lookup(ep: EvidencePacket) -> dict[str, KpiResult]:
         if not ep.analytics:
             return {}
         return {k.name: k for k in ep.analytics.kpis}

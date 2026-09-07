@@ -66,7 +66,7 @@ validation, abstention, analytics, reporting, or frontend behavior.
 - **Rollins Corpus**: 5 children, 21 sessions, 11,020 utterances (child-investigator, ASDBank)
 - **Flusberg Corpus**: 6 children, 65 sessions, ~57,000 utterances (child-parent, ASDBank)
 - **Combined**: 11 children, 85 sessions, 75,003 utterances in CHAT format
-- Source data in `extracted_data/data/`
+- Source data in `exp-data/`
 
 ## Tech Stack (Planned)
 - **Frontend**: React / Next.js + TypeScript
@@ -123,9 +123,9 @@ interventionist/
 ## Key Documents
 - `JMIR_AI_Autism_Longitudinal_Intervention_Draft_V3_Operational_Workflow.docx` — Research paper
 - `Technical_Specification_Autism_AI_System.docx` — Technical spec with diagrams
-- `extracted_data/data/Rollins/` — Rollins CHAT transcripts
-- `extracted_data/data/Flusberg.zip` — Flusberg CHAT transcripts
-- `extracted_data/data/data repos.docx` — Data source notes
+- `exp-data/Rollins/` — Rollins CHAT transcripts
+- `exp-data/Flusberg.zip` — Flusberg CHAT transcripts
+- `exp-data/data repos.docx` — Data source notes
 
 ## Sub-Agents
 

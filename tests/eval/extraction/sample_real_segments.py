@@ -8,6 +8,7 @@ Not a pytest test -- a data-preparation utility for compare_providers_v2.py.
 from __future__ import annotations
 
 import random
+import zipfile
 from pathlib import Path
 
 from data.pipeline.build_dataset import FLUSBERG_CHILDREN, ROLLINS_CHILDREN
@@ -17,8 +18,33 @@ from data.pipeline.models import BehavioralSegment
 from data.pipeline.segment_episodes import segment_sessions
 from data.pipeline.select_segments import select_segments
 
-ROLLINS_DIR = Path("extracted_data/data/Rollins")
-FLUSBERG_DIR = Path("/tmp/flusberg_extracted")  # unzipped Flusberg.zip
+# Repo-root-anchored so this works regardless of the caller's CWD.
+REPO_ROOT = Path(__file__).resolve().parents[3]
+DATA_DIR = REPO_ROOT / "exp-data"
+ROLLINS_DIR = DATA_DIR / "Rollins"
+FLUSBERG_ZIP = DATA_DIR / "Flusberg.zip"
+FLUSBERG_DIR = DATA_DIR / "Flusberg"  # populated on demand from FLUSBERG_ZIP
+
+
+def ensure_flusberg_extracted() -> Path:
+    """Unzip Flusberg.zip beside it on first use.
+
+    The Flusberg corpus ships as an archive while Rollins ships unpacked, so
+    every caller previously needed a manual out-of-band unzip step into a
+    hand-chosen directory. Extracting on demand into a stable, gitignored
+    location keeps the corpora reachable by path alone.
+    """
+    if FLUSBERG_DIR.is_dir() and any(FLUSBERG_DIR.glob("*/*.cha")):
+        return FLUSBERG_DIR
+    if not FLUSBERG_ZIP.is_file():
+        raise FileNotFoundError(
+            f"Flusberg corpus archive not found at {FLUSBERG_ZIP}. "
+            "The ASDBank corpora are not committed to this repo -- see "
+            "CLAUDE.md 'Data Sources' for how to obtain them."
+        )
+    with zipfile.ZipFile(FLUSBERG_ZIP) as zf:
+        zf.extractall(FLUSBERG_DIR)
+    return FLUSBERG_DIR
 
 
 def render_segment_to_chat_text(segment: BehavioralSegment) -> str:
@@ -39,7 +65,9 @@ def render_segment_to_chat_text(segment: BehavioralSegment) -> str:
 
 def load_real_segments(max_segments: int = 200) -> list[BehavioralSegment]:
     rollins_sessions = parse_corpus_directory(ROLLINS_DIR, "rollins", ROLLINS_CHILDREN)
-    flusberg_sessions = parse_corpus_directory(FLUSBERG_DIR, "flusberg", FLUSBERG_CHILDREN)
+    flusberg_sessions = parse_corpus_directory(
+        ensure_flusberg_extracted(), "flusberg", FLUSBERG_CHILDREN
+    )
     all_sessions = rollins_sessions + flusberg_sessions
 
     deidentified = deidentify_sessions(all_sessions)

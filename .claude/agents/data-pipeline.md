@@ -27,12 +27,12 @@ foundation-model fine-tuning will be performed later.
 
 ## Source Data
 
-- **Rollins Corpus**: `extracted_data/data/Rollins/{Carl,Roger,Sid,Mars,Josh}/*.cha`
+- **Rollins Corpus**: `exp-data/Rollins/{Carl,Roger,Sid,Mars,Josh}/*.cha`
   - 5 children, 21 sessions, child-investigator interactions
   - Rich %spa (speech acts), %act (actions), %gpx (gestures) annotations
   - Age-based dating only (e.g., 2;08 = 2 years 8 months)
 
-- **Flusberg Corpus**: `extracted_data/data/Flusberg.zip` (extract first)
+- **Flusberg Corpus**: `exp-data/Flusberg.zip` (auto-extracted to `exp-data/Flusberg/` by `ensure_flusberg_extracted()`)
   - 6 children (Jack, Rick, Mark, Brett, Stuart, Roger), 65 sessions
   - Child-mother interactions with exact dates
   - Longitudinal with repeated measurements

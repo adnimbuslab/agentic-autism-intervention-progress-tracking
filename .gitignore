@@ -239,6 +239,7 @@ Thumbs.db
 data/raw/
 data/private/
 extracted_data/
+exp-data/
 *.cha
 
 # Local databases / temporary files

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from src.backend.ml.extraction.schemas import ExtractionResult, ExtractionStatus
 from src.backend.ml.schemas import (
-    FieldValidation,
     RoutingDecision,
     ValidationResult,
 )

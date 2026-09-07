@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import time
 from datetime import UTC, datetime
 from typing import Any
@@ -17,6 +16,8 @@ from src.backend.ml.extraction.prompts import (
     build_user_prompt_conversational,
 )
 from src.backend.ml.extraction.schemas import (
+    ControlConfidenceState,
+    ExtractionProvenance,
     ExtractionRequest,
     ExtractionResult,
     ExtractionStatus,
@@ -43,6 +44,7 @@ class TemporaryLLMExtractionProvider:
         self._model = model
 
     # @spec EXTRACT-001, EXTRACT-010, EXTRACT-017, EXTRACT-018
+    # @spec EXTRACT-020, EXTRACT-021, EXTRACT-022
     async def extract(self, request: ExtractionRequest) -> ExtractionResult:
         """Extract structured observation from source text via Claude tool_use."""
         start_ms = _now_ms()
@@ -75,6 +77,9 @@ class TemporaryLLMExtractionProvider:
                     "output_tokens": response.usage.output_tokens,
                 }
 
+            # EXTRACT-022: this provider generates directly, so the quantity
+            # deterministic validation gates on is the observation's own
+            # confidence. Composing providers combine several (MARS-032).
             return ExtractionResult(
                 status=status,
                 observations=[observation],
@@ -85,6 +90,17 @@ class TemporaryLLMExtractionProvider:
                 raw_llm_response=self._serialize_response(response),
                 extraction_duration_ms=_now_ms() - start_ms,
                 token_usage=token_usage,
+                control_confidence=observation.confidence,
+                control_confidence_state=(
+                    ControlConfidenceState.AVAILABLE
+                    if observation.confidence is not None
+                    else None
+                ),
+                provenance=ExtractionProvenance(
+                    provider_type=self.get_info().name,
+                    generator_ids=[self._model],
+                    generator_confidence=observation.confidence,
+                ),
             )
 
         except APIError as exc:

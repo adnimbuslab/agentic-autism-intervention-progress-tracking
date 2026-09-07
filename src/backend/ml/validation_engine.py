@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from src.backend.ml.extraction.schemas import ControlConfidenceState
 from src.backend.ml.schemas import (
     FieldValidation,
     RoutingDecision,
@@ -33,12 +34,32 @@ class ValidationEngine:
     """Pure deterministic validation for StructuredObservation records."""
 
     # @spec VALID-001
+    # @spec VALID-011, VALID-013
     def validate(
         self,
         observation: StructuredObservation,
         goal_ids: list[str] | None = None,
+        control_confidence: float | None = None,
+        control_confidence_state: ControlConfidenceState | None = None,
     ) -> ValidationResult:
-        """Validate an observation and determine routing."""
+        """Validate an observation and determine routing.
+
+        ``control_confidence`` is the quantity the routing gates read
+        (EXTRACT-020) -- the same quantity whichever provider produced the
+        result, so a threshold means one thing system-wide. A provider that
+        generates directly sets it equal to the observation's own confidence
+        (EXTRACT-022); a composing provider combines its generator and
+        selection confidences (MARS-032). Omitting it falls back to the
+        observation's confidence, which is that same value for every
+        single-model provider and keeps existing callers unchanged.
+
+        ``control_confidence_state`` distinguishes two different silences.
+        ``None`` means the provider does not participate in control-confidence
+        routing, and its previous behavior is preserved exactly. An explicit
+        ``NOT_AVAILABLE_*`` means the provider does participate and could not
+        establish a confidence -- which routes to interventionist review,
+        because absence of evidence is not evidence of confidence.
+        """
         field_validations: list[FieldValidation] = []
 
         self._validate_enums(observation, field_validations)
@@ -48,7 +69,19 @@ class ValidationEngine:
         self._validate_confidence(observation, field_validations)
         completeness_msg = self._validate_completeness(observation, field_validations)
 
-        routing = self._determine_routing(observation, field_validations)
+        # Fallback lives here, at the compatibility boundary -- never inside
+        # the gate itself. A caller that omits control_confidence gets the
+        # observation's own confidence, which EXTRACT-022 makes the same value
+        # for every single-model provider.
+        effective_confidence = (
+            observation.confidence if control_confidence is None else control_confidence
+        )
+        routing = self._determine_routing(
+            observation,
+            field_validations,
+            control_confidence=effective_confidence,
+            control_confidence_state=control_confidence_state,
+        )
         messages = [fv.message for fv in field_validations if not fv.is_valid and fv.message]
         if completeness_msg:
             messages.append(completeness_msg)
@@ -185,7 +218,19 @@ class ValidationEngine:
     def _determine_routing(
         observation: StructuredObservation,
         field_validations: list[FieldValidation],
+        *,
+        control_confidence: float | None,
+        control_confidence_state: ControlConfidenceState | None = None,
     ) -> RoutingDecision:
+        """Deterministic routing gate.
+
+        ``control_confidence`` is keyword-only and has no default: omitting it
+        is a programming error that raises immediately, rather than silently
+        disabling both confidence gates. A missing confidence must never be
+        the quiet path through a safety decision. ``None`` remains a legitimate
+        *value* -- an observation genuinely carrying no confidence -- and is
+        distinct from failing to pass the argument at all.
+        """
         errors = [
             fv for fv in field_validations
             if not fv.is_valid and fv.severity == ValidationSeverity.ERROR
@@ -203,9 +248,19 @@ class ValidationEngine:
         if critical_missing == len(_CRITICAL_FIELDS):
             return RoutingDecision.REJECT
 
-        if errors or (
-            observation.confidence is not None
-            and observation.confidence < _LOW_CONFIDENCE_THRESHOLD
+        # VALID-015: a provider that participates in control-confidence
+        # routing but could not establish one has produced no evidence for
+        # automatic acceptance. Handled here, at the same tier as a
+        # below-threshold confidence, and independently of whatever the
+        # generator reported -- routing must not recreate EXTRACT-013 by
+        # another route.
+        unavailable = control_confidence_state in {
+            ControlConfidenceState.NOT_AVAILABLE_SHORT_CIRCUIT,
+            ControlConfidenceState.NOT_AVAILABLE_ABSTAINED,
+        }
+        if errors or unavailable or (
+            control_confidence is not None
+            and control_confidence < _LOW_CONFIDENCE_THRESHOLD
         ):
             return RoutingDecision.INTERVENTIONIST_REVIEW
 
@@ -219,8 +274,8 @@ class ValidationEngine:
             return RoutingDecision.RETAIN_WITH_UNKNOWN
 
         if (
-            observation.confidence is not None
-            and observation.confidence < _CONFIDENCE_THRESHOLD
+            control_confidence is not None
+            and control_confidence < _CONFIDENCE_THRESHOLD
         ):
             return RoutingDecision.RETAIN_WITH_UNKNOWN
 
