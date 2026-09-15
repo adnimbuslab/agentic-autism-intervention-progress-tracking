@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import itertools
 import json
+import textwrap
 from collections import Counter
 from pathlib import Path
 
@@ -710,6 +711,330 @@ def figure_conflict_decomposition() -> None:
     plt.close(fig)
 
 
+def figure_round_comparison() -> None:
+    """Figure 13 -- the codebook's effect, against the untreated control field."""
+    report = _load(
+        RESULTS / "round_comparison.json", "Figure 13 (round comparison)"
+    )
+    if report is None:
+        return
+
+    # Treated fields first, control last and visually separated: the whole
+    # point of the figure is the contrast between the two arms.
+    entries = sorted(
+        report["fields"].items(), key=lambda kv: (kv[1]["arm"] != "treated", kv[0])
+    )
+    fig, (ax, ax2) = plt.subplots(
+        1, 2, figsize=(10.4, 3.8), gridspec_kw={"width_ratios": [1.55, 1]}
+    )
+
+    for i, (field, entry) in enumerate(entries):
+        delta = entry["delta"]
+        if delta is None:
+            continue
+        treated = entry["arm"] == "treated"
+        colour = BLUE if treated else MUTED
+        before, after = delta["kappa_before"], delta["kappa_after"]
+        ax.plot([before, after], [i, i], color=colour, linewidth=2.4, zorder=3,
+                solid_capstyle="round")
+        ax.scatter([before], [i], s=44, color="white", edgecolor=colour,
+                   linewidth=1.8, zorder=4)
+        ax.scatter([after], [i], s=54, color=colour, zorder=5)
+        ax.text(max(before, after) + 0.022, i, f"{delta['delta']:+.3f}",
+                va="center", fontsize=8,
+                color=INK if treated else MUTED,
+                fontweight="bold" if treated else "normal")
+
+    labels = [
+        FIELD_LABEL.get(f, f).replace("\n", " ") + ("" if e["arm"] == "treated" else "  (control)")
+        for f, e in entries
+    ]
+    ax.set_yticks(range(len(entries)))
+    ax.set_yticklabels(labels)
+    ax.invert_yaxis()
+    ax.set_xlim(0, 1.0)
+    ax.set_xlabel("Cohen's $\\kappa$   (hollow = round 1, filled = round 2)")
+    _finish(
+        ax,
+        "Figure 13 — Reliability before and after the codebook",
+        f"n = {report['n_segments']} re-issued segments, same annotators.",
+    )
+
+    # Right panel: the paired interval on each change, which is the estimand.
+    for i, (field, entry) in enumerate(entries):
+        delta = entry["delta"]
+        if delta is None:
+            continue
+        treated = entry["arm"] == "treated"
+        colour = BLUE if treated else MUTED
+        ax2.plot([delta["lower"], delta["upper"]], [i, i], color=colour,
+                 linewidth=2.2, zorder=3, solid_capstyle="round")
+        ax2.scatter([delta["delta"]], [i], s=54, color=colour, zorder=4)
+    ax2.axvline(0, color=RED, linewidth=1.1, linestyle="--", zorder=2)
+    ax2.set_yticks(range(len(entries)))
+    ax2.set_yticklabels([])
+    ax2.invert_yaxis()
+    ax2.set_xlabel("change in $\\kappa$ (95% paired bootstrap CI)")
+    _finish(ax2, "", None)
+    ax2.set_title("change, with interval", loc="left", fontsize=9, color=MUTED)
+
+    fig.tight_layout(w_pad=1.6)
+    fig.savefig(OUT / "fig13_round_comparison.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def figure_protocol() -> None:
+    """Figure 14 -- the two-round annotation protocol, with realised counts.
+
+    A CONSORT-style accounting: every segment that enters is accounted for
+    where it leaves. Counts are read from the artefacts, never restated.
+    """
+    selection = _load(SELECTION_PATH, "Figure 14 (protocol)")
+    comparison = _load(RESULTS / "round_comparison.json", "Figure 14 (protocol)")
+    gold1 = {k: _load(p, "Figure 14 (protocol)") for k, p in GOLD_ROUND1.items()}
+    if selection is None or comparison is None or any(v is None for v in gold1.values()):
+        return
+    merged = {
+        k: _load(RESULTS / f"gold_annotator_{k}.json", "Figure 14 (protocol)")
+        for k in ("a", "b")
+    }
+    if any(v is None for v in merged.values()):
+        return
+
+    segments = sorted(set(gold1["A"]) & set(gold1["B"]))
+    cats = ["domain", "modality", "prompt_level", "outcome"]
+
+    def conflicts(first, second):
+        total = sum(
+            1
+            for s in segments
+            for f in cats
+            if (first[s]["field_values"].get(f) or "none")
+            != (second[s]["field_values"].get(f) or "none")
+        )
+        segs = sum(
+            1
+            for s in segments
+            if any(
+                (first[s]["field_values"].get(f) or "none")
+                != (second[s]["field_values"].get(f) or "none")
+                for f in cats
+            )
+        )
+        return total, segs
+
+    r1_conf, r1_segs = conflicts(gold1["A"], gold1["B"])
+    merged_conf, merged_segs = conflicts(merged["a"], merged["b"])
+    n = len(segments)
+    reissued = selection["n_selected"]
+    carried = n - reissued
+
+    fig, ax = plt.subplots(figsize=(8.6, 7.4))
+    ax.axis("off")
+
+    def box(x, y, w, h, text, face, edge=None, text_colour="white", size=8.4):
+        ax.add_patch(plt.Rectangle(
+            (x, y), w, h, facecolor=face,
+            edgecolor=edge or face, linewidth=1.3, zorder=3,
+            joinstyle="round",
+        ))
+        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center",
+                fontsize=size, color=text_colour, zorder=4, linespacing=1.5)
+
+    def arrow(x1, y1, x2, y2, colour=MUTED, style="-|>", dashed=False):
+        ax.annotate("", xy=(x2, y2), xytext=(x1, y1), zorder=2,
+                    arrowprops=dict(
+                        arrowstyle=style, color=colour, linewidth=1.2,
+                        linestyle=(0, (3, 2)) if dashed else "solid",
+                    ))
+
+    box(2.4, 9.3, 5.2, 0.78,
+        f"frozen annotation batch\n{n} segments, 11 children, 3 generators",
+        INK)
+    arrow(5.0, 9.3, 5.0, 8.86)
+
+    box(2.4, 8.05, 5.2, 0.78,
+        f"ROUND 1 — both annotators, blind, all {n} segments\n"
+        f"mean $\\kappa$ 0.610",
+        BLUE)
+    arrow(5.0, 8.05, 5.0, 7.61)
+
+    box(2.4, 6.8, 5.2, 0.78,
+        f"{r1_conf} categorical conflicts on {r1_segs} segments\n"
+        "classified against the codebook boundary table",
+        MUTED)
+    arrow(3.6, 6.8, 2.6, 6.28)
+    arrow(6.4, 6.8, 7.4, 6.28)
+
+    box(0.35, 5.5, 4.4, 0.78,
+        f"{selection['n_on_boundary']} conflicts on a stated boundary\n"
+        f"→ {reissued} segments re-issued",
+        AMBER)
+    box(5.55, 5.5, 4.1, 0.78,
+        f"{selection['n_off_boundary']} conflicts the codebook\n"
+        "does not resolve → adjudication",
+        RED)
+
+    arrow(2.55, 5.5, 2.55, 5.06)
+    box(0.35, 4.28, 4.4, 0.78,
+        f"ROUND 2 — same annotators, blind,\nfresh order, all 5 fields re-annotated",
+        BLUE)
+    arrow(2.55, 4.28, 2.55, 3.84)
+
+    box(0.35, 3.06, 4.4, 0.78,
+        "treated fields $\\Delta\\kappa$ +0.29 to +0.48\n"
+        "control (domain) $\\Delta\\kappa$ −0.041, n.s.",
+        TEAL)
+
+    box(5.55, 4.28, 4.1, 0.78,
+        f"{carried} segments never in\nboundary conflict — round-1 values kept",
+        MUTED)
+
+    arrow(2.55, 3.06, 2.55, 2.5)
+    # The carried-forward segments elbow into the merge; only the final descent
+    # takes a head, or the corner reads as an arrow pointing into empty space.
+    arrow(7.6, 4.28, 7.6, 2.72, style="-")
+    arrow(7.6, 2.72, 5.3, 2.72, style="-")
+    arrow(5.3, 2.72, 5.3, 2.5)
+
+    box(2.4, 1.72, 5.2, 0.78,
+        f"MERGED GOLD — {n} segments\nmean $\\kappa$ 0.801",
+        INK)
+    arrow(5.0, 1.72, 5.0, 1.28)
+
+    box(2.4, 0.5, 5.2, 0.78,
+        f"{merged_conf} residual conflicts on {merged_segs} segments\n"
+        "→ adjudication (not yet performed)",
+        RED)
+
+    # The boundary-silent conflicts are never re-annotated; they arrive at
+    # adjudication directly, and the dashed path says so rather than leaving
+    # that box to dead-end.
+    arrow(9.65, 5.89, 9.9, 5.89, colour=RED, style="-", dashed=True)
+    arrow(9.9, 5.89, 9.9, 0.89, colour=RED, style="-", dashed=True)
+    arrow(9.9, 0.89, 7.6, 0.89, colour=RED, dashed=True)
+
+    ax.text(0.35, 10.35,
+            "blue = annotation pass    amber = codebook-selected    "
+            "red = to adjudication    teal = measured effect",
+            fontsize=8, color=MUTED)
+
+    ax.set_xlim(0.1, 10.25)
+    ax.set_ylim(0.2, 10.75)
+    ax.set_title(
+        "Figure 14 — Two-round annotation protocol, with realised counts",
+        loc="left", fontsize=11, fontweight="bold", pad=16,
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig14_protocol.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+# The three rules as stated in docs/annotation_codebook.md. Kept here as the
+# figure's only content so the diagram and the codebook are edited together.
+CODEBOOK_RULES = [
+    (
+        "1.  modality",
+        "Was the act addressed to a partner?",
+        [
+            ("point, show, give, reach-to-request, nod", "gestural"),
+            ("the same, plus speech carrying the message", "multimodal"),
+            ("object handling, self-directed movement", "none"),
+            ("communicated, but channel not shown", "unknown"),
+        ],
+        "Handling an object is the behavior, not a modality.",
+    ),
+    (
+        "2.  outcome",
+        "Is there an identifiable target?",
+        [
+            ("no target — free talk, play narration", "none"),
+            ("target, child responded, judgeable", "correct / partial /\nincorrect / approximation"),
+            ("target, child did not respond", "no_response"),
+            ("target, resolution not visible", "unknown"),
+        ],
+        "Absent acknowledgement is unknown, never incorrect.",
+    ),
+    (
+        "3.  prompt_level",
+        "Was support added after the opportunity?",
+        [
+            ("child initiated, or right on first ask", "independent"),
+            ("adult gestures only", "gestural"),
+            ("repeat, hint, rephrase, 'what do you say?'", "verbal"),
+            ("adult supplies the target words", "model"),
+            ("guided movement", "partial_physical /\nfull_physical"),
+        ],
+        "Several prompts: record the most supportive.",
+    ),
+]
+
+PROMPT_HIERARCHY = [
+    "independent", "gestural", "verbal", "model", "partial_physical", "full_physical",
+]
+
+
+def figure_codebook_rules() -> None:
+    """Figure 15 -- the three codebook rules as decision tests."""
+    fig, axes = plt.subplots(1, 3, figsize=(12.4, 4.5))
+
+    for ax, (title, test, rows, footnote) in zip(axes, CODEBOOK_RULES):
+        ax.axis("off")
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
+
+        ax.text(0, 0.98, title, fontsize=10.5, fontweight="bold", color=INK,
+                va="top")
+        ax.text(0.5, 0.855, test, fontsize=8.8, ha="center", va="center",
+                color="white", linespacing=1.4,
+                bbox=dict(boxstyle="round,pad=0.5", facecolor=AMBER,
+                          edgecolor="none"))
+
+        top = 0.70
+        step = top / len(rows)
+        for i, (condition, value) in enumerate(rows):
+            y = top - i * step - step / 2 + 0.03
+            # Wrapped to a fixed column: unwrapped, the longer conditions run
+            # under the arrow and collide with the value they point at.
+            ax.text(0.0, y, textwrap.fill(condition, 30), fontsize=7.4,
+                    va="center", color=INK, linespacing=1.35)
+            ax.annotate("", xy=(0.625, y), xytext=(0.545, y),
+                        arrowprops=dict(arrowstyle="-|>", color=MUTED,
+                                        linewidth=0.9))
+            ax.text(0.655, y, value, fontsize=7.6, va="center", color=BLUE,
+                    fontweight="bold", linespacing=1.3)
+
+        ax.text(0, 0.015, footnote, fontsize=7.4, color=MUTED, style="italic",
+                va="bottom")
+
+    fig.tight_layout(w_pad=3.4)
+
+    # The ordering the third rule depends on, drawn once beneath all panels.
+    # Added after layout: an axes placed in figure coordinates is not something
+    # tight_layout can reason about, and it warns if asked to.
+    bar = fig.add_axes([0.085, -0.10, 0.83, 0.075])
+    bar.axis("off")
+    bar.set_xlim(0, len(PROMPT_HIERARCHY))
+    bar.set_ylim(0, 1)
+    for i, level in enumerate(PROMPT_HIERARCHY):
+        shade = 0.22 + 0.72 * i / (len(PROMPT_HIERARCHY) - 1)
+        bar.add_patch(plt.Rectangle((i + 0.04, 0.12), 0.92, 0.7,
+                                    facecolor=plt.cm.Blues(shade),
+                                    edgecolor="none"))
+        bar.text(i + 0.5, 0.47, level, ha="center", va="center", fontsize=7.4,
+                 color="white" if shade > 0.55 else INK, fontweight="bold")
+    bar.text(0, 0.95, "prompt hierarchy, least to most supportive", fontsize=7.6,
+             color=MUTED, va="bottom")
+
+    fig.suptitle(
+        "Figure 15 — The three codebook rules, as the tests an annotator applies",
+        x=0.012, ha="left", fontsize=11, fontweight="bold", y=1.03,
+    )
+    fig.savefig(OUT / "fig15_codebook_rules.png", bbox_inches="tight",
+                pad_inches=0.35)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     figure_corpus()
     figure_admission()
@@ -723,6 +1048,9 @@ if __name__ == "__main__":
     figure_reliability()
     figure_confusion()
     figure_conflict_decomposition()
+    figure_round_comparison()
+    figure_protocol()
+    figure_codebook_rules()
     print(f"Wrote {len(list(OUT.glob('*.png')))} figures to {OUT}")
     for f in sorted(OUT.glob("*.png")):
         print(f"  {f.name}")

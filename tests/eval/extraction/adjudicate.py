@@ -167,6 +167,14 @@ def main() -> None:
         action="store_true",
         help="Count agreements and conflicts without prompting or writing gold.",
     )
+    parser.add_argument(
+        "--decisions",
+        type=Path,
+        default=None,
+        help="Adjudications imported from a returned sheet "
+             "(import_adjudication_sheet). Skips the interactive prompt; gold "
+             "is assembled from these decisions instead.",
+    )
     args = parser.parse_args()
 
     names = tuple(args.annotators)
@@ -200,6 +208,31 @@ def main() -> None:
             print(f"  {segment_id}: {', '.join(fields)}")
         return
 
+    if args.decisions is not None:
+        if not args.decisions.exists():
+            raise SystemExit(f"{args.decisions} not found.")
+        payload = json.loads(args.decisions.read_text())
+        # Only conflicted fields are adjudicable. A decision on a field the
+        # annotators already agreed on would silently overrule both of them.
+        adjudicated = {
+            segment_id: {
+                field: value
+                for field, value in fields.items()
+                if field in conflicts.get(segment_id, [])
+            }
+            for segment_id, fields in payload["decisions"].items()
+        }
+        adjudicated = {k: v for k, v in adjudicated.items() if v}
+        ignored = sum(
+            len(fields) for fields in payload["decisions"].values()
+        ) - sum(len(v) for v in adjudicated.values())
+        print(f"\nDecisions loaded from {args.decisions.name}: "
+              f"{sum(len(v) for v in adjudicated.values())} applied"
+              + (f", {ignored} ignored (field not in conflict)" if ignored else ""))
+        gold, counts = build_gold(agreed, adjudicated, first)
+        _write_gold(gold, counts, names, segments)
+        return
+
     chat_texts = load_chat_texts()
     adjudicated: dict[str, dict[str, Any]] = {}
     if conflicts:
@@ -216,6 +249,17 @@ def main() -> None:
             print("\nStopped -- unresolved segments stay out of the gold standard.")
 
     gold, counts = build_gold(agreed, adjudicated, first)
+    _write_gold(gold, counts, names, segments)
+
+
+def _write_gold(
+    gold: dict[str, Any],
+    counts: Counter,
+    names: tuple[str, ...],
+    segments: list[str],
+) -> None:
+    """Write gold_labels.json. One path, whether decisions came from a sheet
+    or from the interactive prompt."""
     payload = {
         "generated_at": datetime.now(UTC).isoformat(),
         "annotators": list(names),

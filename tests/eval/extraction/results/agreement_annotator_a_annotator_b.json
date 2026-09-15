@@ -5,47 +5,47 @@
   "per_field": {
     "domain": {
       "n": 330,
-      "observed_agreement": 0.8091,
-      "expected_agreement": 0.2327,
-      "kappa": 0.7512,
+      "observed_agreement": 0.8,
+      "expected_agreement": 0.2911,
+      "kappa": 0.7179,
       "interpretation": "substantial",
       "n_categories_used": 9
     },
     "behavior": {
       "n": 330,
-      "exact_agreement": 0.0455,
-      "mean_token_overlap": 0.3978,
+      "exact_agreement": 0.0273,
+      "mean_token_overlap": 0.3682,
       "both_null": 0,
       "kappa": null,
       "interpretation": "not applicable (free text)"
     },
     "modality": {
       "n": 330,
-      "observed_agreement": 0.7242,
-      "expected_agreement": 0.3588,
-      "kappa": 0.5699,
-      "interpretation": "moderate",
+      "observed_agreement": 0.9485,
+      "expected_agreement": 0.4202,
+      "kappa": 0.9112,
+      "interpretation": "almost perfect",
       "n_categories_used": 6
     },
     "prompt_level": {
       "n": 330,
-      "observed_agreement": 0.7485,
-      "expected_agreement": 0.3787,
-      "kappa": 0.5952,
-      "interpretation": "moderate",
-      "n_categories_used": 7
+      "observed_agreement": 0.8909,
+      "expected_agreement": 0.3549,
+      "kappa": 0.8309,
+      "interpretation": "almost perfect",
+      "n_categories_used": 6
     },
     "outcome": {
       "n": 330,
-      "observed_agreement": 0.6424,
-      "expected_agreement": 0.2495,
-      "kappa": 0.5236,
-      "interpretation": "moderate",
+      "observed_agreement": 0.8091,
+      "expected_agreement": 0.258,
+      "kappa": 0.7427,
+      "interpretation": "substantial",
       "n_categories_used": 7
     }
   },
   "overall": {
-    "mean_kappa_categorical": 0.61,
+    "mean_kappa_categorical": 0.8007,
     "n_fields_in_mean": 4,
     "fields_in_mean": [
       "domain",
@@ -53,10 +53,10 @@
       "prompt_level",
       "outcome"
     ],
-    "record_exact_agreement": 0.0182,
+    "record_exact_agreement": 0.0242,
     "basis": "Mean of the per-field kappas over categorical fields. Kappa is not pooled across fields by concatenating labels: the fields use different category sets, so a pooled chance correction would be computed over a distribution no annotator drew from. behavior is free text and is excluded from the mean."
   },
-  "n_disputed_segments": 324,
+  "n_disputed_segments": 322,
   "disputed_segments": [
     "brett_flusberg_brett_050800.cha_seg_020",
     "brett_flusberg_brett_050800.cha_seg_025",
@@ -298,7 +298,6 @@
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_011",
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_022",
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_023",
-    "roger_rollins_rollins_roger_rollins_020600.cha_seg_027",
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_028",
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_029",
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_032",
@@ -348,7 +347,6 @@
     "sid_rollins_sid_030200.cha_seg_017",
     "sid_rollins_sid_030200.cha_seg_025",
     "sid_rollins_sid_030200.cha_seg_026",
-    "sid_rollins_sid_030200.cha_seg_031",
     "sid_rollins_sid_030200.cha_seg_036",
     "sid_rollins_sid_030200.cha_seg_054",
     "sid_rollins_sid_030200.cha_seg_055",

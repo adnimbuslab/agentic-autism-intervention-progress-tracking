@@ -9,15 +9,27 @@ uv run python -m tests.eval.extraction.import_gold_sheet annotator_a --path <she
 uv run python -m tests.eval.extraction.agreement_report annotator_a_round1 annotator_b_round1
 uv run python -m tests.eval.extraction.reliability_stats annotator_a annotator_b --round1
 uv run python -m tests.eval.extraction.reissue_gold_sheet annotator_a annotator_b --report-only
-uv run python docs/paper/make_figures.py          # figures 10-12
+uv run python -m tests.eval.extraction.import_gold_sheet annotator_a --path <round-2 sheet> --merge
+uv run python -m tests.eval.extraction.round_comparison annotator_a annotator_b
+uv run python -m tests.eval.extraction.reliability_stats annotator_a annotator_b
+uv run python docs/paper/make_figures.py          # figures 10-13
 ```
 
-Figures 10-12 read `reliability_round1.json`, `gold_annotator_{a,b}_round1.json`
-and `reissue_round2_selection.json` directly, so they cannot drift from the
-artefacts they describe.
+Derivations and worked calculations for every estimator below are in
+`reliability_mathematics.md`. The artefact list, checksums and full
+reproduction sequence are in `artifacts.md`, generated from
+`artifact_manifest.json`.
 
-**Status: round 1 only.** Round 2 has been issued and not yet returned. No
-post-codebook number appears anywhere in this document. Section *Not yet
+Figures 10-15 read `reliability_round1.json`, `reliability_current.json`,
+`round_comparison.json`, `gold_annotator_{a,b}_round1.json` and
+`reissue_round2_selection.json` directly, so they cannot drift from the
+artefacts they describe. `test_manuscript_numbers.py` re-derives every cell of
+every table below from those artefacts and fails if the prose and the data
+disagree.
+
+**Status: both rounds complete.** Round 2 was returned and merged on
+2026-09-15. Adjudication of the residual conflicts has not been performed, so
+no gold standard, accuracy or MARS number appears here. Section *Not yet
 measured* states precisely what is outstanding.
 
 ---
@@ -27,7 +39,8 @@ measured* states precisely what is outstanding.
 ### Reliability statistics
 
 Four quantities are computed per field, over the value categories with nulls
-included as a category.
+included as a category. Each is derived and then worked through on this
+study's own data in `reliability_mathematics.md`; the summary follows.
 
 **Cohen's kappa.** With `p_o` the observed agreement and `p_e` the agreement
 predicted by the annotators' own marginals,
@@ -112,8 +125,9 @@ annotation instructions rather than genuinely contested:
    prompt or the antecedent that creates the opportunity.
 
 These were resolved in a written codebook (`docs/annotation_codebook.md`) that
-states a rule, a decision test and worked examples for each, and the affected
-segments were re-annotated (round 2).
+states a rule, a decision test and worked examples for each (**Figure 15**),
+and the affected segments were re-annotated (round 2). **Figure 14** accounts
+for every segment through both rounds.
 
 **Selection rule, fixed before round 2.** A segment was re-issued if at least
 one of its conflicting fields was a value pair the codebook speaks to. The pair
@@ -265,8 +279,102 @@ conflicts). Both were computed from the round-1 data alone, before any protocol
 change.
 
 Whether the codebook in fact repairs the reliability is a separate empirical
-question, and it is the one round 2 is designed to answer. It is not answered
-here.
+question, and it is the one round 2 was designed to answer. It is answered
+below.
+
+### The codebook repairs the reliability; the control field is unmoved
+
+Round 2 returned complete: both annotators re-annotated all 178 re-issued
+segments, with no cell errors and no row identical to its round-1 counterpart
+on all five fields. Over those segments, all three treated fields improved by a
+margin whose 95% paired interval excludes zero, while the untreated control
+field did not move (**Table R4**, **Figure 13**).
+
+**Table R4 — Change in kappa over the 178 re-issued segments**
+
+| field | arm | kappa round 1 | kappa round 2 | change | 95% CI (paired bootstrap) |
+|---|---|---:|---:|---:|---|
+| modality | treated | 0.385 | 0.866 | **+0.481** | [+0.397, +0.565] |
+| outcome | treated | 0.284 | 0.628 | **+0.344** | [+0.217, +0.464] |
+| prompt_level | treated | 0.281 | 0.574 | **+0.293** | [+0.137, +0.447] |
+| domain | control | 0.732 | 0.691 | −0.041 | [−0.141, +0.052] |
+
+Kappa on the re-issued segments is lower than on the full batch for every field
+by construction: these are the segments the annotators disagreed on, so the
+subset is the hard tail rather than a sample of the batch.
+
+The control result is what licenses the causal reading. `domain` was
+re-annotated in the same sitting, in the same fresh order, under the same
+fatigue, by the same two annotators — and changed by −0.041 with an interval
+spanning zero. Practice, regression to the mean and the mere act of seeing a
+segment twice therefore do not account for the treated fields' gains of +0.29
+to +0.48. The instruction does.
+
+**The mechanism is visible in the ceilings.** `kappa_max` — the most the pair
+could attain at their own marginals — rose sharply on exactly the treated
+fields and fell slightly on the control:
+
+| field | kappa_max round 1 | kappa_max merged | kappa round 1 | kappa merged |
+|---|---:|---:|---:|---:|
+| modality | 0.622 | 0.948 | 0.570 | 0.911 |
+| prompt_level | 0.839 | 0.962 | 0.595 | 0.831 |
+| outcome | 0.758 | 0.963 | 0.524 | 0.743 |
+| domain (control) | 0.921 | 0.897 | 0.751 | 0.718 |
+
+This is the predicted signature. The round-1 diagnosis was that the annotators
+were applying divergent category vocabularies rather than judging segments
+inconsistently; the remedy was therefore a definition, and what a definition
+should do is align the marginals. It did: `modality`'s ceiling moved from 0.622
+to 0.948, and annotator B, who recorded `none` zero times in round 1, used it
+in round 2.
+
+### Post-codebook reliability over the full batch
+
+**Table R5 — Inter-annotator reliability after the codebook (n = 330 segments)**
+
+| field | categories used | p_o | p_e | kappa | 95% CI (bootstrap) | 95% CI (asymptotic) | SE | kappa_max | kappa / kappa_max |
+|---|---:|---:|---:|---:|---|---|---:|---:|---:|
+| domain | 9 | 0.800 | 0.291 | 0.718 | [0.657, 0.774] | [0.659, 0.777] | 0.030 | 0.897 | 0.800 |
+| modality | 6 | 0.949 | 0.420 | 0.911 | [0.869, 0.949] | [0.871, 0.952] | 0.021 | 0.948 | 0.961 |
+| prompt_level | 6 | 0.891 | 0.355 | 0.831 | [0.777, 0.881] | [0.780, 0.882] | 0.026 | 0.962 | 0.863 |
+| outcome | 7 | 0.809 | 0.258 | 0.743 | [0.684, 0.797] | [0.687, 0.799] | 0.029 | 0.963 | 0.771 |
+
+Mean kappa across the four categorical fields rose from **0.610 to 0.801**.
+Under the Landis and Koch bands, `modality` and `prompt_level` move from
+moderate to almost perfect and `outcome` from moderate to substantial;
+`domain`, untreated, remains substantial. Whole-record exact agreement is 0.0242
+and `behavior` exact-match agreement 0.0273 at a mean token overlap of 0.3682,
+both essentially unchanged — they are dominated by free-text prose, which the
+codebook did not address. The two interval estimators again agree to within
+0.005 on every bound, with all 10,000 replicates valid on every field.
+
+This full-batch figure is computed over the **merged** gold, in which the 152
+segments never in boundary conflict carry their round-1 values and the 178
+re-issued segments carry round-2 values. It is the reliability of the gold
+standard that will actually be adjudicated, and it is not a clean estimate of
+what two annotators working under the codebook from the start would achieve —
+that quantity was not measured and would require a fresh batch.
+
+### Remaining disagreement
+
+Categorical conflicts fell from 355 on 215 segments to **182 on 127 segments**,
+a 49% reduction in adjudication load (**Figure 14**). What remains is concentrated where the
+codebook is silent by design:
+
+| field | conflicts round 1 | conflicts merged |
+|---|---:|---:|
+| domain | 63 | 66 |
+| outcome | 118 | 63 |
+| prompt_level | 83 | 36 |
+| modality | 91 | 17 |
+| **total** | **355** | **182** |
+
+`domain` is now the largest single source of residual conflict (66 of 182),
+still on the category judgements the codebook never addressed — `cognitive` vs
+`language` (13), `language` vs `social_communication` (12), `language` vs `play`
+(11). `outcome`'s residue is dominated by degree-of-completion calls
+(`correct` vs `partial`, 13) and the target question in its harder form
+(`correct` vs `none`, 13). These go to adjudication on the merits.
 
 ---
 
@@ -279,17 +387,19 @@ State of the evidence, recorded so that no reader infers more than exists.
 | round-1 inter-rater reliability | **measured** (Table R1) | — |
 | marginal decomposition of round-1 disagreement | **measured** (Table R2) | — |
 | conflict attribution to codebook boundaries | **measured** (Table R3) | — |
-| post-codebook (round-2) reliability | not measured | round-2 sheets returned |
-| change in kappa, treated fields | not measured | round-2 sheets returned |
-| change in kappa, control field (`domain`) | not measured | round-2 sheets returned |
-| adjudicated gold standard | not measured | round 2, then adjudication |
+| change in kappa, treated fields | **measured** (Table R4) | — |
+| change in kappa, control field (`domain`) | **measured** (Table R4) | — |
+| post-codebook reliability, full batch | **measured** (Table R5) | — |
+| adjudicated gold standard | not measured | adjudication of 182 residual conflicts |
 | per-generator field accuracy | not measured | adjudicated gold |
 | oracle candidate ceiling | not measured | adjudicated gold |
 | MARS accuracy / capture rate | not measured | adjudicated gold |
 
 The analysis code for every outstanding row exists and is tested
-(`reliability_stats.py`, `round_comparison.py`, `mars_evaluation.py`); it
-reports "round 2 has not been imported" today rather than a number.
+(`adjudicate.py`, `score_against_gold.py`, `mars_evaluation.py`). Adjudication
+excludes any segment left unresolved on any field rather than breaking a tie by
+rule, so the accuracy denominator will be the adjudicated subset and not the
+full 330.
 
 ## Limitations
 
@@ -308,15 +418,24 @@ reports "round 2 has not been imported" today rather than a number.
   ambiguous — and not from any ground-truth labels, which do not exist at this
   stage. The residual risk is that round-2 kappa improves through convergence
   by instruction rather than through better annotation. The `domain` control
-  arm is what bounds that risk, and it is the reason the comparison was
-  specified before round 2 was annotated.
+  arm bounds that risk empirically: it moved by −0.041 with an interval
+  spanning zero while the treated fields moved by +0.29 to +0.48, so the gains
+  are not attributable to re-annotation as such. The risk the control cannot
+  bound is convergence on a *wrong* rule, which is a validity question settled
+  at adjudication rather than by any reliability statistic.
+- **Reliability is not a clean between-subjects estimate.** The same two
+  annotators produced both rounds, so round 2 is a within-annotator repeat
+  under instruction, not an independent replication. Two annotators working
+  under the codebook from the start might agree more or less; that quantity
+  would require a fresh batch and was not measured.
 - **Free-text `behavior` is outside the kappa.** Its reliability is reported
   descriptively and resolved by a human at adjudication, so no interval is
   available for it.
 - **Kappa bands are conventional.** Landis and Koch labels are used for
   orientation only; nothing in the protocol depends on a threshold.
 - **The re-issue set is not a random sample.** It is the segments where the
-  annotators disagreed on a codebook boundary, so round-2 statistics over it
-  describe the hard subset and are not an estimate of reliability over the full
-  330. The full-batch post-codebook figure will be computed over the merged
-  gold, in which 152 segments carry their round-1 values.
+  annotators disagreed on a codebook boundary, so Table R4 describes the hard
+  subset: its kappas are lower than the full-batch figures for every field by
+  construction, and the changes in it are not estimates of what the codebook
+  would do to a random segment. The full-batch figure (Table R5) is computed
+  over the merged gold, in which 152 segments carry their round-1 values.

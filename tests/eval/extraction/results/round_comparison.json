@@ -1,0 +1,221 @@
+{
+  "n_segments": 178,
+  "fields": {
+    "domain": {
+      "arm": "control",
+      "round1": {
+        "n": 178,
+        "n_categories_used": 8,
+        "observed_agreement": 0.7753,
+        "expected_agreement": 0.1624,
+        "kappa": 0.7317,
+        "kappa_max": 0.8726,
+        "kappa_over_kappa_max": 0.8386,
+        "interpretation": "substantial",
+        "bootstrap_ci": {
+          "lower": 0.6587,
+          "upper": 0.8022,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0368,
+          "lower": 0.6597,
+          "upper": 0.8038
+        }
+      },
+      "round2": {
+        "n": 178,
+        "n_categories_used": 9,
+        "observed_agreement": 0.7584,
+        "expected_agreement": 0.2191,
+        "kappa": 0.6906,
+        "kappa_max": 0.8993,
+        "kappa_over_kappa_max": 0.768,
+        "interpretation": "substantial",
+        "bootstrap_ci": {
+          "lower": 0.6087,
+          "upper": 0.7672,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0403,
+          "lower": 0.6116,
+          "upper": 0.7696
+        }
+      },
+      "delta": {
+        "kappa_before": 0.7317,
+        "kappa_after": 0.6906,
+        "delta": -0.0411,
+        "lower": -0.1409,
+        "upper": 0.0523,
+        "excludes_zero": false,
+        "n_valid": 10000
+      }
+    },
+    "modality": {
+      "arm": "treated",
+      "round1": {
+        "n": 178,
+        "n_categories_used": 5,
+        "observed_agreement": 0.5,
+        "expected_agreement": 0.1868,
+        "kappa": 0.3852,
+        "kappa_max": 0.4542,
+        "kappa_over_kappa_max": 0.8479,
+        "interpretation": "fair",
+        "bootstrap_ci": {
+          "lower": 0.3201,
+          "upper": 0.4496,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0331,
+          "lower": 0.3203,
+          "upper": 0.45
+        }
+      },
+      "round2": {
+        "n": 178,
+        "n_categories_used": 5,
+        "observed_agreement": 0.9157,
+        "expected_agreement": 0.3694,
+        "kappa": 0.8664,
+        "kappa_max": 0.9287,
+        "kappa_over_kappa_max": 0.9329,
+        "interpretation": "almost perfect",
+        "bootstrap_ci": {
+          "lower": 0.7972,
+          "upper": 0.9269,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0325,
+          "lower": 0.8026,
+          "upper": 0.9301
+        }
+      },
+      "delta": {
+        "kappa_before": 0.3852,
+        "kappa_after": 0.8664,
+        "delta": 0.4812,
+        "lower": 0.3967,
+        "upper": 0.5647,
+        "excludes_zero": true,
+        "n_valid": 10000
+      }
+    },
+    "prompt_level": {
+      "arm": "treated",
+      "round1": {
+        "n": 178,
+        "n_categories_used": 6,
+        "observed_agreement": 0.5337,
+        "expected_agreement": 0.3517,
+        "kappa": 0.2808,
+        "kappa_max": 0.714,
+        "kappa_over_kappa_max": 0.3932,
+        "interpretation": "fair",
+        "bootstrap_ci": {
+          "lower": 0.17,
+          "upper": 0.3876,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0563,
+          "lower": 0.1703,
+          "upper": 0.3912
+        }
+      },
+      "round2": {
+        "n": 178,
+        "n_categories_used": 5,
+        "observed_agreement": 0.7978,
+        "expected_agreement": 0.5252,
+        "kappa": 0.574,
+        "kappa_max": 0.9053,
+        "kappa_over_kappa_max": 0.6341,
+        "interpretation": "moderate",
+        "bootstrap_ci": {
+          "lower": 0.4555,
+          "upper": 0.6855,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0588,
+          "lower": 0.4588,
+          "upper": 0.6893
+        }
+      },
+      "delta": {
+        "kappa_before": 0.2808,
+        "kappa_after": 0.574,
+        "delta": 0.2933,
+        "lower": 0.1372,
+        "upper": 0.4468,
+        "excludes_zero": true,
+        "n_valid": 10000
+      }
+    },
+    "outcome": {
+      "arm": "treated",
+      "round1": {
+        "n": 178,
+        "n_categories_used": 7,
+        "observed_agreement": 0.4326,
+        "expected_agreement": 0.2072,
+        "kappa": 0.2843,
+        "kappa_max": 0.5748,
+        "kappa_over_kappa_max": 0.4946,
+        "interpretation": "fair",
+        "bootstrap_ci": {
+          "lower": 0.1972,
+          "upper": 0.3723,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0441,
+          "lower": 0.1978,
+          "upper": 0.3707
+        }
+      },
+      "round2": {
+        "n": 178,
+        "n_categories_used": 7,
+        "observed_agreement": 0.7416,
+        "expected_agreement": 0.3056,
+        "kappa": 0.6278,
+        "kappa_max": 0.911,
+        "kappa_over_kappa_max": 0.6892,
+        "interpretation": "substantial",
+        "bootstrap_ci": {
+          "lower": 0.5365,
+          "upper": 0.7147,
+          "n_valid": 10000,
+          "n_requested": 10000
+        },
+        "asymptotic_ci": {
+          "se": 0.0463,
+          "lower": 0.537,
+          "upper": 0.7186
+        }
+      },
+      "delta": {
+        "kappa_before": 0.2843,
+        "kappa_after": 0.6278,
+        "delta": 0.3435,
+        "lower": 0.2172,
+        "upper": 0.4644,
+        "excludes_zero": true,
+        "n_valid": 10000
+      }
+    }
+  }
+}

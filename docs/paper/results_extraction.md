@@ -103,8 +103,10 @@ a distribution no annotator ever drew from. The overall figures reported are
 the mean of the per-field kappas across the four categorical fields, and a
 record-level exact-agreement rate, each stating what it aggregates.
 
-Disagreements are adjudicated. A segment left unresolved on any field is
-**excluded** from the gold standard rather than resolved by rule -- every
+Reliability was established over two annotation rounds separated by a written
+codebook; see `results_reliability.md` for the protocol and results.
+Disagreements that survive are adjudicated. A segment left unresolved on any
+field is **excluded** from the gold standard rather than resolved by rule -- every
 tie-break rule invents a value, and accuracy computed against invented values
 measures the rule.
 
@@ -277,7 +279,7 @@ State of the evidence, recorded so that no reader infers more than exists:
 | quantity | status | blocked on |
 |---|---|---|
 | per-generator field accuracy | not measured | adjudicated gold |
-| inter-rater reliability (κ) | round 1 **measured** (mean κ 0.610); post-codebook pending | round-2 sheets returned — see `results_reliability.md` |
+| inter-rater reliability (κ) | **measured** — mean κ 0.610 pre-codebook, 0.801 post | — see `results_reliability.md` |
 | oracle candidate ceiling | not measured | adjudicated gold |
 | MARS accuracy / capture rate | not measured | adjudicated gold |
 | MARS agreement-gate behaviour | not reportable | a panel of ~3 eligible judges |
