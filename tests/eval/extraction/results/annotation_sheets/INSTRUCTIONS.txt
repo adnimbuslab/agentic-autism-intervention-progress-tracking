@@ -21,3 +21,24 @@ Do not reorder, rename, add or delete columns, and do not change the
 `segment_id` column -- it is how your work is matched back up.
 
 Save as CSV (keep the same file name) and send it back.
+
+Boundary rules
+==============
+
+Three distinctions caused most of the disagreement in the first round and are
+settled in docs/annotation_codebook.md. In short:
+
+  - `gestural` modality means a communicative gesture (point, show, give,
+    reach-to-request, nod). Handling an object is not gestural -- that is the
+    `behavior`, and modality is `none`.
+
+  - `correct`/`incorrect` need an identifiable target: a question with a
+    determinate answer, an instruction, an imitation model, or a request whose
+    fulfilment is shown. Ordinary conversation has no target: `none`.
+
+  - An adult turn before a child response is not automatically a verbal
+    prompt. The turn that creates the opportunity is an antecedent; a prompt is
+    support added after it (a repeat, a hint, a model). A child-initiated
+    behavior is `independent`.
+
+Read the codebook before annotating; it gives the tests and worked examples.

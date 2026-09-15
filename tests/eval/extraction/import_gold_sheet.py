@@ -72,7 +72,12 @@ def parse_cell(field: str, raw: str) -> tuple[str, Any]:
     )
 
 
-def read_sheet(path: Path, annotator: str, valid_ids: set[str]) -> dict[str, Any]:
+def read_sheet(
+    path: Path,
+    annotator: str,
+    valid_ids: set[str],
+    round_number: int = 1,
+) -> dict[str, Any]:
     """Parse a returned sheet into annotations plus a problem report."""
     with path.open(newline="", encoding="utf-8-sig") as handle:
         rows = list(csv.DictReader(handle))
@@ -130,6 +135,7 @@ def read_sheet(path: Path, annotator: str, valid_ids: set[str]) -> dict[str, Any
             "notes": (row.get("notes") or "").strip(),
             "annotator": annotator,
             "source": "spreadsheet",
+            "round": round_number,
         }
 
     return {
@@ -144,7 +150,22 @@ def read_sheet(path: Path, annotator: str, valid_ids: set[str]) -> dict[str, Any
     }
 
 
-def render(report: dict[str, Any], annotator: str) -> None:
+def merge(existing: dict[str, Any], incoming: dict[str, Any]) -> dict[str, Any]:
+    """Later-round values replace earlier ones for the segments re-annotated.
+
+    Only segments present in the incoming sheet are touched. A round-2 sheet
+    carries the re-issued segments alone, so a plain overwrite of the gold file
+    would silently discard every round-1 segment that was never in conflict.
+    """
+    merged = dict(existing)
+    merged.update(incoming)
+    return merged
+
+
+def render(report: dict[str, Any], annotator: str, partial: bool = False) -> None:
+    """Print the import report. `partial` suppresses the not-in-sheet count,
+    which for a re-issued round is every segment that was never in conflict --
+    expected, and not a gap worth flagging."""
     print(f"Sheet for {annotator}: {report['n_rows']} rows")
     print(f"  complete and imported : {report['n_complete']}")
     print(f"  incomplete (excluded) : {len(report['incomplete'])}")
@@ -153,7 +174,7 @@ def render(report: dict[str, Any], annotator: str) -> None:
         print(f"  unknown segment_ids   : {len(report['unknown_segments'])}")
     if report["duplicates"]:
         print(f"  duplicate segment_ids : {len(report['duplicates'])}")
-    if report["missing_segments"]:
+    if report["missing_segments"] and not partial:
         print(f"  segments not in sheet : {len(report['missing_segments'])}")
 
     for error in report["errors"][:20]:
@@ -177,6 +198,19 @@ def main() -> None:
     parser.add_argument(
         "--dry-run", action="store_true", help="Validate without writing."
     )
+    parser.add_argument(
+        "--merge",
+        action="store_true",
+        help="Update the existing gold file in place rather than replacing it. "
+             "Use for a re-issued round, whose sheet holds only some segments.",
+    )
+    parser.add_argument(
+        "--round",
+        type=int,
+        default=None,
+        help="Round number recorded on each annotation. Defaults to 2 with "
+             "--merge, 1 otherwise.",
+    )
     args = parser.parse_args()
 
     path = args.path or sheet_path(args.annotator)
@@ -192,8 +226,9 @@ def main() -> None:
     batch = json.loads(BATCH_PATH.read_text())
     valid_ids = {e["segment_id"] for e in batch["candidates"]}
 
-    report = read_sheet(path, args.annotator, valid_ids)
-    render(report, args.annotator)
+    round_number = args.round if args.round is not None else (2 if args.merge else 1)
+    report = read_sheet(path, args.annotator, valid_ids, round_number)
+    render(report, args.annotator, partial=args.merge)
 
     if args.dry_run:
         print("\nDry run -- nothing written.")
@@ -206,9 +241,22 @@ def main() -> None:
         )
 
     out = annotations_path(args.annotator)
-    out.write_text(json.dumps(report["annotations"], indent=2, ensure_ascii=False))
-    print(f"\nWrote {report['n_complete']} gold annotations to {out}")
-    if report["incomplete"] or report["missing_segments"]:
+    annotations = report["annotations"]
+    if args.merge:
+        if not out.exists():
+            raise SystemExit(
+                f"--merge given but {out} does not exist. There is nothing to "
+                "merge into; import the first round without --merge."
+            )
+        existing = json.loads(out.read_text())
+        annotations = merge(existing, annotations)
+        print(
+            f"\nMerged {report['n_complete']} round-{round_number} annotations "
+            f"over {len(existing)} existing; {len(annotations)} total."
+        )
+    out.write_text(json.dumps(annotations, indent=2, ensure_ascii=False))
+    print(f"Wrote {len(annotations)} gold annotations to {out}")
+    if not args.merge and (report["incomplete"] or report["missing_segments"]):
         print(
             "Some segments are not yet annotated; re-import after they are "
             "filled in. Import is idempotent -- it rewrites the file from the "

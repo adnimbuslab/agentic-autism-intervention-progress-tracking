@@ -93,7 +93,9 @@ kappa; for scoring, the match rule is an explicit, recorded parameter
 available). **[REPORT the rule used and its threshold in Methods.]**
 
 **Reliability statistics.** Cohen's kappa per field, over the value categories
-(nulls included as a category). Kappa is deliberately **not** pooled across
+(nulls included as a category). Interval estimates, the marginal-imposed
+ceiling `kappa_max`, the two-round codebook protocol and the pre-registered
+before/after comparison are set out in `results_reliability.md`. Kappa is deliberately **not** pooled across
 fields by concatenating labels: the fields draw on different category sets, so
 a pooled confusion matrix would treat `verbal`-the-modality and
 `verbal`-the-prompt-level as one category and compute a chance correction over
@@ -275,7 +277,7 @@ State of the evidence, recorded so that no reader infers more than exists:
 | quantity | status | blocked on |
 |---|---|---|
 | per-generator field accuracy | not measured | adjudicated gold |
-| inter-rater reliability (κ) | not measured | both annotators' gold values |
+| inter-rater reliability (κ) | round 1 **measured** (mean κ 0.610); post-codebook pending | round-2 sheets returned — see `results_reliability.md` |
 | oracle candidate ceiling | not measured | adjudicated gold |
 | MARS accuracy / capture rate | not measured | adjudicated gold |
 | MARS agreement-gate behaviour | not reportable | a panel of ~3 eligible judges |

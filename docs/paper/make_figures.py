@@ -508,6 +508,208 @@ def print_tables() -> None:
         print(f"{pair:<30}" + "".join(f"{c:>12}" for c in cells))
 
 
+# --- Figures 10-12: reliability, read from the recorded artefacts ------------
+RESULTS = Path(__file__).resolve().parents[2] / "tests/eval/extraction/results"
+RELIABILITY_PATH = RESULTS / "reliability_round1.json"
+SELECTION_PATH = RESULTS / "reissue_round2_selection.json"
+GOLD_ROUND1 = {
+    "A": RESULTS / "gold_annotator_a_round1.json",
+    "B": RESULTS / "gold_annotator_b_round1.json",
+}
+CATEGORICAL = ["domain", "modality", "prompt_level", "outcome"]
+
+
+def _load(path: Path, what: str) -> dict | None:
+    if not path.exists():
+        print(f"  (skipped: {what} -- {path.name} not found)")
+        return None
+    return json.loads(path.read_text())
+
+
+def _boundary_pairs(selection: dict) -> dict[str, set[frozenset]]:
+    """Observed codebook-boundary value pairs, per field, from the selection."""
+    pairs: dict[str, set[frozenset]] = {}
+    for conflicts in selection["selected"].values():
+        for conflict in conflicts:
+            left, right = [v.strip() for v in conflict["values"].split("/")]
+            pairs.setdefault(conflict["field"], set()).add(frozenset({left, right}))
+    return pairs
+
+
+def figure_reliability() -> None:
+    """Figure 10 -- per-field kappa against the ceiling its marginals allow."""
+    report = _load(RELIABILITY_PATH, "Figure 10 (reliability)")
+    if report is None:
+        return
+
+    fields = [f for f in CATEGORICAL if f in report["fields"]]
+    stats = [report["fields"][f] for f in fields]
+    kappas = [s["kappa"] for s in stats]
+    ceilings = [s["kappa_max"] for s in stats]
+    lower = [k - s["bootstrap_ci"]["lower"] for k, s in zip(kappas, stats)]
+    upper = [s["bootstrap_ci"]["upper"] - k for k, s in zip(kappas, stats)]
+
+    fig, ax = plt.subplots(figsize=(7.2, 3.6))
+    y = range(len(fields))
+    # The ceiling is drawn as the full bar and kappa as the filled portion, so
+    # the unreachable part of the scale is visible rather than implied.
+    ax.barh(list(y), ceilings, color=GRID, zorder=2, height=0.54)
+    ax.barh(list(y), kappas, color=BLUE, zorder=3, height=0.54)
+    ax.errorbar(
+        kappas, list(y), xerr=[lower, upper], fmt="none",
+        ecolor=INK, elinewidth=1.1, capsize=3.5, zorder=4,
+    )
+    for i, (k, c) in enumerate(zip(kappas, ceilings)):
+        ax.text(c + 0.012, i, f"$\\kappa_{{max}}$ {c:.2f}", va="center",
+                fontsize=7.5, color=MUTED)
+        ax.text(0.012, i, f"{k:.2f}  ({100 * k / c:.0f}% of ceiling)", va="center",
+                fontsize=7.5, color="white", fontweight="bold", zorder=5)
+
+    ax.set_yticks(list(y))
+    ax.set_yticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
+    ax.invert_yaxis()
+    ax.set_xlim(0, 1.0)
+    ax.set_xlabel("Cohen's $\\kappa$ (bars: point estimate; whiskers: 95% bootstrap CI)")
+    _finish(
+        ax,
+        "Figure 10 — Round-1 reliability against the ceiling the marginals allow",
+        f"n = {report['n_segments']} segments, {report['n_bootstrap']:,} bootstrap "
+        f"replicates. Grey = $\\kappa_{{max}}$, the ceiling set by the marginals.",
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig10_reliability_round1.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def figure_confusion() -> None:
+    """Figure 11 -- where the two annotators diverged, field by field."""
+    gold = {k: _load(p, "Figure 11 (confusion)") for k, p in GOLD_ROUND1.items()}
+    if any(v is None for v in gold.values()):
+        return
+    selection = _load(SELECTION_PATH, "Figure 11 (confusion)")
+    if selection is None:
+        return
+    boundaries = _boundary_pairs(selection)
+
+    shown = ["modality", "prompt_level", "outcome"]
+    segments = sorted(set(gold["A"]) & set(gold["B"]))
+    fig, axes = plt.subplots(1, len(shown), figsize=(12.6, 4.1))
+
+    for ax, field in zip(axes, shown):
+        observed = [
+            (
+                gold["A"][s]["field_values"].get(field) or "none",
+                gold["B"][s]["field_values"].get(field) or "none",
+            )
+            for s in segments
+        ]
+        categories = sorted({v for pair in observed for v in pair})
+        index = {c: i for i, c in enumerate(categories)}
+        grid = [[0] * len(categories) for _ in categories]
+        for a, b in observed:
+            grid[index[a]][index[b]] += 1
+
+        peak = max(max(row) for row in grid) or 1
+        ax.imshow(grid, cmap="Blues", vmin=0, vmax=peak, aspect="auto", zorder=2)
+        for i, row in enumerate(grid):
+            for j, count in enumerate(row):
+                if not count:
+                    continue
+                on_boundary = (
+                    i != j
+                    and frozenset({categories[i], categories[j]}) in boundaries.get(field, set())
+                )
+                ax.text(
+                    j, i, str(count), ha="center", va="center", fontsize=7.5,
+                    color="white" if count > peak * 0.55 else INK,
+                    fontweight="bold" if on_boundary else "normal", zorder=3,
+                )
+                if on_boundary:
+                    ax.add_patch(
+                        plt.Rectangle(
+                            (j - 0.5, i - 0.5), 1, 1, fill=False,
+                            edgecolor=AMBER, linewidth=1.6, zorder=4,
+                        )
+                    )
+
+        ax.set_xticks(range(len(categories)))
+        ax.set_yticks(range(len(categories)))
+        ax.set_xticklabels(categories, rotation=45, ha="right", fontsize=7)
+        ax.set_yticklabels(categories, fontsize=7)
+        ax.set_xlabel("annotator B", fontsize=8)
+        if field == shown[0]:
+            ax.set_ylabel("annotator A", fontsize=8)
+        ax.set_title(field, loc="left", fontsize=10, fontweight="bold")
+        ax.grid(False)
+
+    fig.suptitle(
+        "Figure 11 — Round-1 annotator confusion; amber cells are conflicts the codebook resolves",
+        x=0.012, ha="left", fontsize=11, fontweight="bold", y=1.04,
+    )
+    fig.tight_layout(w_pad=2.4)
+    fig.savefig(OUT / "fig11_confusion_round1.png", bbox_inches="tight", pad_inches=0.3)
+    plt.close(fig)
+
+
+def figure_conflict_decomposition() -> None:
+    """Figure 12 -- how each field's conflicts split by cause."""
+    selection = _load(SELECTION_PATH, "Figure 12 (conflict decomposition)")
+    if selection is None:
+        return
+
+    total = selection["n_shared"]
+    on = Counter()
+    for conflicts in selection["selected"].values():
+        for conflict in conflicts:
+            on[conflict["field"]] += 1
+    off = Counter(c["field"] for c in selection["off_boundary"])
+
+    fields = CATEGORICAL
+    agreed = [total - on[f] - off[f] for f in fields]
+
+    fig, ax = plt.subplots(figsize=(7.2, 3.9))
+    y = list(range(len(fields)))
+    ax.barh(y, agreed, color=GRID, zorder=3, height=0.56, label="agreed")
+    ax.barh(y, [on[f] for f in fields], left=agreed, color=AMBER, zorder=3,
+            height=0.56, label="conflict on a codebook boundary (re-issued)")
+    ax.barh(y, [off[f] for f in fields],
+            left=[a + on[f] for a, f in zip(agreed, fields)], color=RED, zorder=3,
+            height=0.56, label="conflict the codebook does not resolve (adjudicated)")
+
+    # A count centred in a bar narrower than this overflows it and lands on a
+    # neighbouring segment, where it reads as that segment's count.
+    legible = total * 0.04
+    for i, field in enumerate(fields):
+        if on[field] >= legible:
+            ax.text(agreed[i] + on[field] / 2, i, str(on[field]), ha="center",
+                    va="center", fontsize=7.5, color=INK, fontweight="bold", zorder=4)
+        if off[field] >= legible:
+            ax.text(agreed[i] + on[field] + off[field] / 2, i, str(off[field]),
+                    ha="center", va="center", fontsize=7.5, color="white",
+                    fontweight="bold", zorder=4)
+
+    ax.set_yticks(y)
+    ax.set_yticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
+    ax.invert_yaxis()
+    ax.set_xlim(0, total)
+    ax.set_xlabel(f"segments (n = {total})")
+    ax.legend(
+        loc="upper center", bbox_to_anchor=(0.5, -0.24), ncol=3,
+        fontsize=7.5, frameon=False, columnspacing=1.4, handlelength=1.4,
+    )
+    _finish(
+        ax,
+        "Figure 12 — Round-1 conflicts by cause",
+        f"{selection['n_on_boundary']} of "
+        f"{selection['n_on_boundary'] + selection['n_off_boundary']} field conflicts "
+        f"fall on one of three stated definitional boundaries; "
+        f"{selection['n_selected']} segments were re-issued.",
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig12_conflict_decomposition.png", bbox_inches="tight")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     figure_corpus()
     figure_admission()
@@ -518,6 +720,9 @@ if __name__ == "__main__":
     figure_candidate_divergence()
     figure_coverage_headroom()
     figure_mars_branches()
+    figure_reliability()
+    figure_confusion()
+    figure_conflict_decomposition()
     print(f"Wrote {len(list(OUT.glob('*.png')))} figures to {OUT}")
     for f in sorted(OUT.glob("*.png")):
         print(f"  {f.name}")
