@@ -1,0 +1,115 @@
+{
+  "n_judged_segments": 142,
+  "n_returned": 265,
+  "n_short_circuit": 123,
+  "best_generator": "qwen2.5:7b",
+  "fields": [
+    "domain",
+    "modality",
+    "prompt_level",
+    "outcome"
+  ],
+  "n_bootstrap": 10000,
+  "seed": 20260916,
+  "per_field": {
+    "domain": {
+      "mars": 0.331,
+      "best_generator": 0.4577,
+      "random_candidate": 0.223,
+      "per_generator": {
+        "llama3.2:latest": 0.1338,
+        "qwen2.5:3b": 0.0775,
+        "qwen2.5:7b": 0.4577
+      },
+      "vs_best_generator": {
+        "difference": -0.1271,
+        "lower": -0.1972,
+        "upper": -0.0634,
+        "excludes_zero": true
+      },
+      "vs_random_candidate": {
+        "difference": 0.0781,
+        "lower": -0.007,
+        "upper": 0.162,
+        "excludes_zero": false
+      }
+    },
+    "modality": {
+      "mars": 0.7465,
+      "best_generator": 0.7746,
+      "random_candidate": 0.556,
+      "per_generator": {
+        "llama3.2:latest": 0.6197,
+        "qwen2.5:3b": 0.2746,
+        "qwen2.5:7b": 0.7746
+      },
+      "vs_best_generator": {
+        "difference": -0.0282,
+        "lower": -0.0845,
+        "upper": 0.0282,
+        "excludes_zero": false
+      },
+      "vs_random_candidate": {
+        "difference": 0.1903,
+        "lower": 0.0986,
+        "upper": 0.2817,
+        "excludes_zero": true
+      }
+    },
+    "prompt_level": {
+      "mars": 0.338,
+      "best_generator": 0.3592,
+      "random_candidate": 0.2352,
+      "per_generator": {
+        "llama3.2:latest": 0.2817,
+        "qwen2.5:3b": 0.0634,
+        "qwen2.5:7b": 0.3592
+      },
+      "vs_best_generator": {
+        "difference": -0.0209,
+        "lower": -0.0915,
+        "upper": 0.0423,
+        "excludes_zero": false
+      },
+      "vs_random_candidate": {
+        "difference": 0.1348,
+        "lower": 0.0563,
+        "upper": 0.2183,
+        "excludes_zero": true
+      }
+    },
+    "outcome": {
+      "mars": 0.3239,
+      "best_generator": 0.3028,
+      "random_candidate": 0.2847,
+      "per_generator": {
+        "llama3.2:latest": 0.2535,
+        "qwen2.5:3b": 0.2958,
+        "qwen2.5:7b": 0.3028
+      },
+      "vs_best_generator": {
+        "difference": 0.0212,
+        "lower": -0.0282,
+        "upper": 0.0704,
+        "excludes_zero": false
+      },
+      "vs_random_candidate": {
+        "difference": 0.0569,
+        "lower": -0.0141,
+        "upper": 0.1268,
+        "excludes_zero": false
+      }
+    }
+  },
+  "mars_selection_counts": {
+    "llama3.2:latest": 37,
+    "qwen2.5:3b": 23,
+    "qwen2.5:7b": 82
+  },
+  "mars_share_of_best_generator": 0.5775,
+  "mean_accuracy": {
+    "mars": 0.4349,
+    "best_generator": 0.4736,
+    "random_candidate": 0.3247
+  }
+}

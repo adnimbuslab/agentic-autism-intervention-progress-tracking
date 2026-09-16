@@ -36,12 +36,28 @@ leave a reviewer to assume it.
 
 ## Ethics approval
 
-**[CONFIRM]** the institutional determination. The expected form is an IRB
-exemption or a non-human-subjects-research determination, on the grounds that
-the work analyses existing, publicly available, de-identified records and the
-investigators cannot readily ascertain participant identity. State the
-institution, the determination, and the protocol or exemption number — or, if
-no submission was made, say that and give the reasoning.
+**Status: submitted, determination pending.** A request was submitted to the
+Institutional Review Board at the University of Texas at Austin on
+**[CONFIRM the submission date]**. As of 2026-09-16 no determination has been
+returned.
+
+The expected form is an IRB exemption or a non-human-subjects-research
+determination, on the grounds that the work analyses existing, publicly
+available, de-identified records and the investigators cannot readily ascertain
+participant identity. That is the expected outcome, not a known one, and the
+manuscript must not assert it before the determination arrives.
+
+On receipt, replace this section with the determination as issued:
+
+- **[CONFIRM]** the institution as named on the determination letter
+- **[CONFIRM]** the determination itself (exempt / not human subjects research /
+  approved), in the IRB's own wording
+- **[CONFIRM]** the protocol or exemption number
+- **[CONFIRM]** the date of determination
+
+If the determination differs from the expectation above — for instance if the
+IRB asserts jurisdiction rather than exempting — the Methods and Limitations
+sections must be revisited, not only this paragraph.
 
 No participants were recruited, contacted, or consented for this study. No
 clinical care was delivered, influenced, or withheld on the basis of any system
@@ -51,16 +67,52 @@ used it during the work reported here.
 ## De-identification
 
 Transcripts pass through a de-identification stage before any model sees them
-(`deidentify_sessions`, applied in `load_real_segments` ahead of segmentation).
-Child identifiers in this manuscript (`brett`, `carl`, `mars`, …) are the
-pseudonymous labels carried by the public corpora, not real names.
+(`data/pipeline/deidentify.py`, applied in `load_real_segments` ahead of
+segmentation). Child identifiers in this manuscript (`brett`, `carl`, `mars`, …)
+are the pseudonymous labels carried by the public corpora, not real names.
 
-**[CONFIRM]** what the de-identification stage removes and what it leaves, and
-state it plainly. A reviewer will read "de-identified" as a claim about
-residual risk; the honest version names the categories handled.
+**What the stage replaces.** Five patterns, each with a bracketed placeholder,
+applied to utterance text *and* to every dependent tier (`%act`, `%spa`, `%gpx`):
 
-Note that the corpora are already distributed publicly in de-identified form.
-The stage here is defence in depth, not the primary protection.
+| replaced with | what it matches |
+|---|---|
+| `[NAME]` | participant names harvested from the session's own `@Participants` and `@ID` headers, plus a fixed roster of the ten child pseudonyms; whole-word, case-insensitive |
+| `[LOCATION]` | US-style street addresses (number + capitalised words + street suffix) |
+| `[DATE]` | numeric dates (`MM/DD/YYYY`, `YYYY-MM-DD` and similar) |
+| `[SSN]` | US social security numbers |
+| `[PHONE]` | US telephone numbers |
+
+Sessions are deep-copied, so the parsed originals are never mutated.
+
+**What it does not do**, stated plainly because "de-identified" will otherwise
+be read as a claim about residual risk:
+
+- **It is roster- and header-driven, not named-entity recognition.** A person
+  named in conversation who is neither a listed participant nor one of the ten
+  child pseudonyms — a sibling, a teacher, a neighbour — is not detected.
+- **It over-redacts common words.** Every one of the ten child pseudonyms is
+  also an ordinary English word (`mark`, `jack`, `rick`, `mars`, `brett`, `sid`,
+  `carl`, `stuart`, `josh`, `roger`), and matching is case-insensitive, so an
+  ordinary use of "mark" is replaced with `[NAME]`. The pipeline flags these as
+  ambiguous for manual review but replaces them regardless. This is visible in
+  the study data: **82 `[NAME]` placeholders appear across 62 of the 330
+  annotated segments (19%)**, a handful of them adjacent to function words in a
+  way that suggests a redacted common noun rather than a redacted name.
+  Annotators and models saw the redacted text, so wherever a redaction removed
+  a content word it removed evidence both were scored on.
+- **It matches only numeric dates and US-format addresses.** "last Thursday",
+  "my birthday is in June", or a named school or town are not caught. In the
+  330 annotated segments no `[LOCATION]`, `[DATE]`, `[SSN]` or `[PHONE]`
+  placeholder occurs at all — every redaction in the study data is a `[NAME]`.
+- **It operates on utterance and tier content only.** CHAT header fields are not
+  scanned. Segments handed to models and annotators are assembled from
+  utterances, so headers do not reach them, but the parsed `Session` objects
+  retain header metadata.
+
+The residual risk is therefore that of the public deposits themselves: these
+corpora were de-identified by their depositors before publication, and this
+stage is a second pass over already-public, already-pseudonymous text rather
+than the primary protection.
 
 ## Third-party model processing
 
@@ -113,15 +165,39 @@ be replaced with a described role in the manuscript. Annotation labour was
 
 ## AI use in preparing this work
 
-**[CONFIRM]** and disclose per JMIR policy. Distinguish two uses that are
-routinely conflated:
+Two uses are routinely conflated and are separated here.
 
-- **AI as the object of study** — the extraction and reranking models are the
-  subject of the research and are described in Methods.
-- **AI as a tool in producing the manuscript or code** — any assistance in
-  writing code, analysis, or manuscript text must be disclosed separately.
-  Substantial portions of the evaluation tooling in this repository were
-  written with AI assistance.
+**AI as the object of study.** The extraction generators (`llama3.2`,
+`qwen2.5:3b`, `qwen2.5:7b`) and the MARS judge roster are the subject of the
+research and are described in Methods. Their outputs are data, not authorship.
+
+**AI as a tool in producing the code and manuscript.** Substantial portions of
+the evaluation tooling in this repository — the annotation sheet export/import
+chain, the reliability statistics, the adjudication tooling, the figure
+generation, and the verification tests — were written with AI assistance
+(Claude, Anthropic), as was drafting of the manuscript sections in
+`docs/paper/`. The following are **not** AI-generated and are recorded here so
+the boundary is legible:
+
+- every gold annotation value, in both rounds, authored by the two human
+  annotators from the transcripts;
+- every adjudication decision, made by the two annotators jointly;
+- the three codebook rules as *applied* — the rules were drafted with AI
+  assistance from the observed disagreement pattern, then applied to segments
+  by the human annotators;
+- the research questions, corpus selection, and the decision to run a second
+  annotation round.
+
+No AI system authored, selected, or altered a gold-standard value, an
+adjudication, or a reported statistic. Statistics were computed by code from
+recorded artefacts, and `test_manuscript_numbers.py` and
+`test_extraction_results_numbers.py` re-derive every number in the manuscript
+from those artefacts so that no reported figure rests on text an author or a
+tool typed by hand.
+
+**[CONFIRM]** the exact disclosure wording required by JMIR at submission, the
+model name and version to cite, and whether the journal requires this in the
+Acknowledgements, a Declaration, or both.
 
 ## Data and code availability
 

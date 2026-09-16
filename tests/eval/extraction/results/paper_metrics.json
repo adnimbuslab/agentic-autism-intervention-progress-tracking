@@ -1,0 +1,441 @@
+{
+  "generated_from": {
+    "reliability_round1": "reliability_round1.json",
+    "reliability_merged": "reliability_current.json",
+    "round_comparison": "round_comparison.json",
+    "reissue_selection": "reissue_round2_selection.json",
+    "gold": "gold_labels.json",
+    "scored": "scored_against_gold.json",
+    "mars_evaluation": "mars_evaluation.json",
+    "mars_selection": "mars_selection_analysis.json",
+    "mars_summary": "mars_run_summary.json",
+    "branch_replay": "mars_branch_replay.json"
+  },
+  "note": "Derived entirely from the artefacts named above; nothing is recomputed. Every rate carries its own denominator.",
+  "annotation": {
+    "n_segments": 330,
+    "n_annotators": 2,
+    "rounds": 2,
+    "reliability": {
+      "round1": {
+        "mean_kappa": 0.61,
+        "per_field": {
+          "domain": {
+            "kappa": 0.7512,
+            "ci": [
+              0.6974,
+              0.803
+            ],
+            "kappa_max": 0.921,
+            "kappa_over_kappa_max": 0.8156
+          },
+          "modality": {
+            "kappa": 0.5699,
+            "ci": [
+              0.5172,
+              0.6242
+            ],
+            "kappa_max": 0.6219,
+            "kappa_over_kappa_max": 0.9164
+          },
+          "prompt_level": {
+            "kappa": 0.5952,
+            "ci": [
+              0.5161,
+              0.6674
+            ],
+            "kappa_max": 0.839,
+            "kappa_over_kappa_max": 0.7093
+          },
+          "outcome": {
+            "kappa": 0.5236,
+            "ci": [
+              0.4584,
+              0.5891
+            ],
+            "kappa_max": 0.7578,
+            "kappa_over_kappa_max": 0.691
+          }
+        }
+      },
+      "merged": {
+        "mean_kappa": 0.8007,
+        "per_field": {
+          "domain": {
+            "kappa": 0.7179,
+            "ci": [
+              0.6567,
+              0.7737
+            ],
+            "kappa_max": 0.8974
+          },
+          "modality": {
+            "kappa": 0.9112,
+            "ci": [
+              0.8687,
+              0.9491
+            ],
+            "kappa_max": 0.9477
+          },
+          "prompt_level": {
+            "kappa": 0.8309,
+            "ci": [
+              0.7768,
+              0.8811
+            ],
+            "kappa_max": 0.9624
+          },
+          "outcome": {
+            "kappa": 0.7427,
+            "ci": [
+              0.6842,
+              0.797
+            ],
+            "kappa_max": 0.9632
+          }
+        }
+      }
+    },
+    "codebook_intervention": {
+      "n_reissued_segments": 178,
+      "n_conflicts_on_boundary": 254,
+      "n_conflicts_codebook_silent": 101,
+      "estimand": "change in kappa over the re-issued segments",
+      "per_field": {
+        "domain": {
+          "arm": "control",
+          "kappa_before": 0.7317,
+          "kappa_after": 0.6906,
+          "delta": -0.0411,
+          "ci": [
+            -0.1409,
+            0.0523
+          ],
+          "excludes_zero": false
+        },
+        "modality": {
+          "arm": "treated",
+          "kappa_before": 0.3852,
+          "kappa_after": 0.8664,
+          "delta": 0.4812,
+          "ci": [
+            0.3967,
+            0.5647
+          ],
+          "excludes_zero": true
+        },
+        "prompt_level": {
+          "arm": "treated",
+          "kappa_before": 0.2808,
+          "kappa_after": 0.574,
+          "delta": 0.2933,
+          "ci": [
+            0.1372,
+            0.4468
+          ],
+          "excludes_zero": true
+        },
+        "outcome": {
+          "arm": "treated",
+          "kappa_before": 0.2843,
+          "kappa_after": 0.6278,
+          "delta": 0.3435,
+          "ci": [
+            0.2172,
+            0.4644
+          ],
+          "excludes_zero": true
+        }
+      }
+    }
+  },
+  "gold_standard": {
+    "n_segments": 330,
+    "n_excluded": 0,
+    "composition": {
+      "adjudicated": 322,
+      "agreed": 8
+    },
+    "adjudicator": "consensus:annotator_a+annotator_b (both annotators, jointly, working from docs/annotation_codebook.md)",
+    "nulls_per_field": {
+      "domain": 3,
+      "modality": 77,
+      "prompt_level": 2,
+      "outcome": 115
+    }
+  },
+  "extraction": {
+    "scoring_policy": {
+      "behavior_match": "excluded",
+      "scored_fields": [
+        "domain",
+        "modality",
+        "prompt_level",
+        "outcome"
+      ]
+    },
+    "per_field_accuracy": {
+      "llama3.2:latest": {
+        "domain": {
+          "n": 59,
+          "denominator": 330,
+          "rate": 0.1788
+        },
+        "modality": {
+          "n": 166,
+          "denominator": 330,
+          "rate": 0.503
+        },
+        "prompt_level": {
+          "n": 93,
+          "denominator": 330,
+          "rate": 0.2818
+        },
+        "outcome": {
+          "n": 89,
+          "denominator": 330,
+          "rate": 0.2697
+        }
+      },
+      "qwen2.5:3b": {
+        "domain": {
+          "n": 29,
+          "denominator": 330,
+          "rate": 0.0879
+        },
+        "modality": {
+          "n": 120,
+          "denominator": 330,
+          "rate": 0.3636
+        },
+        "prompt_level": {
+          "n": 14,
+          "denominator": 330,
+          "rate": 0.0424
+        },
+        "outcome": {
+          "n": 107,
+          "denominator": 330,
+          "rate": 0.3242
+        }
+      },
+      "qwen2.5:7b": {
+        "domain": {
+          "n": 140,
+          "denominator": 330,
+          "rate": 0.4242
+        },
+        "modality": {
+          "n": 224,
+          "denominator": 330,
+          "rate": 0.6788
+        },
+        "prompt_level": {
+          "n": 93,
+          "denominator": 330,
+          "rate": 0.2818
+        },
+        "outcome": {
+          "n": 112,
+          "denominator": 330,
+          "rate": 0.3394
+        }
+      }
+    },
+    "unsupported_extractions": {
+      "llama3.2:latest": {
+        "domain": {
+          "n": 3,
+          "denominator": 3,
+          "rate": 1.0
+        },
+        "modality": {
+          "n": 72,
+          "denominator": 77,
+          "rate": 0.9351
+        },
+        "prompt_level": {
+          "n": 2,
+          "denominator": 2,
+          "rate": 1.0
+        },
+        "outcome": {
+          "n": 87,
+          "denominator": 115,
+          "rate": 0.7565
+        }
+      },
+      "qwen2.5:3b": {
+        "domain": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0
+        },
+        "modality": {
+          "n": 15,
+          "denominator": 77,
+          "rate": 0.1948
+        },
+        "prompt_level": {
+          "n": 0,
+          "denominator": 2,
+          "rate": 0.0
+        },
+        "outcome": {
+          "n": 46,
+          "denominator": 115,
+          "rate": 0.4
+        }
+      },
+      "qwen2.5:7b": {
+        "domain": {
+          "n": 2,
+          "denominator": 3,
+          "rate": 0.6667
+        },
+        "modality": {
+          "n": 31,
+          "denominator": 77,
+          "rate": 0.4026
+        },
+        "prompt_level": {
+          "n": 1,
+          "denominator": 2,
+          "rate": 0.5
+        },
+        "outcome": {
+          "n": 78,
+          "denominator": 115,
+          "rate": 0.6783
+        }
+      }
+    },
+    "whole_record": {
+      "per_generator": {
+        "llama3.2:latest": 0.015151515151515152,
+        "qwen2.5:3b": 0.0030303030303030303,
+        "qwen2.5:7b": 0.045454545454545456
+      },
+      "best_generator": "qwen2.5:7b",
+      "best_accuracy": 0.045454545454545456,
+      "oracle_ceiling": 0.06060606060606061,
+      "headroom": 0.0152
+    }
+  },
+  "mars": {
+    "config": {
+      "judges": [
+        "llama3.2:latest",
+        "qwen2.5:3b",
+        "qwen2.5:7b",
+        "mistral:latest",
+        "qwen3:14b"
+      ],
+      "agreement_threshold": 0.5,
+      "min_eligible_judges": 2,
+      "single_judge_ablation": false,
+      "max_judge_discard_rate": 0.0179
+    },
+    "outcomes": {
+      "n_total": 330,
+      "n_returned": 265,
+      "coverage": 0.803030303030303,
+      "abstention_reasons": {
+        "judge_disagreement": 21,
+        "no_reviewable_candidate": 42,
+        "insufficient_valid_judge_responses": 2
+      }
+    },
+    "whole_record_accuracy": {
+      "over_returned": 0.033962264150943396,
+      "over_all": 0.02727272727272727
+    },
+    "selection_quality": {
+      "n_judged_segments": 142,
+      "n_short_circuit_excluded": 123,
+      "mean_accuracy": {
+        "mars": 0.4349,
+        "best_generator": 0.4736,
+        "random_candidate": 0.3247
+      },
+      "share_choosing_best_generator": 0.5775,
+      "per_field": {
+        "domain": {
+          "mars": 0.331,
+          "best_generator": 0.4577,
+          "random_candidate": 0.223,
+          "vs_best": {
+            "difference": -0.1271,
+            "lower": -0.1972,
+            "upper": -0.0634,
+            "excludes_zero": true
+          },
+          "vs_random": {
+            "difference": 0.0781,
+            "lower": -0.007,
+            "upper": 0.162,
+            "excludes_zero": false
+          }
+        },
+        "modality": {
+          "mars": 0.7465,
+          "best_generator": 0.7746,
+          "random_candidate": 0.556,
+          "vs_best": {
+            "difference": -0.0282,
+            "lower": -0.0845,
+            "upper": 0.0282,
+            "excludes_zero": false
+          },
+          "vs_random": {
+            "difference": 0.1903,
+            "lower": 0.0986,
+            "upper": 0.2817,
+            "excludes_zero": true
+          }
+        },
+        "prompt_level": {
+          "mars": 0.338,
+          "best_generator": 0.3592,
+          "random_candidate": 0.2352,
+          "vs_best": {
+            "difference": -0.0209,
+            "lower": -0.0915,
+            "upper": 0.0423,
+            "excludes_zero": false
+          },
+          "vs_random": {
+            "difference": 0.1348,
+            "lower": 0.0563,
+            "upper": 0.2183,
+            "excludes_zero": true
+          }
+        },
+        "outcome": {
+          "mars": 0.3239,
+          "best_generator": 0.3028,
+          "random_candidate": 0.2847,
+          "vs_best": {
+            "difference": 0.0212,
+            "lower": -0.0282,
+            "upper": 0.0704,
+            "excludes_zero": false
+          },
+          "vs_random": {
+            "difference": 0.0569,
+            "lower": -0.0141,
+            "upper": 0.1268,
+            "excludes_zero": false
+          }
+        }
+      }
+    }
+  },
+  "not_measured": [
+    "Frontier-model comparison (claude-*): blocked on corpus terms for third-party API processing and on IRB determination.",
+    "Reporting LLM groundedness: no recorded evaluation artefact.",
+    "Deterministic analytics, adequacy/abstention routing, validation engine: unit-tested as software, not evaluated as research (no result artefacts).",
+    "Clinical or usability evaluation: no interventionist used the system.",
+    "Whether reranking would pay on a balanced generator roster."
+  ]
+}

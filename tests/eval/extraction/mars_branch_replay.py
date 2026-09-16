@@ -65,6 +65,16 @@ RECORDED_FIELDS = ["domain", "behavior", "modality", "prompt_level", "outcome"]
 # disqualifies only exact identities that generated a candidate, so the panel
 # available for a segment depends on which generators contributed to it.
 LOCAL_ROSTER = ["llama3.2:latest", "qwen2.5:3b", "qwen2.5:7b", "mistral:latest"]
+
+# Rosters compared in the eligibility analysis. Judge eligibility (MARS-027)
+# removes every model that generated one of the segment's candidates, so panel
+# size is roster size minus admitted generators -- which makes the *number of
+# non-generator models* the quantity that matters, not roster size as such.
+CANDIDATE_ROSTERS: dict[str, list[str]] = {
+    "current": LOCAL_ROSTER,
+    "plus_qwen3_14b": [*LOCAL_ROSTER, "qwen3:14b"],
+    "non_generators_only": ["mistral:latest", "qwen3:14b"],
+}
 UNRECORDED_FIELDS = ["goal_context", "prompt_context", "duration_seconds"]
 
 
@@ -103,6 +113,7 @@ def replay(batch: dict[str, Any]) -> dict[str, Any]:
     rebuild_failures: list[dict[str, str]] = []
     multiplicity_of_agreeing: Counter[int] = Counter()
     eligible_panel_size: Counter[int] = Counter()
+    rerank_candidate_sets: list[Any] = []
 
     for entry in batch["candidates"]:
         results = []
@@ -132,6 +143,7 @@ def replay(batch: dict[str, Any]) -> dict[str, Any]:
             multiplicity_of_agreeing[candidates[0].multiplicity] += 1
         if branch is CandidateBranch.RERANK_REQUIRED:
             eligible_panel_size[len(eligible_judges(LOCAL_ROSTER, candidates))] += 1
+            rerank_candidate_sets.append(candidates)
 
     total = len(batch["candidates"])
     return {
@@ -149,6 +161,28 @@ def replay(batch: dict[str, Any]) -> dict[str, Any]:
         "single_candidate_multiplicity": dict(sorted(multiplicity_of_agreeing.items())),
         "judge_roster": LOCAL_ROSTER,
         "eligible_judges_on_rerank_segments": dict(sorted(eligible_panel_size.items())),
+        "roster_comparison": {
+            name: {
+                "roster": roster,
+                "panel_sizes": dict(sorted(Counter(
+                    len(eligible_judges(roster, c)) for c in rerank_candidate_sets
+                ).items())),
+                "n_rerank_segments": len(rerank_candidate_sets),
+                "share_at_least_2": (
+                    sum(1 for c in rerank_candidate_sets
+                        if len(eligible_judges(roster, c)) >= 2)
+                    / len(rerank_candidate_sets)
+                    if rerank_candidate_sets else None
+                ),
+                "share_at_least_3": (
+                    sum(1 for c in rerank_candidate_sets
+                        if len(eligible_judges(roster, c)) >= 3)
+                    / len(rerank_candidate_sets)
+                    if rerank_candidate_sets else None
+                ),
+            }
+            for name, roster in CANDIDATE_ROSTERS.items()
+        },
         "per_child_branches": {c: dict(v) for c, v in sorted(per_child.items())},
         "rebuild_failures": rebuild_failures,
         "caveat": (
@@ -184,11 +218,24 @@ def render(report: dict[str, Any]) -> None:
 
     print(f"\n  eligible judges on the {report['branches'].get('rerank_required', 0)} "
           f"rerank segments (roster of {len(report['judge_roster'])})")
-    for size, count in report["eligible_judges_on_rerank_segments"].items():
+    for size, count in report["eligible_judges_on_rerank_segments"].items():  # noqa: E501
         print(f"  {size} eligible{'':<17}{count:>9}")
 
     if report["rebuild_failures"]:
         print(f"\n  !! {len(report['rebuild_failures'])} responses failed to rebuild")
+
+
+def render_roster_comparison(report: dict[str, Any]) -> None:
+    comparison = report.get("roster_comparison")
+    if not comparison:
+        return
+    n = next(iter(comparison.values()))["n_rerank_segments"]
+    print(f"\n  eligible-judge panels by roster, over the {n} rerank segments")
+    print(f"    {'roster':<22}{'size':>5}{'panel sizes':>22}{'>=2':>8}{'>=3':>8}")
+    for name, entry in comparison.items():
+        sizes = ", ".join(f"{k}:{v}" for k, v in entry["panel_sizes"].items())
+        print(f"    {name:<22}{len(entry['roster']):>5}{sizes:>22}"
+              f"{entry['share_at_least_2']:>7.0%}{entry['share_at_least_3']:>8.0%}")
 
 
 def main() -> None:
@@ -200,6 +247,7 @@ def main() -> None:
     report = replay(json.loads(BATCH_PATH.read_text()))
     OUT_PATH.write_text(json.dumps(report, indent=2) + "\n")
     render(report)
+    render_roster_comparison(report)
     print(f"\nWrote {OUT_PATH}")
 
 

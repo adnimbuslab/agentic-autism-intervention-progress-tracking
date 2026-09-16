@@ -11,7 +11,9 @@
     "candidate_count": 2,
     "top_choice_support": 1.0,
     "judges_used": [
-      "mistral:latest"
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
     ],
     "discarded_judges": []
   },
@@ -27,7 +29,9 @@
     "candidate_count": 2,
     "top_choice_support": 1.0,
     "judges_used": [
-      "mistral:latest"
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
     ],
     "discarded_judges": []
   },
@@ -43,6 +47,5090 @@
     "candidate_count": 1,
     "top_choice_support": null,
     "judges_used": [],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_050800.cha_seg_025": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_034": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_050800.cha_seg_040": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_050800.cha_seg_045": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060622.cha_seg_015": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060406.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_016": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:7b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060819.cha_seg_017": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060819.cha_seg_022": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_018": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060819.cha_seg_024": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "brett",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_050800.cha_seg_064": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "brett",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_046": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_014": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060819.cha_seg_020": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_063": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_050800.cha_seg_066": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_050800.cha_seg_020": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060207.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060207.cha_seg_011": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_033": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060819.cha_seg_025": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_040": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "brett",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_035": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060207.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_051002.cha_seg_045": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "brett_flusberg_brett_060819.cha_seg_014": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "brett",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_050": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_086": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030700.cha_seg_021": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_020800.cha_seg_035": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030000.cha_seg_008": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_020800.cha_seg_046": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "carl",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_083": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_020800.cha_seg_020": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_090": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_101": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "carl",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030000.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030000.cha_seg_016": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_020800.cha_seg_012": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030000.cha_seg_025": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_023": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030000.cha_seg_002": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_070": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "carl",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_020800.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_029": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_108": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_043": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_088": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "carl",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030700.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_020800.cha_seg_040": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_055": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030700.cha_seg_003": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "carl",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_020800.cha_seg_018": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_085": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_030000.cha_seg_021": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "carl_rollins_carl_021100.cha_seg_064": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "carl",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070106.cha_seg_017": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070106.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_065": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_071001.cha_seg_009": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070106.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_074": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_008": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "jack",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070106.cha_seg_016": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070315.cha_seg_002": {
+    "status": "abstained",
+    "reason_code": "insufficient_valid_judge_responses",
+    "child_id": "jack",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": null,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": [
+      [
+        "qwen3:14b",
+        "unparseable"
+      ]
+    ]
+  },
+  "jack_flusberg_jack_060900.cha_seg_046": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070726.cha_seg_002": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "jack",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_027": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_071001.cha_seg_022": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_076": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_061028.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_064": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_071001.cha_seg_011": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_042": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_061028.cha_seg_018": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "jack",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_061028.cha_seg_027": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "jack",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070106.cha_seg_004": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_077": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "jack",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_037": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_043": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_070106.cha_seg_009": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_061028.cha_seg_026": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "jack_flusberg_jack_060900.cha_seg_025": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "jack",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020800.cha_seg_046": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_030100.cha_seg_022": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_025": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_021100.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_021100.cha_seg_020": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_043": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_018": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_021100.cha_seg_040": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_021100.cha_seg_024": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020800.cha_seg_045": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020800.cha_seg_028": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_034": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020800.cha_seg_050": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_021100.cha_seg_009": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_021100.cha_seg_034": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020800.cha_seg_027": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.95,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020800.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:7b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_016": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_035": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.75,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_046": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_031": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_030100.cha_seg_023": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_021100.cha_seg_011": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020800.cha_seg_048": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_030100.cha_seg_018": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_030": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_020500.cha_seg_024": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "josh",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "josh_rollins_josh_030100.cha_seg_015": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "josh",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_059": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080224.cha_seg_015": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_081": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070812.cha_seg_017": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_071026.cha_seg_018": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "mark",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080224.cha_seg_001": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "mark",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080700.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070812.cha_seg_029": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "mark",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 2,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": [
+      [
+        "mistral:latest",
+        "incomplete_ordering"
+      ]
+    ]
+  },
+  "mark_flusberg_mark_080700.cha_seg_017": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070812.cha_seg_033": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080700.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_055": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080224.cha_seg_004": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "mark",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080700.cha_seg_002": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070812.cha_seg_004": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080700.cha_seg_014": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "mark",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080224.cha_seg_013": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mark",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070812.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080915.cha_seg_008": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070812.cha_seg_059": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_074": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_054": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080700.cha_seg_009": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_071": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080915.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080915.cha_seg_011": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "mark",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_080915.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070812.cha_seg_046": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mark_flusberg_mark_070700.cha_seg_047": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mark",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030800.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_044": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_042": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_034": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_030": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030600.cha_seg_018": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_038": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030600.cha_seg_037": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_060": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_001": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030800.cha_seg_009": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030600.cha_seg_005": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_045": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_004": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_039": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_024": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_014": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_017": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_050": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_051": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.33,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_018": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_031100.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_054": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_052": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_035": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030600.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030100.cha_seg_009": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "mars",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "mars_rollins_mars_030300.cha_seg_020": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "mars",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_063": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_033": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_050904.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_061012.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_029": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_050904.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_055": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_039": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_060308.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": [
+      [
+        "mistral:latest",
+        "incomplete_ordering"
+      ]
+    ]
+  },
+  "rick_flusberg_rick_040700.cha_seg_021": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_062": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "rick",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_082": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_034": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_060308.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_060308.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:7b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_096": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_050904.cha_seg_023": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_046": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_089": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_070013.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_071": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_060818.cha_seg_008": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_060107.cha_seg_002": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.95,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_060308.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_070013.cha_seg_004": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_040700.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": [
+      [
+        "mistral:latest",
+        "incomplete_ordering"
+      ]
+    ]
+  },
+  "rick_flusberg_rick_070013.cha_seg_007": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_061012.cha_seg_007": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_060818.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "rick_flusberg_rick_061012.cha_seg_008": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "rick",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.85,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_009": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_027": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_022": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_011": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_012": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_009": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_028": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_015": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_042": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.85,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_066": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_flusberg",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_073": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_040": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_005": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_030300.cha_seg_015": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_060": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_011": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:7b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_030300.cha_seg_002": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:7b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_023": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_004": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_028": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_051": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_080": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_059": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020800.cha_seg_010": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020800.cha_seg_005": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_022": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_078": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_027": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_057": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_030300.cha_seg_019": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_063": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:7b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_032": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_029": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_037": {
+    "status": "abstained",
+    "reason_code": "insufficient_valid_judge_responses",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": null,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": [
+      [
+        "qwen3:14b",
+        "unparseable"
+      ]
+    ]
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_044": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_062": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_087": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "roger_rollins",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_013": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_055": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_072": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "sid",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_056": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_008": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "sid",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_021100.cha_seg_015": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_042": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_038": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_007": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "sid",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_011": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_026": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "sid",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_017": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_060": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030500.cha_seg_001": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_049": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_025": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_028": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_054": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_014": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_031": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_021100.cha_seg_053": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_021100.cha_seg_040": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_039": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "sid",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_036": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_034": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "sid",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_004": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_030200.cha_seg_017": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "sid",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "sid_rollins_sid_020200.cha_seg_022": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "sid",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_040": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.85,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_060": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_015": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_056": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_062": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_009": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_009": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_040029.cha_seg_014": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 1.0,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_061": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_061": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "stuart",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030806.cha_seg_016": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.85,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_019": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.95,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_040715.cha_seg_003": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_008": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "stuart",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_012": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_054": {
+    "status": "abstained",
+    "reason_code": "judge_disagreement",
+    "child_id": "stuart",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 3,
+    "top_choice_support": 0.5,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_041": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_043": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_006": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_027": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.85,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_040029.cha_seg_009": {
+    "status": "abstained",
+    "reason_code": "no_reviewable_candidate",
+    "child_id": "stuart",
+    "selected_generator_ids": [],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_abstained",
+    "candidate_count": 0,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030806.cha_seg_020": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_022": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_031009.cha_seg_002": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 1,
+    "top_choice_support": null,
+    "judges_used": [],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_045": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_040715.cha_seg_007": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": null,
+    "control_confidence_state": "not_available_short_circuit",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_020": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "llama3.2:latest"
+    ],
+    "control_confidence": 0.6666666666666666,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 0.6666666666666666,
+    "judges_used": [
+      "qwen2.5:3b",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_040306.cha_seg_018": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:3b"
+    ],
+    "control_confidence": 0.9,
+    "control_confidence_state": "available",
+    "candidate_count": 3,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "mistral:latest",
+      "qwen3:14b"
+    ],
+    "discarded_judges": []
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_049": {
+    "status": "success",
+    "reason_code": null,
+    "child_id": "stuart",
+    "selected_generator_ids": [
+      "qwen2.5:7b"
+    ],
+    "control_confidence": 0.8,
+    "control_confidence_state": "available",
+    "candidate_count": 2,
+    "top_choice_support": 1.0,
+    "judges_used": [
+      "llama3.2:latest",
+      "mistral:latest",
+      "qwen3:14b"
+    ],
     "discarded_judges": []
   }
 }

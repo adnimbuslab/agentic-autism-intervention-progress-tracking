@@ -38,6 +38,16 @@ from src.backend.ml.extraction.mars.blinding import JudgePresentation
 
 JUDGE_PROMPT_VERSION = "mars-judge-v1"
 
+# A ranking reply is a few tokens, so 256 was ample for an ordinary model --
+# and silently fatal for a reasoning one. Ollama streams a reasoning model's
+# chain of thought against the same budget before any answer appears, so
+# qwen3:14b spent all 256 tokens thinking, returned empty content, and was
+# discarded as unparseable on 165 of 165 rerank segments while still appearing
+# on the panel. At 2048 it completes its reasoning (~450 tokens) and answers
+# correctly. Models that do not reason stop early and pay nothing for the
+# larger ceiling.
+DEFAULT_JUDGE_MAX_TOKENS = 2048
+
 SYSTEM_PROMPT = """You rank candidate structured observations extracted from a \
 transcript of a child's session.
 
@@ -103,7 +113,7 @@ class OllamaRankingJudge:
         api_key: str,
         model: str,
         temperature: float = 0.0,
-        max_tokens: int = 256,
+        max_tokens: int = DEFAULT_JUDGE_MAX_TOKENS,
     ) -> None:
         self._client = AsyncOpenAI(base_url=base_url, api_key=api_key)
         self._model = model
@@ -135,6 +145,13 @@ class OllamaRankingJudge:
                         "content": build_judge_user_prompt(source_text, presentation),
                     },
                 ],
+                # Asks reasoning models to skip their chain of thought. Ollama
+                # honours this on its native /api/chat endpoint; on the
+                # OpenAI-compatible /v1 endpoint used here it is currently
+                # ignored, so it is a request rather than a guarantee and the
+                # token budget below is what actually makes such models usable.
+                # Non-reasoning models ignore it.
+                extra_body={"think": False},
             )
         except APIError:
             # An unreachable or erroring judge is a judge that did not answer.

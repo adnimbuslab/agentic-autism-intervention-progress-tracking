@@ -136,6 +136,105 @@
       "sha256": "e4f4ffa7e4eaf907c3f289dbfcd315230a8228a50479a67610fbd9a095dd5e59"
     },
     {
+      "path": "tests/eval/extraction/results/annotation_sheets/adjudication_sheet_updated.csv",
+      "description": "Returned adjudication sheet: 503 decisions with rationales (primary data)",
+      "produced_by": "adjudicator (consensus of both annotators)",
+      "pinned": true,
+      "present": true,
+      "bytes": 272213,
+      "sha256": "0e2a38568659b73a4783cfe0011555aeba3a277195af2052ad41e4e2bd5085e9"
+    },
+    {
+      "path": "tests/eval/extraction/results/adjudications.json",
+      "description": "Imported adjudication decisions",
+      "produced_by": "import_adjudication_sheet",
+      "pinned": true,
+      "present": true,
+      "bytes": 127198,
+      "sha256": "8f4a0790e921029036885fc97e99f97f8bcc4a2697a17fee7a1189da2ce19de3"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_labels.json",
+      "description": "Adjudicated gold standard: 330 of 330 segments (Table 5)",
+      "produced_by": "adjudicate --decisions",
+      "pinned": true,
+      "present": true,
+      "bytes": 121469,
+      "sha256": "32327d787648dac90c71ebf6af8f566a211f0507ab9aae4f499fb21cec32fc38"
+    },
+    {
+      "path": "tests/eval/extraction/results/scored_against_gold.json",
+      "description": "Per-generator judgements against gold, behavior excluded (Tables 6-8)",
+      "produced_by": "score_against_gold --behavior-match excluded",
+      "pinned": true,
+      "present": true,
+      "bytes": 215465,
+      "sha256": "593674e34bcb9470ee4532e413af4ef507d405ac13e1872e61b04fe4d4347094"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_outcomes.json",
+      "description": "MARS decisions over all 330 segments, 5-model judge roster",
+      "produced_by": "run_mars",
+      "pinned": true,
+      "present": true,
+      "bytes": 138754,
+      "sha256": "5310fdff92588266f8afc73ab46bbd9306aacf0cd7d1025b0dc10e8b0523595d"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_run_summary.json",
+      "description": "MARS run configuration and per-judge discard rates",
+      "produced_by": "run_mars",
+      "pinned": true,
+      "present": true,
+      "bytes": 1374,
+      "sha256": "b9b66b921a6984ecab296ef8b4d99be9103d8b1db0d7a9721a4414894d5cc4ec"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_evaluation.json",
+      "description": "MARS accuracy, coverage, abstention profile, ceiling (Tables 9-10)",
+      "produced_by": "mars_evaluation",
+      "pinned": true,
+      "present": true,
+      "bytes": 1190,
+      "sha256": "0ca48149ada6eb786f8dd7f322709ca12aaac46a666ff94320bcf670a2a8b77a"
+    },
+    {
+      "path": "tests/eval/reporting/results/reporting_groundedness.json",
+      "description": "Reporting-layer groundedness run; records the 11/11 fallback finding",
+      "produced_by": "tests.eval.reporting.groundedness",
+      "pinned": true,
+      "present": true,
+      "bytes": 8015,
+      "sha256": "10023e01112620842758db4c1051c8e39d75b9ed07d4a5b3bddfd58d88e34c91"
+    },
+    {
+      "path": "tests/eval/extraction/results/paper_metrics.json",
+      "description": "Consolidated paper-ready metrics, derived from the artefacts above",
+      "produced_by": "paper_metrics",
+      "pinned": true,
+      "present": true,
+      "bytes": 10904,
+      "sha256": "897d7bc12379ad49d09a160111bf7198672ed304d4c1c5a690af3ff67c54a159"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_selection_analysis.json",
+      "description": "Per-field selection quality vs both baselines (Tables 11-12)",
+      "produced_by": "mars_selection_analysis",
+      "pinned": true,
+      "present": true,
+      "bytes": 2675,
+      "sha256": "639c663bd4f8adfbca4183523f5fcc1cba19b88828f75326753df24819b7dad9"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_branch_replay.json",
+      "description": "Candidate-stage branch distribution and judge-roster comparison",
+      "produced_by": "mars_branch_replay",
+      "pinned": true,
+      "present": true,
+      "bytes": 3685,
+      "sha256": "33466b195d7413d68788354e57ef1777e992ace42fe42f825483b202cd173dc8"
+    },
+    {
       "path": "docs/annotation_codebook.md",
       "description": "The three rules, with decision tests and worked examples",
       "produced_by": "written",
@@ -145,11 +244,19 @@
     },
     {
       "path": "docs/paper/results_reliability.md",
-      "description": "Manuscript section: methods, results, limitations",
+      "description": "Manuscript section: reliability methods, results, limitations",
       "produced_by": "written",
       "pinned": false,
       "present": true,
       "bytes": 23251
+    },
+    {
+      "path": "docs/paper/results_extraction.md",
+      "description": "Manuscript section: extraction/MARS methods and gold-standard results",
+      "produced_by": "written",
+      "pinned": false,
+      "present": true,
+      "bytes": 31718
     },
     {
       "path": "docs/paper/reliability_mathematics.md",
@@ -206,6 +313,62 @@
       "pinned": false,
       "present": true,
       "bytes": 146126
+    },
+    {
+      "path": "docs/paper/figures/fig16_field_accuracy.png",
+      "description": "Figure 16 - per-field extraction accuracy against gold",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 47965
+    },
+    {
+      "path": "docs/paper/figures/fig17_unsupported.png",
+      "description": "Figure 17 - values asserted where the transcript supports none",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 52277
+    },
+    {
+      "path": "docs/paper/figures/fig18_record_ceiling.png",
+      "description": "Figure 18 - whole-record accuracy and the selection ceiling",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 42998
+    },
+    {
+      "path": "docs/paper/figures/fig19_behavior_overlap.png",
+      "description": "Figure 19 - free-text behavior against the human reference band",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 64860
+    },
+    {
+      "path": "docs/paper/figures/fig20_mars_outcomes.png",
+      "description": "Figure 20 - MARS outcomes and comparison against the best generator",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 70875
+    },
+    {
+      "path": "docs/paper/figures/fig21_selection.png",
+      "description": "Figure 21 - selection quality against both baselines",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 91139
+    },
+    {
+      "path": "docs/paper/Manuscript_Working_Draft.docx",
+      "description": "Working-draft manuscript, assembled from the artefacts above",
+      "produced_by": "make_manuscript",
+      "pinned": false,
+      "present": true,
+      "bytes": 1479159
     }
   ]
 }

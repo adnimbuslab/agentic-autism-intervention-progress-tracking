@@ -1,0 +1,3657 @@
+{
+  "generated_at": "2026-09-15T23:54:32.425748+00:00",
+  "annotators": [
+    "annotator_a",
+    "annotator_b"
+  ],
+  "adjudicator": "consensus:annotator_a+annotator_b (both annotators, jointly, working from docs/annotation_codebook.md)",
+  "source_batch": "annotation_batch.json",
+  "level": "source_gold",
+  "fields": [
+    "domain",
+    "behavior",
+    "modality",
+    "prompt_level",
+    "outcome"
+  ],
+  "n_segments_double_annotated": 330,
+  "n_segments_in_gold": 330,
+  "counts": {
+    "adjudicated": 322,
+    "agreed": 8
+  },
+  "gold": {
+    "brett_flusberg_brett_050800.cha_seg_020": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated general words like 'animal' until the adult modeled 'horse', then said 'horse'.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_050800.cha_seg_025": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Talked about looking at and putting on the movie.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_050800.cha_seg_040": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Asked for the gate to be put in the placemats and repeated the request.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_050800.cha_seg_045": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'I want the cow' and then stated what he wanted and did not want.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_050800.cha_seg_064": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered yes/no questions about whether it was cold and what color it was.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_050800.cha_seg_066": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "First said orange, then answered that the cow was resting.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_014": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered broccoli when asked to name lettuce.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_016": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said you are putting lemon and then gave incomplete answers about Jenny and the stool.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_018": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered questions about where Jenny and Shannon were.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_033": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Said a knife can cut someone badly and repeated that answer when asked.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_034": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Refused moving away, talked about the present, and said 'open it'.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_035": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Tried to answer whose cars and trucks they were, first saying yours and then Shannon's.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_040": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Named the truck and car colors as orange, yellow and blue.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_045": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'woof' after the adult began asking about a noise.",
+        "modality": "unknown",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_046": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Answered 'yes' when asked if he wanted to do the activity.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_055": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said he wanted to go night-night and asked to take him to bed.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_051002.cha_seg_063": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Asked about going to a father's house and then protested that he did not want to go.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060207.cha_seg_005": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Commented on having two green spaces and counted 'one two'.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060207.cha_seg_006": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Explained that he could have two raisins because he played Candy Land and passed two.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060207.cha_seg_011": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Described the girl's shirt and guitar and said she was inside.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060406.cha_seg_001": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said he wanted to make his own and answered yes about playing later.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060622.cha_seg_009": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Asked can I play after being told there would be no work-box activity.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060622.cha_seg_015": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered 'letters' about school and then said he did not want to talk.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060819.cha_seg_007": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Tried several words related to the material and attempted to sound out a word after prompting.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "approximation"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060819.cha_seg_014": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said 'yeah' when asked if he wanted the red clay made into a ball.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060819.cha_seg_017": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Explained where to throw the bowling ball and what happens if it goes in the gutter.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060819.cha_seg_020": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Talked about activities and answered that they ate dinner.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060819.cha_seg_022": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Recalled the song and described what happened to the meatball.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060819.cha_seg_024": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered that it was a big tree and that meatballs were on it.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "brett_flusberg_brett_060819.cha_seg_025": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Explained why the meatball fell and later answered what he did in circle time.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "brett",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_020800.cha_seg_006": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Closed the barn doors and rearranged the toys after repeated directions.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_020800.cha_seg_012": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Gathered the toys to put them in the bucket after the instruction was rephrased.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_020800.cha_seg_018": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Threw the used towels in the trash and then ran when it was time to go.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_020800.cha_seg_020": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Left the marker activity instead of helping put the markers away.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "incorrect"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_020800.cha_seg_035": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said hi and waved after the adult repeatedly greeted and waved.",
+        "modality": "multimodal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_020800.cha_seg_040": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Pushed the tractor back inside and closed the barn door during play.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_020800.cha_seg_046": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Did not search for or identify the pig when asked where it was.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "no_response"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_023": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'on hand' after the adult said and demonstrated the phrase.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_029": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Put the item in and then said done.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_043": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named the house and put the house piece into the card.",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_050": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Took out the airplane, held it up and labeled it as airplane.",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_055": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Named animals while putting the toys into the barn.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_064": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Pretended to feed the horse and laughed during the pretend eating game.",
+        "modality": "multimodal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_070": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Kissed the toy dog, made it eat and laughed during pretend play.",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_083": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Said 'airplane' and made an airplane sound during the play exchange.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_085": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Named the school bus and airplane, made vroom sounds and flew the airplane.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_086": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Ran back after the cleanup instruction but did not visibly put the puzzle away.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "partial"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_088": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Stomped, turned away, and vocalized around the book interaction.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_090": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Opened and closed the toy door after the adult said 'open.'",
+        "modality": null,
+        "prompt_level": "partial_physical",
+        "outcome": "partial"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_101": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Found the chicken and then labeled it 'a chicken'.",
+        "modality": "verbal",
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_021100.cha_seg_108": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named a teddy bear and a house after the adult pointed to the cards.",
+        "modality": "verbal",
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030000.cha_seg_002": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Dumped out the puzzle after being asked to do so.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030000.cha_seg_008": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'ice cream' and the adult repeated the words.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030000.cha_seg_010": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Worked on fitting puzzle pieces and was positively acknowledged by the adult.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030000.cha_seg_016": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Corrected the upside-down wheel and placed it properly after verbal feedback.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030000.cha_seg_021": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'stop' while handling the stop-sign piece and was told 'that's right'.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030000.cha_seg_025": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated words such as 'thank you', 'airplane', and 'up here' during the exchange.",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030700.cha_seg_003": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said he broke the baby toy, then put the shoes back on and continued talking about the toy.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030700.cha_seg_005": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Named body parts and the daddy potato, answered yes, and continued assembling the toy.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "carl_rollins_carl_030700.cha_seg_021": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Turned off the water when asked and commented that the bubbles were gone.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "carl",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_006": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Produced the phrase 'the right colors' across several short turns.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_008": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Read or said the words shown, including greedy, color and hearts.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_010": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Correctly named the picture as a dog but then gave unclear responses to the reading question.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_019": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Identified the letter I, attempted the phrase with Indian and then repeated Indian.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_025": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Named colors including blue, orange and pink, with correction and modeling from the adult.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_027": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said 'bye' and 'byebye' during the transition to another room.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_037": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered an alphabet-work question with NFL Today and then said write the NFL Today.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_042": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Answered 'yes' to the plan to buy a Christmas tree.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_043": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Refused the drawing activity by saying he hated it and then saying no.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_046": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Said the cars go on the road, described the direction, and answered yes about drawing the school.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_064": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "First said guy, then guys and dinosaur after repeated naming questions.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_065": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Asked the adult if the dinosaurs were hers.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_074": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said he would get the chipmunks and named Alvin, Simon and Theodore.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_076": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered yes about school and number work but did not give the number worked on.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_060900.cha_seg_077": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Named Christmas gifts he wanted, including chipmunks and a Nerf football.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_061028.cha_seg_018": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered 'seven and eleven' when asked if the object was a radio.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "incorrect"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_061028.cha_seg_019": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Talked about a television phrase and Freddie Rogers during the conversation.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_061028.cha_seg_026": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Made repeated comments about Ford and Toyota while mother offered toys.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_061028.cha_seg_027": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Corrected or commented that the toy was a Ford during play.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070106.cha_seg_004": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated Nanny Bartlane instead of responding to the tennis-ball question.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070106.cha_seg_005": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "First called the item a dolly, then repeated 'gingerbread' and later labeled a giraffe.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070106.cha_seg_009": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated vest and correctly labeled the ball.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070106.cha_seg_013": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Talked about the toys coming back and agreed to visit the other house.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070106.cha_seg_016": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said no to one play option and then said he wanted to lie down.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070106.cha_seg_017": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Declined the play offers and said he was staying to nap with baby Joy.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070315.cha_seg_002": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Read the sentence inside was a toy kangaroo.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "approximation"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_070726.cha_seg_002": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered 'okay' to a yes/no question about whether someone played with Bassillio.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_071001.cha_seg_009": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Did not roll the play-doh after repeated instructions and asked for play-doh during the task.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "no_response"
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_071001.cha_seg_011": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Agreed to make pretend pizza and then said he wanted Amazing Spiderman on the play-doh.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "jack_flusberg_jack_071001.cha_seg_022": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Repeated 'stop' to protest the adult joining the writing activity.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "jack",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_013": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Opened the door after the instruction and then smiled and held the clinician's hand.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_016": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Went to the door after being told to open it, but did not open it in the visible segment.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "partial"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_018": {
+      "field_values": {
+        "domain": "sensory",
+        "behavior": "Pulled, pushed, and held the poles while vocalizing during exploration.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_019": {
+      "field_values": {
+        "domain": "sensory",
+        "behavior": "Turned the water off after being instructed to do so.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_024": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Turned the pages and then closed the book.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_025": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Hung from the railing while the adult bounced him and talked about hopping.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_030": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Opened the door after reaching for the doorknob on his own.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_031": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Opened the juice spout and drank after the adult said it needed to be opened.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_034": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Sat down after being told to sit and moved with the clinician toward the stairs.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_035": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Grabbed the clinician's hand, went to the door, and tried to open it.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_043": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Pointed to parts of the elephant picture and grabbed the clinician's arm.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020500.cha_seg_046": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Reached for the juice and later gave it to the clinician to get help with it.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020800.cha_seg_010": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Walked to the clinician, vocalized and touched the clinician's shoulder.",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "agreed"
+    },
+    "josh_rollins_josh_020800.cha_seg_027": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said an approximation of 'pig' after the adult mentioned the pigs.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "approximation"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020800.cha_seg_028": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Did not place the duck puzzle piece despite repeated directions and attention cues.",
+        "modality": null,
+        "prompt_level": "model",
+        "outcome": "no_response"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020800.cha_seg_045": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Looked at the puzzle while the adult demonstrated where the piece should go.",
+        "modality": null,
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020800.cha_seg_046": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Put his hand on the puzzle piece after the adult moved it to the correct spot, but did not finish pushing it in.",
+        "modality": null,
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020800.cha_seg_048": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Repeated 'put in' and then pushed the puzzle piece into place.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_020800.cha_seg_050": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Reached toward the puzzle after being told to push the piece in, but did not complete the placement.",
+        "modality": null,
+        "prompt_level": "model",
+        "outcome": "no_response"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_021100.cha_seg_003": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Tapped the wall while walking after the adult talked about dots.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_021100.cha_seg_009": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Dropped another toy into the container and then moved away.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_021100.cha_seg_011": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'more' to request more blocks and received another block.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_021100.cha_seg_020": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Handled the blocks while giving unclear vocal responses to questions about finding more blocks.",
+        "modality": "unknown",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_021100.cha_seg_024": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Made an unclear response to the boy question, did not clearly stand up, and later repeated 'doors'.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_021100.cha_seg_034": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Took the adult's hand and walked away instead of climbing the slide.",
+        "modality": "gestural",
+        "prompt_level": "gestural",
+        "outcome": "incorrect"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_021100.cha_seg_040": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Took a Lego and threw it in while vocalizing, then made more jargon sounds.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_030100.cha_seg_015": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Cried and held his head after bumping into the machine.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_030100.cha_seg_018": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Cried and moved away when the clinician tried to lead him.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "partial"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_030100.cha_seg_022": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Moved toward the clinician after she repeatedly called him to look.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "josh_rollins_josh_030100.cha_seg_023": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Continued playing with the horse instead of putting the cowboy on it.",
+        "modality": null,
+        "prompt_level": "gestural",
+        "outcome": "incorrect"
+      },
+      "child_id": "josh",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_019": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said the item was broken, then no, then broken again when asked about the problem.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_047": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said no to coming over and then yes to reading the book.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": null
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_054": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named several pictured items after a sound cue from the adult.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_055": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named the people in the boat as a boy and a bear.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_059": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Gave different answers for who was on the cow and correctly said the cat was not on it.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_071": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Gave Ginger Bread Man when asked to show under.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_074": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered that the horse had a hat and said horses do not wear hats.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070700.cha_seg_081": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Tried to read the words, saying 'jam' and 'lantern,' then said 'no' when asked if it was jam.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070812.cha_seg_001": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Identified the day as Thursday and then said today is Thursday.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070812.cha_seg_004": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named Pape as the person who drove him to school but did not make the full sentence requested.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070812.cha_seg_017": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated front after the adult model.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070812.cha_seg_029": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Used 'in' in the sentence 'sit in back seat of car.'",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070812.cha_seg_033": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'good' after the adult said 'sleep'.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070812.cha_seg_046": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'stayed' and then answered 'room' when asked where he stayed.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_070812.cha_seg_059": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Answered yes to playing a game but did not name which game he wanted.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_071026.cha_seg_018": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Described the balloon as ripping and broken.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "agreed"
+    },
+    "mark_flusberg_mark_080224.cha_seg_001": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said it broke and repeatedly requested more balloon.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080224.cha_seg_004": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Described a boy holding a balloon and named the balloon color, but did not give the requested full sentence.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080224.cha_seg_013": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated blowing to complete the adult phrase about the balloon.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080224.cha_seg_015": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said the balloon was bigger and broken, then asked done.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080700.cha_seg_001": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Produced short phrases using 'play' and named who plays ball but did not give the requested full sentence.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080700.cha_seg_002": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Produced a short sentence about playing ball and tried to answer who he plays with.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080700.cha_seg_003": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Answered yes about playing ball at school.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080700.cha_seg_009": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "First said play duck toy and then repeated I play duck toy after the adult model.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080700.cha_seg_014": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said 'stop' and 'block' after the adult asked him to look.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "incorrect"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080700.cha_seg_017": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named the slide and swing when asked what else he played with.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080915.cha_seg_005": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said not to eat play-doh and later identified the color as white.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080915.cha_seg_008": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Clarified the word 'boomerang' after the adult asked what he had said.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080915.cha_seg_010": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said phrases about a kite and balloon during the exchange.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mark_flusberg_mark_080915.cha_seg_011": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Said yes to balloons in the sky, then gave balloon again when asked what else could go there.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mark",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_009": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Walked away toward the camera instead of staying with the activity.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_024": {
+      "field_values": {
+        "domain": null,
+        "behavior": "Looked at the camera while the clinician tried to lead him back to feed the chickens.",
+        "modality": null,
+        "prompt_level": "partial_physical",
+        "outcome": "no_response"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_030": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Did not engage with the puzzle despite the adult's repeated attention prompts.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "no_response"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_034": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Put the puzzle piece in after being told to turn it.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_035": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Removed puzzle pieces after being told to take out the head, but not the requested piece.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_038": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Climbed up the slide after the adult told him to climb.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_042": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Pushed the door open after being asked and said bye.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_045": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Put the faucet back in after the adult clarified that it had to be pushed into the hole.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_051": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Took pieces out of the puzzle after the adult gave repeated instructions.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030100.cha_seg_052": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Put one puzzle piece in, then did not respond to the next body-part question.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "partial"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_001": {
+      "field_values": {
+        "domain": null,
+        "behavior": "Made an unclear vocal response.",
+        "modality": "unknown",
+        "prompt_level": null,
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_004": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Continued the counting sequence with two, three and four as pages were turned.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_005": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Moved away from the book activity and only turned back when his name was called.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_006": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Made unclear vocal responses when offered a marker.",
+        "modality": "unknown",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "mars",
+      "source": "agreed"
+    },
+    "mars_rollins_mars_030300.cha_seg_014": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Put the shape through the correct hole after the adult showed where it should go.",
+        "modality": null,
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_017": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Helped squeeze the glue after the adult physically assisted the movement.",
+        "modality": null,
+        "prompt_level": "partial_physical",
+        "outcome": "correct"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_018": {
+      "field_values": {
+        "domain": "sensory",
+        "behavior": "Played with the sticky glue instead of responding to the request to push.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "incorrect"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_020": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Played with the eye pieces instead of following the glue and squeeze instructions.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_039": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Continued scribbling on the mirror while the adult modeled the letter M.",
+        "modality": null,
+        "prompt_level": "model",
+        "outcome": "approximation"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_044": {
+      "field_values": {
+        "domain": null,
+        "behavior": "Made jargon sounds while the adult wiped the mirror.",
+        "modality": "unknown",
+        "prompt_level": null,
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_050": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Reached and vocalized for a shape, then pulled it from the adult's hand.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_054": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Repeated 'five trucks' several times, including when the adult moved on to counting one.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030300.cha_seg_060": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Tried to open the toy, hit it, and then stopped after repeated 'open it' directions.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030600.cha_seg_005": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Picked up a train when asked what he found but did not verbally name it.",
+        "modality": "gestural",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030600.cha_seg_006": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Repeated 'bye' during several questions and continued playing with the garage toy.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030600.cha_seg_018": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Opened the garage door after being told to open the house and tried to put the train in.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030600.cha_seg_037": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Made a dog-like 'roof roof' sound after hearing the adult say 'doggie.'",
+        "modality": "unknown",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030800.cha_seg_009": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Vocalized while the adult demonstrated putting the bike piece into the puzzle.",
+        "modality": "unknown",
+        "prompt_level": "model",
+        "outcome": "unknown"
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_030800.cha_seg_010": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Put the puzzle piece in after the adult acknowledged the placement.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "mars_rollins_mars_031100.cha_seg_001": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Tried to attach the cart to the tractor and vocalized when it was difficult.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "mars",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_019": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Used 'moo' for an animal and then repeated 'horse' after the adult named it.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_021": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Made an unclear vocalization and did not clearly put the item down after being told.",
+        "modality": "unknown",
+        "prompt_level": "verbal",
+        "outcome": "no_response"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_029": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Repeated words about the dishes and color, then asked to go to the bathroom.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_033": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Talked about making and cooking hotcakes during pretend play.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_034": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated cake and said it cook while looking at the play item.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_039": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Identified the character as Bert.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "agreed"
+    },
+    "rick_flusberg_rick_040700.cha_seg_046": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'basket' after the adult told him to put the bear in the basket.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_055": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'Dan' after being asked if he wanted Dan.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_062": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Repeated want Dan.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_063": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Identified the character as Mickey Mouse.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "agreed"
+    },
+    "rick_flusberg_rick_040700.cha_seg_071": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'stairs' after being told to make the figure walk and after the adult said 'up the stairs'.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_082": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Asked for the page and labeled the pictured item as water.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_089": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Named numbers, first saying two and then six after correction.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_040700.cha_seg_096": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "First called the animal a dog, then corrected to kitty cat and said 'meow'.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_050904.cha_seg_005": {
+      "field_values": {
+        "domain": "cognitive",
+        "behavior": "Identified the color as blue.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_050904.cha_seg_013": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Requested the fence, saying want fence after the adult modeled more fence.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "approximation"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_050904.cha_seg_023": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated the word 'no' after being asked to say it.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_060107.cha_seg_002": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered what he was doing and then repeated 'I play' after the adult model.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_060308.cha_seg_001": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'come sit' and then said 'cymbal' after being asked to play quietly.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_060308.cha_seg_003": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said I am play drums when asked what he was doing.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_060308.cha_seg_005": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Spontaneously asked for help and later answered yes when asked if he needed help.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_060308.cha_seg_010": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Responded to repeated questions about what he wanted to play, saying 'put away' and later 'play.'",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_060818.cha_seg_008": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Made an unclear response, then said 'I playing' and 'pencil' when asked what the adult was doing.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_060818.cha_seg_013": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered what he was doing by saying I play eraser, and repeated it when asked again.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_061012.cha_seg_007": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said off when asked what he was taking out and later said whoops.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_061012.cha_seg_008": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Talked about giving characters to the Count and Guy Smiley during toy play.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_061012.cha_seg_013": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Responded guitar and then identified Big Bird as the one playing the guitar.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_070013.cha_seg_004": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Talked about playing with Gonzo, biting it, and where he wanted to leave it.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_070013.cha_seg_006": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Asked the adult questions about Potato Head and whether he was going to school.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "rick_flusberg_rick_070013.cha_seg_007": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Asked to play with an item and answered yes during the conversation.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "rick",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_011": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named a horsie, then repeated 'cow' after the adult provided the word.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_013": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named a horsie, then echoed the question instead of naming the birds.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_019": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Repeated making donut while looking at the new play item.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'no' and corrected the book description to 'kids.'",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_027": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Tried to name or talk about an item, but much of the speech was unclear.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_028": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'play your blocks' and 'build a building' after mother said them.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Responded 'yeah' and then offered a bite.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_066": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Talked about the car falling, then repeated put the blocks away without showing the cleanup action.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said good boy when asked which car belonged to Ann.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Used bedtime language during pretend play, saying 'go to sleep' and 'good night.'",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_009": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'need help' after the adult asked whether he needed help.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "partial"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_012": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'give me the airplane' after the adult gave that exact phrase.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeatedly called the astronaut a duck and also said 'hat'.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_022": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated phrases about no rain and taking pants after the adult models.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named the Etch A Sketch and referred to stairs, which the adult confirmed.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_042": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated location words and phrases such as bag and in basket.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Described setting the table and eating supper during pretend play.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered 'tower' to a naming question and repeated 'build a tower' during play.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Said he was playing with a tower and that he was going to make a tower.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_013": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said Ernie was taking a bath, which the adult confirmed, then gave another item label.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_015": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Asked where the ABC puzzle was and said he did not know.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered that Santa would bring toys and a Christmas tree.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Answered yes about coloring and talked about putting the people to sleep in the barn.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said he was playing with toys, then called the adult table your table and was corrected.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_006": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated several adult phrases such as come here and sit down and play.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Requested to play with the car by saying 'I play car please.'",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Requested to play with the bus and then said he wanted to lie down and sleep.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_009": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "First said 'look up' but then answered that he was doing a puzzle.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named Lee School after the adult gave part of the school name.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Said he wanted to do the puzzle and later talked about wanting to color.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_flusberg",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_001": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Led the adult by the hand to the cabinet and moved the adult hand upward to show what he wanted.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_005": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Tried the door after being told to try, but did not complete the action.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_011": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Did not put the blocks on the shelf and chose a hammer instead.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_022": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Reached up for the balloon while watching it float.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_023": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Caught and grabbed the balloon during the play routine.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_027": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Picked up the flat balloon and showed it to the examiner.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "agreed"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_028": {
+      "field_values": {
+        "domain": "sensory",
+        "behavior": "Put the balloon to his face and bit it while playing.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_029": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Released the balloon after being told to let it go.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_032": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Reached for and watched the balloon during play.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_037": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Led the adult to the sandbox, placed the adult's hand on the lid and pushed up on it.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_040": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Hit the wrench in the sand after the adult made a 'knock knock' sound.",
+        "modality": null,
+        "prompt_level": "model",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_044": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Played with the truck while the adult talked and made car sounds.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_051": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Played with the balloon, picked it up, and walked away from the vent.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_057": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Pushed the blocks over once, then stacked blocks instead of knocking them down.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_059": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Said 'go' and pushed the truck during the play routine.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_060": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Picked up the balloon and handed it to the adult after the adult pointed it out.",
+        "modality": "gestural",
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_062": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Ran to get the balloon, gave it to the examiner, and put it to his mouth.",
+        "modality": "gestural",
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_063": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Pointed to himself in the mirror during the shared interaction.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_073": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Kept trying to use the hammer and did not put the lid back on.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_078": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Hit the trash can with a wrench while the adult repeatedly labeled 'trash'.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_080": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'go' in the truck-play routine and then pushed the truck.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_087": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Turned the toy truck around after the adult said 'come back'.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_005": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Reached for the cookie and later said get set, go while moving around the room.",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_010": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Made an unclear vocal sound after the adult modeled 'mmmm' during pretend play.",
+        "modality": "unknown",
+        "prompt_level": "model",
+        "outcome": "unknown"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_004": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Said door and guided the adult's hand to the door while the adult worked on opening it.",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_013": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Called the bus a car while pointing and then made jargon sounds.",
+        "modality": "multimodal",
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_019": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Climbed back onto the horse and got both knees on it using the wall for support.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_002": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Took out the play-doh and tried to open the container.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_015": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Wrapped play-doh around the rolling pin instead of rolling it out.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "incorrect"
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_019": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Reached into, turned, and banged the play-doh container while looking inside it.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "roger_rollins",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_001": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Reached upward for something and brushed away offered items to refuse them.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_007": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Held the balloon toward the adult's mouth to indicate he wanted it blown.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_011": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Played with the cone by putting it in his mouth and on his finger.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_017": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Continued drawing and did not transition despite repeated 'let's go' directions.",
+        "modality": null,
+        "prompt_level": "partial_physical",
+        "outcome": "incorrect"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_022": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Made unclear vocal sounds while looking at the book.",
+        "modality": "unknown",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_028": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Got the carrot and then moved away instead of feeding the baby.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_034": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Walked away and then jumped on the trampoline.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_038": {
+      "field_values": {
+        "domain": "motor",
+        "behavior": "Rolled over the board, walked across the room, and pushed on the door.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_039": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Turned the lights off after the adult commented that they were on.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_042": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Vocalized and pointed to the picture after the adult repeatedly labeled Ernie.",
+        "modality": "gestural",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_049": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Cried during the ball activity after the adult suggested getting the ball.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_056": {
+      "field_values": {
+        "domain": "behavior",
+        "behavior": "Closed the book, cried, and tried to get the ball while the adult repeatedly offered another book.",
+        "modality": null,
+        "prompt_level": "verbal",
+        "outcome": "no_response"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_060": {
+      "field_values": {
+        "domain": "adaptive",
+        "behavior": "Walked away instead of putting the blocks away after the cleanup instruction.",
+        "modality": "unknown",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_020200.cha_seg_072": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Held out his arms to the clinician instead of turning off the light.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "partial"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_021100.cha_seg_015": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Made unclear vocalizations, took the chalk and pointed to the chalkboard.",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_021100.cha_seg_040": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Pointed repeatedly to the board while vocalizing to show what he wanted.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_021100.cha_seg_053": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Tried to put the pig in the pen and fix the fence.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "partial"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_003": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Pushed the Lego back instead of placing it as expected.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_004": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Pointed to the balloon, vocalized, then got it and brought it back after the adult pointed and instructed him.",
+        "modality": "gestural",
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_008": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Connected Legos and hit the toy truck on the floor during play.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_013": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Put the person into the fire truck after the adult pointed to the target location.",
+        "modality": null,
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_014": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Put a person in the truck after the adult pointed to it and said it needed a driver.",
+        "modality": null,
+        "prompt_level": "gestural",
+        "outcome": "correct"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_017": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Pointed to the adult's finger and then to his own while vocalizing.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_025": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Let the balloon go over the vent and later pointed across the room.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_026": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Pointed during a greeting and then moved around on the floor.",
+        "modality": "gestural",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_031": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Put the balloon back over the vent and watched it move.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "agreed"
+    },
+    "sid_rollins_sid_030200.cha_seg_036": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Held the ladder out toward the examiner while vocalizing.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_054": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Looked up and pointed upward in response to the question about where it went.",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030200.cha_seg_055": {
+      "field_values": {
+        "domain": "play",
+        "behavior": "Moved the balloon around and jumped during play.",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "sid_rollins_sid_030500.cha_seg_001": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Made a lion growling sound after the adult labeled the lion and added a verbal cue.",
+        "modality": "unknown",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "sid",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_006": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Answered 'hair' when asked to name an item.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_009": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated cracker during the interaction.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_012": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said no to tickling and requested a cracker.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_022": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Gave an unclear answer to the naming question, then said 'open' when mother suggested opening the book.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "unknown"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_027": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated papa and hello after being asked to say them.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_043": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated do this several times after the adult said it.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_045": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated the phrase 'do this'.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_049": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named nose and later said car during the activity.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "partial"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_056": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said clap when asked how to roll them, even after the adult said roll them.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "incorrect"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_060": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named a bag and then said 'pillow' after the adult's cue.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_061": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated bunny after the adult model.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_062": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'baby' and 'close door'.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_006": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'key' and then answered 'pillow' when asked what the item was.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_008": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated bear and then said sleep after the adult modeled sleeping.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_009": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named baby and then repeated pants after the adult model.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_015": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Produced the short sound 'ba' after the adult mentioned water.",
+        "modality": "unknown",
+        "prompt_level": "verbal",
+        "outcome": "unknown"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_019": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated frog after being asked to say it.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_020": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated squirrel after the adult named it.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_040": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named the body parts as hair and nose.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_041": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named the body part as belly.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "agreed"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_054": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'byebye car' after the adult modeled the phrase.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_061": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Requested more bubbles and changed the phrase to 'want bubble' after modeling.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_016": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'bear' after the adult modeled it and later said 'ball' to a naming question.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_020": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named a toy and a horsie when asked.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_031009.cha_seg_002": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Gave an unclear answer when asked what the item was, and the adult then supplied 'toy'.",
+        "modality": "unknown",
+        "prompt_level": "model",
+        "outcome": "unknown"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_009": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Named the item as 'drum' while it was being presented.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_014": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Said 'piano' and then 'bang' while talking about the toy.",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": null
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_018": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated 'cover' and 'push' and answered yes about playing with toys.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_040715.cha_seg_003": {
+      "field_values": {
+        "domain": "language",
+        "behavior": "Repeated push after the adult said push.",
+        "modality": "verbal",
+        "prompt_level": "model",
+        "outcome": "partial"
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    },
+    "stuart_flusberg_stuart_040715.cha_seg_007": {
+      "field_values": {
+        "domain": "social_communication",
+        "behavior": "Answered yes after the adult repeated and narrowed the question about what he wanted to play with.",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": null
+      },
+      "child_id": "stuart",
+      "source": "adjudicated"
+    }
+  },
+  "adjudicator_note": "Adjudication settles values; it is not a second measurement. One decision-maker resolves each conflict, so there is one sheet and one gold standard. Who that was is recorded above and must be stated in the manuscript: a conflict settled by one of the two annotators is not equivalent to one settled by a third party.",
+  "note": "Gold field values authored from the transcript, model-independent. Segments unresolved on any field are excluded, not defaulted. Accuracy computed against this file is conditional on the adjudicated subset."
+}

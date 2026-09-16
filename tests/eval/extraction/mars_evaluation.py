@@ -23,6 +23,7 @@ Usage:
 
 from __future__ import annotations
 
+import argparse
 import json
 from collections import Counter
 from pathlib import Path
@@ -216,10 +217,25 @@ def _render(report: dict[str, Any]) -> None:
     print(f"  abstentions: {mars['abstention_reasons'] or 'none'}")
 
 
+# Below this share of the gold set, MARS metrics are refused rather than
+# reported. Not a tuning knob: the point is that a partial run is a different
+# experiment, not a noisier version of the full one.
+MIN_OUTCOME_COVERAGE = 0.95
+
+
 def main() -> None:
     # The derived judgements, not gold_labels.json: gold holds field *values*,
     # and score_against_gold turns those into the per-model judgements these
     # metrics are defined over.
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--allow-partial",
+        action="store_true",
+        help="Compute MARS metrics even where the outcomes cover only part of "
+             "the gold set. The coverage is recorded in the output.",
+    )
+    args = parser.parse_args()
+
     scored_path = RESULTS_DIR / "scored_against_gold.json"
     outcomes_path = RESULTS_DIR / "mars_outcomes.json"
     for path, hint in (
@@ -233,11 +249,40 @@ def main() -> None:
             )
 
     scored = json.loads(scored_path.read_text())
+    outcomes = json.loads(outcomes_path.read_text())
+
+    # A MARS metric computed over a fraction of the gold set is not a small
+    # version of the real number, it is a different number wearing its name.
+    # The 3-segment single-judge ablation that produced the first outcomes file
+    # yielded an accuracy of 0.000 and a capture rate of -3.0 against a best
+    # generator of 0.045 -- figures that look like findings and are noise.
+    coverage = len(outcomes) / len(scored["gold"]) if scored["gold"] else 0.0
+    if coverage < MIN_OUTCOME_COVERAGE and not args.allow_partial:
+        raise SystemExit(
+            f"mars_outcomes.json covers {len(outcomes)} of "
+            f"{len(scored['gold'])} gold segments ({coverage:.1%}).\n"
+            "Refusing to report MARS metrics over a partial run: accuracy, "
+            "the oracle capture rate and the abstention profile are all\n"
+            "defined over the whole batch and are meaningless on a subset.\n"
+            "Re-run MARS over the full batch:\n"
+            "  uv run python -m tests.eval.extraction.run_mars ...\n"
+            "or pass --allow-partial to compute them anyway, which records "
+            "the coverage in the output."
+        )
+
     report = build_evaluation(
         scored["gold"], scored["models"],
-        json.loads(outcomes_path.read_text()),
+        outcomes,
         scored.get("scoring_fields"),
     )
+    report["outcome_coverage"] = coverage
+    report["n_outcome_segments"] = len(outcomes)
+    if coverage < MIN_OUTCOME_COVERAGE:
+        report["partial_run_warning"] = (
+            f"MARS outcomes cover {len(outcomes)} of {len(scored['gold'])} gold "
+            f"segments ({coverage:.1%}). These metrics are not comparable to "
+            "the per-generator accuracies, which are computed over the full set."
+        )
     out = RESULTS_DIR / "mars_evaluation.json"
     out.write_text(json.dumps(report, indent=2))
     _render(report)

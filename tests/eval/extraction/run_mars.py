@@ -162,6 +162,14 @@ async def run(
     entries = batch["candidates"][:limit] if limit else batch["candidates"]
     outcomes: dict[str, Any] = {}
     statuses: Counter = Counter()
+    # Per judge: how often it was consulted, and how often its answer was
+    # thrown away. A judge discarded on nearly every segment is not a judge --
+    # it inflates the apparent panel while contributing no opinion, and the run
+    # still reports "success". qwen3:14b did exactly this (165 of 165
+    # unparseable, its reasoning returned in a separate field) and nothing in
+    # the output said so.
+    judge_consulted: Counter = Counter()
+    judge_discarded: Counter = Counter()
     reasons: Counter = Counter()
 
     for index, entry in enumerate(entries, start=1):
@@ -197,6 +205,17 @@ async def run(
             "judges_used": provenance.judge_ids if provenance else [],
             "discarded_judges": provenance.discarded_judges if provenance else [],
         }
+        for judge in (provenance.judge_ids if provenance else None) or []:
+            judge_consulted[judge] += 1
+        # `discarded` must not shadow the segment loop's `entry`.
+        for discarded in (provenance.discarded_judges if provenance else None) or []:
+            name = (
+                discarded[0]
+                if isinstance(discarded, (list, tuple)) and discarded
+                else str(discarded)
+            )
+            judge_discarded[name] += 1
+            judge_consulted[name] += 1
         statuses[result.status.value] += 1
         if result.reason_code:
             reasons[result.reason_code] += 1
@@ -224,6 +243,18 @@ async def run(
         "single_judge_ablation": len(judge_models) < 2,
         "statuses": dict(statuses),
         "abstention_reasons": dict(reasons),
+        "judge_reliability": {
+            judge: {
+                "consulted": judge_consulted[judge],
+                "discarded": judge_discarded[judge],
+                "discard_rate": (
+                    judge_discarded[judge] / judge_consulted[judge]
+                    if judge_consulted[judge]
+                    else None
+                ),
+            }
+            for judge in sorted(judge_consulted)
+        },
     }
     return outcomes, summary
 
@@ -277,6 +308,24 @@ def main() -> None:
     print(f"\nSegments: {summary['n_segments']}")
     print(f"  statuses:  {summary['statuses']}")
     print(f"  abstained: {summary['abstention_reasons'] or 'none'}")
+
+    reliability = summary.get("judge_reliability") or {}
+    if reliability:
+        print("\n  judge reliability (answers discarded as unusable)")
+        for judge, entry in reliability.items():
+            rate = entry["discard_rate"]
+            flag = "   <- CONTRIBUTING NOTHING" if rate is not None and rate > 0.5 else ""
+            print(f"    {judge:<22}{entry['discarded']:>5}/{entry['consulted']:<5}"
+                  f"{'' if rate is None else f'{rate:6.0%}'}{flag}")
+        worst = [j for j, e in reliability.items()
+                 if e["discard_rate"] is not None and e["discard_rate"] > 0.5]
+        if worst:
+            print(
+                "\n  WARNING: " + ", ".join(worst) + " had more than half of "
+                "their answers discarded.\n  A judge on the roster but not in "
+                "the panel inflates the apparent panel size and\n  changes what "
+                "the agreement gate means. Investigate before reporting."
+            )
     print(f"\nWrote {OUTCOMES_PATH}")
 
 

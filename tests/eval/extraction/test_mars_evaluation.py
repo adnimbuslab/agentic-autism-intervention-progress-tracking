@@ -220,3 +220,59 @@ class TestFullReport:
 
         assert report["oracle_ceiling"] == report["best_generator_accuracy"]
         assert report["oracle_capture_rate"] is None
+
+
+class TestPartialRunGuard:
+    """A MARS metric over part of the batch is a different number wearing the
+    same name. The first outcomes file covered 3 of 330 segments and produced
+    an accuracy of 0.000 and a capture rate of -3.0 against a best generator of
+    0.045 -- figures that read as findings and were noise."""
+
+    def test_the_threshold_is_strict(self) -> None:
+        from tests.eval.extraction.mars_evaluation import MIN_OUTCOME_COVERAGE
+
+        assert MIN_OUTCOME_COVERAGE >= 0.95
+
+    def test_a_partial_outcomes_file_is_refused(self, tmp_path) -> None:
+        import json
+        import subprocess
+        import sys
+        from pathlib import Path
+
+        import tests.eval.extraction.mars_evaluation as module
+
+        results = Path(module.__file__).parent / "results"
+        scored = results / "scored_against_gold.json"
+        outcomes = results / "mars_outcomes.json"
+        if not scored.exists() or not outcomes.exists():
+            pytest.skip("scoring artefacts not produced yet")
+
+        n_gold = len(json.loads(scored.read_text())["gold"])
+        n_outcomes = len(json.loads(outcomes.read_text()))
+        if n_outcomes / n_gold >= module.MIN_OUTCOME_COVERAGE:
+            pytest.skip("outcomes now cover the batch; guard not exercised")
+
+        result = subprocess.run(
+            [sys.executable, "-m", "tests.eval.extraction.mars_evaluation"],
+            capture_output=True, text=True,
+            cwd=Path(module.__file__).parents[4],
+        )
+        assert result.returncode != 0
+        assert "Refusing to report MARS metrics" in result.stdout + result.stderr
+
+    def test_allow_partial_opts_back_in(self) -> None:
+        import subprocess
+        import sys
+        from pathlib import Path
+
+        import tests.eval.extraction.mars_evaluation as module
+
+        root = Path(module.__file__).parents[4]
+        if not (Path(module.__file__).parent / "results" / "scored_against_gold.json").exists():
+            pytest.skip("scoring artefacts not produced yet")
+        result = subprocess.run(
+            [sys.executable, "-m", "tests.eval.extraction.mars_evaluation",
+             "--allow-partial"],
+            capture_output=True, text=True, cwd=root,
+        )
+        assert result.returncode == 0, result.stdout + result.stderr

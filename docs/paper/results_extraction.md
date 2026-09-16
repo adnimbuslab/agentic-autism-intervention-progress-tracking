@@ -206,10 +206,15 @@ the annotation measures.
 
 ### MARS candidate stage
 
-MARS now runs end-to-end against live judges, with generators **replayed** from
+MARS runs end-to-end against live judges, with generators **replayed** from
 the frozen batch so it selects from exactly the candidates the annotators saw.
-No MARS accuracy is reported here, because accuracy requires the adjudicated
-gold standard.
+Results are in *MARS over the full batch* below.
+
+`mars_evaluation` refuses to report below 95% outcome coverage unless
+`--allow-partial` is passed. That guard exists because an earlier 3-segment
+single-judge ablation, evaluated by mistake, produced a MARS accuracy of 0.000
+and a capture rate of −3.0 against a best generator of 4.5% — figures that read
+as findings and were artefacts of a 3-segment denominator.
 
 The candidate set MARS is handed can be established without any judge, by
 replaying the recorded generator responses through the production
@@ -270,6 +275,251 @@ attempted segments, per-generator yield was 94.3% (`qwen2.5:7b`), 85.2%
 (`llama3.2`) and 80.4% (`qwen2.5:3b`); under the MARS-029 `reviewable` gate over
 the 330 retained segments it is 78.8%, 40.3% and 30.6% respectively.
 
+
+### The adjudicated gold standard
+
+Conflicts surviving round 2 were adjudicated by the **two annotators working
+jointly from the codebook** (consensus adjudication), recorded in
+`gold_labels.json` as `consensus:annotator_a+annotator_b`. Each of the 503
+conflicted fields was decided with a written rationale. The decisions split 89
+to annotator A and 90 to annotator B across the categorical fields, so neither
+annotator's readings dominated the consensus; three decisions adopted a value
+neither had recorded, each of them a correct application of a codebook rule
+that both annotators had missed.
+
+**All 330 segments entered the gold standard** — 322 adjudicated, 8 agreed on
+every field, none excluded. Every figure below is therefore over the full
+batch, not a conditional subset.
+
+**Table 5 — Gold standard composition**
+
+| property | value |
+|---|---|
+| segments in gold | 330 of 330 (none excluded) |
+| resolved by consensus of both annotators | 322 |
+| agreed on every field without adjudication | 8 |
+| adjudicated fields | 503 (78 settled by an existing codebook rule) |
+| adjudicator | consensus of annotator_a and annotator_b |
+| null values in gold | outcome 115, modality 77, domain 3, prompt_level 2 |
+
+### Per-field extraction accuracy
+
+**Table 6 — Acceptable extractions per field (n = 330; acceptable = correct or
+correctly null)**
+
+| generator | domain | modality | prompt_level | outcome |
+|---|---:|---:|---:|---:|
+| llama3.2 | 17.9% | 50.3% | 28.2% | 27.0% |
+| qwen2.5:3b | 8.8% | 36.4% | 4.2% | 32.4% |
+| qwen2.5:7b | **42.4%** | **67.9%** | 28.2% | **33.9%** |
+
+`qwen2.5:7b` leads on every field, but no generator exceeds 68% on any field
+and none exceeds 43% on `domain`, `prompt_level` or `outcome` (**Figure 16**).
+
+**Accuracy and coverage must be read together.** `qwen2.5:3b`'s 32.4% on
+`outcome` is largely abstention: 69 of its acceptable judgements are
+`correctly_null` and it returns nothing at all on 114 segments. On
+`prompt_level` it is silent on 277 of 330 segments (84%), which is why its 4.2%
+is not comparable to the others' as a quality figure. A generator that rarely
+answers is not thereby accurate.
+
+### Unsupported extractions
+
+Where the adjudicated gold records a null — the transcript supports no value
+for that field — the generators assert one anyway (**Figure 17**).
+
+**Table 7 — Values asserted against a null gold**
+
+| generator | modality (n=77) | outcome (n=115) |
+|---|---:|---:|
+| llama3.2 | 72 (93.5%) | 87 (75.7%) |
+| qwen2.5:3b | 15 (19.5%) | 46 (40.0%) |
+| qwen2.5:7b | 31 (40.3%) | 78 (67.8%) |
+
+`domain` and `prompt_level` are omitted: gold records only 3 and 2 nulls for
+them respectively, which cannot support a rate.
+
+This is the measurement the explicit null convention was designed to make
+possible, and it bears directly on the system's safety requirement that the
+extraction provider must not generate field values unsupported by the source
+text. On `outcome`, `llama3.2` invents a value on 87 of the 115 segments where
+the transcript supports none. `qwen2.5:3b`'s lower rate is again partly
+abstention rather than restraint.
+
+### Whole-record correctness and the ceiling available to selection
+
+**Table 8 — Whole-record accuracy (all four categorical fields acceptable)**
+
+| | accuracy |
+|---|---:|
+| qwen2.5:7b | 4.5% |
+| llama3.2 | 1.5% |
+| qwen2.5:3b | 0.3% |
+| **oracle ceiling** (best candidate per segment) | **6.1%** |
+
+The ceiling is the result that matters for the architecture (**Figure 18**).
+Even a perfect selector — one that picks, for every segment, whichever of the
+three candidates is correct whenever any of them is — would produce a fully
+correct record on 6.1% of segments. The headroom available to any reranking
+mechanism over the best single generator is therefore **1.5 percentage points**
+— five segments of 330.
+
+Selection cannot rescue this generator roster. The limiting factor is candidate
+quality, not candidate choice, and that is an argument for a better extraction
+model rather than a better selector.
+
+### Free-text `behavior`
+
+Exact and threshold matching on prose is uninformative here, and the reason is
+visible in the human data: the two annotators describing the same segment reach
+a median token overlap of **0.316** (mean 0.368), and only 24.2% of their pairs
+reach the 0.5 threshold the scorer defaults to. A threshold neither annotator
+clears against the other cannot separate models.
+
+`behavior` is therefore reported as a distribution against that human reference
+band rather than as an accuracy (**Figure 19**):
+
+| | median overlap | mean |
+|---|---:|---:|
+| annotator vs annotator | **0.316** | 0.368 |
+| qwen2.5:7b vs gold | 0.083 | 0.096 |
+| llama3.2 vs gold | 0.071 | 0.088 |
+| qwen2.5:3b vs gold | 0.071 | 0.090 |
+
+The models sit roughly four times below the human band. The gap is large enough
+that it does not depend on the matching rule, which is why it is reported as a
+distribution and why whole-record correctness above is computed with `behavior`
+excluded (`--behavior-match excluded`, recorded in the scoring output).
+
+### MARS over the full batch
+
+MARS was run over all 330 segments against live judges, generators replayed
+from the frozen batch. The judge roster is the five locally served models;
+eligibility (MARS-027) removes those that generated a candidate for the
+segment, leaving **3 eligible judges on 124 rerank segments and 2 on the
+remaining 41**. Adding `qwen3:14b` to the roster is what lifted every rerank
+segment to at least two eligible judges; under the previous four-model roster
+41 segments had only one and could not be gated at all.
+
+**A judge that contributes nothing is not visible from the outcome.** The first
+full run reported 205 successes and looked unremarkable. In fact `qwen3:14b`
+was discarded as unparseable on 165 of 165 rerank segments: it is a reasoning
+model, Ollama streams its chain of thought against the same token budget as the
+answer, and a 256-token judge budget was exhausted before any answer appeared.
+The panel was nominally three and effectively two. Raising the judge budget to
+2048 tokens fixed it, and `run_mars` now reports a per-judge discard rate so
+the failure cannot recur silently. All judges were discarded on ≤2% of
+consultations in the reported run.
+
+**Table 9 — MARS outcomes (n = 330)**
+
+| outcome | n | share |
+|---|---:|---:|
+| record returned | 265 | 80.3% |
+| abstained — `no_reviewable_candidate` | 42 | 12.7% |
+| abstained — `judge_disagreement` | 21 | 6.4% |
+| abstained — `insufficient_valid_judge_responses` | 2 | 0.6% |
+
+Of the 265 returned, 123 were single-candidate short-circuits that consulted no
+judge and 142 were judged. The agreement gate rejected 21 of the 165 rerank
+segments (12.7%). On the judged segments top-choice support was 1.0 on 74 and
+0.667 on 68 — i.e. unanimous on just over half, and a 2-of-3 majority on the
+rest. The gate is stricter on the 41 two-judge segments than on the 124
+three-judge ones: a 1–1 split is a modal tie, which abstains before the
+threshold is consulted, so those segments effectively require unanimity. That
+asymmetry follows from judge eligibility rather than from a calibration choice.
+
+**Table 10 — MARS against the best single generator**
+
+| | accuracy |
+|---|---:|
+| MARS, over the 265 records returned | 3.4% |
+| MARS, over all 330 (abstentions counted as not correct) | 2.7% |
+| `qwen2.5:7b`, over the same 265 segments | 4.5% |
+| `qwen2.5:7b`, over all 330 | 4.5% |
+| oracle ceiling | 6.1% |
+
+**No improvement from reranking is observed, and none is excluded.** On the 265
+segments MARS answered, it produced 9 fully correct records against the best
+generator's 12. Paired over the same segments: 9 correct for both, **0 where
+MARS was correct and the generator was not**, 3 the other way, 253 where
+neither was. Exact McNemar on the 3 discordant pairs gives **p = 0.25** — no
+evidence of a difference in either direction, and the study is underpowered to
+find one. At a best-generator accuracy of 4.5% and a ceiling of 6.1%, the
+entire quantity under test is 5 records out of 330.
+
+The one unambiguous observation is that MARS never selected a correct record
+the best generator had missed. Reranking did not recover any candidate that
+picking `qwen2.5:7b` unconditionally would have lost.
+
+The oracle capture rate is reported as −0.758 and should not be read as a
+performance figure: with MARS below the best single generator the numerator is
+negative, and a rate computed against 1.5 points of headroom is dominated by
+its denominator. It is recorded for completeness rather than interpreted.
+
+### Does reranking select better than not reranking?
+
+Table 10 compares MARS to the best generator on whole-record accuracy over
+every returned record, and finds nothing. That instrument is wrong for the
+question in two ways. It includes the **123 single-candidate short-circuits**,
+where one generator cleared admission, no judge was consulted, and MARS passed
+the candidate through — selection quality cannot be measured where no selection
+occurred. And whole-record accuracy fires on 4.5% of segments, too coarse to
+resolve a selection effect at all.
+
+Measuring selection where selection happened — the **142 judged segments** —
+and field by field, resolves it (`mars_selection_analysis.py`, **Figure 21**).
+
+**Table 11 — Per-field accuracy of three selection policies (142 judged segments)**
+
+| selector | domain | modality | prompt_level | outcome | mean |
+|---|---:|---:|---:|---:|---:|
+| best generator (`qwen2.5:7b`) | 45.8% | 77.5% | 35.9% | 30.3% | **47.4%** |
+| **MARS** | 33.1% | 74.7% | 33.8% | **32.4%** | **43.5%** |
+| random candidate | 22.3% | 55.6% | 23.5% | 28.5% | **32.5%** |
+
+**Table 12 — Paired differences, 10,000 bootstrap replicates over segments**
+
+| field | MARS − random candidate | MARS − best generator |
+|---|---|---|
+| domain | +7.8 [−0.7, +16.2] | **−12.7 [−19.7, −6.3]** |
+| modality | **+19.0 [+9.9, +28.2]** | −2.8 [−8.5, +2.8] |
+| prompt_level | **+13.5 [+5.6, +21.8]** | −2.1 [−9.2, +4.2] |
+| outcome | +5.7 [−1.4, +12.7] | +2.1 [−2.8, +7.0] |
+
+Bold intervals exclude zero.
+
+**Two findings, and they point in opposite directions.**
+
+*Reranking carries real signal.* MARS selects better than a candidate chosen at
+random on every field, significantly so on `modality` (+19.0) and
+`prompt_level` (+13.5). The judges are not noise: given a set of candidates
+they identify better ones more often than chance. This is the first evidence in
+this study that the judging stage does anything at all, and it could not be
+seen in the whole-record figure.
+
+*Reranking does not beat the simplest informed policy.* Against always using
+the strongest generator, MARS is 3.9 points worse on average, significantly so
+on `domain` (−12.7) and indistinguishable on the other three. MARS sits between
+the two baselines: better than no judgement, worse than one fixed good choice.
+
+**Why `domain` is where it loses.** MARS selected `qwen2.5:7b` on 58% of judged
+segments (llama3.2 on 37, qwen2.5:3b on 23, qwen2.5:7b on 82). On `domain` that
+model leads the roster by 32 points (45.8% against 13.4% and 7.7%), so the 42%
+of selections that go elsewhere carry an expected cost of roughly 14.7 points —
+against an observed deficit of 12.7. The mechanism is not that the judges rank
+badly; it is that they rank *candidates* while the accuracy difference lives in
+*which model produced them*, and no per-candidate evidence reveals that
+`qwen2.5:7b` is three times better at `domain` than its rivals.
+
+This is a property of the roster, not a defect of reranking. Where the
+generators are close — `outcome`, with a 5-point spread across the three — MARS
+matches the best of them and is nominally ahead (+2.1). Where one generator
+dominates, any selector that sometimes chooses another pays for it, and the
+dominant-generator policy is unbeatable by construction. **Reranking should be
+expected to pay off on a roster of comparable-strength generators and to lose
+on one with a dominant model**; this roster is the second kind.
+
 ---
 
 ## Not yet measured
@@ -278,10 +528,15 @@ State of the evidence, recorded so that no reader infers more than exists:
 
 | quantity | status | blocked on |
 |---|---|---|
-| per-generator field accuracy | not measured | adjudicated gold |
+| per-generator field accuracy | **measured** (Table 6) | — |
 | inter-rater reliability (κ) | **measured** — mean κ 0.610 pre-codebook, 0.801 post | — see `results_reliability.md` |
-| oracle candidate ceiling | not measured | adjudicated gold |
-| MARS accuracy / capture rate | not measured | adjudicated gold |
+| adjudicated gold standard | **measured** — 330 of 330 segments (Table 5) | — |
+| unsupported-extraction rate | **measured** (Table 7) | — |
+| oracle candidate ceiling | **measured** — 6.1% (Table 8) | — |
+| MARS accuracy / coverage / abstention profile | **measured** (Tables 9-10) | — |
+| whether reranking beats no judgement | **measured** — yes, +19.0 / +13.5 points on 2 of 4 fields (Table 12) | — |
+| whether reranking beats the best single generator | **measured** — no; −3.9 points on average, −12.7 on `domain` (Table 12) | — |
+| whether reranking would pay on a balanced roster | not measured | a roster without a dominant generator |
 | MARS agreement-gate behaviour | not reportable | a panel of ~3 eligible judges |
 | frontier-model comparison | out of the primary experiment | corpus terms confirmation |
 
@@ -317,14 +572,33 @@ primary three-generator comparison.
   meaning. Token overlap accepts rewording but cannot detect two descriptions
   that share words while describing different things, and `exact` understates
   agreement badly. The rule and threshold are recorded with every scored run.
-- **Judge panel.** The agreement gate is unreported until a panel of about
-  three eligible judges exists. Judge eligibility disqualifies exact generator
-  identities, so a roster of four local models leaves 1-2 eligible judges per
-  segment — not enough to report gating.
-- **Gold subset.** Accuracy is conditional on the adjudicated subset. Segments
-  left unresolved on any field are excluded, so the denominator is the
-  adjudicated set and not the full 330; the counts are recorded in
-  `gold_labels.json`.
+- **Judge panel.** The five-model roster gives 3 eligible judges on 124 rerank
+  segments and 2 on 41. The gate is therefore stricter on those 41, where a
+  modal tie abstains and unanimity is effectively required. A sixth
+  non-generator model would remove the asymmetry.
+- **Whole-record MARS comparison is underpowered.** At 4.5% best-generator
+  accuracy the whole-record comparison rests on 3 discordant segments and
+  resolves nothing (Table 10). The per-field analysis on judged segments
+  (Tables 11-12) is what carries the selection finding; the two measure
+  different things and the whole-record figure remains what the system returns.
+- **The selection finding is roster-conditional.** MARS losing to the
+  best-generator policy follows from one generator dominating `domain` by 32
+  points. On a roster of comparable-strength generators the same judges could
+  plausibly win, and this study cannot say whether they would. The finding is
+  "reranking loses to a dominant generator", not "reranking does not work".
+- **Gold coverage.** Every segment was resolved: all 330 entered the gold
+  standard and none was excluded, so accuracy is over the full batch rather
+  than a conditional subset. The counts are recorded in `gold_labels.json`.
+- **Consensus adjudication.** Conflicts were settled by the two annotators
+  jointly rather than by an independent third party. This is standard practice
+  and is recorded in the gold file, but the adjudicators are the same people
+  whose disagreements they resolved, and an independent adjudicator might have
+  settled some differently. The 89/90 split of decisions between the two
+  annotators' values indicates neither dominated, which bounds but does not
+  eliminate the concern.
+- **Ceiling, not selector.** The 6.1% oracle ceiling is a property of this
+  three-generator roster. It says reranking has 1.6 points of headroom *here*;
+  it does not generalise to a roster with stronger or more diverse candidates.
 - **Statuses are self-reported.** Table 2's status columns describe what the
   models claimed, which Figure 6 shows is a poor guide to what they produced.
 - **No held-out research split yet.** The batch preserves real `child_id` on

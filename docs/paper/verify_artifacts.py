@@ -32,6 +32,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "tests/eval/extraction/results"
+REPORTING = ROOT / "tests/eval/reporting/results"
 SHEETS = RESULTS / "annotation_sheets"
 MANIFEST = Path(__file__).parent / "artifact_manifest.json"
 
@@ -86,11 +87,48 @@ ARTEFACTS: list[tuple[Path, str, str, bool]] = [
      "Pre-registered before/after comparison, treated vs control (Table R4)",
      "round_comparison", True),
 
+    (SHEETS / "adjudication_sheet_updated.csv",
+     "Returned adjudication sheet: 503 decisions with rationales (primary data)",
+     "adjudicator (consensus of both annotators)", True),
+    (RESULTS / "adjudications.json",
+     "Imported adjudication decisions",
+     "import_adjudication_sheet", True),
+    (RESULTS / "gold_labels.json",
+     "Adjudicated gold standard: 330 of 330 segments (Table 5)",
+     "adjudicate --decisions", True),
+    (RESULTS / "scored_against_gold.json",
+     "Per-generator judgements against gold, behavior excluded (Tables 6-8)",
+     "score_against_gold --behavior-match excluded", True),
+    (RESULTS / "mars_outcomes.json",
+     "MARS decisions over all 330 segments, 5-model judge roster",
+     "run_mars", True),
+    (RESULTS / "mars_run_summary.json",
+     "MARS run configuration and per-judge discard rates",
+     "run_mars", True),
+    (RESULTS / "mars_evaluation.json",
+     "MARS accuracy, coverage, abstention profile, ceiling (Tables 9-10)",
+     "mars_evaluation", True),
+    (REPORTING / "reporting_groundedness.json",
+     "Reporting-layer groundedness run; records the 11/11 fallback finding",
+     "tests.eval.reporting.groundedness", True),
+    (RESULTS / "paper_metrics.json",
+     "Consolidated paper-ready metrics, derived from the artefacts above",
+     "paper_metrics", True),
+    (RESULTS / "mars_selection_analysis.json",
+     "Per-field selection quality vs both baselines (Tables 11-12)",
+     "mars_selection_analysis", True),
+    (RESULTS / "mars_branch_replay.json",
+     "Candidate-stage branch distribution and judge-roster comparison",
+     "mars_branch_replay", True),
+
     (ROOT / "docs/annotation_codebook.md",
      "The three rules, with decision tests and worked examples",
      "written", False),
     (ROOT / "docs/paper/results_reliability.md",
-     "Manuscript section: methods, results, limitations",
+     "Manuscript section: reliability methods, results, limitations",
+     "written", False),
+    (ROOT / "docs/paper/results_extraction.md",
+     "Manuscript section: extraction/MARS methods and gold-standard results",
      "written", False),
     (ROOT / "docs/paper/reliability_mathematics.md",
      "Derivations and worked calculations on the study's own data",
@@ -113,6 +151,27 @@ ARTEFACTS: list[tuple[Path, str, str, bool]] = [
     (ROOT / "docs/paper/figures/fig15_codebook_rules.png",
      "Figure 15 - the three rules as decision tests",
      "make_figures", False),
+    (ROOT / "docs/paper/figures/fig16_field_accuracy.png",
+     "Figure 16 - per-field extraction accuracy against gold",
+     "make_figures", False),
+    (ROOT / "docs/paper/figures/fig17_unsupported.png",
+     "Figure 17 - values asserted where the transcript supports none",
+     "make_figures", False),
+    (ROOT / "docs/paper/figures/fig18_record_ceiling.png",
+     "Figure 18 - whole-record accuracy and the selection ceiling",
+     "make_figures", False),
+    (ROOT / "docs/paper/figures/fig19_behavior_overlap.png",
+     "Figure 19 - free-text behavior against the human reference band",
+     "make_figures", False),
+    (ROOT / "docs/paper/figures/fig20_mars_outcomes.png",
+     "Figure 20 - MARS outcomes and comparison against the best generator",
+     "make_figures", False),
+    (ROOT / "docs/paper/figures/fig21_selection.png",
+     "Figure 21 - selection quality against both baselines",
+     "make_figures", False),
+    (ROOT / "docs/paper/Manuscript_Working_Draft.docx",
+     "Working-draft manuscript, assembled from the artefacts above",
+     "make_manuscript", False),
 ]
 
 
@@ -209,14 +268,26 @@ uv run python -m tests.eval.extraction.reissue_gold_sheet annotator_a annotator_
 uv run python -m tests.eval.extraction.import_gold_sheet annotator_a --path <sheet> --merge
 uv run python -m tests.eval.extraction.import_gold_sheet annotator_b --path <sheet> --merge
 
-# 5. statistics and figures
+# 5. adjudication -- one sheet, one decision-maker
+uv run python -m tests.eval.extraction.export_adjudication_sheet annotator_a annotator_b
+uv run python -m tests.eval.extraction.import_adjudication_sheet --path <returned sheet>
+uv run python -m tests.eval.extraction.adjudicate annotator_a annotator_b \\
+    --decisions results/adjudications.json --adjudicator "<who, and how>"
+uv run python -m tests.eval.extraction.score_against_gold --behavior-match excluded
+
+# 6. statistics and figures
 uv run python -m tests.eval.extraction.reliability_stats annotator_a annotator_b --round1
 uv run python -m tests.eval.extraction.reliability_stats annotator_a annotator_b
 uv run python -m tests.eval.extraction.round_comparison annotator_a annotator_b
+uv run python -m tests.eval.extraction.mars_selection_analysis
+uv run python -m tests.eval.reporting.groundedness
+uv run python -m tests.eval.extraction.paper_metrics
+uv run python docs/paper/make_manuscript.py
 uv run python docs/paper/make_figures.py
 
-# 6. check the prose against the data, and the data against the manifest
+# 7. check the prose against the data, and the data against the manifest
 uv run pytest tests/eval/extraction/test_manuscript_numbers.py
+uv run pytest tests/eval/extraction/test_extraction_results_numbers.py
 uv run python docs/paper/verify_artifacts.py
 ```
 

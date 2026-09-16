@@ -1035,6 +1035,413 @@ def figure_codebook_rules() -> None:
     plt.close(fig)
 
 
+# --- Figures 16-19: extraction results against the adjudicated gold ---------
+SCORED_PATH = RESULTS / "scored_against_gold.json"
+GOLD_LABELS_PATH = RESULTS / "gold_labels.json"
+
+ACCEPTABLE = {"correct", "correctly_null"}
+GEN_COLOURS = {0: BLUE, 1: TEAL, 2: AMBER}
+
+
+def _short(model: str) -> str:
+    return model.replace(":latest", "")
+
+
+def figure_field_accuracy() -> None:
+    """Figure 16 -- per-field accuracy of each generator against gold."""
+    scored = _load(SCORED_PATH, "Figure 16 (field accuracy)")
+    if scored is None:
+        return
+
+    fields = scored["scoring_fields"]
+    models = scored["models"]
+    counts = scored["per_field_counts"]
+
+    fig, ax = plt.subplots(figsize=(7.6, 3.6))
+    width = 0.26
+    for m, model in enumerate(models):
+        values = []
+        for field in fields:
+            acceptable = sum(
+                counts[model].get(f"{field}:{j}", 0) for j in ACCEPTABLE
+            )
+            total = sum(
+                v for k, v in counts[model].items() if k.startswith(f"{field}:")
+            )
+            values.append(100 * acceptable / total if total else 0.0)
+        offsets = [i + (m - 1) * width for i in range(len(fields))]
+        ax.bar(offsets, values, width=width * 0.92, color=GEN_COLOURS[m],
+               zorder=3, label=_short(model))
+        for x, v in zip(offsets, values):
+            ax.text(x, v + 1.2, f"{v:.0f}", ha="center", fontsize=7, color=MUTED)
+
+    ax.set_xticks(range(len(fields)))
+    ax.set_xticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
+    ax.set_ylim(0, 100)
+    ax.set_ylabel("acceptable (%)")
+    ax.legend(fontsize=7.5, frameon=False, ncol=3, loc="upper right")
+    _finish(
+        ax,
+        "Figure 16 — Per-field extraction accuracy against the adjudicated gold",
+        f"n = {scored['n_segments_scored']} segments. Acceptable = correct or "
+        "correctly null. `behavior` excluded (see Figure 19).",
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig16_field_accuracy.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def figure_unsupported() -> None:
+    """Figure 17 -- values asserted where the transcript supports none."""
+    scored = _load(SCORED_PATH, "Figure 17 (unsupported extractions)")
+    if scored is None:
+        return
+
+    models = scored["models"]
+    counts = scored["per_field_counts"]
+
+    # A rate needs a denominator. The gold records only 3 null `domain` values
+    # and 2 null `prompt_level` values across 330 segments, so "100%
+    # unsupported" on those fields is three segments and two segments -- a
+    # number that reads as a finding and cannot carry one. Fields below the
+    # floor are named in the subtitle with their raw counts instead.
+    MIN_NULL_GOLD = 20
+    opportunities_by_field = {
+        field: max(
+            counts[model].get(f"{field}:hallucinated", 0)
+            + counts[model].get(f"{field}:correctly_null", 0)
+            for model in models
+        )
+        for field in scored["scoring_fields"]
+    }
+    fields = [
+        f for f in scored["scoring_fields"]
+        if opportunities_by_field[f] >= MIN_NULL_GOLD
+    ]
+    omitted = [
+        f"{f} (n={opportunities_by_field[f]})"
+        for f in scored["scoring_fields"]
+        if opportunities_by_field[f] < MIN_NULL_GOLD
+    ]
+
+    fig, ax = plt.subplots(figsize=(5.0, 3.6))
+    width = 0.26
+    for m, model in enumerate(models):
+        values, labels = [], []
+        for field in fields:
+            hallucinated = counts[model].get(f"{field}:hallucinated", 0)
+            correct_null = counts[model].get(f"{field}:correctly_null", 0)
+            opportunities = hallucinated + correct_null
+            values.append(
+                100 * hallucinated / opportunities if opportunities else 0.0
+            )
+            labels.append(f"{hallucinated}/{opportunities}" if opportunities else "")
+        offsets = [i + (m - 1) * width for i in range(len(fields))]
+        ax.bar(offsets, values, width=width * 0.92, color=GEN_COLOURS[m],
+               zorder=3, label=_short(model))
+        for x, v, lab in zip(offsets, values, labels):
+            if lab:
+                ax.text(x, v + 1.5, lab, ha="center", fontsize=6.4, color=MUTED)
+
+    ax.set_xticks(range(len(fields)))
+    ax.set_xticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
+    ax.set_ylim(0, 108)
+    ax.set_xlim(-0.6, len(fields) - 0.4)
+    ax.set_ylabel("unsupported extractions (%)")
+    ax.legend(
+        fontsize=7.5, frameon=False, ncol=3,
+        loc="upper center", bbox_to_anchor=(0.5, -0.13),
+    )
+    subtitle = (
+        "Denominator: segments gold records as null for that field; "
+        "counts above each bar."
+    )
+    if omitted:
+        subtitle += (
+            f"\nToo few null-gold segments to rate, not shown: {', '.join(omitted)}."
+        )
+    _finish(
+        ax,
+        "Figure 17 — Values asserted where the transcript supports none",
+        subtitle,
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig17_unsupported.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def figure_record_ceiling() -> None:
+    """Figure 18 -- whole-record accuracy against the oracle ceiling."""
+    scored = _load(SCORED_PATH, "Figure 18 (record accuracy)")
+    if scored is None:
+        return
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from tests.eval.extraction.mars_evaluation import (  # noqa: E402
+        oracle_ceiling,
+        per_model_accuracy,
+    )
+
+    fields = scored["scoring_fields"]
+    models = scored["models"]
+    accuracy = per_model_accuracy(scored["gold"], models, fields)
+    ceiling = oracle_ceiling(scored["gold"], models, fields)
+
+    ordered = sorted(models, key=lambda m: accuracy[m] or 0.0)
+    fig, ax = plt.subplots(figsize=(7.2, 3.0))
+    y = range(len(ordered))
+    ax.barh(list(y), [100 * (accuracy[m] or 0.0) for m in ordered],
+            color=BLUE, height=0.5, zorder=3)
+    for i, model in enumerate(ordered):
+        ax.text(100 * (accuracy[model] or 0.0) + 0.15, i,
+                f"{100 * (accuracy[model] or 0.0):.1f}%", va="center",
+                fontsize=8, color=INK)
+    ax.axvline(100 * ceiling, color=RED, linewidth=1.4, linestyle="--", zorder=4)
+    ax.text(100 * ceiling + 0.15, -0.72,
+            f"oracle ceiling {100 * ceiling:.1f}%", fontsize=8, color=RED)
+
+    ax.set_yticks(list(y))
+    ax.set_yticklabels([_short(m) for m in ordered])
+    ax.set_xlim(0, max(100 * ceiling * 1.55, 8))
+    ax.set_xlabel("whole-record accuracy (%) — all four categorical fields correct")
+    _finish(
+        ax,
+        "Figure 18 — Whole-record accuracy and the ceiling available to selection",
+        f"n = {scored['n_segments_scored']}. The ceiling is the best candidate "
+        "per segment: what a perfect selector could reach.",
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig18_record_ceiling.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def figure_behavior_overlap() -> None:
+    """Figure 19 -- free-text behavior against the human-human reference band."""
+    scored = _load(SCORED_PATH, "Figure 19 (behavior overlap)")
+    gold_labels = _load(GOLD_LABELS_PATH, "Figure 19 (behavior overlap)")
+    batch = _load(BATCH_PATH, "Figure 19 (behavior overlap)")
+    if scored is None or gold_labels is None or batch is None:
+        return
+    annotators = {
+        k: _load(RESULTS / f"gold_annotator_{k}.json", "Figure 19")
+        for k in ("a", "b")
+    }
+    if any(v is None for v in annotators.values()):
+        return
+
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from tests.eval.extraction.agreement_report import (  # noqa: E402
+        normalize,
+        token_overlap,
+    )
+
+    gold = gold_labels["gold"]
+    entries = {e["segment_id"]: e for e in batch["candidates"]}
+    ids = [s for s in gold if s in entries]
+
+    series = [(
+        "human vs human",
+        [
+            token_overlap(
+                normalize(annotators["a"][s]["field_values"]["behavior"]),
+                normalize(annotators["b"][s]["field_values"]["behavior"]),
+            )
+            for s in ids
+            if s in annotators["a"] and s in annotators["b"]
+        ],
+        MUTED,
+    )]
+    for m, model in enumerate(scored["models"]):
+        values = []
+        for s in ids:
+            got = (entries[s]["candidates"][model].get("extracted_fields") or {}).get(
+                "behavior"
+            )
+            if got:
+                values.append(
+                    token_overlap(
+                        normalize(got), normalize(gold[s]["field_values"]["behavior"])
+                    )
+                )
+        series.append((_short(model), values, GEN_COLOURS[m]))
+
+    fig, ax = plt.subplots(figsize=(7.6, 3.4))
+    positions = list(range(len(series)))
+    parts = ax.violinplot(
+        [s[1] for s in series], positions=positions, widths=0.78,
+        showextrema=False, showmedians=True,
+    )
+    for body, (_, _, colour) in zip(parts["bodies"], series):
+        body.set_facecolor(colour)
+        body.set_alpha(0.55)
+        body.set_edgecolor("none")
+    parts["cmedians"].set_color(INK)
+    parts["cmedians"].set_linewidth(1.3)
+
+    for i, (_, values, _) in enumerate(series):
+        median = sorted(values)[len(values) // 2]
+        ax.text(i, median + 0.035, f"{median:.2f}", ha="center", fontsize=7.6,
+                color=INK, fontweight="bold")
+
+    ax.set_xticks(positions)
+    ax.set_xticklabels([s[0] for s in series], fontsize=8)
+    ax.set_ylim(0, 1)
+    ax.set_ylabel("token overlap with the reference description")
+    _finish(
+        ax,
+        "Figure 19 — Free-text `behavior`: models against the human reference band",
+        "Human vs human is the two annotators on the same segment — the most "
+        "agreement wording alone permits. Medians labelled.",
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig19_behavior_overlap.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def figure_mars_outcomes() -> None:
+    """Figure 20 -- what MARS returned, and how it compared."""
+    evaluation = _load(RESULTS / "mars_evaluation.json", "Figure 20 (MARS)")
+    scored = _load(SCORED_PATH, "Figure 20 (MARS)")
+    if evaluation is None or scored is None:
+        return
+
+    mars = evaluation["mars"]
+    fig, (ax, ax2) = plt.subplots(
+        1, 2, figsize=(10.6, 3.5), gridspec_kw={"width_ratios": [1.25, 1]}
+    )
+
+    # Left: outcome profile.
+    reasons = mars["abstention_reasons"]
+    segments = [("record returned", mars["n_returned"], TEAL)]
+    segments += [
+        (r.replace("_", " "), n, RED if r == "judge_disagreement" else MUTED)
+        for r, n in sorted(reasons.items(), key=lambda kv: -kv[1])
+    ]
+    left = 0
+    for label, n, colour in segments:
+        ax.barh([0], [n], left=left, color=colour, height=0.5, zorder=3,
+                label=f"{label} ({n})")
+        if n / mars["n_total"] > 0.05:
+            ax.text(left + n / 2, 0, str(n), ha="center", va="center",
+                    fontsize=8, color="white", fontweight="bold", zorder=4)
+        left += n
+    ax.set_yticks([])
+    ax.set_xlim(0, mars["n_total"])
+    ax.set_xlabel(f"segments (n = {mars['n_total']})")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.32), ncol=2,
+              fontsize=7.4, frameon=False)
+    _finish(ax, "Figure 20 — MARS outcomes and comparison",
+            f"coverage {mars['coverage']:.1%}")
+
+    # Right: accuracy, with the ceiling.
+    best = evaluation["best_generator_accuracy"]
+    ceiling = evaluation["oracle_ceiling"]
+    bars = [
+        ("MARS\n(over returned)", mars["accuracy_over_returned"], BLUE),
+        ("MARS\n(over all)", mars["accuracy_over_all"], BLUE),
+        (f"{evaluation['best_generator'].replace(':latest', '')}\n(over all)",
+         best, TEAL),
+    ]
+    ax2.bar(range(len(bars)), [100 * b[1] for b in bars],
+            color=[b[2] for b in bars], width=0.56, zorder=3)
+    for i, (_, value, _) in enumerate(bars):
+        ax2.text(i, 100 * value + 0.12, f"{100 * value:.1f}%", ha="center",
+                 fontsize=8, color=INK)
+    ax2.axhline(100 * ceiling, color=RED, linewidth=1.3, linestyle="--", zorder=4)
+    ax2.text(len(bars) - 0.45, 100 * ceiling + 0.12,
+             f"oracle ceiling {100 * ceiling:.1f}%", fontsize=7.6, color=RED,
+             ha="right")
+    ax2.set_xticks(range(len(bars)))
+    ax2.set_xticklabels([b[0] for b in bars], fontsize=7.6)
+    ax2.set_ylim(0, 100 * ceiling * 1.35)
+    ax2.set_ylabel("whole-record accuracy (%)")
+    _finish(ax2, "", None)
+    ax2.set_title("reranking vs. the best single generator", loc="left",
+                  fontsize=9, color=MUTED)
+
+    fig.tight_layout(w_pad=2.2)
+    fig.savefig(OUT / "fig20_mars_outcomes.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def figure_selection() -> None:
+    """Figure 21 -- selection quality against both baselines, field by field."""
+    report = _load(
+        RESULTS / "mars_selection_analysis.json", "Figure 21 (selection)"
+    )
+    if report is None:
+        return
+
+    fields = report["fields"]
+    fig, (ax, ax2) = plt.subplots(
+        1, 2, figsize=(11.2, 3.8), gridspec_kw={"width_ratios": [1.3, 1]}
+    )
+
+    # Left: the three policies side by side.
+    series = [
+        ("best generator", "best_generator", TEAL),
+        ("MARS", "mars", BLUE),
+        ("random candidate", "random_candidate", MUTED),
+    ]
+    width = 0.26
+    for i, (label, key, colour) in enumerate(series):
+        values = [100 * report["per_field"][f][key] for f in fields]
+        offsets = [j + (i - 1) * width for j in range(len(fields))]
+        ax.bar(offsets, values, width=width * 0.9, color=colour, zorder=3, label=label)
+    ax.set_xticks(range(len(fields)))
+    ax.set_xticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
+    ax.set_ylabel("acceptable (%)")
+    ax.set_ylim(0, 90)
+    ax.legend(fontsize=7.4, frameon=False, ncol=3, loc="upper center",
+              bbox_to_anchor=(0.5, -0.16))
+    _finish(
+        ax,
+        "Figure 21 — Selection quality on the segments where MARS selected",
+        f"n = {report['n_judged_segments']} judged segments; the "
+        f"{report['n_short_circuit']} short-circuits are excluded.",
+    )
+
+    # Right: paired differences with intervals, both baselines.
+    ax2.axvline(0, color=INK, linewidth=1.0, zorder=2)
+    y = 0
+    labels, ticks = [], []
+    for key, colour, tag in (
+        ("vs_random_candidate", BLUE, "vs random"),
+        ("vs_best_generator", RED, "vs best gen."),
+    ):
+        for field in fields:
+            entry = report["per_field"][field][key]
+            lo, hi, d = (
+                100 * entry["lower"],
+                100 * entry["upper"],
+                100 * entry["difference"],
+            )
+            ax2.plot([lo, hi], [y, y], color=colour, linewidth=2.0, zorder=3,
+                     solid_capstyle="round",
+                     alpha=1.0 if entry["excludes_zero"] else 0.45)
+            ax2.scatter([d], [y], s=34, color=colour, zorder=4,
+                        alpha=1.0 if entry["excludes_zero"] else 0.45)
+            labels.append(f"{field}  ({tag})")
+            ticks.append(y)
+            y += 1
+        y += 0.6
+
+    ax2.set_yticks(ticks)
+    ax2.set_yticklabels(labels, fontsize=7.2)
+    ax2.invert_yaxis()
+    ax2.set_xlabel("difference in accuracy (points, 95% paired CI)")
+    _finish(ax2, "", None)
+    ax2.set_title("solid = interval excludes zero", loc="left", fontsize=8.4,
+                  color=MUTED)
+
+    fig.tight_layout(w_pad=2.0)
+    fig.savefig(OUT / "fig21_selection.png", bbox_inches="tight")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     figure_corpus()
     figure_admission()
@@ -1051,6 +1458,12 @@ if __name__ == "__main__":
     figure_round_comparison()
     figure_protocol()
     figure_codebook_rules()
+    figure_field_accuracy()
+    figure_unsupported()
+    figure_record_ceiling()
+    figure_behavior_overlap()
+    figure_mars_outcomes()
+    figure_selection()
     print(f"Wrote {len(list(OUT.glob('*.png')))} figures to {OUT}")
     for f in sorted(OUT.glob("*.png")):
         print(f"  {f.name}")

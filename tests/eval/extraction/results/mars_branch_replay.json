@@ -49,6 +49,51 @@
     "1": 41,
     "2": 124
   },
+  "roster_comparison": {
+    "current": {
+      "roster": [
+        "llama3.2:latest",
+        "qwen2.5:3b",
+        "qwen2.5:7b",
+        "mistral:latest"
+      ],
+      "panel_sizes": {
+        "1": 41,
+        "2": 124
+      },
+      "n_rerank_segments": 165,
+      "share_at_least_2": 0.7515151515151515,
+      "share_at_least_3": 0.0
+    },
+    "plus_qwen3_14b": {
+      "roster": [
+        "llama3.2:latest",
+        "qwen2.5:3b",
+        "qwen2.5:7b",
+        "mistral:latest",
+        "qwen3:14b"
+      ],
+      "panel_sizes": {
+        "2": 41,
+        "3": 124
+      },
+      "n_rerank_segments": 165,
+      "share_at_least_2": 1.0,
+      "share_at_least_3": 0.7515151515151515
+    },
+    "non_generators_only": {
+      "roster": [
+        "mistral:latest",
+        "qwen3:14b"
+      ],
+      "panel_sizes": {
+        "2": 165
+      },
+      "n_rerank_segments": 165,
+      "share_at_least_2": 1.0,
+      "share_at_least_3": 0.0
+    }
+  },
   "per_child_branches": {
     "brett": {
       "rerank_required": 23,

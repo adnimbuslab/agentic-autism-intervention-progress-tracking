@@ -168,6 +168,13 @@ def main() -> None:
         help="Count agreements and conflicts without prompting or writing gold.",
     )
     parser.add_argument(
+        "--adjudicator",
+        default=None,
+        help="Who settled the conflicts, and how. Recorded in gold_labels.json: "
+             "a gold standard should say who decided it. Use a person or role "
+             "plus the mode, e.g. 'third_expert:js' or 'consensus:a+b'.",
+    )
+    parser.add_argument(
         "--decisions",
         type=Path,
         default=None,
@@ -230,7 +237,7 @@ def main() -> None:
               f"{sum(len(v) for v in adjudicated.values())} applied"
               + (f", {ignored} ignored (field not in conflict)" if ignored else ""))
         gold, counts = build_gold(agreed, adjudicated, first)
-        _write_gold(gold, counts, names, segments)
+        _write_gold(gold, counts, names, segments, args.adjudicator)
         return
 
     chat_texts = load_chat_texts()
@@ -249,7 +256,7 @@ def main() -> None:
             print("\nStopped -- unresolved segments stay out of the gold standard.")
 
     gold, counts = build_gold(agreed, adjudicated, first)
-    _write_gold(gold, counts, names, segments)
+    _write_gold(gold, counts, names, segments, args.adjudicator)
 
 
 def _write_gold(
@@ -257,12 +264,14 @@ def _write_gold(
     counts: Counter,
     names: tuple[str, ...],
     segments: list[str],
+    adjudicator: str | None = None,
 ) -> None:
     """Write gold_labels.json. One path, whether decisions came from a sheet
     or from the interactive prompt."""
     payload = {
         "generated_at": datetime.now(UTC).isoformat(),
         "annotators": list(names),
+        "adjudicator": adjudicator,
         "source_batch": BATCH_PATH.name,
         "level": "source_gold",
         "fields": FIELDS,
@@ -270,6 +279,13 @@ def _write_gold(
         "n_segments_in_gold": len(gold),
         "counts": dict(counts),
         "gold": gold,
+        "adjudicator_note": (
+            "Adjudication settles values; it is not a second measurement. One "
+            "decision-maker resolves each conflict, so there is one sheet and "
+            "one gold standard. Who that was is recorded above and must be "
+            "stated in the manuscript: a conflict settled by one of the two "
+            "annotators is not equivalent to one settled by a third party."
+        ),
         "note": (
             "Gold field values authored from the transcript, model-independent. "
             "Segments unresolved on any field are excluded, not defaulted. "
