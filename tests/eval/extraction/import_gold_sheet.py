@@ -196,6 +196,15 @@ def main() -> None:
     parser.add_argument("annotator")
     parser.add_argument("--path", type=Path, default=None, help="Override sheet path.")
     parser.add_argument(
+        "--segments",
+        type=Path,
+        default=None,
+        help="File defining the valid segment ids. Defaults to the frozen "
+             "annotation batch; pass holdout_set.json to import a round "
+             "annotated over the held-out set, whose ids are deliberately "
+             "absent from the batch.",
+    )
+    parser.add_argument(
         "--dry-run", action="store_true", help="Validate without writing."
     )
     parser.add_argument(
@@ -220,11 +229,24 @@ def main() -> None:
             "`uv run python -m tests.eval.extraction.export_gold_sheet <annotators>`, "
             "or pass --path to the returned file."
         )
-    if not BATCH_PATH.exists():
-        raise SystemExit(f"{BATCH_PATH} not found; segment ids cannot be validated.")
+    segments_path = args.segments or BATCH_PATH
+    if not segments_path.exists():
+        raise SystemExit(f"{segments_path} not found; segment ids cannot be validated.")
 
-    batch = json.loads(BATCH_PATH.read_text())
-    valid_ids = {e["segment_id"] for e in batch["candidates"]}
+    # Two artefact shapes define a segment set: the annotation batch keys them
+    # under "candidates", the held-out set under "segments". Accepting both
+    # keeps one importer for every annotation round rather than a second copy
+    # that would drift from this one.
+    payload = json.loads(segments_path.read_text())
+    entries = payload.get("candidates") or payload.get("segments") or []
+    if not entries:
+        raise SystemExit(
+            f"{segments_path} defines no segments (expected a 'candidates' or "
+            "'segments' list)."
+        )
+    valid_ids = {e["segment_id"] for e in entries}
+    if args.segments:
+        print(f"Validating against {segments_path.name}: {len(valid_ids)} segments")
 
     round_number = args.round if args.round is not None else (2 if args.merge else 1)
     report = read_sheet(path, args.annotator, valid_ids, round_number)

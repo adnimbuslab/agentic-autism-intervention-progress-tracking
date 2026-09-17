@@ -202,3 +202,36 @@ class TestImport:
         report = build_report(annotations, annotations)
         assert report["n_overlap_segments"] == 1
         assert report["per_field"]["domain"]["n"] == 1
+
+
+class TestSegmentSetSource:
+    """The importer must accept both artefact shapes that define a segment set.
+
+    The annotation batch keys segments under 'candidates'; the held-out set
+    uses 'segments' and its ids are deliberately absent from the batch. An
+    importer that only knew the batch shape would reject every row of a
+    held-out round as an unknown segment, silently producing an empty import.
+    """
+
+    def test_batch_shaped_and_holdout_shaped_files_both_define_ids(self) -> None:
+        batch = {"candidates": [{"segment_id": "s1"}, {"segment_id": "s2"}]}
+        holdout = {"segments": [{"segment_id": "h1"}, {"segment_id": "h2"}]}
+        for payload, expected in ((batch, {"s1", "s2"}), (holdout, {"h1", "h2"})):
+            entries = payload.get("candidates") or payload.get("segments") or []
+            assert {e["segment_id"] for e in entries} == expected
+
+    def test_a_holdout_row_imports_against_the_holdout_ids(self, tmp_path) -> None:
+        row = _filled(segment_id="h1")
+        path = _write(tmp_path, [row])
+        report = read_sheet(path, "annotator_a", {"h1"})
+        assert report["n_complete"] == 1
+        assert not report["unknown_segments"]
+
+    def test_the_same_row_is_rejected_against_the_batch_ids(self, tmp_path) -> None:
+        # Held-out ids are absent from the batch by construction, so importing
+        # a held-out sheet against the batch must reject rather than accept.
+        row = _filled(segment_id="h1")
+        path = _write(tmp_path, [row])
+        report = read_sheet(path, "annotator_a", {"s1", "s2"})
+        assert report["n_complete"] == 0
+        assert report["unknown_segments"] == ["h1"]

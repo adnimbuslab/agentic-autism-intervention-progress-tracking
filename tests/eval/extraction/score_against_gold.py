@@ -197,24 +197,49 @@ def main() -> None:
     parser.add_argument(
         "--overlap-threshold", type=float, default=DEFAULT_OVERLAP_THRESHOLD
     )
+    parser.add_argument(
+        "--batch",
+        type=Path,
+        default=None,
+        help="Batch to score. Defaults to the frozen annotation batch; pass "
+             "annotation_batch_augmented.json to include a generator added "
+             "after annotation. Gold is model-independent, so a later "
+             "generator is scored against the same reference.",
+    )
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        help="Where to write. Defaults next to the batch that was scored, so "
+             "an augmented run does not overwrite the primary result.",
+    )
     args = parser.parse_args()
+
+    batch_path = args.batch or BATCH_PATH
+    out_path = args.out or (
+        OUT_PATH
+        if batch_path == BATCH_PATH
+        else RESULTS_DIR / "scored_against_gold_augmented.json"
+    )
 
     for path, hint in (
         (GOLD_PATH, "tests.eval.extraction.adjudicate <a> <b>"),
-        (BATCH_PATH, "tests.eval.extraction.build_annotation_batch"),
+        (batch_path, "tests.eval.extraction.build_annotation_batch"),
     ):
         if not path.exists():
             raise SystemExit(f"{path} not found. Run `uv run python -m {hint}` first.")
 
     report = score(
         json.loads(GOLD_PATH.read_text()),
-        json.loads(BATCH_PATH.read_text()),
+        json.loads(batch_path.read_text()),
         behavior_match=args.behavior_match,
         threshold=args.overlap_threshold,
     )
-    OUT_PATH.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
+    report["source_batch"] = batch_path.name
+    out_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
+    OUT_PATH_USED = out_path
     render(report)
-    print(f"\nWrote {OUT_PATH}")
+    print(f"\nWrote {OUT_PATH_USED}")
 
 
 if __name__ == "__main__":

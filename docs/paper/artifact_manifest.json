@@ -208,13 +208,40 @@
       "sha256": "10023e01112620842758db4c1051c8e39d75b9ed07d4a5b3bddfd58d88e34c91"
     },
     {
+      "path": "tests/eval/extraction/results/annotation_batch_augmented.json",
+      "description": "Frozen batch plus a generator added after annotation (qwen3:14b)",
+      "produced_by": "add_generator",
+      "pinned": true,
+      "present": true,
+      "bytes": 686753,
+      "sha256": "de0e6f66be4eb17ed5e8a01b53b7d72b1d26ac885ea86e76caf2179294d1e7db"
+    },
+    {
+      "path": "tests/eval/extraction/results/scored_against_gold_augmented.json",
+      "description": "Four-generator judgements against the same gold",
+      "produced_by": "score_against_gold --batch annotation_batch_augmented.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 279917,
+      "sha256": "19a60625f34824aa451598044f0644f439df918ded06c55d928a1582b96ab8bf"
+    },
+    {
+      "path": "tests/eval/extraction/results/holdout_set.json",
+      "description": "Model-independent held-out set: 132 segments, frozen before generation",
+      "produced_by": "build_holdout_set",
+      "pinned": true,
+      "present": true,
+      "bytes": 59697,
+      "sha256": "51960c8cc482879ae0d4e2d5cc9b88b131ca0701c72791cff4d0ade0a257d968"
+    },
+    {
       "path": "tests/eval/extraction/results/paper_metrics.json",
       "description": "Consolidated paper-ready metrics, derived from the artefacts above",
       "produced_by": "paper_metrics",
       "pinned": true,
       "present": true,
-      "bytes": 10904,
-      "sha256": "897d7bc12379ad49d09a160111bf7198672ed304d4c1c5a690af3ff67c54a159"
+      "bytes": 13789,
+      "sha256": "68f82fc4fc425a3361fe433e73d46f6c7706e0184cf3c369c6ee26226b3f308a"
     },
     {
       "path": "tests/eval/extraction/results/mars_selection_analysis.json",
@@ -363,12 +390,20 @@
       "bytes": 91139
     },
     {
+      "path": "docs/paper/figures/fig22_extended_roster.png",
+      "description": "Figure 22 - four-generator accuracy and the abstention trade-off",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 94380
+    },
+    {
       "path": "docs/paper/Manuscript_Working_Draft.docx",
       "description": "Working-draft manuscript, assembled from the artefacts above",
       "produced_by": "make_manuscript",
       "pinned": false,
       "present": true,
-      "bytes": 1479159
+      "bytes": 1574952
     }
   ]
 }

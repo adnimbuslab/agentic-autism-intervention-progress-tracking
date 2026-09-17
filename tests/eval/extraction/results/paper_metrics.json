@@ -9,7 +9,8 @@
     "mars_evaluation": "mars_evaluation.json",
     "mars_selection": "mars_selection_analysis.json",
     "mars_summary": "mars_run_summary.json",
-    "branch_replay": "mars_branch_replay.json"
+    "branch_replay": "mars_branch_replay.json",
+    "scored_augmented": "scored_against_gold_augmented.json"
   },
   "note": "Derived entirely from the artefacts named above; nothing is recomputed. Every rate carries its own denominator.",
   "annotation": {
@@ -437,5 +438,97 @@
     "Deterministic analytics, adequacy/abstention routing, validation engine: unit-tested as software, not evaluated as research (no result artefacts).",
     "Clinical or usability evaluation: no interventionist used the system.",
     "Whether reranking would pay on a balanced generator roster."
-  ]
+  ],
+  "augmented_roster": {
+    "source_batch": "annotation_batch_augmented.json",
+    "n_generators": 4,
+    "note": "The fourth generator was run after annotation and scored against the same model-independent gold standard. It contributed no candidates to the MARS run or to the three-generator oracle ceiling reported above.",
+    "per_model": {
+      "llama3.2:latest": {
+        "mean_field_accuracy": 0.3083,
+        "per_field_accuracy": {
+          "domain": 0.1788,
+          "modality": 0.503,
+          "prompt_level": 0.2818,
+          "outcome": 0.2697
+        },
+        "mean_abstention_rate": 0.0818,
+        "per_field_abstention": {
+          "domain": 0.0303,
+          "modality": 0.0333,
+          "prompt_level": 0.1394,
+          "outcome": 0.1242
+        },
+        "unsupported_n": 164,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.8325
+      },
+      "qwen2.5:3b": {
+        "mean_field_accuracy": 0.2045,
+        "per_field_accuracy": {
+          "domain": 0.0879,
+          "modality": 0.3636,
+          "prompt_level": 0.0424,
+          "outcome": 0.3242
+        },
+        "mean_abstention_rate": 0.4811,
+        "per_field_abstention": {
+          "domain": 0.3727,
+          "modality": 0.3667,
+          "prompt_level": 0.8394,
+          "outcome": 0.3455
+        },
+        "unsupported_n": 61,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.3096
+      },
+      "qwen2.5:7b": {
+        "mean_field_accuracy": 0.431,
+        "per_field_accuracy": {
+          "domain": 0.4242,
+          "modality": 0.6788,
+          "prompt_level": 0.2818,
+          "outcome": 0.3394
+        },
+        "mean_abstention_rate": 0.1273,
+        "per_field_abstention": {
+          "domain": 0.0061,
+          "modality": 0.1152,
+          "prompt_level": 0.2727,
+          "outcome": 0.1152
+        },
+        "unsupported_n": 112,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.5685
+      },
+      "qwen3:14b": {
+        "mean_field_accuracy": 0.4204,
+        "per_field_accuracy": {
+          "domain": 0.3909,
+          "modality": 0.6424,
+          "prompt_level": 0.3636,
+          "outcome": 0.2848
+        },
+        "mean_abstention_rate": 0.0295,
+        "per_field_abstention": {
+          "domain": 0.0727,
+          "modality": 0.0091,
+          "prompt_level": 0.0242,
+          "outcome": 0.0121
+        },
+        "unsupported_n": 191,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.9695
+      }
+    },
+    "whole_record": {
+      "per_generator": {
+        "llama3.2:latest": 0.015151515151515152,
+        "qwen2.5:3b": 0.0030303030303030303,
+        "qwen2.5:7b": 0.045454545454545456,
+        "qwen3:14b": 0.030303030303030304
+      },
+      "oracle_ceiling": 0.08787878787878788
+    }
+  }
 }

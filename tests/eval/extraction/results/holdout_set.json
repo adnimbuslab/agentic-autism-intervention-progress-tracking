@@ -1,0 +1,953 @@
+{
+  "generated_at": "2026-09-16T17:11:10.345064+00:00",
+  "seed": 20260916,
+  "per_child_target": 12,
+  "n_segments": 132,
+  "n_children": 11,
+  "n_eligible_after_exclusion": 2051,
+  "n_excluded_pool": 1320,
+  "n_excluded_batch_subset_of_pool": 330,
+  "n_skipped_too_short": 0,
+  "shortfalls": {},
+  "per_child_counts": {
+    "brett": 12,
+    "carl": 12,
+    "jack": 12,
+    "josh": 12,
+    "mark": 12,
+    "mars": 12,
+    "rick": 12,
+    "roger_flusberg": 12,
+    "roger_rollins": 12,
+    "sid": 12,
+    "stuart": 12
+  },
+  "selection_rule": "Stratified by child from behavioural segments outside the original annotation pool. No model output was consulted. Frozen before any generator is run over it.",
+  "scoring_rule": "When generators are run over this set, a model producing no admissible response is recorded as an abstention and the segment is retained. Segments are never dropped for model failure.",
+  "segments": [
+    {
+      "segment_id": "brett_flusberg_brett_060207.cha_seg_014",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_060207.cha",
+      "chat_text": "*MOT:\twhy are they trying to put the fire out ?\n*CHI:\twith water .\n*MOT:\tno , why ?\n*CHI:\twell , because the building is burning .\n*MOT:\texactly !\n*MOT:\tboy are you +/.\n*CHI:\tthe fire is bad's@n dangerous .\n*MOT:\tit sure is [NAME] ."
+    },
+    {
+      "segment_id": "brett_flusberg_brett_050800.cha_seg_081",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_050800.cha",
+      "chat_text": "*MOT:\twhat did the gate do ?\n*CHI:\tgate .\n*CHI:\tOld_McDonald had a farm eei [/] eei , oh .\n*MOT:\tand on this farm .\n*CHI:\tI hafta fix it .\n*CHI:\tno ."
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060622.cha_seg_021",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_060622.cha",
+      "chat_text": "*MOT:\twhat else did he put in his cart ?\n*CHI:\txxx many cl +/.\n*MOT:\tdid he put in games or hats or lollipops or puppies or +/.\n*MOT:\twhat else did he put in his cart ?\n*MOT:\twhat else did Santa buy at the store ?\n*CHI:\tnew clothes .\n*MOT:\tyeah , but what else , he bought new clothes and +/.\n*MOT:\twhat else did he buy besides all his new clothes ?"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_016",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_060819.cha",
+      "chat_text": "*MOT:\tbefore you press the button .\n*CHI:\t<throw the> [/] the sweeper comes and takes them .\n*MOT:\tno , what do you do ?\n*MOT:\twhat do you do ?\n*MOT:\twhat do you do to try and get the pins to fall down ?\n*CHI:\ta ball .\n*MOT:\tyou throw the ball .\n*MOT:\twhere do you throw it ?"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060622.cha_seg_012",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_060622.cha",
+      "chat_text": "*MOT:\twhy are you gonna make christmas trees in the play-doh ?\n*CHI:\tbecause it was fun .\n*MOT:\tbecause it's fun .\n*MOT:\tbut how ?\n*MOT:\twhat do you do with this thing ?\n*CHI:\tflat the play-doh .\n*CHI:\tcut the play-doh .\n*MOT:\t<oh oh> [/] okay ."
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060011.cha_seg_033",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_060011.cha",
+      "chat_text": "*MOT:\twhat are we gonna make ?\n*CHI:\tthese .\n*MOT:\tyou wanna make swirls ?\n*CHI:\tyes .\n*CHI:\twant three swirls .\n*MOT:\talright .\n*MOT:\tlet me see you make a swirl .\n*CHI:\txxx ."
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_007",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_051002.cha",
+      "chat_text": "*MOT:\twhat were you doing ?\n*CHI:\tI was working on the puzzle .\n*MOT:\tthat's right .\n*CHI:\tno ."
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_028",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_051002.cha",
+      "chat_text": "*MOT:\tokay ?\n*CHI:\tI put it together .\n*MOT:\tI mean +/.\n*MOT:\tyou did !\n*MOT:\twho did ?\n*CHI:\tI did .\n*MOT:\tgood working .\n*MOT:\they [/] [NAME] , how many babys are in that picture ?"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_070517.cha_seg_006",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_070517.cha",
+      "chat_text": "*MOT:\twhat happened to my things ?\n*CHI:\tthey're at the xxx .\n*MOT:\tthey're a blub@b ?\n*CHI:\tthat's the play+room .\n*MOT:\tlooks like it .\n*MOT:\twhat happened to my things inside their house ?\n*CHI:\txxx xxx nice .\n*MOT:\tthat's nice ?"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_001",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_060819.cha",
+      "chat_text": "*MOT:\twanna play with some clay ?\n*CHI:\tyeah .\n*MOT:\tyeah , that would be fun ."
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_089",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_051002.cha",
+      "chat_text": "*MOT:\twhat am I doing ?\n*CHI:\tyou're washing the salad .\n*MOT:\tyeah +/.\n*MOT:\twhat am I doing ?\n*CHI:\tyou are +/.\n*CHI:\tyou are washing the salad .\n*MOT:\twhat are you doing ?\n*CHI:\tI am +/."
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060011.cha_seg_051",
+      "child_id": "brett",
+      "corpus": "flusberg",
+      "session_id": "flusberg_brett_060011.cha",
+      "chat_text": "*MOT:\tsee ?\n*CHI:\tdon't want spaghetti .\n*MOT:\tyeah ."
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_043",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_030700.cha",
+      "chat_text": "*INV:\t0 .\n%act:\tpulls one out\n*CHI:\tyyy Exp .\n%spa:\t$YYY:YY:WD\n*CHI:\tI think I can .\n%spa:\t$NIA:ST:WD\n%act:\tpulls one out\n*INV:\tyeah you can .\n%spa:\t$NIA:AP\n*CHI:\tI think I can .\n%spa:\t$NIA:YY:WD\n%act:\twalks out of the bath+room drying his hands\n*INV:\tdry your hands .\n%spa:\t$NIA:RP\n*CHI:\txxx .\n%act:\tdrops it in the wastebasket and runs off\n*INV:\tChi where should I sit ?\n%spa:\t$NIA:QN"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030000.cha_seg_006",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_030000.cha",
+      "chat_text": "*INV:\tcan we put (th)em back ?\n%spa:\t$NIA:RP\n*CHI:\ta [=? the] [*] door .\n%spa:\t$DJF:ST:WD\n%act:\tputs the door back on\n*INV:\tthere's the door .\n%spa:\t$DJF:AP\n*CHI:\tyyy bird .\n%spa:\t$DJF:ST:WD\n%act:\tputs a piece in\n*CHI:\tbye .\n%spa:\t$PRO:MK:WD\n*INV:\tbye birdie .\n%spa:\t$PRO:MK\n*CHI:\t0 .\n%act:\ttakes the piece back out"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_039",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_030700.cha",
+      "chat_text": "*CHI:\ta [=? the] [*] face on helicopter .\n%spa:\t$DJF:ST:WD\n*CHI:\txxx .\n%act:\tpicks up the baby potato\n*CHI:\t0 [=! smacks] . [+ trn]\n%spa:\t$NIA:PR:VO\n%act:\tkisses the baby repeatedly\n*INV:\tI'm gonna put this hat on the potato head .\n%spa:\t$NIA:SI\n%gpx:\tholds up a hat\n*CHI:\ta [=? the] [*] hat .\n%spa:\t$NIA:RT:WDE\n*INV:\tlook how pretty .\n%spa:\t$DHA:ST\n%act:\tputs the hat on her potato\n*CHI:\txxx .\n%act:\ttwists the feet off the baby\n*CHI:\txxx ."
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_078",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_021100.cha",
+      "chat_text": "*INV:\tface will surely show it .\n%spa:\t$PRO:PR\n*CHI:\t&=laughs .\n%act:\tstands and plays with the barn\n*INV:\tif you're happy and you know it .\n%spa:\t$PRO:PR\n*CHI:\trooster .\n%spa:\t$DHA:ST:WD\n*INV:\twhat ?\n%spa:\t$DCC:RR\n*CHI:\trooster .\n%spa:\t$DHA:ST:WD\n%act:\tgets a rooster out of the barn"
+    },
+    {
+      "segment_id": "carl_rollins_carl_020800.cha_seg_048",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_020800.cha",
+      "chat_text": "*CHI:\tyyy .\n%spa:\t$YYY:YY:VO\n*CHI:\tyyy [= jargon] .\n%spa:\t$YYY:YY:VJ\n*INV:\twho are you talking to ?\n%spa:\t$DCC:QN\n*CHI:\tyyy [= jargon] .\n%spa:\t$YYY:YY:VJ\n%act:\treaches across table and knocks the man out of the tractor\n*CHI:\tyyy [= jargon] .\n%spa:\t$YYY:YY:VJ\n%act:\tgets the tractor\n*INV:\tI'll get the farmer .\n%spa:\t$NIA:SI\n%act:\tstands to reach the farmer for him\n*CHI:\t0 .\n%act:\tplays with the sheep in the tractor"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_047",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_021100.cha",
+      "chat_text": "*INV:\tnow we needta put your bucket on the shelf .\n%spa:\t$NIA:RP\n%gpx:\tpoints to the bucket\n*CHI:\tthe shelf [?] .\n%spa:\t$NIA:RT:WDE\n%act:\tgoes to the bucket and grabs it by the lid\n*INV:\tpick it up here .\n%spa:\t$NIA:RP\n%gpx:\ttaps the bottom of the bucket\n*CHI:\tup .\n%spa:\t$NIA:SI:WD\n%act:\tlifts the bucket\n*INV:\tup [>] ?\n%spa:\t$NIA:RT\n*CHI:\tup [<] .\n%spa:\t$NIA:RT:WD\n*INV:\tokay .\n%spa:\t$NIA:AD\n*INV:\tI'll do it .\n%spa:\t$NIA:SI\n%act:\tputs the bucket on the shelf"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_032",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_030700.cha",
+      "chat_text": "*INV:\tis that Spot ?\n%spa:\t$DJF:YQ\n%gpx:\tpoints in the book\n*CHI:\tyes .\n%spa:\t$DJF:AA:WD\n*INV:\the's got his lunch pail .\n%spa:\t$DJF:ST\n%gpx:\tpoints to it"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_065",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_021100.cha",
+      "chat_text": "*INV:\tyummy says the horsie .\n%spa:\t$DFW:ST\n*CHI:\t0 .\n%act:\trubs his tummy\n*INV:\tyummy .\n%spa:\t$DFW:ST\n%act:\trubs his tummy\n*INV:\tthank you .\n%spa:\t$DFW:ST\n*CHI:\t0 .\n%act:\tpicks up another horse and makes him eat\n*INV:\tthat horse is hungry too ?\n%spa:\t$DFW:YQ\n*INV:\txxx . [+ trn]\n%spa:\t$DFW:PR\n%act:\tpretends to eat him\n*CHI:\t&=laughs ."
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_030",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_030700.cha",
+      "chat_text": "*INV:\tis that where the eyes go ?\n%spa:\t$DJF:YQ\n*CHI:\tyes [=! laughs] .\n%spa:\t$DJF:AA:WD\n*INV:\tdo you think so ?\n%spa:\t$DHS:YQ\n%gpx:\tlooks at the potato and back at him\n*CHI:\tno .\n%spa:\t$DHS:AN:WD\n*INV:\tno .\n%spa:\t$DHS:RT\n*INV:\tI think they go up here .\n%spa:\t$DSS:ST\n%gpx:\tpoints to where the eyes belong\n*CHI:\tyyy yyy right here .\n%spa:\t$YYY:YY:WD\n%act:\tpulls the eyes out and sticks them on top of the potato\n*INV:\tdo those eyes go on top of her head ?\n%spa:\t$DJF:YQ\n%gpx:\ttaps the potato"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_045",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_021100.cha",
+      "chat_text": "*INV:\tthat's right .\n%spa:\t$NIA:AP\n%gpx:\tnods\n*CHI:\t0 .\n%act:\tstarts stacking the cards\n*INV:\tdone .\n%spa:\t$DJF:ST\n%gpx:\tpoints to a card\n*CHI:\tdone .\n%spa:\t$DJF:RT:WDE\n*INV:\tlet's put (th)em away .\n%spa:\t$NIA:RP\n*CHI:\taway .\n%spa:\t$NIA:RT:WDE\n%act:\tstacks the last card\n*CHI:\tbi(cycle) .\n%spa:\t$DJF:ST:WD\n*INV:\t0on 0the shelf .\n%spa:\t$NIA:RP"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_038",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_030700.cha",
+      "chat_text": "*INV:\tpop .\n%spa:\t$NIA:PR\n*CHI:\txxx .\n%act:\tdances around\n*INV:\tokay .\n%spa:\t$NIA:MK\n*INV:\tvery good .\n%spa:\t$NIA:AB\n*INV:\tcan you turn the water off ?\n%spa:\t$NIA:RP\n*CHI:\t0 .\n%act:\tturns the water off\n*CHI:\txxx . [+ trn]\n%spa:\t$MRK:MK:VO\n%act:\tsticks his hands in the bubbles still in the sink\n*CHI:\ta [=? the] [*] bubbles yyy is gone .\n%spa:\t$DJF:ST:WD"
+    },
+    {
+      "segment_id": "carl_rollins_carl_020800.cha_seg_034",
+      "child_id": "carl",
+      "corpus": "rollins",
+      "session_id": "rollins_carl_020800.cha",
+      "chat_text": "*INV:\tthat's what a pg makes .\n%spa:\t$NIA:ST\n%act:\tsets the pig down\n*CHI:\t0 .\n%act:\tplays with the pig\n*INV:\t0 .\n%act:\tgets the horse\n*INV:\tmove his legs .\n%spa:\t$NIA:SI\n%act:\tmoves the horse's leg\n*INV:\tmove his legs .\n%spa:\t$NIA:SI\n%act:\tmoves the horse's leg\n*CHI:\t0 .\n%act:\tmoves the horse's leg\n*INV:\tgood .\n%spa:\t$NIA:AP\n*CHI:\t0 .\n%act:\tlooks off"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_061028.cha_seg_017",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_061028.cha",
+      "chat_text": "*MOT:\tindeed he did .\n*CHI:\tindeed he did .\n*MOT:\tindeed he did .\n*CHI:\the loved that goat .\n*MOT:\the loved that goat .\n*CHI:\tjust like a kid .\n*MOT:\tjust like a kid .\n*CHI:\tindeed he did ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_061028.cha_seg_065",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_061028.cha",
+      "chat_text": "*MOT:\twho's that guy ?\n*CHI:\tSnoopy .\n*MOT:\tright .\n*MOT:\tgood .\n*MOT:\tthat's Snoopy .\n*CHI:\txxx .\n*MOT:\tyou open it , go ahead .\n*CHI:\tdon't be fussy ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_061028.cha_seg_007",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_061028.cha",
+      "chat_text": "*MOT:\the says hi to all the boys and girls .\n*CHI:\thi picture [/] picture .\n*MOT:\tand picture [/] picture .\n*MOT:\the's picture [/] picture .\n*CHI:\twhat's wrong with that ?\n*MOT:\twhat's wrong with that ?\n*CHI:\twhat's wrong with that ?\n*CHI:\ttell me what's wrong with that ?"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_080012.cha_seg_010",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_080012.cha",
+      "chat_text": "*MOT:\tokay ?\n*CHI:\txxx .\n*MOT:\twould you like to do that ?\n*MOT:\tthat will be in a few months [NAME] .\n*CHI:\tI wanna play+ground on a different day .\n*MOT:\tyou wanna what ?\n*CHI:\tto play+ground on a different day .\n*MOT:\tyou wanna go on the play+ground on a different day ?"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_063",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_060900.cha",
+      "chat_text": "*MOT:\tyou wanna set those guys up ?\n*CHI:\txxx .\n*MOT:\twhat is this ?\n*MOT:\t[NAME] , what's this ?\n*CHI:\txxx .\n*MOT:\twhat's this ?\n*MOT:\twhat is that ?\n*CHI:\tguy ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_061028.cha_seg_048",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_061028.cha",
+      "chat_text": "*MOT:\tFreddie_Rogers paints .\n*CHI:\tpaints .\n*MOT:\tand what else does he do ?\n*CHI:\tUncle_Friday .\n*CHI:\tKing_Friday .\n*MOT:\toh „ King_Friday .\n*MOT:\tthat's on Mister_Rogers .\n*CHI:\tUncle_Friday ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_070315.cha_seg_004",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_070315.cha",
+      "chat_text": "*MOT:\tlook .\n*CHI:\txxx .\n*MOT:\toh , .\n*MOT:\twhat's that a picture of ?\n*MOT:\tdo you know what these are ?\n*CHI:\tthings you can bake .\n*MOT:\tthese are +/.\n*CHI:\tgumball ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_015",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_060900.cha",
+      "chat_text": "*MOT:\tdo you wanna color this book here ?\n*CHI:\tno .\n*CHI:\tno .\n*MOT:\toh „ you're going to color the fruit and vegetable .\n*MOT:\tcan you share with joy ?\n*CHI:\tno .\n*MOT:\tand have her color ?\n*CHI:\tI'm too big ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_080221.cha_seg_006",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_080221.cha",
+      "chat_text": "*MOT:\twe don't do that .\n*CHI:\t&~co [/] cover your mouth .\n*MOT:\tno covering mouths .\n*MOT:\tno we don't do that .\n*CHI:\tcover my mouth .\n*MOT:\tno .\n*MOT:\tunless you're just playing , it's okay .\n*CHI:\tstop ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_080012.cha_seg_007",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_080012.cha",
+      "chat_text": "*MOT:\tdid you go ride your bike with Julie and Michael ?\n*CHI:\tsee them this afternoon .\n*MOT:\tnot this afternoon , but we'll see them again soon .\n*MOT:\tdid [NAME] have fun playing with Julie and Michael ?\n*CHI:\tyeah ."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_070106.cha_seg_007",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_070106.cha",
+      "chat_text": "*MOT:\tthese are +/.\n*CHI:\tblocks .\n*MOT:\tright .\n*MOT:\tvery good .\n*MOT:\twhat's the next one ?\n*CHI:\tblanket .\n*MOT:\tright .\n*MOT:\tand the next one is +/."
+    },
+    {
+      "segment_id": "jack_flusberg_jack_080506.cha_seg_003",
+      "child_id": "jack",
+      "corpus": "flusberg",
+      "session_id": "flusberg_jack_080506.cha",
+      "chat_text": "*MOT:\tand who's that ?\n*CHI:\tGrover .\n*MOT:\tGrover .\n*MOT:\twhat does that say ?\n*CHI:\tSesame_Street .\n*MOT:\tSesame_Street .\n*CHI:\tBig_Bird color forms play set ."
+    },
+    {
+      "segment_id": "josh_rollins_josh_020500.cha_seg_007",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_020500.cha",
+      "chat_text": "*INV:\tyyy open it .\n%spa:\t$NIA:YY\n*CHI:\t0 .\n%act:\tputs hand on the top\n*INV:\t0 .\n%act:\tputs finger on spout\n*INV:\topen it up .\n%spa:\t$NIA:SI\n%act:\topens the spout\n*CHI:\t0 .\n%act:\twalks away\n*CHI:\t0 .\n%act:\twalks around the room\n*CHI:\txxx [=! voc] .\n%act:\tbends over\n*CHI:\t0 .\n%act:\tstands up"
+    },
+    {
+      "segment_id": "josh_rollins_josh_030100.cha_seg_025",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_030100.cha",
+      "chat_text": "*INV:\tcan you put the horse in the bucket ?\n%spa:\t$NIA:RP\n*CHI:\t0 .\n%act:\tdrops the horse in\n*INV:\tthank you .\n%spa:\t$MRK:MK\n*INV:\tthank you .\n%spa:\t$MRK:MK\n*INV:\tin the bucket .\n%spa:\t$NIA:SI\n%act:\tdrops more in\n*CHI:\t0 .\n%act:\tlooks the toys over then puts them in the bucket"
+    },
+    {
+      "segment_id": "josh_rollins_josh_020500.cha_seg_027",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_020500.cha",
+      "chat_text": "*INV:\tlet's go downstairs .\n%spa:\t$NIA:RP\n*CHI:\t0 . [+ trn]\n%spa:\t$NIA:YY:NO\n%act:\tpulls Clinician up and back to railing\n*CHI:\t0 .\n%act:\tgoes to pole and puts fingers in holes"
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_004",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_020800.cha",
+      "chat_text": "*CHI:\t&=laughs .\n%act:\tlooks at Clinician and smiles\n*CHI:\t0 .\n%act:\tplays with puzzle\n*INV:\tyou silly boy .\n%spa:\t$DHS:ST\n%act:\ttouches chi's back\n*CHI:\t0 .\n%act:\tdumps the puzzle over\n*INV:\t&-uh oh .\n%spa:\t$MRK:MK\n%act:\tholds hands up\n*CHI:\t0 .\n%act:\tdumps puzzle\n*INV:\toh no .\n%spa:\t$MRK:MK\n*INV:\tthey all fell out .\n%spa:\t$DRE:ST\n%act:\tpicking up pieces from the floor"
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_013",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_021100.cha",
+      "chat_text": "*INV:\tokay .\n%spa:\t$MRK:MK\n*CHI:\tyyy .\n%spa:\t$YYY:YY:VO\n%act:\twalks off into the walkway\n*INV:\tI have more blocks to put in the basket .\n%spa:\t$DHA:ST\n*CHI:\tyyy [= jargon] .\n%spa:\t$YYY:YY:VJ\n*INV:\t0 .\n%act:\tholds up a block\n*INV:\tI have a blue block .\n%spa:\t$NIA:ST\n*CHI:\t0 .\n%act:\treaches for the block\n*INV:\twanna do it again ?\n%spa:\t$NIA:RQ"
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_011",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_020800.cha",
+      "chat_text": "*INV:\tI'm gonna put the puzzle up here on the shelf .\n%spa:\t$NIA:SI\n*CHI:\txxx .\n%act:\tgrabs chair and leans over it\n*CHI:\t0 .\n%act:\tgrabs doorknob\n*CHI:\t0 .\n%act:\tlooks at Clinician\n*INV:\tpush your chair in .\n%spa:\t$NIA:SI\n%act:\tpushes chair in\n*CHI:\tyyy yyy .\n%spa:\t$NIA:YY:VO\n%act:\tpushes Clinician's arm\n*INV:\t0 .\n%act:\treaches for chi's juice\n*INV:\there's your juice .\n%spa:\t$NIA:TO\n%act:\tgives juice to chi"
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_008",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_020800.cha",
+      "chat_text": "*INV:\t&=gasp . [+ trn]\n%spa:\t$MRK:MK\n%act:\tputs hands up\n*CHI:\t0 .\n%act:\tlooks at puzzle\n*INV:\tyou did it !\n%spa:\t$DRE:ET\n%act:\tleans over to look at chi\n*CHI:\t0 .\n%act:\tlooks at puzzle and smiles\n*INV:\tgood job .\n%spa:\t$NIA:PM\n*CHI:\txxx .\n%act:\ttakes piece out of puzzle\n*INV:\t&-uh oh .\n%spa:\t$MRK:MK\n%act:\tputs hands in air\n*INV:\tyou took the giraffe out .\n%spa:\t$DRE:ST"
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_026",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_020800.cha",
+      "chat_text": "*INV:\tright here ?\n%spa:\t$NIA:RP\n%gpx:\tpoints to space\n*CHI:\t0 .\n%act:\tplays with the piece\n*INV:\tlet's turn it over .\n%spa:\t$NIA:SI\n%act:\tturns piece over\n*INV:\tpush it in .\n%spa:\t$NIA:SI\n%act:\tputs piece on puzzle\n*CHI:\t0 .\n%act:\tlooks down\n*INV:\tcan you push it in Chi ?\n%spa:\t$NIA:RP\n%gpx:\tpoints to piece\n*INV:\tI'll push your chair up .\n%spa:\t$NIA:SI\n%act:\tpushes chair up\n*CHI:\t0 [=! coughs] ."
+    },
+    {
+      "segment_id": "josh_rollins_josh_030100.cha_seg_020",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_030100.cha",
+      "chat_text": "*INV:\tget it out .\n%spa:\t$DJF:RP\n*CHI:\t0 .\n%act:\tbeats the can on the table\n*INV:\tcan I help you ?\n%spa:\t$DJF:RP\n%act:\tstops him from beating"
+    },
+    {
+      "segment_id": "josh_rollins_josh_030100.cha_seg_038",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_030100.cha",
+      "chat_text": "*INV:\tcome on Chi let's put the juice up .\n%spa:\t$NIA:RP\n*CHI:\tyyy .\n%spa:\t$NIA:RD:VO\n*INV:\toh why not ?\n%spa:\t$NIA:QN"
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_043",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_021100.cha",
+      "chat_text": "*INV:\t&=gasp what do I needta do ?\n%spa:\t$NIA:QN\n*CHI:\txxx [>] . [+ trn]\n%spa:\t$YYY:YY:VO\n*INV:\t<say move> [<] please .\n%spa:\t$NIA:EI\n*CHI:\tmove .\n%spa:\t$NIA:RT:WD"
+    },
+    {
+      "segment_id": "josh_rollins_josh_030100.cha_seg_004",
+      "child_id": "josh",
+      "corpus": "rollins",
+      "session_id": "rollins_josh_030100.cha",
+      "chat_text": "*INV:\tclose the door .\n%spa:\t$NIA:SI\n%act:\tpushes it closed\n*CHI:\txxx .\n*INV:\tclosed .\n%spa:\t$NIA:ST\n*CHI:\txxx .\n*INV:\tokay .\n%spa:\t$MRK:MK\n*INV:\tChi you needta go pottie ?\n%spa:\t$NIA:YQ\n*CHI:\txxx .\n%act:\trounds the corner and starts down the hall\n*CHI:\txxx ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070812.cha_seg_146",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070812.cha",
+      "chat_text": "*MOT:\t[NAME] ?\n*CHI:\twatermelon umbrella .\n*MOT:\tI know you want that .\n*MOT:\tyou want that block don't you ?\n*MOT:\tI don't know if we can find it .\n*CHI:\tget new one .\n*MOT:\tyou want a new one , okay .\n*CHI:\torange ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_090818.cha_seg_003",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_090818.cha",
+      "chat_text": "*MOT:\tdid you wanna buy fishies ?\n*CHI:\tyes .\n*MOT:\twhat toys did you buy in Florida ?"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070700.cha_seg_062",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070700.cha",
+      "chat_text": "*MOT:\twhen do you find pretty eggs like that ?\n*CHI:\tyeah .\n*MOT:\twhat holiday do we have fancy eggs ?\n*MOT:\tpretty eggs ?\n*CHI:\txxx .\n*MOT:\thuh ?\n*MOT:\twhich holiday , [NAME] ?\n*CHI:\tthat one ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070700.cha_seg_073",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070700.cha",
+      "chat_text": "*MOT:\tthat's right .\n*CHI:\t&~h [/] hat .\n*CHI:\thead .\n*CHI:\thouse .\n*CHI:\thouse .\n*CHI:\thorse .\n*CHI:\thouse .\n*MOT:\tyeah , you're right ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070700.cha_seg_025",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070700.cha",
+      "chat_text": "*MOT:\tdo fish live in the tree ?\n*CHI:\tno .\n*MOT:\tno ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070812.cha_seg_142",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070812.cha",
+      "chat_text": "*MOT:\t[NAME] .\n*CHI:\txxx .\n*MOT:\tsit down .\n*CHI:\tdone .\n*MOT:\tno done .\n*MOT:\tdo you want jello ?\n*CHI:\tyes .\n*MOT:\tthen you come sit down ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070812.cha_seg_002",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070812.cha",
+      "chat_text": "*MOT:\twhat's the date today ?\n*CHI:\tDecember .\n*MOT:\tDecember what ?\n*CHI:\tmonth .\n*CHI:\tmonth ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080915.cha_seg_003",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_080915.cha",
+      "chat_text": "*MOT:\tcan you open up the play-doh ?\n*CHI:\tno Timmy .\n*CHI:\tno Timmy ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_071026.cha_seg_012",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_071026.cha",
+      "chat_text": "*MOT:\twhat's gone ?\n*CHI:\tboy .\n*MOT:\tyeah , he threw the ball .\n*MOT:\twe're watching the ball .\n*MOT:\tgo down the +/.\n*CHI:\txxx .\n*MOT:\talley .\n*MOT:\tand the balls , what do the balls do here ?"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070700.cha_seg_065",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070700.cha",
+      "chat_text": "*MOT:\tI don't think you read this one .\n*CHI:\tfarmer .\n*MOT:\tno .\n*MOT:\tread that .\n*CHI:\tfather .\n*MOT:\tno .\n*MOT:\tread that .\n*CHI:\tfather ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070812.cha_seg_025",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070812.cha",
+      "chat_text": "*MOT:\twho sits in the back seat ?\n*CHI:\tpeter .\n*MOT:\tno .\n*MOT:\tAlicia .\n*CHI:\txxx .\n*MOT:\tAlicia .\n*MOT:\twho else ?\n*CHI:\t&~Ali ."
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070700.cha_seg_066",
+      "child_id": "mark",
+      "corpus": "flusberg",
+      "session_id": "flusberg_mark_070700.cha",
+      "chat_text": "*MOT:\tno .\n*CHI:\tKimberely .\n*MOT:\tno ."
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_083",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030300.cha",
+      "chat_text": "*INV:\tput that in here .\n%spa:\t$NIA:RP\n%gpx:\tpoints to a shape hole in the box\n*CHI:\txxx .\n%act:\topens the top and puts the shape in\n*INV:\txxx . [+ trn]\n%spa:\t$MRK:MK\n*INV:\tyou're just gonna drop (th)em in .\n%spa:\t$NIA:ST\n*INV:\tone .\n%spa:\t$NIA:CN\n*CHI:\t0 .\n%act:\tpicks up another shape and puts it in the box\n*INV:\ttwo .\n%spa:\t$NIA:CN\n*INV:\t&=gasp . [+ trn]\n%spa:\t$MRK:MK\n%act:\tpicks up a shape and pulls the rest out of his reach"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_013",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030300.cha",
+      "chat_text": "*INV:\there's one .\n%spa:\t$DHA:ST\n%act:\tpicks up another shape\n*CHI:\t0 . [+ trn]\n%spa:\t$NIA:YY:CR\n%act:\treaches for the shape\n*INV:\tyou want it ?\n%spa:\t$NIA:YQ\n%act:\tholds it out of his reach\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:YY:VNO\n%act:\tpulls her shirt sleeve to get it\n*INV:\tfour .\n%spa:\t$NIA:CN\n*INV:\t0 .\n%act:\tpicks up another shape\n*CHI:\t0 . [+ trn]\n%spa:\t$NIA:YY:CR\n%act:\treaches for the shape"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030800.cha_seg_020",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030800.cha",
+      "chat_text": "*INV:\tthere's a guitar .\n%spa:\t$DHA:ST\n%gpx:\tstrums her tummy\n*CHI:\tyyy yyy .\n%spa:\t$YYY:YY:VO\n%act:\tturns the page\n*INV:\t&~mm soup .\n%spa:\t$DHA:ST\n%gpx:\tpoints in the book\n*INV:\tpizza .\n%spa:\t$DHA:ST\n%gpx:\tpoints\n*CHI:\t0 . [+ trn]\n%spa:\t$YYY:YY:CP\n%gpx:\tpoints to the pizza\n*INV:\tpizza .\n%spa:\t$DJF:ST\n*INV:\twhat's that ?\n%spa:\t$DHA:QN\n%gpx:\tpoints in the book\n*CHI:\tyyy .\n%spa:\t$DJF:YY:VO"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030800.cha_seg_021",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030800.cha",
+      "chat_text": "*INV:\twhat are those ?\n%spa:\t$DJF:QN\n%gpx:\trubs her finger on the spot\n*CHI:\tflower .\n%spa:\t$DJF:SA:WD\n*INV:\tflowers .\n%spa:\t$DJF:AP\n*CHI:\t0 . [+ trn]\n%spa:\t$DJF:PR:CO\n%act:\tputs his nose on the picture and sniffs\n*INV:\t0 . [+ trn]\n%spa:\t$DJF:PR\n%act:\tsniffs\n*INV:\toh you smelled the flowers .\n%spa:\t$DRE:ST\n*CHI:\t0 .\n%act:\tturns the page\n*INV:\tturn the page .\n%spa:\t$NIA:SI"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030100.cha_seg_048",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030100.cha",
+      "chat_text": "*INV:\tlook .\n%spa:\t$DHA:RP\n%act:\tdrops food into chicken coop\n*CHI:\t0 .\n%act:\twalks to the wall behind the chicken coop and climbs up it\n*INV:\twhere are you going ?\n%spa:\t$NIA:QN\n%act:\twalks over to CHI"
+    },
+    {
+      "segment_id": "mars_rollins_mars_031100.cha_seg_027",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_031100.cha",
+      "chat_text": "*CHI:\txxx . [+ trn]\n%spa:\t$DJF:YY:VO\n%act:\ttouches picture\n*CHI:\tanother red [//] red firetruck .\n%spa:\t$DJF:RT:WD\n%act:\ttouching picture\n*INV:\t&-uh huh .\n%spa:\t$DJF:AC"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_080",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030300.cha",
+      "chat_text": "*INV:\to@l .\n%spa:\t$DHA:ST\n%gpx:\tpoints to the mirror with her marker\n*CHI:\txxx .\n*INV:\there's o@l .\n%spa:\t$DHA:ST\n%act:\tdraws an o@l on the mirror\n*INV:\to@l .\n%spa:\t$DHA:ST\n*CHI:\t0 .\n%act:\tplays with chair seat"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030800.cha_seg_076",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030800.cha",
+      "chat_text": "*INV:\twe needta go out .\n%spa:\t$NIA:RP\n%gpx:\tpoints to the door\n*CHI:\t0 .\n%act:\twalks past her to the stairs\n*INV:\toh you wanna go up the stairs ?\n%spa:\t$DCA:YQ\n*CHI:\t0 .\n%act:\tstarts up the stairs"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_091",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030300.cha",
+      "chat_text": "*INV:\tyou're helping Vicki .\n%spa:\t$DJF:ST\n*CHI:\t0 .\n%act:\tturns through the pages\n*INV:\t0 .\n%act:\tcloses the book and holds it up\n*INV:\t0 .\n%act:\tchecks her watch\n*INV:\tthere you go .\n%spa:\t$NIA:MK\n%act:\ttries to look out the door\n*CHI:\t0 .\n%gpx:\tpoints to the book\n*INV:\tlet's go put this away .\n%spa:\t$NIA:RP\n%gpx:\tshakes the book\n*CHI:\t0 .\n%act:\ttakes the book and stands up"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_002",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030300.cha",
+      "chat_text": "*INV:\tpush [/] push .\n%spa:\t$NIA:SI\n*CHI:\tyyy .\n%spa:\t$NIA:YY:VO\n*INV:\tright there .\n%spa:\t$NIA:ST\n*CHI:\txxx ."
+    },
+    {
+      "segment_id": "mars_rollins_mars_031100.cha_seg_002",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_031100.cha",
+      "chat_text": "*INV:\tWinnie the Pooh .\n%spa:\t$NIA:ST\n*CHI:\tyyy .\n%spa:\t$NIA:YY:VO\n%act:\ttakes Tigger out of box\n*INV:\tthere's Tigger .\n%spa:\t$DJF:ST\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:YY:VO\n%act:\ttakes piglet out of box\n*INV:\tthere's piglet .\n%spa:\t$DJF:ST\n*CHI:\tyyy .\n%spa:\t$NIA:YY:VO\n%act:\ttakes eore out of box\n*INV:\tEgore .\n%spa:\t$DJF:ST\n*CHI:\tyyy .\n%spa:\t$YYY:YY:VO\n%act:\tsits down"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_011",
+      "child_id": "mars",
+      "corpus": "rollins",
+      "session_id": "rollins_mars_030300.cha",
+      "chat_text": "*INV:\t<wipe wipe> [/] wipe .\n%spa:\t$NIA:SI\n*CHI:\t0 .\n%act:\tdrops his paper towel\n*INV:\tit fell Chi .\n%spa:\t$DRE:ST"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_050904.cha_seg_049",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_050904.cha",
+      "chat_text": "*MOT:\tthat's honey [NAME] .\n*CHI:\thoney .\n*MOT:\thoney .\n*MOT:\tpots of honey .\n*CHI:\thoney ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_054",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_040700.cha",
+      "chat_text": "*MOT:\tthat's good .\n*CHI:\txxx .\n*CHI:\txxx .\n*MOT:\tgood boy .\n*CHI:\tface .\n*MOT:\twhat ?\n*CHI:\tface .\n*CHI:\twant Dan ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_066",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_040700.cha",
+      "chat_text": "*MOT:\tthere's another one .\n*CHI:\tgirl .\n*MOT:\tthat's a little girl , yeah ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_051104.cha_seg_032",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_051104.cha",
+      "chat_text": "*MOT:\twhat's in your hand ?\n*CHI:\tsheep .\n*MOT:\tsheep ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_050904.cha_seg_025",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_050904.cha",
+      "chat_text": "*MOT:\twhat's this ?\n*CHI:\that .\n*MOT:\tgood boy ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_073",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_040700.cha",
+      "chat_text": "*MOT:\tput her in here and turn the crank .\n*CHI:\tturn the crank .\n*MOT:\tlook ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_008",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_040700.cha",
+      "chat_text": "*MOT:\twanna put some pegs in ?\n*CHI:\tno .\n*MOT:\tno pegs in ?\n*CHI:\txxx .\n*CHI:\txxx .\n*MOT:\t[NAME] , what's this number ?\n*CHI:\tthree .\n*MOT:\tno , what's this ?"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_108",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_040700.cha",
+      "chat_text": "*MOT:\t[NAME] , what's this ?\n*CHI:\ttrain .\n*MOT:\tthe train ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_076",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_040700.cha",
+      "chat_text": "*MOT:\tget the cow [NAME] .\n*CHI:\tcow .\n*MOT:\t[NAME] pick up the cow ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_061012.cha_seg_009",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_061012.cha",
+      "chat_text": "*MOT:\twhat are you doing ?\n*CHI:\tI <put a> [/] put a horn .\n*MOT:\twhat are you doing ?\n*CHI:\tI playing ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_060522.cha_seg_002",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_060522.cha",
+      "chat_text": "*MOT:\tand there are the kids .\n*CHI:\tno playing in refrigerator .\n*MOT:\tthere .\n*MOT:\tyou did a nice job setting that up , [NAME] .\n*MOT:\tit looks good .\n*CHI:\tare you +/.\n*MOT:\twhat's this [NAME] ?\n*CHI:\ta stove ."
+    },
+    {
+      "segment_id": "rick_flusberg_rick_060818.cha_seg_001",
+      "child_id": "rick",
+      "corpus": "flusberg",
+      "session_id": "flusberg_rick_060818.cha",
+      "chat_text": "*MOT:\tgood boy .\n*CHI:\tStan help to sprinkle .\n*MOT:\t[NAME] , look .\n*MOT:\twhat's this ?\n*CHI:\ta record player .\n*MOT:\tno .\n*CHI:\trecord .\n*MOT:\tthese are records ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_051",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040309.cha",
+      "chat_text": "*MOT:\tcook the supper .\n*CHI:\tcook it supper .\n*MOT:\tyou hafta sit like mommy .\n*CHI:\tmommy .\n*CHI:\ttv thirty eight .\n*MOT:\toh , they wanna watch tv ?\n*CHI:\tgo watch tv .\n*MOT:\tlet's watch Sesame_Street ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_002",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_050218.cha",
+      "chat_text": "*MOT:\tdo you wanna put the cars in the barn ?\n*CHI:\tyeah .\n*CHI:\tI wanna .\n*MOT:\twhat do you want ?\n*CHI:\tI wanna play a railroad tracks .\n*MOT:\tokay .\n*CHI:\tthe tracks .\n*CHI:\tno [/] no !"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_013",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_050218.cha",
+      "chat_text": "*MOT:\twhat do you wanna do , [NAME] ?\n*CHI:\tI wanna play my marble .\n*MOT:\tokay , let's take it apart .\n*MOT:\twe can play with it later .\n*MOT:\tyou wanna play with something else ?\n*CHI:\tyeah .\n*MOT:\twhat ?\n*MOT:\twhat do you wanna do ?"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_026",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_031020.cha",
+      "chat_text": "*MOT:\ttake the shapes out .\n*CHI:\toh , !\n*CHI:\tyeah , it's +/.\n*CHI:\txxx .\n*MOT:\t[NAME] .\n*CHI:\tyeah it's the circle .\n*MOT:\tput the circle in the box .\n*MOT:\twhat color's the circle ?"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_059",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040309.cha",
+      "chat_text": "*MOT:\tsit her in the chair .\n*CHI:\tsit down .\n*CHI:\txxx .\n*CHI:\tlet me see your teeth , [NAME] .\n*CHI:\toh , you wanna tell the dentist how you cracked your tooth .\n*CHI:\tget off .\n*CHI:\tget off the table !\n*CHI:\tget off ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_014",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040309.cha",
+      "chat_text": "*MOT:\toh , okay .\n*CHI:\tstrawberry milk .\n*MOT:\tstrawberry milk .\n*MOT:\topen the door oh , .\n*CHI:\topen the door .\n*CHI:\teat pizza .\n*MOT:\toh , you're feeding the lady .\n*CHI:\tyeah ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_037",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040309.cha",
+      "chat_text": "*MOT:\tit's all gone .\n*CHI:\tall gone .\n*CHI:\twash your hands .\n*CHI:\twash your face .\n*CHI:\ttake a bath .\n*MOT:\t[NAME] who's this ?\n*CHI:\tlook .\n*CHI:\tgreen frog ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_010",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_030900.cha",
+      "chat_text": "*MOT:\twhat's this on your finger ?\n*CHI:\tcould these xxx .\n*MOT:\twhatever it is it's bothering him .\n*CHI:\twipe these .\n*CHI:\twipe these .\n*MOT:\topen it .\n*CHI:\tcould these xxx .\n*CHI:\they [/] prestos ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040727.cha",
+      "chat_text": "*MOT:\t[NAME] are you singing a song ?\n*CHI:\tyes .\n*MOT:\twhat are you singing ?\n*CHI:\ta microphone .\n*CHI:\tplay .\n*CHI:\tgood_night .\n*MOT:\tkiss them good_night .\n*CHI:\tgood_night ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_056",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040028.cha",
+      "chat_text": "*MOT:\tyou hafta put his shirt on .\n*CHI:\txxx .\n*MOT:\tput his shirt on ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_062",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040309.cha",
+      "chat_text": "*MOT:\tdo you wanna sing ?\n*CHI:\tsing ?\n*MOT:\tsing wham .\n*CHI:\txxx .\n*CHI:\txxx .\n*CHI:\t[NAME] sing .\n*CHI:\txxx ."
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_078",
+      "child_id": "roger_flusberg",
+      "corpus": "flusberg",
+      "session_id": "flusberg_roger_flusberg_040309.cha",
+      "chat_text": "*MOT:\toh , what's on +/.\n*CHI:\ttv thirty eight .\n*MOT:\tchannel four .\n*CHI:\tchannel four .\n*MOT:\tturn the channel .\n*CHI:\tno !\n*CHI:\tno .\n*CHI:\tstay ."
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_021",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_030300.cha",
+      "chat_text": "*CHI:\t0 .\n%act:\tplaces the large piece of play+doh on top of the rolling pin\n*CHI:\t0 .\n%gpx:\treaches for the other piece of play+doh in the EXP hand\n*INV:\t0 .\n%act:\tholds tight to the play+doh\n*CHI:\t0 .\n%act:\ttakes the large piece of play+doh off the top of the rolling pin\n*INV:\tthere's his hat .\n%spa:\t$DJF:ST\n%gpx:\tpoints to the piece of play+doh CHI is holding\n*CHI:\t0 .\n%act:\tputs the piece of play+doh down on the counter"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_008",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_020600.cha",
+      "chat_text": "*INV:\tput this block .\n%spa:\t$NIA:RP\n*CHI:\txxx .\n%act:\tturns it over then puts it on the stack\n*CHI:\txxx .\n%act:\ttakes the next block\n*INV:\t0 .\n%act:\tstraightens the stack\n*CHI:\t0 .\n%act:\tpushes the blocks over"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_065",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_020600.cha",
+      "chat_text": "*INV:\tthrow it away .\n%spa:\t$NIA:ST\n*CHI:\txxx .\n%act:\treaches for new balloon\n*INV:\tthere you go .\n%spa:\t$NIA:TO\n%act:\tgives balloon to CHI\n*INV:\tthere you go .\n%spa:\t$NIA:MK\n*CHI:\t0 .\n%act:\tlooks back into trash\n*CHI:\t0 .\n%act:\tgrabs old balloon out of trash\n*INV:\tthrow it away .\n%spa:\t$NIA:RP\n%gpx:\tpoints to trash\n*INV:\tno good .\n%spa:\t$NIA:ST\n%gpx:\tpoints to trash again"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_046",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_021000.cha",
+      "chat_text": "*INV:\twhere's Chi ?\n%spa:\t$PRO:QN\n*CHI:\t0 .\n%act:\tlooks then walks away\n*INV:\tlet's go for a walk .\n%spa:\t$NIA:RP\n*CHI:\t0 .\n%act:\tplays with the horse\n*INV:\tChi you wanna go for a walk ?\n%spa:\t$NIA:RQ\n*CHI:\t0 .\n%act:\tplays with the horse"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_043",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_021000.cha",
+      "chat_text": "*INV:\tthere he is .\n%spa:\t$NIA:ST\n*CHI:\t0 .\n%act:\tcloses the mirror\n*INV:\tclose it .\n%spa:\t$NIA:SI\n*INV:\twhere's Chi ?\n%spa:\t$PRO:QN\n*INV:\twhere's Chi ?\n%spa:\t$PRO:QN\n*CHI:\t0 . [+ trn]\n%spa:\t$PRO:YY:CO\n%act:\tknocks"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_042",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_021000.cha",
+      "chat_text": "*INV:\tI see Chi .\n%spa:\t$NIA:ST\n%gpx:\tlooks in the mirror and points at his reflection\n*CHI:\t0 .\n%act:\tcloses the mirror\n*INV:\tpull .\n%spa:\t$NIA:SI\n%act:\topens the mirror\n*INV:\tthere's Chi .\n%spa:\t$NIA:ST\n*CHI:\t0 .\n%act:\tcloses the mirror\n*INV:\twhere's Chi ?\n%spa:\t$DNP:QN\n*INV:\twhere's Chi ?\n%spa:\t$DNP:QN\n*CHI:\t0 . [+ trn]\n%spa:\t$DNP:SA:CO\n%act:\tknocks on the mirror cover"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_049",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_021000.cha",
+      "chat_text": "*INV:\twhat's that ?\n%spa:\t$YYY:QN\n%act:\tgrabs a spring\n*CHI:\t0 .\n%act:\tpats the horse's back\n*INV:\tgood horse .\n%spa:\t$NIA:ST\n%act:\tpats its back\n*CHI:\t0 .\n%act:\tputs the school bus on the horse's back\n*INV:\t0 .\n%act:\trolls the truck up the horse's back\n*CHI:\t0 .\n%act:\ttaps the horse above the tail\n*CHI:\t0 .\n%act:\tputs the school bus on the horse's back\n*CHI:\t0 .\n%act:\tputs the school bus on the horse's head"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_026",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_021000.cha",
+      "chat_text": "*INV:\tpush the door .\n%spa:\t$NIA:SI\n*CHI:\t0 .\n%act:\tgoes through the door\n*INV:\tlet's go for a walk .\n%spa:\t$NIA:RP\n%act:\twalks past CHI\n*CHI:\t0 .\n%act:\tfollows\n*INV:\tanother door .\n%spa:\t$NIA:ST\n%gpx:\tpoints to a door\n*CHI:\t0 .\n%act:\tturns around and walks away"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_010",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_021000.cha",
+      "chat_text": "*INV:\tpull it out .\n%spa:\t$NIA:SI\n%act:\tpulls the rein out of the hole\n*CHI:\t0 .\n%act:\tswings the rein rather than picking it back up\n*INV:\tneigh@o .\n%spa:\t$NIA:PR\n%act:\trears the horse\n*INV:\thorse .\n%spa:\t$NIA:ST\n*CHI:\t0 .\n%act:\tplays with the rein on the horse's head"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_048",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_021000.cha",
+      "chat_text": "*INV:\tChi .\n%spa:\t$NCS:CL\n*CHI:\t0 . [+ trn]\n%spa:\t$NIA:RD:NO\n%act:\tplays with doorknob\n*INV:\twhat's in there ?\n%spa:\t$NIA:QN\n%act:\tcomes back on camera\n*INV:\twhat's in there ?\n%spa:\t$NIA:QN\n*INV:\t0 .\n%act:\tknocks\n*CHI:\t0 . [+ trn]\n%spa:\t$NIA:RP:NT\n%act:\tgrabs her hand\n*INV:\t<knock knock> [/] knock .\n%spa:\t$PRO:PR\n%act:\tknocks\n*CHI:\t0 . [+ trn]\n%spa:\t$NIA:RP:NT\n%gpx:\tguides her hand to the knob"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_079",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_020600.cha",
+      "chat_text": "*INV:\t0 .\n%act:\thits it with the hammer again\n*CHI:\t0 .\n%act:\thits the trash can with the wrench\n*INV:\ttrash .\n%spa:\t$DJF:ST\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:YY:VNO\n%act:\twalks around room to a door"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_004",
+      "child_id": "roger_rollins",
+      "corpus": "rollins",
+      "session_id": "rollins_roger_rollins_020800.cha",
+      "chat_text": "*CHI:\txxx .\n%act:\tturns cookie monster around\n*CHI:\txxx . [+ trn]\n%spa:\t$PRO:PR:VO\n*CHI:\txxx . [+ trn]\n%spa:\t$PRO:PR:VO\n*CHI:\t0 .\n%act:\topens the mouth and puts the cookie in the correct hole\n*INV:\tthere you go .\n%spa:\t$NIA:MK\n*INV:\tput it in .\n%spa:\t$NIA:SI\n%act:\ttakes the cookie out the back\n*CHI:\t0 . [+ trn]\n%spa:\t$PRO:PR:VCO\n%act:\topens and closes the mouth\n*INV:\txxx . [+ trn]\n%spa:\t$PRO:PR"
+    },
+    {
+      "segment_id": "sid_rollins_sid_021100.cha_seg_011",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_021100.cha",
+      "chat_text": "*INV:\tshe's too big isn't she ?\n%spa:\t$DJF:ST $DJF:YQ\n*CHI:\txxx . [+ trn]\n%spa:\t$YYY:YY:VO\n%act:\tputs cow back in trough\n*INV:\toh [/] oh .\n%spa:\t$MRK:MK\n*INV:\tthe cow is out .\n%spa:\t$DJF:ST\n%act:\ttakes cow out of trough\n*INV:\t&=gasp . [+ trn]\n%spa:\t$MRK:MK\n*CHI:\txxx . [+ trn]\n%spa:\t$YYY:YY:VO\n%act:\tputs sheep in trough"
+    },
+    {
+      "segment_id": "sid_rollins_sid_021100.cha_seg_010",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_021100.cha",
+      "chat_text": "*INV:\tthe pg and the sheep are in the trough .\n%spa:\t$DJF:ST\n*CHI:\t0 .\n%act:\ttakes pig out of trough\n*INV:\tyou took the pg out .\n%spa:\t$DRE:ST\n*CHI:\t0 .\n%act:\ttakes sheep out of trough\n*INV:\tyou took the sheep out .\n%spa:\t$DRE:ST\n*CHI:\t0 .\n%act:\tputs cow in the trough\n*INV:\tcow's too big .\n%spa:\t$DJF:ST\n*INV:\tshe's too big isn't she ?\n%spa:\t$DJF:ST $DJF:YQ"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_063",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_030200.cha",
+      "chat_text": "*INV:\tcan you hook that ?\n%spa:\t$NIA:RP\n*CHI:\t0 .\n%act:\thooks the car to the truck\n*INV:\tthank you .\n%spa:\t$MRK:MK\n*INV:\t0 .\n%act:\tmoves legos around to make a path for the truck\n*CHI:\t0 .\n%act:\trolls the truck through the path\n*INV:\twhere's he going ?\n%spa:\t$NIA:QN\n*INV:\tgoing to the gas station ?\n%spa:\t$NIA:RQ\n%gpx:\ttaps the top of a lego structure\n*CHI:\t0 .\n%act:\tstarts to put a ladder on the truck"
+    },
+    {
+      "segment_id": "sid_rollins_sid_020200.cha_seg_019",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_020200.cha",
+      "chat_text": "*INV:\tit fell .\n%spa:\t$DRE:ST\n*CHI:\t0 .\n%act:\tmoves out of view\n*INV:\toop .\n%spa:\t$MRK:MK\n*INV:\t&-uh oh .\n%spa:\t$MRK:MK\n*INV:\t&-uh oh .\n%spa:\t$MRK:MK\n*CHI:\t0 [=! cries] . [+ trn]\n%spa:\t$NIA:EM:VO"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_005",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_030200.cha",
+      "chat_text": "*INV:\tunhook it .\n%spa:\t$NIA:EI\n%act:\treaches up\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:YY:VO\n*INV:\tunhook it .\n%spa:\t$NIA:SI\n%act:\tunhooks the door\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:YY:VC\n%act:\ttries to open the door\n*CHI:\txxx . [+ trn]\n%spa:\t$YYY:YY:VO\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:EM:VNT\n%act:\tpushes the examiner\n*INV:\topen .\n%spa:\t$NIA:SI\n%act:\tpushes the door for him\n*CHI:\t0 .\n%act:\tlooks in the closet"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_006",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_030200.cha",
+      "chat_text": "*INV:\tthe gas station .\n%spa:\t$NIA:ST\n*CHI:\t0 .\n%act:\trolls the train of cars up to the gas station\n*INV:\t0 .\n%act:\tgets a blue car and some people from behind him"
+    },
+    {
+      "segment_id": "sid_rollins_sid_021100.cha_seg_029",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_021100.cha",
+      "chat_text": "*INV:\tChi's nose .\n%spa:\t$DJF:ST\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:RP:VCP\n%act:\tpoints to board\n*INV:\teye .\n%spa:\t$DJF:ST\n*CHI:\t0 . [+ trn]\n%spa:\t$NIA:RP:CP\n%act:\tpoints to board .\n*INV:\tanother eye .\n%spa:\t$DJF:ST\n*CHI:\t0 .\n%act:\ttakes chalk from Clinician\n*CHI:\txxx . [+ trn]\n%spa:\t$YYY:YY:VO\n%act:\tdraws on board\n*INV:\tdraw hair .\n%spa:\t$NIA:SI"
+    },
+    {
+      "segment_id": "sid_rollins_sid_020200.cha_seg_025",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_020200.cha",
+      "chat_text": "*INV:\tpick you up .\n%spa:\t$NIA:SI\n*CHI:\txxx . [+ trn]\n%spa:\t$YYY:YY:VNB\n%gpx:\tmotions out with one hand\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:YY:VNO\n%act:\tkicks feet\n*INV:\t0 .\n%act:\tputs CHI down\n*CHI:\txxx .\n*INV:\txxx . [+ trn]\n%spa:\t$YYY:RT\n*CHI:\t0 .\n%act:\ttries to push door open\n*INV:\tChi .\n%spa:\t$NCS:CL"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030500.cha_seg_056",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_030500.cha",
+      "chat_text": "*INV:\t&=gasp what do you see ?\n%spa:\t$DHA:QN\n%gpx:\tpoints to page\n*CHI:\tyyy .\n%spa:\t$DJF:SA:WD\n*INV:\tthe bird .\n%spa:\t$DJF:CT\n*INV:\tand there's the little red caboose .\n%spa:\t$DHA:ST\n*INV:\tthe little red caboose always came +...\n%spa:\t$TXT:EX\n*CHI:\tlast .\n%spa:\t$TXT:CX:WD\n*INV:\tlast .\n%spa:\t$DJF:CT\n*INV:\t&=gasp what are those ?\n%spa:\t$DHA:QN\n%gpx:\tpoints to page"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_061",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_030200.cha",
+      "chat_text": "*INV:\tpush it .\n%spa:\t$NIA:RP\n*CHI:\t0 .\n%act:\tcloses the other door\n*INV:\t0 .\n%act:\tlocks the doors\n*CHI:\t0 .\n%act:\tgoes back to the blocks\n*INV:\twhat are you going to build ?\n%spa:\t$NIA:QN\n*CHI:\t0 .\n%act:\ttakes a truck out of the bucket\n*CHI:\t0 .\n%act:\tdumps all the legos out of the bucket\n*CHI:\t0 .\n%act:\tthrows the bucket"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030500.cha_seg_004",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_030500.cha",
+      "chat_text": "*INV:\tthe end .\n%spa:\t$DJF:MK\n*CHI:\ta [=? the] [*] end .\n%spa:\t$DJF:RT:WD\n*INV:\tbeep [/] beep .\n%spa:\t$NIA:PR\n*INV:\tis your car going home ?\n%spa:\t$NIA:YQ\n*CHI:\tyyy .\n%spa:\t$NIA:RT:VO"
+    },
+    {
+      "segment_id": "sid_rollins_sid_021100.cha_seg_048",
+      "child_id": "sid",
+      "corpus": "rollins",
+      "session_id": "rollins_sid_021100.cha",
+      "chat_text": "*INV:\t0 .\n%act:\topens barn door\n*CHI:\t0 .\n%act:\treaches inside the barn\n*INV:\t0 .\n%act:\tmoves the gas pump out of child's reach\n*INV:\t0 .\n%act:\tputs horse in silo and looks at child\n*INV:\twhat's in there ?\n%spa:\t$NIA:QN\n%act:\tshakes silo and puts it down\n*CHI:\t0 .\n%act:\treaches past the silo into the barn\n*CHI:\t0 .\n%act:\tpulls animals out of the barn\n*CHI:\t0 .\n%act:\tpicks up silo"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030806.cha_seg_023",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_030806.cha",
+      "chat_text": "*MOT:\tput it on .\n*CHI:\ton .\n*CHI:\ton ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_031009.cha_seg_032",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_031009.cha",
+      "chat_text": "*MOT:\twhat are [/] these ?\n*CHI:\tblock .\n*MOT:\tyeah , beautiful ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030806.cha_seg_056",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_030806.cha",
+      "chat_text": "*MOT:\twhat's that ?\n*CHI:\tshovel .\n*MOT:\tgood boy .\n*MOT:\twhat's that ?\n*CHI:\tboat .\n*MOT:\tgood job .\n*MOT:\twhat's this ?\n*CHI:\tboat ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_025",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_030610.cha",
+      "chat_text": "*MOT:\twhat is this ?\n*CHI:\tbear .\n*CHI:\tuhoh !"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_031009.cha_seg_029",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_031009.cha",
+      "chat_text": "*MOT:\twhat a good job writing .\n*CHI:\tI want water .\n*MOT:\twhat do you want ?\n*CHI:\twater .\n*MOT:\tlook at me .\n*CHI:\tmama I want water , please ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030806.cha_seg_043",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_030806.cha",
+      "chat_text": "*MOT:\tput your hands down .\n*CHI:\tdown .\n*MOT:\tgood boy [NAME] ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_047",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_030400.cha",
+      "chat_text": "*MOT:\tgood boy .\n*CHI:\tcracker .\n*MOT:\twhat's this ?\n*CHI:\tthis ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_040306.cha_seg_024",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_040306.cha",
+      "chat_text": "*MOT:\tand red .\n*CHI:\tmama .\n*CHI:\tred .\n*CHI:\txxx .\n*CHI:\ttoy .\n*CHI:\tpotato .\n*CHI:\tthank you .\n*CHI:\tI want juice ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030806.cha_seg_064",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_030806.cha",
+      "chat_text": "*MOT:\tlet me see you do pattycake .\n*CHI:\tpattycake .\n*MOT:\tthat's good .\n*CHI:\twant chip .\n*MOT:\tyou're a good boy .\n*CHI:\twant chip .\n*MOT:\tyou're a good boy .\n*MOT:\tyou like chips huh ?"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_040306.cha_seg_023",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_040306.cha",
+      "chat_text": "*MOT:\tdump the blocks out [NAME] .\n*CHI:\txxx .\n*MOT:\tno .\n*MOT:\tpick them up .\n*CHI:\tokay xxx .\n*CHI:\txxx .\n*MOT:\tput the cover on .\n*MOT:\tyou needta turn it over ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_040029.cha_seg_012",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_040029.cha",
+      "chat_text": "*MOT:\tplay with the puzzle .\n*CHI:\tmom .\n*CHI:\tmom .\n*CHI:\tmom .\n*CHI:\tmom .\n*CHI:\tmom .\n*CHI:\tmom .\n*CHI:\tmom ."
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_040521.cha_seg_015",
+      "child_id": "stuart",
+      "corpus": "flusberg",
+      "session_id": "flusberg_stuart_040521.cha",
+      "chat_text": "*MOT:\t<bang , bang> [/] bang .\n*CHI:\tcandy ?\n*MOT:\thow about a piano ?\n*MOT:\thave the piano .\n*MOT:\tplay the piano .\n*CHI:\tpiano ."
+    }
+  ]
+}

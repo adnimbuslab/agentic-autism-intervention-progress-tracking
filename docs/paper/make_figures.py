@@ -1442,6 +1442,75 @@ def figure_selection() -> None:
     plt.close(fig)
 
 
+def figure_extended_roster() -> None:
+    """Figure 22 -- accuracy and the abstention/unsupported trade-off."""
+    metrics = _load(RESULTS / "paper_metrics.json", "Figure 22 (extended roster)")
+    if metrics is None or not metrics.get("augmented_roster"):
+        return
+    aug = metrics["augmented_roster"]
+    per_model = aug["per_model"]
+    models = list(per_model)
+    fields = list(next(iter(per_model.values()))["per_field_accuracy"])
+
+    palette = [BLUE, TEAL, AMBER, RED]
+    fig, (ax, ax2) = plt.subplots(
+        1, 2, figsize=(11.4, 3.9), gridspec_kw={"width_ratios": [1.25, 1]}
+    )
+
+    # Left: per-field accuracy, four generators.
+    width = 0.2
+    for i, model in enumerate(models):
+        values = [100 * per_model[model]["per_field_accuracy"][f] for f in fields]
+        offsets = [j + (i - 1.5) * width for j in range(len(fields))]
+        ax.bar(offsets, values, width=width * 0.9, color=palette[i % len(palette)],
+               zorder=3, label=_short(model))
+    ax.set_xticks(range(len(fields)))
+    ax.set_xticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
+    ax.set_ylabel("acceptable (%)")
+    ax.set_ylim(0, 85)
+    ax.legend(fontsize=7.2, frameon=False, ncol=4, loc="upper center",
+              bbox_to_anchor=(0.5, -0.16))
+    _finish(
+        ax,
+        "Figure 22 — A larger, newer generator is no more accurate",
+        "Four generators against the same adjudicated gold. qwen3:14b was added "
+        "after annotation, at no annotation cost.",
+    )
+
+    # Right: the trade-off. This is the finding.
+    xs = [100 * per_model[m]["mean_abstention_rate"] for m in models]
+    ys = [100 * per_model[m]["unsupported_rate"] for m in models]
+    order = sorted(range(len(models)), key=lambda i: xs[i])
+    ax2.plot([xs[i] for i in order], [ys[i] for i in order], color=MUTED,
+             linewidth=1.0, linestyle="--", zorder=2)
+    # Labels sit to the right of their point, except the rightmost, which
+    # would run off the axis. Centring them collides where two models sit
+    # close together, as the two least-abstaining ones do.
+    rightmost = max(range(len(models)), key=lambda i: xs[i])
+    for i, model in enumerate(models):
+        ax2.scatter([xs[i]], [ys[i]], s=90, color=palette[i % len(palette)],
+                    zorder=4, edgecolor="white", linewidth=1.2)
+        to_left = i == rightmost
+        ax2.annotate(
+            _short(model), (xs[i], ys[i]), textcoords="offset points",
+            xytext=(-10 if to_left else 11, -3), fontsize=7.6,
+            ha="right" if to_left else "left", va="center", color=INK,
+        )
+    ax2.set_xlabel("abstention rate (%) — how often the model declines")
+    ax2.set_ylabel("unsupported assertions (%)")
+    ax2.set_xlim(-6, max(xs) + 14)
+    ax2.set_ylim(0, 108)
+    _finish(ax2, "", None)
+    ax2.set_title(
+        "willingness to answer, not capability,\ngoverns unsupported assertion",
+        loc="left", fontsize=8.6, color=MUTED,
+    )
+
+    fig.tight_layout(w_pad=2.2)
+    fig.savefig(OUT / "fig22_extended_roster.png", bbox_inches="tight")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     figure_corpus()
     figure_admission()
@@ -1464,6 +1533,7 @@ if __name__ == "__main__":
     figure_behavior_overlap()
     figure_mars_outcomes()
     figure_selection()
+    figure_extended_roster()
     print(f"Wrote {len(list(OUT.glob('*.png')))} figures to {OUT}")
     for f in sorted(OUT.glob("*.png")):
         print(f"  {f.name}")

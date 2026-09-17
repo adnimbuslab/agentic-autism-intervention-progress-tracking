@@ -96,7 +96,10 @@ uv run python docs/paper/verify_artifacts.py --record
 | `tests/eval/extraction/results/mars_run_summary.json` | MARS run configuration and per-judge discard rates | `run_mars` | 1,374 | `b9b66b921a6984ec...` |
 | `tests/eval/extraction/results/mars_evaluation.json` | MARS accuracy, coverage, abstention profile, ceiling (Tables 9-10) | `mars_evaluation` | 1,190 | `0ca48149ada6eb78...` |
 | `tests/eval/reporting/results/reporting_groundedness.json` | Reporting-layer groundedness run; records the 11/11 fallback finding | `tests.eval.reporting.groundedness` | 8,015 | `10023e0111262084...` |
-| `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 10,904 | `897d7bc12379ad49...` |
+| `tests/eval/extraction/results/annotation_batch_augmented.json` | Frozen batch plus a generator added after annotation (qwen3:14b) | `add_generator` | 686,753 | `de0e6f66be4eb17e...` |
+| `tests/eval/extraction/results/scored_against_gold_augmented.json` | Four-generator judgements against the same gold | `score_against_gold --batch annotation_batch_augmented.json` | 279,917 | `19a60625f34824aa...` |
+| `tests/eval/extraction/results/holdout_set.json` | Model-independent held-out set: 132 segments, frozen before generation | `build_holdout_set` | 59,697 | `51960c8cc482879a...` |
+| `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 13,789 | `68f82fc4fc425a33...` |
 | `tests/eval/extraction/results/mars_selection_analysis.json` | Per-field selection quality vs both baselines (Tables 11-12) | `mars_selection_analysis` | 2,675 | `639c663bd4f8adfb...` |
 | `tests/eval/extraction/results/mars_branch_replay.json` | Candidate-stage branch distribution and judge-roster comparison | `mars_branch_replay` | 3,685 | `33466b195d7413d6...` |
 
@@ -120,4 +123,5 @@ uv run python docs/paper/verify_artifacts.py --record
 | `docs/paper/figures/fig19_behavior_overlap.png` | Figure 19 - free-text behavior against the human reference band | `make_figures` |
 | `docs/paper/figures/fig20_mars_outcomes.png` | Figure 20 - MARS outcomes and comparison against the best generator | `make_figures` |
 | `docs/paper/figures/fig21_selection.png` | Figure 21 - selection quality against both baselines | `make_figures` |
+| `docs/paper/figures/fig22_extended_roster.png` | Figure 22 - four-generator accuracy and the abstention trade-off | `make_figures` |
 | `docs/paper/Manuscript_Working_Draft.docx` | Working-draft manuscript, assembled from the artefacts above | `make_manuscript` |

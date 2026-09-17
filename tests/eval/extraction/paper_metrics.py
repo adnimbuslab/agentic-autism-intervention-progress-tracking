@@ -39,6 +39,8 @@ SOURCES = {
     "mars_selection": "mars_selection_analysis.json",
     "mars_summary": "mars_run_summary.json",
     "branch_replay": "mars_branch_replay.json",
+    # Optional: present once a generator has been added after annotation.
+    "scored_augmented": "scored_against_gold_augmented.json",
 }
 
 ACCEPTABLE = frozenset({"correct", "correctly_null"})
@@ -56,6 +58,9 @@ NOT_MEASURED = [
 ]
 
 
+OPTIONAL = {"scored_augmented"}
+
+
 def load() -> dict[str, Any]:
     loaded: dict[str, Any] = {}
     missing: list[str] = []
@@ -63,7 +68,7 @@ def load() -> dict[str, Any]:
         path = RESULTS_DIR / name
         if path.exists():
             loaded[key] = json.loads(path.read_text())
-        else:
+        elif key not in OPTIONAL:
             missing.append(name)
     if missing:
         raise SystemExit(
@@ -237,6 +242,71 @@ def build(data: dict[str, Any]) -> dict[str, Any]:
             },
         },
         "not_measured": NOT_MEASURED,
+        "augmented_roster": augmented_block(data),
+    }
+
+
+def augmented_block(data: dict[str, Any]) -> dict[str, Any] | None:
+    """Four-generator comparison, once a later generator has been scored.
+
+    Reported separately from the primary block rather than merged into it. The
+    fourth generator was added after annotation and did not contribute
+    candidates to MARS or to the oracle ceiling reported above, so folding its
+    numbers into the same tables would silently change what those tables mean.
+    """
+    scored = data.get("scored_augmented")
+    if scored is None:
+        return None
+
+    from tests.eval.extraction.mars_evaluation import (
+        oracle_ceiling,
+        per_model_accuracy,
+    )
+
+    fields = scored["scoring_fields"]
+    models = scored["models"]
+    counts = scored["per_field_counts"]
+
+    def rate(model: str, field: str, judgements: tuple[str, ...]) -> float | None:
+        hits = sum(counts[model].get(f"{field}:{j}", 0) for j in judgements)
+        total = sum(v for k, v in counts[model].items() if k.startswith(f"{field}:"))
+        return round(hits / total, 4) if total else None
+
+    per_model: dict[str, Any] = {}
+    for model in models:
+        accept = [rate(model, f, ("correct", "correctly_null")) for f in fields]
+        missing = [rate(model, f, ("missing",)) for f in fields]
+        hallucinated = sum(counts[model].get(f"{f}:hallucinated", 0) for f in fields)
+        opportunities = hallucinated + sum(
+            counts[model].get(f"{f}:correctly_null", 0) for f in fields
+        )
+        per_model[model] = {
+            "mean_field_accuracy": round(sum(accept) / len(accept), 4),
+            "per_field_accuracy": dict(zip(fields, accept)),
+            "mean_abstention_rate": round(sum(missing) / len(missing), 4),
+            "per_field_abstention": dict(zip(fields, missing)),
+            "unsupported_n": hallucinated,
+            "unsupported_opportunities": opportunities,
+            "unsupported_rate": (
+                round(hallucinated / opportunities, 4) if opportunities else None
+            ),
+        }
+
+    accuracy = per_model_accuracy(scored["gold"], models, fields)
+    return {
+        "source_batch": scored.get("source_batch"),
+        "n_generators": len(models),
+        "note": (
+            "The fourth generator was run after annotation and scored against "
+            "the same model-independent gold standard. It contributed no "
+            "candidates to the MARS run or to the three-generator oracle "
+            "ceiling reported above."
+        ),
+        "per_model": per_model,
+        "whole_record": {
+            "per_generator": accuracy,
+            "oracle_ceiling": oracle_ceiling(scored["gold"], models, fields),
+        },
     }
 
 
@@ -304,6 +374,19 @@ def render(m: dict[str, Any]) -> None:
               f"{'*' if vb['excludes_zero'] else ' '}   "
               f"vs random {100 * vr['difference']:+6.1f}"
               f"{'*' if vr['excludes_zero'] else ' '}")
+
+    aug = m.get("augmented_roster")
+    if aug:
+        print(f"\nEXTENDED ROSTER ({aug['n_generators']} generators, "
+              f"scored against the same gold)")
+        print(f"  {'generator':<20}{'accuracy':>10}{'abstention':>12}"
+              f"{'unsupported':>13}")
+        for model, e in aug["per_model"].items():
+            print(f"  {model:<20}{pct(e['mean_field_accuracy']):>10}"
+                  f"{pct(e['mean_abstention_rate']):>12}"
+                  f"{pct(e['unsupported_rate']):>13}")
+        w = aug["whole_record"]
+        print(f"  whole-record oracle ceiling: {pct(w['oracle_ceiling'])}")
 
     print("\nNOT MEASURED")
     for item in m["not_measured"]:
