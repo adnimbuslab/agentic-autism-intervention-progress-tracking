@@ -318,6 +318,40 @@ async def run(model: str, limit: int | None) -> dict[str, Any]:
             "not from real intervention records."
         ),
         "summary": {
+            # Pooled over assertions, which is what a count and a denominator
+            # imply. The mean of per-report rates is a different estimator and
+            # gives a different number (each report weighted equally rather
+            # than each assertion); it is kept, labelled, for reference rather
+            # than reported beside a count.
+            "numeric_assertions": sum(e["n_numbers_asserted"] for e in llm_reports),
+            "numeric_ungrounded": sum(
+                e["n_numbers_ungrounded"] for e in llm_reports
+            ),
+            "pooled_ungrounded_rate": (
+                round(
+                    sum(e["n_numbers_ungrounded"] for e in llm_reports)
+                    / sum(e["n_numbers_asserted"] for e in llm_reports),
+                    4,
+                )
+                if sum(e["n_numbers_asserted"] for e in llm_reports)
+                else None
+            ),
+            "evidence_references": sum(e["n_evidence_refs"] for e in llm_reports),
+            "evidence_references_invalid": sum(
+                e["n_invalid_refs"] for e in llm_reports
+            ),
+            "pooled_invalid_reference_rate": (
+                round(
+                    sum(e["n_invalid_refs"] for e in llm_reports)
+                    / sum(e["n_evidence_refs"] for e in llm_reports),
+                    4,
+                )
+                if sum(e["n_evidence_refs"] for e in llm_reports)
+                else None
+            ),
+            "mean_of_per_report_groundedness": (
+                round(sum(rates) / len(rates), 4) if rates else None
+            ),
             "mean_numeric_groundedness": (
                 round(sum(rates) / len(rates), 4) if rates else None
             ),
@@ -355,14 +389,20 @@ def render(report: dict[str, Any]) -> None:
     if not n:
         print("\n  No LLM-generated report to score.")
         return
-    print(f"\n  numeric groundedness (mean): {s['mean_numeric_groundedness']}")
-    print(f"  fully grounded reports     : {s['reports_fully_grounded']}/{n}")
-    print(f"  numbers asserted           : {s['total_numbers_asserted']}")
-    print(f"  numbers ungrounded         : {s['total_numbers_ungrounded']}")
-    print(f"  invalid evidence refs      : {s['total_invalid_refs']} "
-          f"across {s['reports_with_invalid_refs']} reports")
-    print(f"  passed validate_report     : {s['reports_passing_validation']}/{n}")
-    print(f"  prohibited content         : {s['prohibited_content_reports']}/{n}")
+    print("\n  content safety")
+    print(f"    reports with prohibited content : "
+          f"{s['prohibited_content_reports']}/{n}")
+    print("\n  evidence grounding")
+    print(f"    ungrounded numeric assertions   : {s['numeric_ungrounded']}/"
+          f"{s['numeric_assertions']} ({100 * (s['pooled_ungrounded_rate'] or 0):.1f}%)")
+    print(f"    invalid evidence references     : "
+          f"{s['evidence_references_invalid']}/{s['evidence_references']} "
+          f"({100 * (s['pooled_invalid_reference_rate'] or 0):.1f}%)")
+    print(f"    reports with no ungrounded value: "
+          f"{s['reports_fully_grounded']}/{n}")
+    print("\n  abstention / governance preservation")
+    print(f"    reports passing governance check: "
+          f"{s['reports_passing_validation']}/{n}")
 
 
 def main() -> None:

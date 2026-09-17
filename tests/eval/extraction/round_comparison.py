@@ -52,6 +52,7 @@ from tests.eval.extraction.reliability_stats import (
     N_BOOTSTRAP,
     delta_kappa,
     field_statistics,
+    paired_clusters,
 )
 
 RESULTS_DIR = Path(__file__).parent / "results"
@@ -87,31 +88,48 @@ def compare(
     for field in CATEGORICAL_FIELDS:
         before = paired_values(before_a, before_b, field, segments)
         after = paired_values(after_a, after_b, field, segments)
+        # Segments are nested within children; the interval on the change is
+        # reported over resampled children, with the segment-level interval
+        # kept as a sensitivity analysis.
+        clusters = paired_clusters(before_a, before_b, field, segments)
         fields[field] = {
             "arm": "treated" if field in TREATED_FIELDS else "control",
-            "round1": field_statistics(before, n_boot=n_boot, seed=seed),
-            "round2": field_statistics(after, n_boot=n_boot, seed=seed),
+            "round1": field_statistics(
+                before, n_boot=n_boot, seed=seed, clusters=clusters
+            ),
+            "round2": field_statistics(
+                after, n_boot=n_boot, seed=seed, clusters=clusters
+            ),
             "delta": delta_kappa(before, after, n_boot=n_boot, seed=seed),
+            "delta_clustered": delta_kappa(
+                before, after, n_boot=n_boot, seed=seed, clusters=clusters
+            ),
         }
     return {"n_segments": len(segments), "fields": fields}
 
 
 def render(report: dict[str, Any]) -> None:
     print(f"Round 1 vs round 2, over the {report['n_segments']} re-issued segments\n")
-    print(f"  {'field':<14}{'arm':>9}{'k round1':>10}{'k round2':>10}"
-          f"{'delta':>9}{'95% CI (paired)':>20}")
+    print(f"  {'field':<14}{'arm':>9}{'k rnd1':>8}{'k rnd2':>8}{'delta':>8}"
+          f"{'95% CI (child)':>20}{'95% CI (segment)':>21}")
     for field, entry in report["fields"].items():
-        delta = entry["delta"]
+        delta, clustered = entry["delta"], entry.get("delta_clustered")
         if delta is None:
             print(f"  {field:<14}{entry['arm']:>9}"
-                  f"{entry['round1']['kappa']:>10.3f}{'--':>10}{'--':>9}{'--':>20}")
+                  f"{entry['round1']['kappa']:>8.3f}{'--':>8}{'--':>8}")
             continue
-        interval = f"[{delta['lower']:+.3f}, {delta['upper']:+.3f}]"
-        mark = "  *" if delta["excludes_zero"] else ""
+        seg = f"[{delta['lower']:+.3f}, {delta['upper']:+.3f}]"
+        seg += "*" if delta["excludes_zero"] else " "
+        clu = "--"
+        if clustered:
+            clu = f"[{clustered['lower']:+.3f}, {clustered['upper']:+.3f}]"
+            clu += "*" if clustered["excludes_zero"] else " "
         print(f"  {field:<14}{entry['arm']:>9}"
-              f"{delta['kappa_before']:>10.3f}{delta['kappa_after']:>10.3f}"
-              f"{delta['delta']:>+9.3f}{interval:>20}{mark}")
-    print("\n  * interval excludes zero")
+              f"{delta['kappa_before']:>8.3f}{delta['kappa_after']:>8.3f}"
+              f"{delta['delta']:>+8.3f}{clu:>20}{seg:>21}")
+    print("\n  * interval excludes zero"
+          "\n  child-clustered interval is the reported one; segment-level is "
+          "the sensitivity analysis")
 
 
 def main() -> None:

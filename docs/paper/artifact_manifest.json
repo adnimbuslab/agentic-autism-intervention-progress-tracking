@@ -114,8 +114,8 @@
       "produced_by": "reliability_stats --round1",
       "pinned": true,
       "present": true,
-      "bytes": 2218,
-      "sha256": "ae73f25f48737a5fbea6139bec6f4dfbac27eec8632de4ab162712cff203f6d6"
+      "bytes": 3009,
+      "sha256": "c04c52d3deb948ee8e6e723461f7a63c81214cb8547c51f5a53c9bb5bdd1b188"
     },
     {
       "path": "tests/eval/extraction/results/reliability_current.json",
@@ -123,8 +123,8 @@
       "produced_by": "reliability_stats",
       "pinned": true,
       "present": true,
-      "bytes": 2208,
-      "sha256": "2840f188d023ff7fc06923534dcfae3d1b85451657c52004fca09ab2b5a5bd10"
+      "bytes": 2999,
+      "sha256": "8610afdeb79c471b14aa3fea2a89e8728be0145e6646437ca5d1b1d37273c371"
     },
     {
       "path": "tests/eval/extraction/results/round_comparison.json",
@@ -132,8 +132,8 @@
       "produced_by": "round_comparison",
       "pinned": true,
       "present": true,
-      "bytes": 5499,
-      "sha256": "e4f4ffa7e4eaf907c3f289dbfcd315230a8228a50479a67610fbd9a095dd5e59"
+      "bytes": 8335,
+      "sha256": "2500dedd06b9400e6d295e46a584d3126c97f520303cd842e00df9cd7adedc60"
     },
     {
       "path": "tests/eval/extraction/results/annotation_sheets/adjudication_sheet_updated.csv",
@@ -204,8 +204,8 @@
       "produced_by": "tests.eval.reporting.groundedness",
       "pinned": true,
       "present": true,
-      "bytes": 8015,
-      "sha256": "10023e01112620842758db4c1051c8e39d75b9ed07d4a5b3bddfd58d88e34c91"
+      "bytes": 10167,
+      "sha256": "e4e054275fb755ace04ee95719af57b53eba22f75707a1f7085c6f58232df507"
     },
     {
       "path": "tests/eval/extraction/results/annotation_batch_augmented.json",
@@ -240,8 +240,8 @@
       "produced_by": "paper_metrics",
       "pinned": true,
       "present": true,
-      "bytes": 13789,
-      "sha256": "68f82fc4fc425a3361fe433e73d46f6c7706e0184cf3c369c6ee26226b3f308a"
+      "bytes": 14085,
+      "sha256": "13ba704145cf2f950bbb491bb441552b5959474ec7cff5c6ecde65efe8ca5402"
     },
     {
       "path": "tests/eval/extraction/results/mars_selection_analysis.json",
@@ -249,8 +249,8 @@
       "produced_by": "mars_selection_analysis",
       "pinned": true,
       "present": true,
-      "bytes": 2675,
-      "sha256": "639c663bd4f8adfbca4183523f5fcc1cba19b88828f75326753df24819b7dad9"
+      "bytes": 4376,
+      "sha256": "4a7cddcebde27c792eeb6fe1e96ce654e75f9c312d923edb7f16d3467c44e7b8"
     },
     {
       "path": "tests/eval/extraction/results/mars_branch_replay.json",
@@ -299,7 +299,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 69776
+      "bytes": 67287
     },
     {
       "path": "docs/paper/figures/fig11_confusion_round1.png",
@@ -307,7 +307,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 113867
+      "bytes": 113174
     },
     {
       "path": "docs/paper/figures/fig12_conflict_decomposition.png",
@@ -315,7 +315,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 48131
+      "bytes": 47120
     },
     {
       "path": "docs/paper/figures/fig13_round_comparison.png",
@@ -323,7 +323,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 64743
+      "bytes": 62739
     },
     {
       "path": "docs/paper/figures/fig14_protocol.png",
@@ -331,7 +331,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 120305
+      "bytes": 118616
     },
     {
       "path": "docs/paper/figures/fig15_codebook_rules.png",
@@ -339,7 +339,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 146126
+      "bytes": 145012
     },
     {
       "path": "docs/paper/figures/fig16_field_accuracy.png",
@@ -347,7 +347,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 47965
+      "bytes": 46984
     },
     {
       "path": "docs/paper/figures/fig17_unsupported.png",
@@ -355,7 +355,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 52277
+      "bytes": 50268
     },
     {
       "path": "docs/paper/figures/fig18_record_ceiling.png",
@@ -363,7 +363,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 42998
+      "bytes": 41987
     },
     {
       "path": "docs/paper/figures/fig19_behavior_overlap.png",
@@ -371,7 +371,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 64860
+      "bytes": 63008
     },
     {
       "path": "docs/paper/figures/fig20_mars_outcomes.png",
@@ -379,7 +379,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 70875
+      "bytes": 69334
     },
     {
       "path": "docs/paper/figures/fig21_selection.png",
@@ -387,7 +387,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 91139
+      "bytes": 90179
     },
     {
       "path": "docs/paper/figures/fig22_extended_roster.png",
@@ -395,7 +395,7 @@
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 94380
+      "bytes": 93211
     },
     {
       "path": "docs/paper/Manuscript_Working_Draft.docx",
@@ -403,7 +403,7 @@
       "produced_by": "make_manuscript",
       "pinned": false,
       "present": true,
-      "bytes": 1574952
+      "bytes": 1550492
     }
   ]
 }

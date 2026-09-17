@@ -92,3 +92,44 @@ class TestScoringDiscipline:
         note = run["metadata_note"].lower()
         assert "derived from corpus structure" in note
         assert "not from real intervention records" in note
+
+
+class TestPooledRates:
+    """A rate printed beside a count and a denominator must be that ratio.
+
+    The summary carries two estimators: pooled over assertions, and the mean
+    of per-report rates. They differ — 8/122 is 6.6%, while the mean of the
+    eleven per-report rates is 6.8% — because one weights assertions equally
+    and the other weights reports equally. Reporting a count, a denominator
+    and the *other* estimator's percentage in one row is the error this guards.
+    """
+
+    def test_the_pooled_rate_is_the_ratio_it_is_printed_beside(self, run) -> None:
+        s = run["summary"]
+        assert s["numeric_assertions"] > 0
+        assert s["pooled_ungrounded_rate"] == pytest.approx(
+            s["numeric_ungrounded"] / s["numeric_assertions"], abs=5e-5
+        )
+
+    def test_the_reference_rate_has_a_denominator(self, run) -> None:
+        s = run["summary"]
+        # A bare "2 invalid references" is uninterpretable without the total.
+        assert s["evidence_references"] > 0
+        assert s["pooled_invalid_reference_rate"] == pytest.approx(
+            s["evidence_references_invalid"] / s["evidence_references"], abs=5e-5
+        )
+
+    def test_both_estimators_are_retained_and_distinguishable(self, run) -> None:
+        s = run["summary"]
+        assert "pooled_ungrounded_rate" in s
+        assert "mean_of_per_report_groundedness" in s
+
+    def test_the_counts_agree_with_the_per_report_rows(self, run) -> None:
+        rows = [
+            e for e in run["per_child"]
+            if not e.get("used_fallback") and "error" not in e
+        ]
+        s = run["summary"]
+        assert s["numeric_assertions"] == sum(e["n_numbers_asserted"] for e in rows)
+        assert s["numeric_ungrounded"] == sum(e["n_numbers_ungrounded"] for e in rows)
+        assert s["evidence_references"] == sum(e["n_evidence_refs"] for e in rows)

@@ -369,13 +369,15 @@
             "difference": -0.1271,
             "lower": -0.1972,
             "upper": -0.0634,
-            "excludes_zero": true
+            "excludes_zero": true,
+            "unit": "segment"
           },
           "vs_random": {
             "difference": 0.0781,
             "lower": -0.007,
             "upper": 0.162,
-            "excludes_zero": false
+            "excludes_zero": false,
+            "unit": "segment"
           }
         },
         "modality": {
@@ -386,13 +388,15 @@
             "difference": -0.0282,
             "lower": -0.0845,
             "upper": 0.0282,
-            "excludes_zero": false
+            "excludes_zero": false,
+            "unit": "segment"
           },
           "vs_random": {
             "difference": 0.1903,
             "lower": 0.0986,
             "upper": 0.2817,
-            "excludes_zero": true
+            "excludes_zero": true,
+            "unit": "segment"
           }
         },
         "prompt_level": {
@@ -403,13 +407,15 @@
             "difference": -0.0209,
             "lower": -0.0915,
             "upper": 0.0423,
-            "excludes_zero": false
+            "excludes_zero": false,
+            "unit": "segment"
           },
           "vs_random": {
             "difference": 0.1348,
             "lower": 0.0563,
             "upper": 0.2183,
-            "excludes_zero": true
+            "excludes_zero": true,
+            "unit": "segment"
           }
         },
         "outcome": {
@@ -420,13 +426,15 @@
             "difference": 0.0212,
             "lower": -0.0282,
             "upper": 0.0704,
-            "excludes_zero": false
+            "excludes_zero": false,
+            "unit": "segment"
           },
           "vs_random": {
             "difference": 0.0569,
             "lower": -0.0141,
             "upper": 0.1268,
-            "excludes_zero": false
+            "excludes_zero": false,
+            "unit": "segment"
           }
         }
       }
@@ -434,7 +442,7 @@
   },
   "not_measured": [
     "Frontier-model comparison (claude-*): blocked on corpus terms for third-party API processing and on IRB determination.",
-    "Reporting LLM groundedness: no recorded evaluation artefact.",
+    "Reporting-layer groundedness under a frontier model, or under any model without schema-constrained decoding.",
     "Deterministic analytics, adequacy/abstention routing, validation engine: unit-tested as software, not evaluated as research (no result artefacts).",
     "Clinical or usability evaluation: no interventionist used the system.",
     "Whether reranking would pay on a balanced generator roster."

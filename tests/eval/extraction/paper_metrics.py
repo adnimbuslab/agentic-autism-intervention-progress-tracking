@@ -50,7 +50,8 @@ ACCEPTABLE = frozenset({"correct", "correctly_null"})
 NOT_MEASURED = [
     "Frontier-model comparison (claude-*): blocked on corpus terms for "
     "third-party API processing and on IRB determination.",
-    "Reporting LLM groundedness: no recorded evaluation artefact.",
+    "Reporting-layer groundedness under a frontier model, or under any "
+    "model without schema-constrained decoding.",
     "Deterministic analytics, adequacy/abstention routing, validation engine: "
     "unit-tested as software, not evaluated as research (no result artefacts).",
     "Clinical or usability evaluation: no interventionist used the system.",

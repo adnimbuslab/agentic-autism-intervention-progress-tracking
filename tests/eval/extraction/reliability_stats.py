@@ -144,13 +144,34 @@ def _percentile(values: list[float], q: float) -> float:
     return ordered[lower] + (ordered[upper] - ordered[lower]) * (position - lower)
 
 
+def cluster_index(clusters: list[str]) -> dict[str, list[int]]:
+    """Positions belonging to each cluster, preserving order within a cluster."""
+    index: dict[str, list[int]] = {}
+    for position, label in enumerate(clusters):
+        index.setdefault(label, []).append(position)
+    return index
+
+
 def bootstrap_kappa(
     pairs: list[tuple[str, str]],
     n_boot: int = N_BOOTSTRAP,
     seed: int = BOOTSTRAP_SEED,
     alpha: float = ALPHA,
+    clusters: list[str] | None = None,
 ) -> dict[str, Any]:
-    """Percentile bootstrap interval, resampling segments with replacement.
+    """Percentile bootstrap interval for kappa.
+
+    `clusters` selects the resampling unit. Without it the unit is the segment,
+    which assumes segments are independent. They are not: the 330 segments come
+    from 11 children, several sessions each, and two segments from one child
+    share that child's language, the investigator's style and the session's
+    activity. Treating them as independent understates the interval, and with
+    30 segments per child the understatement is not small.
+
+    Passing child labels resamples **children** with replacement and takes each
+    drawn child's segments entire, which is the honest unit here. The cost is
+    that 11 clusters is a small number to resample, so the intervals are wide.
+    That width is the information, not a defect of the estimator.
 
     Resamples that collapse to a single category leave kappa undefined rather
     than zero; they are dropped and counted, so a field whose interval rests on
@@ -158,12 +179,26 @@ def bootstrap_kappa(
     """
     if not pairs:
         return {"lower": None, "upper": None, "n_valid": 0, "n_requested": n_boot}
+    if clusters is not None and len(clusters) != len(pairs):
+        raise ValueError(
+            f"clusters must align with pairs: {len(clusters)} vs {len(pairs)}"
+        )
 
     rng = random.Random(seed)
     n = len(pairs)
+    grouped = cluster_index(clusters) if clusters is not None else None
+    labels = sorted(grouped) if grouped else []
+
     replicates: list[float] = []
     for _ in range(n_boot):
-        sample = [pairs[rng.randrange(n)] for _ in range(n)]
+        if grouped is None:
+            sample = [pairs[rng.randrange(n)] for _ in range(n)]
+        else:
+            sample = [
+                pairs[position]
+                for _ in labels
+                for position in grouped[labels[rng.randrange(len(labels))]]
+            ]
         value = cohens_kappa(sample)
         if value is not None:
             replicates.append(value)
@@ -175,6 +210,7 @@ def bootstrap_kappa(
         "upper": round(_percentile(replicates, 1 - alpha / 2), 4),
         "n_valid": len(replicates),
         "n_requested": n_boot,
+        "unit": "child" if clusters is not None else "segment",
     }
 
 
@@ -182,6 +218,7 @@ def field_statistics(
     pairs: list[tuple[str, str]],
     n_boot: int = N_BOOTSTRAP,
     seed: int = BOOTSTRAP_SEED,
+    clusters: list[str] | None = None,
 ) -> dict[str, Any]:
     """Every reliability quantity reported for one field."""
     kappa = cohens_kappa(pairs)
@@ -211,7 +248,14 @@ def field_statistics(
             else None
         ),
         "interpretation": interpret(kappa),
+        # Segment-level interval retained as the sensitivity analysis; the
+        # child-clustered one is the interval the study reports.
         "bootstrap_ci": bootstrap_kappa(pairs, n_boot=n_boot, seed=seed),
+        "cluster_bootstrap_ci": (
+            bootstrap_kappa(pairs, n_boot=n_boot, seed=seed, clusters=clusters)
+            if clusters is not None
+            else None
+        ),
         "asymptotic_ci": asymptotic,
     }
 
@@ -222,6 +266,7 @@ def delta_kappa(
     n_boot: int = N_BOOTSTRAP,
     seed: int = BOOTSTRAP_SEED,
     alpha: float = ALPHA,
+    clusters: list[str] | None = None,
 ) -> dict[str, Any] | None:
     """Paired bootstrap interval on the change in kappa between two rounds.
 
@@ -246,11 +291,29 @@ def delta_kappa(
     if kappa_before is None or kappa_after is None:
         return None
 
+    if clusters is not None and len(clusters) != len(before):
+        raise ValueError(
+            f"clusters must align with items: {len(clusters)} vs {len(before)}"
+        )
+
     rng = random.Random(seed)
     n = len(before)
+    grouped = cluster_index(clusters) if clusters is not None else None
+    labels = sorted(grouped) if grouped else []
+
     replicates: list[float] = []
     for _ in range(n_boot):
-        index = [rng.randrange(n) for _ in range(n)]
+        if grouped is None:
+            index = [rng.randrange(n) for _ in range(n)]
+        else:
+            # Resample children; both rounds are scored on the same drawn
+            # children, preserving the pairing that makes the difference
+            # estimable at all.
+            index = [
+                position
+                for _ in labels
+                for position in grouped[labels[rng.randrange(len(labels))]]
+            ]
         one = cohens_kappa([before[i] for i in index])
         two = cohens_kappa([after[i] for i in index])
         if one is not None and two is not None:
@@ -268,6 +331,7 @@ def delta_kappa(
         "upper": round(upper, 4),
         "excludes_zero": bool(lower > 0 or upper < 0),
         "n_valid": len(replicates),
+        "unit": "child" if clusters is not None else "segment",
     }
 
 
@@ -286,6 +350,27 @@ def mean_kappa(per_field: dict[str, Any]) -> float | None:
     return round(sum(values) / len(values), 4) if values else None
 
 
+def paired_clusters(
+    first: dict[str, Any],
+    second: dict[str, Any],
+    field: str,
+    segments: list[str],
+) -> list[str]:
+    """Child label for each pair `paired_values` returns, in the same order.
+
+    Rebuilt with the same inclusion rule rather than zipped against the segment
+    list, because `paired_values` drops segments where either annotator did not
+    record the field and a mismatched label would silently misassign clusters.
+    """
+    labels: list[str] = []
+    for segment_id in segments:
+        a = first[segment_id].get("field_values", {})
+        b = second[segment_id].get("field_values", {})
+        if field in a and field in b:
+            labels.append(first[segment_id].get("child_id") or "unknown")
+    return labels
+
+
 def build_report(
     first: dict[str, Any],
     second: dict[str, Any],
@@ -296,7 +381,10 @@ def build_report(
     segments = shared_segments(first, second)
     per_field = {
         field: field_statistics(
-            paired_values(first, second, field, segments), n_boot=n_boot, seed=seed
+            paired_values(first, second, field, segments),
+            n_boot=n_boot,
+            seed=seed,
+            clusters=paired_clusters(first, second, field, segments),
         )
         for field in CATEGORICAL_FIELDS
     }
@@ -314,23 +402,20 @@ def render(report: dict[str, Any]) -> None:
     print(f"Reliability: {report['label']}  (n = {report['n_segments']} segments)")
     print(f"  {report['n_bootstrap']} bootstrap replicates, seed {report['bootstrap_seed']}\n")
     header = (
-        f"  {'field':<14}{'n':>5}{'p_o':>8}{'p_e':>8}{'kappa':>8}"
-        f"{'95% CI (boot)':>18}{'SE':>8}{'k_max':>8}{'k/k_max':>9}"
+        f"  {'field':<14}{'n':>5}{'kappa':>8}{'95% CI (child)':>20}"
+        f"{'95% CI (segment)':>20}{'k_max':>8}{'k/k_max':>9}"
     )
     print(header)
     for field, stats in report["fields"].items():
-        boot = stats["bootstrap_ci"]
-        interval = (
-            f"[{boot['lower']:.3f}, {boot['upper']:.3f}]"
-            if boot["lower"] is not None
-            else "--"
-        )
-        se = stats["asymptotic_ci"]["se"]
+        def fmt(ci: dict | None) -> str:
+            if not ci or ci.get("lower") is None:
+                return "--"
+            return f"[{ci['lower']:.3f}, {ci['upper']:.3f}]"
+
         print(
-            f"  {field:<14}{stats['n']:>5}"
-            f"{stats['observed_agreement']:>8.3f}{stats['expected_agreement']:>8.3f}"
-            f"{stats['kappa']:>8.3f}{interval:>18}"
-            f"{(f'{se:.3f}' if se is not None else '--'):>8}"
+            f"  {field:<14}{stats['n']:>5}{stats['kappa']:>8.3f}"
+            f"{fmt(stats.get('cluster_bootstrap_ci')):>20}"
+            f"{fmt(stats['bootstrap_ci']):>20}"
             f"{stats['kappa_max']:>8.3f}{stats['kappa_over_kappa_max']:>9.3f}"
         )
     print(f"\n  mean kappa across {len(report['fields'])} categorical fields: "

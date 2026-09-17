@@ -47,6 +47,11 @@ class Settings(BaseSettings):
     adequacy_temporal_cluster_max_ratio: float = 0.8
 
     # Reporting
+    # An evidence packet for one child runs to several thousand tokens; the
+    # default 4k context truncates it, and a truncated packet produces a report
+    # about the fragment that survived.
+    reporting_num_ctx: int = 8192
+    reporting_timeout_s: float = 600.0
     reporting_provider: Literal["anthropic", "ollama"] = "ollama"
     reporting_model: str = "claude-sonnet-4-20250514"
     reporting_prompt_version: str = "1.0"

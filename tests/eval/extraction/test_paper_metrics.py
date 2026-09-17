@@ -98,8 +98,17 @@ class TestAgreesWithSources:
 class TestHonesty:
     def test_unmeasured_quantities_are_listed(self, metrics) -> None:
         listed = " ".join(metrics["not_measured"]).lower()
-        for expected in ("frontier", "reporting llm", "usability", "analytics"):
+        for expected in ("frontier", "reporting-layer", "usability", "analytics"):
             assert expected in listed, expected
+
+    def test_reporting_groundedness_is_no_longer_listed_as_unmeasured(
+        self, metrics
+    ) -> None:
+        # It was unmeasured only because unconstrained decoding made every
+        # generation fall back to the template. Under schema-constrained
+        # decoding it is measured, and the list must not still claim otherwise.
+        listed = " ".join(metrics["not_measured"]).lower()
+        assert "no recorded evaluation artefact" not in listed
 
     def test_the_frontier_comparison_is_marked_blocked_not_omitted(
         self, metrics

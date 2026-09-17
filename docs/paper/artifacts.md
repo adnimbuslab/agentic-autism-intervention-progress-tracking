@@ -85,9 +85,9 @@ uv run python docs/paper/verify_artifacts.py --record
 | `tests/eval/extraction/results/reissue_round2_selection.json` | Round-2 selection: which conflicts sit on a codebook boundary, and why | `reissue_gold_sheet` | 74,207 | `caae573037e4ba6d...` |
 | `tests/eval/extraction/results/agreement_annotator_a_round1_annotator_b_round1.json` | Round-1 agreement report (kappa per field) | `agreement_report` | 17,638 | `e97c1918724bbb14...` |
 | `tests/eval/extraction/results/agreement_annotator_a_annotator_b.json` | Post-codebook agreement report (kappa per field) | `agreement_report` | 17,547 | `cc51a86f6e16f67a...` |
-| `tests/eval/extraction/results/reliability_round1.json` | Round-1 reliability: kappa, kappa_max, both intervals (Table R1) | `reliability_stats --round1` | 2,218 | `ae73f25f48737a5f...` |
-| `tests/eval/extraction/results/reliability_current.json` | Post-codebook reliability over the merged gold (Table R5) | `reliability_stats` | 2,208 | `2840f188d023ff7f...` |
-| `tests/eval/extraction/results/round_comparison.json` | Pre-registered before/after comparison, treated vs control (Table R4) | `round_comparison` | 5,499 | `e4f4ffa7e4eaf907...` |
+| `tests/eval/extraction/results/reliability_round1.json` | Round-1 reliability: kappa, kappa_max, both intervals (Table R1) | `reliability_stats --round1` | 3,009 | `c04c52d3deb948ee...` |
+| `tests/eval/extraction/results/reliability_current.json` | Post-codebook reliability over the merged gold (Table R5) | `reliability_stats` | 2,999 | `8610afdeb79c471b...` |
+| `tests/eval/extraction/results/round_comparison.json` | Pre-registered before/after comparison, treated vs control (Table R4) | `round_comparison` | 8,335 | `2500dedd06b9400e...` |
 | `tests/eval/extraction/results/annotation_sheets/adjudication_sheet_updated.csv` | Returned adjudication sheet: 503 decisions with rationales (primary data) | `adjudicator (consensus of both annotators)` | 272,213 | `0e2a38568659b73a...` |
 | `tests/eval/extraction/results/adjudications.json` | Imported adjudication decisions | `import_adjudication_sheet` | 127,198 | `8f4a0790e9210290...` |
 | `tests/eval/extraction/results/gold_labels.json` | Adjudicated gold standard: 330 of 330 segments (Table 5) | `adjudicate --decisions` | 121,469 | `32327d787648dac9...` |
@@ -95,12 +95,12 @@ uv run python docs/paper/verify_artifacts.py --record
 | `tests/eval/extraction/results/mars_outcomes.json` | MARS decisions over all 330 segments, 5-model judge roster | `run_mars` | 138,754 | `5310fdff92588266...` |
 | `tests/eval/extraction/results/mars_run_summary.json` | MARS run configuration and per-judge discard rates | `run_mars` | 1,374 | `b9b66b921a6984ec...` |
 | `tests/eval/extraction/results/mars_evaluation.json` | MARS accuracy, coverage, abstention profile, ceiling (Tables 9-10) | `mars_evaluation` | 1,190 | `0ca48149ada6eb78...` |
-| `tests/eval/reporting/results/reporting_groundedness.json` | Reporting-layer groundedness run; records the 11/11 fallback finding | `tests.eval.reporting.groundedness` | 8,015 | `10023e0111262084...` |
+| `tests/eval/reporting/results/reporting_groundedness.json` | Reporting-layer groundedness run; records the 11/11 fallback finding | `tests.eval.reporting.groundedness` | 10,167 | `e4e054275fb755ac...` |
 | `tests/eval/extraction/results/annotation_batch_augmented.json` | Frozen batch plus a generator added after annotation (qwen3:14b) | `add_generator` | 686,753 | `de0e6f66be4eb17e...` |
 | `tests/eval/extraction/results/scored_against_gold_augmented.json` | Four-generator judgements against the same gold | `score_against_gold --batch annotation_batch_augmented.json` | 279,917 | `19a60625f34824aa...` |
 | `tests/eval/extraction/results/holdout_set.json` | Model-independent held-out set: 132 segments, frozen before generation | `build_holdout_set` | 59,697 | `51960c8cc482879a...` |
-| `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 13,789 | `68f82fc4fc425a33...` |
-| `tests/eval/extraction/results/mars_selection_analysis.json` | Per-field selection quality vs both baselines (Tables 11-12) | `mars_selection_analysis` | 2,675 | `639c663bd4f8adfb...` |
+| `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 14,085 | `13ba704145cf2f95...` |
+| `tests/eval/extraction/results/mars_selection_analysis.json` | Per-field selection quality vs both baselines (Tables 11-12) | `mars_selection_analysis` | 4,376 | `4a7cddcebde27c79...` |
 | `tests/eval/extraction/results/mars_branch_replay.json` | Candidate-stage branch distribution and judge-roster comparison | `mars_branch_replay` | 3,685 | `33466b195d7413d6...` |
 
 ## Prose and figures (listed, not pinned)

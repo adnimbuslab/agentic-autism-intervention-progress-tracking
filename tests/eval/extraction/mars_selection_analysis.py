@@ -54,6 +54,46 @@ SEED = 20260916
 RANDOM_BASELINE_TRIALS = 2_000
 
 
+GOLD_LABELS_PATH = RESULTS_DIR / "gold_labels.json"
+BATCH_PATH = RESULTS_DIR / "annotation_batch.json"
+
+
+def load_child_map(segments: list[str]) -> dict[str, str]:
+    """Segment -> child, from the artefacts that actually record it.
+
+    `scored_against_gold.json` keys segments to per-model judgements and
+    carries no child, so reading it from there silently yields one cluster for
+    everything -- which resamples to the identical set every replicate and
+    produces a zero-width interval that looks like enormous precision. The
+    guard below refuses that rather than reporting it.
+    """
+    mapping: dict[str, str] = {}
+    for path, key in ((GOLD_LABELS_PATH, "gold"), (BATCH_PATH, "candidates")):
+        if not path.exists():
+            continue
+        payload = json.loads(path.read_text())
+        entries = payload.get(key)
+        if isinstance(entries, dict):
+            for segment, record in entries.items():
+                if record.get("child_id"):
+                    mapping.setdefault(segment, record["child_id"])
+        elif isinstance(entries, list):
+            for entry in entries:
+                if entry.get("child_id"):
+                    mapping.setdefault(entry["segment_id"], entry["child_id"])
+
+    resolved = {s: mapping.get(s, "unknown") for s in segments}
+    distinct = {c for c in resolved.values() if c != "unknown"}
+    if len(distinct) < 2:
+        raise SystemExit(
+            "Cannot cluster by child: resolved "
+            f"{len(distinct)} distinct children across {len(segments)} segments. "
+            "A single cluster resamples to the identical set every replicate "
+            "and yields a zero-width interval."
+        )
+    return resolved
+
+
 def judged_segments(outcomes: dict[str, Any], gold: dict[str, Any]) -> list[str]:
     """Returned segments where more than one candidate was available.
 
@@ -128,15 +168,37 @@ def paired_difference(
     field: str,
     n_boot: int = N_BOOTSTRAP,
     seed: int = SEED,
+    clusters: dict[str, str] | None = None,
 ) -> dict[str, Any]:
-    """Bootstrap interval on (a - b), both scored on the same resampled segments."""
+    """Bootstrap interval on (a - b), both scored on the same resampled draw.
+
+    `clusters` maps each segment to its child. Supplied, children are resampled
+    and each drawn child contributes all of its segments: segments from one
+    child share that child's language and session context and are not
+    independent draws. Omitted, the unit is the segment, which is retained as a
+    sensitivity analysis.
+    """
     rng = random.Random(seed)
     n = len(segments)
+    grouped: dict[str, list[str]] = {}
+    if clusters is not None:
+        for segment in segments:
+            grouped.setdefault(clusters.get(segment, "unknown"), []).append(segment)
+    labels = sorted(grouped)
+
     replicates: list[float] = []
     for _ in range(n_boot):
-        draw = [segments[rng.randrange(n)] for _ in range(n)]
-        a = sum(acceptable(gold, s, pick_a(s), field) for s in draw) / n
-        b = sum(acceptable(gold, s, pick_b(s), field) for s in draw) / n
+        if clusters is None:
+            draw = [segments[rng.randrange(n)] for _ in range(n)]
+        else:
+            draw = [
+                segment
+                for _ in labels
+                for segment in grouped[labels[rng.randrange(len(labels))]]
+            ]
+        size = len(draw)
+        a = sum(acceptable(gold, s, pick_a(s), field) for s in draw) / size
+        b = sum(acceptable(gold, s, pick_b(s), field) for s in draw) / size
         replicates.append(a - b)
     replicates.sort()
     lower = replicates[int(0.025 * n_boot)]
@@ -146,6 +208,7 @@ def paired_difference(
         "lower": round(lower, 4),
         "upper": round(upper, 4),
         "excludes_zero": bool(lower > 0 or upper < 0),
+        "unit": "child" if clusters is not None else "segment",
     }
 
 
@@ -163,6 +226,8 @@ def analyse(
         key=lambda m: statistics.mean(accuracy(gold, segments, lambda s: m, f) for f in fields),
     )
 
+    child_of = load_child_map(segments)
+
     per_field: dict[str, Any] = {}
     for field in fields:
         per_field[field] = {
@@ -177,6 +242,10 @@ def analyse(
             },
             "vs_best_generator": paired_difference(
                 gold, segments, mars, lambda s: best, field, n_boot=n_boot
+            ),
+            "vs_best_generator_clustered": paired_difference(
+                gold, segments, mars, lambda s: best, field, n_boot=n_boot,
+                clusters=child_of,
             ),
         }
 
@@ -195,6 +264,10 @@ def analyse(
     for field in fields:
         per_field[field]["vs_random_candidate"] = paired_difference(
             gold, segments, mars, lambda s: fixed_random[s], field, n_boot=n_boot
+        )
+        per_field[field]["vs_random_candidate_clustered"] = paired_difference(
+            gold, segments, mars, lambda s: fixed_random[s], field,
+            n_boot=n_boot, clusters=child_of,
         )
 
     selection_counts = {m: 0 for m in models}
@@ -263,14 +336,27 @@ def render(report: dict[str, Any]) -> None:
         ("MARS vs a random candidate", "vs_random_candidate"),
     ):
         print(f"\n  {title}")
+        print(f"    {'field':<14}{'diff':>7}{'95% CI (child)':>20}"
+              f"{'95% CI (segment)':>20}")
         for field in fields:
             entry = report["per_field"][field][key]
-            mark = "  *" if entry["excludes_zero"] else ""
+            clustered = report["per_field"][field].get(f"{key}_clustered")
+
+            def fmt(e: dict | None) -> str:
+                if not e:
+                    return "--"
+                return (
+                    f"[{100 * e['lower']:+6.1f},{100 * e['upper']:+6.1f}]"
+                    + ("*" if e["excludes_zero"] else " ")
+                )
+
             print(
                 f"    {field:<14}{100 * entry['difference']:>+7.1f}"
-                f"  [{100 * entry['lower']:+6.1f}, {100 * entry['upper']:+6.1f}]{mark}"
+                f"{fmt(clustered):>20}{fmt(entry):>20}"
             )
-    print("\n  * interval excludes zero")
+    print("\n  * interval excludes zero"
+          "\n  child-clustered is the reported interval; segment-level is the "
+          "sensitivity analysis")
 
     print(f"\n  MARS chose {report['best_generator']} on "
           f"{report['mars_share_of_best_generator']:.0%} of judged segments: "

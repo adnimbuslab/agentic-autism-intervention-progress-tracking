@@ -16,7 +16,15 @@
           "lower": 0.6587,
           "upper": 0.8022,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.6559,
+          "upper": 0.8028,
+          "n_valid": 10000,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0368,
@@ -37,7 +45,15 @@
           "lower": 0.6087,
           "upper": 0.7672,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.6277,
+          "upper": 0.7607,
+          "n_valid": 10000,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0403,
@@ -52,7 +68,18 @@
         "lower": -0.1409,
         "upper": 0.0523,
         "excludes_zero": false,
-        "n_valid": 10000
+        "n_valid": 10000,
+        "unit": "segment"
+      },
+      "delta_clustered": {
+        "kappa_before": 0.7317,
+        "kappa_after": 0.6906,
+        "delta": -0.0411,
+        "lower": -0.1419,
+        "upper": 0.0682,
+        "excludes_zero": false,
+        "n_valid": 10000,
+        "unit": "child"
       }
     },
     "modality": {
@@ -70,7 +97,15 @@
           "lower": 0.3201,
           "upper": 0.4496,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.232,
+          "upper": 0.5609,
+          "n_valid": 9999,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0331,
@@ -91,7 +126,15 @@
           "lower": 0.7972,
           "upper": 0.9269,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.7763,
+          "upper": 0.9321,
+          "n_valid": 10000,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0325,
@@ -106,7 +149,18 @@
         "lower": 0.3967,
         "upper": 0.5647,
         "excludes_zero": true,
-        "n_valid": 10000
+        "n_valid": 10000,
+        "unit": "segment"
+      },
+      "delta_clustered": {
+        "kappa_before": 0.3852,
+        "kappa_after": 0.8664,
+        "delta": 0.4812,
+        "lower": 0.3365,
+        "upper": 0.5826,
+        "excludes_zero": true,
+        "n_valid": 9999,
+        "unit": "child"
       }
     },
     "prompt_level": {
@@ -124,7 +178,15 @@
           "lower": 0.17,
           "upper": 0.3876,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.1263,
+          "upper": 0.3559,
+          "n_valid": 10000,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0563,
@@ -145,7 +207,15 @@
           "lower": 0.4555,
           "upper": 0.6855,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.4439,
+          "upper": 0.6671,
+          "n_valid": 10000,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0588,
@@ -160,7 +230,18 @@
         "lower": 0.1372,
         "upper": 0.4468,
         "excludes_zero": true,
-        "n_valid": 10000
+        "n_valid": 10000,
+        "unit": "segment"
+      },
+      "delta_clustered": {
+        "kappa_before": 0.2808,
+        "kappa_after": 0.574,
+        "delta": 0.2933,
+        "lower": 0.191,
+        "upper": 0.435,
+        "excludes_zero": true,
+        "n_valid": 10000,
+        "unit": "child"
       }
     },
     "outcome": {
@@ -178,7 +259,15 @@
           "lower": 0.1972,
           "upper": 0.3723,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.1159,
+          "upper": 0.4093,
+          "n_valid": 10000,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0441,
@@ -199,7 +288,15 @@
           "lower": 0.5365,
           "upper": 0.7147,
           "n_valid": 10000,
-          "n_requested": 10000
+          "n_requested": 10000,
+          "unit": "segment"
+        },
+        "cluster_bootstrap_ci": {
+          "lower": 0.5059,
+          "upper": 0.7189,
+          "n_valid": 10000,
+          "n_requested": 10000,
+          "unit": "child"
         },
         "asymptotic_ci": {
           "se": 0.0463,
@@ -214,7 +311,18 @@
         "lower": 0.2172,
         "upper": 0.4644,
         "excludes_zero": true,
-        "n_valid": 10000
+        "n_valid": 10000,
+        "unit": "segment"
+      },
+      "delta_clustered": {
+        "kappa_before": 0.2843,
+        "kappa_after": 0.6278,
+        "delta": 0.3435,
+        "lower": 0.1602,
+        "upper": 0.562,
+        "excludes_zero": true,
+        "n_valid": 10000,
+        "unit": "child"
       }
     }
   }

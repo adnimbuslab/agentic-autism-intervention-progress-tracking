@@ -14,6 +14,7 @@ omitted.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -74,6 +75,12 @@ class Builder:
             self.p(f"[missing figure: {filename}]", italic=True, colour=RED)
             return
         self.fig_no += 1
+        # Numbering is assigned here, in document order, rather than written
+        # into each caption by hand. Hand-written numbers drift the moment a
+        # figure is inserted or moved, and the images no longer carry numbers
+        # of their own, so this is the single source of truth.
+        caption = re.sub(r"^Figure\s+[0-9A-Za-z]+\s*[.\u2014-]\s*", "", caption)
+        caption = f"Figure {self.fig_no}. {caption}"
         self.doc.add_picture(str(path), width=Inches(width))
         self.doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
         para = self.doc.add_paragraph()
@@ -212,8 +219,9 @@ def build() -> Path:
         "measurably repaired by a written codebook under a controlled design. "
         "The generators evaluated are not adequate for the extraction task, "
         "and the failure is not attributable to model size: the largest model "
-        "tested was the least safe. Candidate selection cannot compensate for "
-        "candidate quality."
+        "tested had the highest unsupported-assertion rate despite accuracy "
+        "comparable to the strongest smaller model. Candidate selection "
+        "cannot compensate for candidate quality."
     )
 
     b.page_break()
@@ -400,6 +408,19 @@ def build() -> Path:
         "forced disagreements = n (1 - p_o_max)"
     )
     b.p(
+        "Segments are nested within children: the 330 segments come from 11 "
+        "children, 30 each, across multiple sessions. Two segments from one "
+        "child share that child's language, the partner's style and the "
+        "session's activity, and are not independent draws. Intervals are "
+        "therefore obtained by resampling **children** with replacement, each "
+        "drawn child contributing all of its segments. With 11 clusters this "
+        "is a small number to resample and the intervals are correspondingly "
+        "wide; that width is information about the design rather than a defect "
+        "of the estimator. Segment-level intervals are retained throughout as "
+        "a sensitivity analysis and are reported alongside. Every conclusion "
+        "in this paper holds under both."
+    )
+    b.p(
         "Reporting kappa alongside kappa_max separates a definitional problem "
         "— a low kappa close to its ceiling — from a judgement problem, a low "
         "kappa far below it. Intervals are 10,000-replicate percentile "
@@ -480,13 +501,24 @@ def build() -> Path:
     b.h1("Results")
     b.h2("Annotation reliability")
 
+    r1_raw = load(RESULTS / "reliability_round1.json") or {"fields": {}}
     b.table(
-        f"Round-1 reliability and the ceiling the marginals allow (n = {ann['n_segments']}).",
-        ["Field", "kappa", "95% CI", "kappa_max", "kappa / kappa_max"],
+        f"Round-1 reliability and the ceiling the marginals allow "
+        f"(n = {ann['n_segments']} segments from 11 children). The reported "
+        "interval resamples children; the segment-level interval is the "
+        "sensitivity analysis.",
+        ["Field", "kappa", "95% CI (children)", "95% CI (segments)",
+         "kappa_max", "kappa / kappa_max"],
         [
             [
                 f,
                 f"{e['kappa']:.3f}",
+                (
+                    f"[{r1_raw['fields'][f]['cluster_bootstrap_ci']['lower']:.3f}, "
+                    f"{r1_raw['fields'][f]['cluster_bootstrap_ci']['upper']:.3f}]"
+                    if r1_raw["fields"].get(f, {}).get("cluster_bootstrap_ci")
+                    else "--"
+                ),
                 f"[{e['ci'][0]:.3f}, {e['ci'][1]:.3f}]",
                 f"{e['kappa_max']:.3f}",
                 f"{e['kappa_over_kappa_max']:.3f}",
@@ -518,10 +550,23 @@ def build() -> Path:
         "stated definitional boundaries.",
     )
 
+    rc = load(RESULTS / "round_comparison.json") or {"fields": {}}
+
+    def _delta_ci(field: str, key: str) -> str:
+        entry = (rc["fields"].get(field) or {}).get(key)
+        if not entry:
+            return "--"
+        return (
+            f"[{entry['lower']:+.3f}, {entry['upper']:+.3f}]"
+            + ("  *" if entry["excludes_zero"] else "")
+        )
+
     b.table(
         "Change in kappa over the re-issued segments, treated fields against "
-        "the untreated control.",
-        ["Field", "Arm", "Round 1", "Round 2", "Change", "95% CI (paired)"],
+        "the untreated control. Asterisk marks an interval excluding zero; "
+        "both resampling units agree on every field.",
+        ["Field", "Arm", "Round 1", "Round 2", "Change",
+         "95% CI (children)", "95% CI (segments)"],
         [
             [
                 f,
@@ -529,8 +574,8 @@ def build() -> Path:
                 f"{e['kappa_before']:.3f}",
                 f"{e['kappa_after']:.3f}",
                 f"{e['delta']:+.3f}",
-                f"[{e['ci'][0]:+.3f}, {e['ci'][1]:+.3f}]"
-                + ("  *" if e["excludes_zero"] else ""),
+                _delta_ci(f, "delta_clustered"),
+                _delta_ci(f, "delta"),
             ]
             for f, e in ann["codebook_intervention"]["per_field"].items()
         ],
@@ -556,15 +601,18 @@ def build() -> Path:
 
     b.h2("Gold standard")
     b.p(
-        "Two denominators are distinguished here because conflating them makes "
-        "the counts appear contradictory. Categorical disagreements after "
-        "round 2 affected 127 segments; adjudication nonetheless touched 322, "
-        "because free-text behavior descriptions differ by exact match on "
-        "almost every segment even when the two annotators describe the same "
-        "event. Resolving behavior is usually a choice between two adequate "
-        "wordings, not a substantive judgement, but a segment left undecided "
-        "on any field is excluded from the gold standard, so those rows must "
-        "be settled."
+        "**Substantive disagreement affected 127 of 330 segments, not 322.** "
+        "The larger figure is the number of segments adjudication touched, and "
+        "the two must not be read as the same quantity. Of the 503 fields "
+        "adjudicated, 321 were free-text behavior descriptions, which differ "
+        "by exact string match on almost every segment even where the two "
+        "annotators describe the same event in different words; resolving "
+        "those is a choice between two adequate wordings rather than a "
+        "substantive judgement. Categorical disagreement — the quantity that "
+        "bears on reliability — affected 182 fields across 127 segments. "
+        "Because a segment undecided on any field is excluded from the gold "
+        "standard entirely, the wording rows still had to be settled, which is "
+        "why only 8 segments required no adjudication at all."
     )
     b.table(
         "Adjudication load, by the kind of conflict.",
@@ -751,20 +799,24 @@ def build() -> Path:
             "that the transcript supports none, and on outcome 111 of 115."
         )
         b.p(
-            "Across the four generators, unsupported assertion tracks "
-            "willingness to answer rather than capability, and the ordering is "
-            "monotone: the model abstaining on 48% of fields asserts "
-            "unsupported values on 31% of opportunities, and the model "
-            "abstaining on 3% asserts them on 97%. The weakest generator in "
+            "Within the four-model roster evaluated here, lower abstention "
+            "coincided with higher unsupported assertion: the model abstaining "
+            "on 48% of fields asserted unsupported values on 31% of "
+            "opportunities, and the model abstaining on 3% asserted them on "
+            "97%. The ordering is consistent across all four, but four models "
+            "is a descriptive observation rather than evidence of a general "
+            "relationship, and it is offered as such. The weakest generator in "
             "the roster appears safest only because it so often declines. This "
-            "is the property that matters for a clinical monitoring pathway, "
-            "and it is not one that model selection ordinarily optimises for."
+            "property would be important in any future clinical or "
+            "intervention-monitoring pathway, and it is not one that model "
+            "selection ordinarily optimises for."
         )
         b.figure(
             "fig22_extended_roster.png",
             "Figure 13. Left: per-field accuracy across four generators. "
-            "Right: unsupported assertion against abstention rate — the "
-            "ordering is monotone across the roster.",
+            "Right: unsupported assertion against abstention rate. The four "
+            "models are consistently ordered; with four points this is a "
+            "descriptive observation, not an estimated relationship.",
         )
         b.p(
             f"Adding the fourth generator raised the oracle ceiling from "
@@ -885,30 +937,86 @@ def build() -> Path:
     )
 
     # ---- reporting layer ----------------------------------------------
-    if ground:
+    if ground and ground.get("n_llm_reports"):
+        summary = ground["summary"]
+        n = ground["n_llm_reports"]
         b.h2("Reporting layer")
-        summary = ground.get("summary", {})
         b.p(
-            f"An instrument was built to measure whether the reporting model's "
-            f"prose is grounded in the evidence packet it receives: every "
-            f"number asserted must appear in the packet, every cited record id "
-            f"must exist, prohibited content must be absent, and withheld "
-            f"metrics must be acknowledged. It was calibrated on the "
-            f"deterministic fallback, whose prose is grounded by construction "
-            f"and which the instrument scores at 1.0 with no false positives."
+            "Initial prompt-only generation did not reliably conform to the "
+            "report schema. Because that behaviour could reflect decoding "
+            "configuration rather than model capability, generation was "
+            "repeated using the model server's native schema-constrained "
+            "decoding. All 11 outputs then conformed structurally, and these "
+            "constrained outputs form the reporting evaluation reported here."
         )
         b.p(
-            f"No groundedness figure is reported. Across all "
-            f"{ground.get('n_children')} children, "
-            f"{ground.get('n_fallback_reports')} of "
-            f"{ground.get('n_children')} report generations fell back to the "
-            f"deterministic template: no locally served model produced output "
-            f"conforming to the required report schema. Two returned prose "
-            f"instead of the specified JSON array and one returned a JSON "
-            f"object of the wrong shape. In the local-only configuration the "
-            f"reporting layer therefore never executes as an LLM, and the "
-            f"reports a user would see are template-generated.",
-            colour=RED,
+            "Schema constraint guarantees the shape of the output, not the "
+            "truth of the values inside it. Structural conformance and "
+            "governance conformance are therefore measured separately, under "
+            "three headings: content safety, evidence grounding, and "
+            "abstention preservation."
+        )
+        b.table(
+            f"Reporting-layer evaluation ({n} reports, one per child, "
+            f"{ground['model']}). Rates are pooled over assertions and "
+            "references rather than averaged over reports.",
+            ["Property", "Result"],
+            [
+                [
+                    "Content safety — reports containing prohibited "
+                    "diagnostic, treatment, causal or prognostic content",
+                    f"{summary['prohibited_content_reports']} of {n}",
+                ],
+                [
+                    "Evidence grounding — numeric assertions absent from the "
+                    "evidence packet",
+                    f"{summary['numeric_ungrounded']} of "
+                    f"{summary['numeric_assertions']} "
+                    f"({pct(summary['pooled_ungrounded_rate'])})",
+                ],
+                [
+                    "Evidence grounding — invalid evidence references",
+                    f"{summary['evidence_references_invalid']} of "
+                    f"{summary['evidence_references']} "
+                    f"({pct(summary['pooled_invalid_reference_rate'])})",
+                ],
+                [
+                    "Evidence grounding — reports with no ungrounded value",
+                    f"{summary['reports_fully_grounded']} of {n}",
+                ],
+                [
+                    "Abstention preservation — reports passing deterministic "
+                    "governance validation",
+                    f"{summary['reports_passing_validation']} of {n}",
+                ],
+            ],
+        )
+        b.p(
+            "Schema-constrained decoding produced structurally conformant "
+            "reports for all 11 children. Structural conformance did not, "
+            "however, imply governance conformance. Across the 11 reports the "
+            f"model made {summary['numeric_assertions']} numerical assertions, "
+            f"of which {summary['numeric_ungrounded']} were not present in the "
+            f"supplied evidence packet, and produced "
+            f"{summary['evidence_references_invalid']} invalid evidence "
+            f"references out of {summary['evidence_references']}. No report "
+            "contained prohibited diagnostic, treatment, causal or prognostic "
+            "content. Nevertheless, none of the 11 passed deterministic "
+            "governance validation, because analytics intentionally withheld "
+            "by the adequacy router — cross-setting and cross-contributor "
+            "comparisons — were not acknowledged as unavailable. The model did "
+            "not fabricate these analyses; it silently omitted their absence. "
+            "The distinction matters because a reader cannot tell a "
+            "deliberately withheld analysis from one that was simply not "
+            "attempted."
+        )
+        b.p(
+            "Deterministic governance validation, as used here, checks the "
+            "evidence and governance contract rather than output structure: "
+            "prohibited content, acknowledgement of insufficient evidence, and "
+            "acknowledgement of each withheld metric. A failure is not "
+            "malformed output.",
+            italic=True,
         )
 
     b.page_break()
@@ -934,9 +1042,13 @@ def build() -> Path:
         "that a transcript supports no modality, one generator asserted one on "
         "93.5% of occasions; on outcome, another did so on 67.8%. This is the "
         "measurement the explicit null convention was designed to permit, and "
-        "it is arguably more consequential for a clinical monitoring pathway "
-        "than accuracy, because an unsupported value is indistinguishable in "
-        "form from a supported one once written."
+        "it would be more consequential than accuracy in any future clinical or "
+        "intervention-monitoring pathway, because an unsupported value is "
+        "indistinguishable in form from a supported one once written. The "
+        "corpora analysed here are archival research transcripts, not "
+        "observations collected through such a pathway, so this is an "
+        "argument about the failure mode rather than a demonstration of "
+        "clinical impact."
     )
     b.p(
         "That failure is not a consequence of model size. A larger and more "
@@ -944,9 +1056,22 @@ def build() -> Path:
         "gold, matched the best smaller model on accuracy while asserting "
         "unsupported values on 97% of opportunities — the worst rate in the "
         "roster. Across all four generators the relationship between "
-        "abstention and unsupported assertion is monotone, which locates the "
-        "safety property in a model's willingness to decline rather than in "
-        "its capability."
+        "abstention and unsupported assertion was consistently ordered, which "
+        "locates the safety property in a model's willingness to decline "
+        "rather than in its capability — descriptively, across four models."
+    )
+    b.p(
+        "The reporting-layer failure was not primarily one of prohibited "
+        "content generation. The constraint design prevented diagnosis, "
+        "treatment recommendation, causal inference and prognostic claims in "
+        "all evaluated reports. The failure concerned instead the preservation "
+        "of abstention state: when upstream governance withheld an analysis, "
+        "the reporting model omitted the analysis without communicating that "
+        "it had been withheld. Safe downstream reporting therefore requires "
+        "preservation of both available evidence and unavailable evidence "
+        "states — a model can appear restrained, declining to invent the "
+        "withheld comparison, while still breaking the governance contract by "
+        "not reporting that anything was withheld."
     )
     b.p(
         "Third, multi-model selection contains real signal but cannot rescue "

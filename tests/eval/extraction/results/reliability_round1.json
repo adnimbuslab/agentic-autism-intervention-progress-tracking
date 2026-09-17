@@ -17,7 +17,15 @@
         "lower": 0.6974,
         "upper": 0.803,
         "n_valid": 10000,
-        "n_requested": 10000
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.7039,
+        "upper": 0.7896,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
       },
       "asymptotic_ci": {
         "se": 0.0273,
@@ -38,7 +46,15 @@
         "lower": 0.5172,
         "upper": 0.6242,
         "n_valid": 10000,
-        "n_requested": 10000
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.4343,
+        "upper": 0.696,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
       },
       "asymptotic_ci": {
         "se": 0.0279,
@@ -59,7 +75,15 @@
         "lower": 0.5161,
         "upper": 0.6674,
         "n_valid": 10000,
-        "n_requested": 10000
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.5186,
+        "upper": 0.6755,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
       },
       "asymptotic_ci": {
         "se": 0.0383,
@@ -80,7 +104,15 @@
         "lower": 0.4584,
         "upper": 0.5891,
         "n_valid": 10000,
-        "n_requested": 10000
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.4668,
+        "upper": 0.5771,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
       },
       "asymptotic_ci": {
         "se": 0.0336,

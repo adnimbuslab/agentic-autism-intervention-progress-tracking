@@ -183,19 +183,55 @@ class ReportingClient:
             validation_errors=validation_errors,
         )
 
+    # Schema the reporting model's output must conform to. Supplying it as a
+    # decoding constraint rather than an instruction is the difference between
+    # a usable report and prose: asked in the prompt alone, locally served
+    # models returned narrative summaries and every generation fell back to the
+    # deterministic template. Constrained, the same models produce conformant
+    # sections.
+    REPORT_SCHEMA: dict = {
+        "type": "object",
+        "properties": {
+            "sections": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "heading": {"type": "string"},
+                        "body": {"type": "string"},
+                        "evidence_refs": {
+                            "type": "array",
+                            "items": {"type": "string"},
+                        },
+                        "abstention_note": {"type": ["string", "null"]},
+                    },
+                    "required": ["heading", "body", "evidence_refs"],
+                },
+            }
+        },
+        "required": ["sections"],
+    }
+
     async def _call_llm(self, user_message: str) -> list[dict]:
         if self._provider == "ollama":
-            text = await self._call_llm_openai_compatible(user_message)
+            text = await self._call_llm_ollama_native(user_message)
         else:
             text = await self._call_llm_anthropic(user_message)
 
         try:
-            return json.loads(text)
+            parsed = json.loads(text)
         except json.JSONDecodeError:
             json_match = re.search(r"\[.*\]", text, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group())
-            raise
+            if not json_match:
+                raise
+            parsed = json.loads(json_match.group())
+
+        # The schema wraps the sections in an object; an unconstrained model
+        # may still return the bare array. Accept both rather than failing on
+        # the shape the constraint produces.
+        if isinstance(parsed, dict):
+            return parsed.get("sections") or []
+        return parsed
 
     async def _call_llm_anthropic(self, user_message: str) -> str:
         import anthropic
@@ -208,6 +244,40 @@ class ReportingClient:
             messages=[{"role": "user", "content": user_message}],
         )
         return response.content[0].text
+
+    async def _call_llm_ollama_native(self, user_message: str) -> str:
+        """Call Ollama's own /api/chat so the schema constraint is honoured.
+
+        Ollama's OpenAI-compatible /v1 endpoint silently drops `format`, as it
+        drops other native options, so the constraint has to go through the
+        native API. Falls back to the compatible endpoint if the native one is
+        unreachable, which keeps a non-Ollama OpenAI-compatible server working.
+        """
+        import httpx
+
+        base = self._base_url.rstrip("/")
+        native = base[: -len("/v1")] if base.endswith("/v1") else base
+        payload = {
+            "model": self._model,
+            "messages": [
+                {"role": "system", "content": REPORTING_SYSTEM_PROMPT},
+                {"role": "user", "content": user_message},
+            ],
+            "stream": False,
+            "format": self.REPORT_SCHEMA,
+            "options": {"num_ctx": settings.reporting_num_ctx},
+        }
+        try:
+            async with httpx.AsyncClient(timeout=settings.reporting_timeout_s) as client:
+                response = await client.post(f"{native}/api/chat", json=payload)
+                response.raise_for_status()
+                return (response.json().get("message") or {}).get("content") or ""
+        except Exception:
+            logger.warning(
+                "Ollama native endpoint unavailable; falling back to the "
+                "OpenAI-compatible endpoint, which cannot enforce the schema."
+            )
+            return await self._call_llm_openai_compatible(user_message)
 
     async def _call_llm_openai_compatible(self, user_message: str) -> str:
         import openai

@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import itertools
 import json
+import re
 import textwrap
 from collections import Counter
 from pathlib import Path
@@ -54,7 +55,21 @@ plt.rcParams.update({
 })
 
 
+# Figure numbers live in the manuscript caption, not in the image. An image
+# carrying "Figure 10" in its own title collides with whatever position it
+# occupies in the document, and the two drift apart the moment a figure is
+# added or moved -- which is exactly what happened. Titles are stripped of the
+# number here so the caption is the single source of numbering; the
+# descriptive part is kept so a standalone PNG still says what it shows.
+_FIGURE_PREFIX = re.compile(r"^Figure\s+[0-9A-Za-z]+\s*[—\-:]\s*")
+
+
+def strip_figure_number(title: str) -> str:
+    return _FIGURE_PREFIX.sub("", title)
+
+
 def _finish(ax, title: str, subtitle: str | None = None) -> None:
+    title = strip_figure_number(title)
     ax.set_title(title, loc="left", fontsize=11, fontweight="bold", pad=14 if subtitle else 8)
     if subtitle:
         ax.text(0, 1.02, subtitle, transform=ax.transAxes, fontsize=8, color=MUTED)
@@ -234,8 +249,12 @@ def figure_pipeline() -> None:
             bbox=dict(boxstyle="round,pad=0.5", facecolor="#f5f7fa", edgecolor=GRID))
     ax.set_xlim(0.2, 4.0)
     ax.set_ylim(0.2, len(steps) + 1.6)
-    ax.set_title("Figure 5 — MARS control flow: models propose and rank, code decides",
-                 loc="left", fontsize=11, fontweight="bold")
+    ax.set_title(
+        strip_figure_number(
+            "Figure 5 — MARS control flow: models propose and rank, code decides"
+        ),
+        loc="left", fontsize=11, fontweight="bold",
+    )
     fig.tight_layout()
     fig.savefig(OUT / "fig5_pipeline.png", bbox_inches="tight")
     plt.close(fig)
@@ -547,8 +566,9 @@ def figure_reliability() -> None:
     stats = [report["fields"][f] for f in fields]
     kappas = [s["kappa"] for s in stats]
     ceilings = [s["kappa_max"] for s in stats]
-    lower = [k - s["bootstrap_ci"]["lower"] for k, s in zip(kappas, stats)]
-    upper = [s["bootstrap_ci"]["upper"] - k for k, s in zip(kappas, stats)]
+    intervals = [s.get("cluster_bootstrap_ci") or s["bootstrap_ci"] for s in stats]
+    lower = [k - ci["lower"] for k, ci in zip(kappas, intervals)]
+    upper = [ci["upper"] - k for k, ci in zip(kappas, intervals)]
 
     fig, ax = plt.subplots(figsize=(7.2, 3.6))
     y = range(len(fields))
@@ -570,7 +590,7 @@ def figure_reliability() -> None:
     ax.set_yticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
     ax.invert_yaxis()
     ax.set_xlim(0, 1.0)
-    ax.set_xlabel("Cohen's $\\kappa$ (bars: point estimate; whiskers: 95% bootstrap CI)")
+    ax.set_xlabel("Cohen's $\\kappa$ (whiskers: 95% CI, children resampled)")
     _finish(
         ax,
         "Figure 10 — Round-1 reliability against the ceiling the marginals allow",
@@ -644,7 +664,10 @@ def figure_confusion() -> None:
         ax.grid(False)
 
     fig.suptitle(
-        "Figure 11 — Round-1 annotator confusion; amber cells are conflicts the codebook resolves",
+        strip_figure_number(
+            "Figure 11 — Round-1 annotator confusion; amber cells are conflicts "
+            "the codebook resolves"
+        ),
         x=0.012, ha="left", fontsize=11, fontweight="bold", y=1.04,
     )
     fig.tight_layout(w_pad=2.4)
@@ -762,7 +785,9 @@ def figure_round_comparison() -> None:
 
     # Right panel: the paired interval on each change, which is the estimand.
     for i, (field, entry) in enumerate(entries):
-        delta = entry["delta"]
+        # The reported interval resamples children, not segments: the 330
+        # segments come from 11 children and are not independent draws.
+        delta = entry.get("delta_clustered") or entry["delta"]
         if delta is None:
             continue
         treated = entry["arm"] == "treated"
@@ -774,7 +799,7 @@ def figure_round_comparison() -> None:
     ax2.set_yticks(range(len(entries)))
     ax2.set_yticklabels([])
     ax2.invert_yaxis()
-    ax2.set_xlabel("change in $\\kappa$ (95% paired bootstrap CI)")
+    ax2.set_xlabel("change in $\\kappa$ (95% CI, children resampled)")
     _finish(ax2, "", None)
     ax2.set_title("change, with interval", loc="left", fontsize=9, color=MUTED)
 
@@ -922,7 +947,9 @@ def figure_protocol() -> None:
     ax.set_xlim(0.1, 10.25)
     ax.set_ylim(0.2, 10.75)
     ax.set_title(
-        "Figure 14 — Two-round annotation protocol, with realised counts",
+        strip_figure_number(
+            "Figure 14 — Two-round annotation protocol, with realised counts"
+        ),
         loc="left", fontsize=11, fontweight="bold", pad=16,
     )
     fig.tight_layout()
@@ -1027,7 +1054,9 @@ def figure_codebook_rules() -> None:
              color=MUTED, va="bottom")
 
     fig.suptitle(
-        "Figure 15 — The three codebook rules, as the tests an annotator applies",
+        strip_figure_number(
+            "Figure 15 — The three codebook rules, as the tests an annotator applies"
+        ),
         x=0.012, ha="left", fontsize=11, fontweight="bold", y=1.03,
     )
     fig.savefig(OUT / "fig15_codebook_rules.png", bbox_inches="tight",
@@ -1413,7 +1442,10 @@ def figure_selection() -> None:
         ("vs_best_generator", RED, "vs best gen."),
     ):
         for field in fields:
-            entry = report["per_field"][field][key]
+            entry = (
+                report["per_field"][field].get(f"{key}_clustered")
+                or report["per_field"][field][key]
+            )
             lo, hi, d = (
                 100 * entry["lower"],
                 100 * entry["upper"],
@@ -1432,7 +1464,7 @@ def figure_selection() -> None:
     ax2.set_yticks(ticks)
     ax2.set_yticklabels(labels, fontsize=7.2)
     ax2.invert_yaxis()
-    ax2.set_xlabel("difference in accuracy (points, 95% paired CI)")
+    ax2.set_xlabel("difference in accuracy (points, 95% CI, children resampled)")
     _finish(ax2, "", None)
     ax2.set_title("solid = interval excludes zero", loc="left", fontsize=8.4,
                   color=MUTED)
@@ -1502,7 +1534,7 @@ def figure_extended_roster() -> None:
     ax2.set_ylim(0, 108)
     _finish(ax2, "", None)
     ax2.set_title(
-        "willingness to answer, not capability,\ngoverns unsupported assertion",
+        "lower abstention coincided with higher\nunsupported assertion (4 models)",
         loc="left", fontsize=8.6, color=MUTED,
     )
 

@@ -25,13 +25,29 @@
         "difference": -0.1271,
         "lower": -0.1972,
         "upper": -0.0634,
-        "excludes_zero": true
+        "excludes_zero": true,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": -0.1262,
+        "lower": -0.1793,
+        "upper": -0.0677,
+        "excludes_zero": true,
+        "unit": "child"
       },
       "vs_random_candidate": {
         "difference": 0.0781,
         "lower": -0.007,
         "upper": 0.162,
-        "excludes_zero": false
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.0761,
+        "lower": 0.0067,
+        "upper": 0.1494,
+        "excludes_zero": true,
+        "unit": "child"
       }
     },
     "modality": {
@@ -47,13 +63,29 @@
         "difference": -0.0282,
         "lower": -0.0845,
         "upper": 0.0282,
-        "excludes_zero": false
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": -0.0281,
+        "lower": -0.0752,
+        "upper": 0.0219,
+        "excludes_zero": false,
+        "unit": "child"
       },
       "vs_random_candidate": {
         "difference": 0.1903,
         "lower": 0.0986,
         "upper": 0.2817,
-        "excludes_zero": true
+        "excludes_zero": true,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.1866,
+        "lower": 0.0826,
+        "upper": 0.2715,
+        "excludes_zero": true,
+        "unit": "child"
       }
     },
     "prompt_level": {
@@ -69,13 +101,29 @@
         "difference": -0.0209,
         "lower": -0.0915,
         "upper": 0.0423,
-        "excludes_zero": false
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": -0.0213,
+        "lower": -0.0872,
+        "upper": 0.0455,
+        "excludes_zero": false,
+        "unit": "child"
       },
       "vs_random_candidate": {
         "difference": 0.1348,
         "lower": 0.0563,
         "upper": 0.2183,
-        "excludes_zero": true
+        "excludes_zero": true,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.1345,
+        "lower": 0.0839,
+        "upper": 0.1964,
+        "excludes_zero": true,
+        "unit": "child"
       }
     },
     "outcome": {
@@ -91,13 +139,29 @@
         "difference": 0.0212,
         "lower": -0.0282,
         "upper": 0.0704,
-        "excludes_zero": false
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": 0.0195,
+        "lower": -0.0394,
+        "upper": 0.0769,
+        "excludes_zero": false,
+        "unit": "child"
       },
       "vs_random_candidate": {
         "difference": 0.0569,
         "lower": -0.0141,
         "upper": 0.1268,
-        "excludes_zero": false
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.0537,
+        "lower": -0.0192,
+        "upper": 0.1118,
+        "excludes_zero": false,
+        "unit": "child"
       }
     }
   },
