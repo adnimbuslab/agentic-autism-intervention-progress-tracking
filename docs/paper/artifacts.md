@@ -99,6 +99,10 @@ uv run python docs/paper/verify_artifacts.py --record
 | `tests/eval/extraction/results/annotation_batch_augmented.json` | Frozen batch plus a generator added after annotation (qwen3:14b) | `add_generator` | 686,753 | `de0e6f66be4eb17e...` |
 | `tests/eval/extraction/results/scored_against_gold_augmented.json` | Four-generator judgements against the same gold | `score_against_gold --batch annotation_batch_augmented.json` | 279,917 | `19a60625f34824aa...` |
 | `tests/eval/extraction/results/holdout_set.json` | Model-independent held-out set: 132 segments, frozen before generation | `build_holdout_set` | 59,697 | `51960c8cc482879a...` |
+| `tests/eval/extraction/results/holdout_batch.json` | Four generators over the held-out set; membership frozen before any ran | `add_generator --out holdout_batch.json` | 277,471 | `2f4b41ed742f6e4e...` |
+| `tests/eval/extraction/results/gold_holdout_annotator_a.json` | Annotator A values over the held-out set, codebook from the first segment | `import_gold_sheet --segments holdout_set.json` | 73,723 | `aec54509e3a23214...` |
+| `tests/eval/extraction/results/gold_holdout_annotator_b.json` | Annotator B values over the held-out set, codebook from the first segment | `import_gold_sheet --segments holdout_set.json` | 71,153 | `b2ff833373565814...` |
+| `tests/eval/extraction/results/reliability_holdout.json` | Held-out first-pass reliability under the final protocol | `reliability_stats holdout_annotator_a holdout_annotator_b` | 3,019 | `a406bde1f02a64c6...` |
 | `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 14,085 | `13ba704145cf2f95...` |
 | `tests/eval/extraction/results/mars_selection_analysis.json` | Per-field selection quality vs both baselines (Tables 11-12) | `mars_selection_analysis` | 4,376 | `4a7cddcebde27c79...` |
 | `tests/eval/extraction/results/mars_branch_replay.json` | Candidate-stage branch distribution and judge-roster comparison | `mars_branch_replay` | 3,685 | `33466b195d7413d6...` |

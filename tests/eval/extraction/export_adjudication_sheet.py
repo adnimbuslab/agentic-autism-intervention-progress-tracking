@@ -161,6 +161,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("annotators", nargs=2)
     parser.add_argument("--out", type=Path, default=SHEET_PATH)
+    parser.add_argument(
+        "--segments",
+        type=Path,
+        default=None,
+        help="Where the transcripts come from. Defaults to the frozen "
+             "annotation batch; pass holdout_set.json to adjudicate a round "
+             "annotated over the held-out set.",
+    )
     args = parser.parse_args()
 
     loaded = []
@@ -171,12 +179,14 @@ def main() -> None:
         loaded.append(json.loads(path.read_text()))
     first, second = loaded
 
+    # Two artefact shapes hold transcripts: the batch keys them under
+    # "candidates", the held-out set under "segments".
+    source = args.segments or BATCH_PATH
     chat_texts: dict[str, str] = {}
-    if BATCH_PATH.exists():
-        chat_texts = {
-            e["segment_id"]: e["chat_text"]
-            for e in json.loads(BATCH_PATH.read_text())["candidates"]
-        }
+    if source.exists():
+        payload = json.loads(source.read_text())
+        entries = payload.get("candidates") or payload.get("segments") or []
+        chat_texts = {e["segment_id"]: e["chat_text"] for e in entries}
 
     segments = shared_segments(first, second)
     rows = conflict_rows(first, second, segments, chat_texts)

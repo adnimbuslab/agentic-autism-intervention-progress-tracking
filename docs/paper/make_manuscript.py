@@ -218,9 +218,10 @@ def build() -> Path:
         "definitional rather than a matter of annotator inconsistency, and was "
         "measurably repaired by a written codebook under a controlled design. "
         "The generators evaluated are not adequate for the extraction task, "
-        "and the failure is not attributable to model size: the largest model "
-        "tested had the highest unsupported-assertion rate despite accuracy "
-        "comparable to the strongest smaller model. Candidate selection "
+        "and increasing model size within the locally served models evaluated "
+        "did not resolve the extraction failure: the largest model tested "
+        "achieved accuracy comparable to the strongest smaller model while "
+        "producing the highest unsupported-assertion rate. Candidate selection "
         "cannot compensate for candidate quality."
     )
 
@@ -369,11 +370,33 @@ def build() -> Path:
         "cannot supply about itself, and it tests whether the codebook "
         "generalises beyond the disagreements it was written from."
     )
-    b.p(
-        "[PENDING] The held-out set is frozen; annotation and generator runs "
-        "over it are not complete, and no result from it is reported here.",
-        colour=RED,
-    )
+    hb = load(RESULTS / "holdout_batch.json") or {}
+    hr = load(RESULTS / "reliability_holdout.json")
+    gold_exists = (RESULTS / "gold_holdout_labels.json").exists()
+    if hb.get("candidates"):
+        total = len(hb["candidates"])
+        complete = [
+            m for m in hb.get("models", [])
+            if sum(1 for e in hb["candidates"] if m in e["candidates"]) == total
+        ]
+        partial = [m for m in hb.get("models", []) if m not in complete]
+        state = [
+            "annotation complete for both annotators"
+            if hr else "annotation not complete",
+            f"generator runs complete for {len(complete)} of "
+            f"{len(hb.get('models', []))} generators"
+            + (f" ({', '.join(partial)} in progress)" if partial else ""),
+            "reference standard adjudicated" if gold_exists
+            else "reference standard awaiting adjudication",
+        ]
+        b.p(
+            "State of the held-out round at the time of writing: "
+            + "; ".join(state)
+            + ". Reliability over it is reported below. Accuracy and "
+            "unsupported-assertion rates over it are not, because those "
+            "require the adjudicated reference standard.",
+            colour=None if gold_exists else RED,
+        )
     b.figure(
         "fig5_pipeline.png",
         "Figure D. MARS control flow: models propose and rank, deterministic "
@@ -598,6 +621,177 @@ def build() -> Path:
         "Figure 6. Reliability before and after the codebook, with the paired "
         "interval on each change. The control field is shown in grey.",
     )
+
+    hold = load(RESULTS / "reliability_holdout.json")
+    if hold:
+        b.h2("Held-out round: first-pass reliability")
+        b.p(
+            "The 132 held-out segments were annotated by the same two "
+            "annotators working from the final codebook from the first "
+            "segment, rather than reaching it after a round of disagreement. "
+            "Both returned complete sheets with no empty cells and no cell "
+            "errors."
+        )
+        b.table(
+            "Agreement across the three annotation rounds. The held-out round "
+            "is a first pass under the final protocol on segments never "
+            "selected for model tractability.",
+            ["Round", "Protocol", "n", "Mean kappa", "domain (untreated)"],
+            [
+                ["Round 1", "no codebook", "330", "0.610", "0.751"],
+                ["Merged", "after codebook re-annotation", "330", "0.801", "0.718"],
+                [
+                    "Held-out",
+                    "codebook from the first segment",
+                    str(hold["n_segments"]),
+                    f"{hold['mean_kappa']:.3f}",
+                    f"{hold['fields']['domain']['kappa']:.3f}",
+                ],
+            ],
+        )
+        b.table(
+            f"Held-out reliability by field (n = {hold['n_segments']} segments "
+            "from 11 children).",
+            ["Field", "kappa", "95% CI (children)", "kappa_max", "kappa / kappa_max"],
+            [
+                [
+                    f,
+                    f"{e['kappa']:.3f}",
+                    (
+                        f"[{e['cluster_bootstrap_ci']['lower']:.3f}, "
+                        f"{e['cluster_bootstrap_ci']['upper']:.3f}]"
+                        if e.get("cluster_bootstrap_ci") else "--"
+                    ),
+                    f"{e['kappa_max']:.3f}",
+                    f"{e['kappa_over_kappa_max']:.3f}",
+                ]
+                for f, e in hold["fields"].items()
+            ],
+        )
+        b.p(
+            "Mean kappa on the held-out round is 0.910, against 0.610 before "
+            "the codebook and 0.801 after re-annotation. Every field reaches "
+            "at least 0.879, and each sits above 0.91 of the ceiling its "
+            "marginals allow — the vocabulary mismatch that dominated round 1 "
+            "is absent."
+        )
+        b.p(
+            "This round has no internal control, and the figure should not be "
+            "read as a codebook effect alone. The untreated control field also "
+            "improved, from 0.751 in round 1 to 0.879 here, despite no "
+            "codebook rule addressing it. By the time these segments were "
+            "annotated the two annotators had worked through 508 segments and "
+            "two rounds of adjudication, and the held-out segments were not "
+            "filtered for generator tractability, so they may differ in "
+            "difficulty. Accumulated annotator experience, segment "
+            "composition, and the codebook are confounded here, and this "
+            "design cannot separate them."
+        )
+        b.p(
+            "The causal evidence for the codebook remains the round-2 "
+            "comparison, where the treated and untreated fields were annotated "
+            "in the same sitting by the same annotators and only the treated "
+            "fields moved. What the held-out round establishes is narrower and "
+            "still useful: the final protocol is workable from a cold start, "
+            "it yields first-pass agreement well above the level the original "
+            "instructions produced, and it supplies a reference standard for "
+            "segments whose membership was never conditioned on model "
+            "behaviour."
+        )
+
+    holdb = load(RESULTS / "holdout_batch.json")
+    # The augmented batch where available, so the later-added generator is
+    # included in the comparison rather than silently dropped.
+    mainb = load(RESULTS / "annotation_batch_augmented.json") or load(
+        RESULTS / "annotation_batch.json"
+    )
+    if holdb and mainb and holdb.get("models"):
+        shared = [m for m in holdb["models"] if m in mainb["models"]]
+        if shared:
+            def admitted(batch, model):
+                ents = batch["candidates"]
+                return sum(
+                    1 for e in ents
+                    if (e["candidates"].get(model) or {}).get("status")
+                    in ("success", "partial")
+                ) / len(ents)
+
+            def joint(batch, models):
+                ents = batch["candidates"]
+                n = sum(
+                    1 for e in ents
+                    if all(
+                        (e["candidates"].get(m) or {}).get("status")
+                        in ("success", "partial")
+                        for m in models
+                    )
+                )
+                return n, len(ents)
+
+            b.h2("How much the evaluation set was conditioned on model behaviour")
+            b.p(
+                "The held-out set makes the size of the selection effect "
+                "measurable directly, without any gold standard: the same "
+                "generators can be run on both sets and their admission rates "
+                "compared. The main batch retained only segments where all "
+                "three produced an admissible response; the held-out set "
+                "retained everything."
+            )
+            jm, tm = joint(mainb, shared)
+            jh, th = joint(holdb, shared)
+            b.table(
+                "Generator admission on the model-conditioned batch against "
+                "the unbiased held-out sample.",
+                ["Generator", "Admitted, batch", "Admitted, held-out", "Change"],
+                [
+                    *[
+                        [
+                            m,
+                            pct(admitted(mainb, m)),
+                            pct(admitted(holdb, m)),
+                            f"{100 * (admitted(holdb, m) - admitted(mainb, m)):+.1f}",
+                        ]
+                        for m in shared
+                    ],
+                    [
+                        f"All {len(shared)} jointly admissible",
+                        f"{jm}/{tm} ({pct(jm / tm)})",
+                        f"{jh}/{th} ({pct(jh / th)})",
+                        f"{100 * (jh / th - jm / tm):+.1f}",
+                    ],
+                ],
+            )
+            b.p(
+                f"All {len(shared)} generators are jointly admissible on "
+                f"{pct(jm / tm)} of the batch and {pct(jh / th)} of the "
+                "held-out sample — roughly a fivefold difference, and a direct "
+                "measure of how much easier the evaluated segments were. The "
+                "effect is concentrated in the weaker models, which lose 8 to "
+                "14 points, while the two larger ones are essentially "
+                "unchanged."
+            )
+            b.p(
+                "That stability is not the reassurance it appears to be. "
+                "Admission measures whether a model returned something, not "
+                "whether what it returned was supported, so a model that "
+                "rarely declines is insensitive to segment difficulty by "
+                "construction. The largest generator admits 98.5% of both sets "
+                "— identical to the first decimal — and is the same model that "
+                "asserts values on 97% of the occasions where the gold "
+                "standard records that the transcript supports none. "
+                "Robustness on this measure and willingness to answer are not "
+                "separable, and the apparently more robust model is the less "
+                "safe one."
+            )
+            b.p(
+                "This does not invalidate the batch results, which are "
+                "correctly described as accuracy on segments every model could "
+                "attempt. It does bound how far they generalise, and it is the "
+                "reason the held-out sample exists. Accuracy and "
+                "unsupported-assertion rates over it are pending adjudication "
+                "of the held-out reference standard.",
+                colour=RED,
+            )
 
     b.h2("Gold standard")
     b.p(
@@ -1051,14 +1245,17 @@ def build() -> Path:
         "clinical impact."
     )
     b.p(
-        "That failure is not a consequence of model size. A larger and more "
-        "recent generator, added after annotation and scored against the same "
-        "gold, matched the best smaller model on accuracy while asserting "
-        "unsupported values on 97% of opportunities — the worst rate in the "
-        "roster. Across all four generators the relationship between "
-        "abstention and unsupported assertion was consistently ordered, which "
-        "locates the safety property in a model's willingness to decline "
-        "rather than in its capability — descriptively, across four models."
+        "Increasing model size within the locally served models evaluated did "
+        "not resolve this failure. A larger and more recent generator, added "
+        "after annotation and scored against the same gold, matched the best "
+        "smaller model on accuracy while asserting unsupported values on 97% "
+        "of opportunities — the highest rate in the roster. Across the four "
+        "generators the relationship between abstention and unsupported "
+        "assertion was consistently ordered, which locates the safety property "
+        "in a model's willingness to decline rather than in its capability. "
+        "With four models, all locally served and none at frontier scale, this "
+        "is a descriptive observation about the roster evaluated rather than a "
+        "general claim about model size."
     )
     b.p(
         "The reporting-layer failure was not primarily one of prohibited "
@@ -1099,11 +1296,19 @@ def build() -> Path:
         colour=RED,
     )
     b.p(
-        "Two specific claims in this manuscript require citation rather than "
-        "assertion: that maximum attainable kappa under fixed marginals is an "
-        "established diagnostic rather than a contribution of this work, and "
-        "that the Fleiss-Cohen-Everitt large-sample variance is the standard "
-        "asymptotic estimator used here as a cross-check.",
+        "Fourteen specific claims require citation rather than assertion, "
+        "enumerated with the kind of source each needs in "
+        "`docs/paper/prior_work_specification.md`. Eight are established "
+        "methods the paper must not appear to claim — maximum attainable kappa "
+        "under fixed marginals, the Fleiss-Cohen-Everitt variance, the "
+        "interpretive bands, the cluster bootstrap, the exact McNemar test, "
+        "the agreement-reporting guideline, and both corpora. Six are "
+        "positioning claims where the section must establish what is new: "
+        "controlled evaluation of a codebook revision, explicit null "
+        "annotation as a way to make unsupported assertion measurable, "
+        "abstention as a hazard rather than a cost, negative results in "
+        "multi-model selection, governance around generative components, and "
+        "schema-constrained decoding.",
         colour=RED,
     )
 
@@ -1132,13 +1337,15 @@ def build() -> Path:
     b.h1("Limitations")
     b.bullets(
         [
-            "Evaluation-set membership is conditioned on model output. The "
-            "batch retained only segments where all three generators produced "
-            "an admissible response, so reported accuracy, unsupported-"
-            "assertion rates and the oracle ceiling all describe segments the "
-            "models could attempt. A model-independent held-out set has been "
-            "frozen to address this but is not yet annotated, so the "
-            "generalisation is currently assumed rather than demonstrated.",
+            "Evaluation-set membership is conditioned on model output, and "
+            "the effect is large. The batch retained only segments where all "
+            "three generators produced an admissible response; on the "
+            "model-independent held-out sample all three are jointly "
+            "admissible on 2.3% of segments against 12.4% of the batch. "
+            "Reported accuracy, unsupported-assertion rates and the oracle "
+            "ceiling therefore describe segments the models could attempt, and "
+            "the corresponding figures on an unselected sample are pending "
+            "adjudication of the held-out reference standard.",
             "Two annotators, one pair, one corpus. Cohen's kappa describes this "
             "pair, and the codebook rules were written after observing where "
             "this pair diverged.",
@@ -1180,10 +1387,13 @@ def build() -> Path:
         "quantity is unavailable rather than producing a number."
     )
     extra = [
-        "Extraction accuracy on a sample not conditioned on model output: the "
-        "held-out set is frozen (132 segments) but not yet annotated.",
-        "Whether the codebook generalises to annotators using it from the "
-        "start, rather than reaching it after a disagreement round.",
+        "Extraction accuracy and unsupported-assertion rates on the "
+        "model-independent held-out sample: both annotators have completed it "
+        "and generator runs are recorded, but the reference standard awaits "
+        "adjudication of 133 conflicting fields.",
+        "Whether the codebook, rather than accumulated annotator experience, "
+        "accounts for the first-pass agreement observed on the held-out round "
+        "-- that round has no untreated control.",
         "A frontier-scale generator: the four models evaluated are all "
         "locally served.",
     ]

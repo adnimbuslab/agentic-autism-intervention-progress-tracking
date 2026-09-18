@@ -235,6 +235,42 @@
       "sha256": "51960c8cc482879ae0d4e2d5cc9b88b131ca0701c72791cff4d0ade0a257d968"
     },
     {
+      "path": "tests/eval/extraction/results/holdout_batch.json",
+      "description": "Four generators over the held-out set; membership frozen before any ran",
+      "produced_by": "add_generator --out holdout_batch.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 277471,
+      "sha256": "2f4b41ed742f6e4eefc35862c5b0d99a8595e625732c29559efff4c46041a8bc"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_holdout_annotator_a.json",
+      "description": "Annotator A values over the held-out set, codebook from the first segment",
+      "produced_by": "import_gold_sheet --segments holdout_set.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 73723,
+      "sha256": "aec54509e3a23214c555ab0d9f8b841017d0ed3702d1cbc415bc89ccc6d15e7a"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_holdout_annotator_b.json",
+      "description": "Annotator B values over the held-out set, codebook from the first segment",
+      "produced_by": "import_gold_sheet --segments holdout_set.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 71153,
+      "sha256": "b2ff833373565814d940fb961d2e691b416a5596102f1556a59dc2e7a96c8d6a"
+    },
+    {
+      "path": "tests/eval/extraction/results/reliability_holdout.json",
+      "description": "Held-out first-pass reliability under the final protocol",
+      "produced_by": "reliability_stats holdout_annotator_a holdout_annotator_b",
+      "pinned": true,
+      "present": true,
+      "bytes": 3019,
+      "sha256": "a406bde1f02a64c6d68b27c23c3fd8258ebc841d2d6ef3c6050a9e26a9903597"
+    },
+    {
       "path": "tests/eval/extraction/results/paper_metrics.json",
       "description": "Consolidated paper-ready metrics, derived from the artefacts above",
       "produced_by": "paper_metrics",
@@ -403,7 +439,7 @@
       "produced_by": "make_manuscript",
       "pinned": false,
       "present": true,
-      "bytes": 1550492
+      "bytes": 1552692
     }
   ]
 }
