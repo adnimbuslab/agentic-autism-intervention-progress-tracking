@@ -149,3 +149,55 @@ class TestSubmissionGate:
 
     def test_the_draft_declares_itself_not_submission_ready(self, prose) -> None:
         assert "NOT SUBMISSION READY" in prose
+
+
+class TestDeploymentScope:
+    """MARS must not be describable as part of the running application.
+
+    The application wires a single extraction provider and the reranking
+    provider is not reachable from its factory. A manuscript that reads as
+    though reranking runs in the request path misrepresents the system, and
+    this is the correction a reviewer flagged as the most serious one.
+    """
+
+    @staticmethod
+    def _deployed_provider() -> str:
+        from src.backend.config import settings
+
+        return str(settings.extraction_provider_kwargs.get("model", ""))
+
+    def test_the_application_still_uses_a_single_provider(self) -> None:
+        # If this ever becomes a multi-generator roster, the prose below has
+        # to change too -- so fail loudly rather than let the two drift.
+        from src.backend.config import settings
+
+        kwargs = settings.extraction_provider_kwargs
+        assert "model" in kwargs, kwargs
+        assert isinstance(kwargs["model"], str), "expected one model, not a roster"
+
+    def test_reranking_is_not_reachable_from_the_provider_factory(self) -> None:
+        import src.backend.ml.extraction as extraction
+
+        source = Path(extraction.__file__).read_text()
+        assert "mars" not in source.lower(), (
+            "the factory now exposes reranking; the manuscript's scope "
+            "statement must be revisited"
+        )
+
+    def test_the_manuscript_states_the_offline_scope(self, prose) -> None:
+        assert "evaluated offline" in prose
+        assert "not part of the running application" in prose
+
+    def test_the_manuscript_names_the_deployed_provider(self, prose) -> None:
+        assert self._deployed_provider() in prose
+
+    def test_no_present_tense_deployment_phrasing(self, prose) -> None:
+        # "MARS selects/returns/runs" reads as live behaviour; results are
+        # reported in the past tense.
+        assert not re.search(r"MARS (selects|returns|runs) ", prose)
+
+    def test_limitations_records_the_scope_boundary(self, prose) -> None:
+        assert "offline experiment, not a deployed component" in prose
+
+    def test_no_four_generator_reranking_is_claimed(self, prose) -> None:
+        assert "no four-generator reranking run has been performed" in prose

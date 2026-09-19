@@ -206,9 +206,15 @@ the annotation measures.
 
 ### MARS candidate stage
 
-MARS runs end-to-end against live judges, with generators **replayed** from
-the frozen batch so it selects from exactly the candidates the annotators saw.
-Results are in *MARS over the full batch* below.
+MARS is an **offline evaluation method**, not a deployed component, and is not
+intended to become one. It runs over the recorded generator outputs in the
+frozen batch, with live judge models, to establish what candidate selection
+could contribute given a roster. The deployed configuration uses a single
+extraction provider (`llama3.2:latest`) and the reranking provider is not
+reachable from the application's provider factory. Generators are **replayed** from the frozen
+batch, so the experiment selected from exactly the candidates the annotators
+saw. Results are in *MARS over the full batch* below, and describe an
+experiment rather than deployed system behaviour.
 
 `mars_evaluation` refuses to report below 95% outcome coverage unless
 `--allow-partial` is passed. That guard exists because an earlier 3-segment

@@ -319,9 +319,12 @@ def build() -> Path:
         "run consumed 506.",
     )
     b.p(
-        "The batch is frozen at this point and is not regenerated. Generators "
-        "are replayed from it wherever they are needed downstream, so MARS "
-        "selects from exactly the candidates the annotators saw."
+        "The batch is frozen at this point and is not regenerated. Generator "
+        "outputs are replayed from it wherever they are needed downstream, so "
+        "the reranking evaluation selected from exactly the candidates the "
+        "annotators saw. Reranking is an offline evaluation method applied to "
+        "these recorded outputs, not a stage in the application's request "
+        "path."
     )
     b.p(
         "Stage 3 conditions membership on model behaviour, and this is the "
@@ -400,7 +403,9 @@ def build() -> Path:
     b.figure(
         "fig5_pipeline.png",
         "Figure D. MARS control flow: models propose and rank, deterministic "
-        "code decides, and each abstention carries a typed reason code.",
+        "code decides, and each abstention carries a typed reason code. This "
+        "is the offline evaluation pipeline, not the application's request "
+        "path.",
         width=5.4,
     )
 
@@ -1026,6 +1031,18 @@ def build() -> Path:
     b.h2("Multi-judge reranking (MARS)")
     cfg = mars["config"]
     b.p(
+        "MARS is an evaluation method, not a deployed component. It runs "
+        "offline over recorded generator outputs and is not intended for the "
+        "application's request path; the deployed configuration uses a single "
+        "extraction provider and the reranking provider is not reachable from "
+        "the application's provider factory. Its purpose here is to establish "
+        "what candidate selection could contribute given a set of generators, "
+        "which is a question about the generators rather than a feature of the "
+        "system. Every MARS figure reported below therefore describes an "
+        "offline experiment, and none describes system behaviour in use.",
+        italic=True,
+    )
+    b.p(
         f"Judges: {', '.join(cfg['judges'])}. Agreement threshold "
         f"{cfg['agreement_threshold']}, minimum eligible judges "
         f"{cfg['min_eligible_judges']}. Judge eligibility removes any model "
@@ -1107,11 +1124,11 @@ def build() -> Path:
         ],
     )
     b.p(
-        "Two findings point in opposite directions. Reranking carries real "
-        "signal: MARS selects better than a random candidate on every field, "
-        "significantly so on modality and prompt_level. It does not beat the "
+        "Two findings point in opposite directions. Reranking carried real "
+        "signal: MARS selected better than a random candidate on every field, "
+        "significantly so on modality and prompt_level. It did not beat the "
         "simplest informed policy: against always using the strongest "
-        "generator it is 3.9 points worse on average and significantly worse "
+        "generator it was 3.9 points worse on average and significantly worse "
         "on domain."
     )
     b.p(
@@ -1359,6 +1376,13 @@ def build() -> Path:
             "Round 2 is a within-annotator repeat under instruction, not an "
             "independent replication. What two fresh annotators working under "
             "the codebook would achieve was not measured.",
+            "Reranking is an offline evaluation method, not a deployed "
+            "component, and is not intended to become one. It runs over "
+            "recorded generator outputs to establish what candidate selection "
+            "could contribute given a roster; the running application uses a "
+            "single extraction provider. No claim about system behaviour in "
+            "use follows from the MARS results, and no four-generator "
+            "reranking run has been performed at all.",
             "The generator roster is four local models. Adding a larger, "
             "more recent one did not improve accuracy, which weakens but "
             "does not eliminate the objection that a frontier model might. "

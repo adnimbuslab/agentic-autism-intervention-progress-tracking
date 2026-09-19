@@ -319,7 +319,7 @@
       "produced_by": "written",
       "pinned": false,
       "present": true,
-      "bytes": 31718
+      "bytes": 32096
     },
     {
       "path": "docs/paper/reliability_mathematics.md",
@@ -439,7 +439,7 @@
       "produced_by": "make_manuscript",
       "pinned": false,
       "present": true,
-      "bytes": 1552692
+      "bytes": 1553077
     }
   ]
 }

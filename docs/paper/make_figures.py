@@ -1543,6 +1543,127 @@ def figure_extended_roster() -> None:
     plt.close(fig)
 
 
+def figure_architecture() -> None:
+    """Figure 23 -- where MARS sits: the same contract, a different path.
+
+    Two bands. The upper one is the live request path, which runs a single
+    extraction provider. The lower one is the offline evaluation path, where
+    MARS composes several providers over recorded outputs. They are drawn as
+    separate flows joined only at the contract, because that is the actual
+    relationship -- drawing MARS inside the live path would misstate the
+    system.
+    """
+    fig, ax = plt.subplots(figsize=(12.4, 7.0))
+    ax.axis("off")
+
+    def box(x, y, w, h, text, face, *, fg="white", size=8.0, edge=None, dashed=False):
+        ax.add_patch(plt.Rectangle(
+            (x, y), w, h, facecolor=face, edgecolor=edge or face,
+            linewidth=1.6, zorder=3, linestyle="--" if dashed else "solid",
+        ))
+        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center",
+                fontsize=size, color=fg, zorder=4, linespacing=1.45)
+
+    def arrow(x1, y1, x2, y2, colour=MUTED, dashed=False, head=True):
+        ax.annotate("", xy=(x2, y2), xytext=(x1, y1), zorder=2,
+                    arrowprops=dict(
+                        arrowstyle="-|>" if head else "-", color=colour,
+                        linewidth=1.3,
+                        linestyle=(0, (4, 3)) if dashed else "solid",
+                    ))
+
+    # ---------------- live path ----------------
+    ax.text(0.2, 9.55, "LIVE REQUEST PATH", fontsize=9.5, fontweight="bold",
+            color=INK)
+    ax.text(0.2, 9.22, "one extraction provider; this is what the application runs",
+            fontsize=7.8, color=MUTED)
+
+    live = [
+        (0.2, "Contributor UI\nconversational observation", TEAL),
+        (2.35, "Observation\nOrchestrator", BLUE),
+        (4.5, "ExtractionProvider\nllama3.2:latest", AMBER),
+        (6.75, "Deterministic\nValidation Engine", BLUE),
+        (9.0, "Adequacy Router\n→ Analytics", BLUE),
+        (11.15, "Reporting LLM\n+ governance check", BLUE),
+    ]
+    for x, label, colour in live:
+        box(x, 8.15, 1.95, 0.85, label, colour)
+    for i in range(len(live) - 1):
+        arrow(live[i][0] + 1.95, 8.575, live[i + 1][0], 8.575)
+
+    box(11.15, 6.85, 1.95, 0.75, "Interventionist\nDashboard", TEAL)
+    arrow(12.125, 8.15, 12.125, 7.6)
+
+    ax.text(5.475, 7.88, "the swappable seam", fontsize=7.4, color=AMBER,
+            ha="center", style="italic")
+
+    # ---------------- the contract ----------------
+    box(2.95, 5.4, 5.4, 1.15,
+        "ExtractionProvider contract\n"
+        "async extract(ExtractionRequest) \u2192 ExtractionResult\n"
+        "status \u00b7 observations \u00b7 control_confidence\n"
+        "reason_code \u00b7 provenance",
+        INK, size=7.2)
+    # Both dashed ends must land on a box: the pair is the figure's claim.
+    arrow(5.475, 8.15, 5.475, 6.55, colour=AMBER, dashed=True)
+    arrow(5.65, 5.4, 5.65, 3.3, colour=RED, dashed=True)
+    ax.text(8.65, 5.97, "both paths satisfy this identical contract,\n"
+                        "so validation, abstention, analytics and\n"
+                        "reporting are unchanged by which is used",
+            fontsize=7.4, color=MUTED, va="center")
+
+    # ---------------- offline path ----------------
+    ax.text(0.2, 4.15, "OFFLINE EVALUATION PATH", fontsize=9.5,
+            fontweight="bold", color=INK)
+    ax.text(0.2, 3.82, "MARS composes several providers over recorded outputs; "
+                       "it never serves a request",
+            fontsize=7.8, color=MUTED)
+
+    box(0.2, 2.35, 2.5, 0.95,
+        "Frozen batch\n330 segments\nrecorded generator outputs", MUTED, size=7.6)
+
+    box(3.1, 1.15, 5.1, 2.15, "", "#f5f7fa", edge=RED, dashed=True, fg=INK)
+    ax.text(5.65, 3.08, "MarsExtractionProvider  (offline only)", fontsize=8.4,
+            fontweight="bold", color=RED, ha="center")
+    inner = [
+        (3.32, "replayed\ngenerators ×N", TEAL),
+        (4.97, "blinded judges ×K\nrank candidates", AMBER),
+        (6.62, "RRF fusion\nagreement gate\nintegrity check", BLUE),
+    ]
+    for x, label, colour in inner:
+        box(x, 1.45, 1.44, 1.35, label, colour, size=7.2)
+    for i in range(len(inner) - 1):
+        arrow(inner[i][0] + 1.44, 2.125, inner[i + 1][0], 2.125)
+    arrow(2.7, 2.825, 3.32, 2.4)
+
+    box(8.6, 2.35, 2.2, 0.95, "ExtractionResult\nor typed abstention", INK, size=7.6)
+    arrow(8.2, 2.125, 8.6, 2.6)
+
+    box(11.2, 2.35, 1.9, 0.95, "scored against\nadjudicated gold\n330 segments",
+        TEAL, size=7.4)
+    arrow(10.8, 2.825, 11.2, 2.825)
+
+    ax.text(0.2, 0.42,
+            "MARS answers: given these generators, how much of the remaining "
+            "headroom can candidate selection recover?  That is a question "
+            "about the generators,\nnot a feature of the system — which is why "
+            "it runs offline and why its results are reported as an experiment.",
+            fontsize=7.8, color=MUTED, va="bottom")
+
+    ax.set_xlim(0, 13.4)
+    ax.set_ylim(0.1, 10.0)
+    ax.set_title(
+        strip_figure_number(
+            "Figure 23 — Where MARS sits: the same contract, a different path"
+        ),
+        loc="left", fontsize=11.5, fontweight="bold", pad=14,
+    )
+    fig.tight_layout()
+    fig.savefig(OUT / "fig23_architecture_mars.png", bbox_inches="tight",
+                pad_inches=0.3)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     figure_corpus()
     figure_admission()
@@ -1566,6 +1687,7 @@ if __name__ == "__main__":
     figure_mars_outcomes()
     figure_selection()
     figure_extended_roster()
+    figure_architecture()
     print(f"Wrote {len(list(OUT.glob('*.png')))} figures to {OUT}")
     for f in sorted(OUT.glob("*.png")):
         print(f"  {f.name}")
