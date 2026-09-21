@@ -24,16 +24,25 @@ async generate_report(evidence_packet: EvidencePacket) -> GeneratedReportData
 
 `GeneratedReportData`: sections, `provider`, `model`, `prompt_version`, `validation_passed`, `validation_errors`.
 
-Config: `settings.reporting_model = "claude-sonnet-4-20250514"`, `settings.reporting_prompt_version = "1.0"`.
+Config: `settings.reporting_mode = "deterministic"`, `settings.reporting_model = "claude-sonnet-4-20250514"`, `settings.reporting_prompt_version = "1.0"`.
+
+## Reporting Modes
+
+`settings.reporting_mode` selects the path:
+
+- **`"deterministic"` (default, operational).** Sections are rendered in code from the `EvidencePacket` by `_build_deterministic_sections()`. No language model is called. Provenance is `provider="deterministic"`, `model="deterministic_reporter_v1"`, `prompt_version="N/A"`, and `is_experimental=False`.
+- **`"generative_experimental"` (opt-in).** The reporting LLM is called. Its output is returned with `is_experimental=True` and must be labelled as experimental wherever it is shown.
+
+The generative layer is not the operational path because it failed its own governance contract in evaluation: across 11 reports it produced no prohibited content but never acknowledged that the adequacy router had withheld an analysis, so `validate_report()` rejected all 11. Do not change the default until that check passes.
 
 ## Generation Flow
 
-1. Call Claude with `REPORTING_SYSTEM_PROMPT` plus the JSON-dumped `EvidencePacket` as the user message.
-2. Parse the response as a JSON array of sections.
-3. **On any exception during the LLM call**, fall back to `_build_fallback_sections()` — a fully deterministic, template-based section builder that reconstructs the required sections (`Review Period Summary`, `Evidence Coverage`, `Evidence Limitations`, plus conditional `Key Indicators` / `Observed Patterns` / `Progress Indicators` / cross-setting sections) directly from `EvidencePacket` fields and KPIs, with no LLM involvement at all. In this path, `provider="deterministic_fallback"`, `model="deterministic_fallback_v1"`, `prompt_version="N/A"`.
+1. In `"deterministic"` mode, build the sections from the `EvidencePacket` and skip step 2 entirely.
+2. In `"generative_experimental"` mode, call the configured model with `REPORTING_SYSTEM_PROMPT` plus the JSON-dumped `EvidencePacket` as the user message, and parse the response as JSON sections.
+3. **On any exception during the LLM call**, fall back to `_build_deterministic_sections()` — a fully deterministic, template-based section builder that reconstructs the required sections (`Review Period Summary`, `Evidence Coverage`, `Evidence Limitations`, plus conditional `Key Indicators` / `Observed Patterns` / `Progress Indicators` / cross-setting sections) directly from `EvidencePacket` fields and KPIs, with no LLM involvement at all. The result then carries the deterministic provenance above and `is_experimental=False`, because the prose is in fact deterministic.
 4. **Regardless of which path produced the sections**, `validate_report()` always runs against them before the result is returned.
 
-The fallback path is a real safety mechanism, not incidental error handling: it guarantees a report is always producible from already-validated deterministic data even if the LLM call fails entirely.
+The deterministic builder is both the operational reporter and the failure path for the experimental one: it guarantees a governed report is always producible from already-validated deterministic data, whether or not a model is involved.
 
 ## Post-Hoc Validation (`validate_report`)
 

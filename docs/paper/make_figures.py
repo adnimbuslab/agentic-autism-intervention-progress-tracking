@@ -1575,26 +1575,39 @@ def figure_architecture() -> None:
     # ---------------- live path ----------------
     ax.text(0.2, 9.55, "LIVE REQUEST PATH", fontsize=9.5, fontweight="bold",
             color=INK)
-    ax.text(0.2, 9.22, "one extraction provider; this is what the application runs",
+    ax.text(0.2, 9.22, "one extraction provider; this is what the application runs — "
+                       "and no extracted record reaches analytics unreviewed",
             fontsize=7.8, color=MUTED)
 
+    # Seven stages, not six: the verification gate is drawn because it is
+    # load-bearing. Deterministic validation establishes conformance, not
+    # truth, so a validated record is not yet admissible -- an interventionist
+    # has to accept or rewrite it before analytics will read it.
     live = [
-        (0.2, "Contributor UI\nconversational observation", TEAL),
-        (2.35, "Observation\nOrchestrator", BLUE),
-        (4.5, "ExtractionProvider\nllama3.2:latest", AMBER),
-        (6.75, "Deterministic\nValidation Engine", BLUE),
-        (9.0, "Adequacy Router\n→ Analytics", BLUE),
-        (11.15, "Reporting LLM\n+ governance check", BLUE),
+        (0.20, "Contributor UI\nconversational observation", TEAL, False),
+        (2.10, "Observation\nOrchestrator", BLUE, False),
+        (4.00, "ExtractionProvider\nllama3.2:latest", AMBER, False),
+        (5.90, "Deterministic\nValidation Engine", BLUE, False),
+        (7.80, "Adequacy Router\n+ typed abstention", BLUE, False),
+        (9.70, "Interventionist\nverify / correct", TEAL, True),
+        (11.60, "Analytics Engine\n+ Reporting LLM", BLUE, False),
     ]
-    for x, label, colour in live:
-        box(x, 8.15, 1.95, 0.85, label, colour)
+    for x, label, colour, gate in live:
+        box(x, 8.15, 1.72, 0.85, label, colour,
+            edge=RED if gate else None)
     for i in range(len(live) - 1):
-        arrow(live[i][0] + 1.95, 8.575, live[i + 1][0], 8.575)
+        arrow(live[i][0] + 1.72, 8.575, live[i + 1][0], 8.575)
 
-    box(11.15, 6.85, 1.95, 0.75, "Interventionist\nDashboard", TEAL)
-    arrow(12.125, 8.15, 12.125, 7.6)
+    ax.text(10.56, 7.98, "human gate", fontsize=7.2, color=RED,
+            ha="center", style="italic")
+    ax.text(10.56, 7.66,
+            "only verified or corrected records\nare admitted to analytics",
+            fontsize=6.9, color=MUTED, ha="center", va="top", linespacing=1.35)
 
-    ax.text(5.475, 7.88, "the swappable seam", fontsize=7.4, color=AMBER,
+    box(11.60, 6.60, 1.72, 0.75, "Interventionist\nDashboard", TEAL)
+    arrow(12.46, 8.15, 12.46, 7.35)
+
+    ax.text(4.86, 7.88, "the swappable seam", fontsize=7.4, color=AMBER,
             ha="center", style="italic")
 
     # ---------------- the contract ----------------
@@ -1605,7 +1618,7 @@ def figure_architecture() -> None:
         "reason_code \u00b7 provenance",
         INK, size=7.2)
     # Both dashed ends must land on a box: the pair is the figure's claim.
-    arrow(5.475, 8.15, 5.475, 6.55, colour=AMBER, dashed=True)
+    arrow(4.86, 8.15, 4.86, 6.55, colour=AMBER, dashed=True)
     arrow(5.65, 5.4, 5.65, 3.3, colour=RED, dashed=True)
     ax.text(8.65, 5.97, "both paths satisfy this identical contract,\n"
                         "so validation, abstention, analytics and\n"

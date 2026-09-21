@@ -134,7 +134,9 @@ class ReportingClient:
         model: str | None = None,
         provider: str | None = None,
         base_url: str | None = None,
+        mode: str | None = None,
     ):
+        self._mode = mode or settings.reporting_mode
         self._provider = provider or settings.reporting_provider
         if self._provider == "ollama":
             self._api_key = api_key or settings.ollama_api_key
@@ -146,30 +148,45 @@ class ReportingClient:
             self._base_url = base_url
 
     # @spec REPORT-001, REPORT-010, REPORT-011, REPORT-012
+    #
+    # Two modes. "deterministic" is operational: the sections are rendered
+    # from the evidence packet in code, so every number in them is a number
+    # the analytics engine computed and every withheld analysis is named.
+    # "generative_experimental" calls the reporting LLM; in evaluation that
+    # layer produced no prohibited content but failed the governance contract
+    # on all 11 reports by omitting that an analysis had been withheld, so its
+    # output is returned marked experimental and falls back to the
+    # deterministic reporter if the call fails.
     async def generate_report(
         self, evidence_packet: EvidencePacket
     ) -> GeneratedReportData:
-        user_message = json.dumps(evidence_packet.model_dump(mode="json"), indent=2)
-
-        used_fallback = False
-        try:
-            sections = await self._call_llm(user_message)
-        except Exception:
-            logger.exception("Report generation LLM call failed, using deterministic fallback")
-            sections = self._build_fallback_sections(evidence_packet)
-            used_fallback = True
+        used_llm = False
+        if self._mode == "generative_experimental":
+            user_message = json.dumps(
+                evidence_packet.model_dump(mode="json"), indent=2
+            )
+            try:
+                sections = await self._call_llm(user_message)
+                used_llm = True
+            except Exception:
+                logger.exception(
+                    "Report generation LLM call failed, using deterministic reporter"
+                )
+                sections = self._build_deterministic_sections(evidence_packet)
+        else:
+            sections = self._build_deterministic_sections(evidence_packet)
 
         parsed_sections = self._parse_sections(sections)
         validation_errors = validate_report(parsed_sections, evidence_packet)
 
-        if used_fallback:
-            provider = "deterministic_fallback"
-            model = "deterministic_fallback_v1"
-            prompt_version = "N/A"
-        else:
+        if used_llm:
             provider = self._provider
             model = self._model
             prompt_version = settings.reporting_prompt_version
+        else:
+            provider = "deterministic"
+            model = "deterministic_reporter_v1"
+            prompt_version = "N/A"
 
         return GeneratedReportData(
             child_id=evidence_packet.child_id,
@@ -181,6 +198,7 @@ class ReportingClient:
             prompt_version=prompt_version,
             validation_passed=len(validation_errors) == 0,
             validation_errors=validation_errors,
+            is_experimental=used_llm,
         )
 
     # Schema the reporting model's output must conform to. Supplying it as a
@@ -305,33 +323,33 @@ class ReportingClient:
             )
         return sections
 
-    def _build_fallback_sections(
+    def _build_deterministic_sections(
         self, evidence_packet: EvidencePacket
     ) -> list[dict]:
         ep = evidence_packet
         kpis = self._kpi_lookup(ep)
         sections: list[dict] = []
 
-        sections.append(self._fallback_summary(ep))
-        sections.append(self._fallback_coverage(ep, kpis))
+        sections.append(self._deterministic_summary(ep))
+        sections.append(self._deterministic_coverage(ep, kpis))
 
-        key_indicators = self._fallback_key_indicators(kpis)
+        key_indicators = self._deterministic_key_indicators(kpis)
         if key_indicators:
             sections.append(key_indicators)
 
-        patterns = self._fallback_patterns(kpis)
+        patterns = self._deterministic_patterns(kpis)
         if patterns:
             sections.append(patterns)
 
-        progress = self._fallback_progress(kpis)
+        progress = self._deterministic_progress(kpis)
         if progress:
             sections.append(progress)
 
-        cross = self._fallback_cross_observations(kpis)
+        cross = self._deterministic_cross_observations(kpis)
         if cross:
             sections.append(cross)
 
-        sections.append(self._fallback_limitations(ep, kpis))
+        sections.append(self._deterministic_limitations(ep, kpis))
 
         return sections
 
@@ -345,7 +363,7 @@ class ReportingClient:
     def _fmt_pct(value: float) -> str:
         return f"{value * 100:.1f}%"
 
-    def _fallback_summary(self, ep: EvidencePacket) -> dict:
+    def _deterministic_summary(self, ep: EvidencePacket) -> dict:
         parts = [
             f"Review period: {ep.review_period_start} to {ep.review_period_end}.",
             f"Total observations: {ep.observation_count}.",
@@ -367,7 +385,7 @@ class ReportingClient:
             "abstention_note": None,
         }
 
-    def _fallback_coverage(self, ep: EvidencePacket, kpis: dict) -> dict:
+    def _deterministic_coverage(self, ep: EvidencePacket, kpis: dict) -> dict:
         parts = [f"{ep.observation_count} observations were recorded."]
         if ep.contributor_summary:
             contrib = ", ".join(f"{k}: {v}" for k, v in ep.contributor_summary.items())
@@ -392,7 +410,7 @@ class ReportingClient:
             "abstention_note": None,
         }
 
-    def _fallback_key_indicators(self, kpis: dict) -> dict | None:
+    def _deterministic_key_indicators(self, kpis: dict) -> dict | None:
         parts: list[str] = []
         abstention_notes: list[str] = []
 
@@ -431,7 +449,7 @@ class ReportingClient:
             "abstention_note": " ".join(abstention_notes) if abstention_notes else None,
         }
 
-    def _fallback_patterns(self, kpis: dict) -> dict | None:
+    def _deterministic_patterns(self, kpis: dict) -> dict | None:
         parts: list[str] = []
 
         for kpi_name, label in [
@@ -456,7 +474,7 @@ class ReportingClient:
             "abstention_note": None,
         }
 
-    def _fallback_progress(self, kpis: dict) -> dict | None:
+    def _deterministic_progress(self, kpis: dict) -> dict | None:
         parts: list[str] = []
         abstention_notes: list[str] = []
 
@@ -501,7 +519,7 @@ class ReportingClient:
             "abstention_note": " ".join(abstention_notes) if abstention_notes else None,
         }
 
-    def _fallback_cross_observations(self, kpis: dict) -> dict | None:
+    def _deterministic_cross_observations(self, kpis: dict) -> dict | None:
         parts: list[str] = []
         abstention_notes: list[str] = []
 
@@ -538,7 +556,7 @@ class ReportingClient:
             "abstention_note": " ".join(abstention_notes) if abstention_notes else None,
         }
 
-    def _fallback_limitations(self, ep: EvidencePacket, kpis: dict) -> dict:
+    def _deterministic_limitations(self, ep: EvidencePacket, kpis: dict) -> dict:
         parts: list[str] = []
 
         if ep.adequacy.quality_flags:

@@ -40,8 +40,10 @@ async def get_current_version_records(
 ) -> list[StructuredRecord]:
     """Fetch the latest version of each structured record for a child in the given period.
 
-    Corrected records supersede prior versions. Only validated or corrected records
-    are included. Rejected/abstained records are excluded from analytics.
+    Corrected records supersede prior versions. Only records a human has
+    accepted -- verified or corrected -- are included. Records that merely
+    passed deterministic validation, along with pending, rejected and
+    abstained ones, are excluded from analytics.
     """
     stmt = (
         select(StructuredRecord)
@@ -51,7 +53,11 @@ async def get_current_version_records(
             Observation.status == ObservationStatus.FINALIZED,
             Observation.submitted_at >= datetime.combine(start_date, time.min, tzinfo=UTC),
             Observation.submitted_at <= datetime.combine(end_date, time.max, tzinfo=UTC),
-            StructuredRecord.status.in_([RecordStatus.VALIDATED, RecordStatus.CORRECTED]),
+            # Human-verified only. A record that merely passed deterministic
+            # validation has not been seen by anyone, and a schema-conformant
+            # value can still be wrong; admitting it here would let analytics
+            # compute a faithful trend over unreviewed evidence.
+            StructuredRecord.status.in_([RecordStatus.VERIFIED, RecordStatus.CORRECTED]),
         )
         .order_by(StructuredRecord.created_at)
     )

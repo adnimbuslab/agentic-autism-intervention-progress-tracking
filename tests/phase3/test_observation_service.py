@@ -1,5 +1,5 @@
 """Unit tests for observation_service — pipeline orchestration, immutability,
-clarification flow, max turns, correction versioning."""
+clarification flow, max turns, correction versioning, verification."""
 
 from __future__ import annotations
 
@@ -31,6 +31,7 @@ from src.backend.services.observation_service import (
     build_conversation_json,
     correct_record,
     submit_observation,
+    verify_record,
 )
 
 
@@ -288,6 +289,94 @@ class TestCorrectRecord:
             await correct_record(
                 db, uuid.uuid4(), uuid.uuid4(), {}, "reason"
             )
+
+
+class TestVerifyRecord:
+    """Verification changes review state, not content, so it mutates in place;
+    what it must not do is admit a record the router sent for review."""
+
+    @staticmethod
+    def _record(status: RecordStatus) -> Mock:
+        record = Mock(spec=StructuredRecord)
+        record.id = uuid.uuid4()
+        record.status = status
+        record.verified_by = None
+        record.verified_at = None
+        return record
+
+    async def test_validated_record_becomes_verified(self):
+        db = AsyncMock()
+        db.flush = AsyncMock()
+        record = self._record(RecordStatus.VALIDATED)
+        db.get = AsyncMock(return_value=record)
+        reviewer = uuid.uuid4()
+
+        result = await verify_record(db, record_id=record.id, verified_by=reviewer)
+
+        assert result.status == RecordStatus.VERIFIED
+        assert result.verified_by == reviewer
+        assert result.verified_at is not None
+        db.flush.assert_awaited()
+
+    async def test_does_not_create_a_new_version(self):
+        # Content is unchanged, so the immutability rule is not engaged and no
+        # second row should be written.
+        db = AsyncMock()
+        db.add = MagicMock()
+        db.flush = AsyncMock()
+        record = self._record(RecordStatus.VALIDATED)
+        record.version = 1
+        db.get = AsyncMock(return_value=record)
+
+        result = await verify_record(db, record_id=record.id, verified_by=uuid.uuid4())
+
+        db.add.assert_not_called()
+        assert result is record
+        assert result.version == 1
+
+    async def test_is_idempotent_for_an_already_verified_record(self):
+        db = AsyncMock()
+        db.flush = AsyncMock()
+        record = self._record(RecordStatus.VERIFIED)
+        first_reviewer = uuid.uuid4()
+        record.verified_by = first_reviewer
+        record.verified_at = datetime.now(UTC)
+        db.get = AsyncMock(return_value=record)
+
+        result = await verify_record(db, record_id=record.id, verified_by=uuid.uuid4())
+
+        assert result.status == RecordStatus.VERIFIED
+        assert result.verified_by == first_reviewer
+        db.flush.assert_not_awaited()
+
+    async def test_corrected_record_is_left_alone(self):
+        db = AsyncMock()
+        record = self._record(RecordStatus.CORRECTED)
+        db.get = AsyncMock(return_value=record)
+
+        result = await verify_record(db, record_id=record.id, verified_by=uuid.uuid4())
+
+        assert result.status == RecordStatus.CORRECTED
+
+    @pytest.mark.parametrize(
+        "status",
+        [RecordStatus.PENDING, RecordStatus.REJECTED, RecordStatus.ABSTAINED],
+    )
+    async def test_refuses_a_record_that_did_not_pass_validation(self, status):
+        db = AsyncMock()
+        record = self._record(status)
+        db.get = AsyncMock(return_value=record)
+
+        with pytest.raises(ValueError, match="Only a validated record"):
+            await verify_record(db, record_id=record.id, verified_by=uuid.uuid4())
+        assert record.status == status
+
+    async def test_raises_for_unknown_record(self):
+        db = AsyncMock()
+        db.get = AsyncMock(return_value=None)
+
+        with pytest.raises(ValueError, match="not found"):
+            await verify_record(db, record_id=uuid.uuid4(), verified_by=uuid.uuid4())
 
 
 class TestSubmitObservation:

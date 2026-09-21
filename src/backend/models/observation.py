@@ -107,8 +107,21 @@ class ClarificationTurn(Base):
 
 
 class RecordStatus(str, enum.Enum):
+    """Lifecycle of a structured record.
+
+    `VALIDATED` and `VERIFIED` are deliberately distinct, and conflating them
+    is the defect this enum exists to prevent. `VALIDATED` means the
+    deterministic engine found the record schema-conformant; no human has seen
+    it. `VERIFIED` means an interventionist reviewed it and accepted it as
+    written. Only the latter two states -- `VERIFIED` and `CORRECTED` -- are
+    admitted to longitudinal analytics, because a schema-conformant value can
+    still be the wrong value, and analytics would then compute a faithful trend
+    over incorrect evidence.
+    """
+
     PENDING = "pending"
     VALIDATED = "validated"
+    VERIFIED = "verified"
     CORRECTED = "corrected"
     REJECTED = "rejected"
     ABSTAINED = "abstained"
@@ -144,6 +157,15 @@ class StructuredRecord(Base):
         nullable=True,
     )
     correction_reason: Mapped[str | None] = mapped_column(Text, nullable=True)
+    verified_by: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True),
+        ForeignKey("users.id"),
+        nullable=True,
+    )
+    verified_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True),
+        nullable=True,
+    )
     previous_version_id: Mapped[uuid.UUID | None] = mapped_column(
         UUID(as_uuid=True),
         ForeignKey("structured_records.id"),

@@ -185,8 +185,8 @@ class TestDeploymentScope:
         )
 
     def test_the_manuscript_states_the_offline_scope(self, prose) -> None:
-        assert "evaluated offline" in prose
-        assert "not part of the running application" in prose
+        assert "MARS is an evaluation method, not a deployed component" in prose
+        assert "not intended for the application's request path" in prose
 
     def test_the_manuscript_names_the_deployed_provider(self, prose) -> None:
         assert self._deployed_provider() in prose
@@ -197,7 +197,137 @@ class TestDeploymentScope:
         assert not re.search(r"MARS (selects|returns|runs) ", prose)
 
     def test_limitations_records_the_scope_boundary(self, prose) -> None:
-        assert "offline experiment, not a deployed component" in prose
+        assert (
+            "offline evaluation method, not a deployed component, and is not "
+            "intended to become one" in prose
+        )
 
     def test_no_four_generator_reranking_is_claimed(self, prose) -> None:
         assert "no four-generator reranking run has been performed" in prose
+
+
+class TestContributionHierarchy:
+    """One primary contribution, stated in the places a reader looks for it.
+
+    The work spans annotation method, extraction evaluation, reranking,
+    reporting governance and an application, and an editor reading it as five
+    co-equal contributions would call it a kitchen-sink paper. The hierarchy
+    that resolves that -- the evaluation framework is primary, everything else
+    is a component it measures -- has to survive edits to any one section.
+    """
+
+    def test_the_primary_contribution_is_named(self, prose) -> None:
+        assert "The primary contribution is the evaluation framework" in prose
+
+    def test_the_other_components_are_subordinated(self, prose) -> None:
+        assert "objects measured, not parallel contributions" in prose
+
+    def test_the_title_names_the_framework(self, prose) -> None:
+        assert "Evaluation Framework" in prose
+
+    def test_the_abstract_conclusion_leads_with_the_framework(
+        self, prose
+    ) -> None:
+        assert "Conclusions. The contribution is the evaluation framework" in prose
+
+    def test_the_conclusions_restate_the_hierarchy(self, prose) -> None:
+        assert "The framework is the contribution; the pipeline is" in prose
+
+
+class TestGovernanceBoundaries:
+    """The two boundaries the results are used to justify.
+
+    Both are claims about the running application, so both must be stated in
+    the manuscript and hold in the code.
+    """
+
+    def test_the_verification_gate_is_stated(self, prose) -> None:
+        assert "mandatory gate rather than an available action" in prose
+
+    def test_the_gate_is_enforced_in_the_analytics_query(self) -> None:
+        from src.backend.models.observation import RecordStatus
+        from src.backend.services import analytics_service
+
+        source = Path(analytics_service.__file__).read_text()
+        assert "RecordStatus.VERIFIED, RecordStatus.CORRECTED" in source
+        assert RecordStatus.VERIFIED.value == "verified"
+
+    def test_generative_reporting_is_declared_experimental(self, prose) -> None:
+        assert "not the operational reporting path" in prose
+
+    def test_deterministic_reporting_is_the_configured_default(self) -> None:
+        from src.backend.config import settings
+
+        assert settings.reporting_mode == "deterministic"
+
+
+class TestScopeOfTheClaims:
+    """Four places the paper could overclaim, and the sentence that stops it.
+
+    Each corresponds to a reviewer objection that is fatal if the manuscript
+    reads as though the thing were established: extraction validated on real
+    intervention notes, the whole extractor evaluated, the adequacy
+    thresholds clinically grounded, or the workflow shown to help anyone.
+    """
+
+    def test_the_corpus_is_framed_as_a_proxy(self, prose) -> None:
+        assert "proxy for the application's intended input, not a sample" in prose
+        assert "component evaluation on proxy data" in prose
+
+    def test_no_claim_of_validation_on_intervention_notes(self, prose) -> None:
+        assert "Extraction is not validated on real intervention notes" in prose
+
+    def test_the_evaluated_field_count_is_stated(self, prose) -> None:
+        assert "asked for eight fields" in prose
+        assert "extractor as a whole is therefore not evaluated" in prose
+
+    def test_the_thresholds_are_not_called_clinical_cutoffs(
+        self, prose
+    ) -> None:
+        assert (
+            "configurable prototype governance thresholds, not validated "
+            "clinical cutoffs" in prose
+        )
+
+    def test_benefit_claims_are_marked_undemonstrated(self, prose) -> None:
+        assert "intended or potential, never demonstrated" in prose
+
+    def test_no_bare_benefit_claim_survives_anywhere(self, prose) -> None:
+        # A claim that the system reduces burden or saves time would need a
+        # usability study that has not been run.
+        for phrase in ("reduces review burden for", "saves time", "improves efficiency"):
+            assert phrase not in prose, phrase
+
+
+class TestAnnotatorClaims:
+    """The Annotators section makes one factual claim; the rest is a stub.
+
+    Full independent coverage of both batches is the part a reviewer can check
+    against the artefacts, so it is checked here rather than trusted.
+    """
+
+    @staticmethod
+    def _count(name: str) -> int:
+        path = RESULTS / name
+        if not path.exists():
+            pytest.skip(f"{name} not present")
+        return len(json.loads(path.read_text()))
+
+    def test_both_annotators_covered_the_whole_main_batch(self, prose) -> None:
+        a = self._count("gold_annotator_a.json")
+        b = self._count("gold_annotator_b.json")
+        assert a == b, (a, b)
+        assert f"all {a} segments of the main batch" in prose
+
+    def test_both_annotators_covered_the_whole_holdout_set(self, prose) -> None:
+        a = self._count("gold_holdout_annotator_a.json")
+        b = self._count("gold_holdout_annotator_b.json")
+        assert a == b, (a, b)
+        assert f"all {a} segments of the held-out set" in prose
+
+    def test_the_qualifications_gap_is_flagged_not_invented(
+        self, prose
+    ) -> None:
+        # Nothing about the annotators' credentials is known to this
+        # repository, so the manuscript must ask for it rather than assert it.
+        assert "professional role and qualification" in prose

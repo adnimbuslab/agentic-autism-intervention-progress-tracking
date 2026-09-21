@@ -253,7 +253,10 @@ def score_report(report: Any, packet: EvidencePacket) -> dict[str, Any]:
         "child_id": packet.child_id,
         "provider": report.provider,
         "model": report.model,
-        "used_fallback": report.provider == "deterministic_fallback",
+        # "deterministic_fallback" was the string before the deterministic
+        # reporter became the operational path; recorded runs still carry it.
+        "used_fallback": report.provider
+        in ("deterministic", "deterministic_fallback"),
         "n_sections": len(report.sections),
         "validation_passed": report.validation_passed,
         "validation_errors": report.validation_errors,

@@ -40,7 +40,13 @@ class Settings(BaseSettings):
     # Observation workflow
     clarification_max_turns: int = 3
 
-    # Adequacy thresholds
+    # Adequacy thresholds.
+    #
+    # Configurable prototype governance defaults, not validated clinical
+    # cutoffs. Their value is that withholding is deterministic and auditable,
+    # not that these are the counts at which evidence becomes clinically
+    # sufficient: no expert-consensus procedure set them and no sensitivity
+    # analysis has been run over them. A deploying site should revisit them.
     adequacy_min_observations: int = 5
     adequacy_limited_observations: int = 3
     adequacy_field_completeness_threshold: float = 0.7
@@ -50,6 +56,16 @@ class Settings(BaseSettings):
     # An evidence packet for one child runs to several thousand tokens; the
     # default 4k context truncates it, and a truncated packet produces a report
     # about the fragment that survived.
+    # The generative reporting layer failed its own governance contract in
+    # evaluation -- every report omitted the fact that an analysis had been
+    # withheld -- so it is not the operational path. "deterministic" renders
+    # reports from the evidence packet in code; "generative_experimental"
+    # enables the reporting LLM and marks everything it produces as
+    # experimental. Do not flip this default until the layer passes the
+    # governance check it currently fails.
+    reporting_mode: Literal["deterministic", "generative_experimental"] = (
+        "deterministic"
+    )
     reporting_num_ctx: int = 8192
     reporting_timeout_s: float = 600.0
     reporting_provider: Literal["anthropic", "ollama"] = "ollama"

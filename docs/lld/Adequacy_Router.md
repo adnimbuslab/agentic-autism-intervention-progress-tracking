@@ -33,6 +33,8 @@ Two additional `AdequacyCheck` enum values, `CONSISTENCY` and `TIMELINESS`, exis
 
 ### Thresholds (`src/backend/config.py`)
 
+These are **configurable prototype governance thresholds, not validated clinical cutoffs.** They are deterministic and inspectable, which is what makes the router's withholding behaviour auditable and reproducible — but determinism is not evidence that these particular numbers are the right ones. No expert-consensus procedure set them, no sensitivity analysis has been run over them, and no outcome has been measured against them. A deploying site is expected to revisit them.
+
 | Constant | Value |
 |---|---|
 | `adequacy_min_observations` | 5 |

@@ -166,3 +166,7 @@ class GeneratedReportData(BaseModel):
     prompt_version: str = "1.0"
     validation_passed: bool = False
     validation_errors: list[str] = Field(default_factory=list)
+    # True when the prose came from the reporting LLM. That layer has not
+    # passed its governance contract, so anything it writes is an experimental
+    # artefact and must be labelled as one wherever it is shown.
+    is_experimental: bool = False

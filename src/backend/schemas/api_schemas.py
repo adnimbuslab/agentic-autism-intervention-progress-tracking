@@ -6,7 +6,7 @@ import uuid
 from datetime import date, datetime
 from typing import Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 from src.backend.models.goal import GoalType
 from src.backend.models.observation import ObservationStatus, RecordStatus
@@ -199,6 +199,10 @@ class RecordResponse(BaseModel):
     validation_result: Optional[dict]
     corrected_by: Optional[uuid.UUID]
     correction_reason: Optional[str]
+    # Defaulted: records created before verification existed carry neither,
+    # and a required field would 500 on every one of them.
+    verified_by: Optional[uuid.UUID] = None
+    verified_at: Optional[datetime] = None
     provider: str
     model: str
     prompt_version: str
@@ -355,6 +359,18 @@ class ReportResponse(BaseModel):
     generated_at: datetime
 
     model_config = {"from_attributes": True}
+
+    @computed_field  # type: ignore[prop-decorator]
+    @property
+    def is_experimental(self) -> bool:
+        """True when the reporting LLM wrote this report.
+
+        Derived from the stored provider rather than a column of its own, so
+        it cannot drift away from what actually produced the prose. The
+        generative layer has not passed its governance contract, so its output
+        is an experimental artefact and the UI must say so.
+        """
+        return self.provider != "deterministic"
 
 
 class ReportListItem(BaseModel):

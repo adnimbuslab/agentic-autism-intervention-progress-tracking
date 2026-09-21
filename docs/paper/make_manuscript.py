@@ -145,10 +145,13 @@ def build() -> Path:
     models = list(ext["per_field_accuracy"])
 
     # ---- title ---------------------------------------------------------
+    # The title names the framework first because the framework is the
+    # primary contribution; the subtitle lists the four layers it measures.
     title = b.doc.add_heading(
-        "Governance-Aware Extraction of Structured Autism Observations: "
-        "Annotation Reliability, Unsupported Inference, and Multi-Model "
-        "Selection",
+        "A Governance-Aware Evaluation Framework for Language-Model "
+        "Extraction in Autism Intervention Monitoring: Annotation "
+        "Reliability, Unsupported Inference, Multi-Model Selection, and "
+        "Reporting Governance",
         level=0,
     )
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -181,7 +184,10 @@ def build() -> Path:
     b.p(
         f"Methods. We derived {ann['n_segments']} behavioural segments from two "
         "public ASDBank CHAT corpora (11 children, 85 sessions, 75,003 "
-        f"utterances). Two annotators independently authored structured field "
+        "utterances), which stand as a proxy for the contributor-written "
+        "observations the application is designed to receive; no corpus of "
+        f"real intervention notes is publicly available. Two annotators "
+        "independently authored structured field "
         "values from the transcripts. Analysis of their disagreements "
         "identified three underspecified field definitions; these were "
         "resolved in a written codebook and the affected segments were "
@@ -214,15 +220,25 @@ def build() -> Path:
         "generator."
     )
     b.p(
-        "Conclusions. Low inter-annotator agreement in this task was largely "
-        "definitional rather than a matter of annotator inconsistency, and was "
-        "measurably repaired by a written codebook under a controlled design. "
-        "The generators evaluated are not adequate for the extraction task, "
-        "and increasing model size within the locally served models evaluated "
-        "did not resolve the extraction failure: the largest model tested "
-        "achieved accuracy comparable to the strongest smaller model while "
-        "producing the highest unsupported-assertion rate. Candidate selection "
-        "cannot compensate for candidate quality."
+        "Conclusions. The contribution is the evaluation framework — explicit "
+        "null annotation, a controlled codebook revision, oracle-bounded "
+        "selection analysis, and a governance check separate from schema "
+        "conformance — and what applying it to this pipeline exposed. Low "
+        "inter-annotator agreement in this task was largely definitional "
+        "rather than a matter of annotator inconsistency, and was measurably "
+        "repaired by a written codebook under a controlled design. The "
+        "generators evaluated are not adequate for the extraction task, and "
+        "increasing model size within the locally served models evaluated did "
+        "not resolve the extraction failure: the largest model tested achieved "
+        "accuracy comparable to the strongest smaller model while producing "
+        "the highest unsupported-assertion rate. Candidate selection cannot "
+        "compensate for candidate quality. All extraction results are a "
+        "component evaluation on proxy data and do not establish that "
+        "extraction works on real intervention notes. These are the "
+        "boundaries the "
+        "application enforces: no extracted record reaches longitudinal "
+        "analytics without professional verification, and progress reports are "
+        "rendered deterministically rather than generated."
     )
 
     b.page_break()
@@ -274,10 +290,50 @@ def build() -> Path:
         "measurement rather than a nuisance; we quantify how often local "
         "extraction models assert field values the source text does not "
         "support; and we evaluate a multi-judge reranking stage against both "
-        "a no-judgement and a best-single-model baseline. The contribution is "
-        "the evaluation process and what it exposes, not a system that "
-        "performs well: it exposes failure at the annotation layer and at the "
-        "extraction layer, and reports both."
+        "a no-judgement and a best-single-model baseline."
+    )
+    b.p(
+        "The primary contribution is the evaluation framework itself: a set of "
+        "measurement procedures for deciding what a language model may be "
+        "permitted to do in a longitudinal clinical-monitoring pipeline. Four "
+        "elements make it up, each answering a question a conventional "
+        "accuracy report leaves open."
+    )
+    b.bullets(
+        [
+            "An annotation protocol with explicit nulls, under which an "
+            "annotator records that the text supports no value for a field. "
+            "This is what makes unsupported assertion measurable at all: "
+            "without a gold null there is no opportunity against which to "
+            "count an invented value.",
+            "A controlled codebook revision, in which a written codebook is "
+            "applied to the fields whose definitions the conflict analysis "
+            "implicated while an untreated control field is left alone, so "
+            "that an agreement gain can be attributed to the codebook rather "
+            "than to the act of re-annotating.",
+            "A selection analysis bounded by an oracle ceiling, which reports "
+            "what any selector could have recovered from a given roster before "
+            "asking what a particular selector did recover, and a "
+            "model-independent held-out set that quantifies how far the "
+            "evaluation batch was itself conditioned on model behaviour.",
+            "A governance check on generated reports that is separate from "
+            "schema conformance, testing prohibited content, grounding of "
+            "every numeric assertion in the evidence packet, and preservation "
+            "of abstention state — whether a withheld analysis is reported as "
+            "withheld.",
+        ]
+    )
+    b.p(
+        "Everything else here is subordinate to that framework and is reported "
+        "because the framework was applied to it. The annotation scheme, the "
+        "four local generators, the reranking stage and the reporting layer "
+        "are the objects measured, not parallel contributions; the "
+        "governance-aware application is the setting that motivates the "
+        "measurements and supplies the boundaries they inform. None of the "
+        "measured components performs well, and that is the point: the "
+        "framework's value is that it says so, and says where. It exposes "
+        "failure at the annotation layer, at the extraction layer and at the "
+        "reporting layer, and reports each."
     )
 
     b.page_break()
@@ -297,6 +353,34 @@ def build() -> Path:
         "fig1_corpus.png",
         "Figure A. Corpus composition: behavioural segments per child, by "
         "source corpus.",
+    )
+    b.p(
+        "These transcripts are a proxy for the application's intended input, "
+        "not a sample of it. The application ingests observations written by "
+        "parents, teachers, support staff and intervention professionals "
+        "through its own interface; what is evaluated here is archival "
+        "research recordings of child-investigator and child-parent "
+        "interaction, transcribed in CHAT format and segmented into "
+        "behavioural episodes. The two differ in at least three respects that "
+        "could each affect extraction: authorship, since a transcript records "
+        "what was said rather than what an observer chose to report; register, "
+        "since a contributor writes retrospective prose about a child while a "
+        "transcript is verbatim dialogue; and provenance, since a contributor "
+        "writes with a goal in mind and a transcript has no such framing. The "
+        "corpora were chosen because they are autism interaction data with "
+        "permissive research access and enough structure to annotate "
+        "consistently, which is what a reference standard requires, and "
+        "because no corpus of real intervention observations is publicly "
+        "available.",
+        italic=True,
+    )
+    b.p(
+        "Every extraction result reported below is therefore a component "
+        "evaluation on proxy data. Nothing here establishes that extraction "
+        "works on intervention notes as written by contributors, and no such "
+        "claim is made; transfer to the application's input distribution is "
+        "assumed, and measuring it requires observations the study does not "
+        "have."
     )
     b.p(
         "The annotation batch was built in three stages, of which only "
@@ -457,6 +541,30 @@ def build() -> Path:
         "0.005 on every bound of every field."
     )
 
+    b.h2("Annotators")
+    b.p(
+        "[TO COMPLETE BEFORE SUBMISSION] The reference standard rests on two "
+        "autism intervention specialists, and a reviewer cannot judge its "
+        "credibility without knowing who they are. This section must state, "
+        "for each annotator: professional role and qualification; years of "
+        "relevant experience; prior experience with structured behavioural "
+        "coding; what preparation they received for this task and from whom; "
+        "and any relationship to the study or its authors that bears on "
+        "independence.",
+        colour=RED,
+    )
+    b.p(
+        "What the artefacts already establish, and what this section must "
+        "therefore not contradict: both annotators independently annotated "
+        f"all {ann['n_segments']} segments of the main batch and all 132 "
+        "segments of the held-out set — neither worked from a subset — and "
+        "surviving conflicts were adjudicated by the two of them jointly, "
+        "with decisions splitting 89/90 between their respective values. The "
+        "same pair helped identify the three underspecified definitions and "
+        "then annotated under the codebook that resolved them, which is "
+        "recorded as a limitation rather than presented as independence."
+    )
+
     b.h2("Two-round protocol and the control field")
     b.p(
         "Three field definitions were identified as underspecified: whether "
@@ -491,11 +599,24 @@ def build() -> Path:
         "third parties: the ASDBank English Rollins Corpus "
         "(doi:10.21415/T5KK53) and the ASDBank English Flusberg Corpus "
         "(doi:10.21415/T5459F), both components of ASDBank within TalkBank. No "
-        "data was collected from human participants for this work, no "
-        "participants were recruited or contacted, and no clinical care was "
-        "delivered, influenced or withheld on the basis of any system output. "
-        "The system was not deployed in any care setting and no interventionist "
-        "used it during the work reported here."
+        "child data was collected for this work, no children or families were "
+        "recruited or contacted, and no clinical care was delivered, "
+        "influenced or withheld on the basis of any system output. The system "
+        "was not deployed in any care setting and no interventionist used it "
+        "during the work reported here."
+    )
+    b.p(
+        "One category of human-generated data does arise. Two autism "
+        "intervention specialists produced the annotations, and their "
+        "agreement with one another — including how it changed between "
+        "rounds — is analysed and reported. Their labels are research data "
+        "about a coding scheme rather than about the annotators, and no "
+        "individual annotator is identified or characterised by performance; "
+        "the round-1 to round-2 comparison is nonetheless a measurement taken "
+        "on people doing a task, and whether that makes them research "
+        "participants, expert consultants or neither is a determination for "
+        "the reviewing institution rather than for the authors. It is put to "
+        "the Board explicitly rather than assumed."
     )
     b.p(
         "Transcripts pass through a de-identification stage before any model "
@@ -517,8 +638,11 @@ def build() -> Path:
         "research determination on the grounds that the work analyses "
         "existing, publicly available, de-identified records. This section "
         "must state the determination as issued, with institution, "
-        "determination wording, and protocol number, before submission. The "
-        "licence terms of both corpora and the scope of depositor consent for "
+        "determination wording, and protocol number, before submission, and "
+        "the determination must address all three categories separately: the "
+        "archival child corpora, the specialist annotation and adjudication, "
+        "and any human involvement in testing the application. The licence "
+        "terms of both corpora and the scope of depositor consent for "
         "secondary computational analysis must also be confirmed and stated.",
         colour=RED,
     )
@@ -886,6 +1010,27 @@ def build() -> Path:
     )
 
     b.h2("Extraction accuracy")
+    b.p(
+        "The extraction provider is asked for eight fields. Five were scored "
+        "against the adjudicated gold standard — behavior and the four "
+        "categorical fields — and three were not: goal_context, "
+        "prompt_context and duration_seconds have no reference standard in "
+        "this study, so nothing below constrains how often a model invents "
+        "them. The extractor as a whole is therefore not evaluated, and the "
+        "accuracy figures that follow describe five of its eight outputs."
+    )
+    b.p(
+        "The three unevaluated fields are confined accordingly. None enters a "
+        "KPI, none enters an adequacy check, and none is rendered by the "
+        "deterministic reporter; they are present in the evidence packet, "
+        "where the experimental generative reporting path could quote them, "
+        "which is a further reason that path is not operational. Like every "
+        "extracted field they also reach longitudinal analytics only inside a "
+        "record an interventionist has verified or corrected. These "
+        "boundaries are enforced in code and covered by tests rather than "
+        "asserted here.",
+        italic=True,
+    )
     b.table(
         f"Acceptable extractions per field (n = {gold['n_segments']}; acceptable "
         "= correct or correctly null; free-text behavior excluded).",
@@ -1229,6 +1374,21 @@ def build() -> Path:
             "malformed output.",
             italic=True,
         )
+        b.p(
+            "Because the generative reporting layer fails this contract, it is "
+            "not the operational reporting path. The application renders "
+            "progress reports deterministically: the sections are assembled "
+            "from the evidence packet in code, so every figure in a report is "
+            "a figure the analytics engine computed, and every indicator the "
+            "adequacy router withheld is named together with the reason it was "
+            "withheld — the check the generative layer failed on all 11 "
+            "reports. The reporting model is available only under an explicit "
+            "configuration switch, its output is stored and displayed marked "
+            "as experimental, and the default is not to call it. The negative "
+            "result above therefore stands as reported rather than being "
+            "superseded by a remediation: the layer was not modified and "
+            "re-evaluated, it was removed from the operational path."
+        )
 
     b.page_break()
 
@@ -1296,6 +1456,73 @@ def build() -> Path:
         "available to any selector on this roster was 1.5 percentage points."
     )
 
+    b.h2("The status of the governance thresholds")
+    b.p(
+        "The adequacy router decides when to withhold an analysis using "
+        "numeric rules: a minimum observation count for an adequate state, a "
+        "field-completeness floor, a temporal-clustering ceiling, minimum "
+        "counts of distinct settings and contributors, and a goal-coverage "
+        "floor. These are configurable prototype governance thresholds, not "
+        "validated clinical cutoffs. They are deterministic, inspectable and "
+        "stable across runs, which is what makes the system's withholding "
+        "behaviour auditable; determinism is not evidence that the particular "
+        "numbers are the right ones. No expert-consensus procedure set them, "
+        "no sensitivity analysis was run over them, and no outcome was "
+        "measured against them. They are defaults a deploying site would be "
+        "expected to revisit, and the claim attached to them is that "
+        "withholding is governed and reproducible, not that these are the "
+        "thresholds at which evidence becomes clinically sufficient."
+    )
+
+    b.h2("Consequences for the application: a mandatory verification gate")
+    b.p(
+        "The accuracy results bound what an extracted record may be allowed to "
+        "do. A deterministic validator establishes that a value is "
+        "schema-conformant; it cannot establish that the value is a correct "
+        "reading of the source text, and a wrong value drawn from the correct "
+        "enumeration is indistinguishable in form from a right one. At 43.1% "
+        "mean categorical-field accuracy and 4.5% whole-record accuracy for "
+        "the strongest generator, a record that has passed validation and "
+        "nothing else is not evidence. Admitting such records to a "
+        "longitudinal store would let the analytics engine compute a faithful "
+        "trend over incorrect evidence, and the trend would carry no mark "
+        "distinguishing it from one computed over reviewed evidence."
+    )
+    b.p(
+        "The application therefore treats professional verification as a "
+        "mandatory gate rather than an available action. A structured record "
+        "carries a review state, and longitudinal analytics reads only the two "
+        "states that represent a human decision: verified, meaning an "
+        "interventionist read the record and accepted it as written, and "
+        "corrected, meaning an interventionist rewrote it. The state set by "
+        "the pipeline when deterministic validation passes is not among them. "
+        "A record the adequacy router sent for review because the evidence was "
+        "inadequate cannot be verified as written at all; it must be corrected "
+        "or rejected, so that accepting a record cannot silently undo an "
+        "abstention. Verification changes review state and not content, so it "
+        "creates no new version, but it records which interventionist accepted "
+        "the record and when, and the act is written to the audit trail."
+    )
+    b.figure(
+        "fig23_architecture_mars.png",
+        "Figure J. Where extraction sits. The upper band is the application's "
+        "request path, with the verification gate marked: no extracted record "
+        "reaches longitudinal analytics without an interventionist accepting "
+        "or rewriting it. The lower band is the offline evaluation path, which "
+        "satisfies the same provider contract but serves no request.",
+        width=6.3,
+    )
+    b.p(
+        "This is a design property of the prototype, enforced in the analytics "
+        "query and covered by tests, not a demonstration that interventionists "
+        "catch the errors the models make. Whether professionals reviewing "
+        "machine-drafted records detect wrong-but-plausible values, and at what "
+        "cost in review time, was not measured here; automation bias in this "
+        "workflow remains an open question and is the evaluation the gate most "
+        "needs next.",
+        italic=True,
+    )
+
     b.h2("Comparison with prior work")
     b.p(
         "[TO COMPLETE BEFORE SUBMISSION] This section must situate the three "
@@ -1331,14 +1558,22 @@ def build() -> Path:
 
     b.h2("Conclusions")
     b.p(
-        "A rigorous evaluation process applied to this pipeline exposed "
-        "failure at two layers. The annotation scheme was unstable in ways "
+        "What this paper offers is a way of measuring whether a language model "
+        "may be trusted with a clinical-monitoring task, and a demonstration "
+        "of what that measurement returns when applied honestly to a pipeline "
+        "its authors built. The framework is the contribution; the pipeline is "
+        "the specimen."
+    )
+    b.p(
+        "The evaluation exposed failure at three layers. The annotation scheme was unstable in ways "
         "that a reported kappa alone would have concealed, and a written "
         "codebook measurably repaired it. The extraction models were not "
         "adequate for the task, and their most consequential failure was not "
         "inaccuracy but the assertion of unsupported clinical fields. "
         "Candidate selection did not compensate, and on this roster could not "
-        "have: the ceiling was 6.1%."
+        "have: the ceiling was 6.1%. The reporting layer produced no "
+        "prohibited content and still failed its governance contract on every "
+        "report, by omitting that an analysis had been withheld."
     )
     b.p(
         "The practical implication for systems of this kind is that abstention "
@@ -1376,6 +1611,11 @@ def build() -> Path:
             "Round 2 is a within-annotator repeat under instruction, not an "
             "independent replication. What two fresh annotators working under "
             "the codebook would achieve was not measured.",
+            "The generative reporting layer is disabled by default rather "
+            "than repaired. Whether the governance failure is remediable by "
+            "prompt or decoding changes was not tested, so the negative result "
+            "bounds the layer as configured and evaluated here and not "
+            "generative reporting in general.",
             "Reranking is an offline evaluation method, not a deployed "
             "component, and is not intended to become one. It runs over "
             "recorded generator outputs to establish what candidate selection "
@@ -1394,8 +1634,28 @@ def build() -> Path:
             "not work'.",
             "The corpora are archival child-investigator and child-parent "
             "transcripts, not contributor observations submitted through the "
-            "system's own interface. Transfer to the deployed input "
-            "distribution is assumed, not demonstrated.",
+            "system's own interface. The extraction results are a component "
+            "evaluation on proxy data: they differ from the intended input in "
+            "authorship, register and provenance, and transfer to the deployed "
+            "distribution is assumed, not demonstrated. Extraction is not "
+            "validated on real intervention notes.",
+            "Five of the eight fields the extractor generates were evaluated. "
+            "goal_context, prompt_context and duration_seconds have no "
+            "reference standard here, so the extractor as a whole is not "
+            "validated; the three are excluded from every KPI, adequacy check "
+            "and deterministically rendered report.",
+            "The adequacy thresholds are configurable prototype governance "
+            "defaults, not validated clinical cutoffs. They were not set by "
+            "an expert-consensus procedure and no sensitivity analysis over "
+            "them was run, so the claim is that withholding is deterministic "
+            "and auditable, not that these are the right numbers.",
+            "No independent professional evaluated the integrated "
+            "application. Development testing shows it functions; it does not "
+            "show that interventionists can use it effectively, that it "
+            "reduces review burden, or that it improves recognition of missing "
+            "evidence rather than inducing automation bias. Every benefit "
+            "attributed to the workflow in this paper is intended or "
+            "potential, never demonstrated.",
             "De-identification replaces names by roster and header match "
             "rather than by named-entity recognition, and over-redacts: 82 "
             "[NAME] placeholders appear across 62 of the 330 annotated "
@@ -1420,6 +1680,20 @@ def build() -> Path:
         "-- that round has no untreated control.",
         "A frontier-scale generator: the four models evaluated are all "
         "locally served.",
+        "Accuracy or unsupported-assertion rates for goal_context, "
+        "prompt_context and duration_seconds: three of the eight extracted "
+        "fields have no reference standard in this study.",
+        "Extraction accuracy on observations of the kind the application is "
+        "designed to receive -- contributor-written intervention notes. The "
+        "evaluated corpora are archival research transcripts and stand in as "
+        "a proxy.",
+        "Whether interventionists reviewing machine-drafted records detect "
+        "wrong-but-plausible field values, and at what cost in review time. "
+        "The verification gate is enforced; its effectiveness is unmeasured.",
+        "Any usability, workflow or workload effect of the integrated "
+        "application: no independent professional has used it.",
+        "The sensitivity of the adequacy decisions to the threshold values "
+        "chosen.",
     ]
     b.bullets([f"• {item}" for item in [*m["not_measured"], *extra]])
 

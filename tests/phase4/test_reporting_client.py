@@ -7,6 +7,7 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
+from src.backend.config import settings
 from src.backend.ml.reporting_client import (
     PROHIBITED_PATTERNS,
     ReportingClient,
@@ -89,92 +90,92 @@ class TestValidateReport:
         assert len(insufficient_errors) == 0
 
 
-class TestFallbackSections:
-    def test_fallback_contains_review_period(self):
+class TestDeterministicSections:
+    def test_deterministic_contains_review_period(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         assert any("Review Period" in s["heading"] for s in sections)
 
-    def test_fallback_contains_evidence_coverage(self):
+    def test_deterministic_contains_evidence_coverage(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         assert any("Evidence Coverage" in s["heading"] for s in sections)
 
-    def test_fallback_includes_quality_flags(self):
+    def test_deterministic_includes_quality_flags(self):
         adequacy = make_adequate_result()
         adequacy.quality_flags = ["coverage: Only 3/5 observations"]
         ep = make_rich_evidence_packet(adequacy=adequacy)
         client = ReportingClient(api_key="test-key")
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         limitation_section = next((s for s in sections if "Limitation" in s["heading"]), None)
         assert limitation_section is not None
         assert "coverage" in limitation_section["body"]
 
-    def test_fallback_includes_independence_rate(self):
+    def test_deterministic_includes_independence_rate(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         key_section = next((s for s in sections if s["heading"] == "Key Indicators"), None)
         assert key_section is not None
         assert "5 of 8" in key_section["body"]
         assert "62.5%" in key_section["body"]
 
-    def test_fallback_includes_positive_outcome_rate(self):
+    def test_deterministic_includes_positive_outcome_rate(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         key_section = next((s for s in sections if s["heading"] == "Key Indicators"), None)
         assert key_section is not None
         assert "6 of 7" in key_section["body"]
         assert "85.7%" in key_section["body"]
 
-    def test_fallback_includes_distributions(self):
+    def test_deterministic_includes_distributions(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         patterns_section = next((s for s in sections if s["heading"] == "Observed Patterns"), None)
         assert patterns_section is not None
         assert "goal domains" in patterns_section["body"]
         assert "modalities" in patterns_section["body"]
         assert "prompt levels" in patterns_section["body"]
 
-    def test_fallback_includes_trends(self):
+    def test_deterministic_includes_trends(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         progress_section = next((s for s in sections if s["heading"] == "Progress Indicators"), None)
         assert progress_section is not None
         assert "increased" in progress_section["body"]
         assert "0.2500" in progress_section["body"]
         assert "0.0833" in progress_section["body"]
 
-    def test_fallback_includes_cross_observations(self):
+    def test_deterministic_includes_cross_observations(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         cross_section = next((s for s in sections if "Cross-Setting" in s["heading"]), None)
         assert cross_section is not None
         assert "2 distinct settings" in cross_section["body"]
         assert "2 distinct contributor roles" in cross_section["body"]
 
-    def test_fallback_includes_goals_in_summary(self):
+    def test_deterministic_includes_goals_in_summary(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         summary = next(s for s in sections if s["heading"] == "Review Period Summary")
         assert "Improve requests" in summary["body"]
         assert "social_communication" in summary["body"]
 
-    def test_fallback_includes_review_count(self):
+    def test_deterministic_includes_review_count(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         coverage = next(s for s in sections if s["heading"] == "Evidence Coverage")
         assert "1 observations require interventionist review" in coverage["body"]
 
-    def test_fallback_handles_abstained_kpis(self):
+    def test_deterministic_handles_abstained_kpis(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
         ep.analytics.kpis = [
@@ -200,7 +201,7 @@ class TestFallbackSections:
                 prerequisites_met=False, display_eligible=False,
             ),
         ]
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
 
         key_section = next((s for s in sections if s["heading"] == "Key Indicators"), None)
         assert key_section is not None
@@ -210,18 +211,18 @@ class TestFallbackSections:
         limitations = next(s for s in sections if s["heading"] == "Evidence Limitations")
         assert "independence rate" in limitations["body"].lower()
 
-    def test_fallback_preserves_numerator_denominator(self):
+    def test_deterministic_preserves_numerator_denominator(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         key_section = next(s for s in sections if s["heading"] == "Key Indicators")
         assert "5 of 8" in key_section["body"]
         assert "6 of 7" in key_section["body"]
 
-    def test_fallback_section_count(self):
+    def test_deterministic_section_count(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
-        sections = client._build_fallback_sections(ep)
+        sections = client._build_deterministic_sections(ep)
         headings = [s["heading"] for s in sections]
         assert "Review Period Summary" in headings
         assert "Evidence Coverage" in headings
@@ -253,7 +254,10 @@ class TestReportGeneration:
             },
         ]
 
-        client = ReportingClient(api_key="test-key", provider="anthropic")
+        client = ReportingClient(
+            api_key="test-key", provider="anthropic",
+            mode="generative_experimental",
+        )
         with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
             mock_llm.return_value = mock_sections
             report = await client.generate_report(ep)
@@ -265,9 +269,9 @@ class TestReportGeneration:
 
     @pytest.mark.asyncio
     # @spec REPORT-010
-    async def test_fallback_on_llm_failure(self):
+    async def test_deterministic_on_llm_failure(self):
         ep = make_rich_evidence_packet()
-        client = ReportingClient(api_key="test-key")
+        client = ReportingClient(api_key="test-key", mode="generative_experimental")
 
         with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
             mock_llm.side_effect = Exception("API error")
@@ -289,7 +293,7 @@ class TestReportGeneration:
             },
         ]
 
-        client = ReportingClient(api_key="test-key")
+        client = ReportingClient(api_key="test-key", mode="generative_experimental")
         with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
             mock_llm.return_value = bad_sections
             report = await client.generate_report(ep)
@@ -301,7 +305,7 @@ class TestReportGeneration:
     # @spec REPORT-012
     async def test_validation_runs_on_fallback(self):
         ep = make_rich_evidence_packet()
-        client = ReportingClient(api_key="test-key")
+        client = ReportingClient(api_key="test-key", mode="generative_experimental")
 
         with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
             mock_llm.side_effect = Exception("API error")
@@ -316,7 +320,8 @@ class TestReportProvenance:
     async def test_llm_success_provenance(self):
         ep = make_evidence_packet()
         client = ReportingClient(
-            api_key="test-key", model="claude-sonnet-4-20250514", provider="anthropic",
+            api_key="test-key", model="claude-sonnet-4-20250514",
+            provider="anthropic", mode="generative_experimental",
         )
 
         mock_sections = [
@@ -336,6 +341,7 @@ class TestReportProvenance:
         ep = make_evidence_packet()
         client = ReportingClient(
             api_key="test-key", model="llama3.2:latest", provider="ollama",
+            mode="generative_experimental",
         )
 
         mock_sections = [
@@ -350,22 +356,28 @@ class TestReportProvenance:
 
     @pytest.mark.asyncio
     # @spec REPORT-011
-    async def test_fallback_provenance(self):
+    async def test_deterministic_provenance(self):
         ep = make_rich_evidence_packet()
-        client = ReportingClient(api_key="test-key", model="claude-sonnet-4-20250514")
+        client = ReportingClient(
+            api_key="test-key", model="claude-sonnet-4-20250514",
+            mode="generative_experimental",
+        )
 
         with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
             mock_llm.side_effect = Exception("API key invalid")
             report = await client.generate_report(ep)
 
-        assert report.provider == "deterministic_fallback"
-        assert report.model == "deterministic_fallback_v1"
+        assert report.provider == "deterministic"
+        assert report.model == "deterministic_reporter_v1"
         assert report.prompt_version == "N/A"
 
     @pytest.mark.asyncio
     async def test_llm_and_fallback_provenance_differ(self):
         ep = make_rich_evidence_packet()
-        client = ReportingClient(api_key="test-key", model="claude-sonnet-4-20250514")
+        client = ReportingClient(
+            api_key="test-key", model="claude-sonnet-4-20250514",
+            mode="generative_experimental",
+        )
 
         mock_sections = [
             {"heading": "Summary", "body": "Report content.", "evidence_refs": [], "abstention_note": None},
@@ -382,3 +394,73 @@ class TestReportProvenance:
         assert llm_report.provider != fallback_report.provider
         assert llm_report.model != fallback_report.model
         assert llm_report.prompt_version != fallback_report.prompt_version
+
+
+class TestOperationalReportingMode:
+    """Which reporting path is operational.
+
+    In evaluation the generative layer produced no prohibited content but
+    failed the governance contract on all 11 reports: when upstream analytics
+    withheld an analysis, the model omitted the analysis without saying it had
+    been withheld. A component that fails its own governance test does not
+    belong in the operational path, so the deterministic reporter is the
+    default and the generative layer is opt-in and labelled experimental.
+    """
+
+    def test_the_default_mode_is_deterministic(self):
+        assert settings.reporting_mode == "deterministic"
+
+    @pytest.mark.asyncio
+    async def test_the_default_never_calls_the_reporting_llm(self):
+        ep = make_rich_evidence_packet()
+        client = ReportingClient(api_key="test-key")
+
+        with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
+            report = await client.generate_report(ep)
+
+        mock_llm.assert_not_awaited()
+        assert report.provider == "deterministic"
+        assert report.is_experimental is False
+
+    @pytest.mark.asyncio
+    async def test_the_deterministic_reporter_passes_governance(self):
+        # The whole point of making it operational: it names every withheld
+        # indicator, which is the check the generative layer failed.
+        ep = make_rich_evidence_packet()
+        client = ReportingClient(api_key="test-key")
+
+        report = await client.generate_report(ep)
+
+        assert report.validation_passed is True
+        assert report.validation_errors == []
+
+    @pytest.mark.asyncio
+    async def test_generative_output_is_marked_experimental(self):
+        ep = make_evidence_packet()
+        client = ReportingClient(
+            api_key="test-key", provider="anthropic",
+            mode="generative_experimental",
+        )
+        sections = [
+            {"heading": "Review Period Summary", "body": "Observations recorded.",
+             "evidence_refs": [], "abstention_note": None},
+        ]
+        with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
+            mock_llm.return_value = sections
+            report = await client.generate_report(ep)
+
+        assert report.is_experimental is True
+
+    @pytest.mark.asyncio
+    async def test_a_failed_generative_call_falls_back_and_drops_the_marker(self):
+        # The fallback output is deterministic, so it is not experimental --
+        # mislabelling it would understate a report that is in fact governed.
+        ep = make_rich_evidence_packet()
+        client = ReportingClient(api_key="test-key", mode="generative_experimental")
+
+        with patch.object(client, "_call_llm", new_callable=AsyncMock) as mock_llm:
+            mock_llm.side_effect = Exception("API error")
+            report = await client.generate_report(ep)
+
+        assert report.is_experimental is False
+        assert report.provider == "deterministic"
