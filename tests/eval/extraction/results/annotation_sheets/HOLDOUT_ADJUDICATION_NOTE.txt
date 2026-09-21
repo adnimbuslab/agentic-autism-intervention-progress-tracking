@@ -1,0 +1,72 @@
+Held-out adjudication — please read before starting
+===================================================
+
+File to work in: holdout_adjudication_sheet.csv   (133 rows)
+
+This is the last human step in the held-out round. Both of you annotated all
+132 segments independently; these are the fields where your two answers
+differed. Read ADJUDICATION_INSTRUCTIONS.txt for how to fill the `decision`
+column — this note only covers what is different about this round.
+
+
+What the 133 rows actually contain
+----------------------------------
+
+They are not 133 equally hard calls. Sorted by how much thought each needs:
+
+   17 rows   genuine judgements on a categorical field, where the codebook
+             does not settle the disagreement. THIS IS THE REAL WORK.
+             (domain 12, outcome 9, modality 5, prompt_level 5 — minus the 14
+             below that a rule already decides.)
+
+   14 rows   a categorical field where the codebook already settles the pair.
+             The `codebook_rule` column carries the rule. Apply it rather than
+             re-judging the segment — one of you simply did not apply it.
+
+  102 rows   `behavior`, free text. These differ by exact wording almost
+             everywhere. Usually both descriptions say the same thing and
+             either will serve, so `a` or `b` is nearly always right. Type your
+             own only where neither is accurate. These sit last within each
+             segment.
+
+The rows are grouped by segment (105 segments have at least one conflict; 27
+of the 132 were already clean on every field). Read each transcript once and
+settle all of that segment's rows together.
+
+
+Why finishing matters more here than last time
+----------------------------------------------
+
+A segment left undecided on ANY field is dropped from the gold standard
+entirely. Last round that cost a segment out of 330. This set has 132.
+
+If all 133 rows are decided, the held-out gold standard holds all 132 segments.
+Every row left blank costs a whole segment, and this set is the only
+model-independent evidence in the study — the one place where the extraction
+numbers are not affected by how the evaluation batch was chosen. A shrinking
+denominator here weakens exactly the result the set exists to provide.
+
+
+Who adjudicates
+---------------
+
+As in the previous round, the two of you settle these together. That is
+recorded in the paper as a limitation — conflicts resolved by the same pair who
+created them are not equivalent to conflicts resolved by an independent third
+party — so it needs no change in how you work, but please do work through the
+rows jointly rather than splitting them between you.
+
+If a call was genuinely hard, say so in `notes`. Those notes are the evidence
+for whether a field definition is still underspecified, and last round they
+were what identified the three boundaries the codebook now covers.
+
+
+Returning the sheet
+-------------------
+
+Save as CSV under the same file name and send it back. Do not reorder, rename,
+add or delete columns, and do not edit `segment_id`, `field`, or either
+annotator column — they are how the decisions are matched back up.
+
+Partial returns are fine and can be sent in sittings; the import step reports
+how many rows are still blank and how many segments those blanks are costing.

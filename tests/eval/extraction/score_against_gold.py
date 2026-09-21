@@ -207,6 +207,15 @@ def main() -> None:
              "generator is scored against the same reference.",
     )
     parser.add_argument(
+        "--gold",
+        type=Path,
+        default=None,
+        help="Reference standard to score against. Defaults to the main "
+             "batch's gold_labels.json; pass gold_holdout_labels.json when "
+             "scoring the held-out batch. A batch and a gold from different "
+             "rounds share no segment ids and would score nothing.",
+    )
+    parser.add_argument(
         "--out",
         type=Path,
         default=None,
@@ -216,6 +225,7 @@ def main() -> None:
     args = parser.parse_args()
 
     batch_path = args.batch or BATCH_PATH
+    gold_path = args.gold or GOLD_PATH
     out_path = args.out or (
         OUT_PATH
         if batch_path == BATCH_PATH
@@ -223,18 +233,35 @@ def main() -> None:
     )
 
     for path, hint in (
-        (GOLD_PATH, "tests.eval.extraction.adjudicate <a> <b>"),
+        (gold_path, "tests.eval.extraction.adjudicate <a> <b>"),
         (batch_path, "tests.eval.extraction.build_annotation_batch"),
     ):
         if not path.exists():
             raise SystemExit(f"{path} not found. Run `uv run python -m {hint}` first.")
 
+    gold_payload = json.loads(gold_path.read_text())
+    batch_payload = json.loads(batch_path.read_text())
+
+    # A gold and a batch from different rounds overlap on nothing, and an
+    # empty report reads like a catastrophic result rather than a mistake.
+    gold_ids = set(gold_payload.get("gold", {}))
+    batch_ids = {
+        e["segment_id"]
+        for e in (batch_payload.get("candidates") or batch_payload.get("segments") or [])
+    }
+    if gold_ids and batch_ids and not (gold_ids & batch_ids):
+        raise SystemExit(
+            f"{gold_path.name} and {batch_path.name} share no segment ids. "
+            "These are different rounds; pass --gold and --batch from the same one."
+        )
+
     report = score(
-        json.loads(GOLD_PATH.read_text()),
-        json.loads(batch_path.read_text()),
+        gold_payload,
+        batch_payload,
         behavior_match=args.behavior_match,
         threshold=args.overlap_threshold,
     )
+    report["source_gold"] = gold_path.name
     report["source_batch"] = batch_path.name
     out_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     OUT_PATH_USED = out_path

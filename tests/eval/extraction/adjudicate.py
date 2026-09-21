@@ -151,12 +151,17 @@ def build_gold(
     return gold, counts
 
 
-def load_chat_texts() -> dict[str, str]:
-    """Transcripts for the adjudicator to read. Absent batch is not fatal."""
-    if not BATCH_PATH.exists():
+def load_chat_texts(source: Path = BATCH_PATH) -> dict[str, str]:
+    """Transcripts for the adjudicator to read. Absent source is not fatal.
+
+    Two artefact shapes hold transcripts: the batch keys them under
+    "candidates", the held-out set under "segments".
+    """
+    if not source.exists():
         return {}
-    batch = json.loads(BATCH_PATH.read_text())
-    return {e["segment_id"]: e["chat_text"] for e in batch["candidates"]}
+    payload = json.loads(source.read_text())
+    entries = payload.get("candidates") or payload.get("segments") or []
+    return {e["segment_id"]: e["chat_text"] for e in entries}
 
 
 def main() -> None:
@@ -182,7 +187,29 @@ def main() -> None:
              "(import_adjudication_sheet). Skips the interactive prompt; gold "
              "is assembled from these decisions instead.",
     )
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=GOLD_PATH,
+        help="Where to write the gold standard. Defaults to the main batch's "
+             "gold_labels.json. A second reference standard -- the held-out "
+             "set -- MUST pass its own path, or it silently replaces the "
+             "batch gold every published result is scored against.",
+    )
+    parser.add_argument(
+        "--segments",
+        type=Path,
+        default=BATCH_PATH,
+        help="Where transcripts come from, and the batch name recorded in the "
+             "output. Defaults to the frozen annotation batch; pass "
+             "holdout_set.json when adjudicating the held-out round.",
+    )
     args = parser.parse_args()
+
+    if args.out.exists() and args.out != GOLD_PATH:
+        # Belt and braces: the default is the destructive one, so a
+        # non-default path that already exists is worth naming out loud.
+        print(f"Note: {args.out.name} exists and will be replaced.")
 
     names = tuple(args.annotators)
     loaded = []
@@ -237,10 +264,13 @@ def main() -> None:
               f"{sum(len(v) for v in adjudicated.values())} applied"
               + (f", {ignored} ignored (field not in conflict)" if ignored else ""))
         gold, counts = build_gold(agreed, adjudicated, first)
-        _write_gold(gold, counts, names, segments, args.adjudicator)
+        _write_gold(
+            gold, counts, names, segments, args.adjudicator,
+            out=args.out, source=args.segments,
+        )
         return
 
-    chat_texts = load_chat_texts()
+    chat_texts = load_chat_texts(args.segments)
     adjudicated: dict[str, dict[str, Any]] = {}
     if conflicts:
         print("\nAdjudicating conflicts. Enter to leave one unresolved.")
@@ -256,7 +286,10 @@ def main() -> None:
             print("\nStopped -- unresolved segments stay out of the gold standard.")
 
     gold, counts = build_gold(agreed, adjudicated, first)
-    _write_gold(gold, counts, names, segments, args.adjudicator)
+    _write_gold(
+        gold, counts, names, segments, args.adjudicator,
+        out=args.out, source=args.segments,
+    )
 
 
 def _write_gold(
@@ -265,14 +298,20 @@ def _write_gold(
     names: tuple[str, ...],
     segments: list[str],
     adjudicator: str | None = None,
+    out: Path = GOLD_PATH,
+    source: Path = BATCH_PATH,
 ) -> None:
-    """Write gold_labels.json. One path, whether decisions came from a sheet
-    or from the interactive prompt."""
+    """Write the gold standard. One path, whether decisions came from a sheet
+    or from the interactive prompt.
+
+    `out` defaults to the main batch's gold so existing invocations are
+    unchanged; the held-out round passes its own destination.
+    """
     payload = {
         "generated_at": datetime.now(UTC).isoformat(),
         "annotators": list(names),
         "adjudicator": adjudicator,
-        "source_batch": BATCH_PATH.name,
+        "source_batch": source.name,
         "level": "source_gold",
         "fields": FIELDS,
         "n_segments_double_annotated": len(segments),
@@ -293,13 +332,13 @@ def _write_gold(
             "adjudicated subset."
         ),
     }
-    GOLD_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
 
     print(f"\n  agreed        {counts['agreed']}")
     print(f"  adjudicated   {counts['adjudicated']}")
     print(f"  unresolved    {counts['unresolved']} (excluded from gold)")
     print(f"  segments in gold: {len(gold)}")
-    print(f"\nWrote {GOLD_PATH}")
+    print(f"\nWrote {out}")
     print(
         "\nNext: `uv run python -m tests.eval.extraction.score_against_gold` to "
         "score the generators against it."
