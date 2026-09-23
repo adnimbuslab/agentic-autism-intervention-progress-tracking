@@ -60,10 +60,17 @@ class Builder:
 
     def p(self, text: str, *, italic: bool = False, colour: RGBColor | None = None) -> None:
         para = self.doc.add_paragraph()
-        run = para.add_run(text)
-        run.italic = italic
-        if colour is not None:
-            run.font.color.rgb = colour
+        # **text** becomes a bold run. Without this the markers render as
+        # literal asterisks in Word, which is how they had been rendering.
+        for chunk in re.split(r"(\*\*[^*]+\*\*)", text):
+            if not chunk:
+                continue
+            bold = chunk.startswith("**") and chunk.endswith("**")
+            run = para.add_run(chunk[2:-2] if bold else chunk)
+            run.bold = bold or None
+            run.italic = italic
+            if colour is not None:
+                run.font.color.rgb = colour
 
     def bullets(self, items: list[str]) -> None:
         for item in items:
@@ -215,9 +222,12 @@ def build() -> Path:
         "opportunities. A larger, more recent generator added afterwards was "
         "no more accurate and had the highest unsupported-assertion rate of "
         "any model tested; across the roster, unsupported assertion tracked "
-        "willingness to answer rather than capability. Reranking selected "
-        "better than chance but did not improve on always using the strongest "
-        "generator."
+        "willingness to answer rather than capability. On a model-independent "
+        "held-out set of 132 segments, adjudicated to the same standard, every "
+        "generator was less accurate than on the batch (−1.9 to −8.0 points), "
+        "while unsupported-assertion rates and their ordering across "
+        "generators were unchanged. Reranking selected better than chance but "
+        "did not improve on always using the strongest generator."
     )
     b.p(
         "Conclusions. The contribution is the evaluation framework — explicit "
@@ -479,9 +489,14 @@ def build() -> Path:
         b.p(
             "State of the held-out round at the time of writing: "
             + "; ".join(state)
-            + ". Reliability over it is reported below. Accuracy and "
-            "unsupported-assertion rates over it are not, because those "
-            "require the adjudicated reference standard.",
+            + (
+                ". Reliability, accuracy and unsupported-assertion rates over "
+                "it are all reported below."
+                if gold_exists else
+                ". Reliability over it is reported below. Accuracy and "
+                "unsupported-assertion rates over it are not, because those "
+                "require the adjudicated reference standard."
+            ),
             colour=None if gold_exists else RED,
         )
     b.figure(
@@ -916,11 +931,116 @@ def build() -> Path:
                 "This does not invalidate the batch results, which are "
                 "correctly described as accuracy on segments every model could "
                 "attempt. It does bound how far they generalise, and it is the "
-                "reason the held-out sample exists. Accuracy and "
-                "unsupported-assertion rates over it are pending adjudication "
-                "of the held-out reference standard.",
-                colour=RED,
+                "reason the held-out sample exists."
             )
+
+            hm = load(RESULTS / "holdout_metrics.json")
+            if hm:
+                b.h2("Accuracy on the held-out set")
+                hmodels = hm["models_compared"]
+                b.p(
+                    "The held-out reference standard is now adjudicated, so "
+                    "the selection effect can be stated as a difference in "
+                    "accuracy rather than in admission. Both sides are scored "
+                    "against their own model-independent adjudicated gold, "
+                    "over the same "
+                    f"{len(hm['scoring_policy']['scored_fields'])} categorical "
+                    "fields under the same matching rule; the only difference "
+                    "between them is how the segments were chosen."
+                )
+                b.table(
+                    f"Merged mean field accuracy — the mean over the four "
+                    f"categorical fields — on the model-conditioned batch "
+                    f"(n = {hm['batch']['n_segments']}) against the "
+                    f"model-independent held-out set "
+                    f"(n = {hm['holdout']['n_segments']}).",
+                    ["Generator", "Batch", "Held-out", "Change (pts)"],
+                    [
+                        [
+                            m,
+                            pct(hm["delta"][m]["mean_field_accuracy"]["batch"]),
+                            pct(hm["delta"][m]["mean_field_accuracy"]["holdout"]),
+                            f"{100 * hm['delta'][m]['mean_field_accuracy']['delta']:+.1f}",
+                        ]
+                        for m in hmodels
+                    ],
+                )
+                worst = min(
+                    hmodels,
+                    key=lambda m: hm["delta"][m]["mean_field_accuracy"]["delta"],
+                )
+                best_h = max(
+                    hmodels,
+                    key=lambda m: hm["delta"][m]["mean_field_accuracy"]["holdout"],
+                )
+                b.p(
+                    "Every generator is less accurate on segments that were "
+                    "not selected for model tractability. The direction is "
+                    "the same for all "
+                    f"{len(hmodels)}, which is what a selection effect "
+                    "predicts and what a chance difference does not; the "
+                    "magnitude ranges from "
+                    f"{abs(100 * hm['delta'][best_h]['mean_field_accuracy']['delta']):.1f} "
+                    f"to "
+                    f"{abs(100 * hm['delta'][worst]['mean_field_accuracy']['delta']):.1f} "
+                    "points and is largest for the weakest generator "
+                    f"({worst}). The batch figures are therefore optimistic "
+                    "estimates, and the held-out figures are the ones that "
+                    "describe performance on segments drawn without reference "
+                    "to any model."
+                )
+                b.table(
+                    "Unsupported assertion on both sets: values asserted where "
+                    "the gold standard records that the transcript supports "
+                    "none.",
+                    ["Generator", "Batch", "Held-out", "Change (pts)"],
+                    [
+                        [
+                            m,
+                            pct(hm["delta"][m]["unsupported_rate"]["batch"]),
+                            pct(hm["delta"][m]["unsupported_rate"]["holdout"]),
+                            f"{100 * hm['delta'][m]['unsupported_rate']['delta']:+.1f}",
+                        ]
+                        for m in hmodels
+                    ],
+                )
+                worst_unsupported = max(
+                    hmodels,
+                    key=lambda m: hm["holdout"]["per_model"][m]["unsupported_rate"],
+                )
+                b.p(
+                    "The unsupported-assertion finding survives the move to an "
+                    "unbiased sample. Rates are of the same order on both sets "
+                    "and the ordering across generators is unchanged: "
+                    f"{worst_unsupported}, the largest and most recent model in "
+                    "the roster, again asserts an unsupported value on the "
+                    "highest proportion of occasions — "
+                    f"{pct(hm['holdout']['per_model'][worst_unsupported]['unsupported_rate'])} "
+                    "of the opportunities the held-out gold standard provides. "
+                    "Accuracy degrades when the segments stop being easy; the "
+                    "propensity to assert what the text does not support does "
+                    "not improve."
+                )
+                hw, bw_ = hm["whole_record"]["holdout"], hm["whole_record"]["batch"]
+                b.p(
+                    "Whole-record correctness on the held-out set is "
+                    f"{pct(hw['best_generator'])} for the best generator "
+                    f"against an oracle ceiling of {pct(hw['oracle_ceiling'])}, "
+                    f"leaving {100 * hw['headroom']:.1f} points to any "
+                    f"selector. The corresponding four-generator batch figures "
+                    f"are {pct(bw_['best_generator'])}, "
+                    f"{pct(bw_['oracle_ceiling'])} and "
+                    f"{100 * bw_['headroom']:.1f} points. The held-out ceiling "
+                    "is the lower of the two: the segments on which the "
+                    "generators disagree productively are themselves partly a "
+                    "product of how the batch was selected.",
+                )
+                b.p(
+                    "Both reference standards were adjudicated by the same two "
+                    "annotators, so this comparison isolates the effect of "
+                    "segment selection and not of who settled the conflicts.",
+                    italic=True,
+                )
 
     b.h2("Gold standard")
     b.p(
@@ -1009,7 +1129,35 @@ def build() -> Path:
         width=5.6,
     )
 
-    b.h2("Extraction accuracy")
+    b.h2("Agreement with the reference standard")
+    b.p(
+        "Results in this section are reported as agreement with the "
+        "adjudicated reference standard rather than as accuracy. The "
+        "distinction is not cosmetic. A generator is being compared to a value "
+        "two annotators settled between them on a task where, on first pass "
+        "and before any codebook existed, those two annotators independently "
+        "chose the same value on 64% to 81% of segments depending on the "
+        "field. Calling the resulting percentage accuracy implies a fixed "
+        "correct answer that the task does not supply; agreement names what "
+        "was measured."
+    )
+    b.p(
+        "Two quantities are reported separately wherever the split is "
+        "informative, because they are different abilities that fail for "
+        "different reasons. **Agreement where the standard records a value** "
+        "is how often a generator chose the value the annotators settled on. "
+        "**Agreement where the standard records none** is how often it "
+        "correctly recorded nothing on a segment the annotators judged to "
+        "support no value. Merging them into one figure conceals the result "
+        "that on modality the generators reach the level the annotators "
+        "themselves reached, and conceals that the same generators assert "
+        "values freely where the transcript supports none. No merged per-field "
+        "figure is reported for a generator, because on that question it hides "
+        "more than it states. Where one number per generator is unavoidable — "
+        "the held-out comparison, which needs a single scale on which the two "
+        "sets can be compared — the mean over the four fields is used and is "
+        "labelled as merged."
+    )
     b.p(
         "The extraction provider is asked for eight fields. Five were scored "
         "against the adjudicated gold standard — behavior and the four "
@@ -1017,7 +1165,7 @@ def build() -> Path:
         "prompt_context and duration_seconds have no reference standard in "
         "this study, so nothing below constrains how often a model invents "
         "them. The extractor as a whole is therefore not evaluated, and the "
-        "accuracy figures that follow describe five of its eight outputs."
+        "figures that follow describe five of its eight outputs."
     )
     b.p(
         "The three unevaluated fields are confined accordingly. None enters a "
@@ -1031,24 +1179,89 @@ def build() -> Path:
         "asserted here.",
         italic=True,
     )
+    r1_agree = (load(RESULTS / "reliability_round1.json") or {}).get("fields", {})
+    split_src = (
+        load(RESULTS / "holdout_metrics.json") or {}
+    ).get("batch", {}).get("per_model", {})
+
     b.table(
-        f"Acceptable extractions per field (n = {gold['n_segments']}; acceptable "
-        "= correct or correctly null; free-text behavior excluded).",
+        f"Agreement where the reference standard records a value "
+        f"(n = {gold['n_segments']} segments; free-text behavior excluded). The "
+        "final row is how often the two annotators independently chose the "
+        "same value on first pass, before the codebook — a reference level for "
+        "the task, not a like-for-like comparison, since the annotators were "
+        "compared with each other and the generators with the settled value.",
         ["Generator", *fields],
         [
-            [model, *[pct(ext["per_field_accuracy"][model][f]["rate"]) for f in fields]]
-            for model in models
+            *[
+                [
+                    model,
+                    *[
+                        pct(split_src[model]["agreement_where_value_recorded"][f]["rate"])
+                        if model in split_src else "—"
+                        for f in fields
+                    ],
+                ]
+                for model in models
+            ],
+            [
+                "Two annotators, first pass",
+                *[
+                    pct(r1_agree.get(f, {}).get("observed_agreement"))
+                    for f in fields
+                ],
+            ],
         ],
+    )
+    if split_src:
+        rateable = [
+            f for f in fields
+            if split_src[models[0]]["agreement_where_no_value_recorded"][f]["n"] >= 20
+        ]
+        b.table(
+            "Agreement where the reference standard records no value — how "
+            "often a generator correctly recorded nothing. Only fields with "
+            "enough such segments to rate are shown; domain and prompt_level "
+            "have 3 and 2 respectively.",
+            [
+                "Generator",
+                *[
+                    f"{f} (n="
+                    f"{split_src[models[0]]['agreement_where_no_value_recorded'][f]['n']})"
+                    for f in rateable
+                ],
+            ],
+            [
+                [
+                    model,
+                    *[
+                        pct(split_src[model]["agreement_where_no_value_recorded"][f]["rate"])
+                        for f in rateable
+                    ],
+                ]
+                for model in models
+            ],
+        )
+    b.p(
+        "The split is the finding. On modality, where the standard records a "
+        "value, the strongest generator agrees with it on 70.4% of segments "
+        "against the 72% the two annotators reached with each other — "
+        "essentially the level of a second human before training. On the same "
+        "field, where the standard records no value, that generator records "
+        "nothing on only 59.7% of segments. One figure covering both cases "
+        "would sit between them and describe neither."
     )
     b.figure(
         "fig16_field_accuracy.png",
-        "Figure 7. Per-field extraction accuracy against the adjudicated gold "
-        "standard.",
+        "Figure 7. Agreement with the adjudicated reference standard, reported "
+        "separately for segments where the standard records a value and "
+        "segments where it records none. The red line is the agreement the two "
+        "annotators reached with each other on first pass.",
     )
     b.p(
-        "Accuracy and coverage must be read together. qwen2.5:3b returns "
-        "nothing on 277 of 330 segments for prompt_level, so its 4.2% is not "
-        "comparable to the others as a quality figure."
+        "Agreement and coverage must be read together. qwen2.5:3b returns "
+        "nothing on 277 of 330 segments for prompt_level, so its 3.7% there "
+        "is not comparable to the others as a quality figure."
     )
 
     b.table(
@@ -1135,9 +1348,13 @@ def build() -> Path:
             ],
         )
         b.p(
-            "The larger, more recent model is not more accurate. Its mean "
-            "field accuracy is statistically indistinguishable from the best "
-            "of the smaller models, and its whole-record accuracy is lower. "
+            "The larger, more recent model is not more accurate. Its merged "
+            "mean over the four fields is statistically indistinguishable from "
+            "the best of the smaller models, and its whole-record accuracy is "
+            "lower. Split, the picture is sharper rather than better: where "
+            "the standard records a value it agrees more often than any other "
+            "generator on three fields of four, and it reaches that by "
+            "declining almost nothing. "
             "It is, however, markedly less safe: on modality it asserts a "
             "value on 76 of the 77 segments where the gold standard records "
             "that the transcript supports none, and on outcome 111 of 115."
@@ -1157,10 +1374,13 @@ def build() -> Path:
         )
         b.figure(
             "fig22_extended_roster.png",
-            "Figure 13. Left: per-field accuracy across four generators. "
-            "Right: unsupported assertion against abstention rate. The four "
-            "models are consistently ordered; with four points this is a "
-            "descriptive observation, not an estimated relationship.",
+            "Figure 13. Left: agreement where the reference standard records "
+            "a value, across four generators. Right: unsupported assertion "
+            "against abstention rate — the other half of the split, since a "
+            "generator that never declines asserts a value wherever the "
+            "standard records none. The four models are consistently ordered; "
+            "with four points this is a descriptive observation, not an "
+            "estimated relationship.",
         )
         b.p(
             f"Adding the fourth generator raised the oracle ceiling from "
@@ -1422,6 +1642,18 @@ def build() -> Path:
         "clinical impact."
     )
     b.p(
+        "These rates are not an artefact of how the evaluation set was built. "
+        "The batch retained only segments every generator could attempt, which "
+        "makes its accuracy figures optimistic, and the model-independent "
+        "held-out set measures by how much: accuracy falls for every generator "
+        "on segments selected without reference to any model. The "
+        "unsupported-assertion rates do not fall with it. They are of the same "
+        "order on both sets and preserve their ordering across the roster, so "
+        "the propensity to assert what the source does not support is a "
+        "property of the models rather than of the segments they were given — "
+        "which is what makes it the more consequential of the two failures."
+    )
+    b.p(
         "Increasing model size within the locally served models evaluated did "
         "not resolve this failure. A larger and more recent generator, added "
         "after annotation and scored against the same gold, matched the best "
@@ -1594,16 +1826,26 @@ def build() -> Path:
             "three generators produced an admissible response; on the "
             "model-independent held-out sample all three are jointly "
             "admissible on 2.3% of segments against 12.4% of the batch. "
-            "Reported accuracy, unsupported-assertion rates and the oracle "
-            "ceiling therefore describe segments the models could attempt, and "
-            "the corresponding figures on an unselected sample are pending "
-            "adjudication of the held-out reference standard.",
+            "Reported batch accuracy, unsupported-assertion rates and the "
+            "oracle ceiling therefore describe segments the models could "
+            "attempt. The held-out reference standard has since been "
+            "adjudicated, and every generator is less accurate on it, so the "
+            "batch figures are optimistic by a measured margin rather than by "
+            "an unknown one.",
             "Two annotators, one pair, one corpus. Cohen's kappa describes this "
             "pair, and the codebook rules were written after observing where "
             "this pair diverged.",
             "Agreement is not validity. Two annotators converging on a stated "
             "rule is reliability; whether the rule is correct is settled at "
             "adjudication and by argument, not by any statistic.",
+            "Adjudication did not fall evenly between the annotators on the "
+            "held-out round. Of its 133 settled fields, 79 adopted annotator "
+            "B's value and 54 annotator A's (exact binomial p = 0.037), and on "
+            "the 17 categorical judgements the codebook does not settle the "
+            "split was 13 to 4 (p = 0.049). The main batch split 89/90. With "
+            "17 decisions the second figure is fragile, but the claim that "
+            "neither annotator dominated holds for the batch and not for the "
+            "held-out round.",
             "Conflicts were adjudicated by the two annotators jointly rather "
             "than by an independent third party. Decisions split 89/90 between "
             "their respective values, indicating neither dominated, which "
@@ -1671,10 +1913,6 @@ def build() -> Path:
         "quantity is unavailable rather than producing a number."
     )
     extra = [
-        "Extraction accuracy and unsupported-assertion rates on the "
-        "model-independent held-out sample: both annotators have completed it "
-        "and generator runs are recorded, but the reference standard awaits "
-        "adjudication of 133 conflicting fields.",
         "Whether the codebook, rather than accumulated annotator experience, "
         "accounts for the first-pass agreement observed on the held-out round "
         "-- that round has no untreated control.",

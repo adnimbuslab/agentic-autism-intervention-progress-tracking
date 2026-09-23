@@ -331,3 +331,132 @@ class TestAnnotatorClaims:
         # Nothing about the annotators' credentials is known to this
         # repository, so the manuscript must ask for it rather than assert it.
         assert "professional role and qualification" in prose
+
+
+class TestHeldOutResultsAreReported:
+    """The successor to `test_holdout_accuracy_is_not_claimed_without_gold`.
+
+    That test forbade claiming held-out accuracy before a reference standard
+    existed, and retires itself the moment one does. The opposite failure then
+    becomes possible: gold is adjudicated, the numbers exist in the artefacts,
+    and the prose still says the round is pending. These check the second.
+    """
+
+    @pytest.fixture(scope="class")
+    @classmethod
+    def metrics(cls) -> dict:
+        path = RESULTS / "holdout_metrics.json"
+        if not path.exists():
+            pytest.skip("held-out metrics not computed")
+        return json.loads(path.read_text())
+
+    def test_no_pending_language_survives(self, prose, state) -> None:
+        if not state["holdout_gold"]:
+            pytest.skip("held-out gold not adjudicated")
+        for stale in (
+            "pending adjudication",
+            "awaits adjudication",
+            "awaiting adjudication",
+            "require the adjudicated reference standard",
+        ):
+            assert stale not in prose.lower(), stale
+
+    def test_every_generator_delta_is_reported(self, prose, metrics) -> None:
+        for model in metrics["models_compared"]:
+            delta = metrics["delta"][model]["mean_field_accuracy"]
+            for value in (delta["batch"], delta["holdout"]):
+                assert f"{100 * value:.1f}%" in prose, (model, value)
+
+    def test_the_selection_effect_direction_is_stated_correctly(
+        self, prose, metrics
+    ) -> None:
+        # The claim in the prose is that every generator is *less* accurate on
+        # the unselected sample. If a future re-run reverses that for any
+        # model, the sentence becomes false and must be rewritten.
+        deltas = [
+            metrics["delta"][m]["mean_field_accuracy"]["delta"]
+            for m in metrics["models_compared"]
+        ]
+        if all(d < 0 for d in deltas):
+            assert "Every generator is less accurate" in prose
+        else:
+            pytest.fail(
+                f"deltas are no longer uniformly negative ({deltas}); the "
+                "manuscript's selection-effect sentence needs rewriting"
+            )
+
+    def test_both_sides_used_the_same_scoring_policy(self, metrics) -> None:
+        # A comparison across different behavior-matching rules would compare
+        # different quantities; the number would look fine and mean nothing.
+        batch = json.loads((RESULTS / "scored_against_gold_augmented.json").read_text())
+        holdout = json.loads((RESULTS / "scored_holdout.json").read_text())
+        for key in ("scoring_fields", "behavior_match", "behavior_overlap_threshold"):
+            assert batch[key] == holdout[key], key
+        assert metrics["scoring_policy"]["scored_fields"] == batch["scoring_fields"]
+
+    def test_the_holdout_gold_covers_every_double_annotated_segment(
+        self, metrics
+    ) -> None:
+        gold = json.loads((RESULTS / "gold_holdout_labels.json").read_text())
+        # Nothing was lost to an undecided row.
+        assert gold["n_segments_in_gold"] == gold["n_segments_double_annotated"]
+        assert metrics["holdout"]["n_segments"] == gold["n_segments_in_gold"]
+
+
+class TestAgreementFraming:
+    """Agreement, reported split, with the human level beside it.
+
+    A single per-field percentage merged two abilities and hid that on
+    `modality` the generators reach what the annotators reached. The split is
+    now the primary reporting, so these pin both that the framing survives and
+    that the numbers in the prose are the numbers in the artefacts.
+    """
+
+    @pytest.fixture(scope="class")
+    @classmethod
+    def split(cls) -> dict:
+        path = RESULTS / "holdout_metrics.json"
+        if not path.exists():
+            pytest.skip("metrics not computed")
+        return json.loads(path.read_text())["batch"]["per_model"]
+
+    def test_results_are_framed_as_agreement_not_accuracy(self, prose) -> None:
+        assert "Agreement with the reference standard" in prose
+        assert "agreement names what was measured" in prose
+
+    def test_the_two_cases_are_reported_separately(self, prose) -> None:
+        assert "Agreement where the reference standard records a value" in prose
+        assert "Agreement where the reference standard records no value" in prose
+
+    def test_no_merged_per_field_figure_is_reported(self, prose) -> None:
+        # The merged per-field percentage averaged the two abilities and
+        # reported the average as one, so it is not reported at all. The mean
+        # over the four fields survives only where the held-out comparison
+        # needs a single scale, and is labelled as merged there.
+        assert "Merged per-field figure" not in prose
+        assert "No merged per-field figure is reported" in prose
+        assert "Merged mean field accuracy" in prose
+
+    def test_the_modality_result_matches_the_artefact(self, prose, split) -> None:
+        best = "qwen2.5:7b"
+        value = split[best]["agreement_where_value_recorded"]["modality"]["rate"]
+        silence = split[best]["agreement_where_no_value_recorded"]["modality"]["rate"]
+        assert f"{100 * value:.1f}%" in prose
+        assert f"{100 * silence:.1f}%" in prose
+
+    def test_the_human_reference_level_is_stated(self, prose) -> None:
+        r1 = json.loads((RESULTS / "reliability_round1.json").read_text())
+        rates = [
+            v["observed_agreement"]
+            for v in r1["fields"].values()
+            if isinstance(v, dict) and "observed_agreement" in v
+        ]
+        lo, hi = round(100 * min(rates)), round(100 * max(rates))
+        assert f"{lo}% to {hi}%" in prose, (lo, hi)
+
+    def test_the_comparison_is_not_claimed_to_be_like_for_like(
+        self, prose
+    ) -> None:
+        # Annotators were compared with each other; generators with the settled
+        # value. Presenting those as one scale would overstate the comparison.
+        assert "not a like-for-like comparison" in prose

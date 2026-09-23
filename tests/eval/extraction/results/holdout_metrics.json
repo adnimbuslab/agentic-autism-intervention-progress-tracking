@@ -1,0 +1,604 @@
+{
+  "generated_at": "2026-09-22T22:56:09.981120+00:00",
+  "batch": {
+    "source": "annotation_batch_augmented.json",
+    "n_segments": 330,
+    "per_model": {
+      "llama3.2:latest": {
+        "mean_field_accuracy": 0.3083,
+        "per_field_accuracy": {
+          "domain": 0.1788,
+          "modality": 0.503,
+          "prompt_level": 0.2818,
+          "outcome": 0.2697
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.1804
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.6364
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.2835
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.2837
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.0649
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 0.0
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.2435
+          }
+        },
+        "mean_abstention_rate": 0.0818,
+        "per_field_abstention": {
+          "domain": 0.0303,
+          "modality": 0.0333,
+          "prompt_level": 0.1394,
+          "outcome": 0.1242
+        },
+        "unsupported_n": 164,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.8325
+      },
+      "qwen2.5:3b": {
+        "mean_field_accuracy": 0.2045,
+        "per_field_accuracy": {
+          "domain": 0.0879,
+          "modality": 0.3636,
+          "prompt_level": 0.0424,
+          "outcome": 0.3242
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.0795
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.2292
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.0366
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.1767
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 1.0
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.8052
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 1.0
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.6
+          }
+        },
+        "mean_abstention_rate": 0.4811,
+        "per_field_abstention": {
+          "domain": 0.3727,
+          "modality": 0.3667,
+          "prompt_level": 0.8394,
+          "outcome": 0.3455
+        },
+        "unsupported_n": 61,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.3096
+      },
+      "qwen2.5:7b": {
+        "mean_field_accuracy": 0.431,
+        "per_field_accuracy": {
+          "domain": 0.4242,
+          "modality": 0.6788,
+          "prompt_level": 0.2818,
+          "outcome": 0.3394
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.4251
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.7036
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.2805
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.3488
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 0.3333
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.5974
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 0.5
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.3217
+          }
+        },
+        "mean_abstention_rate": 0.1273,
+        "per_field_abstention": {
+          "domain": 0.0061,
+          "modality": 0.1152,
+          "prompt_level": 0.2727,
+          "outcome": 0.1152
+        },
+        "unsupported_n": 112,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.5685
+      },
+      "qwen3:14b": {
+        "mean_field_accuracy": 0.4204,
+        "per_field_accuracy": {
+          "domain": 0.3909,
+          "modality": 0.6424,
+          "prompt_level": 0.3636,
+          "outcome": 0.2848
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.3945
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.834
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.3628
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.4186
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.013
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 0.5
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.0348
+          }
+        },
+        "mean_abstention_rate": 0.0295,
+        "per_field_abstention": {
+          "domain": 0.0727,
+          "modality": 0.0091,
+          "prompt_level": 0.0242,
+          "outcome": 0.0121
+        },
+        "unsupported_n": 191,
+        "unsupported_opportunities": 197,
+        "unsupported_rate": 0.9695
+      }
+    },
+    "whole_record": {
+      "per_generator": {
+        "llama3.2:latest": 0.015151515151515152,
+        "qwen2.5:3b": 0.0030303030303030303,
+        "qwen2.5:7b": 0.045454545454545456,
+        "qwen3:14b": 0.030303030303030304
+      },
+      "oracle_ceiling": 0.08787878787878788
+    }
+  },
+  "holdout": {
+    "source": "holdout_batch.json",
+    "source_gold": "gold_holdout_labels.json",
+    "n_segments": 132,
+    "n_segments_double_annotated": 132,
+    "adjudicator": "both annotators jointly, from the returned adjudication sheet",
+    "per_model": {
+      "llama3.2:latest": {
+        "mean_field_accuracy": 0.2652,
+        "per_field_accuracy": {
+          "domain": 0.1061,
+          "modality": 0.4167,
+          "prompt_level": 0.3409,
+          "outcome": 0.197
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 131,
+            "rate": 0.1069
+          },
+          "modality": {
+            "n": 96,
+            "rate": 0.5312
+          },
+          "prompt_level": {
+            "n": 131,
+            "rate": 0.3435
+          },
+          "outcome": {
+            "n": 107,
+            "rate": 0.1869
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 1,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 36,
+            "rate": 0.1111
+          },
+          "prompt_level": {
+            "n": 1,
+            "rate": 0.0
+          },
+          "outcome": {
+            "n": 25,
+            "rate": 0.24
+          }
+        },
+        "mean_abstention_rate": 0.2197,
+        "per_field_abstention": {
+          "domain": 0.1439,
+          "modality": 0.1515,
+          "prompt_level": 0.303,
+          "outcome": 0.2803
+        },
+        "unsupported_n": 53,
+        "unsupported_opportunities": 63,
+        "unsupported_rate": 0.8413
+      },
+      "qwen2.5:3b": {
+        "mean_field_accuracy": 0.125,
+        "per_field_accuracy": {
+          "domain": 0.0455,
+          "modality": 0.2652,
+          "prompt_level": 0.053,
+          "outcome": 0.1364
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 131,
+            "rate": 0.0458
+          },
+          "modality": {
+            "n": 96,
+            "rate": 0.0729
+          },
+          "prompt_level": {
+            "n": 131,
+            "rate": 0.0458
+          },
+          "outcome": {
+            "n": 107,
+            "rate": 0.0187
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 1,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 36,
+            "rate": 0.7778
+          },
+          "prompt_level": {
+            "n": 1,
+            "rate": 1.0
+          },
+          "outcome": {
+            "n": 25,
+            "rate": 0.64
+          }
+        },
+        "mean_abstention_rate": 0.6345,
+        "per_field_abstention": {
+          "domain": 0.5303,
+          "modality": 0.5,
+          "prompt_level": 0.9015,
+          "outcome": 0.6061
+        },
+        "unsupported_n": 18,
+        "unsupported_opportunities": 63,
+        "unsupported_rate": 0.2857
+      },
+      "qwen2.5:7b": {
+        "mean_field_accuracy": 0.3883,
+        "per_field_accuracy": {
+          "domain": 0.3333,
+          "modality": 0.697,
+          "prompt_level": 0.2273,
+          "outcome": 0.2955
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 131,
+            "rate": 0.3359
+          },
+          "modality": {
+            "n": 96,
+            "rate": 0.75
+          },
+          "prompt_level": {
+            "n": 131,
+            "rate": 0.2214
+          },
+          "outcome": {
+            "n": 107,
+            "rate": 0.271
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 1,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 36,
+            "rate": 0.5556
+          },
+          "prompt_level": {
+            "n": 1,
+            "rate": 1.0
+          },
+          "outcome": {
+            "n": 25,
+            "rate": 0.4
+          }
+        },
+        "mean_abstention_rate": 0.1496,
+        "per_field_abstention": {
+          "domain": 0.0303,
+          "modality": 0.1061,
+          "prompt_level": 0.2803,
+          "outcome": 0.1818
+        },
+        "unsupported_n": 32,
+        "unsupported_opportunities": 63,
+        "unsupported_rate": 0.5079
+      },
+      "qwen3:14b": {
+        "mean_field_accuracy": 0.4015,
+        "per_field_accuracy": {
+          "domain": 0.3182,
+          "modality": 0.6288,
+          "prompt_level": 0.3409,
+          "outcome": 0.3182
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 131,
+            "rate": 0.3206
+          },
+          "modality": {
+            "n": 96,
+            "rate": 0.8438
+          },
+          "prompt_level": {
+            "n": 131,
+            "rate": 0.3435
+          },
+          "outcome": {
+            "n": 107,
+            "rate": 0.3645
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 1,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 36,
+            "rate": 0.0556
+          },
+          "prompt_level": {
+            "n": 1,
+            "rate": 0.0
+          },
+          "outcome": {
+            "n": 25,
+            "rate": 0.12
+          }
+        },
+        "mean_abstention_rate": 0.0322,
+        "per_field_abstention": {
+          "domain": 0.0833,
+          "modality": 0.0,
+          "prompt_level": 0.0303,
+          "outcome": 0.0152
+        },
+        "unsupported_n": 58,
+        "unsupported_opportunities": 63,
+        "unsupported_rate": 0.9206
+      }
+    },
+    "whole_record": {
+      "per_generator": {
+        "llama3.2:latest": 0.0,
+        "qwen2.5:3b": 0.0,
+        "qwen2.5:7b": 0.045454545454545456,
+        "qwen3:14b": 0.03787878787878788
+      },
+      "oracle_ceiling": 0.06060606060606061
+    }
+  },
+  "models_compared": [
+    "llama3.2:latest",
+    "qwen2.5:3b",
+    "qwen2.5:7b",
+    "qwen3:14b"
+  ],
+  "fields": [
+    "domain",
+    "modality",
+    "prompt_level",
+    "outcome"
+  ],
+  "scoring_policy": {
+    "behavior_match": "excluded",
+    "scored_fields": [
+      "domain",
+      "modality",
+      "prompt_level",
+      "outcome"
+    ]
+  },
+  "delta": {
+    "llama3.2:latest": {
+      "mean_field_accuracy": {
+        "batch": 0.3083,
+        "holdout": 0.2652,
+        "delta": -0.0431
+      },
+      "per_field_delta": {
+        "domain": -0.0727,
+        "modality": -0.0863,
+        "prompt_level": 0.0591,
+        "outcome": -0.0727
+      },
+      "unsupported_rate": {
+        "batch": 0.8325,
+        "holdout": 0.8413,
+        "delta": 0.0088
+      },
+      "mean_abstention_rate": {
+        "batch": 0.0818,
+        "holdout": 0.2197,
+        "delta": 0.1379
+      }
+    },
+    "qwen2.5:3b": {
+      "mean_field_accuracy": {
+        "batch": 0.2045,
+        "holdout": 0.125,
+        "delta": -0.0795
+      },
+      "per_field_delta": {
+        "domain": -0.0424,
+        "modality": -0.0984,
+        "prompt_level": 0.0106,
+        "outcome": -0.1878
+      },
+      "unsupported_rate": {
+        "batch": 0.3096,
+        "holdout": 0.2857,
+        "delta": -0.0239
+      },
+      "mean_abstention_rate": {
+        "batch": 0.4811,
+        "holdout": 0.6345,
+        "delta": 0.1534
+      }
+    },
+    "qwen2.5:7b": {
+      "mean_field_accuracy": {
+        "batch": 0.431,
+        "holdout": 0.3883,
+        "delta": -0.0427
+      },
+      "per_field_delta": {
+        "domain": -0.0909,
+        "modality": 0.0182,
+        "prompt_level": -0.0545,
+        "outcome": -0.0439
+      },
+      "unsupported_rate": {
+        "batch": 0.5685,
+        "holdout": 0.5079,
+        "delta": -0.0606
+      },
+      "mean_abstention_rate": {
+        "batch": 0.1273,
+        "holdout": 0.1496,
+        "delta": 0.0223
+      }
+    },
+    "qwen3:14b": {
+      "mean_field_accuracy": {
+        "batch": 0.4204,
+        "holdout": 0.4015,
+        "delta": -0.0189
+      },
+      "per_field_delta": {
+        "domain": -0.0727,
+        "modality": -0.0136,
+        "prompt_level": -0.0227,
+        "outcome": 0.0334
+      },
+      "unsupported_rate": {
+        "batch": 0.9695,
+        "holdout": 0.9206,
+        "delta": -0.0489
+      },
+      "mean_abstention_rate": {
+        "batch": 0.0295,
+        "holdout": 0.0322,
+        "delta": 0.0027
+      }
+    }
+  },
+  "whole_record": {
+    "batch": {
+      "best_generator": 0.045454545454545456,
+      "oracle_ceiling": 0.08787878787878788,
+      "headroom": 0.0424
+    },
+    "holdout": {
+      "best_generator": 0.045454545454545456,
+      "oracle_ceiling": 0.06060606060606061,
+      "headroom": 0.0152
+    }
+  },
+  "note": "Both sides are scored by score_against_gold against their own model-independent adjudicated gold, over the same fields with the same behavior-matching rule. A negative delta means the generator did worse on segments that were not selected for model tractability, which is the quantity the held-out set exists to measure. The two golds were adjudicated by the same pair, so the comparison controls for the segment selection and not for the adjudicators."
+}

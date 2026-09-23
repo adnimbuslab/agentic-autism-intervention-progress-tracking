@@ -259,6 +259,26 @@ def augmented_block(data: dict[str, Any]) -> dict[str, Any] | None:
     if scored is None:
         return None
 
+    return {
+        "source_batch": scored.get("source_batch"),
+        "n_generators": len(scored["models"]),
+        "note": (
+            "The fourth generator was run after annotation and scored against "
+            "the same model-independent gold standard. It contributed no "
+            "candidates to the MARS run or to the three-generator oracle "
+            "ceiling reported above."
+        ),
+        **summarise_scored(scored),
+    }
+
+
+def summarise_scored(scored: dict[str, Any]) -> dict[str, Any]:
+    """Per-model and whole-record metrics from one scored-against-gold file.
+
+    Shared by the extended-roster block and the held-out round rather than
+    written twice: the two report the same quantities over different segments,
+    and two copies would drift the moment one of them was corrected.
+    """
     from tests.eval.extraction.mars_evaluation import (
         oracle_ceiling,
         per_model_accuracy,
@@ -281,9 +301,34 @@ def augmented_block(data: dict[str, Any]) -> dict[str, Any] | None:
         opportunities = hallucinated + sum(
             counts[model].get(f"{f}:correctly_null", 0) for f in fields
         )
+        # The blended per-field figure merges two different abilities:
+        # choosing the right category when the reference standard records one,
+        # and recording nothing when it does not. They fail for different
+        # reasons and are reported separately; the blend is kept because the
+        # held-out comparison and the MARS work are both defined over it.
+        resolved, silent = {}, {}
+        for f in fields:
+            correct = counts[model].get(f"{f}:correct", 0)
+            wrong = counts[model].get(f"{f}:incorrect", 0)
+            absent = counts[model].get(f"{f}:missing", 0)
+            right_silence = counts[model].get(f"{f}:correctly_null", 0)
+            asserted = counts[model].get(f"{f}:hallucinated", 0)
+            has_value = correct + wrong + absent
+            no_value = right_silence + asserted
+            resolved[f] = {
+                "n": has_value,
+                "rate": round(correct / has_value, 4) if has_value else None,
+            }
+            silent[f] = {
+                "n": no_value,
+                "rate": round(right_silence / no_value, 4) if no_value else None,
+            }
+
         per_model[model] = {
             "mean_field_accuracy": round(sum(accept) / len(accept), 4),
             "per_field_accuracy": dict(zip(fields, accept)),
+            "agreement_where_value_recorded": resolved,
+            "agreement_where_no_value_recorded": silent,
             "mean_abstention_rate": round(sum(missing) / len(missing), 4),
             "per_field_abstention": dict(zip(fields, missing)),
             "unsupported_n": hallucinated,
@@ -293,19 +338,10 @@ def augmented_block(data: dict[str, Any]) -> dict[str, Any] | None:
             ),
         }
 
-    accuracy = per_model_accuracy(scored["gold"], models, fields)
     return {
-        "source_batch": scored.get("source_batch"),
-        "n_generators": len(models),
-        "note": (
-            "The fourth generator was run after annotation and scored against "
-            "the same model-independent gold standard. It contributed no "
-            "candidates to the MARS run or to the three-generator oracle "
-            "ceiling reported above."
-        ),
         "per_model": per_model,
         "whole_record": {
-            "per_generator": accuracy,
+            "per_generator": per_model_accuracy(scored["gold"], models, fields),
             "oracle_ceiling": oracle_ceiling(scored["gold"], models, fields),
         },
     }

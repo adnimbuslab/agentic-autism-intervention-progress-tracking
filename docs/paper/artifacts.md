@@ -91,7 +91,7 @@ uv run python docs/paper/verify_artifacts.py --record
 | `tests/eval/extraction/results/annotation_sheets/adjudication_sheet_updated.csv` | Returned adjudication sheet: 503 decisions with rationales (primary data) | `adjudicator (consensus of both annotators)` | 272,213 | `0e2a38568659b73a...` |
 | `tests/eval/extraction/results/adjudications.json` | Imported adjudication decisions | `import_adjudication_sheet` | 127,198 | `8f4a0790e9210290...` |
 | `tests/eval/extraction/results/gold_labels.json` | Adjudicated gold standard: 330 of 330 segments (Table 5) | `adjudicate --decisions` | 121,469 | `32327d787648dac9...` |
-| `tests/eval/extraction/results/scored_against_gold.json` | Per-generator judgements against gold, behavior excluded (Tables 6-8) | `score_against_gold --behavior-match excluded` | 215,465 | `593674e34bcb9470...` |
+| `tests/eval/extraction/results/scored_against_gold.json` | Per-generator judgements against gold, behavior excluded (Tables 6a-8) | `score_against_gold --behavior-match excluded` | 215,465 | `593674e34bcb9470...` |
 | `tests/eval/extraction/results/mars_outcomes.json` | MARS decisions over all 330 segments, 5-model judge roster | `run_mars` | 138,754 | `5310fdff92588266...` |
 | `tests/eval/extraction/results/mars_run_summary.json` | MARS run configuration and per-judge discard rates | `run_mars` | 1,374 | `b9b66b921a6984ec...` |
 | `tests/eval/extraction/results/mars_evaluation.json` | MARS accuracy, coverage, abstention profile, ceiling (Tables 9-10) | `mars_evaluation` | 1,190 | `0ca48149ada6eb78...` |
@@ -103,7 +103,12 @@ uv run python docs/paper/verify_artifacts.py --record
 | `tests/eval/extraction/results/gold_holdout_annotator_a.json` | Annotator A values over the held-out set, codebook from the first segment | `import_gold_sheet --segments holdout_set.json` | 73,723 | `aec54509e3a23214...` |
 | `tests/eval/extraction/results/gold_holdout_annotator_b.json` | Annotator B values over the held-out set, codebook from the first segment | `import_gold_sheet --segments holdout_set.json` | 71,153 | `b2ff833373565814...` |
 | `tests/eval/extraction/results/reliability_holdout.json` | Held-out first-pass reliability under the final protocol | `reliability_stats holdout_annotator_a holdout_annotator_b` | 3,019 | `a406bde1f02a64c6...` |
-| `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 14,085 | `13ba704145cf2f95...` |
+| `tests/eval/extraction/results/annotation_sheets/holdout_adjudication_sheet_completed.csv` | Returned held-out adjudication sheet: 133 conflicted fields, all decided | `export_adjudication_sheet, completed by both annotators jointly` | 61,251 | `e48f22165d102df8...` |
+| `tests/eval/extraction/results/holdout_adjudications.json` | Held-out adjudication decisions imported from the returned sheet | `import_adjudication_sheet --path holdout_adjudication_sheet_completed.csv` | 21,776 | `64acd954c72ebe8f...` |
+| `tests/eval/extraction/results/gold_holdout_labels.json` | Held-out adjudicated reference standard: 132 of 132 segments, none lost | `adjudicate holdout_annotator_a holdout_annotator_b --out gold_holdout_labels.json` | 48,329 | `acd6b4f36ce3362f...` |
+| `tests/eval/extraction/results/scored_holdout.json` | Four-generator judgements against held-out gold, behavior excluded | `score_against_gold --gold gold_holdout_labels.json --batch holdout_batch.json` | 113,367 | `f85d63bdd959cb68...` |
+| `tests/eval/extraction/results/holdout_metrics.json` | Batch vs held-out accuracy and unsupported assertion, same scoring policy | `holdout_metrics` | 14,861 | `17fb997ba28907b3...` |
+| `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 17,243 | `c4886ee99c6e90b6...` |
 | `tests/eval/extraction/results/mars_selection_analysis.json` | Per-field selection quality vs both baselines (Tables 11-12) | `mars_selection_analysis` | 4,376 | `4a7cddcebde27c79...` |
 | `tests/eval/extraction/results/mars_branch_replay.json` | Candidate-stage branch distribution and judge-roster comparison | `mars_branch_replay` | 3,685 | `33466b195d7413d6...` |
 
@@ -121,11 +126,11 @@ uv run python docs/paper/verify_artifacts.py --record
 | `docs/paper/figures/fig13_round_comparison.png` | Figure 13 - reliability before and after, with the control arm | `make_figures` |
 | `docs/paper/figures/fig14_protocol.png` | Figure 14 - two-round protocol with realised counts | `make_figures` |
 | `docs/paper/figures/fig15_codebook_rules.png` | Figure 15 - the three rules as decision tests | `make_figures` |
-| `docs/paper/figures/fig16_field_accuracy.png` | Figure 16 - per-field extraction accuracy against gold | `make_figures` |
+| `docs/paper/figures/fig16_field_accuracy.png` | Figure 16 - agreement with the reference standard, split by whether the standard records a value | `make_figures` |
 | `docs/paper/figures/fig17_unsupported.png` | Figure 17 - values asserted where the transcript supports none | `make_figures` |
 | `docs/paper/figures/fig18_record_ceiling.png` | Figure 18 - whole-record accuracy and the selection ceiling | `make_figures` |
 | `docs/paper/figures/fig19_behavior_overlap.png` | Figure 19 - free-text behavior against the human reference band | `make_figures` |
 | `docs/paper/figures/fig20_mars_outcomes.png` | Figure 20 - MARS outcomes and comparison against the best generator | `make_figures` |
 | `docs/paper/figures/fig21_selection.png` | Figure 21 - selection quality against both baselines | `make_figures` |
-| `docs/paper/figures/fig22_extended_roster.png` | Figure 22 - four-generator accuracy and the abstention trade-off | `make_figures` |
+| `docs/paper/figures/fig22_extended_roster.png` | Figure 22 - four-generator agreement and the abstention trade-off | `make_figures` |
 | `docs/paper/Manuscript_Working_Draft.docx` | Working-draft manuscript, assembled from the artefacts above | `make_manuscript` |

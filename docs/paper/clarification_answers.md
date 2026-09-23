@@ -405,11 +405,15 @@ models' self-ratings are not trustworthy on their own.
 - **Confirmed:** four-generator MARS performance has **not** been experimentally
   reported. No MARS run has been executed with `qwen3:14b` as a generator.
 - **Correction to the premise:** the question states all four generators are now
-  integrated into the application. All four are runnable through the same
-  `ExtractionProvider` interface, and all four have been *evaluated*. Whether
-  they are wired into the deployed application's default configuration is a
-  separate matter and should be stated only if verified; the evaluation work
-  does not establish it.
+  integrated into the application. **They are not.** All four are runnable
+  through the same `ExtractionProvider` interface and all four have been
+  *evaluated*, but the deployed default is a single provider —
+  `settings.ollama_model = "llama3.2:latest"` — and the MARS composing provider
+  is not reachable from the factory in `src/backend/ml/extraction/__init__.py`.
+  That is now asserted by a test
+  (`test_manuscript_consistency.py::test_reranking_is_not_reachable_from_the_provider_factory`),
+  so the claim cannot quietly become false. See round-2 Q6, which supersedes the
+  hedge that stood here previously.
 
 The three-generator oracle ceiling (6.1%) and the MARS results describe the
 three-generator roster. Adding `qwen3:14b` raises the ceiling to 8.8%, but that
@@ -426,6 +430,15 @@ contestants would be unsupported.
 ## D. Reporting LLM and governance validation
 
 ### Q16 — Reporting LLM configuration
+
+> **Status update (2026-09-22).** The configuration below is what produced the
+> reported evaluation and is unchanged. What *has* changed is its standing: the
+> generative reporting layer is no longer the operational path. Because it
+> failed governance validation on 11/11 reports, `settings.reporting_mode` now
+> defaults to `"deterministic"` and the reporting model is called only when the
+> mode is explicitly set to `"generative_experimental"`, with its output marked
+> `is_experimental`. The evaluation result is unaffected — no prompt, schema or
+> validator was touched. See round-2 Q7.
 
 **Answer.** `src/backend/ml/reporting_client.py`; evaluation harness at
 `tests/eval/reporting/groundedness.py`.
@@ -556,7 +569,11 @@ only afterwards, to mark the results.
 
 **Answer.**
 
-- **Commit:** `6163d13` (`6163d1306049c401ed0b25bf8c6d2bc986f40194`), 2026-09-19.
+- **Commit:** `6163d13` (`6163d1306049c401ed0b25bf8c6d2bc986f40194`), 2026-09-19,
+  is the commit the reported generator, MARS and reporting results were produced
+  at. Work since then (the held-out adjudication, the verification gate, the
+  reporting-mode default) sits on top of it and changed none of those results;
+  state the final submission commit here before submission.
 - **Runtime:** Python 3.12.12, Ollama 0.33.3, `anthropic` 1.2.0, `openai` 3.5.0,
   `pydantic` 2.13.4. Full lock in `uv.lock`.
 - **Model digests:** Q2.
@@ -564,8 +581,8 @@ only afterwards, to mark the results.
   sampling 20260916; held-out sheet ordering 8484; bootstrap 20260915 /
   20260916 at 10,000 replicates; MARS run seed `mars-full-330-v2`. **No
   generation seed was set** — see Q6.
-- **Artefact manifest:** `docs/paper/artifact_manifest.json` — 51 artefacts, 33
-  pinned by SHA-256. Human-readable listing and the full reproduction sequence:
+- **Artefact manifest:** `docs/paper/artifact_manifest.json` — 56 artefacts, 38
+  pinned by SHA-256 (was 51/33 before the held-out round was adjudicated). Human-readable listing and the full reproduction sequence:
   `docs/paper/artifacts.md`. Verify with
   `uv run python docs/paper/verify_artifacts.py`.
 
@@ -579,6 +596,8 @@ Key paths:
 | Reporting client + validator | `src/backend/ml/reporting_client.py` |
 | Frozen annotation batch | `tests/eval/extraction/results/annotation_batch.json` |
 | Adjudicated gold standard | `tests/eval/extraction/results/gold_labels.json` |
+| Held-out reference standard | `tests/eval/extraction/results/gold_holdout_labels.json` |
+| Held-out vs batch comparison | `tests/eval/extraction/results/holdout_metrics.json` |
 | MARS run config + judge reliability | `tests/eval/extraction/results/mars_run_summary.json` |
 | Consolidated metrics | `tests/eval/extraction/results/paper_metrics.json` |
 

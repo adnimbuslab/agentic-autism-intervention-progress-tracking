@@ -1,35 +1,48 @@
 # Reviewer Issue Remediation Report
 
 **Scope:** work done against `JMIR_Strict_Reviewer_Critical_Issues_Prioritized.docx`
+and `JMIR_AI_Model_Reranking_Clarification_Questions.docx`
 **Branch:** `model-finetuning`
-**Date:** 2026-09-21
-**Test suite at close:** 1306 passed, 3 skipped (66 tests added this round)
-**Artefact manifest:** 33 pinned artefacts, all matching
+**Date:** 2026-09-21, updated 2026-09-22
+**Test suite at close:** 1319 passed, 4 skipped
+**Artefact manifest:** 38 pinned artefacts, all matching
 
 ---
 
 ## Summary
 
-| # | Issue | Status | Where it was fixed |
-|---|---|---|---|
-| 1 | Unverified AI output reaching longitudinal analytics | **Closed** | Code + migration + figure + manuscript |
-| 3 | ASDBank does not match the intended input distribution | **Closed** (reframed) | Manuscript |
-| 4 | Reporting LLM failed its own governance contract | **Closed** (option b) | Code + docs + manuscript |
-| 6 | 8 fields generated, only 5 evaluated | **Closed** | Verified in code, pinned by tests, stated in manuscript |
-| 7 | Adequacy thresholds not clinically validated | **Closed** (relabelled) | Manuscript + LLD + config + manual |
-| 9 | Kitchen-sink paper — no single primary contribution | **Closed** | Manuscript, title through conclusions |
-| 10 | No independent usability/workflow evaluation | **Closed** (bounded) | Manuscript |
-| 5 | Ethics/IRB determination | **Partially addressed** — wording corrected, determination still external |
-| 8 | Annotator qualifications | **Scaffolded** — verifiable part done, credentials needed from you |
-| 2 | Held-out adjudication unfinished | **Open** — needs your annotators |
-| 11 | Reproducibility / release placeholders | **Open** — needs your decisions |
-| 12 | Generative-AI disclosure and citation audit | **Partially drafted** — blocked on References |
+`JMIR_Strict_Reviewer_Critical_Issues_Prioritized.docx` raises **12 issues**.
+All 12 have a section below, in the document's own order and numbering. The
+separate `JMIR_AI_Model_Reranking_Clarification_Questions.docx` raises 20
+questions; those are audited in Appendix A, not numbered here.
 
-Two problems were found during the work that the reviewer had not flagged. Both are recorded in full below (§1.1, §5.1).
+| # | Issue | Priority | Status |
+|---|---|---|---|
+| 1 | Extraction too weak to allow unverified AI output into analytics | Critical | **Closed** — mandatory verification gate, enforced in code |
+| 2 | Unbiased held-out evaluation unfinished | Critical | **Closed** — adjudicated 2026-09-22, 132/132 segments |
+| 3 | Evaluation data does not match the intended input distribution | Critical | **Closed** — reframed as proxy/component evaluation |
+| 4 | Reporting LLM failed its own governance contract | Critical | **Closed** — option (b): declared experimental, deterministic operational |
+| 5 | Ethics/IRB must cover more than the public corpus | Critical | **Partially addressed** — overclaim corrected; determination external |
+| 6 | 8 fields generated, only 5 evaluated | High | **Closed** — scope verified in code, pinned by tests, stated |
+| 7 | Adequacy thresholds not clinically validated | High | **Closed** — relabelled prototype thresholds in four places |
+| 8 | Gold-standard expert description needs detail | High | **Scaffolded** — coverage verified; credentials needed from you |
+| 9 | Kitchen-sink paper — no single primary contribution | High | **Closed** — evaluation framework primary, throughout |
+| 10 | No independent usability/workflow evaluation | Moderate | **Closed** (bounded) — benefits marked undemonstrated |
+| 11 | Reproducibility and data-release details | Moderate | **Open** — needs release decisions from you |
+| 12 | Generative-AI disclosure and citation audit | Moderate | **Partially drafted** — blocked on the reference list |
+
+**8 closed, 2 partial, 1 scaffolded, 1 open.** Everything not closed is blocked
+on something external to this repository — an IRB determination, your
+annotators' credentials, or a release decision — not on work that could have
+been done here.
+
+Two problems were found during the work that the reviewer had not flagged, and
+both are recorded in full: the missing frontend `lib/` directory (Issue 1 §a)
+and an overclaim in the ethics section (Issue 5).
 
 ---
 
-## 1. Verification gate (Issue #1) — **Closed**
+## Issue 1 — Unverified AI output reaching longitudinal analytics · **Closed**
 
 ### The defect
 
@@ -73,7 +86,7 @@ Deterministic validation establishes that a record is *schema-conformant*. It ca
 - Manuscript: new Discussion subsection *"Consequences for the application: a mandatory verification gate"*.
 - `docs/User_and_Demo_Manual.md`: record statuses rewritten with analytics-eligibility stated per status; new "The Verification Gate" section.
 
-### 1.1 Found during this work — frontend `lib/` is missing
+### (a) Found during this work — frontend `lib/` is missing
 
 `.gitignore` line 17 carried an unanchored `lib/` from the standard Python template. It was silently ignoring `src/frontend/lib/` — the API client, hooks (`useRecords`), types, and formatters that **every** page and component imports. The directory is absent from git *and* from disk.
 
@@ -81,7 +94,77 @@ Fixed the pattern (`/lib/`, `/lib64/`) so the directory can be committed. **The 
 
 ---
 
-## 2. Reporting layer declared experimental (Issue #4) — **Closed**
+## Issue 2 — The unbiased held-out evaluation is unfinished · **Closed** *(2026-09-22)*
+
+The returned sheet `holdout_adjudication_sheet_completed.csv` was checked before import: 133 of 133 rows decided, no blanks, and no edits to `segment_id`, `field`, either annotator column, the transcript or the codebook rule. **All 132 segments entered gold — nothing was lost to an undecided row.**
+
+### Pipeline run
+
+```
+import_adjudication_sheet  → holdout_adjudications.json   (133 decisions)
+adjudicate                 → gold_holdout_labels.json     (132/132 segments)
+score_against_gold         → scored_holdout.json          (4 generators)
+holdout_metrics            → holdout_metrics.json         (batch vs held-out)
+```
+
+`gold_labels.json` was verified byte-identical before and after.
+
+### Result: the selection effect, measured
+
+Mean accuracy over the four categorical fields, same gold-building procedure, same scoring policy on both sides:
+
+| Generator | Batch (n=330) | Held-out (n=132) | Change |
+|---|---|---|---|
+| llama3.2:latest | 30.8% | 26.5% | −4.3 |
+| qwen2.5:3b | 20.4% | 12.5% | −8.0 |
+| qwen2.5:7b | 43.1% | **38.8%** | −4.3 |
+| qwen3:14b | 42.0% | 40.2% | −1.9 |
+
+Every generator is worse on segments not selected for model tractability. Uniform direction across all four is what a selection effect predicts and a chance difference does not.
+
+Unsupported assertion, by contrast, **does not improve**: 92.1% for qwen3:14b on held-out against 97.0% on the batch, still the highest in the roster. The paper's central safety finding survives the move to an unbiased sample — accuracy degrades when segments stop being easy, the propensity to assert unsupported values does not.
+
+Whole-record: held-out best 4.5%, ceiling 6.1%, headroom 1.5 points (four-generator batch: 4.5% / 8.8% / 4.2%).
+
+### A scoring-policy mismatch, caught before it reached the manuscript
+
+The first held-out scoring run used the tool's default `--behavior-match overlap` (five fields). The published batch policy is `excluded` (four categorical fields). Mean accuracy over four fields and over five are different quantities, and subtracting one from the other yields a plausible number with no meaning — it would have understated the held-out side and **inflated the reported selection effect**. Nothing downstream would have revealed it.
+
+Held-out was re-scored under the published policy, and `holdout_metrics.check_same_policy` now refuses the comparison outright when `scoring_fields`, `behavior_match` or `behavior_overlap_threshold` differ.
+
+### Adjudication was not balanced on this round
+
+| Rows | A adopted | B adopted | Exact binomial p |
+|---|---|---|---|
+| All 133 | 54 | 79 | 0.037 |
+| 17 genuine categorical judgements | 4 | 13 | 0.049 |
+| 14 codebook-settled | 5 | 9 | 0.424 |
+| 102 behavior wording | 45 | 57 | 0.276 |
+
+The main batch split 89/90. The claim that neither annotator dominated holds for the batch and **not** for the held-out round. With 17 decisions the second figure is fragile, but it is now stated in Limitations rather than omitted.
+
+### Also changed
+
+- `tests/eval/extraction/holdout_metrics.py` — new; pairs the two sides. Reuses `summarise_scored`, which was extracted from `paper_metrics.augmented_block` so the two report identical quantities and cannot drift.
+- Manuscript — new Results subsection "Accuracy on the held-out set" (two tables); held-out findings added to the Abstract and Discussion; the "Not measured" entry deleted; the Limitations entry rewritten from "pending adjudication" to a measured margin; adjudication-balance limitation added.
+- `TestHeldOutResultsAreReported` (5 tests) — the successor to `test_holdout_accuracy_is_not_claimed_without_gold`, which retired itself the moment gold appeared. The new class catches the opposite failure: gold exists, numbers exist, prose still says pending. It also re-derives every quoted delta from the artefact and fails if the deltas stop being uniformly negative, since that would falsify the sentence in the manuscript.
+- Five new artefacts pinned by checksum (38 total).
+
+---
+
+## Issue 3 — Evaluation data does not match the intended input distribution · **Closed**
+
+The manuscript now states the relationship explicitly in Methods rather than leaving it to a Limitations bullet. The evaluated data differs from the application's intended input in three respects, each of which could affect extraction:
+
+- **Authorship** — a transcript records what was said, not what an observer chose to report.
+- **Register** — a contributor writes retrospective prose about a child; a transcript is verbatim dialogue.
+- **Provenance** — a contributor writes with a goal in mind; a transcript has no such framing.
+
+Added: a Methods paragraph stating the proxy relationship and why these corpora were chosen (autism interaction data, permissive research access, enough structure to annotate consistently; no corpus of real intervention notes is publicly available); a statement that every extraction result is a component evaluation on proxy data; the sentence "**Extraction is not validated on real intervention notes**" in Limitations; matching qualifiers in the Abstract (Methods and Conclusions) and in the Discussion conclusions; a "Not measured" entry.
+
+---
+
+## Issue 4 — The reporting LLM failed its own governance contract · **Closed**
 
 Option (b) was chosen: keep the generative layer experimental, make the deterministic reporter operational.
 
@@ -117,19 +200,23 @@ A failed generative call still falls back to the deterministic reporter, and the
 
 ---
 
-## 3. ASDBank reframed as proxy evaluation (Issue #3) — **Closed**
+## Issue 5 — Ethics/IRB status must cover more than the public corpus · **Partially addressed**
 
-The manuscript now states the relationship explicitly in Methods rather than leaving it to a Limitations bullet. The evaluated data differs from the application's intended input in three respects, each of which could affect extraction:
+The determination itself is external and still outstanding. What could be done here was the wording, and it needed doing: the ethics section contained an overclaim.
 
-- **Authorship** — a transcript records what was said, not what an observer chose to report.
-- **Register** — a contributor writes retrospective prose about a child; a transcript is verbatim dialogue.
-- **Provenance** — a contributor writes with a goal in mind; a transcript has no such framing.
+The Ethical considerations section said:
 
-Added: a Methods paragraph stating the proxy relationship and why these corpora were chosen (autism interaction data, permissive research access, enough structure to annotate consistently; no corpus of real intervention notes is publicly available); a statement that every extraction result is a component evaluation on proxy data; the sentence "**Extraction is not validated on real intervention notes**" in Limitations; matching qualifiers in the Abstract (Methods and Conclusions) and in the Discussion conclusions; a "Not measured" entry.
+> "No data was collected from human participants for this work, no participants were recruited or contacted…"
+
+Two autism intervention specialists produced the annotations, and their agreement with one another — **including how it changed between rounds** — is analysed and reported. That is human-generated research data, and the sentence as written could be read as denying it. This sits directly under reviewer issue #5.
+
+Corrected to "no **child** data was collected", with a new paragraph stating that the specialists' labels are research data about a coding scheme rather than about the annotators, that no individual annotator is identified or characterised by performance, and that whether this makes them research participants, expert consultants or neither is **a determination for the reviewing institution rather than for the authors** — put to the Board explicitly rather than assumed. The IRB placeholder now requires the determination to address all three categories separately: archival child corpora, specialist annotation and adjudication, and human involvement in application testing.
+
+**Still required before submission:** the determination as issued, with institution, exact wording and protocol number, addressing all three categories separately — the archival child corpora, the specialist annotation and adjudication, and any human involvement in application testing. Also the licence terms of both corpora and the scope of depositor consent for secondary computational analysis.
 
 ---
 
-## 4. Five of eight fields (Issue #6) — **Closed**
+## Issue 6 — Eight fields generated, five evaluated · **Closed**
 
 ### Verified before writing
 
@@ -148,7 +235,7 @@ Checking the code rather than assuming: **the three unevaluated fields are read 
 
 ---
 
-## 5. Adequacy thresholds relabelled (Issue #7) — **Closed**
+## Issue 7 — Adequacy thresholds are not clinically validated · **Closed**
 
 The claim attached to the thresholds is now that withholding is **deterministic, inspectable and auditable** — not that these are the numbers at which evidence becomes clinically sufficient. No expert-consensus procedure set them, no sensitivity analysis has been run, and no outcome has been measured against them.
 
@@ -159,19 +246,27 @@ Stated in four places, so the framing cannot be met in one and contradicted in a
 - `src/backend/config.py` — at the point of definition.
 - `docs/User_and_Demo_Manual.md` — where a reader first meets the adequacy levels.
 
-### 5.1 Found during this work — an overclaim in the ethics section
+---
 
-The Ethical considerations section said:
+## Issue 8 — Gold-standard expert description needs more detail · **Scaffolded**
 
-> "No data was collected from human participants for this work, no participants were recruited or contacted…"
+New Methods section *"Annotators"* in two halves.
 
-Two autism intervention specialists produced the annotations, and their agreement with one another — **including how it changed between rounds** — is analysed and reported. That is human-generated research data, and the sentence as written could be read as denying it. This sits directly under reviewer issue #5.
+**What I need from you** (marked `[TO COMPLETE BEFORE SUBMISSION]`), per annotator: professional role and qualification; years of relevant experience; prior experience with structured behavioural coding; what preparation they received and from whom; any relationship to the study or authors bearing on independence.
 
-Corrected to "no **child** data was collected", with a new paragraph stating that the specialists' labels are research data about a coding scheme rather than about the annotators, that no individual annotator is identified or characterised by performance, and that whether this makes them research participants, expert consultants or neither is **a determination for the reviewing institution rather than for the authors** — put to the Board explicitly rather than assumed. The IRB placeholder now requires the determination to address all three categories separately: archival child corpora, specialist annotation and adjudication, and human involvement in application testing.
+**What the artefacts already establish** — verified against the files, not asserted:
+
+| Claim | Verified |
+|---|---|
+| Both annotated the full main batch | `gold_annotator_a.json` 330, `gold_annotator_b.json` 330 |
+| Both annotated the full held-out set | `gold_holdout_annotator_a.json` 132, `gold_holdout_annotator_b.json` 132 |
+| Conflicts adjudicated jointly, 89/90 split | Already reported; neither annotator dominated |
+
+The same pair helped identify the three underspecified definitions and then annotated under the codebook resolving them — recorded as a limitation, not presented as independence. Three tests read the counts from the artefacts and fail if the prose and the files disagree.
 
 ---
 
-## 6. Contribution hierarchy (Issue #9) — **Closed**
+## Issue 9 — The manuscript risks becoming a 'kitchen-sink' paper · **Closed**
 
 Per your decision, **the evaluation framework is the primary contribution.** The four elements are now enumerated in the Introduction, each tied to a question a conventional accuracy report leaves open:
 
@@ -192,7 +287,7 @@ Carried through the Abstract conclusion, the Discussion, and the Conclusions ("T
 
 ---
 
-## 7. Usability claims bounded (Issue #10) — **Closed**
+## Issue 10 — No independent usability/workflow evaluation · **Closed** (bounded)
 
 Searched for demonstrated-benefit language rather than assuming none existed: no such claim was present. Added explicitly:
 
@@ -203,25 +298,83 @@ Searched for demonstrated-benefit language rather than assuming none existed: no
 
 ---
 
-## 8. Annotator qualifications (Issue #8) — **Scaffolded**
+## Issue 11 — Reproducibility and data-release details · **Open**
 
-New Methods section *"Annotators"* in two halves.
+Blocked on decisions only you can make: repository or archive URL, release tag, licence, and exactly which artefacts may be redistributed under TalkBank/ASDBank terms.
 
-**What I need from you** (marked `[TO COMPLETE BEFORE SUBMISSION]`), per annotator: professional role and qualification; years of relevant experience; prior experience with structured behavioural coding; what preparation they received and from whom; any relationship to the study or authors bearing on independence.
+What exists already and does not need redoing: 56 artefacts recorded, 38 pinned by SHA-256 (`docs/paper/artifact_manifest.json`), a full reproduction sequence in `docs/paper/artifacts.md`, seeds and runtime versions documented in clarification answer Q20, and a stated reproducibility boundary — everything downstream of the recorded generator outputs is deterministic; regenerating those outputs is not, because no generation seed was set.
 
-**What the artefacts already establish** — verified against the files, not asserted:
-
-| Claim | Verified |
-|---|---|
-| Both annotated the full main batch | `gold_annotator_a.json` 330, `gold_annotator_b.json` 330 |
-| Both annotated the full held-out set | `gold_holdout_annotator_a.json` 132, `gold_holdout_annotator_b.json` 132 |
-| Conflicts adjudicated jointly, 89/90 split | Already reported; neither annotator dominated |
-
-The same pair helped identify the three underspecified definitions and then annotated under the codebook resolving them — recorded as a limitation, not presented as independence. Three tests read the counts from the artefacts and fail if the prose and the files disagree.
+The `Data availability` section of the manuscript carries a `[TO COMPLETE BEFORE SUBMISSION]` marker naming exactly these decisions.
 
 ---
 
-## Manuscript consistency tests
+## Issue 12 — Generative-AI disclosure and citation audit · **Partially drafted**
+
+The AI-use disclosure is written and is honest about the dual role: the extraction and judge models are the object of study, and AI assistance was also used for evaluation tooling and manuscript drafting. It states that no AI system authored, selected or altered a gold-standard value, an adjudication decision or a reported statistic — every annotation and adjudication is human, statistics are computed by code from recorded artefacts, and tests re-derive each reported number from its artefact.
+
+**Blocked:** the citation audit cannot begin, because no reference list exists yet (see *Still open*). Author contributions and conflict-of-interest declarations are also unwritten.
+
+**Note if a frontier arm is added:** benchmarking Claude models in a manuscript drafted with Claude Code has to be stated plainly in this section. It is not disqualifying; it has to be visible.
+
+---
+
+## Appendix A — Clarification-questions coverage audit *(2026-09-22)*
+
+`JMIR_AI_Model_Reranking_Clarification_Questions.docx` asks 20 questions in five
+sections. **All 20 are answered** in `docs/paper/clarification_answers.md`, and
+a follow-up round of 8 is answered in `docs/paper/clarification_answers_round2.md`.
+
+| Section | Questions | Status |
+|---|---|---|
+| A. Model use and inference configuration | 1–3 | Answered |
+| B. Extraction prompt, schema, admission logic | 4–8 | Answered |
+| C. MARS multi-judge reranking | 9–15 | Answered (Q15 premise corrected) |
+| D. Reporting LLM and governance validation | 16–18 | Answered (Q16 status updated) |
+| E. Learning boundary and reproducibility | 19–20 | Answered (Q20 refreshed) |
+
+Three of the answers **correct the premise of the question** rather than
+confirming it, which is the part most likely to matter to a reviewer:
+
+- **Q15** asked us to confirm that all four generators are integrated into the
+  application. They are not. The deployed default is one provider
+  (`llama3.2:latest`), and the MARS composing provider is not reachable from the
+  factory.
+- **Round-2 Q6** asked whether the application runs a multi-candidate roster.
+  It does not.
+- **Round-2 Q7** asked about reporting remediation. None was performed; the
+  negative result stands with no post-remediation counterpart.
+
+### What this audit found: four answers had gone stale
+
+The answer sheets are written prose, not generated from artefacts, so this
+session's work invalidated claims in them without anything failing:
+
+| Answer | Was | Now |
+|---|---|---|
+| Round-2 **Q3** | "Adjudication is not complete. No held-out gold standard exists" | Complete. Full results table, whole-record figures, and the adjudication-balance caveat |
+| Round-2 **Q6** | Extraction path only | Adds the analytics verification gate and the deterministic reporting default |
+| Round-2 **Q7** | "No remediation, no rerun" | Still true, plus: the layer was removed from the operational path — a *deployment decision, not a remediation*, and the distinction is stated |
+| Round-1 **Q15** | "should be stated only if verified" | Resolved: not integrated, and a test now asserts it |
+| Round-1 **Q16** | Reporting config | Status note: config unchanged, but the layer is no longer operational |
+| Round-1 **Q20** | 51 artefacts, 33 pinned | 56 artefacts, 38 pinned; held-out paths added; commit provenance clarified |
+
+Superseded text was **kept** under its own heading rather than overwritten,
+because an answer given when a result did not exist is itself a record of what
+was known when the question was asked.
+
+### Guard added
+
+`tests/eval/extraction/test_clarification_answers.py` (9 tests) checks that both
+sheets answer every question, and that the claims they make about the running
+system still hold: the deployed model name matches `settings.ollama_model`, the
+reporting default matches `settings.reporting_mode`, the verification gate is
+described, MARS is still stated as unreachable, and the held-out answer matches
+whether `gold_holdout_labels.json` actually exists. The manifest counts quoted in
+Q20 are re-derived from the manifest.
+
+---
+
+## Appendix B — Manuscript consistency tests
 
 `tests/eval/extraction/test_manuscript_consistency.py` grew by 18 tests across four new classes, each guarding a claim that is a one-edit slip away from becoming false:
 
@@ -238,13 +391,12 @@ Two pre-existing failures in this file were also repaired: `TestDeploymentScope`
 
 | # | Item | Blocked on |
 |---|---|---|
-| 2 | Held-out adjudication — 133 conflicting fields | Your annotators. **Highest-value remaining item**: data and generator runs already exist |
 | 5 | IRB determination | External. Must cover corpus, specialists, and application testers separately |
-| 8 | Annotator credentials | You — five facts listed in §8 |
+| 8 | Annotator credentials | You — five facts listed under Issue 8 |
 | 11 | Repo URL, release tag, licence, TalkBank redistribution scope | Your decisions |
 | — | "Comparison with prior work" | 14 claims need citation; section unwritten |
 | 12 | Citation audit | Cannot start until References exists. The AI-use disclosure itself is drafted and honest |
-| — | `src/frontend/lib/` | Must be restored before the frontend builds (§1.1) |
+| — | `src/frontend/lib/` | Must be restored before the frontend builds (Issue 1 §a) |
 
 Six `[TO COMPLETE BEFORE SUBMISSION]` markers remain in `make_manuscript.py`: Annotators, Ethics/IRB, Comparison with prior work, Data availability, Author contributions/COI, References.
 
@@ -271,10 +423,10 @@ Net: **+1219 / −186** lines across 32 files.
 
 ```
 uv run pytest tests/ -q --ignore=tests/phase6/integration
-# 1306 passed, 3 skipped
+# 1319 passed, 4 skipped
 
 uv run python docs/paper/verify_artifacts.py
-# Checked 33 pinned artefacts against docs/paper/artifact_manifest.json
+# Checked 38 pinned artefacts against docs/paper/artifact_manifest.json
 # All pinned artefacts match the manifest.
 
 uv run python docs/paper/make_manuscript.py

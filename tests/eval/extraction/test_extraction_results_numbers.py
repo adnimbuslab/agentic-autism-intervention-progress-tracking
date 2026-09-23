@@ -50,6 +50,13 @@ def flat(prose) -> str:
 
 
 @pytest.fixture(scope="module")
+def section(prose) -> str:
+    """Just the per-field agreement section, headings excluded."""
+    start = prose.index("### Agreement with the reference standard, per field")
+    return prose[start:prose.index("\n### ", start + 1)]
+
+
+@pytest.fixture(scope="module")
 def scored() -> dict:
     return _require(SCORED)
 
@@ -61,6 +68,19 @@ def gold() -> dict:
 
 def _pct(value: float) -> str:
     return f"{100 * value:.1f}%"
+
+
+def _cells(pct: str) -> tuple[str, ...]:
+    """A percentage as a table cell, plain, bold or italic.
+
+    Matching the bare string would let `8.8%` match inside `78.8%` two sections
+    away, which is how a merged figure could survive its own removal test.
+    """
+    return (f"| {pct} |", f"| **{pct}** |", f"| *{pct}* |")
+
+
+def _has_cell(section: str, pct: str) -> bool:
+    return any(form in section for form in _cells(pct))
 
 
 class TestGoldComposition:
@@ -93,17 +113,90 @@ class TestGoldComposition:
         assert "outcome 115, modality 77, domain 3, prompt_level 2" in prose
 
 
-class TestFieldAccuracy:
+MIN_RATEABLE = 20  # domain and prompt_level have 3 and 2 null segments
+
+
+def _split(counts: dict, field: str) -> tuple[tuple[int, int], tuple[int, int]]:
+    """(agreed, n) where the standard records a value, and where it records none.
+
+    The two halves answer different questions and are computed over different
+    denominators, which is the whole reason the merged per-field percentage was
+    dropped: it averaged them and reported the average as one ability.
+    """
+    correct = counts.get(f"{field}:correct", 0)
+    wrong = counts.get(f"{field}:incorrect", 0)
+    absent = counts.get(f"{field}:missing", 0)
+    silent = counts.get(f"{field}:correctly_null", 0)
+    asserted = counts.get(f"{field}:hallucinated", 0)
+    return (correct, correct + wrong + absent), (silent, silent + asserted)
+
+
+class TestFieldAgreement:
+    """Tables 6a and 6b, each over its own denominator.
+
+    Assertions here are scoped to the agreement section. A bare percentage
+    checked against the whole document collides with unrelated numbers — "8.8%"
+    sits inside "78.8%" two sections away — which would leave the negative
+    assertion below unable to fail.
+    """
+
     @pytest.mark.parametrize(
         "model", ["llama3.2:latest", "qwen2.5:3b", "qwen2.5:7b"]
     )
-    def test_every_cell_of_table_6_matches(self, prose, scored, model) -> None:
+    def test_every_cell_of_tables_6a_and_6b_matches(
+        self, section, scored, model
+    ) -> None:
         counts = scored["per_field_counts"][model]
         for field in scored["scoring_fields"]:
-            acceptable = sum(counts.get(f"{field}:{j}", 0) for j in ACCEPTABLE)
-            total = sum(v for k, v in counts.items() if k.startswith(f"{field}:"))
-            assert total == 330, f"{model} {field} n={total}"
-            assert _pct(acceptable / total) in prose, f"{model} {field}"
+            (agreed, has_value), (silent, no_value) = _split(counts, field)
+            assert has_value + no_value == 330, f"{model} {field}"
+            assert f"(n={has_value})" in section, f"6a {model} {field} denominator"
+            assert _has_cell(section, _pct(agreed / has_value)), f"6a {model} {field}"
+            if no_value >= MIN_RATEABLE:
+                assert f"(n={no_value})" in section, f"6b {model} {field} denominator"
+                assert _has_cell(section, _pct(silent / no_value)), (
+                    f"6b {model} {field}"
+                )
+
+    def test_the_unrateable_fields_are_named_rather_than_rated(
+        self, flat, scored
+    ) -> None:
+        counts = scored["per_field_counts"]["qwen2.5:7b"]
+        thin = {
+            field: _split(counts, field)[1][1]
+            for field in scored["scoring_fields"]
+            if _split(counts, field)[1][1] < MIN_RATEABLE
+        }
+        assert thin == {"domain": 3, "prompt_level": 2}
+        assert "records no value on only 3 and 2 segments" in flat
+
+    def test_the_human_reference_level_is_stated_beside_the_generators(
+        self, section
+    ) -> None:
+        """The comparison target is a settled value, not ground truth.
+
+        Without the annotators' own first-pass figure in the same table, a
+        reader has no scale for what agreement on this task can look like.
+        """
+        r1 = _require(RESULTS / "reliability_round1.json")["fields"]
+        for field in ("domain", "modality", "prompt_level", "outcome"):
+            rate = r1[field]["observed_agreement"]
+            assert f"*{_pct(rate)}*" in section, field
+
+    def test_no_merged_per_field_figure_is_reported(self, section, scored) -> None:
+        """The statistic the section used to lead with is gone, not just moved.
+
+        `acceptable / 330` mixes a right value with a right silence over a
+        denominator that includes both, so it cannot be read as either.
+        """
+        for model in scored["models"]:
+            counts = scored["per_field_counts"][model]
+            for field in scored["scoring_fields"]:
+                acceptable = sum(counts.get(f"{field}:{j}", 0) for j in ACCEPTABLE)
+                merged = _pct(acceptable / 330)
+                assert not _has_cell(section, merged), (
+                    f"merged {model} {field} = {merged}"
+                )
 
     def test_behavior_is_excluded_from_the_scoring_policy(self, scored) -> None:
         assert scored["behavior_match"] == "excluded"

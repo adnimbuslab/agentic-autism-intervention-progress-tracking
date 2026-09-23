@@ -460,6 +460,42 @@
           "prompt_level": 0.2818,
           "outcome": 0.2697
         },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.1804
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.6364
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.2835
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.2837
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.0649
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 0.0
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.2435
+          }
+        },
         "mean_abstention_rate": 0.0818,
         "per_field_abstention": {
           "domain": 0.0303,
@@ -478,6 +514,42 @@
           "modality": 0.3636,
           "prompt_level": 0.0424,
           "outcome": 0.3242
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.0795
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.2292
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.0366
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.1767
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 1.0
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.8052
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 1.0
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.6
+          }
         },
         "mean_abstention_rate": 0.4811,
         "per_field_abstention": {
@@ -498,6 +570,42 @@
           "prompt_level": 0.2818,
           "outcome": 0.3394
         },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.4251
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.7036
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.2805
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.3488
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 0.3333
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.5974
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 0.5
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.3217
+          }
+        },
         "mean_abstention_rate": 0.1273,
         "per_field_abstention": {
           "domain": 0.0061,
@@ -516,6 +624,42 @@
           "modality": 0.6424,
           "prompt_level": 0.3636,
           "outcome": 0.2848
+        },
+        "agreement_where_value_recorded": {
+          "domain": {
+            "n": 327,
+            "rate": 0.3945
+          },
+          "modality": {
+            "n": 253,
+            "rate": 0.834
+          },
+          "prompt_level": {
+            "n": 328,
+            "rate": 0.3628
+          },
+          "outcome": {
+            "n": 215,
+            "rate": 0.4186
+          }
+        },
+        "agreement_where_no_value_recorded": {
+          "domain": {
+            "n": 3,
+            "rate": 0.0
+          },
+          "modality": {
+            "n": 77,
+            "rate": 0.013
+          },
+          "prompt_level": {
+            "n": 2,
+            "rate": 0.5
+          },
+          "outcome": {
+            "n": 115,
+            "rate": 0.0348
+          }
         },
         "mean_abstention_rate": 0.0295,
         "per_field_abstention": {

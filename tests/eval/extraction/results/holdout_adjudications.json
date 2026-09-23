@@ -1,0 +1,427 @@
+{
+  "decisions": {
+    "brett_flusberg_brett_050800.cha_seg_081": {
+      "behavior": "Repeated 'gate' and then talked about fixing it instead of answering what the gate did."
+    },
+    "brett_flusberg_brett_051002.cha_seg_028": {
+      "domain": "language",
+      "behavior": "Said he had put it together and answered 'I did' when asked who did it."
+    },
+    "brett_flusberg_brett_051002.cha_seg_089": {
+      "behavior": "Answered action questions about washing the salad but left the final self-action answer incomplete."
+    },
+    "brett_flusberg_brett_060011.cha_seg_033": {
+      "outcome": "correct",
+      "behavior": "Asked for three swirls during the clay activity."
+    },
+    "brett_flusberg_brett_060207.cha_seg_014": {
+      "behavior": "Explained that the building fire should be put out because the building was burning."
+    },
+    "brett_flusberg_brett_060622.cha_seg_012": {
+      "prompt_level": "verbal",
+      "behavior": "Explained how to use the play-doh tool by saying to flatten and cut the play-doh."
+    },
+    "brett_flusberg_brett_060622.cha_seg_021": {
+      "behavior": "Recalled that Santa bought new clothes but did not supply another requested item."
+    },
+    "brett_flusberg_brett_060819.cha_seg_016": {
+      "behavior": "Named a relevant object after repeated questions about how to knock the pins down."
+    },
+    "brett_flusberg_brett_070517.cha_seg_006": {
+      "prompt_level": "verbal",
+      "behavior": "Gave partly unclear answers to repeated questions about where the things were."
+    },
+    "carl_rollins_carl_020800.cha_seg_034": {
+      "domain": "motor"
+    },
+    "carl_rollins_carl_020800.cha_seg_048": {
+      "domain": "play",
+      "modality": null,
+      "outcome": null,
+      "behavior": "Handled the tractor and sheep while making jargon sounds."
+    },
+    "carl_rollins_carl_021100.cha_seg_045": {
+      "behavior": "Stacked the last card after the cleanup instruction but did not put the cards on the shelf."
+    },
+    "carl_rollins_carl_021100.cha_seg_047": {
+      "modality": null,
+      "behavior": "Lifted the bucket after added directions, but the adult put it on the shelf."
+    },
+    "carl_rollins_carl_021100.cha_seg_065": {
+      "behavior": "Used the horse in pretend eating play and made another horse eat."
+    },
+    "carl_rollins_carl_021100.cha_seg_078": {
+      "domain": "language",
+      "behavior": "Spontaneously labeled a rooster and took it from the barn."
+    },
+    "carl_rollins_carl_030000.cha_seg_006": {
+      "domain": "adaptive",
+      "modality": null,
+      "behavior": "Put some pieces back and then removed one again."
+    },
+    "carl_rollins_carl_030700.cha_seg_030": {
+      "behavior": "Changed the eye placement after correction but still put the eyes in the wrong place."
+    },
+    "carl_rollins_carl_030700.cha_seg_032": {
+      "behavior": "Answered yes when asked whether the pictured character was Spot."
+    },
+    "carl_rollins_carl_030700.cha_seg_039": {
+      "behavior": "Repeated 'hat' after the adult named and showed the hat."
+    },
+    "carl_rollins_carl_030700.cha_seg_043": {
+      "behavior": "Finished the drying routine and dropped the used item into the wastebasket."
+    },
+    "jack_flusberg_jack_060900.cha_seg_015": {
+      "behavior": "Verbally refused coloring and sharing."
+    },
+    "jack_flusberg_jack_060900.cha_seg_063": {
+      "behavior": "Eventually said 'guy' after repeated questions asking what the item was."
+    },
+    "jack_flusberg_jack_061028.cha_seg_007": {
+      "behavior": "Asked repeatedly what was wrong with the picture or situation."
+    },
+    "jack_flusberg_jack_061028.cha_seg_017": {
+      "behavior": "Repeated several phrases supplied by the adult in the story routine."
+    },
+    "jack_flusberg_jack_061028.cha_seg_048": {
+      "behavior": "Answered with character names instead of saying what Mister Rogers does."
+    },
+    "jack_flusberg_jack_070315.cha_seg_004": {
+      "behavior": "Gave uncertain labels after repeated picture questions."
+    },
+    "jack_flusberg_jack_080012.cha_seg_007": {
+      "behavior": "Talked about seeing Julie and Michael and answered yes about having fun with them."
+    },
+    "jack_flusberg_jack_080012.cha_seg_010": {
+      "behavior": "Said he wanted the playground on a different day and repeated it when asked for clarification."
+    },
+    "jack_flusberg_jack_080221.cha_seg_006": {
+      "behavior": "Talked about covering his mouth and then told the adult to stop."
+    },
+    "jack_flusberg_jack_080506.cha_seg_003": {
+      "behavior": "Named Grover and read or named Sesame Street."
+    },
+    "josh_rollins_josh_020500.cha_seg_007": {
+      "outcome": "partial",
+      "behavior": "Tried to work with the spout but did not open it before the adult did."
+    },
+    "josh_rollins_josh_020800.cha_seg_004": {
+      "behavior": "Dumped and handled puzzle pieces during self-directed play."
+    },
+    "josh_rollins_josh_020800.cha_seg_008": {
+      "behavior": "Completed the puzzle and smiled after the adult praised the success."
+    },
+    "josh_rollins_josh_020800.cha_seg_011": {
+      "behavior": "Pushed the clinician's arm to request his juice and then received it."
+    },
+    "josh_rollins_josh_030100.cha_seg_004": {
+      "behavior": "Started down the hall after the adult asked whether he needed to go potty."
+    },
+    "josh_rollins_josh_030100.cha_seg_020": {
+      "domain": "cognitive"
+    },
+    "josh_rollins_josh_030100.cha_seg_038": {
+      "behavior": "Made an unclear refusal-like response to putting the juice away."
+    },
+    "mark_flusberg_mark_070700.cha_seg_062": {
+      "behavior": "Failed to name the holiday associated with fancy eggs after repeated prompts."
+    },
+    "mark_flusberg_mark_070700.cha_seg_065": {
+      "behavior": "Read the word incorrectly despite repeated directions and correction."
+    },
+    "mark_flusberg_mark_070700.cha_seg_073": {
+      "behavior": "Produced several similar words and was finally told he was right."
+    },
+    "mark_flusberg_mark_070812.cha_seg_025": {
+      "behavior": "Changed from an incorrect answer to an approximation of 'Alicia' after the adult modeled it."
+    },
+    "mark_flusberg_mark_070812.cha_seg_142": {
+      "behavior": "Said he was done instead of sitting down."
+    },
+    "mark_flusberg_mark_070812.cha_seg_146": {
+      "outcome": "correct",
+      "behavior": "Asked for a new block after the adult discussed the block he wanted."
+    },
+    "mark_flusberg_mark_080915.cha_seg_003": {
+      "domain": "social_communication"
+    },
+    "mars_rollins_mars_030300.cha_seg_002": {
+      "behavior": "Made unclear vocal sounds but did not complete the pushing action after added verbal guidance."
+    },
+    "mars_rollins_mars_030300.cha_seg_011": {
+      "behavior": "Dropped the paper towel instead of wiping as instructed."
+    },
+    "mars_rollins_mars_030300.cha_seg_013": {
+      "behavior": "Reached and pulled the adult's sleeve to request the shape she was holding."
+    },
+    "mars_rollins_mars_030300.cha_seg_080": {
+      "domain": null,
+      "prompt_level": null,
+      "outcome": null,
+      "behavior": "Made an unclear vocal sound after the adult modeled the letter O, then played with the chair."
+    },
+    "mars_rollins_mars_030300.cha_seg_083": {
+      "behavior": "Put shapes into the box but used the open top instead of the indicated shape hole."
+    },
+    "mars_rollins_mars_030300.cha_seg_091": {
+      "behavior": "Took the book and stood up after being told and gesturally cued to put it away."
+    },
+    "mars_rollins_mars_030800.cha_seg_020": {
+      "behavior": "Pointed to the pizza after the adult named it."
+    },
+    "mars_rollins_mars_030800.cha_seg_021": {
+      "behavior": "Named the flowers after the adult asked and pointed to them."
+    },
+    "mars_rollins_mars_030800.cha_seg_076": {
+      "behavior": "Went toward the stairs instead of the door the adult pointed to."
+    },
+    "mars_rollins_mars_031100.cha_seg_002": {
+      "behavior": "Took character toys from the box while making jargon or unclear vocal sounds."
+    },
+    "mars_rollins_mars_031100.cha_seg_027": {
+      "behavior": "Spontaneously described another red firetruck."
+    },
+    "rick_flusberg_rick_040700.cha_seg_008": {
+      "behavior": "Answered 'three' when asked to identify a number and was told no."
+    },
+    "rick_flusberg_rick_040700.cha_seg_054": {
+      "behavior": "Asked for Dan."
+    },
+    "rick_flusberg_rick_040700.cha_seg_073": {
+      "behavior": "Repeated part of the instruction to turn the crank without doing the action."
+    },
+    "rick_flusberg_rick_040700.cha_seg_076": {
+      "behavior": "Said 'cow' after being told to get the cow but did not pick it up."
+    },
+    "rick_flusberg_rick_040700.cha_seg_108": {
+      "behavior": "Named the item as a train."
+    },
+    "rick_flusberg_rick_051104.cha_seg_032": {
+      "behavior": "Named the item in his hand as a sheep."
+    },
+    "rick_flusberg_rick_060522.cha_seg_002": {
+      "behavior": "Named the object as a stove."
+    },
+    "rick_flusberg_rick_060818.cha_seg_001": {
+      "behavior": "Changed 'record player' to 'record' after the adult corrected him."
+    },
+    "rick_flusberg_rick_061012.cha_seg_009": {
+      "behavior": "Answered what he was doing by saying he was playing."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_010": {
+      "behavior": "Asked for help with wiping or opening something on his finger."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_026": {
+      "behavior": "Identified the circle during the shape activity."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_014": {
+      "behavior": "Used pretend-play language about strawberry milk, opening the door, eating pizza, and feeding a lady."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_037": {
+      "behavior": "Gave an unconfirmed label of 'green frog' to a character question."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_051": {
+      "behavior": "Used pretend-play language about cooking and watching television."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_059": {
+      "behavior": "Used pretend-play language about sitting, the dentist, and getting off the table."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_062": {
+      "behavior": "Talked about singing but did not clearly sing the requested song."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_078": {
+      "behavior": "Refused to turn the channel."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004": {
+      "outcome": "partial",
+      "behavior": "Used 'goodnight' in the pretend-play routine after the adult said to kiss them goodnight."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_002": {
+      "behavior": "Said he wanted to play with the railroad tracks."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_013": {
+      "behavior": "Said he wanted to play with his marble."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_008": {
+      "behavior": "Turned the block over and placed it on the stack."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_065": {
+      "behavior": "Pulled the old balloon back out of the trash instead of throwing it away."
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_004": {
+      "behavior": "Put the cookie in the correct hole of the toy."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_010": {
+      "behavior": "Continued self-directed horse and rein play."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_026": {
+      "behavior": "Followed the adult for part of the walking transition but did not follow all door-related directions."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_042": {
+      "domain": "social_communication",
+      "modality": "gestural",
+      "prompt_level": "verbal",
+      "outcome": "partial",
+      "behavior": "Closed the mirror and later knocked on the mirror cover during the hiding game."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_043": {
+      "prompt_level": "verbal",
+      "outcome": "partial",
+      "behavior": "Closed the mirror and later knocked on it during the hiding game."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_046": {
+      "behavior": "Kept playing with the horse instead of going for a walk after repeated requests."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_048": {
+      "behavior": "Guided the adult's hand to the doorknob to request help with the door."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_049": {
+      "behavior": "Placed vehicles on the horse and tapped the horse during self-directed play."
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_021": {
+      "behavior": "Reached toward the play-doh held by the adult to request it."
+    },
+    "sid_rollins_sid_020200.cha_seg_019": {
+      "behavior": "Moved away and cried."
+    },
+    "sid_rollins_sid_021100.cha_seg_010": {
+      "behavior": "Moved the pig, sheep, and cow in and out of the trough."
+    },
+    "sid_rollins_sid_021100.cha_seg_011": {
+      "behavior": "Moved farm animals in the trough while making unclear vocal sounds."
+    },
+    "sid_rollins_sid_021100.cha_seg_029": {
+      "behavior": "Pointed to the board for some body-part cues and then drew on it."
+    },
+    "sid_rollins_sid_021100.cha_seg_048": {
+      "domain": "cognitive",
+      "behavior": "Pulled animals from the barn in response to a question about what was inside."
+    },
+    "sid_rollins_sid_030200.cha_seg_005": {
+      "modality": "gestural",
+      "behavior": "Tried to open the door and pushed the examiner after repeated directions to unhook or open it."
+    },
+    "sid_rollins_sid_030200.cha_seg_006": {
+      "behavior": "Rolled the train of cars to the gas station and continued selecting toys."
+    },
+    "sid_rollins_sid_030200.cha_seg_061": {
+      "domain": "adaptive",
+      "behavior": "Closed the door and then returned to playing with the blocks and truck."
+    },
+    "sid_rollins_sid_030500.cha_seg_004": {
+      "behavior": "Repeated 'the end' after the adult modeled it."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_047": {
+      "behavior": "Answered a naming question with 'this' instead of identifying the item."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_025": {
+      "behavior": "Answered 'bear' when asked what the item was."
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_023": {
+      "behavior": "Repeated 'on' after being told to put the item on without doing the action."
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_056": {
+      "behavior": "Named a shovel and boats when asked."
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_064": {
+      "behavior": "Asked for a chip."
+    },
+    "stuart_flusberg_stuart_031009.cha_seg_029": {
+      "behavior": "Asked for water and then repeated the request more clearly."
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_012": {
+      "behavior": "Repeatedly called for his mother instead of engaging with the puzzle."
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_023": {
+      "outcome": "incorrect",
+      "behavior": "Verbally acknowledged cleanup directions but did not clearly complete them."
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_024": {
+      "behavior": "Asked for juice."
+    },
+    "stuart_flusberg_stuart_040521.cha_seg_015": {
+      "domain": "language",
+      "behavior": "Repeated 'piano' after being told to play the piano."
+    }
+  },
+  "notes": {
+    "brett_flusberg_brett_051002.cha_seg_028": {
+      "domain": "The main behavior is answering who completed the task. I treated this as language rather than a social-purpose exchange."
+    },
+    "brett_flusberg_brett_060011.cha_seg_033": {
+      "outcome": "The child made a clear request for three swirls and the adult accepted it with 'alright', so the request was granted."
+    },
+    "brett_flusberg_brett_060622.cha_seg_012": {
+      "prompt_level": "The adult narrowed 'but how?' to 'what do you do with this thing?' before the target answer, so this is added verbal support."
+    },
+    "brett_flusberg_brett_070517.cha_seg_006": {
+      "prompt_level": "The first answer did not resolve the target and the adult rephrased the question, so verbal support was added."
+    },
+    "carl_rollins_carl_020800.cha_seg_034": {
+      "domain": "The target behavior is moving the horse's legs after instruction, so I treated the observed action as motor rather than pretend play."
+    },
+    "carl_rollins_carl_020800.cha_seg_048": {
+      "domain": "The clearest supported behavior is object play with the tractor and sheep; the jargon is not enough to make language the primary domain.",
+      "modality": "Using the play behavior as primary, the object handling is not communicative and the jargon does not establish a supported communication modality.",
+      "outcome": "The primary behavior is self-directed play, so there is no identifiable accuracy target to score."
+    },
+    "carl_rollins_carl_021100.cha_seg_047": {
+      "modality": "The primary target is lifting and putting away the bucket. The physical action itself is not a communication modality."
+    },
+    "carl_rollins_carl_021100.cha_seg_078": {
+      "domain": "The child spontaneously uses the recognizable word 'rooster' twice and then gets the rooster, so language is the stronger primary behavior."
+    },
+    "carl_rollins_carl_030000.cha_seg_006": {
+      "domain": "The adult asks to put the pieces back, so the main target is a functional cleanup/put-away behavior rather than puzzle solving.",
+      "modality": "For the primary cleanup behavior, the supported response is physical object handling; the action itself is not communicative."
+    },
+    "josh_rollins_josh_020500.cha_seg_007": {
+      "outcome": "He put his hand on the target and attempted the action before the adult opened it, so there was clear partial progress rather than no response."
+    },
+    "josh_rollins_josh_030100.cha_seg_020": {
+      "domain": "The target is figuring out how to get the item out. The ineffective can-beating action is best treated as problem solving/cognitive."
+    },
+    "mark_flusberg_mark_070812.cha_seg_146": {
+      "outcome": "The child requested a new block and the adult accepted the request with 'okay', which supports a granted request."
+    },
+    "mark_flusberg_mark_080915.cha_seg_003": {
+      "domain": "The child is communicating refusal to another person. That interpersonal function is stronger than the play material being discussed."
+    },
+    "mars_rollins_mars_030300.cha_seg_080": {
+      "domain": "The adult labels and demonstrates the letter, but the child's only vocal response is unclear and he then plays with the chair. No supported child language behavior is established.",
+      "prompt_level": "The adult is labeling/demonstrating rather than clearly setting an imitation target for the child, so no child prompt level is supported.",
+      "outcome": "There is no clear child target to judge for accuracy in this segment, so the outcome is none."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004": {
+      "outcome": "The instruction was to kiss them goodnight. The child joined verbally with 'goodnight' but did not complete the requested kiss, so this is partial."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_042": {
+      "domain": "The knock occurs inside a shared hiding interaction and functions as a response to another person, so social communication takes precedence over play.",
+      "modality": "The child's knock follows the repeated location question and carries a message to the partner, so it counts as a communicative gesture.",
+      "prompt_level": "The 'where's Chi?' question is repeated before the child's knock, so added verbal support was used.",
+      "outcome": "There is a clear location target. Knocking on the cover is a meaningful but incomplete response, so partial fits better than none.",
+      "behavior": "Chose A because the %gpx point belongs to the investigator turn, not the child. A accurately describes the child's closing and knocking actions."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_043": {
+      "prompt_level": "The location question is repeated before the child knocks, so the response required added verbal support.",
+      "outcome": "The repeated 'where's Chi?' question creates a clear target and the knock is a partial response to it."
+    },
+    "sid_rollins_sid_021100.cha_seg_048": {
+      "domain": "After the question about what is inside, the child searches and pulls animals out. I treated this as responding to a knowledge/location target rather than simple play."
+    },
+    "sid_rollins_sid_030200.cha_seg_005": {
+      "modality": "Pushing the examiner is partner-directed and carries a clear message in the interaction, so it qualifies as gestural communication."
+    },
+    "sid_rollins_sid_030200.cha_seg_061": {
+      "domain": "The first clear target is closing a physical door during a transition, which is better treated as adaptive than play."
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_023": {
+      "outcome": "Several cleanup instructions are given, but no clear target action is completed. There is not enough progress to call this partial."
+    },
+    "stuart_flusberg_stuart_040521.cha_seg_015": {
+      "domain": "The observed child behavior is repeating the recognizable word 'piano'; the requested piano-playing action is not shown."
+    }
+  },
+  "n_decided": 133,
+  "incomplete_segments": []
+}

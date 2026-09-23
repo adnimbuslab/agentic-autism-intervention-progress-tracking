@@ -308,26 +308,62 @@ batch, not a conditional subset.
 | adjudicator | consensus of annotator_a and annotator_b |
 | null values in gold | outcome 115, modality 77, domain 3, prompt_level 2 |
 
-### Per-field extraction accuracy
+### Agreement with the reference standard, per field
 
-**Table 6 — Acceptable extractions per field (n = 330; acceptable = correct or
-correctly null)**
+Results here are reported as **agreement with the adjudicated reference
+standard**, not as accuracy. The target of comparison is a value two annotators
+settled between them on a task where, on first pass and before any codebook
+existed, those two annotators independently chose the same value on 64.2% to
+80.9% of segments depending on the field. Calling the resulting percentage
+accuracy implies a fixed correct answer that the task does not supply;
+agreement names what was measured.
 
-| generator | domain | modality | prompt_level | outcome |
+Two quantities are reported separately, because they are different abilities
+that fail for different reasons: choosing the value the annotators settled on
+where the standard records one, and recording nothing where the standard
+records none. A single merged per-field percentage averages the two and
+conceals both, so none is reported here (**Figure 16**).
+
+**Table 6a — Agreement where the reference standard records a value (n = 330
+segments; free-text `behavior` excluded)**
+
+| generator | domain (n=327) | modality (n=253) | prompt_level (n=328) | outcome (n=215) |
 |---|---:|---:|---:|---:|
-| llama3.2 | 17.9% | 50.3% | 28.2% | 27.0% |
-| qwen2.5:3b | 8.8% | 36.4% | 4.2% | 32.4% |
-| qwen2.5:7b | **42.4%** | **67.9%** | 28.2% | **33.9%** |
+| llama3.2 | 18.0% | 63.6% | 28.4% | 28.4% |
+| qwen2.5:3b | 8.0% | 22.9% | 3.7% | 17.7% |
+| qwen2.5:7b | **42.5%** | **70.4%** | 28.0% | **34.9%** |
+| *two annotators, first pass* | *80.9%* | *72.4%* | *74.9%* | *64.2%* |
 
-`qwen2.5:7b` leads on every field, but no generator exceeds 68% on any field
-and none exceeds 43% on `domain`, `prompt_level` or `outcome` (**Figure 16**).
+Each denominator is the number of segments on which the standard records a
+value for that field. The final row is how often the two annotators
+independently chose the same value before the codebook existed: a reference
+level for the task, not a like-for-like comparison, since the annotators were
+compared with each other and the generators with the settled value.
 
-**Accuracy and coverage must be read together.** `qwen2.5:3b`'s 32.4% on
-`outcome` is largely abstention: 69 of its acceptable judgements are
-`correctly_null` and it returns nothing at all on 114 segments. On
-`prompt_level` it is silent on 277 of 330 segments (84%), which is why its 4.2%
-is not comparable to the others' as a quality figure. A generator that rarely
-answers is not thereby accurate.
+**Table 6b — Agreement where the reference standard records no value: how often
+a generator correctly recorded nothing**
+
+| generator | modality (n=77) | outcome (n=115) |
+|---|---:|---:|
+| llama3.2 | 6.5% | 24.3% |
+| qwen2.5:3b | **80.5%** | **60.0%** |
+| qwen2.5:7b | 59.7% | 32.2% |
+
+`domain` and `prompt_level` are omitted: the standard records no value on only 3
+and 2 segments respectively, which cannot support a rate.
+
+**The split is the result.** On `modality`, where the standard records a value,
+`qwen2.5:7b` agrees with it on 70.4% of segments against the 72.4% the two
+annotators reached with each other — essentially the level of a second human
+before training. On the same field, where the standard records no value, that
+same generator records nothing on only 59.7% of segments. One figure covering
+both cases would sit between them and describe neither.
+
+**Agreement and coverage must be read together.** `qwen2.5:3b` leads Table 6b by
+abstaining rather than by restraint: it returns nothing at all on 114 of the 330
+segments for `outcome`, and on `prompt_level` it is silent on 277 of 330
+segments (84%), which is why its 3.7% there is not comparable to the others' as
+a quality figure. A generator that rarely answers is not thereby in agreement.
 
 ### Unsupported extractions
 
@@ -534,7 +570,7 @@ State of the evidence, recorded so that no reader infers more than exists:
 
 | quantity | status | blocked on |
 |---|---|---|
-| per-generator field accuracy | **measured** (Table 6) | — |
+| per-generator field agreement | **measured** (Tables 6a-6b) | — |
 | inter-rater reliability (κ) | **measured** — mean κ 0.610 pre-codebook, 0.801 post | — see `results_reliability.md` |
 | adjudicated gold standard | **measured** — 330 of 330 segments (Table 5) | — |
 | unsupported-extraction rate | **measured** (Table 7) | — |

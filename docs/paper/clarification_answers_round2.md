@@ -3,14 +3,21 @@
 Same format as round 1 (`clarification_answers.md`): **Answer** with the
 repository path, then **In plain terms**.
 
-Recorded state: commit `6163d13`, 2026-09-19.
+Recorded state: commit `6163d13`, 2026-09-19. Answers marked with a status
+update were revised on 2026-09-22; in each case the original text is kept so
+that what was known at the time of the question stays visible.
 
 **Three answers correct a premise or report a negative rather than a fact.**
-**Q3** — held-out adjudication is *not* complete, so no held-out results exist.
+**Q3** — held-out adjudication *was* outstanding when this was written; it is
+now complete, and the results are reported there.
 **Q6** — the application default is **one** generator, not four, and MARS is not
-in the default path; this corrects the premise of round-1 Q15 as well.
+in the default path; this corrects the premise of round-1 Q15 as well. Two
+further boundaries — the analytics verification gate and deterministic
+reporting — were added afterwards and are recorded in that answer.
 **Q7** — the governance failure was **not** remediated and the experiment was
-**not** rerun; the negative result stands as reported.
+**not** rerun; the negative result stands as reported. The layer has since been
+removed from the operational path, which is a deployment decision and not a
+remediation.
 
 ---
 
@@ -95,6 +102,51 @@ is no `partial_success` anywhere.
 ---
 
 ## Q3 — 132-segment held-out set
+
+> **Answered in full on 2026-09-22.** When this question was first answered,
+> adjudication was outstanding and the results below did not exist. They do now.
+> The original answer is preserved beneath the results, because it records what
+> was and was not available at the time.
+
+**Answer.** **Adjudication is complete.** All 133 conflicted fields were settled
+by the two annotators jointly, none left blank, so **all 132 segments entered
+the reference standard** (`gold_holdout_labels.json`). The requested results:
+
+| Generator | Acc. batch | Acc. held-out | Change (pts) | Unsup. batch | Unsup. held-out |
+|---|---:|---:|---:|---:|---:|
+| llama3.2:latest | 30.8% | 26.5% | -4.3 | 83.2% | 84.1% |
+| qwen2.5:3b | 20.4% | 12.5% | -8.0 | 31.0% | 28.6% |
+| qwen2.5:7b | 43.1% | 38.8% | -4.3 | 56.9% | 50.8% |
+| qwen3:14b | 42.0% | 40.2% | -1.9 | 97.0% | 92.1% |
+
+Accuracy is the mean over the four categorical fields, scored under the same
+policy as the batch (`behavior_match = excluded`). Whole-record correctness on
+the held-out set: best generator 4.5%, oracle ceiling
+6.1%, headroom 1.5 points
+(four-generator batch: 4.5% /
+8.8% / 4.2 points).
+
+**What it shows.** Every generator is *less* accurate on segments that were not
+selected for model tractability — the selection effect, now measured rather than
+inferred from admission rates. Unsupported assertion does **not** improve: rates
+are of the same order on both sets and their ordering across the roster is
+unchanged, with `qwen3:14b` again highest. Accuracy degrades when the segments
+stop being easy; the propensity to assert what the transcript does not support
+does not.
+
+**Caveats.** Both reference standards were adjudicated by the same pair, so this
+isolates segment selection and not adjudicator effects. On the held-out round,
+adjudication was not balanced between annotators: 79 of 133 fields adopted
+annotator B's value against 54 for A (exact binomial p = 0.037), and 13 to 4 on
+the 17 genuine categorical judgements (p = 0.049). The main batch split 89/90.
+
+Artefacts: `gold_holdout_labels.json`, `scored_holdout.json`,
+`holdout_metrics.json`, all pinned in the manifest. Reproduce with
+`uv run python -m tests.eval.extraction.holdout_metrics`.
+
+---
+
+### Original answer, as given when adjudication was outstanding
 
 **Answer.** **Adjudication is not complete.** No held-out gold standard exists,
 so none of the requested results — field-level accuracy, unsupported-assertion
@@ -282,10 +334,30 @@ four generators are integrated into the application. They are not. The
 manuscript should describe MARS as an offline experiment over recorded generator
 outputs, not as a deployed component.
 
+**Two further boundaries were added on 2026-09-21** and belong in any statement
+of the current configuration:
+
+- **Analytics admits only human-accepted records.** `analytics_service`
+  previously admitted `VALIDATED`, the status the pipeline sets automatically
+  when deterministic validation passes, so AI-extracted records could reach
+  longitudinal analytics unreviewed. The gate is now
+  `status IN (VERIFIED, CORRECTED)` — an interventionist has either accepted the
+  record as written (`POST /records/{record_id}/verify`) or rewritten it. A
+  `PENDING` record cannot be verified as written at all, so accepting one cannot
+  undo the abstention router's decision.
+- **Reporting is deterministic by default.** `settings.reporting_mode` defaults
+  to `"deterministic"`; the reporting LLM is called only under
+  `"generative_experimental"` and its output is marked `is_experimental`.
+
+So the running application is: one extraction provider, no reranking, no
+generative reporting, and no analytics over records a professional has not seen.
+
 **In plain terms.** The running app uses one small model and no referee system.
 Everything else — four models, the referee experiment — was research run offline
 against saved outputs. Saying the four are "integrated" would overstate what is
-deployed.
+deployed. Since this answer was first written, two further limits were added: a
+person must sign off on a record before it counts toward any trend, and progress
+reports are now written by code rather than by a language model.
 
 ---
 
@@ -316,10 +388,28 @@ invites exactly the silent replacement this question guards against; if it is
 done, both results must be reported side by side with the change between them
 stated.
 
+**Update (2026-09-22) — a deployment decision, not a remediation.** The answer
+above is unchanged: no prompt, schema or validator was modified, and no second
+evaluation exists. What changed is what the application *does* with the layer.
+Rather than tune it until it passed, the generative reporting layer was removed
+from the operational path: `settings.reporting_mode` defaults to
+`"deterministic"`, which renders reports from the evidence packet in code and
+names every withheld indicator — the check the generative layer failed. The
+reporting model is now opt-in and its output is labelled experimental.
+
+This distinction matters for the manuscript. The reported 0/11 is still a
+pre-remediation number with no post-remediation counterpart, because no
+remediation was attempted. Whether the failure is fixable by prompt or decoding
+changes remains **untested**, and is recorded as a limitation rather than
+implied.
+
 **In plain terms.** We fixed the formatting problem *before* measuring
 governance, then measured, then stopped. We did not go back and tune the prompt
 to make the governance score look better. The instruction to mention withheld
-numbers was already in the prompt — the model simply did not follow it.
+numbers was already in the prompt — the model simply did not follow it. What we
+did instead was stop using it: reports are now assembled by code, and the model
+version is switched off by default and clearly marked experimental if anyone
+turns it on.
 
 ---
 

@@ -164,7 +164,7 @@
     },
     {
       "path": "tests/eval/extraction/results/scored_against_gold.json",
-      "description": "Per-generator judgements against gold, behavior excluded (Tables 6-8)",
+      "description": "Per-generator judgements against gold, behavior excluded (Tables 6a-8)",
       "produced_by": "score_against_gold --behavior-match excluded",
       "pinned": true,
       "present": true,
@@ -271,13 +271,58 @@
       "sha256": "a406bde1f02a64c6d68b27c23c3fd8258ebc841d2d6ef3c6050a9e26a9903597"
     },
     {
+      "path": "tests/eval/extraction/results/annotation_sheets/holdout_adjudication_sheet_completed.csv",
+      "description": "Returned held-out adjudication sheet: 133 conflicted fields, all decided",
+      "produced_by": "export_adjudication_sheet, completed by both annotators jointly",
+      "pinned": true,
+      "present": true,
+      "bytes": 61251,
+      "sha256": "e48f22165d102df8aa2593853cc3a18b3797d01224a8b791172e8413a269271d"
+    },
+    {
+      "path": "tests/eval/extraction/results/holdout_adjudications.json",
+      "description": "Held-out adjudication decisions imported from the returned sheet",
+      "produced_by": "import_adjudication_sheet --path holdout_adjudication_sheet_completed.csv",
+      "pinned": true,
+      "present": true,
+      "bytes": 21776,
+      "sha256": "64acd954c72ebe8f16195af17cdca6a1adeafb0d30ddd4a2a57f989d1ba32462"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_holdout_labels.json",
+      "description": "Held-out adjudicated reference standard: 132 of 132 segments, none lost",
+      "produced_by": "adjudicate holdout_annotator_a holdout_annotator_b --out gold_holdout_labels.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 48329,
+      "sha256": "acd6b4f36ce3362fe7c604ef2d7cf948da4fa6592e4a1695c9cbbf6a35c3dd87"
+    },
+    {
+      "path": "tests/eval/extraction/results/scored_holdout.json",
+      "description": "Four-generator judgements against held-out gold, behavior excluded",
+      "produced_by": "score_against_gold --gold gold_holdout_labels.json --batch holdout_batch.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 113367,
+      "sha256": "f85d63bdd959cb688fefade575b8655b337b497e753535a5f5f2a42cf17293db"
+    },
+    {
+      "path": "tests/eval/extraction/results/holdout_metrics.json",
+      "description": "Batch vs held-out accuracy and unsupported assertion, same scoring policy",
+      "produced_by": "holdout_metrics",
+      "pinned": true,
+      "present": true,
+      "bytes": 14861,
+      "sha256": "17fb997ba28907b39e24b117da385b5be2f7ff79e7c24b8122a7e352511b2eb1"
+    },
+    {
       "path": "tests/eval/extraction/results/paper_metrics.json",
       "description": "Consolidated paper-ready metrics, derived from the artefacts above",
       "produced_by": "paper_metrics",
       "pinned": true,
       "present": true,
-      "bytes": 14085,
-      "sha256": "13ba704145cf2f950bbb491bb441552b5959474ec7cff5c6ecde65efe8ca5402"
+      "bytes": 17243,
+      "sha256": "c4886ee99c6e90b61131aaa8885ee3cc70effa46839cb2a7157c9fc92963e3d0"
     },
     {
       "path": "tests/eval/extraction/results/mars_selection_analysis.json",
@@ -319,7 +364,7 @@
       "produced_by": "written",
       "pinned": false,
       "present": true,
-      "bytes": 32096
+      "bytes": 34261
     },
     {
       "path": "docs/paper/reliability_mathematics.md",
@@ -379,11 +424,11 @@
     },
     {
       "path": "docs/paper/figures/fig16_field_accuracy.png",
-      "description": "Figure 16 - per-field extraction accuracy against gold",
+      "description": "Figure 16 - agreement with the reference standard, split by whether the standard records a value",
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 46984
+      "bytes": 104360
     },
     {
       "path": "docs/paper/figures/fig17_unsupported.png",
@@ -427,11 +472,11 @@
     },
     {
       "path": "docs/paper/figures/fig22_extended_roster.png",
-      "description": "Figure 22 - four-generator accuracy and the abstention trade-off",
+      "description": "Figure 22 - four-generator agreement and the abstention trade-off",
       "produced_by": "make_figures",
       "pinned": false,
       "present": true,
-      "bytes": 93211
+      "bytes": 98421
     },
     {
       "path": "docs/paper/Manuscript_Working_Draft.docx",
@@ -439,7 +484,7 @@
       "produced_by": "make_manuscript",
       "pinned": false,
       "present": true,
-      "bytes": 1553077
+      "bytes": 1800739
     }
   ]
 }

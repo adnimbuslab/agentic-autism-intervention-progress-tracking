@@ -1068,7 +1068,6 @@ def figure_codebook_rules() -> None:
 SCORED_PATH = RESULTS / "scored_against_gold.json"
 GOLD_LABELS_PATH = RESULTS / "gold_labels.json"
 
-ACCEPTABLE = {"correct", "correctly_null"}
 GEN_COLOURS = {0: BLUE, 1: TEAL, 2: AMBER}
 
 
@@ -1077,46 +1076,122 @@ def _short(model: str) -> str:
 
 
 def figure_field_accuracy() -> None:
-    """Figure 16 -- per-field accuracy of each generator against gold."""
-    scored = _load(SCORED_PATH, "Figure 16 (field accuracy)")
+    """Figure 16 -- agreement with the reference standard, split in two.
+
+    A single per-field percentage merges two abilities that fail for different
+    reasons: choosing the right category where the standard records one, and
+    recording nothing where it records none. Merged, they hide the result that
+    on `modality` the models reach the agreement two trained annotators reached
+    with each other. Split, that is the first thing the figure shows.
+
+    The right panel is restricted to fields with enough no-value segments to
+    rate. `domain` and `prompt_level` have 3 and 2; a percentage over those
+    would be noise drawn at the same visual weight as a percentage over 115.
+    """
+    scored = _load(SCORED_PATH, "Figure 16 (field agreement)")
     if scored is None:
         return
+    human = _load(RELIABILITY_PATH, "Figure 16 (human agreement)") or {"fields": {}}
 
     fields = scored["scoring_fields"]
     models = scored["models"]
     counts = scored["per_field_counts"]
+    MIN_RATEABLE = 20
 
-    fig, ax = plt.subplots(figsize=(7.6, 3.6))
+    def split(model: str, field: str) -> tuple[tuple[float, int], tuple[float, int]]:
+        c = counts[model]
+        correct = c.get(f"{field}:correct", 0)
+        wrong = c.get(f"{field}:incorrect", 0)
+        absent = c.get(f"{field}:missing", 0)
+        silent = c.get(f"{field}:correctly_null", 0)
+        asserted = c.get(f"{field}:hallucinated", 0)
+        has, none = correct + wrong + absent, silent + asserted
+        return (
+            (100 * correct / has if has else 0.0, has),
+            (100 * silent / none if none else 0.0, none),
+        )
+
+    rateable = [
+        f for f in fields
+        if split(models[0], f)[1][1] >= MIN_RATEABLE
+    ]
+
+    fig, (ax, ax2) = plt.subplots(
+        1, 2, figsize=(11.2, 3.8),
+        gridspec_kw={"width_ratios": [len(fields), max(len(rateable), 1)]},
+    )
     width = 0.26
+
     for m, model in enumerate(models):
-        values = []
-        for field in fields:
-            acceptable = sum(
-                counts[model].get(f"{field}:{j}", 0) for j in ACCEPTABLE
-            )
-            total = sum(
-                v for k, v in counts[model].items() if k.startswith(f"{field}:")
-            )
-            values.append(100 * acceptable / total if total else 0.0)
+        values = [split(model, f)[0][0] for f in fields]
         offsets = [i + (m - 1) * width for i in range(len(fields))]
         ax.bar(offsets, values, width=width * 0.92, color=GEN_COLOURS[m],
                zorder=3, label=_short(model))
         for x, v in zip(offsets, values):
             ax.text(x, v + 1.2, f"{v:.0f}", ha="center", fontsize=7, color=MUTED)
 
+    # What two trained annotators achieved on the same field, first pass, as a
+    # reference level rather than a target: it is what agreement on this task
+    # looked like before a codebook existed.
+    for i, field in enumerate(fields):
+        hh = human["fields"].get(field, {}).get("observed_agreement")
+        if hh is None:
+            continue
+        ax.plot([i - 0.42, i + 0.42], [100 * hh, 100 * hh],
+                color=RED, linewidth=1.6, zorder=5,
+                label="two annotators, first pass" if i == 0 else None)
+
     ax.set_xticks(range(len(fields)))
     ax.set_xticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
     ax.set_ylim(0, 100)
-    ax.set_ylabel("acceptable (%)")
-    ax.legend(fontsize=7.5, frameon=False, ncol=3, loc="upper right")
+    ax.set_ylabel("agreement (%)")
+    ax.legend(fontsize=7.2, frameon=False, ncol=2, loc="upper right")
     _finish(
         ax,
-        "Figure 16 — Per-field extraction accuracy against the adjudicated gold",
-        f"n = {scored['n_segments_scored']} segments. Acceptable = correct or "
-        "correctly null. `behavior` excluded (see Figure 19).",
+        "Where the standard records a value",
+        "share matching the adjudicated value",
+    )
+
+    for m, model in enumerate(models):
+        values = [split(model, f)[1][0] for f in rateable]
+        offsets = [i + (m - 1) * width for i in range(len(rateable))]
+        ax2.bar(offsets, values, width=width * 0.92, color=GEN_COLOURS[m], zorder=3)
+        for x, v in zip(offsets, values):
+            ax2.text(x, v + 1.2, f"{v:.0f}", ha="center", fontsize=7, color=MUTED)
+
+    ax2.set_xticks(range(len(rateable)))
+    ax2.set_xticklabels([
+        f"{FIELD_LABEL.get(f, f)}".replace("\n", " ")
+        + f"\n(n={split(models[0], f)[1][1]})"
+        for f in rateable
+    ])
+    ax2.set_ylim(0, 100)
+    _finish(
+        ax2,
+        "Where the standard records none",
+        "share correctly recording nothing",
+    )
+
+    fig.suptitle(
+        strip_figure_number(
+            "Figure 16 — Agreement with the adjudicated reference standard, "
+            "reported separately for the two cases"
+        ),
+        x=0.008, ha="left", fontsize=11.5, fontweight="bold",
+    )
+    fig.text(
+        0.008, -0.07,
+        f"n = {scored['n_segments_scored']} segments; `behavior` excluded (see "
+        "Figure 19). The red line is how often the two annotators independently "
+        "chose the same value on first pass, before the codebook — a reference "
+        "level for what agreement on this task looks like, not a target. It is "
+        "not a like-for-like comparison: the annotators were compared with each "
+        "other, the generators with the settled value.",
+        fontsize=7.4, color=MUTED, va="top", wrap=True,
     )
     fig.tight_layout()
-    fig.savefig(OUT / "fig16_field_accuracy.png", bbox_inches="tight")
+    fig.savefig(OUT / "fig16_field_accuracy.png", bbox_inches="tight",
+                pad_inches=0.3)
     plt.close(fig)
 
 
@@ -1475,9 +1550,21 @@ def figure_selection() -> None:
 
 
 def figure_extended_roster() -> None:
-    """Figure 22 -- accuracy and the abstention/unsupported trade-off."""
+    """Figure 22 -- agreement and the abstention/unsupported trade-off.
+
+    The left panel reports agreement where the reference standard records a
+    value, the same quantity as Figure 16's left panel, so the fourth generator
+    is compared with the other three on one scale. The other half of the split
+    -- what a generator does where the standard records no value -- is the right
+    panel's vertical axis, as its complement.
+    """
     metrics = _load(RESULTS / "paper_metrics.json", "Figure 22 (extended roster)")
     if metrics is None or not metrics.get("augmented_roster"):
+        return
+    split = (
+        _load(RESULTS / "holdout_metrics.json", "Figure 22 (agreement split)") or {}
+    ).get("batch", {}).get("per_model", {})
+    if not split:
         return
     aug = metrics["augmented_roster"]
     per_model = aug["per_model"]
@@ -1489,24 +1576,35 @@ def figure_extended_roster() -> None:
         1, 2, figsize=(11.4, 3.9), gridspec_kw={"width_ratios": [1.25, 1]}
     )
 
-    # Left: per-field accuracy, four generators.
+    # Left: agreement where the standard records a value, four generators.
     width = 0.2
     for i, model in enumerate(models):
-        values = [100 * per_model[model]["per_field_accuracy"][f] for f in fields]
+        values = [
+            100 * split[model]["agreement_where_value_recorded"][f]["rate"]
+            for f in fields
+        ]
         offsets = [j + (i - 1.5) * width for j in range(len(fields))]
         ax.bar(offsets, values, width=width * 0.9, color=palette[i % len(palette)],
                zorder=3, label=_short(model))
     ax.set_xticks(range(len(fields)))
-    ax.set_xticklabels([FIELD_LABEL.get(f, f).replace("\n", " ") for f in fields])
-    ax.set_ylabel("acceptable (%)")
+    ax.set_xticklabels([
+        f"{FIELD_LABEL.get(f, f)}".replace("\n", " ")
+        + f"\n(n={split[models[0]]['agreement_where_value_recorded'][f]['n']})"
+        for f in fields
+    ])
+    ax.set_ylabel("agreement (%)")
     ax.set_ylim(0, 85)
     ax.legend(fontsize=7.2, frameon=False, ncol=4, loc="upper center",
-              bbox_to_anchor=(0.5, -0.16))
+              bbox_to_anchor=(0.5, -0.22))
+    # The split changes what this panel says about the fourth generator. On the
+    # merged mean it was indistinguishable; on agreement where a value exists it
+    # is ahead on three fields of four — and it buys that by asserting a value
+    # on 97% of the segments where the standard records none (right panel).
     _finish(
         ax,
-        "Figure 22 — A larger, newer generator is no more accurate",
-        "Four generators against the same adjudicated gold. qwen3:14b was added "
-        "after annotation, at no annotation cost.",
+        "Figure 22 — The newer generator agrees more only where a value exists",
+        "Share matching the adjudicated value. qwen3:14b was added after "
+        "annotation, at no annotation cost.",
     )
 
     # Right: the trade-off. This is the finding.
