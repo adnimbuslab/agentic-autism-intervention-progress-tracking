@@ -302,7 +302,7 @@ Searched for demonstrated-benefit language rather than assuming none existed: no
 
 Blocked on decisions only you can make: repository or archive URL, release tag, licence, and exactly which artefacts may be redistributed under TalkBank/ASDBank terms.
 
-What exists already and does not need redoing: 56 artefacts recorded, 38 pinned by SHA-256 (`docs/paper/artifact_manifest.json`), a full reproduction sequence in `docs/paper/artifacts.md`, seeds and runtime versions documented in clarification answer Q20, and a stated reproducibility boundary — everything downstream of the recorded generator outputs is deterministic; regenerating those outputs is not, because no generation seed was set.
+What exists already and does not need redoing: 61 artefacts recorded, 38 pinned by SHA-256 (`docs/paper/artifact_manifest.json`), a full reproduction sequence in `docs/paper/artifacts.md`, seeds and runtime versions documented in clarification answer Q20, and a stated reproducibility boundary — everything downstream of the recorded generator outputs is deterministic; regenerating those outputs is not, because no generation seed was set.
 
 The `Data availability` section of the manuscript carries a `[TO COMPLETE BEFORE SUBMISSION]` marker naming exactly these decisions.
 

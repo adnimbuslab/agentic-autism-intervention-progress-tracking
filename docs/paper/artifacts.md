@@ -133,4 +133,9 @@ uv run python docs/paper/verify_artifacts.py --record
 | `docs/paper/figures/fig20_mars_outcomes.png` | Figure 20 - MARS outcomes and comparison against the best generator | `make_figures` |
 | `docs/paper/figures/fig21_selection.png` | Figure 21 - selection quality against both baselines | `make_figures` |
 | `docs/paper/figures/fig22_extended_roster.png` | Figure 22 - four-generator agreement and the abstention trade-off | `make_figures` |
+| `docs/paper/figures/response/r2_holdout_selection_effect.png` | Response figure - batch vs held-out agreement and unsupported assertion | `make_response_figures` |
+| `docs/paper/figures/response/r3_reporting_governance.png` | Response figure - what the reporting governance check found | `make_response_figures` |
+| `docs/paper/figures/response/r4_field_scope.png` | Response figure - evaluation scope against analytics scope | `make_response_figures` |
+| `docs/paper/figures/response/r5_contribution_hierarchy.png` | Response figure - the contribution hierarchy | `make_response_figures` |
+| `docs/paper/Reviewer_Response.docx` | Point-by-point response to the strict-reviewer assessment, all 12 issues | `make_reviewer_response` |
 | `docs/paper/Manuscript_Working_Draft.docx` | Working-draft manuscript, assembled from the artefacts above | `make_manuscript` |

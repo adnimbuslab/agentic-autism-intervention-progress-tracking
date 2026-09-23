@@ -479,6 +479,46 @@
       "bytes": 98421
     },
     {
+      "path": "docs/paper/figures/response/r2_holdout_selection_effect.png",
+      "description": "Response figure - batch vs held-out agreement and unsupported assertion",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 93962
+    },
+    {
+      "path": "docs/paper/figures/response/r3_reporting_governance.png",
+      "description": "Response figure - what the reporting governance check found",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 80340
+    },
+    {
+      "path": "docs/paper/figures/response/r4_field_scope.png",
+      "description": "Response figure - evaluation scope against analytics scope",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 120344
+    },
+    {
+      "path": "docs/paper/figures/response/r5_contribution_hierarchy.png",
+      "description": "Response figure - the contribution hierarchy",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 83756
+    },
+    {
+      "path": "docs/paper/Reviewer_Response.docx",
+      "description": "Point-by-point response to the strict-reviewer assessment, all 12 issues",
+      "produced_by": "make_reviewer_response",
+      "pinned": false,
+      "present": true,
+      "bytes": 599495
+    },
+    {
       "path": "docs/paper/Manuscript_Working_Draft.docx",
       "description": "Working-draft manuscript, assembled from the artefacts above",
       "produced_by": "make_manuscript",

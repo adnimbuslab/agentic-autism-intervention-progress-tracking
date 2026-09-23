@@ -581,8 +581,10 @@ only afterwards, to mark the results.
   sampling 20260916; held-out sheet ordering 8484; bootstrap 20260915 /
   20260916 at 10,000 replicates; MARS run seed `mars-full-330-v2`. **No
   generation seed was set** — see Q6.
-- **Artefact manifest:** `docs/paper/artifact_manifest.json` — 56 artefacts, 38
-  pinned by SHA-256 (was 51/33 before the held-out round was adjudicated). Human-readable listing and the full reproduction sequence:
+- **Artefact manifest:** `docs/paper/artifact_manifest.json` — 61 artefacts, 38
+  pinned by SHA-256 (was 51/33 before the held-out round was adjudicated, and
+  56/38 before the reviewer-response document and its four figures were
+  recorded). Human-readable listing and the full reproduction sequence:
   `docs/paper/artifacts.md`. Verify with
   `uv run python docs/paper/verify_artifacts.py`.
 
