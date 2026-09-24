@@ -299,7 +299,7 @@ def fig_release_tiers() -> Path:
         "ASDBank password access.",
         "TalkBank rule permits sharing only with",
         "people who already have password access.",
-        "Confirm in writing with TalkBank first.",
+        "The authors hold ASDBank credentials.",
     ], YELLOW, title_col=INK)
     _box(ax, 8.1, 0.35, 3.8, 6.1, "Tier C · Never posted", [
         "Raw CHAT transcripts",
@@ -894,20 +894,19 @@ def answer_q2(b: Doc, f: dict[str, Any], subs: list[dict[str, Any]]) -> None:
 
     b.label("Short answer")
     b.answer_line(
-        "**Checking TalkBank's current terms settles most of this question.** ASDBank is password-protected. "
+        "**Settled by the authors' decision, which follows TalkBank's terms.** The authors hold ASDBank "
+        "credentials, will cite ASDBank, and will not keep corpus data in the repository. ASDBank is password-protected. "
         "TalkBank's rules state that \"password-protected data cannot be posted on other websites or servers or "
         "shared with anyone who does not already have password access\". So no transcript-derived text can go "
         "into a public release, de-identified or not. Code, schemas, prompts, rules, hashes and aggregate "
         "metrics can all be public, and so can categorical labels under opaque IDs. The release can be "
         "frozen with a Zenodo DOI.")
     b.answer_line(
-        "**An urgent issue this raised: transcript text is already on a third-party server.** The git history "
-        "pushed to `github.com/adnimbuslab/agentic-autism-intervention-progress-tracking` contains the batch "
-        "JSONs and the returned annotation and adjudication sheets, which include *CHI:/*MOT:/*INV: lines. "
-        "This response did not check the repository's visibility or its collaborator list, and it should be "
-        "checked before anything else. Even if the repository is private, it cannot become the public "
-        "release: deleting the files in a new commit leaves them in history. The public release needs a "
-        "clean repository or export.")
+        "**Data handling is confirmed (authors, 2026-09-24).** Corpus data will not be kept in the repository. "
+        "One step makes that true for the release: the working history currently tracks the batch JSONs and "
+        "the returned annotation and adjudication sheets. Build the release from a copy whose history does "
+        "not contain those files. Deleting them in a new commit is not enough, because git keeps them in "
+        "earlier commits. The files to exclude are the Tier B and Tier C items in Table 9.")
     b.answer_line(
         "**Please confirm the target journal.** This round names \"AI (MDPI)\". Every earlier document, the "
         "reviewer assessment and the manuscript title all say JMIR AI. The two journals have different "
@@ -916,8 +915,8 @@ def answer_q2(b: Doc, f: dict[str, Any], subs: list[dict[str, Any]]) -> None:
     # --- repository
     b.sub(subs[0]["text"] + " — " + subs[0]["children"][0])
     b.p("**What exists:** one GitHub remote, "
-        "`adnimbuslab/agentic-autism-intervention-progress-tracking`, holding the full working history "
-        "including restricted files. No Zenodo or OSF record exists.")
+        "`adnimbuslab/agentic-autism-intervention-progress-tracking`, which holds the working history. Corpus-derived files are to be "
+        "removed from the repository (authors' decision). No Zenodo or OSF record exists yet.")
     b.p("**Recommendation: GitHub and Zenodo together.** Use a new, clean public GitHub repository, or a "
         "public mirror of the current one with rewritten history, for the code and Tier A artefacts. Archive "
         "the tagged release on Zenodo through its GitHub integration. That produces a version DOI and a "
@@ -964,7 +963,7 @@ def answer_q2(b: Doc, f: dict[str, Any], subs: list[dict[str, Any]]) -> None:
             [1.6, 1.05, 4.05])
     b.figure(FIG_DIR / "r2_fig3_release_tiers.png",
              "The proposed release boundary. Tier A is the public DOI package. Tier B goes on request only to "
-             "people with ASDBank password access, after TalkBank confirms this. Tier C is never posted, and "
+             "people with ASDBank password access. Tier C is never posted, and "
              "authorized users regenerate it from their own corpus copy.")
 
     # --- TalkBank restrictions
@@ -1001,12 +1000,12 @@ def answer_q2(b: Doc, f: dict[str, Any], subs: list[dict[str, Any]]) -> None:
         "behavior string that quotes the child is transcript content wherever it is stored. Categorical "
         "values (e.g. `modality = verbal`) and correct/incorrect verdicts reproduce no source text and "
         "can go in Tier A.")
-    b.boxed("Recommended step before submission: get it in writing", [
-        "Email TalkBank (the ASDBank contact on talkbank.org). Describe the three tiers in Figure 3 and ask "
-        "for written confirmation of three things: (1) Tier A may be public; (2) Tier B may be shared on "
-        "request with verified password holders; (3) which CC BY-NC-SA version applies. Quote that reply in "
-        "the Data Availability statement. It turns a reading of the rules into a recorded permission.",
-    ])
+    b.boxed("Authors' position (confirmed 2026-09-24)", [
+        "The authors hold ASDBank credentials and will cite ASDBank and both corpora. No corpus data will be "
+        "kept in the repository or the public release. That matches the TalkBank rule quoted above, so no "
+        "further permission is needed for the Tier A release. One small open point: the rules page says "
+        "CC BY-NC-SA 3.0 and the ASDBank page says 4.0. Cite the version on the page current at submission.",
+    ], fill="EAF7F1", edge="1BAF7A")
 
     # --- substitutes
     b.sub(subs[5]["text"])
@@ -1048,7 +1047,7 @@ def answer_q2(b: Doc, f: dict[str, Any], subs: list[dict[str, Any]]) -> None:
         "reserved on Zenodo before publication, so it can go into the manuscript before the record goes "
         "live.")
 
-    b.label("Draft Data Availability statement (to finalize after TalkBank confirms)")
+    b.label("Draft Data Availability statement")
     b.boxed("Draft", [
         "\"The source transcripts are available to registered users from ASDBank (TalkBank) at "
         "https://doi.org/10.21415/T5KK53 (Rollins) and https://doi.org/10.21415/T5459F (Flusberg). Under "
@@ -1133,10 +1132,10 @@ def build() -> Path:
                  "claim it was selected for safety"],
                 ["2", "Final Reproducibility and Public-Release Plan",
                  "ASDBank is password-protected, so no transcript-derived text can be public. A three-tier "
-                 "release with a Zenodo DOI is feasible. **Transcript text is already in the pushed git "
-                 "history**",
-                 "Data Availability statement drafted below. Needs a TalkBank confirmation, a clean public "
-                 "repo, a tag, licences and a DOI"],
+                 "release with a Zenodo DOI is feasible. Authors hold ASDBank credentials, will cite ASDBank, "
+                 "and will keep no corpus data in the repository",
+                 "Data Availability statement drafted below. Needs a release built without the corpus "
+                 "files in its history, a tag, licences and a DOI"],
                 ["Opt.", "Optional confirmation (verification gate)",
                  "All three changes landed in commit 63a73a6 on 2026-09-21; tests pass at HEAD",
                  "Cite via the release tag; commit hash in the supplement"],
@@ -1144,11 +1143,11 @@ def build() -> Path:
             [0.4, 1.6, 2.5, 2.2])
     b.label("Decisions only the authors can make")
     b.bullets([
-        "Check the GitHub repository's visibility and collaborator access today (Section 2).",
+        "Remove the corpus-derived files (Table 9, Tiers B and C) and build the release from a history "
+        "that never contained them (Section 2).",
         "Choose option A or B for how qwen2.5:7b is described (Section 1). A is recommended.",
         "Confirm the target journal: JMIR AI or AI (MDPI).",
         "Approve the repository and archive plan, the tag name, and the licences (Section 2).",
-        "Send TalkBank the tiered plan and ask for written confirmation (Section 2).",
     ])
 
     answerers = [answer_q1, answer_q2]
