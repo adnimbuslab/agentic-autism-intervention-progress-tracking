@@ -46,6 +46,19 @@ PRE_RUN_FIXES = [
                  "package had been excluded from that run.",
         "fix": "Pass mode='generative_experimental' explicitly. No application code changed.",
     },
+    {
+        "found": "2026-09-25",
+        "tests": ["tests/phase6/integration/test_governance_e2e.py::"
+                  "TestGovernanceE2E::test_s3_correction_propagates_and_original_is_preserved"],
+        "cause": "Test design. The first frozen attempt at commit 1b154d4 failed S3 (72 passed, "
+                 "1 failed) because qwen2.5:7b returned no observation for one synthetic note and "
+                 "the pipeline correctly rejected it (observation FAILED, no record). The helper "
+                 "assumed every note yields a record. Measured rate: 1 rejection in 30 calls.",
+        "fix": "A rejection is now asserted as its own governance outcome (observation FAILED, "
+               "no record persisted, source text preserved) and each scenario uses the records "
+               "that were produced. No application code changed. Suite then passed 3 of 3 runs; "
+               "widening the analytics gate to admit VALIDATED still fails S1 and S2.",
+    },
 ]
 
 SCENARIOS = {
