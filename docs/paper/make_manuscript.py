@@ -355,9 +355,11 @@ def build() -> Path:
     b.p(
         "Behavioural segments were derived from the Rollins "
         "(child-investigator) and Flusberg (child-parent) ASDBank CHAT "
-        "corpora: 11 children, 85 sessions, 75,003 utterances. After parsing, "
-        "de-identification and episode segmentation, 2,442 behavioural "
-        "segments were available, 162 to 273 per child."
+        "corpora: 11 children, 85 sessions, 75,003 utterances. Parsing, "
+        "de-identification and episode segmentation produced 9,018 episodes. "
+        "A child- and episode-type-balanced selection capped at 273 per child "
+        "yielded 2,442 behavioural segments (162 to 273 per child), from which "
+        "the annotation pool was drawn."
     )
     b.figure(
         "fig1_corpus.png",
@@ -447,8 +449,11 @@ def build() -> Path:
         "Sampling the pool remainder would therefore have enriched the set "
         "with segments a generator had already failed on — conditioning in the "
         "opposite direction, and harder to argue away than the original. The "
-        "held-out set is drawn from the 2,051 segments outside the pool "
-        "entirely."
+        "held-out set is drawn from the same balanced selection with a higher "
+        "cap of 455 per child, which yields 3,371 segments; excluding the "
+        "entire 1,320-segment pool leaves 2,051 eligible segments. Of the 132 "
+        "held-out segments, 81 fall inside the 2,442-segment selection and 51 "
+        "outside it."
     )
     b.p(
         "Two rules govern its use. Generators are run only after the "
