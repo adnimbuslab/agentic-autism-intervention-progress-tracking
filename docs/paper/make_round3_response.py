@@ -47,6 +47,22 @@ def load(name: str) -> Any:
     return json.loads((RESULTS / name).read_text())
 
 
+METRICS3 = ("merged_agreement", "unsupported_rate", "whole_record")
+
+
+def diff_str(d: dict) -> str:
+    """A paired difference in points with its interval, as printed everywhere in this document."""
+    return f"{100 * d['value']:+.1f} [{100 * d['ci95']['lower']:+.1f}, {100 * d['ci95']['upper']:+.1f}]"
+
+
+def overlaps(a: dict, b: dict) -> bool:
+    return a["ci95"]["lower"] <= b["ci95"]["upper"] and b["ci95"]["lower"] <= a["ci95"]["upper"]
+
+
+def ranking(per_model: dict, key: str) -> list[str]:
+    return sorted(per_model, key=lambda m: -per_model[m][key]["value"])
+
+
 # ---------------------------------------------------------------------------
 # Questions, verbatim
 # ---------------------------------------------------------------------------
@@ -129,12 +145,12 @@ def fig_pipeline(ss: dict, leak: dict) -> Path:
         _arrow(ax, a, b)
     _box(ax, 5.15, 1.6, 2.2, 1.3, f"Balanced selection\ncap 455 / child\n→ {ss['n_selected']['5000']:,} segments", AQUA)
     _box(ax, 7.8, 1.6, 1.9, 1.3, "Exclude pool\nby segment ID\n→ 2,051", AQUA)
-    _box(ax, 10.1, 1.6, 1.85, 1.3, "132 held-out\n12 / child\nseed 20260916", AQUA, fill=AQUA, tc="white", weight="bold")
+    _box(ax, 10.1, 1.6, 1.85, 1.3, "132 frozen eval\n12 / child\nseed 20260916", AQUA, fill=AQUA, tc="white", weight="bold")
     _arrow(ax, (3.65, 4.2), (5.15, 2.3)); _arrow(ax, (7.35, 2.25), (7.8, 2.25)); _arrow(ax, (9.7, 2.25), (10.1, 2.25))
     ax.text(7.8, 0.95, f"ID exclusion missed {leak['n_in_pool']} pool episodes\n(IDs renumber between caps) — see Q3",
             fontsize=7.6, color=ORANGE, weight="bold")
     ax.text(0.05, 5.75, "Main batch", color=BLUE, weight="bold", fontsize=9)
-    ax.text(0.05, 3.0, "Held-out set", color=AQUA, weight="bold", fontsize=9)
+    ax.text(0.05, 3.0, "Evaluation set (original frozen)", color=AQUA, weight="bold", fontsize=9)
     p = FIG / "r3_fig2_pipeline.png"; fig.savefig(p); plt.close(fig); return p
 
 
@@ -262,7 +278,7 @@ def fig_forest(r3: dict) -> Path:
         ax.grid(axis="x", color=GRID, lw=0.6); ax.set_axisbelow(True)
     axes[0].set_yticks(range(len(MODELS)), [short(m) for m in MODELS]); axes[0].invert_yaxis()
     axes[0].scatter([], [], marker="o", facecolor="white", edgecolor=INK2, label="main batch (330)")
-    axes[0].scatter([], [], marker="s", color=INK2, label="held-out (132)")
+    axes[0].scatter([], [], marker="s", color=INK2, label="original frozen evaluation set (132)")
     fig.legend(frameon=False, fontsize=8, loc="lower center", ncol=2, bbox_to_anchor=(0.5, -0.02))
     fig.tight_layout(rect=(0, 0.07, 1, 1))
     p = FIG / "r3_fig7_cluster_ci.png"; fig.savefig(p); plt.close(fig); return p
@@ -357,8 +373,8 @@ def a1(b: Doc, sec, ctx):
         "**Your understanding is correct, and the number should not be presented as a before/after effect.** "
         f"The 152 retained segments already agreed at κ = {kc['retained_152_round1_values']['mean']:.3f} in "
         "round 1, because re-issue selection took the disagreement-enriched segments and left these. Part of "
-        "the rise from 0.610 to 0.801 therefore comes from which segments were re-annotated, not from the "
-        "codebook alone.")
+        f"the rise from {kc['round1_all_330']['mean']:.3f} to {kc['final_state_all_330']['mean']:.3f} therefore "
+        "comes from which segments were re-annotated, not from the codebook alone.")
     rows = [
         ["Round 1, all 330", "round 1", "330", f"{kc['round1_all_330']['mean']:.3f}"] + [f"{kc['round1_all_330']['per_field'][f]:.3f}" for f in ("domain", "modality", "prompt_level", "outcome")],
         ["Retained 152", "round 1 (unchanged)", "152", f"{kc['retained_152_round1_values']['mean']:.3f}"] + [f"{kc['retained_152_round1_values']['per_field'][f]:.3f}" for f in ("domain", "modality", "prompt_level", "outcome")],
@@ -380,8 +396,11 @@ def a1(b: Doc, sec, ctx):
         "\"After re-annotation of the 178 disagreement-enriched segments under the codebook, mean κ over all 330 "
         "segments, each in its final pre-adjudication state (round-2 values for the 178, round-1 values for the "
         "remaining 152), was 0.801. Because the 152 were not re-annotated and had higher round-1 agreement "
-        "(0.884), this figure is not a before/after estimate of the codebook effect. That estimate comes from "
-        "the controlled comparison on the 178 re-issued segments, with domain as the untreated control field.\"",
+        "(0.884), this figure should not be read as a before/after comparison. The change within the 178 "
+        "re-issued segments provides the more direct descriptive comparison of agreement before and after "
+        "clarification. Domain, whose coding rules were unchanged, provides a useful internal reference field. "
+        "Because the same annotators coded these segments a second time, familiarity and round effects may "
+        "also contribute to that change.\"",
         "Also relabel the table row that currently reads \"after codebook re-annotation\" (make_manuscript.py:791). "
         "Only 178 of the 330 were re-annotated.",
     ], fill="EAF7F1", edge="1BAF7A")
@@ -399,8 +418,9 @@ def a2(b: Doc, sec, ctx):
         "Code: `data/pipeline/segment_episodes.py`; measured by `segmentation_stats.py` → `segmentation_stats.json`.")
     ans = [
         "A child (`CHI`) turn that either carries a behavioural tier (%spa, %act or %gpx), is the first "
-        "utterance of the session, or follows a non-child turn. The window opens **one turn before** that "
-        "child turn, so the adult turn that prompted it is included.",
+        "utterance of the session, or follows a non-child turn. The window opens **one turn before** the "
+        "triggering child turn when a preceding turn exists, so the adult turn that prompted it is included; "
+        "if the child turn is the first utterance of the session, the window begins with that child turn.",
         "Checked at each following turn: the window closes when it reaches 8 turns, when the session ends, "
         "or when none of the next 3 utterances is a child turn (once it has at least 2 turns). The closing "
         "turn is included.",
@@ -442,8 +462,8 @@ def a2(b: Doc, sec, ctx):
              "A: most episodes reach the 8-turn cap. B: \"other\" is 78% of all episodes. The per-type quota "
              "reduces it to 39% of the 2,442 selected segments. Source: `segmentation_stats.json`.")
     b.figure(FIG / "r3_fig2_pipeline.png",
-             "From utterances to model inputs, for both samples. The held-out branch is where the ID "
-             "instability surfaces (Q3).")
+             "From utterances to model inputs, for both samples. The original frozen evaluation branch is "
+             "where the ID-instability issue surfaces (Q3).")
 
 
 def a3(b: Doc, sec, ctx):
@@ -486,13 +506,13 @@ def a3(b: Doc, sec, ctx):
              "How far into each child's shuffled pool the builder had to go to reach 30 segments where all "
              "three generators were admissible.")
 
-    b.label("A defect found while answering this question: held-out leakage")
+    b.label("Evaluation-set overlap identified during review")
     b.boxed("What was found (2026-09-26)", [
         f"`build_holdout_set.py` excluded the 1,320-segment pool by **segment ID**. Segment IDs are numbered "
-        "in selection order within each session, so under the held-out build's larger cap (455 per child, "
+        "in selection order within each session, so under the original evaluation-set build's larger cap (455 per child, "
         "against 273) the numbering shifts: 338 of the 2,442 IDs name a different episode. Matched by "
-        f"transcript text and confirmed by source line numbers, **{leak['n_in_pool']} of the 132 held-out "
-        f"segments are pool episodes**. Of those, {leak['n_model_output_examined']} had model output examined "
+        f"transcript text and confirmed by source line numbers, **{leak['n_in_pool']} of the 132 original frozen "
+        f"evaluation segments are pool episodes**. Of those, {leak['n_model_output_examined']} had model output examined "
         f"during batch construction, and {leak['n_annotated_in_main_batch']} was annotated in the main batch.",
         "This also corrects my answer in the previous round, which said none of the 132 were in the pool. "
         "That check compared IDs, so it could not see this.",
@@ -504,20 +524,41 @@ def a3(b: Doc, sec, ctx):
         rows.append([short(m)] + [
             f"{pct(base[m][k]['value'])} → {pct(sens['excluding_all_pool_episodes']['per_model'][m][k]['value'])}"
             for k in ("merged_agreement", "unsupported_rate", "whole_record")])
-    b.table("Held-out results with and without the 11 pool episodes (132 → 121 segments, still 11 children). "
+    b.table("Original frozen evaluation set (132) → overlap-excluded evaluation set (121, still 11 children). "
             "Source: `round3_analysis.json` (holdout_sensitivity).",
             ["Generator", "Merged agreement", "Unsupported assertion", "Whole-record"], rows, [1.3, 1.8, 1.8, 1.8])
-    b.p("**No conclusion changes.** All four generators still score lower on the held-out set than on the main "
-        "batch, and the order of generators on every metric is unchanged. The Qwen 3 14B minus Qwen 2.5 7B "
-        "difference stays inside its interval (merged "
-        f"{100 * sens['excluding_all_pool_episodes']['paired_qwen3_14b_minus_qwen2_5_7b']['merged_agreement']['value']:+.1f} points, "
-        "95% CI "
-        f"{100 * sens['excluding_all_pool_episodes']['paired_qwen3_14b_minus_qwen2_5_7b']['merged_agreement']['ci95']['lower']:+.1f} "
-        f"to {100 * sens['excluding_all_pool_episodes']['paired_qwen3_14b_minus_qwen2_5_7b']['merged_agreement']['ci95']['upper']:+.1f}). "
-        "Recommendation: keep the frozen 132 as the primary held-out result, so nothing is re-drawn after "
-        "results were seen. Report the leak and this 121-segment sensitivity analysis alongside it, and fix "
-        "the builder to exclude by episode identity for any future draw. The manuscript's claim that "
-        "\"the entire original stratified pool … is excluded\" (make_manuscript.py:446) must be corrected.")
+    main = ctx["r3"]["model_performance"]["main_batch"]["per_model"]
+    excl = sens["excluding_all_pool_episodes"]["per_model"]
+    # The claims below are checked, not asserted by hand.
+    assert all(base[m]["merged_agreement"]["value"] < main[m]["merged_agreement"]["value"]
+               and excl[m]["merged_agreement"]["value"] < main[m]["merged_agreement"]["value"] for m in MODELS)
+    assert all(ranking(base, k) == ranking(excl, k) for k in METRICS3)
+    wr, ur = "whole_record", "unsupported_rate"
+    assert all(base[m][wr]["value"] >= main[m][wr]["value"] and excl[m][wr]["value"] >= main[m][wr]["value"]
+               for m in ("qwen2.5:7b", "qwen3:14b"))
+    assert base["llama3.2:latest"][ur]["value"] > main["llama3.2:latest"][ur]["value"]
+    pd = sens["excluding_all_pool_episodes"]["paired_qwen3_14b_minus_qwen2_5_7b"]
+    assert not pd["merged_agreement"]["ci95"]["excludes_zero"] and pd["unsupported_rate"]["ci95"]["excludes_zero"]
+    b.p("**No conclusion changes.** On both the 132 and the 121, every generator's merged agreement is lower "
+        "than on the main batch. (This does not hold for every metric: whole-record agreement for qwen2.5:7b "
+        "and qwen3:14b is equal or higher, and on the 132 llama3.2's unsupported-assertion rate is higher, "
+        "all within wide intervals.) The order of generators on each of the three metrics is the same in the 132 and the "
+        "121. The qwen3:14b minus qwen2.5:7b difference in merged agreement is still not distinguishable from "
+        f"zero ({diff_str(pd['merged_agreement'])} points on the 121). The unsupported-assertion difference "
+        f"still excludes zero ({diff_str(pd['unsupported_rate'])}).")
+    b.boxed("Recommendation for the manuscript", [
+        "Use two names consistently: the **original frozen evaluation set (n = 132)** and the "
+        "**overlap-excluded evaluation set (n = 121)**. Do not call the 132 simply \"held-out\": 11 of its "
+        "segments break the independence criterion it was meant to meet.",
+        "Report the 121 as the primary estimate of performance on unseen episodes. Report the 132 as the "
+        "originally frozen evaluation, labelled as the set drawn before the identifier defect was found. "
+        "Neither set is re-drawn, so no set is selected after its results were seen. Suggested sentence: "
+        "\"We report the originally frozen 132-segment evaluation for transparency and a "
+        "contamination-excluded analysis of 121 segments. Conclusions were unchanged.\"",
+        "The manuscript's claim that \"the entire original stratified pool … is excluded\" "
+        "(make_manuscript.py:446) must be removed. Fix the builder to exclude by episode identity before "
+        "any future draw.",
+    ], fill="EAF7F1", edge="1BAF7A")
 
 
 def a4(b: Doc, sec, ctx):
@@ -555,7 +596,7 @@ def a4(b: Doc, sec, ctx):
         "A null on either side is a distinct state. Gold null with model null is correctly_null, which counts as agreement and as a non-hallucinated opportunity. Gold value with model null is missing. The literal strings \"null\"/\"none\" are converted to JSON null before scoring (`ollama_llm._normalize_null_strings`).",
         "\"unknown\" is an ordinary category, not a null. Gold unknown with model unknown is correct. Model unknown where gold is null is **hallucinated**, i.e. an unsupported assertion. Gold unknown with model null is missing. "
         f"For qwen2.5:7b on the main batch, {c['unknown_hall']} of its {c['hall']} unsupported assertions were the value \"unknown\".",
-        "**Scored exactly as JSON null.** The scorer reads a missing field, or a whole missing candidate, as None, so the manuscript must not describe omission as a separate state. On the main batch this cannot occur at candidate level, because inclusion required every generator to respond. On the held-out set, a generator with no admissible response has all four fields judged as null.",
+        "**Scored exactly as JSON null.** The scorer reads a missing field, or a whole missing candidate, as None, so the manuscript must not describe omission as a separate state. On the main batch this cannot occur at candidate level, because inclusion required every generator to respond. On the 132-segment evaluation set, a generator with no admissible response has all four fields judged as null.",
     ]
     for q, a in zip(bl[4:], states):
         b.sub(q)
@@ -576,26 +617,43 @@ def a5(b: Doc, sec, ctx):
         rows = [[short(m)] + [
             f"{pct(perf[m][k]['value'])} [{pct(perf[m][k]['ci95']['lower'])}, {pct(perf[m][k]['ci95']['upper'])}]"
             for k in ("merged_agreement", "unsupported_rate", "whole_record")] for m in MODELS]
-        b.table(f"{'Main batch' if side == 'main_batch' else 'Held-out set'} (n = {n}, 11 children): point "
+        b.table(f"{'Main batch' if side == 'main_batch' else 'Original frozen evaluation set'} (n = {n}, 11 children): point "
                 "estimate [95% child-cluster CI].",
                 ["Generator", "Merged agreement", "Unsupported assertion", "Whole-record"], rows, [1.2, 1.85, 1.85, 1.85])
+    mb, ho = r3["model_performance"]["main_batch"]["per_model"], r3["model_performance"]["holdout"]["per_model"]
+    u = "unsupported_rate"
+    assert not any(overlaps(mb[a][u], mb[b][u]) for i, a in enumerate(MODELS) for b in MODELS[i + 1:])
+    assert overlaps(ho["qwen2.5:3b"][u], ho["qwen2.5:7b"][u]) and overlaps(ho["llama3.2:latest"][u], ho["qwen3:14b"][u])
     b.figure(FIG / "r3_fig7_cluster_ci.png",
              "Child-cluster 95% intervals. Merged-agreement intervals for qwen2.5:7b and qwen3:14b overlap "
-             "heavily. Unsupported-assertion intervals separate the four generators clearly.")
+             "heavily. On the main batch, the unsupported-assertion intervals of the four generators do not "
+             "overlap. On the 132-segment set they overlap for qwen2.5:3b and qwen2.5:7b, and for llama3.2 and "
+             "qwen3:14b.")
     rows = []
-    for side in ("main_batch", "holdout"):
-        p = r3["model_performance"][side]["paired_qwen3_14b_minus_qwen2_5_7b"]
-        rows.append([side.replace("_", " ")] + [
-            f"{100 * p[k]['value']:+.1f} [{100 * p[k]['ci95']['lower']:+.1f}, {100 * p[k]['ci95']['upper']:+.1f}]"
-            + (" *" if p[k]["ci95"]["excludes_zero"] else "")
-            for k in ("merged_agreement", "unsupported_rate", "whole_record")])
+    paired = [("Main batch (330)", r3["model_performance"]["main_batch"]["paired_qwen3_14b_minus_qwen2_5_7b"]),
+              ("Original frozen (132)", r3["model_performance"]["holdout"]["paired_qwen3_14b_minus_qwen2_5_7b"]),
+              ("Overlap-excluded (121)", r3["holdout_sensitivity"]["excluding_all_pool_episodes"]["paired_qwen3_14b_minus_qwen2_5_7b"])]
+    for label, p in paired:
+        rows.append([label] + [diff_str(p[k]) + (" *" if p[k]["ci95"]["excludes_zero"] else "") for k in METRICS3])
     b.table("Paired difference, qwen3:14b minus qwen2.5:7b, in percentage points. Both models are scored on "
             "the same resampled children. * marks an interval excluding zero.",
             ["Set", "Merged agreement", "Unsupported assertion", "Whole-record"], rows, [1.2, 1.85, 1.85, 1.85])
-    b.p("This answers the question left open in Round 2. On the held-out set, Qwen 3 14B's 1.3-point lead in "
-        "merged agreement is not distinguishable from zero. Its 41-point higher unsupported-assertion rate "
-        "is. Whole-record intervals include zero for most generators, because 4.5% of 132 is 6 segments. "
-        "Report them as descriptive, not as a ranking.")
+    hp = r3["model_performance"]["holdout"]["paired_qwen3_14b_minus_qwen2_5_7b"]
+    ep = r3["holdout_sensitivity"]["excluding_all_pool_episodes"]["paired_qwen3_14b_minus_qwen2_5_7b"]
+    assert hp["unsupported_rate"]["ci95"]["excludes_zero"] and ep["unsupported_rate"]["ci95"]["excludes_zero"]
+    wr = "whole_record"
+    assert all(ho[m][wr]["ci95"]["lower"] == 0 for m in MODELS)
+    zero_main = [short(m) for m in MODELS if mb[m][wr]["ci95"]["lower"] <= 0]
+    n7 = round(ho["qwen2.5:7b"][wr]["value"] * 132)
+    b.p("This answers the question left open in Round 2. On the original frozen evaluation set, qwen3:14b's "
+        f"{100 * hp['merged_agreement']['value']:.1f}-point lead in merged agreement is not distinguishable "
+        f"from zero; on the overlap-excluded 121 it is {100 * ep['merged_agreement']['value']:+.1f} points, "
+        "also not distinguishable. The higher unsupported-assertion rate is distinguishable from zero in both "
+        f"analyses: {diff_str(hp['unsupported_rate'])} percentage points on the original frozen set and "
+        f"{diff_str(ep['unsupported_rate'])} on the overlap-excluded set. On the 132-segment set every whole-record "
+        f"interval has a lower bound of zero: qwen2.5:7b's {pct(ho['qwen2.5:7b'][wr]['value'])} is {n7} segments, "
+        "and llama3.2 and qwen2.5:3b scored 0. On the main batch, the intervals for "
+        f"{' and '.join(zero_main)} reach zero. Report whole-record values as descriptive, not as a ranking.")
 
 
 def a6(b: Doc, sec, ctx):
@@ -621,9 +679,20 @@ def a6(b: Doc, sec, ctx):
     b.table("How each MARS outcome enters the full-policy score. Source: `mars_evaluation.json`, `mars_selection_analysis.json`.",
             ["Outcome (as listed)", "n", "State", "Scoring"], rows, [2.4, 0.6, 1.9, 1.8])
     b.figure(FIG / "r3_fig8_mars_full_policy.png",
-             "A: the complete policy over 330. B: MARS at whole-record level (2.7% counting abstentions as "
-             "misses; 3.4% over the 265 it returned) against always using qwen2.5:7b (4.5% on the same 265 and "
-             "on all 330) and the oracle ceiling (6.1%, 3-generator roster).")
+             f"A: the complete policy over {me['mars']['n_total']}. B: MARS at whole-record level "
+             f"({pct(me['mars']['accuracy_over_all'])} counting abstentions as misses; "
+             f"{pct(me['mars']['accuracy_over_returned'])} over the {me['mars']['n_returned']} it returned) against "
+             f"always using qwen2.5:7b ({pct(ctx['best_on_returned'])} on the same {me['mars']['n_returned']}, "
+             f"{pct(me['best_generator_accuracy'])} on all {me['mars']['n_total']}) and the oracle ceiling "
+             f"({pct(me['oracle_ceiling'])}, 3-generator roster).")
+    mm = me["mars"]
+    b.boxed("Suggested manuscript wording", [
+        f"\"Across all {mm['n_total']} episodes, MARS returned a record for {mm['n_returned']} "
+        f"({pct(mm['coverage'])} coverage) and achieved {pct(mm['accuracy_over_all'])} whole-record agreement "
+        "when abstentions were counted as failures; among returned records, whole-record agreement was "
+        f"{pct(mm['accuracy_over_returned'])}.\"",
+        f"Never report {pct(mm['accuracy_over_all'])} without the {pct(mm['coverage'])} coverage beside it.",
+    ], fill="EAF7F1", edge="1BAF7A")
     b.p("Per-field full-policy numbers do not exist, and should not be invented for the paper. Per-field "
         "selection quality is defined only on the 142 genuinely reranked segments (`mars_selection_analysis`: "
         f"MARS {pct(ctx['sel']['mars'])} vs best generator {pct(ctx['sel']['best_generator'])} vs random "
@@ -636,8 +705,9 @@ def a7(b: Doc, sec, ctx):
     bl = bullets_of(sec["items"])
     b.label("Short answer")
     b.answer_line(
-        "**The models and the annotators saw the same transcript text, character for character. This was "
-        "checked on all 330 annotation-sheet rows. The annotators did not see any model information: none of "
+        "**Models and annotators saw identical transcript content, character for character, checked on all "
+        "330 annotation-sheet rows; the annotation sheets additionally contained administrative identifiers "
+        "(segment, child, corpus and session ID). The annotators did not see any model information: none of "
         "the 16 annotation or adjudication sheets contains a model name, confidence, candidate or MARS "
         "field.**")
     ans = [
@@ -718,11 +788,12 @@ def a9(b: Doc, sec, ctx):
     b.table("Evidence for each authorization claim. Paths are under tests/. Run record: 120 passed, 0 failed, "
             "2026-09-26, commit in this round's release.",
             ["Claim (as asked)", "Tests", "Result"], rows, [1.9, 4.2, 0.6])
-    b.p("The mocked-database suites (`tests/phase3/test_rbac.py`, `tests/phase6/test_security_rbac.py`) show "
-        "that each endpoint applies its role check. The new real-database tests show that the child-level "
-        "decision holds against real data: a revoked contributor is refused on the very next request, using a "
-        "token issued before revocation. Enforcement is therefore per request in the API, not in the UI or at "
-        "login.")
+    b.p("These tests provide evidence for the claimed authorization behavior under the tested conditions; "
+        "they do not prove the system secure. The mocked-database suites (`tests/phase3/test_rbac.py`, "
+        "`tests/phase6/test_security_rbac.py`) show that each endpoint applies its role check. The new "
+        "real-database tests show that the child-level decision holds against real data: in the test, a "
+        "revoked contributor is refused on the very next request, using a token issued before revocation. "
+        "This is consistent with enforcement per request in the API, not only in the UI or at login.")
     b.code(["uv run pytest tests/phase3/test_rbac.py tests/phase6/test_security_rbac.py tests/phase3/test_structured_records.py \\",
             "  tests/phase4/test_analytics_api.py tests/phase4/test_reports_api.py tests/phase3/test_children.py \\",
             "  tests/phase3/test_goals.py tests/phase3/test_observations.py tests/phase3/test_actors.py \\",
@@ -736,7 +807,7 @@ def a10(b: Doc, sec, ctx):
         "percentiles, linear interpolation). Each replicate draws 11 children with replacement and keeps "
         "every segment of each drawn child. Code: `reliability_stats.bootstrap_kappa` with `clusters`; seed "
         "20260915. A replicate whose κ is undefined (a resample with a single category) is dropped. This "
-        "happened in three child-cluster intervals, all for modality: held-out (9,997 of 10,000 valid), and "
+        "happened in three child-cluster intervals, all for modality: original frozen evaluation set (9,997 of 10,000 valid), and "
         "round-comparison round 1 and its difference (9,999 each). Every other interval has 10,000.")
     b.table("The two procedures, and where each appears. Both are stored side by side in every reliability artifact.",
             ["", "Primary", "Sensitivity analysis"],
@@ -750,8 +821,9 @@ def a10(b: Doc, sec, ctx):
     b.boxed("One sentence in the manuscript mixes the two", [
         "make_manuscript.py:558 reads: \"Intervals are 10,000-replicate percentile bootstraps resampling "
         "segments\". The preceding paragraph and every κ table use the child-cluster interval. Suggested "
-        "replacement: \"Intervals are 10,000-replicate child-cluster percentile bootstraps; segment-level "
-        "intervals are reported as a sensitivity analysis.\"",
+        "replacement: \"Intervals are 10,000-replicate child-cluster percentile bootstrap intervals, "
+        "resampling children with replacement and retaining all segments belonging to each sampled child. "
+        "Segment-level intervals are reported as a sensitivity analysis.\"",
         "Separately, the MARS paired differences (make_manuscript.py:1478) are segment-level bootstraps, and "
         "the caption says so. The model-performance intervals added in Q5 use the child-cluster procedure, "
         "so all intervals for annotation and model performance would then share one method.",
@@ -838,25 +910,32 @@ def build() -> Path:
 
     b.h("Summary", 1)
     leak = ctx["r3"]["holdout_leakage"]
+    r3, kc, mm = ctx["r3"], ctx["r3"]["kappa_composition"], ctx["mars_eval"]["mars"]
+    hp = r3["model_performance"]["holdout"]["paired_qwen3_14b_minus_qwen2_5_7b"]
+    ep = r3["holdout_sensitivity"]["excluding_all_pool_episodes"]["paired_qwen3_14b_minus_qwen2_5_7b"]
     b.table("Each question and the answer in one line.", ["#", "Question", "Answer"], [
-        ["1", "Final merged κ = 0.801", "Mean of 4 per-field κ over all 330 in final pre-adjudication state (178 round-2 + 152 round-1). Not a before/after effect: the retained 152 were at 0.884 already"],
+        ["1", f"Final merged κ = {kc['final_state_all_330']['mean']:.3f}", f"Mean of 4 per-field κ over all 330 in final pre-adjudication state (178 round-2 + 152 round-1). Not a before/after comparison: the retained 152 were at {kc['retained_152_round1_values']['mean']:.3f} already"],
         ["2", "Segmentation logic", "Rule-based 2–8 turn windows around child turns; all speakers; %spa/%act/%gpx only; 1-turn overlaps; 8 types; nothing excluded; deterministic"],
-        ["3", "506 examined → 330", f"Per-child seeded shuffle (seed 42), walk in order, keep where all 3 generators admissible, stop at 30. **Found: {leak['n_in_pool']} held-out segments are pool episodes** — conclusions unchanged"],
+        ["3", "506 examined → 330", f"Per-child seeded shuffle (seed 42), walk in order, keep where all 3 generators admissible, stop at 30. **Found: {leak['n_in_pool']} of the {leak['n_holdout']} frozen evaluation segments are pool episodes** — conclusions unchanged on the {leak['n_holdout'] - leak['n_in_pool']}"],
         ["4", "Metric definitions", "Five judgements per field; four formulas with exact denominators; 'unknown' is a category; an omitted field is scored as null"],
-        ["5", "Cluster CIs for models", "Computed. Held-out qwen3:14b − qwen2.5:7b: merged +1.3 [−3.0, +5.1]; unsupported +41.3 [+17.1, +54.6]"],
-        ["6", "Full-policy MARS", "Exists: mars_evaluation.json. 2.7% over all 330 (abstain = miss), coverage 80.3%, vs 4.5% for qwen2.5:7b"],
-        ["7", "Model/annotator input", "Same text, 330/330 identical; model saw no IDs, goals or metadata; annotators saw no model information"],
+        ["5", "Cluster CIs for models", f"Computed. qwen3:14b − qwen2.5:7b on the original frozen 132: merged {diff_str(hp['merged_agreement'])}; unsupported {diff_str(hp['unsupported_rate'])}. On the overlap-excluded 121: merged {diff_str(ep['merged_agreement'])}; unsupported {diff_str(ep['unsupported_rate'])}"],
+        ["6", "Full-policy MARS", f"Exists: mars_evaluation.json. Coverage {pct(mm['coverage'])}; {pct(mm['accuracy_over_all'])} over all {mm['n_total']} (abstain = miss), {pct(mm['accuracy_over_returned'])} over the {mm['n_returned']} returned; qwen2.5:7b {pct(ctx['mars_eval']['best_generator_accuracy'])}"],
+        ["7", "Model/annotator input", "Identical transcript content, 330/330; sheets additionally carried administrative IDs; model saw no IDs, goals or metadata; annotators saw no model information"],
         ["8", "Representation logic", "Always applied, not goal-relative, no exemption; single setting or role → never ADEQUATE; 'contributors' = roles"],
-        ["9", "Authorization tests", "All five covered; 120 pass; 4 real-DB tests added (revocation, cross-child)"],
+        ["9", "Authorization tests", "Test evidence for all five; 120 pass; 4 real-DB tests added (revocation, cross-child)"],
         ["10", "Bootstrap method", "Yes: child-cluster, 10,000 percentile. One manuscript sentence says 'segments' and needs fixing"],
     ], [0.35, 1.7, 4.65])
     b.label("Manuscript changes this round implies")
     b.bullets([
-        "κ = 0.801: describe the mixed annotation state; relabel the 'after codebook re-annotation' row (Q1).",
-        f"Held-out: disclose the {leak['n_in_pool']} pool episodes and add the 121-segment sensitivity analysis; "
-        "correct 'the entire original stratified pool … is excluded' (Q3).",
+        f"κ = {kc['final_state_all_330']['mean']:.3f}: describe the mixed annotation state without causal "
+        "'codebook effect' language; relabel the 'after codebook re-annotation' row (Q1).",
+        f"Evaluation set: disclose the {leak['n_in_pool']} pool episodes; name the sets 'original frozen "
+        f"evaluation set (n = {leak['n_holdout']})' and 'overlap-excluded evaluation set (n = "
+        f"{leak['n_holdout'] - leak['n_in_pool']})', report both, with the {leak['n_holdout'] - leak['n_in_pool']} "
+        "as primary; remove 'the entire original stratified pool … is excluded' (Q3).",
         "Metric definitions: omission is scored as null; 'unknown' is a category (Q4).",
         "Add child-cluster CIs to the model-performance tables (Q5).",
+        "MARS: always pair whole-record agreement with coverage (Q6).",
         "Adequacy: representation is not goal-relative; 'contributors' are roles (Q8).",
         "Bootstrap sentence at make_manuscript.py:558 (Q10).",
     ])
