@@ -1,0 +1,362 @@
+{
+  "generated_at": "2026-09-26T22:37:03.688265+00:00",
+  "n_bootstrap": 10000,
+  "seed": 20261002,
+  "interval_method": "child-cluster percentile bootstrap; equal-child statistic recomputed per replicate",
+  "child_weighting_121": {
+    "per_child": {
+      "brett": {
+        "frozen": 12,
+        "retained": 12,
+        "removed": 0,
+        "episode_weight": 0.0992,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 2
+      },
+      "carl": {
+        "frozen": 12,
+        "retained": 11,
+        "removed": 1,
+        "episode_weight": 0.0909,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 9
+      },
+      "jack": {
+        "frozen": 12,
+        "retained": 12,
+        "removed": 0,
+        "episode_weight": 0.0992,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 3
+      },
+      "josh": {
+        "frozen": 12,
+        "retained": 12,
+        "removed": 0,
+        "episode_weight": 0.0992,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 8
+      },
+      "mark": {
+        "frozen": 12,
+        "retained": 12,
+        "removed": 0,
+        "episode_weight": 0.0992,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 1
+      },
+      "mars": {
+        "frozen": 12,
+        "retained": 10,
+        "removed": 2,
+        "episode_weight": 0.0826,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 8
+      },
+      "rick": {
+        "frozen": 12,
+        "retained": 12,
+        "removed": 0,
+        "episode_weight": 0.0992,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 0
+      },
+      "roger_flusberg": {
+        "frozen": 12,
+        "retained": 12,
+        "removed": 0,
+        "episode_weight": 0.0992,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 4
+      },
+      "roger_rollins": {
+        "frozen": 12,
+        "retained": 6,
+        "removed": 6,
+        "episode_weight": 0.0496,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 8
+      },
+      "sid": {
+        "frozen": 12,
+        "retained": 11,
+        "removed": 1,
+        "episode_weight": 0.0909,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 10
+      },
+      "stuart": {
+        "frozen": 12,
+        "retained": 11,
+        "removed": 1,
+        "episode_weight": 0.0909,
+        "equal_child_weight": 0.0909,
+        "reference_null_slots": 0
+      }
+    },
+    "per_model": {
+      "llama3.2:latest": {
+        "merged_agreement": {
+          "episode_weighted": 0.2748,
+          "child_weighted": 0.2694,
+          "child_weighted_minus_episode_weighted": -0.0054,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.2139,
+            "upper": 0.3235,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "unsupported_rate": {
+          "episode_weighted": 0.8302,
+          "child_weighted": 0.8463,
+          "child_weighted_minus_episode_weighted": 0.0161,
+          "n_children_defined": 9,
+          "ci95": {
+            "lower": 0.7633,
+            "upper": 0.9306,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "whole_record": {
+          "episode_weighted": 0.0,
+          "child_weighted": 0.0,
+          "child_weighted_minus_episode_weighted": 0.0,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      },
+      "qwen2.5:3b": {
+        "merged_agreement": {
+          "episode_weighted": 0.126,
+          "child_weighted": 0.137,
+          "child_weighted_minus_episode_weighted": 0.011,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.0904,
+            "upper": 0.191,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "unsupported_rate": {
+          "episode_weighted": 0.2453,
+          "child_weighted": 0.2574,
+          "child_weighted_minus_episode_weighted": 0.0121,
+          "n_children_defined": 9,
+          "ci95": {
+            "lower": 0.1333,
+            "upper": 0.3796,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "whole_record": {
+          "episode_weighted": 0.0,
+          "child_weighted": 0.0,
+          "child_weighted_minus_episode_weighted": 0.0,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      },
+      "qwen2.5:7b": {
+        "merged_agreement": {
+          "episode_weighted": 0.405,
+          "child_weighted": 0.3969,
+          "child_weighted_minus_episode_weighted": -0.008,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.3306,
+            "upper": 0.4671,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "unsupported_rate": {
+          "episode_weighted": 0.5094,
+          "child_weighted": 0.6657,
+          "child_weighted_minus_episode_weighted": 0.1563,
+          "n_children_defined": 9,
+          "ci95": {
+            "lower": 0.4592,
+            "upper": 0.875,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "whole_record": {
+          "episode_weighted": 0.0496,
+          "child_weighted": 0.0461,
+          "child_weighted_minus_episode_weighted": -0.0034,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.0,
+            "upper": 0.0992,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      },
+      "qwen3:14b": {
+        "merged_agreement": {
+          "episode_weighted": 0.4132,
+          "child_weighted": 0.4025,
+          "child_weighted_minus_episode_weighted": -0.0107,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.3143,
+            "upper": 0.4957,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "unsupported_rate": {
+          "episode_weighted": 0.9057,
+          "child_weighted": 0.8713,
+          "child_weighted_minus_episode_weighted": -0.0344,
+          "n_children_defined": 9,
+          "ci95": {
+            "lower": 0.7458,
+            "upper": 0.975,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "whole_record": {
+          "episode_weighted": 0.0413,
+          "child_weighted": 0.0379,
+          "child_weighted_minus_episode_weighted": -0.0034,
+          "n_children_defined": 11,
+          "ci95": {
+            "lower": 0.0,
+            "upper": 0.0985,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      }
+    },
+    "paired_qwen3_14b_minus_qwen2_5_7b": {
+      "merged_agreement": {
+        "value": 0.0055,
+        "lower": -0.0275,
+        "upper": 0.0367,
+        "excludes_zero": false,
+        "n_valid": 10000,
+        "unit": "child"
+      },
+      "unsupported_rate": {
+        "value": 0.2056,
+        "lower": -0.0761,
+        "upper": 0.4593,
+        "excludes_zero": false,
+        "n_valid": 10000,
+        "unit": "child"
+      },
+      "whole_record": {
+        "value": -0.0083,
+        "lower": -0.0331,
+        "upper": 0.0152,
+        "excludes_zero": false,
+        "n_valid": 10000,
+        "unit": "child"
+      }
+    }
+  },
+  "reference_nulls_by_cap": {
+    "definition": "capped = rendered CHAT text has exactly 8 speaker turns (the segmentation maximum); shorter = fewer than 8",
+    "source": "round4_analysis.json episode_cap.annotated_by_cap",
+    "main_batch_330": {
+      "capped_8": {
+        "n": 187,
+        "gold_null_share": {
+          "domain": 0.0,
+          "modality": 0.2299,
+          "prompt_level": 0.0,
+          "outcome": 0.3262
+        },
+        "gold_null_mean": 0.139,
+        "reference_null_slots": {
+          "domain": 0,
+          "modality": 43,
+          "prompt_level": 0,
+          "outcome": 61
+        },
+        "reference_null_slots_total": 104,
+        "field_slots": 748,
+        "qwen2.5:7b_unsupported": 0.6442
+      },
+      "under_8": {
+        "n": 143,
+        "gold_null_share": {
+          "domain": 0.021,
+          "modality": 0.2378,
+          "prompt_level": 0.014,
+          "outcome": 0.3776
+        },
+        "gold_null_mean": 0.1626,
+        "reference_null_slots": {
+          "domain": 3,
+          "modality": 34,
+          "prompt_level": 2,
+          "outcome": 54
+        },
+        "reference_null_slots_total": 93,
+        "field_slots": 572,
+        "qwen2.5:7b_unsupported": 0.4839
+      }
+    },
+    "frozen_132": {
+      "capped_8": {
+        "n": 77,
+        "gold_null_share": {
+          "domain": 0.0,
+          "modality": 0.2597,
+          "prompt_level": 0.0,
+          "outcome": 0.1429
+        },
+        "gold_null_mean": 0.1006,
+        "reference_null_slots": {
+          "domain": 0,
+          "modality": 20,
+          "prompt_level": 0,
+          "outcome": 11
+        },
+        "reference_null_slots_total": 31,
+        "field_slots": 308,
+        "qwen2.5:7b_unsupported": 0.6129
+      },
+      "under_8": {
+        "n": 55,
+        "gold_null_share": {
+          "domain": 0.0182,
+          "modality": 0.2909,
+          "prompt_level": 0.0182,
+          "outcome": 0.2545
+        },
+        "gold_null_mean": 0.1454,
+        "reference_null_slots": {
+          "domain": 1,
+          "modality": 16,
+          "prompt_level": 1,
+          "outcome": 14
+        },
+        "reference_null_slots_total": 32,
+        "field_slots": 220,
+        "qwen2.5:7b_unsupported": 0.4062
+      }
+    }
+  }
+}
