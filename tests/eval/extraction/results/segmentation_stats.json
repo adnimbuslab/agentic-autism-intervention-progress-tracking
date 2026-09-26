@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-09-26T10:22:08.476209+00:00",
+  "n_sessions": 85,
+  "n_utterances": 75003,
+  "n_candidate_windows": 9018,
+  "excluded_shorter_than_min_turns": 0,
+  "excluded_no_child_turn": 0,
+  "n_episodes": 9018,
+  "min_turns": 2,
+  "max_turns": 8,
+  "episode_length_distribution": {
+    "2": 14,
+    "3": 1570,
+    "4": 814,
+    "5": 700,
+    "6": 697,
+    "7": 513,
+    "8": 4710
+  },
+  "mean_episode_length": 6.31,
+  "adjacent_episode_pairs_sharing_an_utterance": 1787,
+  "episode_types_all": {
+    "other": 7048,
+    "play": 915,
+    "response": 279,
+    "joint_attention": 256,
+    "request": 255,
+    "protest": 242,
+    "initiation": 23
+  },
+  "episode_types_selected_cap3000": {
+    "other": 957,
+    "play": 779,
+    "response": 185,
+    "joint_attention": 178,
+    "protest": 164,
+    "request": 156,
+    "initiation": 23
+  },
+  "n_selected": {
+    "3000": 2442,
+    "5000": 3371
+  },
+  "speakers_in_episodes": {
+    "CHI": 26232,
+    "MOT": 25955,
+    "INV": 4742,
+    "INV2": 16,
+    "UID": 1,
+    "OTH": 1
+  },
+  "dependent_tiers_parsed": {
+    "mor": 51743,
+    "gra": 51743,
+    "spa": 6360,
+    "com": 4508,
+    "act": 4102,
+    "gpx": 1036,
+    "tim": 630,
+    "xpho": 34,
+    "gls": 13
+  },
+  "dependent_tiers_rendered_to_model": [
+    "spa",
+    "act",
+    "gpx"
+  ],
+  "deterministic": true,
+  "episode_fingerprint_sha256": "df41518326c11cb27d1672567d4539a609452e9a0fbeee90d77a7d0513909e41"
+}
