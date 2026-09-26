@@ -696,9 +696,11 @@ def a_r25(b: Doc, ctx) -> None:
         "states the target as \"1,000-3,000 segments, each consisting of 2-8 consecutive utterance turns with "
         "context\". The specification was committed on 2026-08-24, a day before the segmenter that sets "
         "`MAX_EPISODE_TURNS = 8` (`data/pipeline/segment_episodes.py`, commit 6767d65). The specification "
-        "gives no rationale for the value 8. The intent was to bound annotation burden and model input length, "
-        "but that is design intent, not documented justification. It was not selected empirically, and the "
-        "manuscript should say so. A model-free sensitivity analysis "
+        "gives no rationale for the value 8, and no requirement, analysis or note chooses it. The spec file "
+        "was generated programmatically (python-docx default metadata), and neither the research team's notes "
+        "(`exp-data/data repos.docx`, which give only the 1,000–3,000 segment target) nor any exploratory "
+        "analysis precedes it. **It is an undocumented implementation default, not a justified choice, and the "
+        "manuscript should say so.** A model-free sensitivity analysis "
         "was feasible with existing artefacts and is reported below. So is the association between the cap "
         "and gold nulls in the annotated sets.")
     b.table("Re-segmentation of the same 85 sessions under larger caps. No model involved. Source: "
@@ -738,8 +740,8 @@ def a_r25(b: Doc, ctx) -> None:
         "shows the cap reversing a conclusion.",
     ])
     b.boxed("Suggested manuscript wording (Section 2.12 and Limitations 4.9)", [
-        "\"The eight-turn maximum was fixed in the system specification (Section 5.7.3) before segmentation, "
-        f"to bound annotation burden and model input length; it was not tuned on the data. It was reached by "
+        "\"The eight-turn maximum was an implementation default fixed in the system specification before "
+        f"segmentation; it was not derived from the transcripts or tuned on the data. It was reached by "
         f"{pct(rs['8']['share_at_cap'])} of episodes, so it actively truncates long exchanges. The truncated "
         "turns form subsequent episodes rather than being discarded "
         f"({pct(1 - rs['8']['utterances_covered'] / rs['none']['utterances_covered'])} fewer utterances covered "
