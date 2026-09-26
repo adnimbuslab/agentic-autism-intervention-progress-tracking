@@ -1,0 +1,2896 @@
+{
+  "generated_at": "2026-09-26T20:46:49.072097+00:00",
+  "n_bootstrap": 10000,
+  "seed": 20261001,
+  "interval_method": "child-cluster percentile bootstrap, as in round3_analysis",
+  "frame_audit": {
+    "n_universe_3371": 3371,
+    "n_usable": 3371,
+    "n_pool": 1320,
+    "n_used_frame_id_rule": 2051,
+    "n_intended_frame_identity_rule": 2051,
+    "n_in_both": 1915,
+    "n_wrongly_retained_pool": 136,
+    "n_wrongly_excluded_non_pool": 136,
+    "share_of_intended_frame_excluded": 0.0663,
+    "share_of_used_frame_that_is_pool": 0.0663,
+    "frozen_draw_reproduced": true,
+    "frozen_segments_in_pool": 11,
+    "per_child": {
+      "brett": {
+        "used_frame": 269,
+        "intended_frame": 269,
+        "in_both": 269,
+        "wrongly_retained": 0,
+        "wrongly_excluded": 0,
+        "coverage_of_intended": 1.0,
+        "sampling_fraction_used": 0.0446
+      },
+      "carl": {
+        "used_frame": 141,
+        "intended_frame": 141,
+        "in_both": 127,
+        "wrongly_retained": 14,
+        "wrongly_excluded": 14,
+        "coverage_of_intended": 0.9007,
+        "sampling_fraction_used": 0.0851
+      },
+      "jack": {
+        "used_frame": 170,
+        "intended_frame": 170,
+        "in_both": 157,
+        "wrongly_retained": 13,
+        "wrongly_excluded": 13,
+        "coverage_of_intended": 0.9235,
+        "sampling_fraction_used": 0.0706
+      },
+      "josh": {
+        "used_frame": 68,
+        "intended_frame": 68,
+        "in_both": 64,
+        "wrongly_retained": 4,
+        "wrongly_excluded": 4,
+        "coverage_of_intended": 0.9412,
+        "sampling_fraction_used": 0.1765
+      },
+      "mark": {
+        "used_frame": 273,
+        "intended_frame": 273,
+        "in_both": 269,
+        "wrongly_retained": 4,
+        "wrongly_excluded": 4,
+        "coverage_of_intended": 0.9853,
+        "sampling_fraction_used": 0.044
+      },
+      "mars": {
+        "used_frame": 233,
+        "intended_frame": 233,
+        "in_both": 194,
+        "wrongly_retained": 39,
+        "wrongly_excluded": 39,
+        "coverage_of_intended": 0.8326,
+        "sampling_fraction_used": 0.0515
+      },
+      "rick": {
+        "used_frame": 195,
+        "intended_frame": 195,
+        "in_both": 195,
+        "wrongly_retained": 0,
+        "wrongly_excluded": 0,
+        "coverage_of_intended": 1.0,
+        "sampling_fraction_used": 0.0615
+      },
+      "roger_flusberg": {
+        "used_frame": 281,
+        "intended_frame": 281,
+        "in_both": 271,
+        "wrongly_retained": 10,
+        "wrongly_excluded": 10,
+        "coverage_of_intended": 0.9644,
+        "sampling_fraction_used": 0.0427
+      },
+      "roger_rollins": {
+        "used_frame": 60,
+        "intended_frame": 60,
+        "in_both": 38,
+        "wrongly_retained": 22,
+        "wrongly_excluded": 22,
+        "coverage_of_intended": 0.6333,
+        "sampling_fraction_used": 0.2
+      },
+      "sid": {
+        "used_frame": 167,
+        "intended_frame": 167,
+        "in_both": 149,
+        "wrongly_retained": 18,
+        "wrongly_excluded": 18,
+        "coverage_of_intended": 0.8922,
+        "sampling_fraction_used": 0.0719
+      },
+      "stuart": {
+        "used_frame": 194,
+        "intended_frame": 194,
+        "in_both": 182,
+        "wrongly_retained": 12,
+        "wrongly_excluded": 12,
+        "coverage_of_intended": 0.9381,
+        "sampling_fraction_used": 0.0619
+      }
+    },
+    "profile": {
+      "analysed_frame_in_both": {
+        "n": 1915,
+        "mean_turns": 6.385,
+        "share_8_turns": 0.5368,
+        "mean_child_turns": 3.007,
+        "share_with_behavioural_tier": 0.2987,
+        "share_in_2442_universe": 0.5666,
+        "episode_types": {
+          "other": 980,
+          "play": 495,
+          "request": 135,
+          "response": 104,
+          "joint_attention": 102,
+          "protest": 85,
+          "initiation": 14
+        }
+      },
+      "wrongly_excluded": {
+        "n": 136,
+        "mean_turns": 6.265,
+        "share_8_turns": 0.5,
+        "mean_child_turns": 2.904,
+        "share_with_behavioural_tier": 0.7132,
+        "share_in_2442_universe": 0.2721,
+        "episode_types": {
+          "other": 68,
+          "response": 25,
+          "protest": 19,
+          "request": 10,
+          "play": 9,
+          "joint_attention": 5
+        }
+      },
+      "wrongly_retained": {
+        "n": 136,
+        "mean_turns": 6.412,
+        "share_8_turns": 0.5515,
+        "mean_child_turns": 3.029,
+        "share_with_behavioural_tier": 0.7132,
+        "share_in_2442_universe": 1.0,
+        "episode_types": {
+          "play": 52,
+          "joint_attention": 32,
+          "request": 30,
+          "protest": 10,
+          "other": 8,
+          "response": 3,
+          "initiation": 1
+        }
+      },
+      "intended_frame": {
+        "n": 2051,
+        "mean_turns": 6.377,
+        "share_8_turns": 0.5344,
+        "mean_child_turns": 3,
+        "share_with_behavioural_tier": 0.3262,
+        "share_in_2442_universe": 0.5471,
+        "episode_types": {
+          "other": 1048,
+          "play": 504,
+          "request": 145,
+          "response": 129,
+          "joint_attention": 107,
+          "protest": 104,
+          "initiation": 14
+        }
+      }
+    }
+  },
+  "same_universe": {
+    "groups": {
+      "main_batch_330": {
+        "n": 330,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.3083,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2416,
+                "upper": 0.3712,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.8325,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.7927,
+                "upper": 0.8667,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0152,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0333,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.2045,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.1788,
+                "upper": 0.2295,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.3096,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2527,
+                "upper": 0.3577,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.003,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0091,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.4311,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3508,
+                "upper": 0.5068,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.5685,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.4392,
+                "upper": 0.7686,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0455,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0212,
+                "upper": 0.0727,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.4205,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3333,
+                "upper": 0.5061,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.9695,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.9366,
+                "upper": 0.9934,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0303,
+              "n": 330,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0091,
+                "upper": 0.0545,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      },
+      "frozen_132": {
+        "n": 132,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.2652,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2083,
+                "upper": 0.3182,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.8413,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.7755,
+                "upper": 0.9149,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.125,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0852,
+                "upper": 0.1667,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.2857,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.1875,
+                "upper": 0.4054,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.3883,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3162,
+                "upper": 0.464,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.5079,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3617,
+                "upper": 0.7419,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0455,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0985,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.4015,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3049,
+                "upper": 0.4962,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.9206,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.8286,
+                "upper": 0.9826,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0379,
+              "n": 132,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0985,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      },
+      "overlap_excluded_121": {
+        "n": 121,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.2748,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2174,
+                "upper": 0.328,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.8302,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.75,
+                "upper": 0.9167,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.126,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.088,
+                "upper": 0.1719,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.2453,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.127,
+                "upper": 0.3677,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.405,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3341,
+                "upper": 0.4738,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.5094,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3621,
+                "upper": 0.7297,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0496,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.1066,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.4132,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3172,
+                "upper": 0.5044,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.9057,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.8148,
+                "upper": 0.9783,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0413,
+              "n": 121,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.1092,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      },
+      "same_universe_unconditioned": {
+        "n": 85,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.2353,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.1849,
+                "upper": 0.2872,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.7949,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.6667,
+                "upper": 0.9189,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.1324,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0873,
+                "upper": 0.1772,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.2308,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0541,
+                "upper": 0.3692,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.3941,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3118,
+                "upper": 0.4768,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.3846,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2439,
+                "upper": 0.6,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0588,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.1327,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.4118,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3099,
+                "upper": 0.5188,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.8718,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.7317,
+                "upper": 0.9655,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0471,
+              "n": 85,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.1169,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      },
+      "same_universe_judgeable": {
+        "n": 54,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.25,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.1767,
+                "upper": 0.3177,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.9259,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.8519,
+                "upper": 1.0,
+                "n_valid": 9997,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.1481,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0932,
+                "upper": 0.2028,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.2963,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.08,
+                "upper": 0.5,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.3796,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.29,
+                "upper": 0.4777,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.3704,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2,
+                "upper": 0.6,
+                "n_valid": 9999,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0185,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0556,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.3889,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3021,
+                "upper": 0.4877,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.8519,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.6923,
+                "upper": 1.0,
+                "n_valid": 9997,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 54,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      },
+      "higher_cap_only": {
+        "n": 36,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.3681,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.287,
+                "upper": 0.46,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.9286,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.7692,
+                "upper": 1.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.1111,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0655,
+                "upper": 0.1742,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.2857,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.5,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.4306,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3663,
+                "upper": 0.5278,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.8571,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.6471,
+                "upper": 1.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0278,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.1176,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.4167,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3309,
+                "upper": 0.5203,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 1.0,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 1.0,
+                "upper": 1.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0278,
+              "n": 36,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.1071,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      },
+      "121_judgeable": {
+        "n": 78,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.2821,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2162,
+                "upper": 0.3403,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.9429,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.8788,
+                "upper": 1.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.1346,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0926,
+                "upper": 0.1875,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.3429,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.1935,
+                "upper": 0.5263,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.3846,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3149,
+                "upper": 0.4548,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.4857,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3077,
+                "upper": 0.72,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0128,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.04,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.3814,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3051,
+                "upper": 0.4519,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.8857,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.76,
+                "upper": 1.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 78,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      },
+      "121_not_judgeable": {
+        "n": 43,
+        "n_children": 11,
+        "per_model": {
+          "llama3.2:latest": {
+            "merged_agreement": {
+              "value": 0.2616,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.1944,
+                "upper": 0.3289,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.6111,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3333,
+                "upper": 0.8571,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": {
+              "value": 0.1105,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0682,
+                "upper": 0.1667,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.0556,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.1667,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.0,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": {
+              "value": 0.4419,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.2976,
+                "upper": 0.5957,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.5556,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.35,
+                "upper": 0.7857,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.1163,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.2407,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          },
+          "qwen3:14b": {
+            "merged_agreement": {
+              "value": 0.4709,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.3108,
+                "upper": 0.625,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "unsupported_rate": {
+              "value": 0.9444,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.7778,
+                "upper": 1.0,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            },
+            "whole_record": {
+              "value": 0.1163,
+              "n": 43,
+              "n_children": 11,
+              "ci95": {
+                "lower": 0.0,
+                "upper": 0.2927,
+                "n_valid": 10000,
+                "n_requested": 10000,
+                "unit": "child"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags_summary": {
+      "n_frozen": 132,
+      "in_pool": 11,
+      "in_2442": 96,
+      "judgeable_all3": 86,
+      "judgeable_all3_among_121": 78
+    },
+    "judgeable_minus_not_merged": {
+      "llama3.2:latest": {
+        "value": 0.0204,
+        "lower": -0.046,
+        "upper": 0.0884,
+        "n_valid": 10000,
+        "unit": "child"
+      },
+      "qwen2.5:3b": {
+        "value": 0.0242,
+        "lower": -0.0257,
+        "upper": 0.0743,
+        "n_valid": 10000,
+        "unit": "child"
+      },
+      "qwen2.5:7b": {
+        "value": -0.0572,
+        "lower": -0.2283,
+        "upper": 0.0944,
+        "n_valid": 10000,
+        "unit": "child"
+      },
+      "qwen3:14b": {
+        "value": -0.0895,
+        "lower": -0.2154,
+        "upper": 0.0348,
+        "n_valid": 10000,
+        "unit": "child"
+      }
+    },
+    "contrasts": {
+      "main_batch_330-minus-same_universe_judgeable": {
+        "llama3.2:latest": {
+          "merged_agreement": {
+            "value": 0.0583,
+            "lower": 0.0021,
+            "upper": 0.122,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": -0.0934,
+            "lower": -0.1886,
+            "upper": -0.0134,
+            "excludes_zero": true,
+            "n_valid": 9999,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:3b": {
+          "merged_agreement": {
+            "value": 0.0564,
+            "lower": 0.0076,
+            "upper": 0.1117,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0133,
+            "lower": -0.1716,
+            "upper": 0.2239,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:7b": {
+          "merged_agreement": {
+            "value": 0.0514,
+            "lower": -0.0281,
+            "upper": 0.1393,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.1982,
+            "lower": 0.0664,
+            "upper": 0.3809,
+            "excludes_zero": true,
+            "n_valid": 9999,
+            "unit": "child"
+          }
+        },
+        "qwen3:14b": {
+          "merged_agreement": {
+            "value": 0.0316,
+            "lower": -0.0011,
+            "upper": 0.0635,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.1177,
+            "lower": -0.025,
+            "upper": 0.2778,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      },
+      "main_batch_330-minus-same_universe_unconditioned": {
+        "llama3.2:latest": {
+          "merged_agreement": {
+            "value": 0.073,
+            "lower": 0.0197,
+            "upper": 0.1206,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0376,
+            "lower": -0.0817,
+            "upper": 0.1653,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:3b": {
+          "merged_agreement": {
+            "value": 0.0722,
+            "lower": 0.03,
+            "upper": 0.1186,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0789,
+            "lower": -0.0581,
+            "upper": 0.249,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:7b": {
+          "merged_agreement": {
+            "value": 0.0369,
+            "lower": -0.0068,
+            "upper": 0.0915,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.1839,
+            "lower": 0.0707,
+            "upper": 0.3296,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen3:14b": {
+          "merged_agreement": {
+            "value": 0.0087,
+            "lower": -0.0394,
+            "upper": 0.0563,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0977,
+            "lower": -0.0052,
+            "upper": 0.2427,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      },
+      "higher_cap_only-minus-same_universe_unconditioned": {
+        "llama3.2:latest": {
+          "merged_agreement": {
+            "value": 0.1328,
+            "lower": 0.0606,
+            "upper": 0.2237,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.1337,
+            "lower": -0.0839,
+            "upper": 0.3111,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:3b": {
+          "merged_agreement": {
+            "value": -0.0212,
+            "lower": -0.0686,
+            "upper": 0.0368,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0549,
+            "lower": -0.2619,
+            "upper": 0.35,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:7b": {
+          "merged_agreement": {
+            "value": 0.0364,
+            "lower": -0.0441,
+            "upper": 0.1449,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.4725,
+            "lower": 0.2255,
+            "upper": 0.6857,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen3:14b": {
+          "merged_agreement": {
+            "value": 0.0049,
+            "lower": -0.0738,
+            "upper": 0.0945,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.1282,
+            "lower": 0.0333,
+            "upper": 0.2812,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      },
+      "main_batch_330-minus-overlap_excluded_121": {
+        "llama3.2:latest": {
+          "merged_agreement": {
+            "value": 0.0335,
+            "lower": -0.0084,
+            "upper": 0.0753,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0023,
+            "lower": -0.0737,
+            "upper": 0.0753,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:3b": {
+          "merged_agreement": {
+            "value": 0.0785,
+            "lower": 0.0378,
+            "upper": 0.1158,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0644,
+            "lower": -0.0625,
+            "upper": 0.1992,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen2.5:7b": {
+          "merged_agreement": {
+            "value": 0.0261,
+            "lower": -0.0235,
+            "upper": 0.0865,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0591,
+            "lower": -0.0621,
+            "upper": 0.1774,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "qwen3:14b": {
+          "merged_agreement": {
+            "value": 0.0072,
+            "lower": -0.0436,
+            "upper": 0.0565,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          },
+          "unsupported_rate": {
+            "value": 0.0639,
+            "lower": -0.0199,
+            "upper": 0.16,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      }
+    },
+    "poststratified_121": {
+      "episode_type_7": {
+        "to_analysed_frame": {
+          "weights_range": [
+            0.42,
+            3.097
+          ],
+          "unaccounted_intended_share_by_child": {
+            "brett": 0.0,
+            "carl": 0.1732,
+            "jack": 0.0064,
+            "josh": 0.0312,
+            "mark": 0.0,
+            "mars": 0.3866,
+            "rick": 0.0,
+            "roger_flusberg": 0.0,
+            "roger_rollins": 0.0263,
+            "sid": 0.1678,
+            "stuart": 0.0
+          },
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": 0.269,
+              "unsupported_rate": 0.8643,
+              "whole_record": 0.0
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": 0.1235,
+              "unsupported_rate": 0.2653,
+              "whole_record": 0.0
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": 0.3912,
+              "unsupported_rate": 0.5916,
+              "whole_record": 0.0503
+            },
+            "qwen3:14b": {
+              "merged_agreement": 0.3942,
+              "unsupported_rate": 0.9288,
+              "whole_record": 0.0407
+            }
+          }
+        },
+        "to_intended_frame": {
+          "weights_range": [
+            0.365,
+            3.109
+          ],
+          "unaccounted_intended_share_by_child": {
+            "brett": 0.0,
+            "carl": 0.2128,
+            "jack": 0.0059,
+            "josh": 0.0294,
+            "mark": 0.0,
+            "mars": 0.412,
+            "rick": 0.0,
+            "roger_flusberg": 0.0,
+            "roger_rollins": 0.0333,
+            "sid": 0.1737,
+            "stuart": 0.0
+          },
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": 0.269,
+              "unsupported_rate": 0.8591,
+              "whole_record": 0.0
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": 0.1242,
+              "unsupported_rate": 0.26,
+              "whole_record": 0.0
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": 0.39,
+              "unsupported_rate": 0.6026,
+              "whole_record": 0.0493
+            },
+            "qwen3:14b": {
+              "merged_agreement": 0.3954,
+              "unsupported_rate": 0.9269,
+              "whole_record": 0.0408
+            }
+          }
+        },
+        "frame_effect": {
+          "llama3.2:latest": {
+            "merged_agreement": 0.0,
+            "unsupported_rate": -0.0052,
+            "whole_record": 0.0
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": 0.0007,
+            "unsupported_rate": -0.0053,
+            "whole_record": 0.0
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": -0.0012,
+            "unsupported_rate": 0.011,
+            "whole_record": -0.001
+          },
+          "qwen3:14b": {
+            "merged_agreement": 0.0012,
+            "unsupported_rate": -0.0019,
+            "whole_record": 0.0001
+          }
+        }
+      },
+      "other_vs_typed": {
+        "to_analysed_frame": {
+          "weights_range": [
+            0.387,
+            1.668
+          ],
+          "unaccounted_intended_share_by_child": {
+            "brett": 0.0,
+            "carl": 0.1496,
+            "jack": 0.0,
+            "josh": 0.0,
+            "mark": 0.0,
+            "mars": 0.0,
+            "rick": 0.0,
+            "roger_flusberg": 0.0,
+            "roger_rollins": 0.0,
+            "sid": 0.0,
+            "stuart": 0.0
+          },
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": 0.2793,
+              "unsupported_rate": 0.8419,
+              "whole_record": 0.0
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": 0.1236,
+              "unsupported_rate": 0.2276,
+              "whole_record": 0.0
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": 0.4034,
+              "unsupported_rate": 0.5164,
+              "whole_record": 0.053
+            },
+            "qwen3:14b": {
+              "merged_agreement": 0.3996,
+              "unsupported_rate": 0.9263,
+              "whole_record": 0.0407
+            }
+          }
+        },
+        "to_intended_frame": {
+          "weights_range": [
+            0.451,
+            1.634
+          ],
+          "unaccounted_intended_share_by_child": {
+            "brett": 0.0,
+            "carl": 0.1915,
+            "jack": 0.0,
+            "josh": 0.0,
+            "mark": 0.0,
+            "mars": 0.0,
+            "rick": 0.0,
+            "roger_flusberg": 0.0,
+            "roger_rollins": 0.0,
+            "sid": 0.0,
+            "stuart": 0.0
+          },
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": 0.2794,
+              "unsupported_rate": 0.8416,
+              "whole_record": 0.0
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": 0.1232,
+              "unsupported_rate": 0.232,
+              "whole_record": 0.0
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": 0.4028,
+              "unsupported_rate": 0.5205,
+              "whole_record": 0.0529
+            },
+            "qwen3:14b": {
+              "merged_agreement": 0.4005,
+              "unsupported_rate": 0.9248,
+              "whole_record": 0.0408
+            }
+          }
+        },
+        "frame_effect": {
+          "llama3.2:latest": {
+            "merged_agreement": 0.0001,
+            "unsupported_rate": -0.0003,
+            "whole_record": 0.0
+          },
+          "qwen2.5:3b": {
+            "merged_agreement": -0.0004,
+            "unsupported_rate": 0.0044,
+            "whole_record": 0.0
+          },
+          "qwen2.5:7b": {
+            "merged_agreement": -0.0006,
+            "unsupported_rate": 0.0041,
+            "whole_record": -0.0001
+          },
+          "qwen3:14b": {
+            "merged_agreement": 0.0009,
+            "unsupported_rate": -0.0015,
+            "whole_record": 0.0001
+          }
+        }
+      }
+    }
+  },
+  "mars_clustered": {
+    "n_judged": 142,
+    "n_children": 11,
+    "segments_per_child": {
+      "brett": 20,
+      "carl": 10,
+      "jack": 16,
+      "josh": 9,
+      "mark": 16,
+      "mars": 4,
+      "rick": 20,
+      "roger_flusberg": 14,
+      "roger_rollins": 5,
+      "sid": 7,
+      "stuart": 21
+    },
+    "n_segments_best_generator_not_reviewable": 6,
+    "strength_order": [
+      "qwen2.5:7b",
+      "llama3.2:latest",
+      "qwen2.5:3b"
+    ],
+    "per_field": {
+      "domain": {
+        "mars": 0.331,
+        "random_expected_reviewable": 0.2817,
+        "random_expected_all_generators": 0.223,
+        "best_fixed": 0.4577,
+        "best_reviewable_fallback": 0.4577,
+        "vs_random_reviewable": {
+          "value": 0.0493,
+          "lower": 0.0019,
+          "upper": 0.0972,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_random_all_generators": {
+          "value": 0.108,
+          "lower": 0.0508,
+          "upper": 0.1538,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_fixed": {
+          "value": -0.1268,
+          "lower": -0.1786,
+          "upper": -0.0678,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_reviewable_fallback": {
+          "value": -0.1268,
+          "lower": -0.1786,
+          "upper": -0.0692,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        }
+      },
+      "modality": {
+        "mars": 0.7465,
+        "random_expected_reviewable": 0.6585,
+        "random_expected_all_generators": 0.5563,
+        "best_fixed": 0.7746,
+        "best_reviewable_fallback": 0.7676,
+        "vs_random_reviewable": {
+          "value": 0.088,
+          "lower": 0.0244,
+          "upper": 0.1527,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_random_all_generators": {
+          "value": 0.1901,
+          "lower": 0.1002,
+          "upper": 0.2538,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_fixed": {
+          "value": -0.0282,
+          "lower": -0.0762,
+          "upper": 0.0216,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_reviewable_fallback": {
+          "value": -0.0211,
+          "lower": -0.0698,
+          "upper": 0.0368,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        }
+      },
+      "prompt_level": {
+        "mars": 0.338,
+        "random_expected_reviewable": 0.2993,
+        "random_expected_all_generators": 0.2347,
+        "best_fixed": 0.3592,
+        "best_reviewable_fallback": 0.3732,
+        "vs_random_reviewable": {
+          "value": 0.0387,
+          "lower": -0.0016,
+          "upper": 0.0775,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_random_all_generators": {
+          "value": 0.1033,
+          "lower": 0.0508,
+          "upper": 0.1525,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_fixed": {
+          "value": -0.0211,
+          "lower": -0.0862,
+          "upper": 0.0429,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_reviewable_fallback": {
+          "value": -0.0352,
+          "lower": -0.1013,
+          "upper": 0.0244,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        }
+      },
+      "outcome": {
+        "mars": 0.3239,
+        "random_expected_reviewable": 0.2676,
+        "random_expected_all_generators": 0.284,
+        "best_fixed": 0.3028,
+        "best_reviewable_fallback": 0.2817,
+        "vs_random_reviewable": {
+          "value": 0.0563,
+          "lower": 0.0124,
+          "upper": 0.0899,
+          "excludes_zero": true,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_random_all_generators": {
+          "value": 0.0399,
+          "lower": -0.0168,
+          "upper": 0.0853,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_fixed": {
+          "value": 0.0211,
+          "lower": -0.0408,
+          "upper": 0.0751,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        },
+        "vs_best_reviewable_fallback": {
+          "value": 0.0423,
+          "lower": 0.0,
+          "upper": 0.0867,
+          "excludes_zero": false,
+          "n_valid": 10000,
+          "unit": "child"
+        }
+      }
+    },
+    "mean": {
+      "mars": 0.4349,
+      "random_expected_reviewable": 0.3768,
+      "random_expected_all_generators": 0.3245,
+      "best_fixed": 0.4736,
+      "best_reviewable_fallback": 0.47
+    },
+    "published_random_baseline": 0.3247,
+    "published_random_method": "mean of 2,000 seeded (20260916) uniform draws over all three generators' outputs per segment; paired CIs used one further draw (seed 20260917)"
+  },
+  "abstention": {
+    "null_provenance_in_recorded_outputs": {
+      "explicit_null": 1760,
+      "field_key_absent": 88
+    },
+    "main_batch_330": {
+      "llama3.2:latest": {
+        "n_field_slots": 1320,
+        "counts": {
+          "incorrect": 641,
+          "correct": 374,
+          "hallucinated": 164,
+          "missing": 108,
+          "correctly_null": 33
+        },
+        "reported_missing_over_all_slots": 0.0818,
+        "null_on_gold_populated": 0.0962,
+        "overall_model_null_rate": 0.1068,
+        "null_on_gold_null": 0.1675,
+        "gold_populated_share": 0.8508
+      },
+      "qwen2.5:3b": {
+        "n_field_slots": 1320,
+        "counts": {
+          "correct": 134,
+          "incorrect": 354,
+          "missing": 635,
+          "hallucinated": 61,
+          "correctly_null": 136
+        },
+        "reported_missing_over_all_slots": 0.4811,
+        "null_on_gold_populated": 0.5654,
+        "overall_model_null_rate": 0.5841,
+        "null_on_gold_null": 0.6904,
+        "gold_populated_share": 0.8508
+      },
+      "qwen2.5:7b": {
+        "n_field_slots": 1320,
+        "counts": {
+          "correct": 484,
+          "incorrect": 471,
+          "missing": 168,
+          "correctly_null": 85,
+          "hallucinated": 112
+        },
+        "reported_missing_over_all_slots": 0.1273,
+        "null_on_gold_populated": 0.1496,
+        "overall_model_null_rate": 0.1917,
+        "null_on_gold_null": 0.4315,
+        "gold_populated_share": 0.8508
+      },
+      "qwen3:14b": {
+        "n_field_slots": 1320,
+        "counts": {
+          "incorrect": 535,
+          "correct": 549,
+          "hallucinated": 191,
+          "missing": 39,
+          "correctly_null": 6
+        },
+        "reported_missing_over_all_slots": 0.0295,
+        "null_on_gold_populated": 0.0347,
+        "overall_model_null_rate": 0.0341,
+        "null_on_gold_null": 0.0305,
+        "gold_populated_share": 0.8508
+      }
+    },
+    "frozen_132": {
+      "llama3.2:latest": {
+        "n_field_slots": 528,
+        "counts": {
+          "incorrect": 219,
+          "missing": 116,
+          "correct": 130,
+          "hallucinated": 53,
+          "correctly_null": 10
+        },
+        "reported_missing_over_all_slots": 0.2197,
+        "null_on_gold_populated": 0.2495,
+        "overall_model_null_rate": 0.2386,
+        "null_on_gold_null": 0.1587,
+        "gold_populated_share": 0.8807
+      },
+      "qwen2.5:3b": {
+        "n_field_slots": 528,
+        "counts": {
+          "correct": 21,
+          "incorrect": 109,
+          "missing": 335,
+          "hallucinated": 18,
+          "correctly_null": 45
+        },
+        "reported_missing_over_all_slots": 0.6345,
+        "null_on_gold_populated": 0.7204,
+        "overall_model_null_rate": 0.7197,
+        "null_on_gold_null": 0.7143,
+        "gold_populated_share": 0.8807
+      },
+      "qwen2.5:7b": {
+        "n_field_slots": 528,
+        "counts": {
+          "correct": 174,
+          "incorrect": 212,
+          "missing": 79,
+          "hallucinated": 32,
+          "correctly_null": 31
+        },
+        "reported_missing_over_all_slots": 0.1496,
+        "null_on_gold_populated": 0.1699,
+        "overall_model_null_rate": 0.2083,
+        "null_on_gold_null": 0.4921,
+        "gold_populated_share": 0.8807
+      },
+      "qwen3:14b": {
+        "n_field_slots": 528,
+        "counts": {
+          "correct": 207,
+          "incorrect": 241,
+          "hallucinated": 58,
+          "missing": 17,
+          "correctly_null": 5
+        },
+        "reported_missing_over_all_slots": 0.0322,
+        "null_on_gold_populated": 0.0366,
+        "overall_model_null_rate": 0.0417,
+        "null_on_gold_null": 0.0794,
+        "gold_populated_share": 0.8807
+      }
+    }
+  },
+  "episode_cap": {
+    "resegmentation": {
+      "8": {
+        "n_episodes": 9018,
+        "share_at_cap": 0.5223,
+        "mean_turns": 6.315,
+        "median_turns": 8.0,
+        "p90_turns": 8,
+        "max_turns": 8,
+        "utterances_covered": 55160,
+        "utterances_total": 75003
+      },
+      "12": {
+        "n_episodes": 7211,
+        "share_at_cap": 0.3299,
+        "mean_turns": 7.788,
+        "median_turns": 8,
+        "p90_turns": 12,
+        "max_turns": 12,
+        "utterances_covered": 55251,
+        "utterances_total": 75003
+      },
+      "16": {
+        "n_episodes": 6403,
+        "share_at_cap": 0.2201,
+        "mean_turns": 8.735,
+        "median_turns": 7,
+        "p90_turns": 16,
+        "max_turns": 16,
+        "utterances_covered": 55407,
+        "utterances_total": 75003
+      },
+      "24": {
+        "n_episodes": 5744,
+        "share_at_cap": 0.1013,
+        "mean_turns": 9.714,
+        "median_turns": 7.0,
+        "p90_turns": 24,
+        "max_turns": 24,
+        "utterances_covered": 55564,
+        "utterances_total": 75003
+      },
+      "none": {
+        "n_episodes": 5255,
+        "share_at_cap": 0.0,
+        "mean_turns": 10.598,
+        "median_turns": 7,
+        "p90_turns": 22,
+        "max_turns": 154,
+        "utterances_covered": 55691,
+        "utterances_total": 75003
+      }
+    },
+    "annotated_by_cap": {
+      "main_batch_330": {
+        "capped_8": {
+          "n": 187,
+          "gold_null_share": {
+            "domain": 0.0,
+            "modality": 0.2299,
+            "prompt_level": 0.0,
+            "outcome": 0.3262
+          },
+          "gold_null_mean": 0.139,
+          "qwen2.5:7b_merged": 0.4278,
+          "qwen2.5:7b_unsupported": 0.6442
+        },
+        "under_8": {
+          "n": 143,
+          "gold_null_share": {
+            "domain": 0.021,
+            "modality": 0.2378,
+            "prompt_level": 0.014,
+            "outcome": 0.3776
+          },
+          "gold_null_mean": 0.1626,
+          "qwen2.5:7b_merged": 0.4353,
+          "qwen2.5:7b_unsupported": 0.4839
+        }
+      },
+      "frozen_132": {
+        "capped_8": {
+          "n": 77,
+          "gold_null_share": {
+            "domain": 0.0,
+            "modality": 0.2597,
+            "prompt_level": 0.0,
+            "outcome": 0.1429
+          },
+          "gold_null_mean": 0.1006,
+          "qwen2.5:7b_merged": 0.3734,
+          "qwen2.5:7b_unsupported": 0.6129
+        },
+        "under_8": {
+          "n": 55,
+          "gold_null_share": {
+            "domain": 0.0182,
+            "modality": 0.2909,
+            "prompt_level": 0.0182,
+            "outcome": 0.2545
+          },
+          "gold_null_mean": 0.1454,
+          "qwen2.5:7b_merged": 0.4091,
+          "qwen2.5:7b_unsupported": 0.4062
+        }
+      }
+    }
+  },
+  "corpus_characteristics": [
+    {
+      "corpus": "flusberg",
+      "child_id": "brett",
+      "sessions": 10,
+      "age_first": "5;08",
+      "age_last": "7;05",
+      "n_sessions_with_age": 10,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 10337,
+      "child_utterances": 4133,
+      "main_partner": "MOT"
+    },
+    {
+      "corpus": "flusberg",
+      "child_id": "jack",
+      "sessions": 12,
+      "age_first": "6;09",
+      "age_last": "8;10",
+      "n_sessions_with_age": 12,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 11830,
+      "child_utterances": 4120,
+      "main_partner": "MOT"
+    },
+    {
+      "corpus": "flusberg",
+      "child_id": "mark",
+      "sessions": 13,
+      "age_first": "7;07",
+      "age_last": "9;08",
+      "n_sessions_with_age": 13,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 18660,
+      "child_utterances": 6251,
+      "main_partner": "MOT"
+    },
+    {
+      "corpus": "flusberg",
+      "child_id": "rick",
+      "sessions": 11,
+      "age_first": "4;07",
+      "age_last": "7;05",
+      "n_sessions_with_age": 11,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 10171,
+      "child_utterances": 3465,
+      "main_partner": "MOT"
+    },
+    {
+      "corpus": "flusberg",
+      "child_id": "roger_flusberg",
+      "sessions": 10,
+      "age_first": "3;09",
+      "age_last": "5;06",
+      "n_sessions_with_age": 10,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 7317,
+      "child_utterances": 3416,
+      "main_partner": "MOT"
+    },
+    {
+      "corpus": "flusberg",
+      "child_id": "stuart",
+      "sessions": 8,
+      "age_first": "3;04",
+      "age_last": "4;07",
+      "n_sessions_with_age": 8,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 5668,
+      "child_utterances": 1634,
+      "main_partner": "MOT"
+    },
+    {
+      "corpus": "rollins",
+      "child_id": "carl",
+      "sessions": 4,
+      "age_first": "2;08",
+      "age_last": "3;07",
+      "n_sessions_with_age": 4,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 2037,
+      "child_utterances": 885,
+      "main_partner": "INV"
+    },
+    {
+      "corpus": "rollins",
+      "child_id": "josh",
+      "sessions": 4,
+      "age_first": "2;05",
+      "age_last": "3;01",
+      "n_sessions_with_age": 4,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 1482,
+      "child_utterances": 592,
+      "main_partner": "INV"
+    },
+    {
+      "corpus": "rollins",
+      "child_id": "mars",
+      "sessions": 5,
+      "age_first": "3;01",
+      "age_last": "3;11",
+      "n_sessions_with_age": 5,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 3882,
+      "child_utterances": 1324,
+      "main_partner": "INV"
+    },
+    {
+      "corpus": "rollins",
+      "child_id": "roger_rollins",
+      "sessions": 4,
+      "age_first": "2;06",
+      "age_last": "3;03",
+      "n_sessions_with_age": 4,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 1405,
+      "child_utterances": 538,
+      "main_partner": "INV"
+    },
+    {
+      "corpus": "rollins",
+      "child_id": "sid",
+      "sessions": 4,
+      "age_first": "2;02",
+      "age_last": "3;05",
+      "n_sessions_with_age": 4,
+      "sex": "male",
+      "types_header": "long, toyplay, ASD",
+      "utterances": 2214,
+      "child_utterances": 831,
+      "main_partner": "INV"
+    }
+  ],
+  "annotator_confusion": {
+    "domain": {
+      "categories": [
+        "None",
+        "adaptive",
+        "behavior",
+        "cognitive",
+        "language",
+        "motor",
+        "play",
+        "sensory",
+        "social_communication"
+      ],
+      "matrix_a_rows_b_cols": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1,
+          0,
+          0,
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          19,
+          12,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          140,
+          0,
+          4,
+          0,
+          5
+        ],
+        [
+          0,
+          2,
+          0,
+          1,
+          1,
+          6,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          7,
+          0,
+          38,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          2,
+          1,
+          7,
+          0,
+          1,
+          0,
+          42
+        ]
+      ],
+      "observed_agreement": 0.8
+    },
+    "modality": {
+      "categories": [
+        "None",
+        "gestural",
+        "multimodal",
+        "unknown",
+        "verbal",
+        "written"
+      ],
+      "matrix_a_rows_b_cols": [
+        [
+          69,
+          4,
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          25,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          17,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          9,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          193,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "observed_agreement": 0.9485
+    },
+    "prompt_level": {
+      "categories": [
+        "None",
+        "gestural",
+        "independent",
+        "model",
+        "partial_physical",
+        "verbal"
+      ],
+      "matrix_a_rows_b_cols": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          2,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          139,
+          9,
+          1,
+          5
+        ],
+        [
+          0,
+          0,
+          5,
+          42,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          5,
+          1,
+          0,
+          104
+        ]
+      ],
+      "observed_agreement": 0.8909
+    },
+    "outcome": {
+      "categories": [
+        "None",
+        "approximation",
+        "correct",
+        "incorrect",
+        "no_response",
+        "partial",
+        "unknown"
+      ],
+      "matrix_a_rows_b_cols": [
+        [
+          99,
+          0,
+          8,
+          4,
+          1,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          90,
+          1,
+          0,
+          8,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          14,
+          0,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          1,
+          2,
+          6,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          5,
+          2,
+          0,
+          40,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          17
+        ]
+      ],
+      "observed_agreement": 0.8091
+    }
+  }
+}
