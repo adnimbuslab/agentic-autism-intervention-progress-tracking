@@ -1,12 +1,12 @@
 {
   "run": "Frozen governance-critical end-to-end run",
-  "started_utc": "2026-09-25T19:02:22+00:00",
-  "finished_utc": "2026-09-25T19:03:07+00:00",
+  "started_utc": "2026-09-26T10:12:35+00:00",
+  "finished_utc": "2026-09-26T10:13:21+00:00",
   "build": {
     "branch": "model-finetuning",
-    "commit": "0176fbd2ca3b16001d73ed363a4cfbea55acd0d7",
-    "commit_short": "0176fbd",
-    "commit_date": "2026-09-25T15:02:16-04:00",
+    "commit": "70b572c3b3d6c5783f2761c5fe8e38e722bd026e",
+    "commit_short": "70b572c",
+    "commit_date": "2026-09-26T06:08:46-04:00",
     "working_tree_clean": true
   },
   "extractor": {
@@ -69,8 +69,8 @@
         "routing": [
           "accept",
           "accept",
+          "retain_with_unknown",
           "accept",
-          "clarify",
           "accept",
           "accept"
         ],
@@ -153,7 +153,7 @@
       {
         "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_adequate_scenario",
         "outcome": "passed",
-        "seconds": 0.69
+        "seconds": 0.67
       },
       {
         "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_limited_scenario",
@@ -203,7 +203,7 @@
       {
         "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_adequate_via_api",
         "outcome": "passed",
-        "seconds": 0.3
+        "seconds": 0.31
       },
       {
         "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_observation_submit_creates_audit",
@@ -218,22 +218,22 @@
       {
         "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_correction_creates_audit",
         "outcome": "passed",
-        "seconds": 0.12
+        "seconds": 0.15
       },
       {
         "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_report_generation_creates_audit",
         "outcome": "passed",
-        "seconds": 0.18
+        "seconds": 0.19
       },
       {
         "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_flag_report_creates_audit",
         "outcome": "passed",
-        "seconds": 0.2
+        "seconds": 0.21
       },
       {
         "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_audit_trail_order_descending",
         "outcome": "passed",
-        "seconds": 0.02
+        "seconds": 0.03
       },
       {
         "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_audit_requires_interventionist_role",
@@ -293,7 +293,7 @@
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_login",
         "outcome": "passed",
-        "seconds": 0.2
+        "seconds": 0.19
       },
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_list_authorized_children",
@@ -303,7 +303,7 @@
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_submit_observation_accept",
         "outcome": "passed",
-        "seconds": 0.04
+        "seconds": 0.03
       },
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_submit_observation_clarify",
@@ -318,17 +318,17 @@
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_records",
         "outcome": "passed",
-        "seconds": 0.03
+        "seconds": 0.02
       },
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_analytics",
         "outcome": "passed",
-        "seconds": 0.03
+        "seconds": 0.02
       },
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_reports",
         "outcome": "passed",
-        "seconds": 0.03
+        "seconds": 0.02
       },
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_audit",
@@ -338,7 +338,7 @@
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_actors",
         "outcome": "passed",
-        "seconds": 0.02
+        "seconds": 0.03
       },
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_access_unauthorized_child",
@@ -348,7 +348,7 @@
       {
         "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_other_contributor_cannot_see_parent_observations",
         "outcome": "passed",
-        "seconds": 0.06
+        "seconds": 0.05
       },
       {
         "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_success_preserves_app_metadata",
@@ -403,32 +403,32 @@
       {
         "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s1_unverified_records_are_blocked",
         "outcome": "passed",
-        "seconds": 10.98
+        "seconds": 13.19
       },
       {
         "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s2_verify_or_correct_makes_eligible",
         "outcome": "passed",
-        "seconds": 11.47
+        "seconds": 10.2
       },
       {
         "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s3_correction_propagates_and_original_is_preserved",
         "outcome": "passed",
-        "seconds": 10.99
+        "seconds": 10.61
       },
       {
         "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s4_s5_insufficient_evidence_withheld_and_named_in_report",
         "outcome": "passed",
-        "seconds": 4.06
+        "seconds": 3.76
       },
       {
         "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s6_contributor_cannot_verify_or_access_analytics",
         "outcome": "passed",
-        "seconds": 2.27
+        "seconds": 2.35
       },
       {
         "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_interventionist_login",
         "outcome": "passed",
-        "seconds": 0.2
+        "seconds": 0.19
       },
       {
         "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_create_child",
@@ -443,12 +443,12 @@
       {
         "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_create_goals",
         "outcome": "passed",
-        "seconds": 0.03
+        "seconds": 0.04
       },
       {
         "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_invite_actor",
         "outcome": "passed",
-        "seconds": 0.03
+        "seconds": 0.04
       },
       {
         "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_full_observation_to_record_flow",
@@ -468,7 +468,7 @@
       {
         "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_full_analytics_report_flow",
         "outcome": "passed",
-        "seconds": 0.38
+        "seconds": 0.35
       },
       {
         "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_validate_clean_report",
@@ -508,7 +508,7 @@
       {
         "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_full_report_via_api",
         "outcome": "passed",
-        "seconds": 0.24
+        "seconds": 0.25
       },
       {
         "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_report_flag_and_audit",
