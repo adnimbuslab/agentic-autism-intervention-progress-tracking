@@ -1,0 +1,162 @@
+FINAL-CODEBOOK COMPLIANCE AUDIT -- INSTRUCTIONS FOR SPECIALISTS
+
+What you are checking
+  Each row is one transcript segment and the reference value it currently holds
+  for three fields: modality, outcome, prompt_level. Check each value ONLY
+  against the three clarified boundaries below (the full codebook text follows).
+  Do not re-annotate the segment from scratch, and do not judge domain or behavior.
+
+What you must not see or use
+  This sheet contains no model output, model name, score, confidence or
+  selection result. Do not look any of these up while auditing. Work
+  independently of the other specialist until both sheets are returned.
+
+How to fill each field (three columns per field)
+  <field>_retained    the value on record ("none" = the transcript supports no value). Do not edit.
+  <field>_status      one of:
+                        compliant         the retained value is consistent with the boundary
+                        change_required   the retained value conflicts with the boundary
+                        not_applicable    the boundary does not bear on this segment/field
+  <field>_corrected   ONLY when status is change_required: the value the final
+                      codebook requires, from the allowed list below. Leave blank otherwise.
+  notes               optional, free text.
+
+Allowed values
+  modality:     verbal | gestural | sign | aac | written | multimodal | unknown | none
+  outcome:      correct | incorrect | approximation | no_response | partial | unknown | none
+  prompt_level: independent | gestural | verbal | model | partial_physical | full_physical | unknown | none
+  ("none" = the transcript supports no value / no communicative act / no target)
+
+The three clarified boundaries
+  Modality      A communicative gesture must be directed toward a partner; ordinary
+                object manipulation alone is not gestural.
+  Outcome       correct / incorrect (and approximation, partial, no_response) require an
+                identifiable behavioural target; with no target, outcome = none; a target
+                whose resolution is not visible is unknown, never incorrect.
+  Prompt level  Distinguish an actual prompt/support from an antecedent or opportunity;
+                a child-initiated behaviour is independent; where several prompts occur,
+                record the most supportive level actually used
+                (independent < gestural < verbal < model < partial_physical < full_physical).
+
+If the two specialists disagree
+  Only disagreements about a proposed change go to consensus. They are returned to
+  you on a separate consensus sheet and resolved by the same human consensus
+  procedure used previously. No software or model resolves them.
+
+----------------------------------------------------------------------------
+FULL CODEBOOK TEXT (docs/annotation_codebook.md, commit b77dfca 2026-09-15)
+----------------------------------------------------------------------------
+
+# Gold Annotation Codebook
+
+Decision rules for the source-level gold standard annotated in
+`tests/eval/extraction/results/annotation_sheets/`. `VALUE_REFERENCE.csv` lists
+*what the values are*; this file settles *where the boundaries fall* on the
+three distinctions that produced the bulk of inter-annotator disagreement in
+the first round.
+
+The governing principle is unchanged from `INSTRUCTIONS.txt`: record only what
+the transcript supports, and prefer `none` to a guess. These rules narrow what
+"supports" means for three fields; they do not license inference beyond the
+segment.
+
+## 1. `modality` — gestural is communicative, not physical
+
+`modality` records **how the child communicated**, not how the child moved.
+
+`gestural` covers acts directed at a partner that carry a message:
+
+    pointing, showing, giving, reaching to request, head nod/shake,
+    waving, pushing away as refusal, leading an adult's hand
+
+A physical action on an object -- picking up, opening, closing, moving,
+stacking -- is **not** gestural. That action is the `behavior`; its `domain` is
+`play`, `motor` or `adaptive`. An action-only segment with no communicative
+signal takes `modality = none`.
+
+The test is whether the act had an addressee. In CHAT, the evidence is the
+`%gpx` gesture tier, a `%spa` code marking a communicative act, or `%act`
+wording that names a partner ("shows mother", "points to the box"). An `%act`
+line describing plain object manipulation is not gestural.
+
+`multimodal` requires two channels *both carrying the message* -- speech plus a
+communicative gesture. Speech accompanied by unrelated object handling is
+`verbal`.
+
+**`unknown` vs `none`.** `unknown` = the child communicated, but the transcript
+does not show through which channel. `none` = there was no communicative act.
+
+## 2. `outcome` — accuracy needs an identifiable target
+
+`correct`, `incorrect`, `approximation` and `partial` apply only where the
+transcript establishes a target the response can be judged against:
+
+  - a question with a determinate answer
+  - an instruction or demand
+  - an imitation model
+  - a request whose fulfilment is observably granted or refused
+
+`no_response` applies where a target existed and the child did not respond.
+
+Ordinary conversation with no accuracy criterion -- spontaneous comment, play
+narration, social chat -- has no target: `outcome = none`.
+
+Adult acknowledgement ("that's right", repeating the child's word back) is
+positive evidence of both a target and of correctness. Absence of
+acknowledgement is **not** evidence of incorrectness. Where a target existed
+but its resolution is not visible in the segment, the value is `unknown`, never
+`incorrect`.
+
+This rule protects more than the gold set. `analytics_engine` consumes
+`outcome` for goal-attainment and accuracy KPIs; scoring free conversation as
+`correct` would inflate attainment against a criterion that was never set.
+
+## 3. `prompt_level` — an adult turn is not automatically a prompt
+
+`prompt_level` records **the support the child needed for the target
+behavior**, not whether an adult spoke first. Conversation is dialogic. If
+every preceding adult turn counted as a verbal prompt, `independent` would be
+practically unreachable in these corpora, and `_independence_rate` would be
+driven toward zero by the annotation protocol rather than by the children.
+
+**Antecedent (not a prompt).** The turn that creates the occasion: a question
+posed once, an instruction given once, a natural conversational turn. Target
+behavior on that first presentation is `independent`.
+
+**`gestural`** -- the adult points, motions or otherwise gestures toward the
+target without supplying it verbally.
+
+**`verbal`** -- verbal support added *after* the opportunity: the question
+repeated or rephrased to narrow it, a hint ("it starts with h..."), "what do
+you say?", a direct instruction to respond.
+
+**`model`** -- the adult supplies the target response itself, whole or partial,
+for the child to imitate. Model outranks verbal when the actual words are
+given.
+
+**`partial_physical` / `full_physical`** -- hand-over-hand or guided movement.
+
+**`independent`** -- also whenever the child *initiates* the relevant behavior.
+A preceding adult turn is context, not a prompt.
+
+Where several prompts occur, record the most supportive level the child
+actually needed. Hierarchy, least to most supportive:
+
+    independent < gestural < verbal < model < partial_physical < full_physical
+
+### Worked examples from the batch
+
+`mark_flusberg_mark_070700.cha_seg_074` -- mother asks what the horse is
+wearing, child says "mhm", mother re-asks, child answers "hat". The re-ask is
+support added after the opportunity: `prompt_level = verbal`.
+
+`rick_flusberg_rick_070013.cha_seg_007` -- the child spontaneously asks "play
+this?". Child-initiated, so `prompt_level = independent` regardless of the
+mother's preceding turn. Nothing is being tested, so `outcome = none`.
+
+`roger_rollins_rollins_roger_rollins_030300.cha_seg_002` -- the child takes out
+play-doh and tries to open the container. Object manipulation, not
+communication: `modality = none`. The play is self-initiated:
+`prompt_level = independent`. The closing instruction ("take the top off") is
+not resolved within the segment: `outcome = none`.
+
