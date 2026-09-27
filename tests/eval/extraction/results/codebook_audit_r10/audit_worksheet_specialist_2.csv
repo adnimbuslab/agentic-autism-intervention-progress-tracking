@@ -6,17 +6,17 @@ A001,"*MOT:	what's Santa_Claus going to bring [NAME] ?
 *MOT:	toys and a +/.
 *CHI:	and christmas tree .
 *MOT:	yeah .
-*MOT:	and +/.",verbal,,,correct,,,verbal,,,
+*MOT:	and +/.",verbal,not_applicable,,correct,compliant,,verbal,change_required,model,"Prompt level: The adult supplies part of the target phrase ('toys and a...'), so the most supportive prompt used is a model."
 A002,"*MOT:	what do you want ?
 *CHI:	more bubble .
 *MOT:	want .
 *CHI:	more bubble .
 *MOT:	look , want .
-*CHI:	want bubble .",verbal,,,correct,,,model,,,
+*CHI:	want bubble .",verbal,not_applicable,,correct,change_required,unknown,model,compliant,,"Outcome: The child makes a clear request, but the transcript does not show whether the bubbles were provided."
 A003,"*MOT:	how do we roll em ?
 *CHI:	clap .
 *MOT:	roll em .
-*CHI:	clap .",verbal,,,incorrect,,,verbal,,,
+*CHI:	clap .",verbal,not_applicable,,incorrect,compliant,,verbal,compliant,,
 A004,"*INV:	will it go ?
 %spa:	$DJF:YQ
 *CHI:	yyy [= jargon] .
@@ -25,7 +25,7 @@ A004,"*INV:	will it go ?
 *INV:	okay .
 %spa:	$NIA:MK
 *CHI:	done .
-%spa:	$NIA:DC:WD",multimodal,,,correct,,,verbal,,,
+%spa:	$NIA:DC:WD",multimodal,change_required,verbal,correct,compliant,,verbal,change_required,independent,"Modality: The child has verbal output, but putting the item in is object manipulation, not a communicative gesture. | Prompt level: The child responds on the first opportunity; the adult has not added support before the response."
 A005,"*MOT:	choose .
 *CHI:	the .
 *MOT:	the .
@@ -33,7 +33,7 @@ A005,"*MOT:	choose .
 *MOT:	right .
 *CHI:	colors .
 *MOT:	colors .
-*CHI:	that's right .",verbal,,,unknown,,,verbal,,,
+*CHI:	that's right .",verbal,not_applicable,,unknown,compliant,,verbal,change_required,independent,Prompt level: The adult mainly repeats the child's words; there is no added prompt after a failed opportunity.
 A006,"*MOT:	what's number two ?
 *CHI:	ripping .
 *CHI:	balloon rip .
@@ -41,15 +41,15 @@ A006,"*MOT:	what's number two ?
 *MOT:	yeah , it does .
 *CHI:	rip .
 *MOT:	yeah .
-*CHI:	broke it .",verbal,,,correct,,,verbal,,,
+*CHI:	broke it .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the first question without added support.
 A007,"*MOT:	you want balloons in the sky ?
 *CHI:	yes .
 *MOT:	yes ?
 *MOT:	what else can we put in the sky ?
-*CHI:	balloon .",verbal,,,partial,,,verbal,,,
+*CHI:	balloon .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,"Prompt level: The child answers each question on the first presentation; the questions are antecedents, not prompts."
 A008,"*MOT:	which one's Ann's car ?
 *CHI:	good boy .
-*MOT:	wanna play with the blocks ?",verbal,,,incorrect,,,verbal,,,
+*MOT:	wanna play with the blocks ?",verbal,not_applicable,,incorrect,compliant,,verbal,change_required,independent,Prompt level: The child responds to the first question without added support.
 A009,"*CHI:	0 .
 %act:	takes the apple apart
 *CHI:	xxx . [+ trn]
@@ -68,7 +68,7 @@ A009,"*CHI:	0 .
 %gpx:	nods
 *INV:	is that your house ?
 %spa:	$DJF:YQ
-%gpx:	points to the house",multimodal,,,correct,,,independent,,,
+%gpx:	points to the house",multimodal,change_required,verbal,correct,compliant,,independent,compliant,,"Modality: The child says 'a house'; moving and placing the card are object actions, not communicative gestures."
 A010,"*CHI:	0 .
 %act:	walks off
 *CHI:	yyy .
@@ -88,7 +88,7 @@ A010,"*CHI:	0 .
 %spa:	$DJF:ST
 %act:	rubs the wall
 *CHI:	0 .
-%act:	grabs Clinician's arm",gestural,,,none,,,independent,,,
+%act:	grabs Clinician's arm",gestural,compliant,,none,compliant,,independent,compliant,,
 A011,"*MOT:	ohboy [/] [NAME] !
 *CHI:	you got your cars and trucks [NAME] .
 *MOT:	yes !
@@ -96,7 +96,7 @@ A011,"*MOT:	ohboy [/] [NAME] !
 *CHI:	yours .
 *MOT:	no .
 *CHI:	Shannon's .
-*MOT:	whose [/] whose cars and trucks are these ?",verbal,,,partial,,,verbal,,,
+*MOT:	whose [/] whose cars and trucks are these ?",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A012,"*INV:	are you a boy ?
 %spa:	$DJF:YQ
 %act:	tries to put him down
@@ -112,7 +112,7 @@ A012,"*INV:	are you a boy ?
 *INV:	let's go find the doors .
 %spa:	$NIA:RP
 *CHI:	doors .
-%spa:	$NIA:RT:WD",verbal,,,partial,,,verbal,,,
+%spa:	$NIA:RT:WD",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A013,"*INV:	five trucks .
 %spa:	$DJF:ST
 *CHI:	five trucks .
@@ -125,14 +125,14 @@ A013,"*INV:	five trucks .
 %spa:	$DJF:CN
 %gpx:	points in the book
 *CHI:	five trucks .
-%spa:	$DJF:YY:WD",verbal,,,partial,,,model,,,
+%spa:	$DJF:YY:WD",verbal,not_applicable,,partial,compliant,,model,compliant,,
 A014,"*MOT:	[NAME] , what letter is that [NAME] ?
 *CHI:	i .
 *MOT:	i [/] right .
 *MOT:	and what does that say ?
 *CHI:	i the indian .
 *MOT:	say indian .
-*CHI:	indian .",verbal,,,correct,,,model,,,
+*CHI:	indian .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A015,"*INV:	let's dump it out .
 %spa:	$NIA:RP
 *CHI:	car [/] car .
@@ -150,7 +150,7 @@ A015,"*INV:	let's dump it out .
 %spa:	$DJF:RT
 %gpx:	points
 *CHI:	yyy [= jargon] [>] .
-%spa:	$DJF:YY:VJ",multimodal,,,correct,,,gestural,,,
+%spa:	$DJF:YY:VJ",multimodal,compliant,,correct,compliant,,gestural,compliant,,
 A016,"*MOT:	that's a new one .
 *CHI:	look at it .
 *CHI:	making donut .
@@ -158,17 +158,17 @@ A016,"*MOT:	that's a new one .
 *CHI:	yeah .
 *CHI:	making donut .
 *MOT:	what are you making [NAME] ?
-*MOT:	what's this ?",verbal,,,none,,,independent,,,
+*MOT:	what's this ?",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A017,"*INV:	whee .
 %spa:	$NIA:PR
 %act:	wipes the mirror with a paper towel
 *CHI:	yyy [= jargon] .
 %spa:	$YYY:YY:VJ
 *INV:	come on .
-%spa:	$NIA:RP",unknown,,,none,,,none,,,
+%spa:	$NIA:RP",unknown,not_applicable,,none,compliant,,none,not_applicable,,
 A018,"*MOT:	what are you doing [NAME] ?
 *CHI:	I am play drums .
-*MOT:	you're playing the drums .",verbal,,,correct,,,verbal,,,
+*MOT:	you're playing the drums .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the first question directly.
 A019,"*INV:	can you push the door open ?
 %spa:	$NIA:RP
 %act:	turns the doorknob
@@ -176,7 +176,7 @@ A019,"*INV:	can you push the door open ?
 %spa:	$MRK:MK:WD
 %act:	pushes the door open
 *INV:	thanks .
-%spa:	$MRK:MK",multimodal,,,correct,,,verbal,,,
+%spa:	$MRK:MK",multimodal,change_required,verbal,correct,compliant,,verbal,change_required,independent,"Modality: Saying 'bye' is verbal. Pushing the door open is the task action, not a communicative gesture. | Prompt level: The door-opening request is presented once and the child responds on that first opportunity."
 A020,"*MOT:	what are [/] you doing ?
 *CHI:	don't eat play-doh .
 *MOT:	no , we don't eat play-doh .
@@ -184,7 +184,7 @@ A020,"*MOT:	what are [/] you doing ?
 *CHI:	xxx .
 *CHI:	white .
 *MOT:	it's white , yeah .
-*MOT:	now what do you do with this ?",verbal,,,partial,,,verbal,,,
+*MOT:	now what do you do with this ?",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A021,"*INV:	pop .
 %spa:	$NIA:PR
 *CHI:	xxx .
@@ -201,7 +201,7 @@ A021,"*INV:	pop .
 %spa:	$MRK:MK:VO
 %act:	sticks his hands in the bubbles still in the sink
 *CHI:	a [=? the] [*] bubbles yyy is gone .
-%spa:	$DJF:ST:WD",multimodal,,,correct,,,verbal,,,
+%spa:	$DJF:ST:WD",multimodal,change_required,verbal,correct,compliant,,verbal,change_required,independent,"Modality: The child uses speech, while turning off the water is an action response rather than a communicative gesture. | Prompt level: The water-off instruction is given once and the child responds on the first opportunity."
 A022,"*MOT:	did you go to school this morning ?
 *CHI:	yes .
 *MOT:	who drove you to school this morning ?
@@ -209,7 +209,7 @@ A022,"*MOT:	did you go to school this morning ?
 *MOT:	who drove you to school this morning ?
 *CHI:	Pape .
 *MOT:	yeah , can you give me a full sentence ?
-*CHI:	Pape .",verbal,,,partial,,,verbal,,,
+*CHI:	Pape .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A023,"*MOT:	no , that's [NAME]'s car .
 *CHI:	[NAME]'s car .
 *MOT:	come here .
@@ -217,11 +217,11 @@ A023,"*MOT:	no , that's [NAME]'s car .
 *MOT:	[NAME] sit down and play .
 *CHI:	sit down and play .
 *CHI:	stay in kitchen .
-*CHI:	xxx .",verbal,,,correct,,,model,,,
+*CHI:	xxx .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A024,"*MOT:	who's this ?
 *CHI:	that Bert .
 *MOT:	good boy .
-*CHI:	xxx .",verbal,,,correct,,,verbal,,,
+*CHI:	xxx .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the first naming question directly.
 A025,"*INV:	&~mm .
 %spa:	$DFW:ST
 %act:	rubs his tummy
@@ -239,7 +239,7 @@ A025,"*INV:	&~mm .
 *INV:	xxx . [+ trn]
 %spa:	$DFW:PR
 %act:	pretends to eat him
-*CHI:	&=laughs .",multimodal,,,correct,,,model,,,
+*CHI:	&=laughs .",multimodal,change_required,none,correct,compliant,,model,compliant,,"Modality: The child rubs the tummy and moves the toy horse, but these are play actions and not partner-directed gestures."
 A026,"*MOT:	put the cover on .
 *CHI:	cover .
 *MOT:	put the cover on .
@@ -247,19 +247,19 @@ A026,"*MOT:	put the cover on .
 *CHI:	push .
 *MOT:	that's right .
 *MOT:	wanna play with your toys ?
-*CHI:	yeah .",verbal,,,correct,,,model,,,
+*CHI:	yeah .",verbal,not_applicable,,correct,compliant,,model,change_required,verbal,"Prompt level: The action instruction is repeated and then narrowed to 'push'; this is added verbal support, not a modeled action."
 A027,"*MOT:	[NAME] , what's this ?
 *CHI:	dog .
 *MOT:	no , who's that [NAME] ?
 *CHI:	kitty+cats .
 *MOT:	kitty+cat .
 *MOT:	what does a kitty+cat say ?
-*CHI:	meow .",verbal,,,partial,,,verbal,,,
+*CHI:	meow .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A028,"*MOT:	the balloon +/.
 *CHI:	blowing .
 *CHI:	blowing .
 *CHI:	blowing .
-*CHI:	blowing .",verbal,,,correct,,,verbal,,,
+*CHI:	blowing .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The adult's first utterance creates the opportunity; there is no added support before the child's response.
 A029,"*MOT:	and what does that say there ?
 *CHI:	don't be greedy .
 *MOT:	what's that word there [NAME] ?
@@ -267,7 +267,7 @@ A029,"*MOT:	and what does that say there ?
 *MOT:	what does that say ?
 *CHI:	color .
 *MOT:	color .
-*CHI:	hearts .",verbal,,,correct,,,verbal,,,
+*CHI:	hearts .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the reading questions on their first presentation without added support.
 A030,"*MOT:	that's a yellow block .
 *CHI:	mommy .
 *MOT:	on .
@@ -275,7 +275,7 @@ A030,"*MOT:	that's a yellow block .
 *CHI:	goody !
 *MOT:	on .
 *MOT:	push .
-*CHI:	push .",verbal,,,partial,,,model,,,
+*CHI:	push .",verbal,not_applicable,,partial,compliant,,model,compliant,,
 A031,"*INV:	we're all done .
 %spa:	$NIA:DC
 *CHI:	yyy .
@@ -294,7 +294,7 @@ A031,"*INV:	we're all done .
 *INV:	0 .
 %act:	stands up
 *INV:	I'm gonna put the puzzle up here on the shelf .
-%spa:	$NIA:SI",multimodal,,,none,,,independent,,,
+%spa:	$NIA:SI",multimodal,change_required,gestural,none,compliant,,independent,compliant,,Modality: Touching the clinician's shoulder is partner-directed communication; no second clear message channel is established.
 A032,"*MOT:	where do you throw it ?
 *CHI:	in the bowling alley .
 *MOT:	right .
@@ -302,14 +302,14 @@ A032,"*MOT:	where do you throw it ?
 *CHI:	no .
 *MOT:	no .
 *MOT:	<what happens> [/] what happens if you throw the ball in the gutter ?
-*CHI:	<it won't> [/] the pins won't get knocked down .",verbal,,,correct,,,verbal,,,
+*CHI:	<it won't> [/] the pins won't get knocked down .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the questions on the first opportunity.
 A033,"*MOT:	with the water .
 *CHI:	ba .
-*MOT:	oop .",unknown,,,unknown,,,verbal,,,
+*MOT:	oop .",unknown,not_applicable,,unknown,change_required,none,verbal,change_required,none,"Outcome: No identifiable target is established in the segment, so an accuracy outcome is not supported. | Prompt level: No clear child target or prompt is established in this short exchange."
 A034,"*MOT:	the baby's sleeping .
 *CHI:	baby .
 *MOT:	and close the door .
-*CHI:	close door .",verbal,,,correct,,,model,,,
+*CHI:	close door .",verbal,not_applicable,,correct,compliant,,model,change_required,independent,Prompt level: The first 'close the door' instruction is an antecedent; no added support is shown before the child's response.
 A035,"*INV:	that was nice .
 %spa:	$NIA:AB
 *CHI:	0 .
@@ -323,10 +323,10 @@ A035,"*INV:	that was nice .
 %spa:	$DFW:PR
 %act:	pretends to eat him
 *CHI:	&=laughs .
-*INV:	&=laughs .",multimodal,,,none,,,independent,,,
+*INV:	&=laughs .",multimodal,change_required,none,none,compliant,,independent,compliant,,Modality: Kissing and moving the toy dog are play actions; no partner-directed communicative gesture is shown.
 A036,"*MOT:	[NAME] , who's that ?
 *CHI:	Mickey_Mouse .
-*MOT:	good boy .",verbal,,,correct,,,verbal,,,
+*MOT:	good boy .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the first naming question directly.
 A037,"*MOT:	what's she wearing ?
 *CHI:	she's wearing a orange shirt , playing the guitar while she looks at it .
 *MOT:	that's right .
@@ -334,12 +334,12 @@ A037,"*MOT:	what's she wearing ?
 *CHI:	she's inside .
 *MOT:	right .
 *MOT:	why ?
-*CHI:	she's playing the guitar .",verbal,,,partial,,,verbal,,,
+*CHI:	she's playing the guitar .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The questions are presented once each; no added support is shown before the child's answers.
 A038,"*MOT:	you want some more ?
 *CHI:	more .
 *MOT:	say “more fence” .
 *CHI:	want fence .
-*CHI:	want fence .",verbal,,,approximation,,,model,,,
+*CHI:	want fence .",verbal,not_applicable,,approximation,compliant,,model,compliant,,
 A039,"*INV:	put it in ?
 %spa:	$NIA:RP
 *CHI:	put in .
@@ -357,12 +357,12 @@ A039,"*INV:	put it in ?
 *CHI:	0 .
 %act:	bangs juice on wall/table
 *CHI:	0 .
-%act:	looks around",multimodal,,,correct,,,verbal,,,
+%act:	looks around",multimodal,compliant,,correct,compliant,,verbal,change_required,independent,Prompt level: The first 'put it in' instruction creates the opportunity and the child responds without added support.
 A040,"*MOT:	wanna put the tennis ball in his other hand ?
 *CHI:	Nanny_Bartlane .
 *MOT:	Nanny_Bartlane .
 *MOT:	what's Nanny_Bartlane hafta do with this ?
-*CHI:	Bartlane .",verbal,,,incorrect,,,verbal,,,
+*CHI:	Bartlane .",verbal,not_applicable,,incorrect,compliant,,verbal,compliant,,
 A041,"*MOT:	what are you doing [NAME] ?
 *CHI:	I play tower .
 *MOT:	you forgot one .
@@ -370,14 +370,14 @@ A041,"*MOT:	what are you doing [NAME] ?
 *MOT:	make the tower .
 *CHI:	gonna make a tower .
 *MOT:	and a red .
-*MOT:	and +/.",verbal,,,correct,,,verbal,,,
+*MOT:	and +/.",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the initial 'what are you doing?' question before any added support.
 A042,"*MOT:	what are you taking ?
 *CHI:	off .
 *MOT:	what are you taking out ?
 *CHI:	off .
 *MOT:	football .
 *MOT:	what are you gonna do with that ?
-*CHI:	whoops .",verbal,,,partial,,,verbal,,,
+*CHI:	whoops .",verbal,not_applicable,,partial,compliant,,verbal,change_required,model,"Prompt level: After unsuccessful answers, the adult supplies the target word 'football', which is a model."
 A043,"*MOT:	[NAME] what am I doing ?
 *CHI:	xxx .
 *MOT:	look at mommy .
@@ -385,7 +385,7 @@ A043,"*MOT:	[NAME] what am I doing ?
 *CHI:	I playing .
 *MOT:	no .
 *CHI:	pencil .
-*MOT:	[NAME] look .",verbal,,,partial,,,verbal,,,
+*MOT:	[NAME] look .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A044,"*MOT:	what [/] what have you got ?
 *CHI:	guy .
 *MOT:	nope .
@@ -393,23 +393,23 @@ A044,"*MOT:	what [/] what have you got ?
 *MOT:	what are these ?
 *CHI:	guys .
 *MOT:	<what's this> [/] what's this one ?
-*CHI:	dinosaur .",verbal,,,partial,,,verbal,,,
+*CHI:	dinosaur .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A045,"*MOT:	what happened there ?
 *CHI:	broke it .
 *MOT:	yeah .
 *CHI:	more balloon .
 *MOT:	huh ?
 *CHI:	more balloon .
-*CHI:	more balloon .",verbal,,,none,,,independent,,,
+*CHI:	more balloon .",verbal,not_applicable,,none,change_required,unknown,independent,compliant,,"Outcome: The child requests more balloon, but fulfillment is not visible in the segment."
 A046,"*MOT:	[NAME] , we're not gonna do any work from the work box today .
 *CHI:	can I play ?
-*MOT:	well , I want you to stay here with me for a little while .",verbal,,,none,,,independent,,,
+*MOT:	well , I want you to stay here with me for a little while .",verbal,not_applicable,,none,change_required,incorrect,independent,compliant,,Outcome: The child asks to play and the adult clearly does not grant that request at this point.
 A047,"*MOT:	what is this ?
 *CHI:	bag .
 *MOT:	bag , good boy .
 *MOT:	and what's this ?
 *MOT:	pillow ?
-*CHI:	pillow .",verbal,,,correct,,,verbal,,,
+*CHI:	pillow .",verbal,not_applicable,,correct,compliant,,verbal,change_required,model,"Prompt level: The adult supplies 'pillow' in the question before the child repeats it, so the strongest support is a model."
 A048,"*MOT:	what's the cow doing ?
 *CHI:	orange .
 *MOT:	[NAME] , what is the cow doing ?
@@ -417,7 +417,7 @@ A048,"*MOT:	what's the cow doing ?
 *CHI:	it's resting .
 *MOT:	it is resting .
 *MOT:	that's right !
-*CHI:	look at the gate .",verbal,,,partial,,,verbal,,,
+*CHI:	look at the gate .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A049,"*MOT:	[NAME] , what are you doing ?
 *CHI:	I play .
 *CHI:	setting the table .
@@ -425,13 +425,13 @@ A049,"*MOT:	[NAME] , what are you doing ?
 *CHI:	you sit at the table .
 *CHI:	eat .
 *CHI:	it's time to be eating the supper .
-*CHI:	time to eat &~mm .",verbal,,,none,,,independent,,,
+*CHI:	time to eat &~mm .",verbal,not_applicable,,none,change_required,correct,independent,compliant,,"Outcome: The adult asks what the child is doing, the child answers, and the adult accepts the response with 'okay'."
 A050,"*MOT:	front .
 *CHI:	front .
-*MOT:	front seat , yes .",verbal,,,correct,,,model,,,
+*MOT:	front seat , yes .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A051,"*MOT:	what's this ?
 *CHI:	belly .
-*MOT:	good boy , [NAME] .",verbal,,,correct,,,verbal,,,
+*MOT:	good boy , [NAME] .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the first naming question directly.
 A052,"*MOT:	how do you think it smells ?
 *CHI:	plasticine .
 *CHI:	clay .
@@ -439,20 +439,20 @@ A052,"*MOT:	how do you think it smells ?
 *MOT:	sound it out .
 *CHI:	ploud@c .
 *MOT:	sound it out .
-*MOT:	p@l .",verbal,,,approximation,,,verbal,,,
+*MOT:	p@l .",verbal,not_applicable,,approximation,compliant,,verbal,change_required,model,"Prompt level: After verbal cues, the adult supplies part of the target sound/word, so the strongest support is a model."
 A053,"*MOT:	what ?
 *CHI:	can I go to your father's ?
 *MOT:	on friday you can go to your father's not my father's .
 *CHI:	I don't want that .
 *CHI:	you hafta +/.
-*CHI:	I don't wanna go to the +/.",verbal,,,none,,,independent,,,
+*CHI:	I don't wanna go to the +/.",verbal,not_applicable,,none,change_required,correct,independent,compliant,,"Outcome: The child asks for permission to go to his father's, and the adult gives a clear conditional grant for Friday."
 A054,"*MOT:	that's a good job .
 *CHI:	put in .
 *MOT:	[NAME] what are you doing ?
 *CHI:	I play eraser .
 *MOT:	[NAME] look .
 *MOT:	what are you doing ?
-*CHI:	I play eraser .",verbal,,,correct,,,verbal,,,
+*CHI:	I play eraser .",verbal,not_applicable,,correct,compliant,,verbal,compliant,,
 A055,"*MOT:	what color is that ?
 *CHI:	blue .
 *MOT:	that's +/.
@@ -460,13 +460,13 @@ A055,"*MOT:	what color is that ?
 *MOT:	pink .
 *CHI:	pink .
 *MOT:	good .
-*MOT:	no , that's xxx +/.",verbal,,,partial,,,verbal,,,
+*MOT:	no , that's xxx +/.",verbal,not_applicable,,partial,compliant,,verbal,change_required,model,Prompt level: The adult supplies the color word 'pink' and the child repeats it.
 A056,"*MOT:	do this .
 *CHI:	do this .
-*CHI:	do this .",verbal,,,correct,,,model,,,
+*CHI:	do this .",verbal,not_applicable,,correct,compliant,,model,change_required,independent,Prompt level: The first 'do this' instruction is an antecedent; no added support is shown before the response.
 A057,"*MOT:	say no .
 *CHI:	no .
-*CHI:	no .",verbal,,,correct,,,model,,,
+*CHI:	no .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A058,"*MOT:	no , tell me all about Everett .
 *CHI:	I work , I played +/.
 *CHI:	made a j@l .
@@ -474,7 +474,7 @@ A058,"*MOT:	no , tell me all about Everett .
 *MOT:	did we eat easter dinner up there ?
 *CHI:	yeah .
 *MOT:	what did we eat ?
-*CHI:	eat the dinner .",verbal,,,partial,,,verbal,,,
+*CHI:	eat the dinner .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The adult asks new questions rather than adding support after a failed opportunity.
 A059,"*MOT:	say hello to papa .
 *CHI:	papa .
 *CHI:	papa .
@@ -482,7 +482,7 @@ A059,"*MOT:	say hello to papa .
 *CHI:	hello .
 *CHI:	hello .
 *CHI:	no !
-*CHI:	cracker .",verbal,,,correct,,,model,,,
+*CHI:	cracker .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A060,"*MOT:	what school do you go to ?
 *CHI:	school .
 *MOT:	what school ?
@@ -490,14 +490,14 @@ A060,"*MOT:	what school do you go to ?
 *CHI:	school .
 *MOT:	Laura +/.
 *CHI:	Lee_School .
-*MOT:	do the puzzle .",verbal,,,partial,,,verbal,,,
+*MOT:	do the puzzle .",verbal,not_applicable,,partial,compliant,,verbal,change_required,model,"Prompt level: The adult supplies part of the school name ('the lau...', 'Laura...'), which is a partial model."
 A061,"*MOT:	what kind of tree ?
 *CHI:	a big tree .
 *MOT:	what was on the tree ?
-*CHI:	meatballs .",verbal,,,correct,,,verbal,,,
+*CHI:	meatballs .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the questions on first presentation.
 A062,"*MOT:	can you say frog ?
 *CHI:	frog .
-*MOT:	frog .",verbal,,,correct,,,model,,,
+*MOT:	frog .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A063,"*MOT:	you +/.
 *CHI:	you are putting lemon .
 *MOT:	close enough .
@@ -505,13 +505,13 @@ A063,"*MOT:	you +/.
 *MOT:	what is Jenny doing ?
 *CHI:	Jenny's doing .
 *MOT:	where is Jenny ?
-*CHI:	in the stool .",verbal,,,partial,,,verbal,,,
+*CHI:	in the stool .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The child responds to the questions on their first presentation; no added support is shown.
 A064,"*MOT:	what's that a picture of ?
 *CHI:	dog .
 *MOT:	yeah , it looks like a dog .
 *MOT:	what does that say ?
 *CHI:	xxx .
-*CHI:	xxx .",verbal,,,partial,,,verbal,,,
+*CHI:	xxx .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The questions are presented once; no added support is given before the child's responses.
 A065,"*MOT:	what is it ?
 *CHI:	baby .
 *MOT:	[NAME] , say pants .
@@ -519,12 +519,12 @@ A065,"*MOT:	what is it ?
 *MOT:	say pants .
 *CHI:	pants .
 *MOT:	good boy .
-*MOT:	what's this ?",verbal,,,correct,,,model,,,
+*MOT:	what's this ?",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A066,"*MOT:	[NAME] , you wanna come over here and play with your chipmunks ?
 *CHI:	I'll get the chipmunks .
 *MOT:	[NAME] , right there .
 *MOT:	there's one .
-*CHI:	Alvin , Simon , and Theodore .",verbal,,,correct,,,verbal,,,
+*CHI:	Alvin , Simon , and Theodore .",verbal,not_applicable,,correct,compliant,,verbal,compliant,,
 A067,"*INV:	a tree ?
 %spa:	$NIA:RQ
 *CHI:	xxx . [+ trn]
@@ -542,7 +542,7 @@ A067,"*INV:	a tree ?
 %spa:	$NIA:YY:VCP
 %gpx:	points to chalkboard
 *INV:	what ?
-%spa:	$DCC:RR",multimodal,,,none,,,independent,,,
+%spa:	$DCC:RR",multimodal,change_required,gestural,none,compliant,,independent,compliant,,Modality: Pointing to the chalkboard is the clear communicative channel; no second clear message channel is established.
 A068,"*MOT:	you're being a good boy .
 *CHI:	<i touch> [/] I play it later .
 *CHI:	you see the Potato_Head ?
@@ -550,12 +550,12 @@ A068,"*MOT:	you're being a good boy .
 *MOT:	[NAME] .
 *CHI:	<i go> [/] I go to school ?
 *CHI:	I go to school ?
-*MOT:	[NAME] , look at mommy .",verbal,,,none,,,independent,,,
+*MOT:	[NAME] , look at mommy .",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A069,"*MOT:	who's on the box ?
 *CHI:	guitar .
 *MOT:	yeah .
 *MOT:	who's playing the guitar ?
-*CHI:	Big_Bird .",verbal,,,partial,,,verbal,,,
+*CHI:	Big_Bird .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The child answers the questions on their first presentation.
 A070,"*CHI:	0 . [+ trn]
 %spa:	$NIA:RP:NT
 %gpx:	takes EXP hand begins to walk
@@ -569,7 +569,7 @@ A070,"*CHI:	0 . [+ trn]
 %gpx:	pats the lower cabinet
 *CHI:	0 . [+ trn]
 %spa:	$DHA:YY:NR
-%gpx:	waves EXP hand upward",gestural,,,none,,,independent,,,
+%gpx:	waves EXP hand upward",gestural,compliant,,none,change_required,unknown,independent,compliant,,"Outcome: The child clearly directs the adult toward the cabinet, but the requested result is not resolved in the segment."
 A071,"*MOT:	what's this ?
 *CHI:	moo .
 *MOT:	what's that ?
@@ -577,7 +577,7 @@ A071,"*MOT:	what's this ?
 *MOT:	horse .
 *CHI:	horse .
 *MOT:	yeah .
-*MOT:	do you like the cars ?",verbal,,,partial,,,model,,,
+*MOT:	do you like the cars ?",verbal,not_applicable,,partial,compliant,,model,compliant,,
 A072,"*MOT:	what is the horse wearing ?
 *CHI:	mhm .
 *MOT:	[NAME] .
@@ -585,14 +585,14 @@ A072,"*MOT:	what is the horse wearing ?
 *CHI:	hat .
 *MOT:	do horses wear hats ?
 *CHI:	no .
-*MOT:	no , that's kind of silly , &~is [/] (is)n't it ?",verbal,,,correct,,,verbal,,,
+*MOT:	no , that's kind of silly , &~is [/] (is)n't it ?",verbal,not_applicable,,correct,compliant,,verbal,compliant,,
 A073,"*INV:	what did you find ?
 %spa:	$NMA:QN
 *CHI:	0 .
 %act:	picks up a train
 *INV:	choo [/] choo .
 %spa:	$NIA:PR
-%gpx:	points to the train",gestural,,,partial,,,verbal,,,
+%gpx:	points to the train",gestural,change_required,none,partial,compliant,,verbal,change_required,independent,"Modality: The child only picks up the train. The pointing gesture belongs to the adult, so the child's object action is not gestural communication. | Prompt level: The child picks up the train immediately after the first question; the later adult point comes afterward."
 A074,"*MOT:	what happened to make the meatball fall ?
 *CHI:	it rolled off and somebody sneezed .
 *MOT:	because somebody sneezed .
@@ -600,7 +600,7 @@ A074,"*MOT:	what happened to make the meatball fall ?
 *MOT:	[- deu] gesuntheit .
 *MOT:	so , what else did you do in circle time ?
 *CHI:	played .
-*CHI:	how about if I sneeze ?",verbal,,,correct,,,verbal,,,
+*CHI:	how about if I sneeze ?",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the first question directly.
 A075,"*MOT:	who's on the cow ?
 *CHI:	me .
 *MOT:	who's on the cow ?
@@ -608,7 +608,7 @@ A075,"*MOT:	who's on the cow ?
 *MOT:	is [/] the cat on the cow ?
 *CHI:	no .
 *MOT:	no , I didn't think so .
-*MOT:	who's on the cow ?",verbal,,,partial,,,verbal,,,
+*MOT:	who's on the cow ?",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A076,"*INV:	<knock knock> [/] knock .
 %spa:	$DJF:PR
 %act:	pats a block at each knock
@@ -624,10 +624,10 @@ A076,"*INV:	<knock knock> [/] knock .
 %spa:	$DJF:ST
 *CHI:	0 . [+ trn]
 %spa:	$NIA:YY:NO
-%act:	pushes up on the lid",gestural,,,none,,,independent,,,
+%act:	pushes up on the lid",gestural,compliant,,none,change_required,unknown,independent,compliant,,"Outcome: The child leads the adult to the sandbox/lid, but the requested result is not visibly resolved."
 A077,"*MOT:	do you play ball at school ?
 *CHI:	yeah .
-*MOT:	who do you play ball with in school ?",verbal,,,partial,,,verbal,,,
+*MOT:	who do you play ball with in school ?",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The questions are first presentations; no added support is shown before the child response.
 A078,"*MOT:	get away from that .
 *CHI:	I wanna pick up the game .
 *CHI:	did you get the games !
@@ -635,7 +635,7 @@ A078,"*MOT:	get away from that .
 *CHI:	yes .
 *MOT:	you know what this is ?
 *CHI:	broccoli .
-*MOT:	no , it's lettuce .",verbal,,,incorrect,,,verbal,,,
+*MOT:	no , it's lettuce .",verbal,not_applicable,,incorrect,compliant,,verbal,change_required,independent,Prompt level: The child gives the broccoli answer on the first naming opportunity; the correction comes afterward.
 A079,"*INV:	hi Chi .
 %spa:	$MRK:MK
 %act:	waves over the barn
@@ -655,7 +655,7 @@ A079,"*INV:	hi Chi .
 %spa:	$MRK:MK
 %act:	waves
 *CHI:	0 .
-%act:	looks at camera",multimodal,,,correct,,,model,,,
+%act:	looks at camera",multimodal,compliant,,correct,change_required,none,model,compliant,,Outcome: This is a greeting/social exchange with no identifiable accuracy target.
 A080,"*MOT:	where's the cars go ?
 *CHI:	road .
 *MOT:	right there ?
@@ -663,7 +663,7 @@ A080,"*MOT:	where's the cars go ?
 *CHI:	right that way .
 *MOT:	okay , you wanna draw a picture of the school ?
 *MOT:	league school ?
-*CHI:	yes .",verbal,,,correct,,,verbal,,,
+*CHI:	yes .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child gives the location answer on the first question without added support.
 A081,"*MOT:	what's this ?
 *CHI:	horsie .
 *MOT:	right .
@@ -671,10 +671,10 @@ A081,"*MOT:	what's this ?
 *MOT:	what's this ?
 *MOT:	what are these ?
 *CHI:	what are these ?
-*MOT:	birds .",verbal,,,partial,,,verbal,,,
+*MOT:	birds .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A082,"*MOT:	put it down [NAME] .
 *CHI:	xxx .
-*MOT:	[NAME] look .",unknown,,,no_response,,,verbal,,,
+*MOT:	[NAME] look .",unknown,not_applicable,,no_response,compliant,,verbal,compliant,,
 A083,"*MOT:	okay , tell me .
 *CHI:	boy +/.
 *MOT:	boy .
@@ -682,7 +682,7 @@ A083,"*MOT:	okay , tell me .
 *MOT:	okay , what color balloon is it ?
 *CHI:	blue balloon .
 *MOT:	whole sentence .
-*CHI:	blue balloon .",verbal,,,partial,,,verbal,,,
+*CHI:	blue balloon .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A084,"*MOT:	what color ?
 *CHI:	haha .
 *CHI:	put the gate in the placemats .
@@ -690,7 +690,7 @@ A084,"*MOT:	what color ?
 *CHI:	gate .
 *MOT:	no .
 *CHI:	I want the gate in the placemats .
-*MOT:	okay .",verbal,,,none,,,independent,,,
+*MOT:	okay .",verbal,not_applicable,,none,change_required,correct,independent,compliant,,Outcome: The child's gate request is visibly accepted by the adult with 'okay'.
 A085,"*MOT:	we can play a game [NAME] .
 *CHI:	I'm put those +/.
 *CHI:	I'm do the puzzle .
@@ -698,31 +698,31 @@ A085,"*MOT:	we can play a game [NAME] .
 *CHI:	do wanna color ?
 *MOT:	do you wanna color ?
 *CHI:	do want color afternoon .
-*MOT:	okay .",verbal,,,none,,,independent,,,
+*MOT:	okay .",verbal,not_applicable,,none,change_required,correct,independent,compliant,,Outcome: The child's request/choice about coloring is accepted by the adult with 'okay'.
 A086,"*MOT:	xxx .
 *CHI:	I wanna make mine .
 *MOT:	do you wanna play later on ?
-*CHI:	yeah .",verbal,,,none,,,independent,,,
+*CHI:	yeah .",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A087,"*MOT:	today what ?
 *CHI:	is [/] thursday ?
 *MOT:	that's right .
-*CHI:	today is [/] thursday .",verbal,,,correct,,,verbal,,,
+*CHI:	today is [/] thursday .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers 'Thursday' on the first opportunity and is then confirmed.
 A088,"*MOT:	who is in the boat ?
 *CHI:	boy .
 *MOT:	and who else ?
-*CHI:	bear .",verbal,,,correct,,,verbal,,,
+*CHI:	bear .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers both questions on their first presentation.
 A089,"*MOT:	you say it again .
 *CHI:	the duck +/.
 *MOT:	no I +/.
 *CHI:	play duck toy .
 *MOT:	okay .
 *MOT:	I play duck toy .
-*CHI:	I play duck toy .",verbal,,,correct,,,model,,,
+*CHI:	I play duck toy .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A090,"*MOT:	what are you doing ?
 *CHI:	look up .
 *MOT:	no , what are you doing ?
 *CHI:	I'm doing puzzle .
-*CHI:	&~mm .",verbal,,,correct,,,verbal,,,
+*CHI:	&~mm .",verbal,not_applicable,,correct,compliant,,verbal,compliant,,
 A091,"*INV:	is it a school bus ?
 %spa:	$DJF:YQ
 *CHI:	school bus .
@@ -742,7 +742,7 @@ A091,"*INV:	is it a school bus ?
 %spa:	$DJF:YQ
 *CHI:	varoom@o [/] varoom@o .
 %spa:	$DJF:PR:VO
-%act:	flies the airplane",multimodal,,,correct,,,verbal,,,
+%act:	flies the airplane",multimodal,change_required,verbal,correct,compliant,,verbal,change_required,independent,"Modality: The child labels the toys verbally. Taking and flying the toys are object/play actions, not communicative gestures. | Prompt level: The child's labels occur on the first opportunities; later adult acknowledgements are not prompts."
 A092,"*MOT:	another se [/] &-uh [/] full sentence .
 *CHI:	[NAME] play ball .
 *MOT:	who do you play ball with ?
@@ -750,7 +750,7 @@ A092,"*MOT:	another se [/] &-uh [/] full sentence .
 *MOT:	no .
 *MOT:	[NAME] plays ball with ?
 *CHI:	with .
-*CHI:	Tim [/] mommy .",verbal,,,partial,,,verbal,,,
+*CHI:	Tim [/] mommy .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A093,"*MOT:	what's this ?
 *CHI:	horsie .
 *MOT:	horsies ?
@@ -758,7 +758,7 @@ A093,"*MOT:	what's this ?
 *MOT:	it's a cow .
 *CHI:	cow .
 *MOT:	let's open it [NAME] .
-*CHI:	ooh .",verbal,,,partial,,,model,,,
+*CHI:	ooh .",verbal,not_applicable,,partial,compliant,,model,compliant,,
 A094,"*MOT:	oh , [NAME] look .
 *CHI:	help please .
 *CHI:	present .
@@ -766,22 +766,22 @@ A094,"*MOT:	oh , [NAME] look .
 *CHI:	open .
 *CHI:	open .
 *MOT:	do you need help ?
-*CHI:	yes .",verbal,,,none,,,independent,,,
+*CHI:	yes .",verbal,not_applicable,,none,change_required,unknown,independent,compliant,,"Outcome: The child asks for help/opening, but the transcript does not show whether help was provided."
 A095,"*MOT:	say bunny .
 *CHI:	bunny .
 *MOT:	see , the baby's in bed .
-*CHI:	xxx .",verbal,,,correct,,,model,,,
+*CHI:	xxx .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A096,"*MOT:	do this .
 *CHI:	nose .
 *MOT:	good boy .
 *CHI:	cracker .
 *MOT:	push the car nice .
-*CHI:	car .",verbal,,,partial,,,verbal,,,
+*CHI:	car .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The instructions are first presentations; no repeated or added support is shown before the child responses.
 A097,"*MOT:	what's this ?
 *CHI:	hair .
 *MOT:	good boy [NAME] .
 *MOT:	what's this ?
-*CHI:	nose .",verbal,,,correct,,,verbal,,,
+*CHI:	nose .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the naming questions on the first opportunity.
 A098,"*MOT:	did you play today in school ?
 *CHI:	yes .
 *MOT:	okay .
@@ -789,14 +789,14 @@ A098,"*MOT:	did you play today in school ?
 *MOT:	did you do any number work today ?
 *CHI:	yes .
 *MOT:	what number did you work with ?
-*MOT:	can you tell me the number ?",verbal,,,partial,,,verbal,,,
+*MOT:	can you tell me the number ?",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A099,"*MOT:	say bear .
 *CHI:	bear .
 *MOT:	that's right , good boy .
 *MOT:	what's he doing ?
 *CHI:	xxx .
 *MOT:	he's sleeping .
-*CHI:	sleep .",verbal,,,correct,,,model,,,
+*CHI:	sleep .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A100,"*MOT:	no it's not raining .
 *CHI:	not rain .
 *MOT:	[NAME] ?
@@ -804,7 +804,7 @@ A100,"*MOT:	no it's not raining .
 *MOT:	take his pants off .
 *CHI:	take pants .
 *CHI:	take a kaka .
-*CHI:	take a kaka .",verbal,,,partial,,,model,,,
+*CHI:	take a kaka .",verbal,not_applicable,,partial,compliant,,model,compliant,,
 A101,"*MOT:	that's the truth .
 *CHI:	xxx .
 *MOT:	xxx .
@@ -812,7 +812,7 @@ A101,"*MOT:	that's the truth .
 *MOT:	do not go near the camera again .
 *CHI:	wanna go night_night .
 *CHI:	take him to bed .
-*MOT:	[NAME] .",verbal,,,none,,,independent,,,
+*MOT:	[NAME] .",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A102,"*INV:	open the door .
 %spa:	$NIA:RP
 *CHI:	a [=? the] [*] door .
@@ -832,7 +832,7 @@ A102,"*INV:	open the door .
 %spa:	$NIA:SI
 %act:	opens the door
 *CHI:	door .
-%spa:	$NIA:RT:WDE",multimodal,,,partial,,,verbal,,,
+%spa:	$NIA:RT:WDE",multimodal,compliant,,partial,compliant,,verbal,compliant,,
 A103,"*INV:	m@l .
 %spa:	$DJF:EI
 %act:	draws another M
@@ -851,7 +851,7 @@ A103,"*INV:	m@l .
 %spa:	$YYY:YY:VO
 *INV:	m@l [/] m@l .
 %spa:	$NIA:CT
-%act:	draws another m@l",none,,,approximation,,,model,,,
+%act:	draws another m@l",none,compliant,,approximation,change_required,none,model,change_required,none,"Outcome: The transcript does not establish a child imitation target, so an approximation outcome is not supported. | Prompt level: The adult labels/draws the letter, but the transcript does not establish a child imitation target."
 A104,"*INV:	xxx . [+ trn]
 %spa:	$PRO:PR
 *CHI:	0 . [+ trn]
@@ -870,10 +870,10 @@ A104,"*INV:	xxx . [+ trn]
 *CHI:	get set .
 %spa:	$SDS:PR:WD
 *CHI:	go .
-%spa:	$SDS:PR:WD",multimodal,,,none,,,independent,,,
+%spa:	$SDS:PR:WD",multimodal,change_required,gestural,none,change_required,correct,independent,compliant,,"Modality: Reaching for the cookie is a communicative request. The later words carry a different message, so this is not one multimodal message. | Outcome: The child's reach requests another cookie, and the adult visibly gives him one."
 A105,"*MOT:	show me under .
 *CHI:	Ginger_Bread_Man .
-*MOT:	no , Ginger_Bread_Man is on the giraffe .",verbal,,,incorrect,,,verbal,,,
+*MOT:	no , Ginger_Bread_Man is on the giraffe .",verbal,not_applicable,,incorrect,compliant,,verbal,compliant,,
 A106,"*MOT:	what's that ?
 *CHI:	prestos .
 *CHI:	play xxx .
@@ -881,13 +881,13 @@ A106,"*MOT:	what's that ?
 *MOT:	what ?
 *CHI:	xxx .
 *CHI:	xxx .
-*MOT:	what's this ?",verbal,,,unknown,,,verbal,,,
+*MOT:	what's this ?",verbal,not_applicable,,unknown,compliant,,verbal,compliant,,
 A107,"*MOT:	what ?
 *CHI:	can I have a cookie ?
 *MOT:	no .
 *CHI:	that knife can cut you badly .
 *MOT:	what can the knife do ?
-*CHI:	can cut you badly .",verbal,,,correct,,,verbal,,,
+*CHI:	can cut you badly .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child had already stated what the knife can do and answers the first direct question without added support.
 A108,"*MOT:	Miss_Jillson and Rose_Marie .
 *CHI:	xxx .
 *MOT:	huh ?
@@ -895,12 +895,12 @@ A108,"*MOT:	Miss_Jillson and Rose_Marie .
 *CHI:	slide .
 *MOT:	slide .
 *MOT:	what else ?
-*CHI:	swing .",verbal,,,correct,,,verbal,,,
+*CHI:	swing .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers each new question on first presentation.
 A109,"*MOT:	five ?
 *CHI:	buy a kite .
 *CHI:	<bl bl> [/] balloon .
 *CHI:	got balloon .
-*CHI:	got balloon .",verbal,,,unknown,,,verbal,,,
+*CHI:	got balloon .",verbal,not_applicable,,unknown,compliant,,verbal,change_required,independent,Prompt level: The adult's single 'five?' turn is the opportunity; no added support is shown.
 A110,"*MOT:	what are you playing with [NAME] ?
 *CHI:	I'm playing with [/] with toys .
 *MOT:	oh , good .
@@ -908,7 +908,7 @@ A110,"*MOT:	what are you playing with [NAME] ?
 *MOT:	and what's this ?
 *CHI:	your table .
 *MOT:	no .
-*MOT:	my table .",verbal,,,partial,,,verbal,,,
+*MOT:	my table .",verbal,not_applicable,,partial,compliant,,verbal,change_required,independent,Prompt level: The child answers the questions on their first presentation; correction comes after the response.
 A111,"*MOT:	what are you doing ?
 *CHI:	doing the chalk .
 *MOT:	say , I play .
@@ -916,7 +916,7 @@ A111,"*MOT:	what are you doing ?
 *MOT:	good boy .
 *CHI:	get xxx .
 *CHI:	<get out> [/] get out .
-*CHI:	xxx .",verbal,,,correct,,,model,,,
+*CHI:	xxx .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A112,"*MOT:	oh , .
 *CHI:	it fell down .
 *MOT:	the police car tipped over .
@@ -924,7 +924,7 @@ A112,"*MOT:	oh , .
 *MOT:	put your blocks away .
 *CHI:	xxx .
 *CHI:	put the blocks away .
-*CHI:	put the +/.",verbal,,,partial,,,verbal,,,
+*CHI:	put the +/.",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A113,"*MOT:	what song did you sing in circle time ?
 *CHI:	all covered with cheese .
 *MOT:	you sang On_Top_of_Spagetti ?
@@ -932,10 +932,10 @@ A113,"*MOT:	what song did you sing in circle time ?
 *MOT:	and what [/] what happened ?
 *CHI:	it went , it rolled out of the doors .
 *CHI:	happened to the meatballs at Beverly's xxx ?
-*MOT:	I don't know .",verbal,,,correct,,,verbal,,,
+*MOT:	I don't know .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the new questions on first presentation; the adult's restatement is acknowledgement/context.
 A114,"*MOT:	<tickle tickle> [/] tickle .
 *CHI:	cracker .
-*CHI:	cracker .",verbal,,,none,,,independent,,,
+*CHI:	cracker .",verbal,not_applicable,,none,change_required,unknown,independent,compliant,,"Outcome: The child requests a cracker, but the transcript does not show whether the request was fulfilled."
 A115,"*MOT:	stayed .
 *CHI:	stayed .
 *MOT:	stayed where ?
@@ -943,7 +943,7 @@ A115,"*MOT:	stayed .
 *MOT:	where did you stay ?
 *CHI:	room .
 *MOT:	that's right .
-*MOT:	you stayed in +/.",verbal,,,correct,,,verbal,,,
+*MOT:	you stayed in +/.",verbal,not_applicable,,correct,compliant,,verbal,compliant,,
 A116,"*INV:	there it is .
 %spa:	$NIA:ST
 %act:	turns to look at balloon
@@ -951,7 +951,7 @@ A116,"*INV:	there it is .
 *CHI:	0 .
 %act:	picks up balloon and hands it to EXP
 *INV:	there it is .
-%spa:	$NIA:ST",gestural,,,correct,,,gestural,,,
+%spa:	$NIA:ST",gestural,compliant,,correct,compliant,,gestural,compliant,,
 A117,"*INV:	there it is .
 %spa:	$NIA:ST
 %gpx:	points to balloon
@@ -970,16 +970,16 @@ A117,"*INV:	there it is .
 *CHI:	0 .
 %act:	puts balloon to mouth
 *INV:	0 .
-%act:	holds balloon while looking at CHI",gestural,,,correct,,,gestural,,,
+%act:	holds balloon while looking at CHI",gestural,compliant,,correct,compliant,,gestural,compliant,,
 A118,"*MOT:	they're all dinosaurs .
 *CHI:	that's yours ?
-*MOT:	yeah .",verbal,,,none,,,independent,,,
+*MOT:	yeah .",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A119,"*MOT:	what's broken ?
 *CHI:	that broken .
 *MOT:	is [/] it broken ?
 *CHI:	no .
 *MOT:	what's the problem ?
-*CHI:	broken .",verbal,,,partial,,,verbal,,,
+*CHI:	broken .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A120,"*MOT:	get the bridge .
 *CHI:	get the bridge .
 *MOT:	get the truck .
@@ -987,7 +987,7 @@ A120,"*MOT:	get the bridge .
 *MOT:	in the bag .
 *CHI:	bag .
 *MOT:	in the basket .
-*CHI:	in basket .",verbal,,,correct,,,model,,,
+*CHI:	in basket .",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A121,"*MOT:	that's an astronaut .
 *CHI:	duck .
 *CHI:	duck .
@@ -995,7 +995,7 @@ A121,"*MOT:	that's an astronaut .
 *CHI:	it is a duck .
 *CHI:	duck .
 *CHI:	hat .
-*CHI:	&~mm &~mm .",verbal,,,incorrect,,,verbal,,,
+*CHI:	&~mm &~mm .",verbal,not_applicable,,incorrect,change_required,none,verbal,change_required,independent,"Outcome: The child repeats 'duck' after an adult statement; there is no identifiable question, instruction, or imitation target. | Prompt level: The child initiates the repeated 'duck' response after the adult's statement; no added prompt is shown."
 A122,"*MOT:	this .
 *CHI:	do this .
 *MOT:	[NAME] .
@@ -1003,7 +1003,7 @@ A122,"*MOT:	this .
 *CHI:	do this .
 *MOT:	okay .
 *MOT:	do this .
-*CHI:	do this .",verbal,,,correct,,,model,,,
+*CHI:	do this .",verbal,not_applicable,,correct,compliant,,model,change_required,verbal,"Prompt level: The 'do this' instruction is repeated after the first opportunity, so the added support is verbal rather than a model."
 A123,"*MOT:	that's with the dice .
 *CHI:	stay tuned for operation identification .
 *MOT:	operation identification ?
@@ -1011,11 +1011,11 @@ A123,"*MOT:	that's with the dice .
 *MOT:	that's on the television .
 *CHI:	Freddie [/] Freddie .
 *MOT:	you like Freddie .
-*MOT:	you like Freddie_Rogers .",verbal,,,none,,,independent,,,
+*MOT:	you like Freddie_Rogers .",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A124,"*MOT:	did you do any <did you do any &-um> [/] work on your alphabet ?
 *CHI:	the N_F_L_Today .
 *MOT:	hey .
-*CHI:	write the N_F_L_Today .",verbal,,,incorrect,,,verbal,,,
+*CHI:	write the N_F_L_Today .",verbal,not_applicable,,incorrect,compliant,,verbal,compliant,,
 A125,"*MOT:	toy .
 *CHI:	toy .
 *MOT:	what's this ?
@@ -1023,7 +1023,7 @@ A125,"*MOT:	toy .
 *MOT:	good job .
 *MOT:	what's that ?
 *CHI:	horsie .
-*MOT:	horsie .",verbal,,,correct,,,verbal,,,
+*MOT:	horsie .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the naming questions on their first presentation.
 A126,"*MOT:	what color is that truck ?
 *CHI:	orange .
 *MOT:	yeah , what color is this truck ?
@@ -1031,11 +1031,11 @@ A126,"*MOT:	what color is that truck ?
 *MOT:	yeah , and what color is this car ?
 *CHI:	blue .
 *MOT:	what color is this car that's driving on your arm ?
-*CHI:	blue .",verbal,,,correct,,,verbal,,,
+*CHI:	blue .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers each color question on first presentation.
 A127,"*MOT:	[NAME] look .
 *CHI:	xxx .
 *CHI:	want Dan .
-*CHI:	want Dan .",verbal,,,none,,,independent,,,
+*CHI:	want Dan .",verbal,not_applicable,,none,change_required,unknown,independent,compliant,,"Outcome: The child requests Dan, but the transcript does not show whether the request was fulfilled."
 A128,"*INV:	he's on the water .
 %spa:	$DJF:ST
 *CHI:	0 .
@@ -1054,7 +1054,7 @@ A128,"*INV:	he's on the water .
 %spa:	$DJF:RT:WDE
 *INV:	there's one more we haven't played with .
 %spa:	$DJF:ST
-%gpx:	points to a puzzle piece",multimodal,,,correct,,,independent,,,
+%gpx:	points to a puzzle piece",multimodal,change_required,verbal,correct,compliant,,independent,compliant,,Modality: The child says 'airplane'; holding the toy up is not explicitly shown as partner-directed communication.
 A129,"*INV:	now he can stand up .
 %spa:	$DJF:ST
 *CHI:	&-um his mouth .
@@ -1073,7 +1073,7 @@ A129,"*INV:	now he can stand up .
 *CHI:	0 .
 %act:	gets another pair of shoes
 *CHI:	0 .
-%act:	puts the shoes on the potato",multimodal,,,correct,,,verbal,,,
+%act:	puts the shoes on the potato",multimodal,change_required,verbal,correct,compliant,,verbal,change_required,independent,"Modality: The child answers verbally. Looking in the box and putting shoes on the toy are object actions, not communicative gestures. | Prompt level: The child answers the first yes/no question without added support."
 A130,"*INV:	you want a marker ?
 %spa:	$NIA:RQ
 %act:	holds up two markers
@@ -1084,16 +1084,16 @@ A130,"*INV:	you want a marker ?
 *CHI:	xxx . [+ trn]
 %spa:	$YYY:YY:VO
 *CHI:	xxx . [+ trn]
-%spa:	$YYY:YY:VO",unknown,,,unknown,,,verbal,,,
+%spa:	$YYY:YY:VO",unknown,not_applicable,,unknown,compliant,,verbal,compliant,,
 A131,"*INV:	this isn't workin(g) .
 %spa:	$NIA:ST
 *CHI:	xxx .
 *INV:	&=gasp . [+ trn]
-%spa:	$DHA:MK",unknown,,,none,,,none,,,
+%spa:	$DHA:MK",unknown,not_applicable,,none,compliant,,none,not_applicable,,
 A132,"*MOT:	make her walk .
 *CHI:	stairs .
 *MOT:	up the stairs .
-*CHI:	stairs .",verbal,,,partial,,,model,,,
+*CHI:	stairs .",verbal,not_applicable,,partial,compliant,,model,change_required,verbal,"Prompt level: After the first response, the adult adds 'up the stairs', which is added verbal support for the action target."
 A133,"*INV:	you want (th)em ?
 %spa:	$NIA:YQ
 *CHI:	yyy .
@@ -1112,10 +1112,10 @@ A133,"*INV:	you want (th)em ?
 %spa:	$DJF:CN
 %gpx:	points to one of the legos
 *CHI:	yyy [= jargon] [>] .
-%spa:	$YYY:YY:VJ",multimodal,,,partial,,,verbal,,,
+%spa:	$YYY:YY:VJ",multimodal,change_required,verbal,partial,compliant,,verbal,change_required,model,"Modality: The child vocalizes in the interaction, while taking and throwing the Lego are task/object actions, not communicative gestures. | Prompt level: For the counting target, the adult supplies 'one' before the child's response, making the strongest support a model."
 A134,"*MOT:	what's that say ?
 *CHI:	inside was a toy kangaroo .
-*MOT:	inside was a funny toy kangaroo .",verbal,,,approximation,,,verbal,,,
+*MOT:	inside was a funny toy kangaroo .",verbal,not_applicable,,approximation,compliant,,verbal,change_required,independent,Prompt level: The child responds to the first reading question before any added support.
 A135,"*MOT:	what's that ?
 *CHI:	Etch_A_Sketch .
 *MOT:	you're making mountains .
@@ -1123,10 +1123,10 @@ A135,"*MOT:	what's that ?
 *MOT:	that's right .
 *MOT:	you made a stair .
 *CHI:	leave the stairs alone .
-*CHI:	leave the stairs alone .",verbal,,,correct,,,verbal,,,
+*CHI:	leave the stairs alone .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child responds on the first opportunity; the adult's later statement is acknowledgement.
 A136,"*MOT:	see the squirrel ?
 *CHI:	squirrel .
-*MOT:	and the two bears .",verbal,,,correct,,,model,,,
+*MOT:	and the two bears .",verbal,not_applicable,,correct,compliant,,model,change_required,independent,Prompt level: The adult's natural 'see the squirrel?' turn creates the opportunity; it is not an explicit imitation prompt.
 A137,"*INV:	one .
 %spa:	$DJF:EC
 %act:	turns the page
@@ -1141,7 +1141,7 @@ A137,"*INV:	one .
 %spa:	$DJF:CN
 %act:	turns the page
 *CHI:	four [<] .
-%spa:	$DJF:CN:WD",verbal,,,correct,,,model,,,
+%spa:	$DJF:CN:WD",verbal,not_applicable,,correct,compliant,,model,change_required,independent,"Prompt level: The adult gives the previous number, not the child's target response; the child independently continues the count."
 A138,"*INV2:	hi Chi .
 %spa:	$MRK:MK
 *CHI:	0 . [+ trn]
@@ -1156,7 +1156,7 @@ A138,"*INV2:	hi Chi .
 %spa:	$DHA:YY:CO
 %act:	throws the balloon and hits him in the head with it
 *CHI:	0 .
-%act:	gets up",gestural,,,unknown,,,verbal,,,
+%act:	gets up",gestural,compliant,,unknown,change_required,none,verbal,change_required,independent,Outcome: This is a greeting/joint-attention exchange with no identifiable accuracy target. | Prompt level: The child points in response to the first greeting/interaction without added support.
 A139,"*MOT:	what animal is this ?
 *CHI:	the animal .
 *MOT:	what animal ?
@@ -1164,7 +1164,7 @@ A139,"*MOT:	what animal is this ?
 *MOT:	what kind of animal ?
 *CHI:	animals .
 *MOT:	it's a horse .
-*CHI:	horse .",verbal,,,partial,,,model,,,
+*CHI:	horse .",verbal,not_applicable,,partial,compliant,,model,compliant,,
 A140,"*MOT:	what's he doing ?
 *CHI:	ern +/.
 *MOT:	[NAME] , what's Ernie doing ?
@@ -1172,12 +1172,12 @@ A140,"*MOT:	what's he doing ?
 *MOT:	that's right .
 *MOT:	do the puzzle .
 *CHI:	finger .
-*MOT:	what's this ?",verbal,,,correct,,,verbal,,,
+*MOT:	what's this ?",verbal,not_applicable,,correct,compliant,,verbal,compliant,,
 A141,"*MOT:	oh , who's got the xxx .
 *CHI:	I give a count .
 *MOT:	the count is gonna play the guitar ?
 *MOT:	boy , he's talented .
-*CHI:	I give a Guy_Smiley .",verbal,,,none,,,independent,,,
+*CHI:	I give a Guy_Smiley .",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A142,"*MOT:	can you say vest ?
 *CHI:	vest .
 *MOT:	vest , right , that's good .
@@ -1185,7 +1185,7 @@ A142,"*MOT:	can you say vest ?
 *CHI:	ball .
 *MOT:	ball , that's right .
 *CHI:	ball .
-*MOT:	and +/.",verbal,,,correct,,,model,,,
+*MOT:	and +/.",verbal,not_applicable,,correct,compliant,,model,compliant,,
 A143,"*MOT:	[NAME] doesn't wanna play anymore with the play-doh ?
 *CHI:	xxx .
 *MOT:	can I write with you ?
@@ -1193,14 +1193,14 @@ A143,"*MOT:	[NAME] doesn't wanna play anymore with the play-doh ?
 *CHI:	stop .
 *MOT:	can I write ?
 *CHI:	stop !
-*MOT:	stop what ?",verbal,,,none,,,independent,,,
+*MOT:	stop what ?",verbal,not_applicable,,none,change_required,unknown,independent,change_required,verbal,"Outcome: The child says 'stop' as a request/refusal, but the transcript does not show the final resolution. | Prompt level: The adult repeats and rephrases the request to write before the child's 'stop' response."
 A144,"*MOT:	getting +/.
 *CHI:	bigger , the balloon is broken .
 *MOT:	hey [/] that was pretty good !
-*CHI:	done ?",verbal,,,correct,,,verbal,,,
+*CHI:	done ?",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: No added support is shown before the child's response; the adult's fragment is the initial context.
 A145,"*MOT:	[NAME] , what color is this ?
 *CHI:	blue .
-*MOT:	good boy .",verbal,,,correct,,,verbal,,,
+*MOT:	good boy .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers the first color question directly.
 A146,"*MOT:	there are all your dishes .
 *CHI:	dishes .
 *CHI:	green .
@@ -1208,7 +1208,7 @@ A146,"*MOT:	there are all your dishes .
 *CHI:	green .
 *CHI:	xxx .
 *CHI:	xxx .
-*CHI:	go bath+room ?",verbal,,,none,,,independent,,,
+*CHI:	go bath+room ?",verbal,not_applicable,,none,change_required,unknown,independent,compliant,,"Outcome: The child asks to go to the bathroom, but no response or fulfillment is visible."
 A147,"*MOT:	[NAME] , where does this go ?
 *CHI:	I play Gonzo .
 *CHI:	I bite it .
@@ -1216,12 +1216,12 @@ A147,"*MOT:	[NAME] , where does this go ?
 *CHI:	I leave right here .
 *MOT:	no , we'll leave it over here .
 *CHI:	Potato_Head touch ?
-*MOT:	[NAME] , no .",verbal,,,incorrect,,,verbal,,,
+*MOT:	[NAME] , no .",verbal,not_applicable,,incorrect,compliant,,verbal,compliant,,
 A148,"*MOT:	[NAME] .
 *CHI:	cake .
 *CHI:	cake .
 *MOT:	[NAME] look .
-*CHI:	it cook .",verbal,,,none,,,independent,,,
+*CHI:	it cook .",verbal,not_applicable,,none,compliant,,independent,compliant,,
 A149,"*MOT:	how about a sentence with play ?
 *CHI:	play a ball .
 *MOT:	full sentence .
@@ -1229,7 +1229,7 @@ A149,"*MOT:	how about a sentence with play ?
 *MOT:	okay .
 *MOT:	who plays ball ?
 *CHI:	[NAME] .
-*MOT:	another se [/] &-uh [/] full sentence .",verbal,,,partial,,,verbal,,,
+*MOT:	another se [/] &-uh [/] full sentence .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A150,"*MOT:	that you can have what ?
 *CHI:	&-um [/] two raisins .
 *MOT:	why ?
@@ -1237,12 +1237,12 @@ A150,"*MOT:	that you can have what ?
 *MOT:	and you passed what ?
 *CHI:	the two .
 *MOT:	right !
-*MOT:	here you go [NAME] .",verbal,,,correct,,,verbal,,,
+*MOT:	here you go [NAME] .",verbal,not_applicable,,correct,compliant,,verbal,change_required,independent,Prompt level: The child answers each new question on its first presentation without added support.
 A151,"*MOT:	do you wanna play a game ?
 *CHI:	yes .
 *MOT:	what game would you like to play ?
 *MOT:	would you like to play a game ?
-*CHI:	yes .",verbal,,,partial,,,verbal,,,
+*CHI:	yes .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
 A152,"*MOT:	and what's this number ?
 *CHI:	four .
 *MOT:	good boy [NAME] .
@@ -1250,4 +1250,4 @@ A152,"*MOT:	and what's this number ?
 *CHI:	two .
 *MOT:	no , what's this number ?
 *CHI:	six .
-*MOT:	good boy .",verbal,,,partial,,,verbal,,,
+*MOT:	good boy .",verbal,not_applicable,,partial,compliant,,verbal,compliant,,
