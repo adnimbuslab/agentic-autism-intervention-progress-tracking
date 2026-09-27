@@ -1,0 +1,813 @@
+{
+  "generated_at": "2026-09-27T02:12:07.036158+00:00",
+  "seed": 20261003,
+  "interval_method": "child-cluster percentile bootstrap, 10,000 replicates, as in round3/round4",
+  "turn_audit": {
+    "matching_key": "(session_id, CHAT source line number) of every utterance in the episode",
+    "n_eval": 121,
+    "n_main": 330,
+    "n_eval_affected": 5,
+    "n_main_involved": 5,
+    "n_distinct_shared_turns": 5,
+    "n_eval_remaining": 116,
+    "per_child": {
+      "brett": {
+        "affected_eval_episodes": 1,
+        "shared_turns": 1
+      },
+      "carl": {
+        "affected_eval_episodes": 1,
+        "shared_turns": 1
+      },
+      "josh": {
+        "affected_eval_episodes": 1,
+        "shared_turns": 1
+      },
+      "mars": {
+        "affected_eval_episodes": 1,
+        "shared_turns": 1
+      },
+      "roger_rollins": {
+        "affected_eval_episodes": 1,
+        "shared_turns": 1
+      }
+    },
+    "per_session": {
+      "flusberg_brett_060819.cha": 1,
+      "rollins_carl_030700.cha": 1,
+      "rollins_josh_020800.cha": 1,
+      "rollins_mars_030300.cha": 1,
+      "rollins_roger_rollins_020800.cha": 1
+    },
+    "affected": [
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_016",
+        "child_id": "brett",
+        "session_id": "flusberg_brett_060819.cha",
+        "start_line": 1245,
+        "n_turns": 8,
+        "matches": [
+          {
+            "main_segment_id": "brett_flusberg_brett_060819.cha_seg_017",
+            "main_start_line": 1266,
+            "eval_position": [
+              "last"
+            ],
+            "main_position": [
+              "first"
+            ],
+            "shared_lines": [
+              1266
+            ],
+            "n_shared": 1,
+            "main_n_turns": 8
+          }
+        ],
+        "n_shared_turns": 1
+      },
+      {
+        "segment_id": "carl_rollins_carl_030700.cha_seg_039",
+        "child_id": "carl",
+        "session_id": "rollins_carl_030700.cha",
+        "start_line": 992,
+        "n_turns": 8,
+        "matches": [
+          {
+            "main_segment_id": "carl_rollins_carl_030700.cha_seg_003",
+            "main_start_line": 1017,
+            "eval_position": [
+              "last"
+            ],
+            "main_position": [
+              "first"
+            ],
+            "shared_lines": [
+              1017
+            ],
+            "n_shared": 1,
+            "main_n_turns": 8
+          }
+        ],
+        "n_shared_turns": 1
+      },
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_011",
+        "child_id": "josh",
+        "session_id": "rollins_josh_020800.cha",
+        "start_line": 1316,
+        "n_turns": 8,
+        "matches": [
+          {
+            "main_segment_id": "josh_rollins_josh_020800.cha_seg_010",
+            "main_start_line": 1295,
+            "eval_position": [
+              "first"
+            ],
+            "main_position": [
+              "last"
+            ],
+            "shared_lines": [
+              1316
+            ],
+            "n_shared": 1,
+            "main_n_turns": 8
+          }
+        ],
+        "n_shared_turns": 1
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_083",
+        "child_id": "mars",
+        "session_id": "rollins_mars_030300.cha",
+        "start_line": 2042,
+        "n_turns": 8,
+        "matches": [
+          {
+            "main_segment_id": "mars_rollins_mars_030300.cha_seg_050",
+            "main_start_line": 2065,
+            "eval_position": [
+              "last"
+            ],
+            "main_position": [
+              "first"
+            ],
+            "shared_lines": [
+              2065
+            ],
+            "n_shared": 1,
+            "main_n_turns": 8
+          }
+        ],
+        "n_shared_turns": 1
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_004",
+        "child_id": "roger_rollins",
+        "session_id": "rollins_roger_rollins_020800.cha",
+        "start_line": 160,
+        "n_turns": 8,
+        "matches": [
+          {
+            "main_segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_005",
+            "main_start_line": 181,
+            "eval_position": [
+              "last"
+            ],
+            "main_position": [
+              "first"
+            ],
+            "shared_lines": [
+              181
+            ],
+            "n_shared": 1,
+            "main_n_turns": 8
+          }
+        ],
+        "n_shared_turns": 1
+      }
+    ],
+    "context_frozen_132": {
+      "identity_overlap_with_330": 1,
+      "turn_overlap_with_330": 6
+    }
+  },
+  "sensitivity": {
+    "overlap_excluded_121": {
+      "n": 121,
+      "n_children": 11,
+      "per_model": {
+        "llama3.2:latest": {
+          "merged_agreement": {
+            "value": 0.2748,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.2156,
+              "upper": 0.3263,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.8302,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.75,
+              "upper": 0.9167,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.0,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        },
+        "qwen2.5:3b": {
+          "merged_agreement": {
+            "value": 0.126,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0872,
+              "upper": 0.1724,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.2453,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.125,
+              "upper": 0.3684,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.0,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        },
+        "qwen2.5:7b": {
+          "merged_agreement": {
+            "value": 0.405,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.3348,
+              "upper": 0.4724,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.5094,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.36,
+              "upper": 0.7419,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0496,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.1066,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        },
+        "qwen3:14b": {
+          "merged_agreement": {
+            "value": 0.4132,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.3171,
+              "upper": 0.5042,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.9057,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.814,
+              "upper": 0.9778,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0413,
+            "n": 121,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.1102,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        }
+      },
+      "paired_qwen3_14b_minus_qwen2_5_7b": {
+        "merged_agreement": {
+          "value": 0.0083,
+          "ci95": {
+            "lower": -0.0262,
+            "upper": 0.0394,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "unsupported_rate": {
+          "value": 0.3962,
+          "ci95": {
+            "lower": 0.15,
+            "upper": 0.5385,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "whole_record": {
+          "value": -0.0083,
+          "ci95": {
+            "lower": -0.0351,
+            "upper": 0.0175,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      }
+    },
+    "turn_overlap_excluded": {
+      "n": 116,
+      "n_children": 11,
+      "per_model": {
+        "llama3.2:latest": {
+          "merged_agreement": {
+            "value": 0.2802,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.2217,
+              "upper": 0.3326,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.8235,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.7381,
+              "upper": 0.9143,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.0,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        },
+        "qwen2.5:3b": {
+          "merged_agreement": {
+            "value": 0.1272,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0891,
+              "upper": 0.1745,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.2549,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.1373,
+              "upper": 0.3714,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.0,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        },
+        "qwen2.5:7b": {
+          "merged_agreement": {
+            "value": 0.4116,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.3409,
+              "upper": 0.4802,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.5098,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.3529,
+              "upper": 0.742,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0517,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.1085,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        },
+        "qwen3:14b": {
+          "merged_agreement": {
+            "value": 0.4203,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.325,
+              "upper": 0.51,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "unsupported_rate": {
+            "value": 0.902,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.8095,
+              "upper": 0.9773,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          },
+          "whole_record": {
+            "value": 0.0431,
+            "n": 116,
+            "n_children": 11,
+            "ci95": {
+              "lower": 0.0,
+              "upper": 0.1121,
+              "n_valid": 10000,
+              "n_requested": 10000,
+              "unit": "child"
+            }
+          }
+        }
+      },
+      "paired_qwen3_14b_minus_qwen2_5_7b": {
+        "merged_agreement": {
+          "value": 0.0086,
+          "ci95": {
+            "lower": -0.0248,
+            "upper": 0.0391,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "unsupported_rate": {
+          "value": 0.3922,
+          "ci95": {
+            "lower": 0.1389,
+            "upper": 0.5429,
+            "excludes_zero": true,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        },
+        "whole_record": {
+          "value": -0.0086,
+          "ci95": {
+            "lower": -0.0367,
+            "upper": 0.0194,
+            "excludes_zero": false,
+            "n_valid": 10000,
+            "unit": "child"
+          }
+        }
+      }
+    }
+  },
+  "reliability": {
+    "source_labels": [
+      "gold_holdout_annotator_a.json",
+      "gold_holdout_annotator_b.json"
+    ],
+    "recorded_132": "reliability_holdout.json",
+    "set_132": {
+      "label": "holdout_annotator_a vs holdout_annotator_b",
+      "n_segments": 132,
+      "n_bootstrap": 10000,
+      "bootstrap_seed": 20260915,
+      "fields": {
+        "domain": {
+          "n": 132,
+          "n_categories_used": 8,
+          "observed_agreement": 0.9091,
+          "expected_agreement": 0.2503,
+          "kappa": 0.8787,
+          "kappa_max": 0.9596,
+          "kappa_over_kappa_max": 0.9157,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.8101,
+            "upper": 0.9395,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.8061,
+            "upper": 0.9356,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0331,
+            "lower": 0.8139,
+            "upper": 0.9435
+          }
+        },
+        "modality": {
+          "n": 132,
+          "n_categories_used": 4,
+          "observed_agreement": 0.9621,
+          "expected_agreement": 0.4651,
+          "kappa": 0.9292,
+          "kappa_max": 0.9858,
+          "kappa_over_kappa_max": 0.9425,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.8636,
+            "upper": 0.9852,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.8221,
+            "upper": 1.0,
+            "n_valid": 9997,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0306,
+            "lower": 0.8693,
+            "upper": 0.9891
+          }
+        },
+        "prompt_level": {
+          "n": 132,
+          "n_categories_used": 5,
+          "observed_agreement": 0.9621,
+          "expected_agreement": 0.548,
+          "kappa": 0.9162,
+          "kappa_max": 0.9832,
+          "kappa_over_kappa_max": 0.9318,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.8335,
+            "upper": 0.9816,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.8199,
+            "upper": 1.0,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0365,
+            "lower": 0.8446,
+            "upper": 0.9878
+          }
+        },
+        "outcome": {
+          "n": 132,
+          "n_categories_used": 7,
+          "observed_agreement": 0.9318,
+          "expected_agreement": 0.2049,
+          "kappa": 0.9142,
+          "kappa_max": 0.9428,
+          "kappa_over_kappa_max": 0.9697,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.8558,
+            "upper": 0.962,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.8774,
+            "upper": 0.9503,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0274,
+            "lower": 0.8605,
+            "upper": 0.968
+          }
+        }
+      },
+      "mean_kappa": 0.9096
+    },
+    "set_121": {
+      "label": "holdout_annotator_a vs holdout_annotator_b, overlap-excluded 121",
+      "n_segments": 121,
+      "n_bootstrap": 10000,
+      "bootstrap_seed": 20260915,
+      "fields": {
+        "domain": {
+          "n": 121,
+          "n_categories_used": 7,
+          "observed_agreement": 0.9256,
+          "expected_agreement": 0.2581,
+          "kappa": 0.8997,
+          "kappa_max": 0.9554,
+          "kappa_over_kappa_max": 0.9417,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.8313,
+            "upper": 0.9561,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.8135,
+            "upper": 0.9634,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0319,
+            "lower": 0.8371,
+            "upper": 0.9624
+          }
+        },
+        "modality": {
+          "n": 121,
+          "n_categories_used": 4,
+          "observed_agreement": 0.9669,
+          "expected_agreement": 0.5101,
+          "kappa": 0.9325,
+          "kappa_max": 0.9663,
+          "kappa_over_kappa_max": 0.9651,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.861,
+            "upper": 0.9842,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.7994,
+            "upper": 1.0,
+            "n_valid": 9997,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0327,
+            "lower": 0.8685,
+            "upper": 0.9966
+          }
+        },
+        "prompt_level": {
+          "n": 121,
+          "n_categories_used": 4,
+          "observed_agreement": 0.9752,
+          "expected_agreement": 0.5537,
+          "kappa": 0.9444,
+          "kappa_max": 0.9815,
+          "kappa_over_kappa_max": 0.9623,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.8723,
+            "upper": 1.0,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.8541,
+            "upper": 1.0,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0318,
+            "lower": 0.8821,
+            "upper": 1.0068
+          }
+        },
+        "outcome": {
+          "n": 121,
+          "n_categories_used": 7,
+          "observed_agreement": 0.9421,
+          "expected_agreement": 0.2051,
+          "kappa": 0.9272,
+          "kappa_max": 0.9584,
+          "kappa_over_kappa_max": 0.9675,
+          "interpretation": "almost perfect",
+          "bootstrap_ci": {
+            "lower": 0.8733,
+            "upper": 0.9783,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "segment"
+          },
+          "cluster_bootstrap_ci": {
+            "lower": 0.8937,
+            "upper": 0.9593,
+            "n_valid": 10000,
+            "n_requested": 10000,
+            "unit": "child"
+          },
+          "asymptotic_ci": {
+            "se": 0.0266,
+            "lower": 0.8751,
+            "upper": 0.9793
+          }
+        }
+      },
+      "mean_kappa": 0.926
+    }
+  }
+}
