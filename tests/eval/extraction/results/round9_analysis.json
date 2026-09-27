@@ -1,0 +1,1971 @@
+{
+  "generated_at": "2026-09-27T16:19:39.996092+00:00",
+  "r9_1_chronology": {
+    "extraction_prompt_file": "src/backend/ml/extraction/prompts.py",
+    "prompt_version_constant": "1.0.0",
+    "prompt_file_history": {
+      "first_commit": "6767d65",
+      "first_date": "2026-08-25T02:05:57-03:00",
+      "last_commit": "fa11861",
+      "last_date": "2026-08-28T09:54:06-04:00"
+    },
+    "observation_enum_history": {
+      "first_commit": "046e75c",
+      "first_date": "2026-08-24T22:45:22-03:00",
+      "last_commit": "046e75c",
+      "last_date": "2026-08-24T22:45:22-03:00"
+    },
+    "ollama_provider_history": {
+      "first_commit": "6767d65",
+      "first_date": "2026-08-25T02:05:57-03:00",
+      "last_commit": "f8eded1",
+      "last_date": "2026-09-07T11:28:03-04:00"
+    },
+    "codebook_history": {
+      "first_commit": "b77dfca",
+      "first_date": "2026-09-15T10:52:16-04:00",
+      "last_commit": "b77dfca",
+      "last_date": "2026-09-15T10:52:16-04:00"
+    },
+    "three_generator_batch": {
+      "generated_at": "2026-09-07T19:15:59.075199+00:00",
+      "first_commit": "eb8786b",
+      "first_date": "2026-09-07T17:00:05-04:00",
+      "last_commit": "eb8786b",
+      "last_date": "2026-09-07T17:00:05-04:00",
+      "models": [
+        "llama3.2:latest",
+        "qwen2.5:3b",
+        "qwen2.5:7b"
+      ],
+      "prompt_version_recorded": false
+    },
+    "qwen3_14b": {
+      "augmented_at": "2026-09-17T00:27:15.354753+00:00",
+      "first_commit": "eb8786b",
+      "first_date": "2026-09-07T17:00:05-04:00",
+      "last_commit": "0653e42",
+      "last_date": "2026-09-16T22:04:29-04:00",
+      "script": "tests/eval/extraction/add_generator.py",
+      "provider": "OllamaExtractionProvider"
+    },
+    "codebook_rule_terms_in_prompt": {
+      "communicative_gesture_vs_object_manipulation": {
+        "communicative": false,
+        "object": false,
+        "manipulat": false
+      },
+      "identifiable_target_for_correct_incorrect": {
+        "target": false
+      },
+      "prompt_vs_antecedent_opportunity": {
+        "antecedent": false,
+        "opportunity": false
+      }
+    },
+    "prototype_default_model": "llama3.2:latest",
+    "prompt_changed_after_batch": false
+  },
+  "r9_2_3_4_packets": {
+    "tokenizer": {
+      "available": true,
+      "tokenizer": "Qwen/Qwen2.5-7B-Instruct (Hugging Face tokenizers)",
+      "check": "ids 0..151664 identical to local GGUF sha256:2bada8a74506; GGUF has 399 further padding ids"
+    },
+    "packets": {
+      "brett": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-02-09"
+        ],
+        "n_sessions": 6,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.37 (max 11 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: parent"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: home"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 86% (77/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent",
+          "cross_setting_comparison": "All observations from single setting: home"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: home",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22702,
+        "chars_system": 2360,
+        "tokens_full_input": 7599,
+        "withheld_names_present_in_input": true
+      },
+      "carl": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-01-26"
+        ],
+        "n_sessions": 4,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.47 (max 14 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: interventionist"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: clinic"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 91% (82/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist",
+          "cross_setting_comparison": "All observations from single setting: clinic"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: clinic",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22829,
+        "chars_system": 2360,
+        "tokens_full_input": 7604,
+        "withheld_names_present_in_input": true
+      },
+      "jack": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-02-09"
+        ],
+        "n_sessions": 6,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.50 (max 15 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: parent"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: home"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 84% (76/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent",
+          "cross_setting_comparison": "All observations from single setting: home"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: home",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22628,
+        "chars_system": 2360,
+        "tokens_full_input": 7444,
+        "withheld_names_present_in_input": true
+      },
+      "josh": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-01-26"
+        ],
+        "n_sessions": 4,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.40 (max 12 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: interventionist"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: clinic"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 86% (77/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist",
+          "cross_setting_comparison": "All observations from single setting: clinic"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: clinic",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22966,
+        "chars_system": 2360,
+        "tokens_full_input": 7584,
+        "withheld_names_present_in_input": true
+      },
+      "mark": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-02-09"
+        ],
+        "n_sessions": 6,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.27 (max 8 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: parent"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: home"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 92% (83/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent",
+          "cross_setting_comparison": "All observations from single setting: home"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: home",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22461,
+        "chars_system": 2360,
+        "tokens_full_input": 7444,
+        "withheld_names_present_in_input": true
+      },
+      "mars": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-02-02"
+        ],
+        "n_sessions": 5,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.43 (max 13 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: interventionist"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: clinic"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 86% (77/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist",
+          "cross_setting_comparison": "All observations from single setting: clinic"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: clinic",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22930,
+        "chars_system": 2360,
+        "tokens_full_input": 7459,
+        "withheld_names_present_in_input": true
+      },
+      "rick": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-02-16"
+        ],
+        "n_sessions": 7,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.47 (max 14 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: parent"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: home"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 88% (79/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent",
+          "cross_setting_comparison": "All observations from single setting: home"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: home",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22481,
+        "chars_system": 2360,
+        "tokens_full_input": 7462,
+        "withheld_names_present_in_input": true
+      },
+      "roger_flusberg": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-02-16"
+        ],
+        "n_sessions": 7,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.23 (max 7 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: parent"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: home"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 90% (81/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent",
+          "cross_setting_comparison": "All observations from single setting: home"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: home",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 23988,
+        "chars_system": 2360,
+        "tokens_full_input": 8009,
+        "withheld_names_present_in_input": true
+      },
+      "roger_rollins": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-01-26"
+        ],
+        "n_sessions": 4,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.73 (max 22 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: interventionist"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: clinic"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 76% (68/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist",
+          "cross_setting_comparison": "All observations from single setting: clinic"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: clinic",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 24179,
+        "chars_system": 2360,
+        "tokens_full_input": 7893,
+        "withheld_names_present_in_input": true
+      },
+      "sid": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-01-26"
+        ],
+        "n_sessions": 4,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.47 (max 14 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: interventionist"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: clinic"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 79% (71/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist",
+          "cross_setting_comparison": "All observations from single setting: clinic"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: clinic",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: interventionist"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22758,
+        "chars_system": 2360,
+        "tokens_full_input": 7416,
+        "withheld_names_present_in_input": true
+      },
+      "stuart": {
+        "n_records": 30,
+        "goals": [],
+        "review_period": [
+          "2026-01-05",
+          "2026-02-16"
+        ],
+        "n_sessions": 7,
+        "adequacy_level": "limited",
+        "adequacy_checks": {
+          "coverage": {
+            "passed": true,
+            "detail": "30/5 observations received"
+          },
+          "temporal_distribution": {
+            "passed": true,
+            "detail": "Temporal cluster ratio 0.40 (max 12 on same day out of 30)"
+          },
+          "contributor_representation": {
+            "passed": false,
+            "detail": "All 30 observations from single contributor role: parent"
+          },
+          "setting_representation": {
+            "passed": false,
+            "detail": "All observations from single setting: home"
+          },
+          "goal_coverage": {
+            "passed": true,
+            "detail": "No active goals defined"
+          },
+          "field_completeness": {
+            "passed": true,
+            "detail": "Critical field completeness: 89% (80/90)"
+          }
+        },
+        "partial_abstentions": {
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent",
+          "cross_setting_comparison": "All observations from single setting: home"
+        },
+        "withheld_kpis": {
+          "cross_setting_comparison": "All observations from single setting: home",
+          "cross_contributor_comparison": "All 30 observations from single contributor role: parent"
+        },
+        "kpis_computed": [
+          "observation_count",
+          "domain_distribution",
+          "modality_distribution",
+          "prompt_level_distribution",
+          "outcome_distribution",
+          "independence_rate",
+          "contributor_distribution",
+          "setting_distribution",
+          "missing_data_rate",
+          "positive_outcome_rate",
+          "prompt_support_trend",
+          "outcome_trend"
+        ],
+        "chars_user": 22361,
+        "chars_system": 2360,
+        "tokens_full_input": 7460,
+        "withheld_names_present_in_input": true
+      }
+    },
+    "token_summary": {
+      "min": 7416,
+      "median": 7462,
+      "max": 8009,
+      "max_child": "roger_flusberg"
+    },
+    "reporter_code": {
+      "file": "src/backend/ml/reporting_client.py",
+      "commit": "9ecc330",
+      "request_options": {
+        "num_ctx": 8192
+      },
+      "format": {
+        "type": "object",
+        "properties": {
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "heading": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "string"
+                },
+                "evidence_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "abstention_note": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "heading",
+                "body",
+                "evidence_refs"
+              ]
+            }
+          }
+        },
+        "required": [
+          "sections"
+        ]
+      },
+      "stream": false
+    },
+    "ollama_model_info": {
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "modified_at": "2026-09-07T12:33:28.487225486-04:00",
+      "quantization": "Q4_K_M",
+      "modelfile_parameters": null,
+      "context_length_trained": 32768,
+      "ollama_version_now": "0.33.3",
+      "template_has_format_placeholder": false
+    }
+  },
+  "r9_5_field_unsupported": {
+    "main_batch_330": {
+      "n": 330,
+      "gold_null_by_field": {
+        "domain": 3,
+        "modality": 77,
+        "prompt_level": 2,
+        "outcome": 115
+      },
+      "per_model": {
+        "llama3.2:latest": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 3,
+              "gold_null": 3,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 72,
+              "gold_null": 77,
+              "rate": 0.9351,
+              "sparse": false,
+              "hallucinated_value_unknown": 27
+            },
+            "prompt_level": {
+              "hallucinated": 2,
+              "gold_null": 2,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 2
+            },
+            "outcome": {
+              "hallucinated": 87,
+              "gold_null": 115,
+              "rate": 0.7565,
+              "sparse": false,
+              "hallucinated_value_unknown": 29
+            }
+          },
+          "pooled": {
+            "hallucinated": 164,
+            "gold_null": 197,
+            "rate": 0.8325
+          },
+          "unweighted_mean_of_fields": 0.9229
+        },
+        "qwen2.5:3b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 0,
+              "gold_null": 3,
+              "rate": 0.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 15,
+              "gold_null": 77,
+              "rate": 0.1948,
+              "sparse": false,
+              "hallucinated_value_unknown": 14
+            },
+            "prompt_level": {
+              "hallucinated": 0,
+              "gold_null": 2,
+              "rate": 0.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 46,
+              "gold_null": 115,
+              "rate": 0.4,
+              "sparse": false,
+              "hallucinated_value_unknown": 24
+            }
+          },
+          "pooled": {
+            "hallucinated": 61,
+            "gold_null": 197,
+            "rate": 0.3096
+          },
+          "unweighted_mean_of_fields": 0.1487
+        },
+        "qwen2.5:7b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 2,
+              "gold_null": 3,
+              "rate": 0.6667,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 31,
+              "gold_null": 77,
+              "rate": 0.4026,
+              "sparse": false,
+              "hallucinated_value_unknown": 23
+            },
+            "prompt_level": {
+              "hallucinated": 1,
+              "gold_null": 2,
+              "rate": 0.5,
+              "sparse": true,
+              "hallucinated_value_unknown": 1
+            },
+            "outcome": {
+              "hallucinated": 78,
+              "gold_null": 115,
+              "rate": 0.6783,
+              "sparse": false,
+              "hallucinated_value_unknown": 4
+            }
+          },
+          "pooled": {
+            "hallucinated": 112,
+            "gold_null": 197,
+            "rate": 0.5685
+          },
+          "unweighted_mean_of_fields": 0.5619
+        },
+        "qwen3:14b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 3,
+              "gold_null": 3,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 76,
+              "gold_null": 77,
+              "rate": 0.987,
+              "sparse": false,
+              "hallucinated_value_unknown": 29
+            },
+            "prompt_level": {
+              "hallucinated": 1,
+              "gold_null": 2,
+              "rate": 0.5,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 111,
+              "gold_null": 115,
+              "rate": 0.9652,
+              "sparse": false,
+              "hallucinated_value_unknown": 56
+            }
+          },
+          "pooled": {
+            "hallucinated": 191,
+            "gold_null": 197,
+            "rate": 0.9695
+          },
+          "unweighted_mean_of_fields": 0.863
+        }
+      }
+    },
+    "frozen_132": {
+      "n": 132,
+      "gold_null_by_field": {
+        "domain": 1,
+        "modality": 36,
+        "prompt_level": 1,
+        "outcome": 25
+      },
+      "per_model": {
+        "llama3.2:latest": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 1,
+              "gold_null": 1,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 32,
+              "gold_null": 36,
+              "rate": 0.8889,
+              "sparse": false,
+              "hallucinated_value_unknown": 14
+            },
+            "prompt_level": {
+              "hallucinated": 1,
+              "gold_null": 1,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 19,
+              "gold_null": 25,
+              "rate": 0.76,
+              "sparse": false,
+              "hallucinated_value_unknown": 4
+            }
+          },
+          "pooled": {
+            "hallucinated": 53,
+            "gold_null": 63,
+            "rate": 0.8413
+          },
+          "unweighted_mean_of_fields": 0.9122
+        },
+        "qwen2.5:3b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 1,
+              "gold_null": 1,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 8,
+              "gold_null": 36,
+              "rate": 0.2222,
+              "sparse": false,
+              "hallucinated_value_unknown": 5
+            },
+            "prompt_level": {
+              "hallucinated": 0,
+              "gold_null": 1,
+              "rate": 0.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 9,
+              "gold_null": 25,
+              "rate": 0.36,
+              "sparse": false,
+              "hallucinated_value_unknown": 5
+            }
+          },
+          "pooled": {
+            "hallucinated": 18,
+            "gold_null": 63,
+            "rate": 0.2857
+          },
+          "unweighted_mean_of_fields": 0.3956
+        },
+        "qwen2.5:7b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 1,
+              "gold_null": 1,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 16,
+              "gold_null": 36,
+              "rate": 0.4444,
+              "sparse": false,
+              "hallucinated_value_unknown": 7
+            },
+            "prompt_level": {
+              "hallucinated": 0,
+              "gold_null": 1,
+              "rate": 0.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 15,
+              "gold_null": 25,
+              "rate": 0.6,
+              "sparse": false,
+              "hallucinated_value_unknown": 0
+            }
+          },
+          "pooled": {
+            "hallucinated": 32,
+            "gold_null": 63,
+            "rate": 0.5079
+          },
+          "unweighted_mean_of_fields": 0.5111
+        },
+        "qwen3:14b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 1,
+              "gold_null": 1,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 34,
+              "gold_null": 36,
+              "rate": 0.9444,
+              "sparse": false,
+              "hallucinated_value_unknown": 10
+            },
+            "prompt_level": {
+              "hallucinated": 1,
+              "gold_null": 1,
+              "rate": 1.0,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 22,
+              "gold_null": 25,
+              "rate": 0.88,
+              "sparse": false,
+              "hallucinated_value_unknown": 11
+            }
+          },
+          "pooled": {
+            "hallucinated": 58,
+            "gold_null": 63,
+            "rate": 0.9206
+          },
+          "unweighted_mean_of_fields": 0.9561
+        }
+      }
+    },
+    "overlap_excluded_121": {
+      "n": 121,
+      "gold_null_by_field": {
+        "domain": 0,
+        "modality": 30,
+        "prompt_level": 0,
+        "outcome": 23
+      },
+      "per_model": {
+        "llama3.2:latest": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 26,
+              "gold_null": 30,
+              "rate": 0.8667,
+              "sparse": false,
+              "hallucinated_value_unknown": 11
+            },
+            "prompt_level": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 18,
+              "gold_null": 23,
+              "rate": 0.7826,
+              "sparse": false,
+              "hallucinated_value_unknown": 4
+            }
+          },
+          "pooled": {
+            "hallucinated": 44,
+            "gold_null": 53,
+            "rate": 0.8302
+          },
+          "unweighted_mean_of_fields": 0.8246
+        },
+        "qwen2.5:3b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 5,
+              "gold_null": 30,
+              "rate": 0.1667,
+              "sparse": false,
+              "hallucinated_value_unknown": 3
+            },
+            "prompt_level": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 8,
+              "gold_null": 23,
+              "rate": 0.3478,
+              "sparse": false,
+              "hallucinated_value_unknown": 4
+            }
+          },
+          "pooled": {
+            "hallucinated": 13,
+            "gold_null": 53,
+            "rate": 0.2453
+          },
+          "unweighted_mean_of_fields": 0.2572
+        },
+        "qwen2.5:7b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 13,
+              "gold_null": 30,
+              "rate": 0.4333,
+              "sparse": false,
+              "hallucinated_value_unknown": 5
+            },
+            "prompt_level": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 14,
+              "gold_null": 23,
+              "rate": 0.6087,
+              "sparse": false,
+              "hallucinated_value_unknown": 0
+            }
+          },
+          "pooled": {
+            "hallucinated": 27,
+            "gold_null": 53,
+            "rate": 0.5094
+          },
+          "unweighted_mean_of_fields": 0.521
+        },
+        "qwen3:14b": {
+          "per_field": {
+            "domain": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "modality": {
+              "hallucinated": 28,
+              "gold_null": 30,
+              "rate": 0.9333,
+              "sparse": false,
+              "hallucinated_value_unknown": 8
+            },
+            "prompt_level": {
+              "hallucinated": 0,
+              "gold_null": 0,
+              "rate": null,
+              "sparse": true,
+              "hallucinated_value_unknown": 0
+            },
+            "outcome": {
+              "hallucinated": 20,
+              "gold_null": 23,
+              "rate": 0.8696,
+              "sparse": false,
+              "hallucinated_value_unknown": 10
+            }
+          },
+          "pooled": {
+            "hallucinated": 48,
+            "gold_null": 53,
+            "rate": 0.9057
+          },
+          "unweighted_mean_of_fields": 0.9015
+        }
+      }
+    }
+  },
+  "r9_7_selection": {
+    "n_children": 11,
+    "caps": {
+      "3000": {
+        "per_child_cap": 273,
+        "per_child": {
+          "brett": {
+            "types_in_first_appearance_order": [
+              "play",
+              "other"
+            ],
+            "available": {
+              "play": 161,
+              "other": 1104
+            },
+            "quota_per_type": 137,
+            "selected": {
+              "play": 137,
+              "other": 136
+            },
+            "n_selected": 273,
+            "sum_min_quota_available": 274,
+            "truncated_by_cap": true
+          },
+          "carl": {
+            "types_in_first_appearance_order": [
+              "initiation",
+              "response",
+              "other",
+              "joint_attention",
+              "play",
+              "protest",
+              "request"
+            ],
+            "available": {
+              "initiation": 4,
+              "response": 49,
+              "other": 47,
+              "joint_attention": 35,
+              "play": 26,
+              "protest": 38,
+              "request": 62
+            },
+            "quota_per_type": 39,
+            "selected": {
+              "initiation": 4,
+              "response": 39,
+              "other": 39,
+              "joint_attention": 35,
+              "play": 26,
+              "protest": 38,
+              "request": 39
+            },
+            "n_selected": 220,
+            "sum_min_quota_available": 220,
+            "truncated_by_cap": false
+          },
+          "jack": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play",
+              "initiation"
+            ],
+            "available": {
+              "other": 1243,
+              "play": 137,
+              "initiation": 1
+            },
+            "quota_per_type": 91,
+            "selected": {
+              "other": 91,
+              "play": 91,
+              "initiation": 1
+            },
+            "n_selected": 183,
+            "sum_min_quota_available": 183,
+            "truncated_by_cap": false
+          },
+          "josh": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play",
+              "joint_attention",
+              "protest",
+              "response",
+              "initiation",
+              "request"
+            ],
+            "available": {
+              "other": 36,
+              "play": 23,
+              "joint_attention": 35,
+              "protest": 17,
+              "response": 45,
+              "initiation": 8,
+              "request": 24
+            },
+            "quota_per_type": 39,
+            "selected": {
+              "other": 36,
+              "play": 23,
+              "joint_attention": 35,
+              "protest": 17,
+              "response": 39,
+              "initiation": 8,
+              "request": 24
+            },
+            "n_selected": 182,
+            "sum_min_quota_available": 182,
+            "truncated_by_cap": false
+          },
+          "mark": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play"
+            ],
+            "available": {
+              "other": 2116,
+              "play": 165
+            },
+            "quota_per_type": 137,
+            "selected": {
+              "other": 137,
+              "play": 136
+            },
+            "n_selected": 273,
+            "sum_min_quota_available": 274,
+            "truncated_by_cap": true
+          },
+          "mars": {
+            "types_in_first_appearance_order": [
+              "other",
+              "response",
+              "request",
+              "protest",
+              "play",
+              "joint_attention",
+              "initiation"
+            ],
+            "available": {
+              "other": 68,
+              "response": 95,
+              "request": 90,
+              "protest": 99,
+              "play": 23,
+              "joint_attention": 105,
+              "initiation": 5
+            },
+            "quota_per_type": 39,
+            "selected": {
+              "other": 39,
+              "response": 39,
+              "request": 39,
+              "protest": 39,
+              "play": 23,
+              "joint_attention": 39,
+              "initiation": 5
+            },
+            "n_selected": 223,
+            "sum_min_quota_available": 223,
+            "truncated_by_cap": false
+          },
+          "rick": {
+            "types_in_first_appearance_order": [
+              "play",
+              "other"
+            ],
+            "available": {
+              "play": 87,
+              "other": 1110
+            },
+            "quota_per_type": 137,
+            "selected": {
+              "play": 87,
+              "other": 137
+            },
+            "n_selected": 224,
+            "sum_min_quota_available": 224,
+            "truncated_by_cap": false
+          },
+          "roger_flusberg": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play"
+            ],
+            "available": {
+              "other": 690,
+              "play": 173
+            },
+            "quota_per_type": 137,
+            "selected": {
+              "other": 137,
+              "play": 136
+            },
+            "n_selected": 273,
+            "sum_min_quota_available": 274,
+            "truncated_by_cap": true
+          },
+          "roger_rollins": {
+            "types_in_first_appearance_order": [
+              "response",
+              "protest",
+              "play",
+              "joint_attention",
+              "other",
+              "initiation",
+              "request"
+            ],
+            "available": {
+              "response": 29,
+              "protest": 57,
+              "play": 19,
+              "joint_attention": 30,
+              "other": 29,
+              "initiation": 1,
+              "request": 15
+            },
+            "quota_per_type": 39,
+            "selected": {
+              "response": 29,
+              "protest": 39,
+              "play": 19,
+              "joint_attention": 30,
+              "other": 29,
+              "initiation": 1,
+              "request": 15
+            },
+            "n_selected": 162,
+            "sum_min_quota_available": 162,
+            "truncated_by_cap": false
+          },
+          "sid": {
+            "types_in_first_appearance_order": [
+              "protest",
+              "other",
+              "joint_attention",
+              "play",
+              "response",
+              "request",
+              "initiation"
+            ],
+            "available": {
+              "protest": 31,
+              "other": 61,
+              "joint_attention": 51,
+              "play": 15,
+              "response": 61,
+              "request": 64,
+              "initiation": 4
+            },
+            "quota_per_type": 39,
+            "selected": {
+              "protest": 31,
+              "other": 39,
+              "joint_attention": 39,
+              "play": 15,
+              "response": 39,
+              "request": 39,
+              "initiation": 4
+            },
+            "n_selected": 206,
+            "sum_min_quota_available": 206,
+            "truncated_by_cap": false
+          },
+          "stuart": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play"
+            ],
+            "available": {
+              "other": 544,
+              "play": 86
+            },
+            "quota_per_type": 137,
+            "selected": {
+              "other": 137,
+              "play": 86
+            },
+            "n_selected": 223,
+            "sum_min_quota_available": 223,
+            "truncated_by_cap": false
+          }
+        },
+        "total": 2442
+      },
+      "5000": {
+        "per_child_cap": 455,
+        "per_child": {
+          "brett": {
+            "types_in_first_appearance_order": [
+              "play",
+              "other"
+            ],
+            "available": {
+              "play": 161,
+              "other": 1104
+            },
+            "quota_per_type": 228,
+            "selected": {
+              "play": 161,
+              "other": 228
+            },
+            "n_selected": 389,
+            "sum_min_quota_available": 389,
+            "truncated_by_cap": false
+          },
+          "carl": {
+            "types_in_first_appearance_order": [
+              "initiation",
+              "response",
+              "other",
+              "joint_attention",
+              "play",
+              "protest",
+              "request"
+            ],
+            "available": {
+              "initiation": 4,
+              "response": 49,
+              "other": 47,
+              "joint_attention": 35,
+              "play": 26,
+              "protest": 38,
+              "request": 62
+            },
+            "quota_per_type": 65,
+            "selected": {
+              "initiation": 4,
+              "response": 49,
+              "other": 47,
+              "joint_attention": 35,
+              "play": 26,
+              "protest": 38,
+              "request": 62
+            },
+            "n_selected": 261,
+            "sum_min_quota_available": 261,
+            "truncated_by_cap": false
+          },
+          "jack": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play",
+              "initiation"
+            ],
+            "available": {
+              "other": 1243,
+              "play": 137,
+              "initiation": 1
+            },
+            "quota_per_type": 152,
+            "selected": {
+              "other": 152,
+              "play": 137,
+              "initiation": 1
+            },
+            "n_selected": 290,
+            "sum_min_quota_available": 290,
+            "truncated_by_cap": false
+          },
+          "josh": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play",
+              "joint_attention",
+              "protest",
+              "response",
+              "initiation",
+              "request"
+            ],
+            "available": {
+              "other": 36,
+              "play": 23,
+              "joint_attention": 35,
+              "protest": 17,
+              "response": 45,
+              "initiation": 8,
+              "request": 24
+            },
+            "quota_per_type": 65,
+            "selected": {
+              "other": 36,
+              "play": 23,
+              "joint_attention": 35,
+              "protest": 17,
+              "response": 45,
+              "initiation": 8,
+              "request": 24
+            },
+            "n_selected": 188,
+            "sum_min_quota_available": 188,
+            "truncated_by_cap": false
+          },
+          "mark": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play"
+            ],
+            "available": {
+              "other": 2116,
+              "play": 165
+            },
+            "quota_per_type": 228,
+            "selected": {
+              "other": 228,
+              "play": 165
+            },
+            "n_selected": 393,
+            "sum_min_quota_available": 393,
+            "truncated_by_cap": false
+          },
+          "mars": {
+            "types_in_first_appearance_order": [
+              "other",
+              "response",
+              "request",
+              "protest",
+              "play",
+              "joint_attention",
+              "initiation"
+            ],
+            "available": {
+              "other": 68,
+              "response": 95,
+              "request": 90,
+              "protest": 99,
+              "play": 23,
+              "joint_attention": 105,
+              "initiation": 5
+            },
+            "quota_per_type": 65,
+            "selected": {
+              "other": 65,
+              "response": 65,
+              "request": 65,
+              "protest": 65,
+              "play": 23,
+              "joint_attention": 65,
+              "initiation": 5
+            },
+            "n_selected": 353,
+            "sum_min_quota_available": 353,
+            "truncated_by_cap": false
+          },
+          "rick": {
+            "types_in_first_appearance_order": [
+              "play",
+              "other"
+            ],
+            "available": {
+              "play": 87,
+              "other": 1110
+            },
+            "quota_per_type": 228,
+            "selected": {
+              "play": 87,
+              "other": 228
+            },
+            "n_selected": 315,
+            "sum_min_quota_available": 315,
+            "truncated_by_cap": false
+          },
+          "roger_flusberg": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play"
+            ],
+            "available": {
+              "other": 690,
+              "play": 173
+            },
+            "quota_per_type": 228,
+            "selected": {
+              "other": 228,
+              "play": 173
+            },
+            "n_selected": 401,
+            "sum_min_quota_available": 401,
+            "truncated_by_cap": false
+          },
+          "roger_rollins": {
+            "types_in_first_appearance_order": [
+              "response",
+              "protest",
+              "play",
+              "joint_attention",
+              "other",
+              "initiation",
+              "request"
+            ],
+            "available": {
+              "response": 29,
+              "protest": 57,
+              "play": 19,
+              "joint_attention": 30,
+              "other": 29,
+              "initiation": 1,
+              "request": 15
+            },
+            "quota_per_type": 65,
+            "selected": {
+              "response": 29,
+              "protest": 57,
+              "play": 19,
+              "joint_attention": 30,
+              "other": 29,
+              "initiation": 1,
+              "request": 15
+            },
+            "n_selected": 180,
+            "sum_min_quota_available": 180,
+            "truncated_by_cap": false
+          },
+          "sid": {
+            "types_in_first_appearance_order": [
+              "protest",
+              "other",
+              "joint_attention",
+              "play",
+              "response",
+              "request",
+              "initiation"
+            ],
+            "available": {
+              "protest": 31,
+              "other": 61,
+              "joint_attention": 51,
+              "play": 15,
+              "response": 61,
+              "request": 64,
+              "initiation": 4
+            },
+            "quota_per_type": 65,
+            "selected": {
+              "protest": 31,
+              "other": 61,
+              "joint_attention": 51,
+              "play": 15,
+              "response": 61,
+              "request": 64,
+              "initiation": 4
+            },
+            "n_selected": 287,
+            "sum_min_quota_available": 287,
+            "truncated_by_cap": false
+          },
+          "stuart": {
+            "types_in_first_appearance_order": [
+              "other",
+              "play"
+            ],
+            "available": {
+              "other": 544,
+              "play": 86
+            },
+            "quota_per_type": 228,
+            "selected": {
+              "other": 228,
+              "play": 86
+            },
+            "n_selected": 314,
+            "sum_min_quota_available": 314,
+            "truncated_by_cap": false
+          }
+        },
+        "total": 3371
+      }
+    },
+    "toy_example": {
+      "cap": 10,
+      "episodes_in_order": [
+        "play",
+        "play",
+        "play",
+        "play",
+        "play",
+        "play",
+        "play",
+        "play",
+        "play",
+        "request",
+        "request",
+        "play",
+        "play",
+        "play",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "response",
+        "response",
+        "response",
+        "response",
+        "response"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        2,
+        9,
+        10,
+        14,
+        15,
+        16,
+        22,
+        23
+      ],
+      "selected_types": [
+        "play",
+        "play",
+        "play",
+        "request",
+        "request",
+        "other",
+        "other",
+        "other",
+        "response",
+        "response"
+      ]
+    }
+  },
+  "r9_8_oracle": {
+    "three_generators_all_outputs_330": {
+      "numerator": 20,
+      "denominator": 330,
+      "rate": 0.0606
+    },
+    "three_generators_reviewable_only_330": {
+      "numerator": 17,
+      "denominator": 330,
+      "rate": 0.0515
+    },
+    "three_generators_all_outputs_mars_returned": {
+      "numerator": 14,
+      "denominator": 265,
+      "rate": 0.0528
+    },
+    "three_generators_all_outputs_rerank_required": {
+      "numerator": 13,
+      "denominator": 165,
+      "rate": 0.0788
+    },
+    "four_generators_all_outputs_330": {
+      "numerator": 29,
+      "denominator": 330,
+      "rate": 0.0879
+    },
+    "recorded_mars_evaluation": 0.06060606060606061,
+    "status_counts_3gen": {
+      "success": 480,
+      "abstained": 496,
+      "partial": 14
+    }
+  }
+}
