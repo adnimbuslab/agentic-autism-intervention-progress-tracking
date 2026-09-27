@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T14:09:03.500893+00:00",
+  "generated_at": "2026-09-27T14:51:51.996117+00:00",
   "session_coverage": {
     "position_definition": "session rank by child age (CHAT @ID) / (n_sessions - 1); 0 = first visit, 1 = last",
     "quartile_bins": [
@@ -1905,6 +1905,522 @@
         "mean_child_shift_vs_all_episodes": -0.1098,
         "min_child_shift": -0.3399,
         "max_child_shift": 0.0964
+      }
+    },
+    "performance_by_position": {
+      "rule": "early = relative position < 0.5; later = >= 0.5 (primary) or > 0.5 (midpoint session excluded)",
+      "interval": "child-cluster percentile bootstrap of early minus later, children present in both groups",
+      "main_batch_330": {
+        "midpoint_as_later": {
+          "early": {
+            "n": 241,
+            "n_children": 11,
+            "reference_null_slots": 144
+          },
+          "later": {
+            "n": 89,
+            "n_children": 11,
+            "reference_null_slots": 53
+          },
+          "n_children_in_both": 11,
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": {
+                "early": 0.3154,
+                "later": 0.2893,
+                "early_minus_later": 0.026,
+                "ci95": {
+                  "lower": -0.0304,
+                  "upper": 0.0709,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.8472,
+                "later": 0.7925,
+                "early_minus_later": 0.0548,
+                "ci95": {
+                  "lower": -0.1035,
+                  "upper": 0.2772,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": {
+                "early": 0.2147,
+                "later": 0.177,
+                "early_minus_later": 0.0378,
+                "ci95": {
+                  "lower": 0.0015,
+                  "upper": 0.0819,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": true
+              },
+              "unsupported_rate": {
+                "early": 0.3125,
+                "later": 0.3019,
+                "early_minus_later": 0.0106,
+                "ci95": {
+                  "lower": -0.1432,
+                  "upper": 0.1619,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": {
+                "early": 0.4409,
+                "later": 0.4045,
+                "early_minus_later": 0.0364,
+                "ci95": {
+                  "lower": -0.0473,
+                  "upper": 0.1128,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.5903,
+                "later": 0.5094,
+                "early_minus_later": 0.0808,
+                "ci95": {
+                  "lower": -0.0778,
+                  "upper": 0.2587,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen3:14b": {
+              "merged_agreement": {
+                "early": 0.4201,
+                "later": 0.4213,
+                "early_minus_later": -0.0012,
+                "ci95": {
+                  "lower": -0.0616,
+                  "upper": 0.0713,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.9722,
+                "later": 0.9623,
+                "early_minus_later": 0.01,
+                "ci95": {
+                  "lower": -0.0514,
+                  "upper": 0.125,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            }
+          }
+        },
+        "midpoint_excluded": {
+          "early": {
+            "n": 241,
+            "n_children": 11,
+            "reference_null_slots": 144
+          },
+          "later": {
+            "n": 79,
+            "n_children": 11,
+            "reference_null_slots": 50
+          },
+          "n_children_in_both": 11,
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": {
+                "early": 0.3154,
+                "later": 0.2816,
+                "early_minus_later": 0.0337,
+                "ci95": {
+                  "lower": -0.035,
+                  "upper": 0.0834,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.8472,
+                "later": 0.82,
+                "early_minus_later": 0.0272,
+                "ci95": {
+                  "lower": -0.1006,
+                  "upper": 0.2287,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": {
+                "early": 0.2147,
+                "later": 0.1835,
+                "early_minus_later": 0.0312,
+                "ci95": {
+                  "lower": -0.0003,
+                  "upper": 0.0687,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.3125,
+                "later": 0.28,
+                "early_minus_later": 0.0325,
+                "ci95": {
+                  "lower": -0.0887,
+                  "upper": 0.1612,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": {
+                "early": 0.4409,
+                "later": 0.4177,
+                "early_minus_later": 0.0231,
+                "ci95": {
+                  "lower": -0.0683,
+                  "upper": 0.1065,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.5903,
+                "later": 0.48,
+                "early_minus_later": 0.1103,
+                "ci95": {
+                  "lower": -0.0514,
+                  "upper": 0.278,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen3:14b": {
+              "merged_agreement": {
+                "early": 0.4201,
+                "later": 0.3956,
+                "early_minus_later": 0.0246,
+                "ci95": {
+                  "lower": -0.0435,
+                  "upper": 0.0966,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.9722,
+                "later": 0.96,
+                "early_minus_later": 0.0122,
+                "ci95": {
+                  "lower": -0.0506,
+                  "upper": 0.1312,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            }
+          }
+        }
+      },
+      "overlap_excluded_121": {
+        "midpoint_as_later": {
+          "early": {
+            "n": 77,
+            "n_children": 11,
+            "reference_null_slots": 34
+          },
+          "later": {
+            "n": 44,
+            "n_children": 11,
+            "reference_null_slots": 19
+          },
+          "n_children_in_both": 11,
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": {
+                "early": 0.2792,
+                "later": 0.267,
+                "early_minus_later": 0.0122,
+                "ci95": {
+                  "lower": -0.0428,
+                  "upper": 0.0594,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.7941,
+                "later": 0.8947,
+                "early_minus_later": -0.1006,
+                "ci95": {
+                  "lower": -0.3315,
+                  "upper": 0.1706,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": {
+                "early": 0.1201,
+                "later": 0.1364,
+                "early_minus_later": -0.0162,
+                "ci95": {
+                  "lower": -0.0657,
+                  "upper": 0.0366,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.3235,
+                "later": 0.1053,
+                "early_minus_later": 0.2183,
+                "ci95": {
+                  "lower": 0.0312,
+                  "upper": 0.4412,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": true
+              }
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": {
+                "early": 0.4156,
+                "later": 0.3864,
+                "early_minus_later": 0.0292,
+                "ci95": {
+                  "lower": -0.0795,
+                  "upper": 0.1451,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.4118,
+                "later": 0.6842,
+                "early_minus_later": -0.2724,
+                "ci95": {
+                  "lower": -0.4895,
+                  "upper": -0.025,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": true
+              }
+            },
+            "qwen3:14b": {
+              "merged_agreement": {
+                "early": 0.4188,
+                "later": 0.4034,
+                "early_minus_later": 0.0154,
+                "ci95": {
+                  "lower": -0.0795,
+                  "upper": 0.0985,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.9706,
+                "later": 0.7895,
+                "early_minus_later": 0.1811,
+                "ci95": {
+                  "lower": -0.0476,
+                  "upper": 0.4444,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            }
+          }
+        },
+        "midpoint_excluded": {
+          "early": {
+            "n": 77,
+            "n_children": 11,
+            "reference_null_slots": 34
+          },
+          "later": {
+            "n": 43,
+            "n_children": 11,
+            "reference_null_slots": 19
+          },
+          "n_children_in_both": 11,
+          "per_model": {
+            "llama3.2:latest": {
+              "merged_agreement": {
+                "early": 0.2792,
+                "later": 0.2674,
+                "early_minus_later": 0.0118,
+                "ci95": {
+                  "lower": -0.0416,
+                  "upper": 0.0598,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.7941,
+                "later": 0.8947,
+                "early_minus_later": -0.1006,
+                "ci95": {
+                  "lower": -0.3333,
+                  "upper": 0.1567,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            },
+            "qwen2.5:3b": {
+              "merged_agreement": {
+                "early": 0.1201,
+                "later": 0.1395,
+                "early_minus_later": -0.0194,
+                "ci95": {
+                  "lower": -0.0697,
+                  "upper": 0.0332,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.3235,
+                "later": 0.1053,
+                "early_minus_later": 0.2183,
+                "ci95": {
+                  "lower": 0.0376,
+                  "upper": 0.44,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": true
+              }
+            },
+            "qwen2.5:7b": {
+              "merged_agreement": {
+                "early": 0.4156,
+                "later": 0.3895,
+                "early_minus_later": 0.026,
+                "ci95": {
+                  "lower": -0.0817,
+                  "upper": 0.1433,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.4118,
+                "later": 0.6842,
+                "early_minus_later": -0.2724,
+                "ci95": {
+                  "lower": -0.4885,
+                  "upper": -0.0282,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": true
+              }
+            },
+            "qwen3:14b": {
+              "merged_agreement": {
+                "early": 0.4188,
+                "later": 0.3953,
+                "early_minus_later": 0.0235,
+                "ci95": {
+                  "lower": -0.0727,
+                  "upper": 0.106,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              },
+              "unsupported_rate": {
+                "early": 0.9706,
+                "later": 0.7895,
+                "early_minus_later": 0.1811,
+                "ci95": {
+                  "lower": -0.0545,
+                  "upper": 0.4375,
+                  "n_valid": 10000,
+                  "unit": "child",
+                  "children_resampled": 11
+                },
+                "excludes_zero": false
+              }
+            }
+          }
+        }
       }
     }
   },

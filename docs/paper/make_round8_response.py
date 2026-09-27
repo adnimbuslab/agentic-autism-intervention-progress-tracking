@@ -255,12 +255,111 @@ def a_r81(b: Doc, ctx) -> None:
         "describe earlier visits more than later ones, and the main and evaluation branches differ in longitudinal "
         "coverage. Whether extraction agreement varies with session position was not tested.\"",
     ], fill="EAF7F1", edge="1BAF7A")
-    b.boxed("Decision for the authors", [
-        "The reviewer asks for a new model experiment only if the diagnostic shows a substantial imbalance. The skew "
-        "in the 2,442 universe is large. Options, none taken here: (a) acknowledge in Limitations only, as drafted "
-        "above; (b) additionally stratify the existing scored outputs (330 and 121) by session position — no model "
-        "run, no redraw — to show whether agreement differs between earlier and later sessions.",
+    a_r81_followup(b, ctx)
+
+
+GEN_SHORT = {"llama3.2:latest": "llama3.2", "qwen2.5:3b": "qwen2.5:3b", "qwen2.5:7b": "qwen2.5:7b", "qwen3:14b": "qwen3:14b"}
+PERF_SETS = [("main_batch_330", "Main batch (330)"), ("overlap_excluded_121", "Post-audit evaluation (121)")]
+
+
+def d_ci(v: dict) -> str:
+    return (f"{100 * v['early_minus_later']:+.1f} [{100 * v['ci95']['lower']:+.1f}, {100 * v['ci95']['upper']:+.1f}]"
+            + (" *" if v["excludes_zero"] else ""))
+
+
+def fig_position_perf(pp_: dict) -> Path:
+    fig, axes = plt.subplots(1, 2, figsize=(11, 3.9), sharey=True)
+    for ax, (k, title) in zip(axes, (("merged_agreement", "Merged agreement"), ("unsupported_rate", "Unsupported assertion"))):
+        for i, (st, lab) in enumerate(PERF_SETS):
+            for j, m in enumerate(GEN_SHORT):
+                v = pp_[st]["midpoint_as_later"]["per_model"][m][k]
+                y = i * 5 + j
+                col = [BLUE, ORANGE, AQUA, YELLOW][j]
+                ax.plot([100 * v["ci95"]["lower"], 100 * v["ci95"]["upper"]], [y, y], color=col, lw=2)
+                ax.scatter([100 * v["early_minus_later"]], [y], color=col, s=28, zorder=3)
+        ax.axvline(0, color=INK, lw=0.8)
+        ax.set_title(title + " — early minus later (pp)", loc="left", fontsize=9.3, weight="bold")
+        ax.grid(axis="x", color=GRID, lw=0.6)
+        ax.set_axisbelow(True)
+    ticks = [i * 5 + j for i in range(2) for j in range(4)]
+    axes[0].set_yticks(ticks, [f"{lab.split(' (')[0]} · {g}" for _st, lab in PERF_SETS for g in GEN_SHORT.values()], fontsize=7.6)
+    axes[0].invert_yaxis()
+    axes[0].set_xlabel("percentage points (95% child-cluster CI)")
+    axes[1].set_xlabel("percentage points (95% child-cluster CI)")
+    fig.tight_layout()
+    p = FIG / "r8_fig4_position_performance.png"
+    fig.savefig(p, dpi=200)
+    plt.close(fig)
+    return p
+
+
+def a_r81_followup(b: Doc, ctx) -> None:
+    pp_ = ctx["r8"]["session_coverage"]["performance_by_position"]
+    prim = {st: pp_[st]["midpoint_as_later"] for st, _ in PERF_SETS}
+    merged_max = max(abs(prim[st]["per_model"][m]["merged_agreement"]["early_minus_later"]) for st, _ in PERF_SETS for m in GEN_SHORT)
+    merged_sig = [(st, m) for st, _ in PERF_SETS for m in GEN_SHORT if prim[st]["per_model"][m]["merged_agreement"]["excludes_zero"]]
+    uns_sig = [(st, m, prim[st]["per_model"][m]["unsupported_rate"]["early_minus_later"]) for st, _ in PERF_SETS for m in GEN_SHORT
+               if prim[st]["per_model"][m]["unsupported_rate"]["excludes_zero"]]
+    assert merged_max < 0.05
+    assert all(pp_[st]["midpoint_excluded"]["per_model"][m]["merged_agreement"]["excludes_zero"] is False
+               for st, m in merged_sig)
+    assert {d > 0 for *_x, d in uns_sig} == {True, False}  # significant unsupported differences point both ways
+    assert all(prim[st]["n_children_in_both"] == 11 for st, _ in PERF_SETS)
+
+    b.h("Follow-up: extraction performance by session position", 2)
+    b.p("Requested after the diagnostic above. Existing scored outputs only: no model run, no redraw, no new "
+        "annotation. Episodes are split at the midpoint of each child's record (early: relative position < 0.5; later: "
+        "≥ 0.5). A child with an odd number of sessions has one session exactly at 0.5; it counts as later in the "
+        "primary split and is dropped in the sensitivity split. Quartiles were not used: the 121 would give about 30 "
+        "episodes per quarter and, with 53 reference-null slots in total, about 13 per quarter on average. Intervals are child-cluster percentile "
+        "bootstraps (10,000 replicates) of early − later, over the 11 children, all of whom have episodes in both "
+        "halves of both sets.")
+    b.label("Short answer")
+    b.answer_line(
+        "**No clear or material indication that extraction performance differs between earlier and later sessions.** "
+        f"Merged agreement differs by at most {100 * merged_max:.1f} percentage points in any generator and set; "
+        f"{len(merged_sig)} of 8 intervals exclude zero, and it does not survive dropping the midpoint session. "
+        f"Unsupported assertion shows {len(uns_sig)} intervals excluding zero, all on the 121, in opposite directions "
+        "for different generators, on 34 early and 19 later reference-null slots; that pattern is what small "
+        "denominators produce, not a consistent temporal effect. The unsupported-assertion estimates are too imprecise "
+        "to rule out a difference either way.")
+    for st, lab in PERF_SETS:
+        r = prim[st]
+        rs = pp_[st]["midpoint_excluded"]
+        rows = []
+        for m, g in GEN_SHORT.items():
+            ma, ua = r["per_model"][m]["merged_agreement"], r["per_model"][m]["unsupported_rate"]
+            rows.append([g, f"{100 * ma['early']:.1f}", f"{100 * ma['later']:.1f}", d_ci(ma),
+                         f"{100 * ua['early']:.1f}", f"{100 * ua['later']:.1f}", d_ci(ua),
+                         d_ci(rs["per_model"][m]["merged_agreement"]).split(" [")[0] + " / "
+                         + d_ci(rs["per_model"][m]["unsupported_rate"]).split(" [")[0]])
+        b.table(f"{lab}: early n = {r['early']['n']} episodes ({r['early']['reference_null_slots']} reference-null "
+                f"slots), later n = {r['later']['n']} ({r['later']['reference_null_slots']}); midpoint excluded: later "
+                f"n = {rs['later']['n']}. %, and early − later in percentage points [95% child-cluster CI]. "
+                "Source: `round8_analysis.json` (session_coverage.performance_by_position).",
+                ["Generator", "Merged early", "Merged later", "Δ merged", "Unsupp. early", "Unsupp. later", "Δ unsupported",
+                 "Δ if midpoint dropped (merged / unsupp.)"],
+                rows, [0.75, 0.6, 0.6, 1.2, 0.65, 0.65, 1.3, 1.05])
+    b.p("* interval excludes zero.")
+    b.figure(fig_position_perf(pp_), "Early minus later session position, per generator and set (primary split). "
+             "Merged-agreement differences cluster around zero; unsupported-assertion intervals are wide and the "
+             "largest differences on the 121 point in opposite directions for different generators.")
+    b.bullets([
+        "**Multiplicity.** 16 primary comparisons (4 generators × 2 metrics × 2 sets); a few intervals excluding zero "
+        "are expected by chance, and no metric shows a direction shared across generators and sets.",
+        "**The main-batch difference for qwen2.5:3b merged agreement** "
+        f"({d_ci(prim['main_batch_330']['per_model']['qwen2.5:3b']['merged_agreement'])}) is the only merged-agreement "
+        "interval excluding zero, and its interval includes zero when the midpoint session is dropped.",
+        "**Unsupported assertion on the 121** rests on 19 later-session reference-null slots; qwen2.5:3b is higher "
+        "early and qwen2.5:7b higher later.",
     ])
+    b.boxed("Suggested manuscript wording (Results, after the longitudinal-coverage sentence)", [
+        "\"In a sensitivity analysis using the existing scored outputs, merged agreement did not differ materially "
+        f"between episodes from the earlier and later halves of each child's record (largest difference "
+        f"{100 * merged_max:.1f} percentage points across generators and sets). Unsupported-assertion estimates by "
+        "session half rested on few reference-null opportunities and showed no consistent direction across "
+        "generators.\"",
+    ], fill="EAF7F1", edge="1BAF7A")
 
 
 def a_r82(b: Doc, ctx) -> None:
@@ -352,7 +451,7 @@ def build() -> Path:
         "assertion when this document is built.", colour=grey)
     b.h("Summary", 1)
     b.table("Each comment and the answer in one line.", ["ID", "Severity", "Answer"], [
-        ["R8-1", "Moderate", f"Early-session enrichment present: mean position {s['universe_2442']['pooled_mean_position']:.2f} "
+        ["R8-1", "Moderate", f"Early-session enrichment present (performance does not differ materially by session half): mean position {s['universe_2442']['pooled_mean_position']:.2f} "
                              f"(2,442) and {s['universe_3371']['pooled_mean_position']:.2f} (3,371) vs "
                              f"{s['all_episodes_9018']['pooled_mean_position']:.2f} available; main batch "
                              f"{s['main_batch_330']['pooled_mean_position']:.2f}, evaluation 121 "

@@ -21,6 +21,7 @@ builder could have kept.
 from __future__ import annotations
 
 import json
+import random
 import statistics
 import subprocess
 from collections import defaultdict
@@ -29,11 +30,21 @@ from pathlib import Path
 from typing import Any
 
 from tests.eval.extraction import round4_analysis as r4
+from tests.eval.extraction.round3_analysis import METRICS, _percentile
 
 ROOT = Path(__file__).resolve().parents[3]
 RESULTS = Path(__file__).parent / "results"
 OUT = RESULTS / "round8_analysis.json"
 BINS = [(0.0, 0.25), (0.25, 0.5), (0.5, 0.75), (0.75, 1.0)]
+N_BOOT = 10_000
+SEED = 20261004
+MODELS = r4.ORIGINAL_GENERATORS + ["qwen3:14b"]
+FIELDS = r4.FIELDS
+# Primary split: early = position < 0.5, later = position >= 0.5 (the exact midpoint
+# session of a child with an odd session count counts as later). Sensitivity: that
+# midpoint session dropped.
+SPLITS = {"midpoint_as_later": lambda p: "early" if p < 0.5 else "later",
+          "midpoint_excluded": lambda p: "early" if p < 0.5 else ("later" if p > 0.5 else None)}
 
 
 def session_positions(sessions) -> dict[str, dict[str, Any]]:
@@ -94,6 +105,47 @@ def describe(name: str, items: list[tuple[str, str]], pos: dict, ref_mean: dict[
     return out
 
 
+def by_position(name: str, rows: list[tuple[str, float, dict]]) -> dict[str, Any]:
+    """rows: (child_id, position, scored row per model). Early vs later, per split rule and model."""
+    out: dict[str, Any] = {}
+    for split, rule in SPLITS.items():
+        groups: dict[str, dict[str, list]] = {"early": defaultdict(list), "later": defaultdict(list)}
+        for child, p, sc in rows:
+            g = rule(p)
+            if g:
+                groups[g][child].append(sc)
+        kids_both = sorted(set(groups["early"]) & set(groups["later"]))
+        res: dict[str, Any] = {
+            g: {"n": sum(len(v) for v in groups[g].values()), "n_children": len(groups[g]),
+                "reference_null_slots": sum(r[f] in ("hallucinated", "correctly_null")
+                                            for v in groups[g].values() for x in v for r in [x["qwen3:14b"]] for f in FIELDS)}
+            for g in groups}
+        res["n_children_in_both"] = len(kids_both)
+        res["per_model"] = {}
+        for m in MODELS:
+            res["per_model"][m] = {}
+            for k in ("merged_agreement", "unsupported_rate"):
+                fn = METRICS[k]
+                e = fn([x[m] for v in groups["early"].values() for x in v], FIELDS)
+                l = fn([x[m] for v in groups["later"].values() for x in v], FIELDS)
+                rng = random.Random(f"{SEED}:{name}:{split}:{m}:{k}")
+                reps = []
+                for _ in range(N_BOOT):
+                    draw = [kids_both[rng.randrange(len(kids_both))] for _ in kids_both]
+                    re_ = [x[m] for c in draw for x in groups["early"][c]]
+                    rl_ = [x[m] for c in draw for x in groups["later"][c]]
+                    ve, vl = fn(re_, FIELDS), fn(rl_, FIELDS)
+                    if ve is not None and vl is not None:
+                        reps.append(ve - vl)
+                lo, hi = _percentile(reps, 0.025), _percentile(reps, 0.975)
+                res["per_model"][m][k] = {"early": round(e, 4), "later": round(l, 4), "early_minus_later": round(e - l, 4),
+                                          "ci95": {"lower": round(lo, 4), "upper": round(hi, 4), "n_valid": len(reps),
+                                                   "unit": "child", "children_resampled": len(kids_both)},
+                                          "excludes_zero": lo > 0 or hi < 0}
+        out[split] = res
+    return out
+
+
 def session_coverage() -> dict[str, Any]:
     sessions, _deid, episodes = r4.run_pipeline()
     pos = session_positions(sessions)
@@ -119,10 +171,23 @@ def session_coverage() -> dict[str, Any]:
     assert [len(v) for v in sets.values()] == [9018, 2442, 3371, 1320, 330, 132, 121]
     ref = describe("all_episodes_9018", sets["all_episodes_9018"], pos, None)
     ref_mean = {c: v["mean_position"] for c, v in ref["per_child"].items()}
+    scored_b = r4.load("scored_against_gold_augmented.json")["gold"]
+    scored_h = r4.load("scored_holdout.json")["gold"]
+    perf = {
+        "main_batch_330": by_position("main_batch_330", [(by3[i]["child_id"], pos[by3[i]["session_id"]]["position"], scored_b[i])
+                                                         for i in main_ids]),
+        "overlap_excluded_121": by_position("overlap_excluded_121", [
+            (by5[i]["child_id"], pos[by5[i]["session_id"]]["position"], scored_h[i])
+            for i in frozen_ids if fkey[i] not in pool_keys]),
+    }
     out = {"position_definition": "session rank by child age (CHAT @ID) / (n_sessions - 1); 0 = first visit, 1 = last",
            "quartile_bins": [list(b) for b in BINS],
            "sessions": {sid: v for sid, v in sorted(pos.items())},
-           "sets": {"all_episodes_9018": ref}}
+           "sets": {"all_episodes_9018": ref},
+           "performance_by_position": {
+               "rule": "early = relative position < 0.5; later = >= 0.5 (primary) or > 0.5 (midpoint session excluded)",
+               "interval": "child-cluster percentile bootstrap of early minus later, children present in both groups",
+               **perf}}
     for name, items in sets.items():
         if name != "all_episodes_9018":
             out["sets"][name] = describe(name, items, pos, ref_mean)
