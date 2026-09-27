@@ -60,6 +60,78 @@ def plain(b: Doc, text: str) -> None:
     b.boxed("In plain words", [text], fill=PLAIN_FILL, edge=PLAIN_EDGE)
 
 
+def audit_results(b: Doc, key: dict) -> None:
+    import filecmp
+    from collections import Counter
+    res = json.loads((AUDIT / "audit_result.json").read_text())
+    rc = json.loads((AUDIT / "recompute_pre_vs_post.json").read_text())
+    same = filecmp.cmp(AUDIT / "audit_worksheet_specialist_1_completed.csv", AUDIT / "audit_worksheet_specialist_2_completed.csv", shallow=False)
+    assert res["segments_audited"] == 152 and res["labels_audited"] == 456
+    n_changes = len(res["changes"])
+    assert n_changes == sum(v["changed"] for v in res["per_field"].values())
+
+    b.page_break()
+    b.h("Audit results (returned worksheets, commit 60c4704)", 1)
+    plain(b, f"The specialists checked all 456 labels on the 152 segments and required {n_changes} changes in "
+             f"{len(res['segments_changed'])} segments; most changes are in prompt level (the largest group is verbal → "
+             "independent). Scored against the corrected reference, the models' saved answers give lower whole-record "
+             "and oracle figures. MARS's comparisons keep the same direction and significance on domain, modality and "
+             "outcome; on prompt level both of its (non-significant) differences change sign.")
+    if same:
+        b.boxed("Record-keeping note", ["The two returned worksheets are byte-identical and were committed together "
+                                         "(60c4704). The record therefore shows one joint audit, not two independent "
+                                         "passes; no disagreement could arise, and none was resolved by consensus."])
+    b.table("Labels checked and changed. Source: `codebook_audit_r10/audit_result.json`.",
+            ["Field", "Checked", "Changed", "Changes (old → new: count)"],
+            [[f, str(v["checked"]), str(v["changed"]),
+              "; ".join(f"{a} → {c}: {n}" for (a, c), n in Counter(
+                  ("none" if x["old"] is None else x["old"], "none" if x["new"] is None else x["new"])
+                  for x in res["changes"] if x["field"] == f).most_common())]
+             for f, v in res["per_field"].items()], [1.0, 0.7, 0.7, 4.3])
+    src = Counter(x["old_source"] for x in res["changes"])
+    b.p(f"Of the {n_changes} changed labels, {src.get('round1_agreed', 0)} had been agreed by both annotators in Round 1 "
+        f"and {src.get('adjudicated_round1_conflict', 0)} had been adjudicated. Every change (segment, field, old, new) is "
+        "listed in `audit_result.json`. The post-audit reference is `codebook_audit_r10/gold_labels_postaudit_r10.json`; "
+        "`results/gold_labels.json` is unchanged.")
+
+    four = rc["four_generators"]
+    pct1 = lambda x: f"{100 * x:.1f}"  # noqa: E731
+    b.table("Main batch (330), preserved outputs re-scored against the pre- and post-audit reference, % (pre → post). "
+            "Source: `codebook_audit_r10/recompute_pre_vs_post.json`.",
+            ["Generator", "Merged agreement", "Unsupported assertion", "Whole record"],
+            [[m, *[f"{pct1(four['pre']['per_model'][m][k])} → {pct1(four['post']['per_model'][m][k])}"
+                   for k in ("merged_agreement", "unsupported_rate", "whole_record")]] for m in four["pre"]["per_model"]],
+            [1.4, 1.8, 1.8, 1.7])
+    t3 = rc["three_generators"]
+    b.table("Oracle ceiling and MARS, % (pre → post).", ["Quantity", "Pre → post"], [
+        ["Oracle ceiling, 3 generators (all outputs, 330)", f"{pct1(t3['pre']['oracle_ceiling'])} → {pct1(t3['post']['oracle_ceiling'])}"],
+        ["Oracle ceiling, 4 generators", f"{pct1(four['pre']['oracle_ceiling'])} → {pct1(four['post']['oracle_ceiling'])}"],
+        ["MARS coverage (unchanged: selection does not use the reference)", f"{pct1(t3['pre']['mars']['coverage'])} → {pct1(t3['post']['mars']['coverage'])}"],
+        ["MARS whole-record accuracy over returned", f"{pct1(t3['pre']['mars']['accuracy_over_returned'])} → {pct1(t3['post']['mars']['accuracy_over_returned'])}"],
+        ["MARS whole-record accuracy over all 330", f"{pct1(t3['pre']['mars']['accuracy_over_all'])} → {pct1(t3['post']['mars']['accuracy_over_all'])}"],
+    ], [4.2, 2.5])
+    mp = rc["mars_per_field"]
+    assert mp["pre"]["strength_order"][0] == mp["post"]["strength_order"][0]
+
+    def d(x):
+        return f"{100 * x['value']:+.1f} [{100 * x['lower']:+.1f}, {100 * x['upper']:+.1f}]" + (" *" if x["excludes_zero"] else "")
+    b.table(f"MARS per field on the {mp['post']['n_judged']} reranked segments: MARS minus random reviewable candidate and "
+            "minus strongest reviewable generator, percentage points [95% child-cluster CI]; pre-audit reproduces "
+            "round4_analysis.json exactly (asserted). * interval excludes zero.",
+            ["Field", "MARS % pre → post", "vs random: pre", "vs random: post", "vs strongest: pre", "vs strongest: post"],
+            [[f, f"{pct1(mp['pre']['per_field'][f]['mars'])} → {pct1(mp['post']['per_field'][f]['mars'])}",
+              d(mp["pre"]["per_field"][f]["vs_random_reviewable"]), d(mp["post"]["per_field"][f]["vs_random_reviewable"]),
+              d(mp["pre"]["per_field"][f]["vs_best_reviewable_fallback"]), d(mp["post"]["per_field"][f]["vs_best_reviewable_fallback"])]
+             for f in mp["pre"]["per_field"]],
+            [0.9, 1.1, 1.2, 1.2, 1.2, 1.2])
+    b.bullets([
+        f"Strongest generator on merged agreement unchanged: {mp['post']['strength_order'][0]}.",
+        "Domain is not audited, so its rows are identical before and after.",
+        "Not yet rebuilt: round3/round4/round8/round9 main-batch tables, paper_metrics.json, mars_selection_analysis.json, "
+        "figures and the manuscript. The procedure is in section 5; it has not been run.",
+    ])
+
+
 def build() -> Path:
     man: dict[str, Any] = json.loads((AUDIT / "audit_set_152.json").read_text())
     key = json.loads((AUDIT / "audit_key.json").read_text())
@@ -225,6 +297,9 @@ def build() -> Path:
         "evaluation sets (separate reference); preserved generator outputs; MARS selections in mars_outcomes.json (made "
         "without the reference).",
     ])
+
+    if (AUDIT / "audit_result.json").exists() and (AUDIT / "recompute_pre_vs_post.json").exists():
+        audit_results(b, key)
 
     b.h("Choices made in preparing the package (please confirm or change)", 1)
     b.bullets([

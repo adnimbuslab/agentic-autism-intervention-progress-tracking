@@ -52,6 +52,7 @@ ALLOWED = {
     "prompt_level": ["independent", "gestural", "verbal", "model", "partial_physical", "full_physical", "unknown", NULL_WORD],
 }
 SEED = 20261010
+NO_CHANGE = object()  # distinct from None, which is a legitimate corrected value ("none")
 SOURCES = ["gold_labels.json", "reissue_round2_selection.json", "gold_annotator_a_round1.json",
            "gold_annotator_b_round1.json", "adjudications.json", "annotation_batch.json"]
 
@@ -285,7 +286,7 @@ def compare(consensus: Path | None) -> None:
             e1, e2 = sheets[SPECIALISTS[0]][s][f], sheets[SPECIALISTS[1]][s][f]
             ch1, ch2 = e1["status"] == "change_required", e2["status"] == "change_required"
             if not ch1 and not ch2:
-                agreed[(s, f)] = None
+                agreed[(s, f)] = NO_CHANGE
             elif ch1 and ch2 and e1["corrected"] == e2["corrected"]:
                 agreed[(s, f)] = e1["corrected"]
             else:
@@ -309,7 +310,7 @@ def compare(consensus: Path | None) -> None:
                 st, corr = row["consensus_status"].strip(), row["consensus_corrected"].strip()
                 if st not in STATUSES or (st == "change_required") != bool(corr) or (corr and corr not in ALLOWED[f]):
                     raise SystemExit(f"consensus row {row['audit_id']} {f} is incomplete or invalid")
-                done[(s, f)] = parse(corr) if st == "change_required" else None
+                done[(s, f)] = parse(corr) if st == "change_required" else NO_CHANGE
         missing = {(s, f) for s, f, *_ in disputed} - set(done)
         if missing:
             raise SystemExit(f"{len(missing)} disputed field(s) have no consensus row")
@@ -317,7 +318,7 @@ def compare(consensus: Path | None) -> None:
 
     changes = [{"segment_id": s, "audit_id": key[s]["audit_id"], "field": f, "old": key[s]["retained"][f], "new": v,
                 "old_source": key[s]["provenance"][f]["source"]}
-               for (s, f), v in sorted(final.items()) if v is not None]
+               for (s, f), v in sorted(final.items()) if v is not NO_CHANGE]
     result = {
         "finalised_at": datetime.now(UTC).isoformat(),
         "segments_audited": len(key), "labels_audited": len(final),
@@ -373,6 +374,68 @@ def core_metrics(scored_gold: dict, models: list[str], outcomes: dict) -> dict[s
                      for k, v in me.mars_accuracy(scored_gold, outcomes, SCORED_FIELDS).items() if k != "abstention_reasons"}}
 
 
+def mars_fields(scored: dict) -> dict[str, Any]:
+    """Round-4 MARS comparison (mars_clustered), parametrised by the scored reference.
+
+    Same segments (MARS judged, >1 candidate), same comparators, same seeds, so the
+    pre-audit side reproduces round4_analysis.json exactly.
+    """
+    import random
+    import statistics
+    from collections import defaultdict
+
+    from src.backend.ml.extraction.mars.candidates import build_candidates
+    from tests.eval.extraction import round4_analysis as r4
+    from tests.eval.extraction.mars_branch_replay import to_result
+    from tests.eval.extraction.round3_analysis import ACCEPTABLE, _percentile
+
+    outcomes = load("mars_outcomes.json")
+    batch = {c["segment_id"]: c for c in load("annotation_batch.json")["candidates"]}
+    child = {s: v["child_id"] for s, v in load("gold_labels.json")["gold"].items()}
+    gens = r4.ORIGINAL_GENERATORS
+    merged = {m: sum(sum(scored[s][m][f] in ACCEPTABLE for s in scored) for f in SCORED_FIELDS) for m in gens}
+    strength = sorted(gens, key=lambda m: -merged[m])
+    judged = sorted(s for s, o in outcomes.items() if o.get("status") == "success" and (o.get("candidate_count") or 0) > 1)
+    ok = lambda s, m, f: scored[s][m][f] in ACCEPTABLE  # noqa: E731
+    rows: dict[str, dict] = {}
+    for s in judged:
+        entry = batch[s]
+        cands = build_candidates([to_result(entry, m, entry["candidates"][m]) for m in gens])
+        cand_gens = [list(c.generator_ids) for c in cands]
+        reviewable = [g for gs in cand_gens for g in gs]
+        pick = outcomes[s]["selected_generator_ids"][0]
+        best_rev = next(m for m in strength if m in reviewable)
+        rows[s] = {f: {"mars": float(ok(s, pick, f)),
+                       "random_expected_reviewable": statistics.mean(float(ok(s, gs[0], f)) for gs in cand_gens),
+                       "random_expected_all_generators": statistics.mean(float(ok(s, m, f)) for m in gens),
+                       "best_fixed": float(ok(s, strength[0], f)),
+                       "best_reviewable_fallback": float(ok(s, best_rev, f))} for f in SCORED_FIELDS}
+    by_child = defaultdict(list)
+    for s in judged:
+        by_child[child[s]].append(s)
+    kids = sorted(by_child)
+
+    def boot(comp: str, f: str, tag: str) -> dict[str, Any]:
+        rng = random.Random(f"{r4.SEED}:{tag}:{f}")
+        value = statistics.mean(rows[s][f]["mars"] - rows[s][f][comp] for s in judged)
+        reps = []
+        for _ in range(r4.N_BOOT):
+            draw = [s for _ in kids for s in by_child[kids[rng.randrange(len(kids))]]]
+            reps.append(sum(rows[s][f]["mars"] - rows[s][f][comp] for s in draw) / len(draw))
+        lo, hi = _percentile(reps, 0.025), _percentile(reps, 0.975)
+        return {"value": round(value, 4), "lower": round(lo, 4), "upper": round(hi, 4), "excludes_zero": lo > 0 or hi < 0}
+
+    comps = {"vs_random_reviewable": "random_expected_reviewable", "vs_random_all_generators": "random_expected_all_generators",
+             "vs_best_fixed": "best_fixed", "vs_best_reviewable_fallback": "best_reviewable_fallback"}
+    keys = ("mars", "random_expected_reviewable", "random_expected_all_generators", "best_fixed", "best_reviewable_fallback")
+    per_field = {}
+    for f in SCORED_FIELDS:
+        per_field[f] = {k: round(statistics.mean(rows[s][f][k] for s in judged), 4) for k in keys}
+        per_field[f] |= {name: boot(comp, f, name) for name, comp in comps.items()}
+    return {"n_judged": len(judged), "strength_order": strength, "per_field": per_field,
+            "mean": {k: round(statistics.mean(per_field[f][k] for f in SCORED_FIELDS), 4) for k in keys}}
+
+
 def recompute(gold_path: Path | None = None, out_path: Path | None = None) -> dict[str, Any]:
     from tests.eval.extraction.score_against_gold import DEFAULT_OVERLAP_THRESHOLD, score
     gold_path = gold_path or OUT / POST_GOLD
@@ -392,6 +455,14 @@ def recompute(gold_path: Path | None = None, out_path: Path | None = None) -> di
     rec4 = load("round4_analysis.json")["same_universe"]["groups"]["main_batch_330"]["per_model"]
     for m, v in out["four_generators"]["pre"]["per_model"].items():
         assert abs(v["merged_agreement"] - rec4[m]["merged_agreement"]["value"]) < 1e-4, m
+    three = load("annotation_batch.json")
+    sc3 = {k: score(g, three, behavior_match="overlap", threshold=DEFAULT_OVERLAP_THRESHOLD)["gold"] for k, g in (("pre", pre), ("post", post))}
+    out["mars_per_field"] = {k: mars_fields(v) for k, v in sc3.items()}
+    rec_mc = load("round4_analysis.json")["mars_clustered"]
+    for f in SCORED_FIELDS:
+        for k, v in out["mars_per_field"]["pre"]["per_field"][f].items():
+            r = rec_mc["per_field"][f][k]
+            assert (v == r) if not isinstance(v, dict) else all(v[x] == r[x] for x in ("value", "lower", "upper")), (f, k)
     (out_path or OUT / "recompute_pre_vs_post.json").write_text(json.dumps(out, indent=2) + "\n")
     return out
 

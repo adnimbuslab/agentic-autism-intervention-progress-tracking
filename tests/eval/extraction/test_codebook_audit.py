@@ -95,3 +95,18 @@ def test_agreed_change_applies_to_a_copy_and_recomputes(pkg):
     assert post["gold"][sid]["field_values"]["outcome"] == "unknown"
     out = ca.recompute(out_path=pkg / "recompute.json")
     assert out["three_generators"]["pre"] != out["three_generators"]["post"]
+
+
+def test_change_to_none_counts_as_a_change(pkg):
+    key = json.loads((pkg / "audit_key.json").read_text())
+    sid, v = next((s, v) for s, v in key.items() if v["retained"]["outcome"] is not None)
+
+    def change(r):
+        if r["audit_id"] == v["audit_id"]:
+            r["outcome_status"], r["outcome_corrected"] = "change_required", "none"
+    for sp in ca.SPECIALISTS:
+        _fill(pkg, f"audit_worksheet_{sp}_completed.csv", change)
+    ca.compare(None)
+    res = json.loads((pkg / "audit_result.json").read_text())
+    assert res["per_field"]["outcome"]["changed"] == 1
+    assert res["changes"][0]["segment_id"] == sid and res["changes"][0]["new"] is None
