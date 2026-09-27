@@ -1,0 +1,1994 @@
+{
+  "generated_at": "2026-09-27T14:09:03.500893+00:00",
+  "session_coverage": {
+    "position_definition": "session rank by child age (CHAT @ID) / (n_sessions - 1); 0 = first visit, 1 = last",
+    "quartile_bins": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.25,
+        0.5
+      ],
+      [
+        0.5,
+        0.75
+      ],
+      [
+        0.75,
+        1.0
+      ]
+    ],
+    "sessions": {
+      "flusberg_brett_050800.cha": {
+        "child_id": "brett",
+        "rank": 0,
+        "n_sessions": 10,
+        "age_months": 68.0,
+        "position": 0.0
+      },
+      "flusberg_brett_051002.cha": {
+        "child_id": "brett",
+        "rank": 1,
+        "n_sessions": 10,
+        "age_months": 70.07,
+        "position": 0.1111111111111111
+      },
+      "flusberg_brett_060011.cha": {
+        "child_id": "brett",
+        "rank": 2,
+        "n_sessions": 10,
+        "age_months": 72.36,
+        "position": 0.2222222222222222
+      },
+      "flusberg_brett_060207.cha": {
+        "child_id": "brett",
+        "rank": 3,
+        "n_sessions": 10,
+        "age_months": 74.23,
+        "position": 0.3333333333333333
+      },
+      "flusberg_brett_060406.cha": {
+        "child_id": "brett",
+        "rank": 4,
+        "n_sessions": 10,
+        "age_months": 76.2,
+        "position": 0.4444444444444444
+      },
+      "flusberg_brett_060622.cha": {
+        "child_id": "brett",
+        "rank": 5,
+        "n_sessions": 10,
+        "age_months": 78.72,
+        "position": 0.5555555555555556
+      },
+      "flusberg_brett_060819.cha": {
+        "child_id": "brett",
+        "rank": 6,
+        "n_sessions": 10,
+        "age_months": 80.62,
+        "position": 0.6666666666666666
+      },
+      "flusberg_brett_070101.cha": {
+        "child_id": "brett",
+        "rank": 7,
+        "n_sessions": 10,
+        "age_months": 85.03,
+        "position": 0.7777777777777778
+      },
+      "flusberg_brett_070301.cha": {
+        "child_id": "brett",
+        "rank": 8,
+        "n_sessions": 10,
+        "age_months": 87.03,
+        "position": 0.8888888888888888
+      },
+      "flusberg_brett_070517.cha": {
+        "child_id": "brett",
+        "rank": 9,
+        "n_sessions": 10,
+        "age_months": 89.56,
+        "position": 1.0
+      },
+      "flusberg_jack_060900.cha": {
+        "child_id": "jack",
+        "rank": 0,
+        "n_sessions": 12,
+        "age_months": 81.0,
+        "position": 0.0
+      },
+      "flusberg_jack_061028.cha": {
+        "child_id": "jack",
+        "rank": 1,
+        "n_sessions": 12,
+        "age_months": 82.92,
+        "position": 0.09090909090909091
+      },
+      "flusberg_jack_070106.cha": {
+        "child_id": "jack",
+        "rank": 2,
+        "n_sessions": 12,
+        "age_months": 85.2,
+        "position": 0.18181818181818182
+      },
+      "flusberg_jack_070315.cha": {
+        "child_id": "jack",
+        "rank": 3,
+        "n_sessions": 12,
+        "age_months": 87.49,
+        "position": 0.2727272727272727
+      },
+      "flusberg_jack_070516.cha": {
+        "child_id": "jack",
+        "rank": 4,
+        "n_sessions": 12,
+        "age_months": 89.53,
+        "position": 0.36363636363636365
+      },
+      "flusberg_jack_070726.cha": {
+        "child_id": "jack",
+        "rank": 5,
+        "n_sessions": 12,
+        "age_months": 91.86,
+        "position": 0.45454545454545453
+      },
+      "flusberg_jack_071001.cha": {
+        "child_id": "jack",
+        "rank": 6,
+        "n_sessions": 12,
+        "age_months": 94.03,
+        "position": 0.5454545454545454
+      },
+      "flusberg_jack_080012.cha": {
+        "child_id": "jack",
+        "rank": 7,
+        "n_sessions": 12,
+        "age_months": 96.39,
+        "position": 0.6363636363636364
+      },
+      "flusberg_jack_080121.cha": {
+        "child_id": "jack",
+        "rank": 11,
+        "n_sessions": 12,
+        "age_months": 106.69,
+        "position": 1.0
+      },
+      "flusberg_jack_080221.cha": {
+        "child_id": "jack",
+        "rank": 8,
+        "n_sessions": 12,
+        "age_months": 98.69,
+        "position": 0.7272727272727273
+      },
+      "flusberg_jack_080506.cha": {
+        "child_id": "jack",
+        "rank": 9,
+        "n_sessions": 12,
+        "age_months": 101.2,
+        "position": 0.8181818181818182
+      },
+      "flusberg_jack_080808.cha": {
+        "child_id": "jack",
+        "rank": 10,
+        "n_sessions": 12,
+        "age_months": 104.26,
+        "position": 0.9090909090909091
+      },
+      "flusberg_mark_070700.cha": {
+        "child_id": "mark",
+        "rank": 0,
+        "n_sessions": 13,
+        "age_months": 91.0,
+        "position": 0.0
+      },
+      "flusberg_mark_070812.cha": {
+        "child_id": "mark",
+        "rank": 1,
+        "n_sessions": 13,
+        "age_months": 92.39,
+        "position": 0.08333333333333333
+      },
+      "flusberg_mark_071026.cha": {
+        "child_id": "mark",
+        "rank": 2,
+        "n_sessions": 13,
+        "age_months": 94.86,
+        "position": 0.16666666666666666
+      },
+      "flusberg_mark_080023.cha": {
+        "child_id": "mark",
+        "rank": 3,
+        "n_sessions": 13,
+        "age_months": 96.76,
+        "position": 0.25
+      },
+      "flusberg_mark_080224.cha": {
+        "child_id": "mark",
+        "rank": 4,
+        "n_sessions": 13,
+        "age_months": 98.79,
+        "position": 0.3333333333333333
+      },
+      "flusberg_mark_080422.cha": {
+        "child_id": "mark",
+        "rank": 5,
+        "n_sessions": 13,
+        "age_months": 100.72,
+        "position": 0.4166666666666667
+      },
+      "flusberg_mark_080700.cha": {
+        "child_id": "mark",
+        "rank": 6,
+        "n_sessions": 13,
+        "age_months": 103.0,
+        "position": 0.5
+      },
+      "flusberg_mark_080915.cha": {
+        "child_id": "mark",
+        "rank": 7,
+        "n_sessions": 13,
+        "age_months": 105.49,
+        "position": 0.5833333333333334
+      },
+      "flusberg_mark_081118.cha": {
+        "child_id": "mark",
+        "rank": 8,
+        "n_sessions": 13,
+        "age_months": 107.59,
+        "position": 0.6666666666666666
+      },
+      "flusberg_mark_090126.cha": {
+        "child_id": "mark",
+        "rank": 9,
+        "n_sessions": 13,
+        "age_months": 109.86,
+        "position": 0.75
+      },
+      "flusberg_mark_090320.cha": {
+        "child_id": "mark",
+        "rank": 10,
+        "n_sessions": 13,
+        "age_months": 111.66,
+        "position": 0.8333333333333334
+      },
+      "flusberg_mark_090526.cha": {
+        "child_id": "mark",
+        "rank": 11,
+        "n_sessions": 13,
+        "age_months": 113.86,
+        "position": 0.9166666666666666
+      },
+      "flusberg_mark_090818.cha": {
+        "child_id": "mark",
+        "rank": 12,
+        "n_sessions": 13,
+        "age_months": 116.59,
+        "position": 1.0
+      },
+      "flusberg_rick_040700.cha": {
+        "child_id": "rick",
+        "rank": 0,
+        "n_sessions": 11,
+        "age_months": 55.0,
+        "position": 0.0
+      },
+      "flusberg_rick_050904.cha": {
+        "child_id": "rick",
+        "rank": 1,
+        "n_sessions": 11,
+        "age_months": 69.13,
+        "position": 0.1
+      },
+      "flusberg_rick_051104.cha": {
+        "child_id": "rick",
+        "rank": 2,
+        "n_sessions": 11,
+        "age_months": 71.13,
+        "position": 0.2
+      },
+      "flusberg_rick_060107.cha": {
+        "child_id": "rick",
+        "rank": 3,
+        "n_sessions": 11,
+        "age_months": 73.23,
+        "position": 0.3
+      },
+      "flusberg_rick_060308.cha": {
+        "child_id": "rick",
+        "rank": 4,
+        "n_sessions": 11,
+        "age_months": 75.26,
+        "position": 0.4
+      },
+      "flusberg_rick_060522.cha": {
+        "child_id": "rick",
+        "rank": 5,
+        "n_sessions": 11,
+        "age_months": 77.72,
+        "position": 0.5
+      },
+      "flusberg_rick_060818.cha": {
+        "child_id": "rick",
+        "rank": 6,
+        "n_sessions": 11,
+        "age_months": 80.59,
+        "position": 0.6
+      },
+      "flusberg_rick_061012.cha": {
+        "child_id": "rick",
+        "rank": 7,
+        "n_sessions": 11,
+        "age_months": 82.39,
+        "position": 0.7
+      },
+      "flusberg_rick_070013.cha": {
+        "child_id": "rick",
+        "rank": 8,
+        "n_sessions": 11,
+        "age_months": 84.43,
+        "position": 0.8
+      },
+      "flusberg_rick_070215.cha": {
+        "child_id": "rick",
+        "rank": 9,
+        "n_sessions": 11,
+        "age_months": 86.49,
+        "position": 0.9
+      },
+      "flusberg_rick_070503.cha": {
+        "child_id": "rick",
+        "rank": 10,
+        "n_sessions": 11,
+        "age_months": 89.1,
+        "position": 1.0
+      },
+      "flusberg_roger_flusberg_030900.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 0,
+        "n_sessions": 10,
+        "age_months": 45.0,
+        "position": 0.0
+      },
+      "flusberg_roger_flusberg_031020.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 1,
+        "n_sessions": 10,
+        "age_months": 46.66,
+        "position": 0.1111111111111111
+      },
+      "flusberg_roger_flusberg_040028.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 2,
+        "n_sessions": 10,
+        "age_months": 48.92,
+        "position": 0.2222222222222222
+      },
+      "flusberg_roger_flusberg_040309.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 3,
+        "n_sessions": 10,
+        "age_months": 51.3,
+        "position": 0.3333333333333333
+      },
+      "flusberg_roger_flusberg_040518.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 4,
+        "n_sessions": 10,
+        "age_months": 53.59,
+        "position": 0.4444444444444444
+      },
+      "flusberg_roger_flusberg_040727.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 5,
+        "n_sessions": 10,
+        "age_months": 55.89,
+        "position": 0.5555555555555556
+      },
+      "flusberg_roger_flusberg_041007.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 6,
+        "n_sessions": 10,
+        "age_months": 58.23,
+        "position": 0.6666666666666666
+      },
+      "flusberg_roger_flusberg_050006.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 7,
+        "n_sessions": 10,
+        "age_months": 60.2,
+        "position": 0.7777777777777778
+      },
+      "flusberg_roger_flusberg_050218.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 8,
+        "n_sessions": 10,
+        "age_months": 62.59,
+        "position": 0.8888888888888888
+      },
+      "flusberg_roger_flusberg_050620.cha": {
+        "child_id": "roger_flusberg",
+        "rank": 9,
+        "n_sessions": 10,
+        "age_months": 66.66,
+        "position": 1.0
+      },
+      "flusberg_stuart_030400.cha": {
+        "child_id": "stuart",
+        "rank": 0,
+        "n_sessions": 8,
+        "age_months": 40.0,
+        "position": 0.0
+      },
+      "flusberg_stuart_030610.cha": {
+        "child_id": "stuart",
+        "rank": 1,
+        "n_sessions": 8,
+        "age_months": 42.33,
+        "position": 0.14285714285714285
+      },
+      "flusberg_stuart_030806.cha": {
+        "child_id": "stuart",
+        "rank": 2,
+        "n_sessions": 8,
+        "age_months": 44.2,
+        "position": 0.2857142857142857
+      },
+      "flusberg_stuart_031009.cha": {
+        "child_id": "stuart",
+        "rank": 3,
+        "n_sessions": 8,
+        "age_months": 46.3,
+        "position": 0.42857142857142855
+      },
+      "flusberg_stuart_040029.cha": {
+        "child_id": "stuart",
+        "rank": 4,
+        "n_sessions": 8,
+        "age_months": 48.95,
+        "position": 0.5714285714285714
+      },
+      "flusberg_stuart_040306.cha": {
+        "child_id": "stuart",
+        "rank": 5,
+        "n_sessions": 8,
+        "age_months": 51.2,
+        "position": 0.7142857142857143
+      },
+      "flusberg_stuart_040521.cha": {
+        "child_id": "stuart",
+        "rank": 6,
+        "n_sessions": 8,
+        "age_months": 53.69,
+        "position": 0.8571428571428571
+      },
+      "flusberg_stuart_040715.cha": {
+        "child_id": "stuart",
+        "rank": 7,
+        "n_sessions": 8,
+        "age_months": 55.49,
+        "position": 1.0
+      },
+      "rollins_carl_020800.cha": {
+        "child_id": "carl",
+        "rank": 0,
+        "n_sessions": 4,
+        "age_months": 32.0,
+        "position": 0.0
+      },
+      "rollins_carl_021100.cha": {
+        "child_id": "carl",
+        "rank": 1,
+        "n_sessions": 4,
+        "age_months": 35.0,
+        "position": 0.3333333333333333
+      },
+      "rollins_carl_030000.cha": {
+        "child_id": "carl",
+        "rank": 2,
+        "n_sessions": 4,
+        "age_months": 36.0,
+        "position": 0.6666666666666666
+      },
+      "rollins_carl_030700.cha": {
+        "child_id": "carl",
+        "rank": 3,
+        "n_sessions": 4,
+        "age_months": 43.0,
+        "position": 1.0
+      },
+      "rollins_josh_020500.cha": {
+        "child_id": "josh",
+        "rank": 0,
+        "n_sessions": 4,
+        "age_months": 29.0,
+        "position": 0.0
+      },
+      "rollins_josh_020800.cha": {
+        "child_id": "josh",
+        "rank": 1,
+        "n_sessions": 4,
+        "age_months": 32.0,
+        "position": 0.3333333333333333
+      },
+      "rollins_josh_021100.cha": {
+        "child_id": "josh",
+        "rank": 2,
+        "n_sessions": 4,
+        "age_months": 35.0,
+        "position": 0.6666666666666666
+      },
+      "rollins_josh_030100.cha": {
+        "child_id": "josh",
+        "rank": 3,
+        "n_sessions": 4,
+        "age_months": 37.0,
+        "position": 1.0
+      },
+      "rollins_mars_030100.cha": {
+        "child_id": "mars",
+        "rank": 0,
+        "n_sessions": 5,
+        "age_months": 37.0,
+        "position": 0.0
+      },
+      "rollins_mars_030300.cha": {
+        "child_id": "mars",
+        "rank": 1,
+        "n_sessions": 5,
+        "age_months": 39.0,
+        "position": 0.25
+      },
+      "rollins_mars_030600.cha": {
+        "child_id": "mars",
+        "rank": 2,
+        "n_sessions": 5,
+        "age_months": 42.0,
+        "position": 0.5
+      },
+      "rollins_mars_030800.cha": {
+        "child_id": "mars",
+        "rank": 3,
+        "n_sessions": 5,
+        "age_months": 44.0,
+        "position": 0.75
+      },
+      "rollins_mars_031100.cha": {
+        "child_id": "mars",
+        "rank": 4,
+        "n_sessions": 5,
+        "age_months": 47.0,
+        "position": 1.0
+      },
+      "rollins_roger_rollins_020600.cha": {
+        "child_id": "roger_rollins",
+        "rank": 0,
+        "n_sessions": 4,
+        "age_months": 30.0,
+        "position": 0.0
+      },
+      "rollins_roger_rollins_020800.cha": {
+        "child_id": "roger_rollins",
+        "rank": 1,
+        "n_sessions": 4,
+        "age_months": 32.0,
+        "position": 0.3333333333333333
+      },
+      "rollins_roger_rollins_021000.cha": {
+        "child_id": "roger_rollins",
+        "rank": 2,
+        "n_sessions": 4,
+        "age_months": 34.0,
+        "position": 0.6666666666666666
+      },
+      "rollins_roger_rollins_030300.cha": {
+        "child_id": "roger_rollins",
+        "rank": 3,
+        "n_sessions": 4,
+        "age_months": 39.0,
+        "position": 1.0
+      },
+      "rollins_sid_020200.cha": {
+        "child_id": "sid",
+        "rank": 0,
+        "n_sessions": 4,
+        "age_months": 26.0,
+        "position": 0.0
+      },
+      "rollins_sid_021100.cha": {
+        "child_id": "sid",
+        "rank": 1,
+        "n_sessions": 4,
+        "age_months": 35.0,
+        "position": 0.3333333333333333
+      },
+      "rollins_sid_030200.cha": {
+        "child_id": "sid",
+        "rank": 2,
+        "n_sessions": 4,
+        "age_months": 38.0,
+        "position": 0.6666666666666666
+      },
+      "rollins_sid_030500.cha": {
+        "child_id": "sid",
+        "rank": 3,
+        "n_sessions": 4,
+        "age_months": 41.0,
+        "position": 1.0
+      }
+    },
+    "sets": {
+      "all_episodes_9018": {
+        "name": "all_episodes_9018",
+        "n": 9018,
+        "n_children": 11,
+        "sessions_represented": 85,
+        "sessions_total": 85,
+        "children_with_all_sessions": 11,
+        "pooled_mean_position": 0.5029,
+        "child_mean_position": 0.4946,
+        "pooled_quartile_shares": [
+          0.2342,
+          0.2393,
+          0.2664,
+          0.2601
+        ],
+        "per_child": {
+          "brett": {
+            "n": 1265,
+            "sessions_represented": 10,
+            "sessions_total": 10,
+            "mean_position": 0.4971,
+            "median_position": 0.4444,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2806,
+              0.2198,
+              0.2332,
+              0.2664
+            ]
+          },
+          "carl": {
+            "n": 261,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.4662,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1839,
+              0.4483,
+              0.1533,
+              0.2146
+            ]
+          },
+          "jack": {
+            "n": 1381,
+            "sessions_represented": 12,
+            "sessions_total": 12,
+            "mean_position": 0.4941,
+            "median_position": 0.4545,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2259,
+              0.2817,
+              0.2918,
+              0.2006
+            ]
+          },
+          "josh": {
+            "n": 188,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.4592,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2553,
+              0.3138,
+              0.2287,
+              0.2021
+            ]
+          },
+          "mark": {
+            "n": 2281,
+            "sessions_represented": 13,
+            "sessions_total": 13,
+            "mean_position": 0.4783,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2508,
+              0.2429,
+              0.2534,
+              0.253
+            ]
+          },
+          "mars": {
+            "n": 485,
+            "sessions_represented": 5,
+            "sessions_total": 5,
+            "mean_position": 0.5588,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1526,
+              0.1918,
+              0.1938,
+              0.4619
+            ]
+          },
+          "rick": {
+            "n": 1197,
+            "sessions_represented": 11,
+            "sessions_total": 11,
+            "mean_position": 0.5232,
+            "median_position": 0.6,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.193,
+              0.2206,
+              0.3517,
+              0.2348
+            ]
+          },
+          "roger_flusberg": {
+            "n": 863,
+            "sessions_represented": 10,
+            "sessions_total": 10,
+            "mean_position": 0.5623,
+            "median_position": 0.5556,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2051,
+              0.2167,
+              0.2364,
+              0.3418
+            ]
+          },
+          "roger_rollins": {
+            "n": 180,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3611,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.4889,
+              0.0889,
+              0.2722,
+              0.15
+            ]
+          },
+          "sid": {
+            "n": 287,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5192,
+            "median_position": 0.6667,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2578,
+              0.2091,
+              0.2509,
+              0.2822
+            ]
+          },
+          "stuart": {
+            "n": 630,
+            "sessions_represented": 8,
+            "sessions_total": 8,
+            "mean_position": 0.5215,
+            "median_position": 0.5714,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2111,
+              0.2238,
+              0.3222,
+              0.2429
+            ]
+          }
+        }
+      },
+      "universe_2442": {
+        "name": "universe_2442",
+        "n": 2442,
+        "n_children": 11,
+        "sessions_represented": 70,
+        "sessions_total": 85,
+        "children_with_all_sessions": 7,
+        "pooled_mean_position": 0.2837,
+        "child_mean_position": 0.2883,
+        "pooled_quartile_shares": [
+          0.525,
+          0.2019,
+          0.2019,
+          0.0713
+        ],
+        "per_child": {
+          "brett": {
+            "n": 273,
+            "sessions_represented": 7,
+            "sessions_total": 10,
+            "mean_position": 0.2165,
+            "median_position": 0.1111,
+            "latest_session_reached": 0.6667,
+            "quartile_shares": [
+              0.685,
+              0.1136,
+              0.2015,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.2806
+          },
+          "carl": {
+            "n": 220,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3773,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2182,
+              0.5318,
+              0.15,
+              0.1
+            ],
+            "shift_vs_all_episodes": -0.0889
+          },
+          "jack": {
+            "n": 183,
+            "sessions_represented": 7,
+            "sessions_total": 12,
+            "mean_position": 0.1495,
+            "median_position": 0.0909,
+            "latest_session_reached": 0.5455,
+            "quartile_shares": [
+              0.7705,
+              0.0874,
+              0.1421,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.3446
+          },
+          "josh": {
+            "n": 182,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.4414,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2637,
+              0.3242,
+              0.2363,
+              0.1758
+            ],
+            "shift_vs_all_episodes": -0.0178
+          },
+          "mark": {
+            "n": 273,
+            "sessions_represented": 8,
+            "sessions_total": 13,
+            "mean_position": 0.1835,
+            "median_position": 0.0833,
+            "latest_session_reached": 0.5833,
+            "quartile_shares": [
+              0.663,
+              0.1795,
+              0.1575,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.2948
+          },
+          "mars": {
+            "n": 223,
+            "sessions_represented": 5,
+            "sessions_total": 5,
+            "mean_position": 0.2791,
+            "median_position": 0.25,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.3318,
+              0.3184,
+              0.2735,
+              0.0762
+            ],
+            "shift_vs_all_episodes": -0.2797
+          },
+          "rick": {
+            "n": 224,
+            "sessions_represented": 11,
+            "sessions_total": 11,
+            "mean_position": 0.2464,
+            "median_position": 0.05,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.6384,
+              0.067,
+              0.2143,
+              0.0804
+            ],
+            "shift_vs_all_episodes": -0.2768
+          },
+          "roger_flusberg": {
+            "n": 273,
+            "sessions_represented": 8,
+            "sessions_total": 10,
+            "mean_position": 0.313,
+            "median_position": 0.2222,
+            "latest_session_reached": 0.7778,
+            "quartile_shares": [
+              0.6044,
+              0.1209,
+              0.1832,
+              0.0916
+            ],
+            "shift_vs_all_episodes": -0.2493
+          },
+          "roger_rollins": {
+            "n": 162,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3128,
+            "median_position": 0.0,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.5432,
+              0.0988,
+              0.2346,
+              0.1235
+            ],
+            "shift_vs_all_episodes": -0.0483
+          },
+          "sid": {
+            "n": 206,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3544,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.3592,
+              0.2913,
+              0.2767,
+              0.0728
+            ],
+            "shift_vs_all_episodes": -0.1648
+          },
+          "stuart": {
+            "n": 223,
+            "sessions_represented": 8,
+            "sessions_total": 8,
+            "mean_position": 0.2972,
+            "median_position": 0.1429,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.5964,
+              0.1166,
+              0.1749,
+              0.1121
+            ],
+            "shift_vs_all_episodes": -0.2243
+          }
+        },
+        "mean_child_shift_vs_all_episodes": -0.2064,
+        "min_child_shift": -0.3446,
+        "max_child_shift": -0.0178
+      },
+      "universe_3371": {
+        "name": "universe_3371",
+        "n": 3371,
+        "n_children": 11,
+        "sessions_represented": 84,
+        "sessions_total": 85,
+        "children_with_all_sessions": 10,
+        "pooled_mean_position": 0.337,
+        "child_mean_position": 0.348,
+        "pooled_quartile_shares": [
+          0.4823,
+          0.2041,
+          0.17,
+          0.1436
+        ],
+        "per_child": {
+          "brett": {
+            "n": 389,
+            "sessions_represented": 10,
+            "sessions_total": 10,
+            "mean_position": 0.2536,
+            "median_position": 0.2222,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.7172,
+              0.0797,
+              0.1414,
+              0.0617
+            ],
+            "shift_vs_all_episodes": -0.2435
+          },
+          "carl": {
+            "n": 261,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.4662,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1839,
+              0.4483,
+              0.1533,
+              0.2146
+            ],
+            "shift_vs_all_episodes": 0.0
+          },
+          "jack": {
+            "n": 290,
+            "sessions_represented": 12,
+            "sessions_total": 12,
+            "mean_position": 0.232,
+            "median_position": 0.0909,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.6966,
+              0.0552,
+              0.1724,
+              0.0759
+            ],
+            "shift_vs_all_episodes": -0.2621
+          },
+          "josh": {
+            "n": 188,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.4592,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2553,
+              0.3138,
+              0.2287,
+              0.2021
+            ],
+            "shift_vs_all_episodes": 0.0
+          },
+          "mark": {
+            "n": 393,
+            "sessions_represented": 12,
+            "sessions_total": 13,
+            "mean_position": 0.2082,
+            "median_position": 0.0833,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.6921,
+              0.1247,
+              0.1247,
+              0.0585
+            ],
+            "shift_vs_all_episodes": -0.2701
+          },
+          "mars": {
+            "n": 353,
+            "sessions_represented": 5,
+            "sessions_total": 5,
+            "mean_position": 0.4249,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2096,
+              0.2635,
+              0.221,
+              0.3059
+            ],
+            "shift_vs_all_episodes": -0.1339
+          },
+          "rick": {
+            "n": 315,
+            "sessions_represented": 11,
+            "sessions_total": 11,
+            "mean_position": 0.2257,
+            "median_position": 0.1,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.7333,
+              0.0571,
+              0.1524,
+              0.0571
+            ],
+            "shift_vs_all_episodes": -0.2975
+          },
+          "roger_flusberg": {
+            "n": 401,
+            "sessions_represented": 10,
+            "sessions_total": 10,
+            "mean_position": 0.3707,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.4414,
+              0.2793,
+              0.1247,
+              0.1546
+            ],
+            "shift_vs_all_episodes": -0.1916
+          },
+          "roger_rollins": {
+            "n": 180,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3611,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.4889,
+              0.0889,
+              0.2722,
+              0.15
+            ],
+            "shift_vs_all_episodes": 0.0
+          },
+          "sid": {
+            "n": 287,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5192,
+            "median_position": 0.6667,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2578,
+              0.2091,
+              0.2509,
+              0.2822
+            ],
+            "shift_vs_all_episodes": 0.0
+          },
+          "stuart": {
+            "n": 314,
+            "sessions_represented": 8,
+            "sessions_total": 8,
+            "mean_position": 0.3071,
+            "median_position": 0.2857,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.4236,
+              0.3726,
+              0.1242,
+              0.0796
+            ],
+            "shift_vs_all_episodes": -0.2144
+          }
+        },
+        "mean_child_shift_vs_all_episodes": -0.1466,
+        "min_child_shift": -0.2975,
+        "max_child_shift": 0.0
+      },
+      "pool_1320": {
+        "name": "pool_1320",
+        "n": 1320,
+        "n_children": 11,
+        "sessions_represented": 70,
+        "sessions_total": 85,
+        "children_with_all_sessions": 7,
+        "pooled_mean_position": 0.2835,
+        "child_mean_position": 0.2835,
+        "pooled_quartile_shares": [
+          0.5212,
+          0.2038,
+          0.2038,
+          0.0712
+        ],
+        "per_child": {
+          "brett": {
+            "n": 120,
+            "sessions_represented": 7,
+            "sessions_total": 10,
+            "mean_position": 0.2111,
+            "median_position": 0.1111,
+            "latest_session_reached": 0.6667,
+            "quartile_shares": [
+              0.7083,
+              0.0833,
+              0.2083,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.286
+          },
+          "carl": {
+            "n": 120,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3194,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.275,
+              0.55,
+              0.1167,
+              0.0583
+            ],
+            "shift_vs_all_episodes": -0.1468
+          },
+          "jack": {
+            "n": 120,
+            "sessions_represented": 7,
+            "sessions_total": 12,
+            "mean_position": 0.1614,
+            "median_position": 0.0909,
+            "latest_session_reached": 0.5455,
+            "quartile_shares": [
+              0.7583,
+              0.0917,
+              0.15,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.3327
+          },
+          "josh": {
+            "n": 120,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.4361,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2833,
+              0.2917,
+              0.2583,
+              0.1667
+            ],
+            "shift_vs_all_episodes": -0.0231
+          },
+          "mark": {
+            "n": 120,
+            "sessions_represented": 8,
+            "sessions_total": 13,
+            "mean_position": 0.2056,
+            "median_position": 0.0833,
+            "latest_session_reached": 0.5833,
+            "quartile_shares": [
+              0.6,
+              0.2167,
+              0.1833,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.2727
+          },
+          "mars": {
+            "n": 120,
+            "sessions_represented": 5,
+            "sessions_total": 5,
+            "mean_position": 0.2604,
+            "median_position": 0.25,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.3667,
+              0.3167,
+              0.2417,
+              0.075
+            ],
+            "shift_vs_all_episodes": -0.2984
+          },
+          "rick": {
+            "n": 120,
+            "sessions_represented": 11,
+            "sessions_total": 11,
+            "mean_position": 0.28,
+            "median_position": 0.1,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.5833,
+              0.0917,
+              0.2,
+              0.125
+            ],
+            "shift_vs_all_episodes": -0.2432
+          },
+          "roger_flusberg": {
+            "n": 120,
+            "sessions_represented": 8,
+            "sessions_total": 10,
+            "mean_position": 0.3037,
+            "median_position": 0.2222,
+            "latest_session_reached": 0.7778,
+            "quartile_shares": [
+              0.6083,
+              0.1583,
+              0.15,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.2586
+          },
+          "roger_rollins": {
+            "n": 120,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3083,
+            "median_position": 0.0,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.5583,
+              0.0833,
+              0.2333,
+              0.125
+            ],
+            "shift_vs_all_episodes": -0.0528
+          },
+          "sid": {
+            "n": 120,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3639,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.375,
+              0.2167,
+              0.35,
+              0.0583
+            ],
+            "shift_vs_all_episodes": -0.1553
+          },
+          "stuart": {
+            "n": 120,
+            "sessions_represented": 8,
+            "sessions_total": 8,
+            "mean_position": 0.269,
+            "median_position": 0.1429,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.6167,
+              0.1417,
+              0.15,
+              0.0917
+            ],
+            "shift_vs_all_episodes": -0.2525
+          }
+        },
+        "mean_child_shift_vs_all_episodes": -0.2111,
+        "min_child_shift": -0.3327,
+        "max_child_shift": -0.0231
+      },
+      "main_batch_330": {
+        "name": "main_batch_330",
+        "n": 330,
+        "n_children": 11,
+        "sessions_represented": 60,
+        "sessions_total": 85,
+        "children_with_all_sessions": 5,
+        "pooled_mean_position": 0.2729,
+        "child_mean_position": 0.2729,
+        "pooled_quartile_shares": [
+          0.5394,
+          0.1909,
+          0.203,
+          0.0667
+        ],
+        "per_child": {
+          "brett": {
+            "n": 30,
+            "sessions_represented": 6,
+            "sessions_total": 10,
+            "mean_position": 0.2815,
+            "median_position": 0.1111,
+            "latest_session_reached": 0.6667,
+            "quartile_shares": [
+              0.5667,
+              0.1333,
+              0.3,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.2156
+          },
+          "carl": {
+            "n": 30,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3889,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.2333,
+              0.4667,
+              0.2,
+              0.1
+            ],
+            "shift_vs_all_episodes": -0.0773
+          },
+          "jack": {
+            "n": 30,
+            "sessions_represented": 6,
+            "sessions_total": 12,
+            "mean_position": 0.1273,
+            "median_position": 0.0455,
+            "latest_session_reached": 0.5455,
+            "quartile_shares": [
+              0.8333,
+              0.0667,
+              0.1,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.3668
+          },
+          "josh": {
+            "n": 30,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3667,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.4,
+              0.2333,
+              0.2333,
+              0.1333
+            ],
+            "shift_vs_all_episodes": -0.0925
+          },
+          "mark": {
+            "n": 30,
+            "sessions_represented": 6,
+            "sessions_total": 13,
+            "mean_position": 0.2472,
+            "median_position": 0.125,
+            "latest_session_reached": 0.5833,
+            "quartile_shares": [
+              0.5333,
+              0.1333,
+              0.3333,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.2311
+          },
+          "mars": {
+            "n": 30,
+            "sessions_represented": 5,
+            "sessions_total": 5,
+            "mean_position": 0.2583,
+            "median_position": 0.25,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.3333,
+              0.4333,
+              0.1333,
+              0.1
+            ],
+            "shift_vs_all_episodes": -0.3005
+          },
+          "rick": {
+            "n": 30,
+            "sessions_represented": 7,
+            "sessions_total": 11,
+            "mean_position": 0.2633,
+            "median_position": 0.1,
+            "latest_session_reached": 0.8,
+            "quartile_shares": [
+              0.5667,
+              0.1667,
+              0.1667,
+              0.1
+            ],
+            "shift_vs_all_episodes": -0.2599
+          },
+          "roger_flusberg": {
+            "n": 30,
+            "sessions_represented": 7,
+            "sessions_total": 10,
+            "mean_position": 0.337,
+            "median_position": 0.2222,
+            "latest_session_reached": 0.7778,
+            "quartile_shares": [
+              0.5333,
+              0.2,
+              0.1667,
+              0.1
+            ],
+            "shift_vs_all_episodes": -0.2253
+          },
+          "roger_rollins": {
+            "n": 30,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.1889,
+            "median_position": 0.0,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.7333,
+              0.0667,
+              0.1,
+              0.1
+            ],
+            "shift_vs_all_episodes": -0.1722
+          },
+          "sid": {
+            "n": 30,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.3333,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.4667,
+              0.1,
+              0.4,
+              0.0333
+            ],
+            "shift_vs_all_episodes": -0.1859
+          },
+          "stuart": {
+            "n": 30,
+            "sessions_represented": 7,
+            "sessions_total": 8,
+            "mean_position": 0.2095,
+            "median_position": 0.1429,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.7333,
+              0.1,
+              0.1,
+              0.0667
+            ],
+            "shift_vs_all_episodes": -0.312
+          }
+        },
+        "mean_child_shift_vs_all_episodes": -0.2217,
+        "min_child_shift": -0.3668,
+        "max_child_shift": -0.0773
+      },
+      "frozen_132": {
+        "name": "frozen_132",
+        "n": 132,
+        "n_children": 11,
+        "sessions_represented": 58,
+        "sessions_total": 85,
+        "children_with_all_sessions": 4,
+        "pooled_mean_position": 0.4057,
+        "child_mean_position": 0.4057,
+        "pooled_quartile_shares": [
+          0.3561,
+          0.25,
+          0.2197,
+          0.1742
+        ],
+        "per_child": {
+          "brett": {
+            "n": 12,
+            "sessions_represented": 7,
+            "sessions_total": 10,
+            "mean_position": 0.3796,
+            "median_position": 0.2778,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.5,
+              0.0833,
+              0.3333,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.1175
+          },
+          "carl": {
+            "n": 12,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5833,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1667,
+              0.3333,
+              0.0833,
+              0.4167
+            ],
+            "shift_vs_all_episodes": 0.1171
+          },
+          "jack": {
+            "n": 12,
+            "sessions_represented": 7,
+            "sessions_total": 12,
+            "mean_position": 0.303,
+            "median_position": 0.1364,
+            "latest_session_reached": 0.8182,
+            "quartile_shares": [
+              0.5833,
+              0.0833,
+              0.25,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.1911
+          },
+          "josh": {
+            "n": 12,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5556,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1667,
+              0.3333,
+              0.1667,
+              0.3333
+            ],
+            "shift_vs_all_episodes": 0.0964
+          },
+          "mark": {
+            "n": 12,
+            "sessions_represented": 5,
+            "sessions_total": 13,
+            "mean_position": 0.1736,
+            "median_position": 0.0833,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.8333,
+              0.0,
+              0.0833,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.3047
+          },
+          "mars": {
+            "n": 12,
+            "sessions_represented": 4,
+            "sessions_total": 5,
+            "mean_position": 0.4792,
+            "median_position": 0.25,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.0833,
+              0.5,
+              0.0,
+              0.4167
+            ],
+            "shift_vs_all_episodes": -0.0796
+          },
+          "rick": {
+            "n": 12,
+            "sessions_represented": 6,
+            "sessions_total": 11,
+            "mean_position": 0.1833,
+            "median_position": 0.05,
+            "latest_session_reached": 0.7,
+            "quartile_shares": [
+              0.75,
+              0.0,
+              0.25,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.3399
+          },
+          "roger_flusberg": {
+            "n": 12,
+            "sessions_represented": 6,
+            "sessions_total": 10,
+            "mean_position": 0.3889,
+            "median_position": 0.3333,
+            "latest_session_reached": 0.8889,
+            "quartile_shares": [
+              0.25,
+              0.5,
+              0.0833,
+              0.1667
+            ],
+            "shift_vs_all_episodes": -0.1734
+          },
+          "roger_rollins": {
+            "n": 12,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5,
+            "median_position": 0.6667,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.25,
+              0.0833,
+              0.5833,
+              0.0833
+            ],
+            "shift_vs_all_episodes": 0.1389
+          },
+          "sid": {
+            "n": 12,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1667,
+              0.3333,
+              0.3333,
+              0.1667
+            ],
+            "shift_vs_all_episodes": -0.0192
+          },
+          "stuart": {
+            "n": 12,
+            "sessions_represented": 7,
+            "sessions_total": 8,
+            "mean_position": 0.4167,
+            "median_position": 0.3571,
+            "latest_session_reached": 0.8571,
+            "quartile_shares": [
+              0.1667,
+              0.5,
+              0.25,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.1048
+          }
+        },
+        "mean_child_shift_vs_all_episodes": -0.0889,
+        "min_child_shift": -0.3399,
+        "max_child_shift": 0.1389
+      },
+      "overlap_excluded_121": {
+        "name": "overlap_excluded_121",
+        "n": 121,
+        "n_children": 11,
+        "sessions_represented": 57,
+        "sessions_total": 85,
+        "children_with_all_sessions": 3,
+        "pooled_mean_position": 0.3854,
+        "child_mean_position": 0.3848,
+        "pooled_quartile_shares": [
+          0.3884,
+          0.2479,
+          0.1901,
+          0.1736
+        ],
+        "per_child": {
+          "brett": {
+            "n": 12,
+            "sessions_represented": 7,
+            "sessions_total": 10,
+            "mean_position": 0.3796,
+            "median_position": 0.2778,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.5,
+              0.0833,
+              0.3333,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.1175
+          },
+          "carl": {
+            "n": 11,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5455,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1818,
+              0.3636,
+              0.0909,
+              0.3636
+            ],
+            "shift_vs_all_episodes": 0.0793
+          },
+          "jack": {
+            "n": 12,
+            "sessions_represented": 7,
+            "sessions_total": 12,
+            "mean_position": 0.303,
+            "median_position": 0.1364,
+            "latest_session_reached": 0.8182,
+            "quartile_shares": [
+              0.5833,
+              0.0833,
+              0.25,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.1911
+          },
+          "josh": {
+            "n": 12,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.5556,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1667,
+              0.3333,
+              0.1667,
+              0.3333
+            ],
+            "shift_vs_all_episodes": 0.0964
+          },
+          "mark": {
+            "n": 12,
+            "sessions_represented": 5,
+            "sessions_total": 13,
+            "mean_position": 0.1736,
+            "median_position": 0.0833,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.8333,
+              0.0,
+              0.0833,
+              0.0833
+            ],
+            "shift_vs_all_episodes": -0.3047
+          },
+          "mars": {
+            "n": 10,
+            "sessions_represented": 4,
+            "sessions_total": 5,
+            "mean_position": 0.525,
+            "median_position": 0.5,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1,
+              0.4,
+              0.0,
+              0.5
+            ],
+            "shift_vs_all_episodes": -0.0338
+          },
+          "rick": {
+            "n": 12,
+            "sessions_represented": 6,
+            "sessions_total": 11,
+            "mean_position": 0.1833,
+            "median_position": 0.05,
+            "latest_session_reached": 0.7,
+            "quartile_shares": [
+              0.75,
+              0.0,
+              0.25,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.3399
+          },
+          "roger_flusberg": {
+            "n": 12,
+            "sessions_represented": 6,
+            "sessions_total": 10,
+            "mean_position": 0.3889,
+            "median_position": 0.3333,
+            "latest_session_reached": 0.8889,
+            "quartile_shares": [
+              0.25,
+              0.5,
+              0.0833,
+              0.1667
+            ],
+            "shift_vs_all_episodes": -0.1734
+          },
+          "roger_rollins": {
+            "n": 6,
+            "sessions_represented": 3,
+            "sessions_total": 4,
+            "mean_position": 0.2778,
+            "median_position": 0.1667,
+            "latest_session_reached": 0.6667,
+            "quartile_shares": [
+              0.5,
+              0.1667,
+              0.3333,
+              0.0
+            ],
+            "shift_vs_all_episodes": -0.0833
+          },
+          "sid": {
+            "n": 11,
+            "sessions_represented": 4,
+            "sessions_total": 4,
+            "mean_position": 0.4848,
+            "median_position": 0.3333,
+            "latest_session_reached": 1.0,
+            "quartile_shares": [
+              0.1818,
+              0.3636,
+              0.2727,
+              0.1818
+            ],
+            "shift_vs_all_episodes": -0.0344
+          },
+          "stuart": {
+            "n": 11,
+            "sessions_represented": 7,
+            "sessions_total": 8,
+            "mean_position": 0.4156,
+            "median_position": 0.2857,
+            "latest_session_reached": 0.8571,
+            "quartile_shares": [
+              0.1818,
+              0.4545,
+              0.2727,
+              0.0909
+            ],
+            "shift_vs_all_episodes": -0.1059
+          }
+        },
+        "mean_child_shift_vs_all_episodes": -0.1098,
+        "min_child_shift": -0.3399,
+        "max_child_shift": 0.0964
+      }
+    }
+  },
+  "validator_timeline": {
+    "note": "Commit dates bound when code and results entered version control, not when a run executed; the result file carries no run timestamp.",
+    "validate_report": [
+      {
+        "commit": "75eb1d5",
+        "date": "2026-08-25T12:54:35-03:00",
+        "present": true,
+        "logic_changed": true
+      },
+      {
+        "commit": "f9a53c6",
+        "date": "2026-08-26T13:17:00-03:00",
+        "present": true,
+        "logic_changed": false
+      },
+      {
+        "commit": "dc46399",
+        "date": "2026-08-27T19:09:21-04:00",
+        "present": true,
+        "logic_changed": false
+      },
+      {
+        "commit": "fa11861",
+        "date": "2026-08-28T09:54:06-04:00",
+        "present": true,
+        "logic_changed": false
+      },
+      {
+        "commit": "f8eded1",
+        "date": "2026-09-07T11:28:03-04:00",
+        "present": true,
+        "logic_changed": false
+      },
+      {
+        "commit": "9ecc330",
+        "date": "2026-09-17T18:48:07-04:00",
+        "present": true,
+        "logic_changed": false
+      },
+      {
+        "commit": "63a73a6",
+        "date": "2026-09-21T17:55:27-04:00",
+        "present": true,
+        "logic_changed": false
+      }
+    ],
+    "grounding_scorer": [
+      {
+        "commit": "7a4b725",
+        "date": "2026-09-16T11:41:38-04:00",
+        "present": true,
+        "logic_changed": true
+      },
+      {
+        "commit": "9ecc330",
+        "date": "2026-09-17T18:48:07-04:00",
+        "present": true,
+        "logic_changed": false
+      },
+      {
+        "commit": "63a73a6",
+        "date": "2026-09-21T17:55:27-04:00",
+        "present": true,
+        "logic_changed": false
+      }
+    ],
+    "recorded_runs": [
+      {
+        "commit": "7a4b725",
+        "date": "2026-09-16T11:41:38-04:00",
+        "n_llm_reports": 0,
+        "n_fallback_reports": 11,
+        "reports_passing_validation": 0
+      },
+      {
+        "commit": "9ecc330",
+        "date": "2026-09-17T18:48:07-04:00",
+        "n_llm_reports": 11,
+        "n_fallback_reports": 0,
+        "reports_passing_validation": 0
+      }
+    ]
+  }
+}
