@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T22:37:03.688265+00:00",
+  "generated_at": "2026-09-27T23:57:09.824850+00:00",
   "n_bootstrap": 10000,
   "seed": 20261002,
   "interval_method": "child-cluster percentile bootstrap; equal-child statistic recomputed per replicate",
@@ -283,39 +283,39 @@
         "n": 187,
         "gold_null_share": {
           "domain": 0.0,
-          "modality": 0.2299,
-          "prompt_level": 0.0,
-          "outcome": 0.3262
+          "modality": 0.2406,
+          "prompt_level": 0.0053,
+          "outcome": 0.3048
         },
-        "gold_null_mean": 0.139,
+        "gold_null_mean": 0.1377,
         "reference_null_slots": {
           "domain": 0,
-          "modality": 43,
-          "prompt_level": 0,
-          "outcome": 61
+          "modality": 45,
+          "prompt_level": 1,
+          "outcome": 57
         },
-        "reference_null_slots_total": 104,
+        "reference_null_slots_total": 103,
         "field_slots": 748,
-        "qwen2.5:7b_unsupported": 0.6442
+        "qwen2.5:7b_unsupported": 0.6214
       },
       "under_8": {
         "n": 143,
         "gold_null_share": {
           "domain": 0.021,
-          "modality": 0.2378,
-          "prompt_level": 0.014,
-          "outcome": 0.3776
+          "modality": 0.2448,
+          "prompt_level": 0.021,
+          "outcome": 0.3427
         },
-        "gold_null_mean": 0.1626,
+        "gold_null_mean": 0.1574,
         "reference_null_slots": {
           "domain": 3,
-          "modality": 34,
-          "prompt_level": 2,
-          "outcome": 54
+          "modality": 35,
+          "prompt_level": 3,
+          "outcome": 49
         },
-        "reference_null_slots_total": 93,
+        "reference_null_slots_total": 90,
         "field_slots": 572,
-        "qwen2.5:7b_unsupported": 0.4839
+        "qwen2.5:7b_unsupported": 0.4667
       }
     },
     "frozen_132": {

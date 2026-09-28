@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T14:51:51.996117+00:00",
+  "generated_at": "2026-09-27T23:57:14.511398+00:00",
   "session_coverage": {
     "position_definition": "session rank by child age (CHAT @ID) / (n_sessions - 1); 0 = first visit, 1 = last",
     "quartile_bins": [
@@ -1915,23 +1915,23 @@
           "early": {
             "n": 241,
             "n_children": 11,
-            "reference_null_slots": 144
+            "reference_null_slots": 141
           },
           "later": {
             "n": 89,
             "n_children": 11,
-            "reference_null_slots": 53
+            "reference_null_slots": 52
           },
           "n_children_in_both": 11,
           "per_model": {
             "llama3.2:latest": {
               "merged_agreement": {
-                "early": 0.3154,
-                "later": 0.2893,
-                "early_minus_later": 0.026,
+                "early": 0.3288,
+                "later": 0.2949,
+                "early_minus_later": 0.0339,
                 "ci95": {
-                  "lower": -0.0304,
-                  "upper": 0.0709,
+                  "lower": -0.0245,
+                  "upper": 0.0847,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -1939,12 +1939,12 @@
                 "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.8472,
-                "later": 0.7925,
-                "early_minus_later": 0.0548,
+                "early": 0.8511,
+                "later": 0.7885,
+                "early_minus_later": 0.0626,
                 "ci95": {
-                  "lower": -0.1035,
-                  "upper": 0.2772,
+                  "lower": -0.0945,
+                  "upper": 0.2704,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -1954,25 +1954,25 @@
             },
             "qwen2.5:3b": {
               "merged_agreement": {
-                "early": 0.2147,
-                "later": 0.177,
-                "early_minus_later": 0.0378,
+                "early": 0.2178,
+                "later": 0.1826,
+                "early_minus_later": 0.0353,
                 "ci95": {
-                  "lower": 0.0015,
-                  "upper": 0.0819,
+                  "lower": -0.0019,
+                  "upper": 0.0795,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
                 },
-                "excludes_zero": true
+                "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.3125,
-                "later": 0.3019,
-                "early_minus_later": 0.0106,
+                "early": 0.3121,
+                "later": 0.2692,
+                "early_minus_later": 0.0428,
                 "ci95": {
-                  "lower": -0.1432,
-                  "upper": 0.1619,
+                  "lower": -0.107,
+                  "upper": 0.2118,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -1982,12 +1982,12 @@
             },
             "qwen2.5:7b": {
               "merged_agreement": {
-                "early": 0.4409,
-                "later": 0.4045,
-                "early_minus_later": 0.0364,
+                "early": 0.4222,
+                "later": 0.3876,
+                "early_minus_later": 0.0346,
                 "ci95": {
-                  "lower": -0.0473,
-                  "upper": 0.1128,
+                  "lower": -0.0312,
+                  "upper": 0.0963,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -1995,12 +1995,12 @@
                 "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.5903,
-                "later": 0.5094,
-                "early_minus_later": 0.0808,
+                "early": 0.5816,
+                "later": 0.4615,
+                "early_minus_later": 0.12,
                 "ci95": {
-                  "lower": -0.0778,
-                  "upper": 0.2587,
+                  "lower": -0.0417,
+                  "upper": 0.2995,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2010,12 +2010,12 @@
             },
             "qwen3:14b": {
               "merged_agreement": {
-                "early": 0.4201,
-                "later": 0.4213,
-                "early_minus_later": -0.0012,
+                "early": 0.4108,
+                "later": 0.382,
+                "early_minus_later": 0.0288,
                 "ci95": {
-                  "lower": -0.0616,
-                  "upper": 0.0713,
+                  "lower": -0.0165,
+                  "upper": 0.0785,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2023,12 +2023,12 @@
                 "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.9722,
-                "later": 0.9623,
-                "early_minus_later": 0.01,
+                "early": 0.9716,
+                "later": 0.9615,
+                "early_minus_later": 0.0101,
                 "ci95": {
-                  "lower": -0.0514,
-                  "upper": 0.125,
+                  "lower": -0.05,
+                  "upper": 0.1311,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2042,23 +2042,23 @@
           "early": {
             "n": 241,
             "n_children": 11,
-            "reference_null_slots": 144
+            "reference_null_slots": 141
           },
           "later": {
             "n": 79,
             "n_children": 11,
-            "reference_null_slots": 50
+            "reference_null_slots": 48
           },
           "n_children_in_both": 11,
           "per_model": {
             "llama3.2:latest": {
               "merged_agreement": {
-                "early": 0.3154,
-                "later": 0.2816,
-                "early_minus_later": 0.0337,
+                "early": 0.3288,
+                "later": 0.288,
+                "early_minus_later": 0.0409,
                 "ci95": {
-                  "lower": -0.035,
-                  "upper": 0.0834,
+                  "lower": -0.0284,
+                  "upper": 0.0933,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2066,12 +2066,12 @@
                 "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.8472,
-                "later": 0.82,
-                "early_minus_later": 0.0272,
+                "early": 0.8511,
+                "later": 0.8125,
+                "early_minus_later": 0.0386,
                 "ci95": {
-                  "lower": -0.1006,
-                  "upper": 0.2287,
+                  "lower": -0.0941,
+                  "upper": 0.2393,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2081,12 +2081,12 @@
             },
             "qwen2.5:3b": {
               "merged_agreement": {
-                "early": 0.2147,
+                "early": 0.2178,
                 "later": 0.1835,
-                "early_minus_later": 0.0312,
+                "early_minus_later": 0.0343,
                 "ci95": {
-                  "lower": -0.0003,
-                  "upper": 0.0687,
+                  "lower": -0.0011,
+                  "upper": 0.0785,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2094,12 +2094,12 @@
                 "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.3125,
-                "later": 0.28,
-                "early_minus_later": 0.0325,
+                "early": 0.3121,
+                "later": 0.25,
+                "early_minus_later": 0.0621,
                 "ci95": {
-                  "lower": -0.0887,
-                  "upper": 0.1612,
+                  "lower": -0.0665,
+                  "upper": 0.2108,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2109,12 +2109,12 @@
             },
             "qwen2.5:7b": {
               "merged_agreement": {
-                "early": 0.4409,
-                "later": 0.4177,
-                "early_minus_later": 0.0231,
+                "early": 0.4222,
+                "later": 0.4019,
+                "early_minus_later": 0.0203,
                 "ci95": {
-                  "lower": -0.0683,
-                  "upper": 0.1065,
+                  "lower": -0.0456,
+                  "upper": 0.0823,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2122,12 +2122,12 @@
                 "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.5903,
-                "later": 0.48,
-                "early_minus_later": 0.1103,
+                "early": 0.5816,
+                "later": 0.4375,
+                "early_minus_later": 0.1441,
                 "ci95": {
-                  "lower": -0.0514,
-                  "upper": 0.278,
+                  "lower": -0.0259,
+                  "upper": 0.3109,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2137,12 +2137,12 @@
             },
             "qwen3:14b": {
               "merged_agreement": {
-                "early": 0.4201,
-                "later": 0.3956,
-                "early_minus_later": 0.0246,
+                "early": 0.4108,
+                "later": 0.3639,
+                "early_minus_later": 0.0469,
                 "ci95": {
-                  "lower": -0.0435,
-                  "upper": 0.0966,
+                  "lower": -0.0027,
+                  "upper": 0.094,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11
@@ -2150,12 +2150,12 @@
                 "excludes_zero": false
               },
               "unsupported_rate": {
-                "early": 0.9722,
-                "later": 0.96,
-                "early_minus_later": 0.0122,
+                "early": 0.9716,
+                "later": 0.9583,
+                "early_minus_later": 0.0133,
                 "ci95": {
-                  "lower": -0.0506,
-                  "upper": 0.1312,
+                  "lower": -0.0494,
+                  "upper": 0.1419,
                   "n_valid": 10000,
                   "unit": "child",
                   "children_resampled": 11

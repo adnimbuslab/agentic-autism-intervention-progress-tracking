@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T23:54:32.470053+00:00",
+  "generated_at": "2026-09-27T23:55:42.061978+00:00",
   "source_gold": "gold_labels.json",
   "source_batch": "annotation_batch.json",
   "models": [
@@ -28,65 +28,65 @@
   "per_field_counts": {
     "llama3.2:latest": {
       "domain:incorrect": 258,
-      "modality:correct": 161,
-      "prompt_level:incorrect": 189,
-      "outcome:incorrect": 113,
-      "outcome:hallucinated": 87,
+      "modality:correct": 163,
+      "prompt_level:incorrect": 175,
+      "outcome:incorrect": 119,
+      "outcome:hallucinated": 79,
       "domain:correct": 59,
-      "outcome:correct": 61,
-      "prompt_level:correct": 93,
-      "outcome:missing": 41,
-      "modality:incorrect": 81,
+      "outcome:correct": 63,
+      "prompt_level:correct": 105,
+      "outcome:missing": 42,
+      "modality:incorrect": 76,
       "domain:missing": 10,
       "modality:missing": 11,
-      "modality:hallucinated": 72,
+      "modality:hallucinated": 75,
       "prompt_level:missing": 46,
+      "outcome:correctly_null": 27,
       "modality:correctly_null": 5,
-      "outcome:correctly_null": 28,
       "domain:hallucinated": 3,
-      "prompt_level:hallucinated": 2
+      "prompt_level:hallucinated": 4
     },
     "qwen2.5:3b": {
       "domain:correct": 26,
-      "modality:incorrect": 74,
-      "prompt_level:missing": 277,
-      "outcome:missing": 114,
+      "modality:incorrect": 72,
+      "prompt_level:missing": 275,
+      "outcome:missing": 118,
       "domain:missing": 123,
-      "outcome:hallucinated": 46,
+      "outcome:hallucinated": 41,
       "domain:incorrect": 178,
-      "modality:missing": 121,
-      "outcome:correctly_null": 69,
-      "outcome:incorrect": 63,
+      "modality:missing": 120,
+      "outcome:incorrect": 66,
       "modality:correct": 58,
-      "prompt_level:incorrect": 39,
-      "outcome:correct": 38,
-      "prompt_level:correct": 12,
-      "modality:correctly_null": 62,
-      "modality:hallucinated": 15,
+      "prompt_level:incorrect": 35,
+      "outcome:correctly_null": 65,
+      "prompt_level:correct": 16,
+      "outcome:correct": 40,
+      "modality:correctly_null": 63,
+      "modality:hallucinated": 17,
       "domain:correctly_null": 3,
-      "prompt_level:correctly_null": 2
+      "prompt_level:correctly_null": 4
     },
     "qwen2.5:7b": {
       "domain:correct": 139,
-      "modality:correct": 178,
-      "prompt_level:incorrect": 146,
-      "outcome:incorrect": 102,
+      "modality:correct": 185,
+      "prompt_level:incorrect": 177,
+      "outcome:incorrect": 111,
       "domain:incorrect": 186,
-      "prompt_level:missing": 90,
-      "outcome:correctly_null": 37,
-      "outcome:hallucinated": 78,
-      "prompt_level:correct": 92,
-      "modality:missing": 38,
-      "outcome:missing": 38,
-      "outcome:correct": 75,
-      "modality:incorrect": 37,
-      "modality:hallucinated": 31,
-      "modality:correctly_null": 46,
+      "prompt_level:missing": 89,
+      "outcome:correctly_null": 36,
+      "prompt_level:correct": 60,
+      "modality:missing": 36,
+      "outcome:missing": 39,
+      "outcome:hallucinated": 70,
+      "outcome:correct": 74,
+      "modality:incorrect": 29,
+      "modality:hallucinated": 32,
+      "modality:correctly_null": 48,
       "domain:missing": 2,
       "domain:hallucinated": 2,
       "domain:correctly_null": 1,
-      "prompt_level:correctly_null": 1,
-      "prompt_level:hallucinated": 1
+      "prompt_level:correctly_null": 2,
+      "prompt_level:hallucinated": 2
     }
   },
   "gold": {
@@ -142,21 +142,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "correct"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "brett_flusberg_brett_050800.cha_seg_045": {
@@ -233,7 +233,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -247,7 +247,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -256,7 +256,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -302,7 +302,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "missing"
       },
       "qwen2.5:3b": {
@@ -316,7 +316,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       }
     },
@@ -371,21 +371,21 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -464,21 +464,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "brett_flusberg_brett_060207.cha_seg_005": {
@@ -509,7 +509,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "missing"
       },
       "qwen2.5:3b": {
@@ -523,7 +523,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -532,7 +532,7 @@
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -546,7 +546,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -579,21 +579,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "brett_flusberg_brett_060622.cha_seg_015": {
@@ -638,7 +638,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -670,7 +670,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -684,7 +684,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -693,7 +693,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -707,7 +707,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -716,21 +716,21 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -739,7 +739,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -753,7 +753,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -762,7 +762,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -776,7 +776,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -878,21 +878,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "missing",
-        "outcome": "missing"
+        "outcome": "correctly_null"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "missing"
+        "outcome": "correctly_null"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "incorrect",
-        "outcome": "correct"
+        "outcome": "hallucinated"
       }
     },
     "carl_rollins_carl_020800.cha_seg_040": {
@@ -969,20 +969,20 @@
         "domain": "missing",
         "behavior": "missing",
         "modality": "missing",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "missing"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
@@ -1005,7 +1005,7 @@
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "missing",
         "outcome": "incorrect"
       }
@@ -1028,7 +1028,7 @@
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "missing",
         "outcome": "correct"
       }
@@ -1060,21 +1060,21 @@
       "llama3.2:latest": {
         "domain": "missing",
         "behavior": "missing",
-        "modality": "incorrect",
+        "modality": "hallucinated",
         "prompt_level": "incorrect",
         "outcome": "missing"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "hallucinated",
         "prompt_level": "missing",
         "outcome": "correct"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "missing",
+        "modality": "correctly_null",
         "prompt_level": "incorrect",
         "outcome": "correct"
       }
@@ -1083,21 +1083,21 @@
       "llama3.2:latest": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "hallucinated",
         "prompt_level": "correct",
         "outcome": "hallucinated"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "hallucinated",
         "prompt_level": "incorrect",
         "outcome": "hallucinated"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "hallucinated",
         "prompt_level": "incorrect",
         "outcome": "hallucinated"
       }
@@ -1129,7 +1129,7 @@
       "llama3.2:latest": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "missing",
         "outcome": "correct"
       },
@@ -1143,8 +1143,8 @@
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
-        "modality": "incorrect",
-        "prompt_level": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
         "outcome": "correct"
       }
     },
@@ -1442,7 +1442,7 @@
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "missing",
         "outcome": "correct"
       }
@@ -1465,8 +1465,8 @@
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
-        "prompt_level": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
         "outcome": "correct"
       }
     },
@@ -1475,7 +1475,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -1498,7 +1498,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -1512,7 +1512,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -1521,7 +1521,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -1535,7 +1535,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -1581,7 +1581,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -1682,21 +1682,21 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -2050,7 +2050,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -2064,7 +2064,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -2142,22 +2142,22 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "prompt_level": "correct",
+        "outcome": "incorrect"
       }
     },
     "josh_rollins_josh_020500.cha_seg_013": {
@@ -2440,7 +2440,7 @@
       "llama3.2:latest": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "incorrect",
         "outcome": "hallucinated"
       },
@@ -2556,7 +2556,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -2570,7 +2570,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "missing"
       }
     },
@@ -2746,15 +2746,15 @@
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "missing",
         "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
-        "prompt_level": "correct",
+        "modality": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -2924,7 +2924,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -2938,7 +2938,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -3039,7 +3039,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -3053,7 +3053,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       }
     },
@@ -3200,7 +3200,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -3214,7 +3214,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -3224,21 +3224,21 @@
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "mark_flusberg_mark_080224.cha_seg_004": {
@@ -3361,21 +3361,21 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -3430,7 +3430,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -3444,7 +3444,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -3499,7 +3499,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "missing"
       },
       "qwen2.5:3b": {
@@ -3522,7 +3522,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -3536,7 +3536,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -3683,14 +3683,14 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "correct",
-        "prompt_level": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:7b": {
@@ -3959,22 +3959,22 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "hallucinated",
-        "prompt_level": "incorrect",
-        "outcome": "incorrect"
+        "prompt_level": "hallucinated",
+        "outcome": "hallucinated"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correctly_null",
-        "prompt_level": "missing",
-        "outcome": "missing"
+        "prompt_level": "correctly_null",
+        "outcome": "correctly_null"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "hallucinated",
-        "prompt_level": "missing",
-        "outcome": "missing"
+        "prompt_level": "correctly_null",
+        "outcome": "correctly_null"
       }
     },
     "mars_rollins_mars_030300.cha_seg_044": {
@@ -4073,21 +4073,21 @@
       "llama3.2:latest": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "hallucinated",
         "prompt_level": "incorrect",
         "outcome": "missing"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "missing",
+        "modality": "correctly_null",
         "prompt_level": "missing",
         "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "missing",
+        "modality": "correctly_null",
         "prompt_level": "missing",
         "outcome": "missing"
       }
@@ -4282,21 +4282,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "correct"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "missing",
-        "outcome": "hallucinated"
+        "outcome": "correct"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "missing",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "rick_flusberg_rick_040700.cha_seg_033": {
@@ -4350,7 +4350,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -4364,7 +4364,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -4420,21 +4420,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       }
     },
     "rick_flusberg_rick_040700.cha_seg_063": {
@@ -4442,7 +4442,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -4456,7 +4456,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -4479,7 +4479,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "missing"
       }
     },
@@ -4557,7 +4557,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -4571,7 +4571,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -4672,7 +4672,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -4686,7 +4686,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -4696,21 +4696,21 @@
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "correct"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "rick_flusberg_rick_060308.cha_seg_010": {
@@ -4787,7 +4787,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -4801,7 +4801,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -4833,7 +4833,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -4847,7 +4847,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -5123,7 +5123,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -5201,22 +5201,22 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
-        "outcome": "incorrect"
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "incorrect"
+        "outcome": "hallucinated"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
-        "outcome": "incorrect"
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
       }
     },
     "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_022": {
@@ -5247,7 +5247,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -5261,7 +5261,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -5294,21 +5294,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "correct"
       }
     },
     "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010": {
@@ -5339,21 +5339,21 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -5408,7 +5408,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -5422,7 +5422,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -5454,7 +5454,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       },
       "qwen2.5:3b": {
@@ -5468,7 +5468,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -5583,7 +5583,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -5593,21 +5593,21 @@
         "behavior": "missing",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_001": {
@@ -5616,21 +5616,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "correct"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "incorrect",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       }
     },
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_005": {
@@ -5823,21 +5823,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "missing",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "roger_rollins_rollins_roger_rollins_020600.cha_seg_040": {
@@ -6120,23 +6120,23 @@
       "llama3.2:latest": {
         "domain": "correct",
         "behavior": "incorrect",
-        "modality": "correct",
+        "modality": "incorrect",
         "prompt_level": "incorrect",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       }
     },
     "roger_rollins_rollins_roger_rollins_020800.cha_seg_010": {
@@ -6626,7 +6626,7 @@
       "llama3.2:latest": {
         "domain": "incorrect",
         "behavior": "incorrect",
-        "modality": "incorrect",
+        "modality": "correct",
         "prompt_level": "incorrect",
         "outcome": "hallucinated"
       },
@@ -6858,21 +6858,21 @@
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "missing",
-        "outcome": "missing"
+        "outcome": "correctly_null"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "missing"
+        "outcome": "correctly_null"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
         "prompt_level": "missing",
-        "outcome": "missing"
+        "outcome": "correctly_null"
       }
     },
     "sid_rollins_sid_030200.cha_seg_031": {
@@ -7019,21 +7019,21 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
         "prompt_level": "missing",
-        "outcome": "correctly_null"
+        "outcome": "missing"
       },
       "qwen2.5:7b": {
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "correct",
-        "outcome": "hallucinated"
+        "outcome": "incorrect"
       }
     },
     "stuart_flusberg_stuart_030400.cha_seg_012": {
@@ -7124,7 +7124,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "missing",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       }
     },
@@ -7140,7 +7140,7 @@
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "missing",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "missing"
       },
       "qwen2.5:7b": {
@@ -7170,7 +7170,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "incorrect"
       }
     },
@@ -7202,7 +7202,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -7216,7 +7216,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -7248,7 +7248,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -7340,22 +7340,22 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "incorrect",
-        "outcome": "incorrect"
+        "prompt_level": "hallucinated",
+        "outcome": "hallucinated"
       },
       "qwen2.5:3b": {
         "domain": "missing",
         "behavior": "incorrect",
         "modality": "missing",
-        "prompt_level": "missing",
-        "outcome": "missing"
+        "prompt_level": "correctly_null",
+        "outcome": "correctly_null"
       },
       "qwen2.5:7b": {
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "incorrect",
-        "prompt_level": "correct",
-        "outcome": "incorrect"
+        "prompt_level": "hallucinated",
+        "outcome": "hallucinated"
       }
     },
     "stuart_flusberg_stuart_030610.cha_seg_019": {
@@ -7386,7 +7386,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -7400,7 +7400,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "incorrect"
       }
     },
@@ -7409,7 +7409,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -7423,7 +7423,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -7446,7 +7446,7 @@
         "domain": "correct",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -7479,7 +7479,7 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "correct"
+        "outcome": "incorrect"
       },
       "qwen2.5:3b": {
         "domain": "incorrect",
@@ -7493,7 +7493,7 @@
         "behavior": "incorrect",
         "modality": "correct",
         "prompt_level": "incorrect",
-        "outcome": "correct"
+        "outcome": "incorrect"
       }
     },
     "stuart_flusberg_stuart_030806.cha_seg_016": {
@@ -7524,7 +7524,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -7538,7 +7538,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "correct",
+        "prompt_level": "incorrect",
         "outcome": "correct"
       }
     },
@@ -7616,7 +7616,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       },
       "qwen2.5:3b": {
@@ -7630,7 +7630,7 @@
         "domain": "incorrect",
         "behavior": "incorrect",
         "modality": "correct",
-        "prompt_level": "incorrect",
+        "prompt_level": "correct",
         "outcome": "correct"
       }
     },

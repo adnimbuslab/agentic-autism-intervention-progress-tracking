@@ -160,9 +160,9 @@
     "adjudicator": "consensus:annotator_a+annotator_b (both annotators, jointly, working from docs/annotation_codebook.md)",
     "nulls_per_field": {
       "domain": 3,
-      "modality": 77,
-      "prompt_level": 2,
-      "outcome": 115
+      "modality": 80,
+      "prompt_level": 4,
+      "outcome": 106
     }
   },
   "extraction": {
@@ -183,19 +183,19 @@
           "rate": 0.1788
         },
         "modality": {
-          "n": 166,
+          "n": 168,
           "denominator": 330,
-          "rate": 0.503
+          "rate": 0.5091
         },
         "prompt_level": {
-          "n": 93,
+          "n": 105,
           "denominator": 330,
-          "rate": 0.2818
+          "rate": 0.3182
         },
         "outcome": {
-          "n": 89,
+          "n": 90,
           "denominator": 330,
-          "rate": 0.2697
+          "rate": 0.2727
         }
       },
       "qwen2.5:3b": {
@@ -205,19 +205,19 @@
           "rate": 0.0879
         },
         "modality": {
-          "n": 120,
+          "n": 121,
           "denominator": 330,
-          "rate": 0.3636
+          "rate": 0.3667
         },
         "prompt_level": {
-          "n": 14,
+          "n": 20,
           "denominator": 330,
-          "rate": 0.0424
+          "rate": 0.0606
         },
         "outcome": {
-          "n": 107,
+          "n": 105,
           "denominator": 330,
-          "rate": 0.3242
+          "rate": 0.3182
         }
       },
       "qwen2.5:7b": {
@@ -227,19 +227,19 @@
           "rate": 0.4242
         },
         "modality": {
-          "n": 224,
+          "n": 233,
           "denominator": 330,
-          "rate": 0.6788
+          "rate": 0.7061
         },
         "prompt_level": {
-          "n": 93,
+          "n": 62,
           "denominator": 330,
-          "rate": 0.2818
+          "rate": 0.1879
         },
         "outcome": {
-          "n": 112,
+          "n": 110,
           "denominator": 330,
-          "rate": 0.3394
+          "rate": 0.3333
         }
       }
     },
@@ -251,19 +251,19 @@
           "rate": 1.0
         },
         "modality": {
-          "n": 72,
-          "denominator": 77,
-          "rate": 0.9351
+          "n": 75,
+          "denominator": 80,
+          "rate": 0.9375
         },
         "prompt_level": {
-          "n": 2,
-          "denominator": 2,
+          "n": 4,
+          "denominator": 4,
           "rate": 1.0
         },
         "outcome": {
-          "n": 87,
-          "denominator": 115,
-          "rate": 0.7565
+          "n": 79,
+          "denominator": 106,
+          "rate": 0.7453
         }
       },
       "qwen2.5:3b": {
@@ -273,19 +273,19 @@
           "rate": 0.0
         },
         "modality": {
-          "n": 15,
-          "denominator": 77,
-          "rate": 0.1948
+          "n": 17,
+          "denominator": 80,
+          "rate": 0.2125
         },
         "prompt_level": {
           "n": 0,
-          "denominator": 2,
+          "denominator": 4,
           "rate": 0.0
         },
         "outcome": {
-          "n": 46,
-          "denominator": 115,
-          "rate": 0.4
+          "n": 41,
+          "denominator": 106,
+          "rate": 0.3868
         }
       },
       "qwen2.5:7b": {
@@ -295,31 +295,31 @@
           "rate": 0.6667
         },
         "modality": {
-          "n": 31,
-          "denominator": 77,
-          "rate": 0.4026
+          "n": 32,
+          "denominator": 80,
+          "rate": 0.4
         },
         "prompt_level": {
-          "n": 1,
-          "denominator": 2,
+          "n": 2,
+          "denominator": 4,
           "rate": 0.5
         },
         "outcome": {
-          "n": 78,
-          "denominator": 115,
-          "rate": 0.6783
+          "n": 70,
+          "denominator": 106,
+          "rate": 0.6604
         }
       }
     },
     "whole_record": {
       "per_generator": {
-        "llama3.2:latest": 0.015151515151515152,
-        "qwen2.5:3b": 0.0030303030303030303,
-        "qwen2.5:7b": 0.045454545454545456
+        "llama3.2:latest": 0.006060606060606061,
+        "qwen2.5:3b": 0.00909090909090909,
+        "qwen2.5:7b": 0.021212121212121213
       },
       "best_generator": "qwen2.5:7b",
-      "best_accuracy": 0.045454545454545456,
-      "oracle_ceiling": 0.06060606060606061,
+      "best_accuracy": 0.021212121212121213,
+      "oracle_ceiling": 0.03636363636363636,
       "headroom": 0.0152
     }
   },
@@ -348,16 +348,16 @@
       }
     },
     "whole_record_accuracy": {
-      "over_returned": 0.033962264150943396,
-      "over_all": 0.02727272727272727
+      "over_returned": 0.018867924528301886,
+      "over_all": 0.015151515151515152
     },
     "selection_quality": {
       "n_judged_segments": 142,
       "n_short_circuit_excluded": 123,
       "mean_accuracy": {
-        "mars": 0.4349,
-        "best_generator": 0.4736,
-        "random_candidate": 0.3247
+        "mars": 0.419,
+        "best_generator": 0.4436,
+        "random_candidate": 0.323
       },
       "share_choosing_best_generator": 0.5775,
       "per_field": {
@@ -381,57 +381,57 @@
           }
         },
         "modality": {
-          "mars": 0.7465,
-          "best_generator": 0.7746,
-          "random_candidate": 0.556,
+          "mars": 0.7746,
+          "best_generator": 0.8028,
+          "random_candidate": 0.5698,
           "vs_best": {
-            "difference": -0.0282,
-            "lower": -0.0845,
+            "difference": -0.0283,
+            "lower": -0.0915,
             "upper": 0.0282,
             "excludes_zero": false,
             "unit": "segment"
           },
           "vs_random": {
-            "difference": 0.1903,
-            "lower": 0.0986,
-            "upper": 0.2817,
+            "difference": 0.2046,
+            "lower": 0.1127,
+            "upper": 0.2958,
             "excludes_zero": true,
             "unit": "segment"
           }
         },
         "prompt_level": {
-          "mars": 0.338,
-          "best_generator": 0.3592,
-          "random_candidate": 0.2352,
+          "mars": 0.2394,
+          "best_generator": 0.2113,
+          "random_candidate": 0.2119,
           "vs_best": {
-            "difference": -0.0209,
-            "lower": -0.0915,
-            "upper": 0.0423,
+            "difference": 0.0285,
+            "lower": -0.0423,
+            "upper": 0.0986,
             "excludes_zero": false,
             "unit": "segment"
           },
           "vs_random": {
-            "difference": 0.1348,
-            "lower": 0.0563,
-            "upper": 0.2183,
-            "excludes_zero": true,
+            "difference": 0.0363,
+            "lower": -0.0352,
+            "upper": 0.1127,
+            "excludes_zero": false,
             "unit": "segment"
           }
         },
         "outcome": {
-          "mars": 0.3239,
+          "mars": 0.331,
           "best_generator": 0.3028,
-          "random_candidate": 0.2847,
+          "random_candidate": 0.2872,
           "vs_best": {
-            "difference": 0.0212,
-            "lower": -0.0282,
-            "upper": 0.0704,
+            "difference": 0.0282,
+            "lower": -0.0211,
+            "upper": 0.0775,
             "excludes_zero": false,
             "unit": "segment"
           },
           "vs_random": {
-            "difference": 0.0569,
-            "lower": -0.0141,
+            "difference": 0.0497,
+            "lower": -0.0211,
             "upper": 0.1268,
             "excludes_zero": false,
             "unit": "segment"
@@ -453,12 +453,12 @@
     "note": "The fourth generator was run after annotation and scored against the same model-independent gold standard. It contributed no candidates to the MARS run or to the three-generator oracle ceiling reported above.",
     "per_model": {
       "llama3.2:latest": {
-        "mean_field_accuracy": 0.3083,
+        "mean_field_accuracy": 0.3197,
         "per_field_accuracy": {
           "domain": 0.1788,
-          "modality": 0.503,
-          "prompt_level": 0.2818,
-          "outcome": 0.2697
+          "modality": 0.5091,
+          "prompt_level": 0.3182,
+          "outcome": 0.2727
         },
         "agreement_where_value_recorded": {
           "domain": {
@@ -466,16 +466,16 @@
             "rate": 0.1804
           },
           "modality": {
-            "n": 253,
-            "rate": 0.6364
+            "n": 250,
+            "rate": 0.652
           },
           "prompt_level": {
-            "n": 328,
-            "rate": 0.2835
+            "n": 326,
+            "rate": 0.3221
           },
           "outcome": {
-            "n": 215,
-            "rate": 0.2837
+            "n": 224,
+            "rate": 0.2812
           }
         },
         "agreement_where_no_value_recorded": {
@@ -484,36 +484,36 @@
             "rate": 0.0
           },
           "modality": {
-            "n": 77,
-            "rate": 0.0649
+            "n": 80,
+            "rate": 0.0625
           },
           "prompt_level": {
-            "n": 2,
+            "n": 4,
             "rate": 0.0
           },
           "outcome": {
-            "n": 115,
-            "rate": 0.2435
+            "n": 106,
+            "rate": 0.2547
           }
         },
-        "mean_abstention_rate": 0.0818,
+        "mean_abstention_rate": 0.0826,
         "per_field_abstention": {
           "domain": 0.0303,
           "modality": 0.0333,
           "prompt_level": 0.1394,
-          "outcome": 0.1242
+          "outcome": 0.1273
         },
-        "unsupported_n": 164,
-        "unsupported_opportunities": 197,
-        "unsupported_rate": 0.8325
+        "unsupported_n": 161,
+        "unsupported_opportunities": 193,
+        "unsupported_rate": 0.8342
       },
       "qwen2.5:3b": {
-        "mean_field_accuracy": 0.2045,
+        "mean_field_accuracy": 0.2084,
         "per_field_accuracy": {
           "domain": 0.0879,
-          "modality": 0.3636,
-          "prompt_level": 0.0424,
-          "outcome": 0.3242
+          "modality": 0.3667,
+          "prompt_level": 0.0606,
+          "outcome": 0.3182
         },
         "agreement_where_value_recorded": {
           "domain": {
@@ -521,16 +521,16 @@
             "rate": 0.0795
           },
           "modality": {
-            "n": 253,
-            "rate": 0.2292
+            "n": 250,
+            "rate": 0.232
           },
           "prompt_level": {
-            "n": 328,
-            "rate": 0.0366
+            "n": 326,
+            "rate": 0.0491
           },
           "outcome": {
-            "n": 215,
-            "rate": 0.1767
+            "n": 224,
+            "rate": 0.1786
           }
         },
         "agreement_where_no_value_recorded": {
@@ -539,36 +539,36 @@
             "rate": 1.0
           },
           "modality": {
-            "n": 77,
-            "rate": 0.8052
+            "n": 80,
+            "rate": 0.7875
           },
           "prompt_level": {
-            "n": 2,
+            "n": 4,
             "rate": 1.0
           },
           "outcome": {
-            "n": 115,
-            "rate": 0.6
+            "n": 106,
+            "rate": 0.6132
           }
         },
-        "mean_abstention_rate": 0.4811,
+        "mean_abstention_rate": 0.4818,
         "per_field_abstention": {
           "domain": 0.3727,
-          "modality": 0.3667,
-          "prompt_level": 0.8394,
-          "outcome": 0.3455
+          "modality": 0.3636,
+          "prompt_level": 0.8333,
+          "outcome": 0.3576
         },
-        "unsupported_n": 61,
-        "unsupported_opportunities": 197,
-        "unsupported_rate": 0.3096
+        "unsupported_n": 58,
+        "unsupported_opportunities": 193,
+        "unsupported_rate": 0.3005
       },
       "qwen2.5:7b": {
-        "mean_field_accuracy": 0.431,
+        "mean_field_accuracy": 0.4129,
         "per_field_accuracy": {
           "domain": 0.4242,
-          "modality": 0.6788,
-          "prompt_level": 0.2818,
-          "outcome": 0.3394
+          "modality": 0.7061,
+          "prompt_level": 0.1879,
+          "outcome": 0.3333
         },
         "agreement_where_value_recorded": {
           "domain": {
@@ -576,16 +576,16 @@
             "rate": 0.4251
           },
           "modality": {
-            "n": 253,
-            "rate": 0.7036
+            "n": 250,
+            "rate": 0.74
           },
           "prompt_level": {
-            "n": 328,
-            "rate": 0.2805
+            "n": 326,
+            "rate": 0.184
           },
           "outcome": {
-            "n": 215,
-            "rate": 0.3488
+            "n": 224,
+            "rate": 0.3304
           }
         },
         "agreement_where_no_value_recorded": {
@@ -594,36 +594,36 @@
             "rate": 0.3333
           },
           "modality": {
-            "n": 77,
-            "rate": 0.5974
+            "n": 80,
+            "rate": 0.6
           },
           "prompt_level": {
-            "n": 2,
+            "n": 4,
             "rate": 0.5
           },
           "outcome": {
-            "n": 115,
-            "rate": 0.3217
+            "n": 106,
+            "rate": 0.3396
           }
         },
-        "mean_abstention_rate": 0.1273,
+        "mean_abstention_rate": 0.1258,
         "per_field_abstention": {
           "domain": 0.0061,
-          "modality": 0.1152,
-          "prompt_level": 0.2727,
-          "outcome": 0.1152
+          "modality": 0.1091,
+          "prompt_level": 0.2697,
+          "outcome": 0.1182
         },
-        "unsupported_n": 112,
-        "unsupported_opportunities": 197,
-        "unsupported_rate": 0.5685
+        "unsupported_n": 106,
+        "unsupported_opportunities": 193,
+        "unsupported_rate": 0.5492
       },
       "qwen3:14b": {
-        "mean_field_accuracy": 0.4204,
+        "mean_field_accuracy": 0.403,
         "per_field_accuracy": {
           "domain": 0.3909,
-          "modality": 0.6424,
-          "prompt_level": 0.3636,
-          "outcome": 0.2848
+          "modality": 0.6515,
+          "prompt_level": 0.2667,
+          "outcome": 0.303
         },
         "agreement_where_value_recorded": {
           "domain": {
@@ -631,16 +631,16 @@
             "rate": 0.3945
           },
           "modality": {
-            "n": 253,
-            "rate": 0.834
+            "n": 250,
+            "rate": 0.856
           },
           "prompt_level": {
-            "n": 328,
-            "rate": 0.3628
+            "n": 326,
+            "rate": 0.2669
           },
           "outcome": {
-            "n": 215,
-            "rate": 0.4186
+            "n": 224,
+            "rate": 0.4286
           }
         },
         "agreement_where_no_value_recorded": {
@@ -649,16 +649,16 @@
             "rate": 0.0
           },
           "modality": {
-            "n": 77,
-            "rate": 0.013
+            "n": 80,
+            "rate": 0.0125
           },
           "prompt_level": {
-            "n": 2,
-            "rate": 0.5
+            "n": 4,
+            "rate": 0.25
           },
           "outcome": {
-            "n": 115,
-            "rate": 0.0348
+            "n": 106,
+            "rate": 0.0377
           }
         },
         "mean_abstention_rate": 0.0295,
@@ -668,19 +668,19 @@
           "prompt_level": 0.0242,
           "outcome": 0.0121
         },
-        "unsupported_n": 191,
-        "unsupported_opportunities": 197,
-        "unsupported_rate": 0.9695
+        "unsupported_n": 187,
+        "unsupported_opportunities": 193,
+        "unsupported_rate": 0.9689
       }
     },
     "whole_record": {
       "per_generator": {
-        "llama3.2:latest": 0.015151515151515152,
-        "qwen2.5:3b": 0.0030303030303030303,
-        "qwen2.5:7b": 0.045454545454545456,
-        "qwen3:14b": 0.030303030303030304
+        "llama3.2:latest": 0.006060606060606061,
+        "qwen2.5:3b": 0.00909090909090909,
+        "qwen2.5:7b": 0.021212121212121213,
+        "qwen3:14b": 0.00909090909090909
       },
-      "oracle_ceiling": 0.08787878787878788
+      "oracle_ceiling": 0.045454545454545456
     }
   }
 }
