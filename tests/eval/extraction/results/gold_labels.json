@@ -49,7 +49,7 @@
         "behavior": "Asked for the gate to be put in the placemats and repeated the request.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "correct"
       },
       "child_id": "brett",
       "source": "adjudicated"
@@ -92,7 +92,7 @@
         "domain": "language",
         "behavior": "Answered broccoli when asked to name lettuce.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "incorrect"
       },
       "child_id": "brett",
@@ -103,7 +103,7 @@
         "domain": "language",
         "behavior": "Said you are putting lemon and then gave incomplete answers about Jenny and the stool.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "brett",
@@ -125,7 +125,7 @@
         "domain": "cognitive",
         "behavior": "Said a knife can cut someone badly and repeated that answer when asked.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "brett",
@@ -158,7 +158,7 @@
         "domain": "cognitive",
         "behavior": "Named the truck and car colors as orange, yellow and blue.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "brett",
@@ -203,7 +203,7 @@
         "behavior": "Asked about going to a father's house and then protested that he did not want to go.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "correct"
       },
       "child_id": "brett",
       "source": "adjudicated"
@@ -224,7 +224,7 @@
         "domain": "cognitive",
         "behavior": "Explained that he could have two raisins because he played Candy Land and passed two.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "brett",
@@ -235,7 +235,7 @@
         "domain": "language",
         "behavior": "Described the girl's shirt and guitar and said she was inside.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "brett",
@@ -258,7 +258,7 @@
         "behavior": "Asked can I play after being told there would be no work-box activity.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "incorrect"
       },
       "child_id": "brett",
       "source": "adjudicated"
@@ -279,7 +279,7 @@
         "domain": "language",
         "behavior": "Tried several words related to the material and attempted to sound out a word after prompting.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "model",
         "outcome": "approximation"
       },
       "child_id": "brett",
@@ -301,7 +301,7 @@
         "domain": "cognitive",
         "behavior": "Explained where to throw the bowling ball and what happens if it goes in the gutter.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "brett",
@@ -312,7 +312,7 @@
         "domain": "language",
         "behavior": "Talked about activities and answered that they ate dinner.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "brett",
@@ -323,7 +323,7 @@
         "domain": "language",
         "behavior": "Recalled the song and described what happened to the meatball.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "brett",
@@ -334,7 +334,7 @@
         "domain": "language",
         "behavior": "Answered that it was a big tree and that meatballs were on it.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "brett",
@@ -345,7 +345,7 @@
         "domain": "language",
         "behavior": "Explained why the meatball fell and later answered what he did in circle time.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "brett",
@@ -401,7 +401,7 @@
         "behavior": "Said hi and waved after the adult repeatedly greeted and waved.",
         "modality": "multimodal",
         "prompt_level": "model",
-        "outcome": "correct"
+        "outcome": null
       },
       "child_id": "carl",
       "source": "adjudicated"
@@ -443,8 +443,8 @@
       "field_values": {
         "domain": "cognitive",
         "behavior": "Put the item in and then said done.",
-        "modality": "multimodal",
-        "prompt_level": "verbal",
+        "modality": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "carl",
@@ -454,7 +454,7 @@
       "field_values": {
         "domain": "language",
         "behavior": "Named the house and put the house piece into the card.",
-        "modality": "multimodal",
+        "modality": "verbal",
         "prompt_level": "independent",
         "outcome": "correct"
       },
@@ -465,7 +465,7 @@
       "field_values": {
         "domain": "language",
         "behavior": "Took out the airplane, held it up and labeled it as airplane.",
-        "modality": "multimodal",
+        "modality": "verbal",
         "prompt_level": "independent",
         "outcome": "correct"
       },
@@ -487,7 +487,7 @@
       "field_values": {
         "domain": "play",
         "behavior": "Pretended to feed the horse and laughed during the pretend eating game.",
-        "modality": "multimodal",
+        "modality": null,
         "prompt_level": "model",
         "outcome": "correct"
       },
@@ -498,7 +498,7 @@
       "field_values": {
         "domain": "play",
         "behavior": "Kissed the toy dog, made it eat and laughed during pretend play.",
-        "modality": "multimodal",
+        "modality": null,
         "prompt_level": "independent",
         "outcome": null
       },
@@ -520,8 +520,8 @@
       "field_values": {
         "domain": "play",
         "behavior": "Named the school bus and airplane, made vroom sounds and flew the airplane.",
-        "modality": "multimodal",
-        "prompt_level": "verbal",
+        "modality": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "carl",
@@ -663,8 +663,8 @@
       "field_values": {
         "domain": "play",
         "behavior": "Named body parts and the daddy potato, answered yes, and continued assembling the toy.",
-        "modality": "multimodal",
-        "prompt_level": "verbal",
+        "modality": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "carl",
@@ -674,8 +674,8 @@
       "field_values": {
         "domain": "adaptive",
         "behavior": "Turned off the water when asked and commented that the bubbles were gone.",
-        "modality": "multimodal",
-        "prompt_level": "verbal",
+        "modality": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "carl",
@@ -686,7 +686,7 @@
         "domain": "language",
         "behavior": "Produced the phrase 'the right colors' across several short turns.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "unknown"
       },
       "child_id": "jack",
@@ -697,7 +697,7 @@
         "domain": "language",
         "behavior": "Read or said the words shown, including greedy, color and hearts.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "jack",
@@ -708,7 +708,7 @@
         "domain": "language",
         "behavior": "Correctly named the picture as a dog but then gave unclear responses to the reading question.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "jack",
@@ -730,7 +730,7 @@
         "domain": "cognitive",
         "behavior": "Named colors including blue, orange and pink, with correction and modeling from the adult.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "model",
         "outcome": "partial"
       },
       "child_id": "jack",
@@ -785,7 +785,7 @@
         "domain": "cognitive",
         "behavior": "Said the cars go on the road, described the direction, and answered yes about drawing the school.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "jack",
@@ -961,7 +961,7 @@
         "domain": "language",
         "behavior": "Read the sentence inside was a toy kangaroo.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "approximation"
       },
       "child_id": "jack",
@@ -1005,8 +1005,8 @@
         "domain": "social_communication",
         "behavior": "Repeated 'stop' to protest the adult joining the writing activity.",
         "modality": "verbal",
-        "prompt_level": "independent",
-        "outcome": null
+        "prompt_level": "verbal",
+        "outcome": "unknown"
       },
       "child_id": "jack",
       "source": "adjudicated"
@@ -1147,7 +1147,7 @@
       "field_values": {
         "domain": "social_communication",
         "behavior": "Walked to the clinician, vocalized and touched the clinician's shoulder.",
-        "modality": "multimodal",
+        "modality": "gestural",
         "prompt_level": "independent",
         "outcome": null
       },
@@ -1203,7 +1203,7 @@
         "domain": "cognitive",
         "behavior": "Repeated 'put in' and then pushed the puzzle piece into place.",
         "modality": "multimodal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "josh",
@@ -1290,8 +1290,8 @@
       "field_values": {
         "domain": "cognitive",
         "behavior": "Took a Lego and threw it in while vocalizing, then made more jargon sounds.",
-        "modality": "multimodal",
-        "prompt_level": "verbal",
+        "modality": "verbal",
+        "prompt_level": "model",
         "outcome": "partial"
       },
       "child_id": "josh",
@@ -1379,7 +1379,7 @@
         "domain": "language",
         "behavior": "Named the people in the boat as a boy and a bear.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mark",
@@ -1434,7 +1434,7 @@
         "domain": "cognitive",
         "behavior": "Identified the day as Thursday and then said today is Thursday.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mark",
@@ -1511,7 +1511,7 @@
         "domain": "language",
         "behavior": "Described the balloon as ripping and broken.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mark",
@@ -1523,7 +1523,7 @@
         "behavior": "Said it broke and repeatedly requested more balloon.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "unknown"
       },
       "child_id": "mark",
       "source": "adjudicated"
@@ -1544,7 +1544,7 @@
         "domain": "language",
         "behavior": "Repeated blowing to complete the adult phrase about the balloon.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mark",
@@ -1555,7 +1555,7 @@
         "domain": "language",
         "behavior": "Said the balloon was bigger and broken, then asked done.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mark",
@@ -1588,7 +1588,7 @@
         "domain": "social_communication",
         "behavior": "Answered yes about playing ball at school.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "mark",
@@ -1621,7 +1621,7 @@
         "domain": "language",
         "behavior": "Named the slide and swing when asked what else he played with.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mark",
@@ -1654,7 +1654,7 @@
         "domain": "language",
         "behavior": "Said phrases about a kite and balloon during the exchange.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "unknown"
       },
       "child_id": "mark",
@@ -1665,7 +1665,7 @@
         "domain": "cognitive",
         "behavior": "Said yes to balloons in the sky, then gave balloon again when asked what else could go there.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "mark",
@@ -1741,8 +1741,8 @@
       "field_values": {
         "domain": "adaptive",
         "behavior": "Pushed the door open after being asked and said bye.",
-        "modality": "multimodal",
-        "prompt_level": "verbal",
+        "modality": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mars",
@@ -1797,7 +1797,7 @@
         "domain": "cognitive",
         "behavior": "Continued the counting sequence with two, three and four as pages were turned.",
         "modality": "verbal",
-        "prompt_level": "model",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "mars",
@@ -1874,8 +1874,8 @@
         "domain": "motor",
         "behavior": "Continued scribbling on the mirror while the adult modeled the letter M.",
         "modality": null,
-        "prompt_level": "model",
-        "outcome": "approximation"
+        "prompt_level": null,
+        "outcome": null
       },
       "child_id": "mars",
       "source": "adjudicated"
@@ -1928,8 +1928,8 @@
       "field_values": {
         "domain": "cognitive",
         "behavior": "Picked up a train when asked what he found but did not verbally name it.",
-        "modality": "gestural",
-        "prompt_level": "verbal",
+        "modality": null,
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "mars",
@@ -2029,7 +2029,7 @@
         "behavior": "Repeated words about the dishes and color, then asked to go to the bathroom.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "unknown"
       },
       "child_id": "rick",
       "source": "adjudicated"
@@ -2061,7 +2061,7 @@
         "domain": "language",
         "behavior": "Identified the character as Bert.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "rick",
@@ -2095,7 +2095,7 @@
         "behavior": "Repeated want Dan.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "unknown"
       },
       "child_id": "rick",
       "source": "adjudicated"
@@ -2105,7 +2105,7 @@
         "domain": "language",
         "behavior": "Identified the character as Mickey Mouse.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "rick",
@@ -2116,7 +2116,7 @@
         "domain": "language",
         "behavior": "Said 'stairs' after being told to make the figure walk and after the adult said 'up the stairs'.",
         "modality": "verbal",
-        "prompt_level": "model",
+        "prompt_level": "verbal",
         "outcome": "partial"
       },
       "child_id": "rick",
@@ -2160,7 +2160,7 @@
         "domain": "cognitive",
         "behavior": "Identified the color as blue.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "rick",
@@ -2215,7 +2215,7 @@
         "domain": "language",
         "behavior": "Said I am play drums when asked what he was doing.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "rick",
@@ -2227,7 +2227,7 @@
         "behavior": "Spontaneously asked for help and later answered yes when asked if he needed help.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "unknown"
       },
       "child_id": "rick",
       "source": "adjudicated"
@@ -2270,7 +2270,7 @@
         "domain": "language",
         "behavior": "Said off when asked what he was taking out and later said whoops.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "model",
         "outcome": "partial"
       },
       "child_id": "rick",
@@ -2292,7 +2292,7 @@
         "domain": "language",
         "behavior": "Responded guitar and then identified Big Bird as the one playing the guitar.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "rick",
@@ -2424,7 +2424,7 @@
         "domain": "language",
         "behavior": "Said good boy when asked which car belonged to Ann.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "incorrect"
       },
       "child_id": "roger_flusberg",
@@ -2468,8 +2468,8 @@
         "domain": "language",
         "behavior": "Repeatedly called the astronaut a duck and also said 'hat'.",
         "modality": "verbal",
-        "prompt_level": "verbal",
-        "outcome": "incorrect"
+        "prompt_level": "independent",
+        "outcome": null
       },
       "child_id": "roger_flusberg",
       "source": "adjudicated"
@@ -2490,7 +2490,7 @@
         "domain": "language",
         "behavior": "Named the Etch A Sketch and referred to stairs, which the adult confirmed.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "roger_flusberg",
@@ -2513,7 +2513,7 @@
         "behavior": "Described setting the table and eating supper during pretend play.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "correct"
       },
       "child_id": "roger_flusberg",
       "source": "adjudicated"
@@ -2534,7 +2534,7 @@
         "domain": "play",
         "behavior": "Said he was playing with a tower and that he was going to make a tower.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "roger_flusberg",
@@ -2567,7 +2567,7 @@
         "domain": "language",
         "behavior": "Answered that Santa would bring toys and a Christmas tree.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "model",
         "outcome": "correct"
       },
       "child_id": "roger_flusberg",
@@ -2589,7 +2589,7 @@
         "domain": "language",
         "behavior": "Said he was playing with toys, then called the adult table your table and was corrected.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "roger_flusberg",
@@ -2644,7 +2644,7 @@
         "domain": "language",
         "behavior": "Named Lee School after the adult gave part of the school name.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "model",
         "outcome": "partial"
       },
       "child_id": "roger_flusberg",
@@ -2656,7 +2656,7 @@
         "behavior": "Said he wanted to do the puzzle and later talked about wanting to color.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "correct"
       },
       "child_id": "roger_flusberg",
       "source": "adjudicated"
@@ -2667,7 +2667,7 @@
         "behavior": "Led the adult by the hand to the cabinet and moved the adult hand upward to show what he wanted.",
         "modality": "gestural",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "unknown"
       },
       "child_id": "roger_rollins",
       "source": "adjudicated"
@@ -2766,7 +2766,7 @@
         "behavior": "Led the adult to the sandbox, placed the adult's hand on the lid and pushed up on it.",
         "modality": "gestural",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "unknown"
       },
       "child_id": "roger_rollins",
       "source": "adjudicated"
@@ -2907,9 +2907,9 @@
       "field_values": {
         "domain": "play",
         "behavior": "Reached for the cookie and later said get set, go while moving around the room.",
-        "modality": "multimodal",
+        "modality": "gestural",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "correct"
       },
       "child_id": "roger_rollins",
       "source": "adjudicated"
@@ -3149,7 +3149,7 @@
       "field_values": {
         "domain": "social_communication",
         "behavior": "Made unclear vocalizations, took the chalk and pointed to the chalkboard.",
-        "modality": "multimodal",
+        "modality": "gestural",
         "prompt_level": "independent",
         "outcome": null
       },
@@ -3260,8 +3260,8 @@
         "domain": "social_communication",
         "behavior": "Pointed during a greeting and then moved around on the floor.",
         "modality": "gestural",
-        "prompt_level": "verbal",
-        "outcome": "unknown"
+        "prompt_level": "independent",
+        "outcome": null
       },
       "child_id": "sid",
       "source": "adjudicated"
@@ -3338,7 +3338,7 @@
         "behavior": "Repeated cracker during the interaction.",
         "modality": "verbal",
         "prompt_level": "independent",
-        "outcome": null
+        "outcome": "unknown"
       },
       "child_id": "stuart",
       "source": "adjudicated"
@@ -3381,7 +3381,7 @@
         "domain": "language",
         "behavior": "Repeated do this several times after the adult said it.",
         "modality": "verbal",
-        "prompt_level": "model",
+        "prompt_level": "verbal",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3392,7 +3392,7 @@
         "domain": "language",
         "behavior": "Repeated the phrase 'do this'.",
         "modality": "verbal",
-        "prompt_level": "model",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3403,7 +3403,7 @@
         "domain": "language",
         "behavior": "Named nose and later said car during the activity.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "partial"
       },
       "child_id": "stuart",
@@ -3425,7 +3425,7 @@
         "domain": "language",
         "behavior": "Named a bag and then said 'pillow' after the adult's cue.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "model",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3447,7 +3447,7 @@
         "domain": "language",
         "behavior": "Repeated 'baby' and 'close door'.",
         "modality": "verbal",
-        "prompt_level": "model",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3491,8 +3491,8 @@
         "domain": "language",
         "behavior": "Produced the short sound 'ba' after the adult mentioned water.",
         "modality": "unknown",
-        "prompt_level": "verbal",
-        "outcome": "unknown"
+        "prompt_level": null,
+        "outcome": null
       },
       "child_id": "stuart",
       "source": "adjudicated"
@@ -3513,7 +3513,7 @@
         "domain": "language",
         "behavior": "Repeated squirrel after the adult named it.",
         "modality": "verbal",
-        "prompt_level": "model",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3524,7 +3524,7 @@
         "domain": "language",
         "behavior": "Named the body parts as hair and nose.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3535,7 +3535,7 @@
         "domain": "language",
         "behavior": "Named the body part as belly.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3558,7 +3558,7 @@
         "behavior": "Requested more bubbles and changed the phrase to 'want bubble' after modeling.",
         "modality": "verbal",
         "prompt_level": "model",
-        "outcome": "correct"
+        "outcome": "unknown"
       },
       "child_id": "stuart",
       "source": "adjudicated"
@@ -3579,7 +3579,7 @@
         "domain": "language",
         "behavior": "Named a toy and a horsie when asked.",
         "modality": "verbal",
-        "prompt_level": "verbal",
+        "prompt_level": "independent",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3623,7 +3623,7 @@
         "domain": "language",
         "behavior": "Repeated 'cover' and 'push' and answered yes about playing with toys.",
         "modality": "verbal",
-        "prompt_level": "model",
+        "prompt_level": "verbal",
         "outcome": "correct"
       },
       "child_id": "stuart",
@@ -3653,5 +3653,797 @@
     }
   },
   "adjudicator_note": "Adjudication settles values; it is not a second measurement. One decision-maker resolves each conflict, so there is one sheet and one gold standard. Who that was is recorded above and must be stated in the manuscript: a conflict settled by one of the two annotators is not equivalent to one settled by a third party.",
-  "note": "Gold field values authored from the transcript, model-independent. Segments unresolved on any field are excluded, not defaulted. Accuracy computed against this file is conditional on the adjudicated subset."
+  "note": "Gold field values authored from the transcript, model-independent. Segments unresolved on any field are excluded, not defaulted. Accuracy computed against this file is conditional on the adjudicated subset.",
+  "codebook_audit_r10": {
+    "pre_audit_file": "gold_labels.json",
+    "pre_audit_sha256": "32327d787648dac90c71ebf6af8f566a211f0507ab9aae4f499fb21cec32fc38",
+    "changes": [
+      {
+        "segment_id": "brett_flusberg_brett_050800.cha_seg_040",
+        "audit_id": "A084",
+        "field": "outcome",
+        "old": null,
+        "new": "correct",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_014",
+        "audit_id": "A078",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_016",
+        "audit_id": "A063",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_033",
+        "audit_id": "A107",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_040",
+        "audit_id": "A126",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_063",
+        "audit_id": "A053",
+        "field": "outcome",
+        "old": null,
+        "new": "correct",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060207.cha_seg_006",
+        "audit_id": "A150",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060207.cha_seg_011",
+        "audit_id": "A037",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060622.cha_seg_009",
+        "audit_id": "A046",
+        "field": "outcome",
+        "old": null,
+        "new": "incorrect",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_007",
+        "audit_id": "A052",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "model",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_017",
+        "audit_id": "A032",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_020",
+        "audit_id": "A058",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_022",
+        "audit_id": "A113",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_024",
+        "audit_id": "A061",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_025",
+        "audit_id": "A074",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_035",
+        "audit_id": "A079",
+        "field": "outcome",
+        "old": "correct",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_029",
+        "audit_id": "A004",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_029",
+        "audit_id": "A004",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_043",
+        "audit_id": "A009",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_050",
+        "audit_id": "A128",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_064",
+        "audit_id": "A025",
+        "field": "modality",
+        "old": "multimodal",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_070",
+        "audit_id": "A035",
+        "field": "modality",
+        "old": "multimodal",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_085",
+        "audit_id": "A091",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_085",
+        "audit_id": "A091",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_030700.cha_seg_005",
+        "audit_id": "A129",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_030700.cha_seg_005",
+        "audit_id": "A129",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_030700.cha_seg_021",
+        "audit_id": "A021",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "carl_rollins_carl_030700.cha_seg_021",
+        "audit_id": "A021",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_006",
+        "audit_id": "A005",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_008",
+        "audit_id": "A029",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_010",
+        "audit_id": "A064",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_025",
+        "audit_id": "A055",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "model",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_046",
+        "audit_id": "A080",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_070315.cha_seg_002",
+        "audit_id": "A134",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_071001.cha_seg_022",
+        "audit_id": "A143",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_071001.cha_seg_022",
+        "audit_id": "A143",
+        "field": "prompt_level",
+        "old": "independent",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_010",
+        "audit_id": "A031",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "gestural",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_048",
+        "audit_id": "A039",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_040",
+        "audit_id": "A133",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_040",
+        "audit_id": "A133",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "model",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_070700.cha_seg_055",
+        "audit_id": "A088",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_070812.cha_seg_001",
+        "audit_id": "A087",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_071026.cha_seg_018",
+        "audit_id": "A006",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080224.cha_seg_001",
+        "audit_id": "A045",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080224.cha_seg_013",
+        "audit_id": "A028",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080224.cha_seg_015",
+        "audit_id": "A144",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080700.cha_seg_003",
+        "audit_id": "A077",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080700.cha_seg_017",
+        "audit_id": "A108",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080915.cha_seg_010",
+        "audit_id": "A109",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080915.cha_seg_011",
+        "audit_id": "A007",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_042",
+        "audit_id": "A019",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_042",
+        "audit_id": "A019",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_004",
+        "audit_id": "A137",
+        "field": "prompt_level",
+        "old": "model",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_039",
+        "audit_id": "A103",
+        "field": "outcome",
+        "old": "approximation",
+        "new": null,
+        "old_source": "adjudicated_round1_conflict"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_039",
+        "audit_id": "A103",
+        "field": "prompt_level",
+        "old": "model",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030600.cha_seg_005",
+        "audit_id": "A073",
+        "field": "modality",
+        "old": "gestural",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030600.cha_seg_005",
+        "audit_id": "A073",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_029",
+        "audit_id": "A146",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_039",
+        "audit_id": "A024",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_062",
+        "audit_id": "A127",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_063",
+        "audit_id": "A036",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_071",
+        "audit_id": "A132",
+        "field": "prompt_level",
+        "old": "model",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_050904.cha_seg_005",
+        "audit_id": "A145",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_060308.cha_seg_003",
+        "audit_id": "A018",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_060308.cha_seg_005",
+        "audit_id": "A094",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_061012.cha_seg_007",
+        "audit_id": "A042",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "model",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_061012.cha_seg_013",
+        "audit_id": "A069",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070",
+        "audit_id": "A008",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018",
+        "audit_id": "A121",
+        "field": "outcome",
+        "old": "incorrect",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018",
+        "audit_id": "A121",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034",
+        "audit_id": "A135",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003",
+        "audit_id": "A049",
+        "field": "outcome",
+        "old": null,
+        "new": "correct",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011",
+        "audit_id": "A041",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018",
+        "audit_id": "A001",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "model",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001",
+        "audit_id": "A110",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010",
+        "audit_id": "A060",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "model",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014",
+        "audit_id": "A085",
+        "field": "outcome",
+        "old": null,
+        "new": "correct",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_001",
+        "audit_id": "A070",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_037",
+        "audit_id": "A076",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_005",
+        "audit_id": "A104",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "gestural",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_005",
+        "audit_id": "A104",
+        "field": "outcome",
+        "old": null,
+        "new": "correct",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "sid_rollins_sid_021100.cha_seg_015",
+        "audit_id": "A067",
+        "field": "modality",
+        "old": "multimodal",
+        "new": "gestural",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_026",
+        "audit_id": "A138",
+        "field": "outcome",
+        "old": "unknown",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_026",
+        "audit_id": "A138",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_009",
+        "audit_id": "A114",
+        "field": "outcome",
+        "old": null,
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_043",
+        "audit_id": "A122",
+        "field": "prompt_level",
+        "old": "model",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_045",
+        "audit_id": "A056",
+        "field": "prompt_level",
+        "old": "model",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_049",
+        "audit_id": "A096",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_060",
+        "audit_id": "A047",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "model",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_062",
+        "audit_id": "A034",
+        "field": "prompt_level",
+        "old": "model",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_015",
+        "audit_id": "A033",
+        "field": "outcome",
+        "old": "unknown",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_015",
+        "audit_id": "A033",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": null,
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_020",
+        "audit_id": "A136",
+        "field": "prompt_level",
+        "old": "model",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_040",
+        "audit_id": "A097",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_041",
+        "audit_id": "A051",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_061",
+        "audit_id": "A002",
+        "field": "outcome",
+        "old": "correct",
+        "new": "unknown",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_030806.cha_seg_020",
+        "audit_id": "A125",
+        "field": "prompt_level",
+        "old": "verbal",
+        "new": "independent",
+        "old_source": "round1_agreed"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_040306.cha_seg_018",
+        "audit_id": "A026",
+        "field": "prompt_level",
+        "old": "model",
+        "new": "verbal",
+        "old_source": "round1_agreed"
+      }
+    ],
+    "applied_at": "2026-09-27T22:35:24.340368+00:00",
+    "note": "Values changed only where the human final-codebook audit required it."
+  }
 }

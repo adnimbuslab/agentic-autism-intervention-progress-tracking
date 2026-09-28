@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T10:20:54.966037+00:00",
+  "generated_at": "2026-09-27T23:56:12.578596+00:00",
   "n_bootstrap": 10000,
   "seed": 20260926,
   "interval_method": "Child-cluster percentile bootstrap: children drawn with replacement (as many draws as children), all segments of each drawn child retained, 2.5th and 97.5th percentiles of the replicate statistic. Same procedure as reliability_stats.bootstrap_kappa with clusters.",
@@ -62,30 +62,30 @@
       "per_model": {
         "llama3.2:latest": {
           "merged_agreement": {
-            "value": 0.3083,
+            "value": 0.3197,
             "ci95": {
-              "lower": 0.2432,
-              "upper": 0.3705,
+              "lower": 0.2545,
+              "upper": 0.3818,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "unsupported_rate": {
-            "value": 0.8325,
+            "value": 0.8342,
             "ci95": {
-              "lower": 0.7914,
-              "upper": 0.8673,
+              "lower": 0.7941,
+              "upper": 0.8659,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "whole_record": {
-            "value": 0.0152,
+            "value": 0.0061,
             "ci95": {
               "lower": 0.0,
-              "upper": 0.0333,
+              "upper": 0.0182,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
@@ -94,30 +94,30 @@
         },
         "qwen2.5:3b": {
           "merged_agreement": {
-            "value": 0.2045,
+            "value": 0.2083,
             "ci95": {
-              "lower": 0.1795,
-              "upper": 0.2295,
+              "lower": 0.1788,
+              "upper": 0.2379,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "unsupported_rate": {
-            "value": 0.3096,
+            "value": 0.3005,
             "ci95": {
-              "lower": 0.2528,
-              "upper": 0.3558,
+              "lower": 0.2426,
+              "upper": 0.3465,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "whole_record": {
-            "value": 0.003,
+            "value": 0.0091,
             "ci95": {
               "lower": 0.0,
-              "upper": 0.0091,
+              "upper": 0.0182,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
@@ -126,30 +126,30 @@
         },
         "qwen2.5:7b": {
           "merged_agreement": {
-            "value": 0.4311,
+            "value": 0.4129,
             "ci95": {
-              "lower": 0.353,
-              "upper": 0.5083,
+              "lower": 0.35,
+              "upper": 0.475,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "unsupported_rate": {
-            "value": 0.5685,
+            "value": 0.5492,
             "ci95": {
-              "lower": 0.4408,
-              "upper": 0.7674,
+              "lower": 0.4308,
+              "upper": 0.7444,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "whole_record": {
-            "value": 0.0455,
+            "value": 0.0212,
             "ci95": {
-              "lower": 0.0212,
-              "upper": 0.0727,
+              "lower": 0.0061,
+              "upper": 0.0364,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
@@ -158,30 +158,30 @@
         },
         "qwen3:14b": {
           "merged_agreement": {
-            "value": 0.4205,
+            "value": 0.403,
             "ci95": {
-              "lower": 0.3341,
-              "upper": 0.5068,
+              "lower": 0.3189,
+              "upper": 0.4864,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "unsupported_rate": {
-            "value": 0.9695,
+            "value": 0.9689,
             "ci95": {
-              "lower": 0.9368,
-              "upper": 0.9932,
+              "lower": 0.9338,
+              "upper": 0.9929,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
             }
           },
           "whole_record": {
-            "value": 0.0303,
+            "value": 0.0091,
             "ci95": {
-              "lower": 0.0091,
-              "upper": 0.0545,
+              "lower": 0.0,
+              "upper": 0.0242,
               "n_valid": 10000,
               "n_requested": 10000,
               "unit": "child"
@@ -191,29 +191,29 @@
       },
       "paired_qwen3_14b_minus_qwen2_5_7b": {
         "merged_agreement": {
-          "value": -0.0106,
+          "value": -0.0098,
           "ci95": {
-            "lower": -0.0371,
-            "upper": 0.0167,
+            "lower": -0.0447,
+            "upper": 0.0205,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
           }
         },
         "unsupported_rate": {
-          "value": 0.401,
+          "value": 0.4197,
           "ci95": {
-            "lower": 0.1942,
-            "upper": 0.5424,
+            "lower": 0.217,
+            "upper": 0.5512,
             "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
           }
         },
         "whole_record": {
-          "value": -0.0152,
+          "value": -0.0121,
           "ci95": {
-            "lower": -0.0333,
+            "lower": -0.0273,
             "upper": 0.003,
             "excludes_zero": false,
             "n_valid": 10000,

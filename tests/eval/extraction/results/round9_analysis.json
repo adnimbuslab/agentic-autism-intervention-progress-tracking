@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T16:19:39.996092+00:00",
+  "generated_at": "2026-09-27T23:57:33.354683+00:00",
   "r9_1_chronology": {
     "extraction_prompt_file": "src/backend/ml/extraction/prompts.py",
     "prompt_version_constant": "1.0.0",
@@ -817,16 +817,17 @@
       "context_length_trained": 32768,
       "ollama_version_now": "0.33.3",
       "template_has_format_placeholder": false
-    }
+    },
+    "note_r10": "Kept from the pre-audit build: these facts describe the recorded 11-report run, whose packets were built from the pre-audit reference. The reporter was not rerun."
   },
   "r9_5_field_unsupported": {
     "main_batch_330": {
       "n": 330,
       "gold_null_by_field": {
         "domain": 3,
-        "modality": 77,
-        "prompt_level": 2,
-        "outcome": 115
+        "modality": 80,
+        "prompt_level": 4,
+        "outcome": 106
       },
       "per_model": {
         "llama3.2:latest": {
@@ -839,33 +840,33 @@
               "hallucinated_value_unknown": 0
             },
             "modality": {
-              "hallucinated": 72,
-              "gold_null": 77,
-              "rate": 0.9351,
+              "hallucinated": 75,
+              "gold_null": 80,
+              "rate": 0.9375,
               "sparse": false,
-              "hallucinated_value_unknown": 27
+              "hallucinated_value_unknown": 28
             },
             "prompt_level": {
-              "hallucinated": 2,
-              "gold_null": 2,
+              "hallucinated": 4,
+              "gold_null": 4,
               "rate": 1.0,
               "sparse": true,
               "hallucinated_value_unknown": 2
             },
             "outcome": {
-              "hallucinated": 87,
-              "gold_null": 115,
-              "rate": 0.7565,
+              "hallucinated": 79,
+              "gold_null": 106,
+              "rate": 0.7453,
               "sparse": false,
-              "hallucinated_value_unknown": 29
+              "hallucinated_value_unknown": 26
             }
           },
           "pooled": {
-            "hallucinated": 164,
-            "gold_null": 197,
-            "rate": 0.8325
+            "hallucinated": 161,
+            "gold_null": 193,
+            "rate": 0.8342
           },
-          "unweighted_mean_of_fields": 0.9229
+          "unweighted_mean_of_fields": 0.9207
         },
         "qwen2.5:3b": {
           "per_field": {
@@ -877,33 +878,33 @@
               "hallucinated_value_unknown": 0
             },
             "modality": {
-              "hallucinated": 15,
-              "gold_null": 77,
-              "rate": 0.1948,
+              "hallucinated": 17,
+              "gold_null": 80,
+              "rate": 0.2125,
               "sparse": false,
-              "hallucinated_value_unknown": 14
+              "hallucinated_value_unknown": 15
             },
             "prompt_level": {
               "hallucinated": 0,
-              "gold_null": 2,
+              "gold_null": 4,
               "rate": 0.0,
               "sparse": true,
               "hallucinated_value_unknown": 0
             },
             "outcome": {
-              "hallucinated": 46,
-              "gold_null": 115,
-              "rate": 0.4,
+              "hallucinated": 41,
+              "gold_null": 106,
+              "rate": 0.3868,
               "sparse": false,
-              "hallucinated_value_unknown": 24
+              "hallucinated_value_unknown": 22
             }
           },
           "pooled": {
-            "hallucinated": 61,
-            "gold_null": 197,
-            "rate": 0.3096
+            "hallucinated": 58,
+            "gold_null": 193,
+            "rate": 0.3005
           },
-          "unweighted_mean_of_fields": 0.1487
+          "unweighted_mean_of_fields": 0.1498
         },
         "qwen2.5:7b": {
           "per_field": {
@@ -915,33 +916,33 @@
               "hallucinated_value_unknown": 0
             },
             "modality": {
-              "hallucinated": 31,
-              "gold_null": 77,
-              "rate": 0.4026,
+              "hallucinated": 32,
+              "gold_null": 80,
+              "rate": 0.4,
               "sparse": false,
               "hallucinated_value_unknown": 23
             },
             "prompt_level": {
-              "hallucinated": 1,
-              "gold_null": 2,
+              "hallucinated": 2,
+              "gold_null": 4,
               "rate": 0.5,
               "sparse": true,
               "hallucinated_value_unknown": 1
             },
             "outcome": {
-              "hallucinated": 78,
-              "gold_null": 115,
-              "rate": 0.6783,
+              "hallucinated": 70,
+              "gold_null": 106,
+              "rate": 0.6604,
               "sparse": false,
               "hallucinated_value_unknown": 4
             }
           },
           "pooled": {
-            "hallucinated": 112,
-            "gold_null": 197,
-            "rate": 0.5685
+            "hallucinated": 106,
+            "gold_null": 193,
+            "rate": 0.5492
           },
-          "unweighted_mean_of_fields": 0.5619
+          "unweighted_mean_of_fields": 0.5568
         },
         "qwen3:14b": {
           "per_field": {
@@ -953,33 +954,33 @@
               "hallucinated_value_unknown": 0
             },
             "modality": {
-              "hallucinated": 76,
-              "gold_null": 77,
-              "rate": 0.987,
+              "hallucinated": 79,
+              "gold_null": 80,
+              "rate": 0.9875,
               "sparse": false,
               "hallucinated_value_unknown": 29
             },
             "prompt_level": {
-              "hallucinated": 1,
-              "gold_null": 2,
-              "rate": 0.5,
+              "hallucinated": 3,
+              "gold_null": 4,
+              "rate": 0.75,
               "sparse": true,
               "hallucinated_value_unknown": 0
             },
             "outcome": {
-              "hallucinated": 111,
-              "gold_null": 115,
-              "rate": 0.9652,
+              "hallucinated": 102,
+              "gold_null": 106,
+              "rate": 0.9623,
               "sparse": false,
-              "hallucinated_value_unknown": 56
+              "hallucinated_value_unknown": 49
             }
           },
           "pooled": {
-            "hallucinated": 191,
-            "gold_null": 197,
-            "rate": 0.9695
+            "hallucinated": 187,
+            "gold_null": 193,
+            "rate": 0.9689
           },
-          "unweighted_mean_of_fields": 0.863
+          "unweighted_mean_of_fields": 0.925
         }
       }
     },
@@ -1937,31 +1938,31 @@
   },
   "r9_8_oracle": {
     "three_generators_all_outputs_330": {
-      "numerator": 20,
+      "numerator": 12,
       "denominator": 330,
-      "rate": 0.0606
+      "rate": 0.0364
     },
     "three_generators_reviewable_only_330": {
-      "numerator": 17,
+      "numerator": 10,
       "denominator": 330,
-      "rate": 0.0515
+      "rate": 0.0303
     },
     "three_generators_all_outputs_mars_returned": {
-      "numerator": 14,
+      "numerator": 10,
       "denominator": 265,
-      "rate": 0.0528
+      "rate": 0.0377
     },
     "three_generators_all_outputs_rerank_required": {
-      "numerator": 13,
+      "numerator": 5,
       "denominator": 165,
-      "rate": 0.0788
+      "rate": 0.0303
     },
     "four_generators_all_outputs_330": {
-      "numerator": 29,
+      "numerator": 15,
       "denominator": 330,
-      "rate": 0.0879
+      "rate": 0.0455
     },
-    "recorded_mars_evaluation": 0.06060606060606061,
+    "recorded_mars_evaluation": 0.03636363636363636,
     "status_counts_3gen": {
       "success": 480,
       "abstained": 496,

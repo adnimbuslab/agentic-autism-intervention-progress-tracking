@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T20:46:49.072097+00:00",
+  "generated_at": "2026-09-27T23:56:57.855419+00:00",
   "n_bootstrap": 10000,
   "seed": 20261001,
   "interval_method": "child-cluster percentile bootstrap, as in round3_analysis",
@@ -195,36 +195,36 @@
         "per_model": {
           "llama3.2:latest": {
             "merged_agreement": {
-              "value": 0.3083,
+              "value": 0.3197,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.2416,
-                "upper": 0.3712,
+                "lower": 0.2523,
+                "upper": 0.3826,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "unsupported_rate": {
-              "value": 0.8325,
+              "value": 0.8342,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.7927,
-                "upper": 0.8667,
+                "lower": 0.7958,
+                "upper": 0.8657,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "whole_record": {
-              "value": 0.0152,
+              "value": 0.0061,
               "n": 330,
               "n_children": 11,
               "ci95": {
                 "lower": 0.0,
-                "upper": 0.0333,
+                "upper": 0.0182,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
@@ -233,36 +233,36 @@
           },
           "qwen2.5:3b": {
             "merged_agreement": {
-              "value": 0.2045,
+              "value": 0.2083,
               "n": 330,
               "n_children": 11,
               "ci95": {
                 "lower": 0.1788,
-                "upper": 0.2295,
+                "upper": 0.2371,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "unsupported_rate": {
-              "value": 0.3096,
+              "value": 0.3005,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.2527,
-                "upper": 0.3577,
+                "lower": 0.2431,
+                "upper": 0.3459,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "whole_record": {
-              "value": 0.003,
+              "value": 0.0091,
               "n": 330,
               "n_children": 11,
               "ci95": {
                 "lower": 0.0,
-                "upper": 0.0091,
+                "upper": 0.0182,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
@@ -271,36 +271,36 @@
           },
           "qwen2.5:7b": {
             "merged_agreement": {
-              "value": 0.4311,
+              "value": 0.4129,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.3508,
-                "upper": 0.5068,
+                "lower": 0.3492,
+                "upper": 0.4735,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "unsupported_rate": {
-              "value": 0.5685,
+              "value": 0.5492,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.4392,
-                "upper": 0.7686,
+                "lower": 0.4298,
+                "upper": 0.7444,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "whole_record": {
-              "value": 0.0455,
+              "value": 0.0212,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.0212,
-                "upper": 0.0727,
+                "lower": 0.0061,
+                "upper": 0.0364,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
@@ -309,36 +309,36 @@
           },
           "qwen3:14b": {
             "merged_agreement": {
-              "value": 0.4205,
+              "value": 0.403,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.3333,
-                "upper": 0.5061,
+                "lower": 0.3189,
+                "upper": 0.4848,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "unsupported_rate": {
-              "value": 0.9695,
+              "value": 0.9689,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.9366,
-                "upper": 0.9934,
+                "lower": 0.9333,
+                "upper": 0.9932,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
               }
             },
             "whole_record": {
-              "value": 0.0303,
+              "value": 0.0091,
               "n": 330,
               "n_children": 11,
               "ci95": {
-                "lower": 0.0091,
-                "upper": 0.0545,
+                "lower": 0.0,
+                "upper": 0.0242,
                 "n_valid": 10000,
                 "n_requested": 10000,
                 "unit": "child"
@@ -1495,17 +1495,17 @@
       "main_batch_330-minus-same_universe_judgeable": {
         "llama3.2:latest": {
           "merged_agreement": {
-            "value": 0.0583,
-            "lower": 0.0021,
-            "upper": 0.122,
+            "value": 0.0697,
+            "lower": 0.0108,
+            "upper": 0.1346,
             "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": -0.0934,
-            "lower": -0.1886,
-            "upper": -0.0134,
+            "value": -0.0917,
+            "lower": -0.181,
+            "upper": -0.0081,
             "excludes_zero": true,
             "n_valid": 9999,
             "unit": "child"
@@ -1513,17 +1513,17 @@
         },
         "qwen2.5:3b": {
           "merged_agreement": {
-            "value": 0.0564,
-            "lower": 0.0076,
-            "upper": 0.1117,
+            "value": 0.0602,
+            "lower": 0.0093,
+            "upper": 0.1172,
             "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0133,
-            "lower": -0.1716,
-            "upper": 0.2239,
+            "value": 0.0042,
+            "lower": -0.1691,
+            "upper": 0.2053,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1531,17 +1531,17 @@
         },
         "qwen2.5:7b": {
           "merged_agreement": {
-            "value": 0.0514,
-            "lower": -0.0281,
-            "upper": 0.1393,
+            "value": 0.0332,
+            "lower": -0.0441,
+            "upper": 0.1125,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.1982,
-            "lower": 0.0664,
-            "upper": 0.3809,
+            "value": 0.1789,
+            "lower": 0.0605,
+            "upper": 0.35,
             "excludes_zero": true,
             "n_valid": 9999,
             "unit": "child"
@@ -1549,17 +1549,17 @@
         },
         "qwen3:14b": {
           "merged_agreement": {
-            "value": 0.0316,
-            "lower": -0.0011,
-            "upper": 0.0635,
+            "value": 0.0141,
+            "lower": -0.0175,
+            "upper": 0.0446,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.1177,
-            "lower": -0.025,
-            "upper": 0.2778,
+            "value": 0.1171,
+            "lower": -0.0256,
+            "upper": 0.276,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1569,17 +1569,17 @@
       "main_batch_330-minus-same_universe_unconditioned": {
         "llama3.2:latest": {
           "merged_agreement": {
-            "value": 0.073,
-            "lower": 0.0197,
-            "upper": 0.1206,
+            "value": 0.0844,
+            "lower": 0.0292,
+            "upper": 0.1359,
             "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0376,
-            "lower": -0.0817,
-            "upper": 0.1653,
+            "value": 0.0393,
+            "lower": -0.0845,
+            "upper": 0.1736,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1587,17 +1587,17 @@
         },
         "qwen2.5:3b": {
           "merged_agreement": {
-            "value": 0.0722,
-            "lower": 0.03,
-            "upper": 0.1186,
+            "value": 0.076,
+            "lower": 0.0329,
+            "upper": 0.1225,
             "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0789,
-            "lower": -0.0581,
-            "upper": 0.249,
+            "value": 0.0697,
+            "lower": -0.0605,
+            "upper": 0.2309,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1605,17 +1605,17 @@
         },
         "qwen2.5:7b": {
           "merged_agreement": {
-            "value": 0.0369,
-            "lower": -0.0068,
-            "upper": 0.0915,
+            "value": 0.0188,
+            "lower": -0.0293,
+            "upper": 0.0749,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.1839,
-            "lower": 0.0707,
-            "upper": 0.3296,
+            "value": 0.1646,
+            "lower": 0.0651,
+            "upper": 0.2965,
             "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
@@ -1623,17 +1623,17 @@
         },
         "qwen3:14b": {
           "merged_agreement": {
-            "value": 0.0087,
-            "lower": -0.0394,
-            "upper": 0.0563,
+            "value": -0.0087,
+            "lower": -0.0575,
+            "upper": 0.0396,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0977,
-            "lower": -0.0052,
-            "upper": 0.2427,
+            "value": 0.0971,
+            "lower": -0.0057,
+            "upper": 0.2399,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1717,17 +1717,17 @@
       "main_batch_330-minus-overlap_excluded_121": {
         "llama3.2:latest": {
           "merged_agreement": {
-            "value": 0.0335,
-            "lower": -0.0084,
-            "upper": 0.0753,
-            "excludes_zero": false,
+            "value": 0.0449,
+            "lower": 0.0012,
+            "upper": 0.0912,
+            "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0023,
-            "lower": -0.0737,
-            "upper": 0.0753,
+            "value": 0.004,
+            "lower": -0.0739,
+            "upper": 0.0752,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1735,17 +1735,17 @@
         },
         "qwen2.5:3b": {
           "merged_agreement": {
-            "value": 0.0785,
-            "lower": 0.0378,
-            "upper": 0.1158,
+            "value": 0.0823,
+            "lower": 0.0419,
+            "upper": 0.1187,
             "excludes_zero": true,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0644,
-            "lower": -0.0625,
-            "upper": 0.1992,
+            "value": 0.0552,
+            "lower": -0.0587,
+            "upper": 0.1796,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1753,17 +1753,17 @@
         },
         "qwen2.5:7b": {
           "merged_agreement": {
-            "value": 0.0261,
-            "lower": -0.0235,
-            "upper": 0.0865,
+            "value": 0.0079,
+            "lower": -0.0422,
+            "upper": 0.0667,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0591,
-            "lower": -0.0621,
-            "upper": 0.1774,
+            "value": 0.0398,
+            "lower": -0.0729,
+            "upper": 0.15,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -1771,17 +1771,17 @@
         },
         "qwen3:14b": {
           "merged_agreement": {
-            "value": 0.0072,
-            "lower": -0.0436,
-            "upper": 0.0565,
+            "value": -0.0102,
+            "lower": -0.0608,
+            "upper": 0.0389,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
           },
           "unsupported_rate": {
-            "value": 0.0639,
-            "lower": -0.0199,
-            "upper": 0.16,
+            "value": 0.0633,
+            "lower": -0.0207,
+            "upper": 0.1587,
             "excludes_zero": false,
             "n_valid": 10000,
             "unit": "child"
@@ -2067,117 +2067,117 @@
         }
       },
       "modality": {
-        "mars": 0.7465,
-        "random_expected_reviewable": 0.6585,
-        "random_expected_all_generators": 0.5563,
-        "best_fixed": 0.7746,
-        "best_reviewable_fallback": 0.7676,
+        "mars": 0.7746,
+        "random_expected_reviewable": 0.6749,
+        "random_expected_all_generators": 0.5704,
+        "best_fixed": 0.8028,
+        "best_reviewable_fallback": 0.8028,
         "vs_random_reviewable": {
-          "value": 0.088,
-          "lower": 0.0244,
-          "upper": 0.1527,
+          "value": 0.0998,
+          "lower": 0.0504,
+          "upper": 0.159,
           "excludes_zero": true,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_random_all_generators": {
-          "value": 0.1901,
-          "lower": 0.1002,
-          "upper": 0.2538,
+          "value": 0.2042,
+          "lower": 0.1351,
+          "upper": 0.2567,
           "excludes_zero": true,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_best_fixed": {
           "value": -0.0282,
-          "lower": -0.0762,
-          "upper": 0.0216,
+          "lower": -0.0862,
+          "upper": 0.0256,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_best_reviewable_fallback": {
-          "value": -0.0211,
-          "lower": -0.0698,
-          "upper": 0.0368,
+          "value": -0.0282,
+          "lower": -0.0876,
+          "upper": 0.0351,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         }
       },
       "prompt_level": {
-        "mars": 0.338,
-        "random_expected_reviewable": 0.2993,
-        "random_expected_all_generators": 0.2347,
-        "best_fixed": 0.3592,
-        "best_reviewable_fallback": 0.3732,
+        "mars": 0.2394,
+        "random_expected_reviewable": 0.2465,
+        "random_expected_all_generators": 0.2113,
+        "best_fixed": 0.2113,
+        "best_reviewable_fallback": 0.2183,
         "vs_random_reviewable": {
-          "value": 0.0387,
-          "lower": -0.0016,
-          "upper": 0.0775,
+          "value": -0.007,
+          "lower": -0.0478,
+          "upper": 0.0361,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_random_all_generators": {
-          "value": 0.1033,
-          "lower": 0.0508,
-          "upper": 0.1525,
-          "excludes_zero": true,
+          "value": 0.0282,
+          "lower": -0.0315,
+          "upper": 0.0909,
+          "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_best_fixed": {
-          "value": -0.0211,
-          "lower": -0.0862,
-          "upper": 0.0429,
+          "value": 0.0282,
+          "lower": -0.0294,
+          "upper": 0.0902,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_best_reviewable_fallback": {
-          "value": -0.0352,
-          "lower": -0.1013,
-          "upper": 0.0244,
+          "value": 0.0211,
+          "lower": -0.0446,
+          "upper": 0.0778,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         }
       },
       "outcome": {
-        "mars": 0.3239,
-        "random_expected_reviewable": 0.2676,
-        "random_expected_all_generators": 0.284,
+        "mars": 0.331,
+        "random_expected_reviewable": 0.277,
+        "random_expected_all_generators": 0.2864,
         "best_fixed": 0.3028,
         "best_reviewable_fallback": 0.2817,
         "vs_random_reviewable": {
-          "value": 0.0563,
-          "lower": 0.0124,
-          "upper": 0.0899,
+          "value": 0.054,
+          "lower": 0.0129,
+          "upper": 0.0844,
           "excludes_zero": true,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_random_all_generators": {
-          "value": 0.0399,
-          "lower": -0.0168,
-          "upper": 0.0853,
+          "value": 0.0446,
+          "lower": -0.0096,
+          "upper": 0.0883,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_best_fixed": {
-          "value": 0.0211,
-          "lower": -0.0408,
-          "upper": 0.0751,
+          "value": 0.0282,
+          "lower": -0.0376,
+          "upper": 0.0828,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
         },
         "vs_best_reviewable_fallback": {
-          "value": 0.0423,
+          "value": 0.0493,
           "lower": 0.0,
-          "upper": 0.0867,
+          "upper": 0.0943,
           "excludes_zero": false,
           "n_valid": 10000,
           "unit": "child"
@@ -2185,13 +2185,13 @@
       }
     },
     "mean": {
-      "mars": 0.4349,
-      "random_expected_reviewable": 0.3768,
-      "random_expected_all_generators": 0.3245,
-      "best_fixed": 0.4736,
-      "best_reviewable_fallback": 0.47
+      "mars": 0.419,
+      "random_expected_reviewable": 0.37,
+      "random_expected_all_generators": 0.3228,
+      "best_fixed": 0.4436,
+      "best_reviewable_fallback": 0.4401
     },
-    "published_random_baseline": 0.3247,
+    "published_random_baseline": 0.323,
     "published_random_method": "mean of 2,000 seeded (20260916) uniform draws over all three generators' outputs per segment; paired CIs used one further draw (seed 20260917)"
   },
   "abstention": {
@@ -2203,62 +2203,62 @@
       "llama3.2:latest": {
         "n_field_slots": 1320,
         "counts": {
-          "incorrect": 641,
-          "correct": 374,
-          "hallucinated": 164,
-          "missing": 108,
-          "correctly_null": 33
+          "incorrect": 628,
+          "correct": 390,
+          "hallucinated": 161,
+          "missing": 109,
+          "correctly_null": 32
         },
-        "reported_missing_over_all_slots": 0.0818,
-        "null_on_gold_populated": 0.0962,
+        "reported_missing_over_all_slots": 0.0826,
+        "null_on_gold_populated": 0.0967,
         "overall_model_null_rate": 0.1068,
-        "null_on_gold_null": 0.1675,
-        "gold_populated_share": 0.8508
+        "null_on_gold_null": 0.1658,
+        "gold_populated_share": 0.8538
       },
       "qwen2.5:3b": {
         "n_field_slots": 1320,
         "counts": {
-          "correct": 134,
-          "incorrect": 354,
-          "missing": 635,
-          "hallucinated": 61,
-          "correctly_null": 136
+          "correct": 140,
+          "incorrect": 351,
+          "missing": 636,
+          "hallucinated": 58,
+          "correctly_null": 135
         },
-        "reported_missing_over_all_slots": 0.4811,
-        "null_on_gold_populated": 0.5654,
+        "reported_missing_over_all_slots": 0.4818,
+        "null_on_gold_populated": 0.5643,
         "overall_model_null_rate": 0.5841,
-        "null_on_gold_null": 0.6904,
-        "gold_populated_share": 0.8508
+        "null_on_gold_null": 0.6995,
+        "gold_populated_share": 0.8538
       },
       "qwen2.5:7b": {
         "n_field_slots": 1320,
         "counts": {
-          "correct": 484,
-          "incorrect": 471,
-          "missing": 168,
-          "correctly_null": 85,
-          "hallucinated": 112
+          "correct": 458,
+          "incorrect": 503,
+          "missing": 166,
+          "correctly_null": 87,
+          "hallucinated": 106
         },
-        "reported_missing_over_all_slots": 0.1273,
-        "null_on_gold_populated": 0.1496,
+        "reported_missing_over_all_slots": 0.1258,
+        "null_on_gold_populated": 0.1473,
         "overall_model_null_rate": 0.1917,
-        "null_on_gold_null": 0.4315,
-        "gold_populated_share": 0.8508
+        "null_on_gold_null": 0.4508,
+        "gold_populated_share": 0.8538
       },
       "qwen3:14b": {
         "n_field_slots": 1320,
         "counts": {
-          "incorrect": 535,
-          "correct": 549,
-          "hallucinated": 191,
+          "incorrect": 562,
+          "correct": 526,
+          "hallucinated": 187,
           "missing": 39,
           "correctly_null": 6
         },
         "reported_missing_over_all_slots": 0.0295,
-        "null_on_gold_populated": 0.0347,
+        "null_on_gold_populated": 0.0346,
         "overall_model_null_rate": 0.0341,
-        "null_on_gold_null": 0.0305,
-        "gold_populated_share": 0.8508
+        "null_on_gold_null": 0.0311,
+        "gold_populated_share": 0.8538
       }
     },
     "frozen_132": {
@@ -2383,25 +2383,25 @@
           "n": 187,
           "gold_null_share": {
             "domain": 0.0,
-            "modality": 0.2299,
-            "prompt_level": 0.0,
-            "outcome": 0.3262
+            "modality": 0.2406,
+            "prompt_level": 0.0053,
+            "outcome": 0.3048
           },
-          "gold_null_mean": 0.139,
-          "qwen2.5:7b_merged": 0.4278,
-          "qwen2.5:7b_unsupported": 0.6442
+          "gold_null_mean": 0.1377,
+          "qwen2.5:7b_merged": 0.4144,
+          "qwen2.5:7b_unsupported": 0.6214
         },
         "under_8": {
           "n": 143,
           "gold_null_share": {
             "domain": 0.021,
-            "modality": 0.2378,
-            "prompt_level": 0.014,
-            "outcome": 0.3776
+            "modality": 0.2448,
+            "prompt_level": 0.021,
+            "outcome": 0.3427
           },
-          "gold_null_mean": 0.1626,
-          "qwen2.5:7b_merged": 0.4353,
-          "qwen2.5:7b_unsupported": 0.4839
+          "gold_null_mean": 0.1574,
+          "qwen2.5:7b_merged": 0.4108,
+          "qwen2.5:7b_unsupported": 0.4667
         }
       },
       "frozen_132": {

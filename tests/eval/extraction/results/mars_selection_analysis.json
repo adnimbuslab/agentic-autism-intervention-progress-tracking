@@ -51,115 +51,115 @@
       }
     },
     "modality": {
-      "mars": 0.7465,
-      "best_generator": 0.7746,
-      "random_candidate": 0.556,
+      "mars": 0.7746,
+      "best_generator": 0.8028,
+      "random_candidate": 0.5698,
       "per_generator": {
-        "llama3.2:latest": 0.6197,
+        "llama3.2:latest": 0.6338,
         "qwen2.5:3b": 0.2746,
-        "qwen2.5:7b": 0.7746
+        "qwen2.5:7b": 0.8028
       },
       "vs_best_generator": {
-        "difference": -0.0282,
-        "lower": -0.0845,
+        "difference": -0.0283,
+        "lower": -0.0915,
         "upper": 0.0282,
         "excludes_zero": false,
         "unit": "segment"
       },
       "vs_best_generator_clustered": {
-        "difference": -0.0281,
-        "lower": -0.0752,
-        "upper": 0.0219,
+        "difference": -0.028,
+        "lower": -0.0878,
+        "upper": 0.0261,
         "excludes_zero": false,
         "unit": "child"
       },
       "vs_random_candidate": {
-        "difference": 0.1903,
-        "lower": 0.0986,
-        "upper": 0.2817,
+        "difference": 0.2046,
+        "lower": 0.1127,
+        "upper": 0.2958,
         "excludes_zero": true,
         "unit": "segment"
       },
       "vs_random_candidate_clustered": {
-        "difference": 0.1866,
-        "lower": 0.0826,
-        "upper": 0.2715,
+        "difference": 0.201,
+        "lower": 0.115,
+        "upper": 0.2769,
         "excludes_zero": true,
         "unit": "child"
       }
     },
     "prompt_level": {
-      "mars": 0.338,
-      "best_generator": 0.3592,
-      "random_candidate": 0.2352,
+      "mars": 0.2394,
+      "best_generator": 0.2113,
+      "random_candidate": 0.2119,
       "per_generator": {
-        "llama3.2:latest": 0.2817,
-        "qwen2.5:3b": 0.0634,
-        "qwen2.5:7b": 0.3592
+        "llama3.2:latest": 0.338,
+        "qwen2.5:3b": 0.0845,
+        "qwen2.5:7b": 0.2113
       },
       "vs_best_generator": {
-        "difference": -0.0209,
-        "lower": -0.0915,
-        "upper": 0.0423,
+        "difference": 0.0285,
+        "lower": -0.0423,
+        "upper": 0.0986,
         "excludes_zero": false,
         "unit": "segment"
       },
       "vs_best_generator_clustered": {
-        "difference": -0.0213,
-        "lower": -0.0872,
-        "upper": 0.0455,
+        "difference": 0.0281,
+        "lower": -0.0291,
+        "upper": 0.0894,
         "excludes_zero": false,
         "unit": "child"
       },
       "vs_random_candidate": {
-        "difference": 0.1348,
-        "lower": 0.0563,
-        "upper": 0.2183,
-        "excludes_zero": true,
+        "difference": 0.0363,
+        "lower": -0.0352,
+        "upper": 0.1127,
+        "excludes_zero": false,
         "unit": "segment"
       },
       "vs_random_candidate_clustered": {
-        "difference": 0.1345,
-        "lower": 0.0839,
-        "upper": 0.1964,
-        "excludes_zero": true,
+        "difference": 0.0376,
+        "lower": -0.0392,
+        "upper": 0.1186,
+        "excludes_zero": false,
         "unit": "child"
       }
     },
     "outcome": {
-      "mars": 0.3239,
+      "mars": 0.331,
       "best_generator": 0.3028,
-      "random_candidate": 0.2847,
+      "random_candidate": 0.2872,
       "per_generator": {
-        "llama3.2:latest": 0.2535,
-        "qwen2.5:3b": 0.2958,
+        "llama3.2:latest": 0.2676,
+        "qwen2.5:3b": 0.2887,
         "qwen2.5:7b": 0.3028
       },
       "vs_best_generator": {
-        "difference": 0.0212,
-        "lower": -0.0282,
-        "upper": 0.0704,
+        "difference": 0.0282,
+        "lower": -0.0211,
+        "upper": 0.0775,
         "excludes_zero": false,
         "unit": "segment"
       },
       "vs_best_generator_clustered": {
-        "difference": 0.0195,
-        "lower": -0.0394,
-        "upper": 0.0769,
+        "difference": 0.0262,
+        "lower": -0.037,
+        "upper": 0.0847,
         "excludes_zero": false,
         "unit": "child"
       },
       "vs_random_candidate": {
-        "difference": 0.0569,
-        "lower": -0.0141,
+        "difference": 0.0497,
+        "lower": -0.0211,
         "upper": 0.1268,
         "excludes_zero": false,
         "unit": "segment"
       },
       "vs_random_candidate_clustered": {
-        "difference": 0.0537,
-        "lower": -0.0192,
-        "upper": 0.1118,
+        "difference": 0.0469,
+        "lower": -0.0248,
+        "upper": 0.1056,
         "excludes_zero": false,
         "unit": "child"
       }
@@ -172,8 +172,8 @@
   },
   "mars_share_of_best_generator": 0.5775,
   "mean_accuracy": {
-    "mars": 0.4349,
-    "best_generator": 0.4736,
-    "random_candidate": 0.3247
+    "mars": 0.419,
+    "best_generator": 0.4436,
+    "random_candidate": 0.323
   }
 }
