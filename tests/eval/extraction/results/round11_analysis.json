@@ -1,0 +1,1133 @@
+{
+  "generated_at": "2026-09-29T14:12:09.146165+00:00",
+  "r11_5_bootstrap_accounting": {
+    "n_bootstrap": 10000,
+    "seed": 20260915,
+    "kappa": {
+      "reliability_round1 (330, pre-codebook)": {
+        "domain": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.7039,
+            0.7896
+          ]
+        },
+        "modality": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.4343,
+            0.696
+          ]
+        },
+        "prompt_level": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.5186,
+            0.6755
+          ]
+        },
+        "outcome": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.4668,
+            0.5771
+          ]
+        }
+      },
+      "reliability_current (330, final annotator state)": {
+        "domain": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.6655,
+            0.7615
+          ]
+        },
+        "modality": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.8546,
+            0.9511
+          ]
+        },
+        "prompt_level": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.774,
+            0.8805
+          ]
+        },
+        "outcome": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 330,
+          "interval": [
+            0.6634,
+            0.8125
+          ]
+        }
+      },
+      "reliability_holdout (frozen 132)": {
+        "domain": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 132,
+          "interval": [
+            0.8061,
+            0.9356
+          ]
+        },
+        "modality": {
+          "requested": 10000,
+          "valid": 9997,
+          "dropped": 3,
+          "pct_dropped": 0.03,
+          "reasons": {
+            "single category in replicate (verbal): expected agreement = 1; 5 distinct children drawn": 1,
+            "single category in replicate (verbal): expected agreement = 1; 4 distinct children drawn": 2
+          },
+          "n_clusters": 11,
+          "n_items": 132,
+          "interval": [
+            0.8221,
+            1.0
+          ]
+        },
+        "prompt_level": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 132,
+          "interval": [
+            0.8199,
+            1.0
+          ]
+        },
+        "outcome": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 132,
+          "interval": [
+            0.8774,
+            0.9503
+          ]
+        }
+      },
+      "reliability 121 (post-audit evaluation set; round6_analysis)": {
+        "domain": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 121,
+          "interval": [
+            0.8135,
+            0.9634
+          ]
+        },
+        "modality": {
+          "requested": 10000,
+          "valid": 9997,
+          "dropped": 3,
+          "pct_dropped": 0.03,
+          "reasons": {
+            "single category in replicate (verbal): expected agreement = 1; 5 distinct children drawn": 1,
+            "single category in replicate (verbal): expected agreement = 1; 4 distinct children drawn": 2
+          },
+          "n_clusters": 11,
+          "n_items": 121,
+          "interval": [
+            0.7994,
+            1.0
+          ]
+        },
+        "prompt_level": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 121,
+          "interval": [
+            0.8541,
+            1.0
+          ]
+        },
+        "outcome": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 121,
+          "interval": [
+            0.8937,
+            0.9593
+          ]
+        }
+      },
+      "round_comparison round1 (178 re-issued)": {
+        "domain": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.6559,
+            0.8028
+          ]
+        },
+        "modality": {
+          "requested": 10000,
+          "valid": 9999,
+          "dropped": 1,
+          "pct_dropped": 0.01,
+          "reasons": {
+            "single category in replicate (verbal): expected agreement = 1; 5 distinct children drawn": 1
+          },
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.232,
+            0.5609
+          ]
+        },
+        "prompt_level": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.1263,
+            0.3559
+          ]
+        },
+        "outcome": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.1159,
+            0.4093
+          ]
+        }
+      },
+      "round_comparison round2 (178 re-issued)": {
+        "domain": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.6277,
+            0.7607
+          ]
+        },
+        "modality": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.7763,
+            0.9321
+          ]
+        },
+        "prompt_level": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.4439,
+            0.6671
+          ]
+        },
+        "outcome": {
+          "requested": 10000,
+          "valid": 10000,
+          "dropped": 0,
+          "pct_dropped": 0.0,
+          "reasons": {},
+          "n_clusters": 11,
+          "n_items": 178,
+          "interval": [
+            0.5059,
+            0.7189
+          ]
+        }
+      }
+    },
+    "kappa_change": {
+      "domain": {
+        "requested": 10000,
+        "valid": 10000,
+        "dropped": 0,
+        "pct_dropped": 0.0,
+        "reasons": {},
+        "n_clusters": 11,
+        "n_items": 178,
+        "interval": [
+          -0.1419,
+          0.0682
+        ]
+      },
+      "modality": {
+        "requested": 10000,
+        "valid": 9999,
+        "dropped": 1,
+        "pct_dropped": 0.01,
+        "reasons": {
+          "round 1 kappa undefined: single category in replicate (verbal): expected agreement = 1": 1
+        },
+        "n_clusters": 11,
+        "n_items": 178,
+        "interval": [
+          0.3365,
+          0.5826
+        ]
+      },
+      "prompt_level": {
+        "requested": 10000,
+        "valid": 10000,
+        "dropped": 0,
+        "pct_dropped": 0.0,
+        "reasons": {},
+        "n_clusters": 11,
+        "n_items": 178,
+        "interval": [
+          0.191,
+          0.435
+        ]
+      },
+      "outcome": {
+        "requested": 10000,
+        "valid": 10000,
+        "dropped": 0,
+        "pct_dropped": 0.0,
+        "reasons": {},
+        "n_clusters": 11,
+        "n_items": 178,
+        "interval": [
+          0.1602,
+          0.562
+        ]
+      }
+    }
+  },
+  "r11_6_validator": {
+    "validator": {
+      "file": "src/backend/ml/reporting_client.py",
+      "function": "validate_report",
+      "created": {
+        "commit": "75eb1d5",
+        "date": "2026-08-25T12:54:35-03:00",
+        "subject": "Implement Phase 4 analytics adequacy and reporting",
+        "validator_code_sha": "015f97b64765",
+        "diff_vs_previous": null
+      },
+      "at_run": {
+        "commit": "9ecc330",
+        "date": "2026-09-17T18:48:07-04:00",
+        "subject": "all good",
+        "validator_code_sha": "015f97b64765",
+        "diff_vs_previous": "validator code identical (comment lines ignored)"
+      },
+      "history": [
+        {
+          "commit": "75eb1d5",
+          "date": "2026-08-25T12:54:35-03:00",
+          "subject": "Implement Phase 4 analytics adequacy and reporting",
+          "validator_code_sha": "015f97b64765",
+          "diff_vs_previous": null
+        },
+        {
+          "commit": "f9a53c6",
+          "date": "2026-08-26T13:17:00-03:00",
+          "subject": "Fix manual verification gaps and add research validation documentation",
+          "validator_code_sha": "015f97b64765",
+          "diff_vs_previous": "validator code identical (comment lines ignored)"
+        },
+        {
+          "commit": "dc46399",
+          "date": "2026-08-27T19:09:21-04:00",
+          "subject": "code",
+          "validator_code_sha": "015f97b64765",
+          "diff_vs_previous": "validator code identical (comment lines ignored)"
+        },
+        {
+          "commit": "fa11861",
+          "date": "2026-08-28T09:54:06-04:00",
+          "subject": "open AI change done",
+          "validator_code_sha": "015f97b64765",
+          "diff_vs_previous": "validator code identical (comment lines ignored)"
+        },
+        {
+          "commit": "f8eded1",
+          "date": "2026-09-07T11:28:03-04:00",
+          "subject": "add",
+          "validator_code_sha": "015f97b64765",
+          "diff_vs_previous": "validator code identical (comment lines ignored)"
+        },
+        {
+          "commit": "9ecc330",
+          "date": "2026-09-17T18:48:07-04:00",
+          "subject": "all good",
+          "validator_code_sha": "015f97b64765",
+          "diff_vs_previous": "validator code identical (comment lines ignored)"
+        },
+        {
+          "commit": "63a73a6",
+          "date": "2026-09-21T17:55:27-04:00",
+          "subject": "add",
+          "validator_code_sha": "015f97b64765",
+          "diff_vs_previous": "validator code identical (comment lines ignored)"
+        }
+      ],
+      "code_at_run": "def validate_report(\n    sections: list[ReportSection],\n    evidence_packet: EvidencePacket,\n) -> list[str]:\n    errors: list[str] = []\n    full_text = \" \".join(s.body for s in sections)\n\n    for pattern in PROHIBITED_PATTERNS:\n        matches = re.findall(pattern, full_text, re.IGNORECASE)\n        if matches:\n            errors.append(f\"Prohibited content detected: pattern '{pattern}' matched\")\n\n    if evidence_packet.adequacy.level.value == \"insufficient\":\n        has_limitation_note = any(\n            \"insufficient\" in s.body.lower() or \"limited\" in s.body.lower()\n            for s in sections\n        )\n        if not has_limitation_note:\n            errors.append(\"Report does not acknowledge insufficient evidence\")\n\n    for kpi in (evidence_packet.analytics.kpis if evidence_packet.analytics else []):\n        if kpi.abstained and kpi.abstention_reason:\n            reason_mentioned = any(\n                kpi.name.replace(\"_\", \" \") in s.body.lower()\n                or \"withheld\" in s.body.lower()\n                or \"insufficient\" in s.body.lower()\n                for s in sections\n            )\n            if not reason_mentioned:\n                errors.append(f\"Abstained KPI '{kpi.name}' not acknowledged in report\")\n\n    return errors",
+      "prohibited_patterns_at_run": [
+        "\\b(diagnos[ei]s|diagnosed)\\b",
+        "\\b(recommend|should|must|need to)\\b.*\\b(therap\\w*|treatment|intervention|medication)\\b",
+        "\\b(caus[ei]s?|caused by|due to|because of)\\b.*\\b(autism|ASD|condition)\\b",
+        "\\b(prognosis|outlook|will (likely|probably))\\b",
+        "\\b(normal|abnormal|delayed|deficit)\\b",
+        "\\b(change|modify|adjust)\\b.*\\b(goal|objective|target)\\b"
+      ],
+      "validation_passed_rule_present_at_every_commit": true
+    },
+    "scorer": {
+      "file": "tests/eval/reporting/groundedness.py",
+      "history": [
+        {
+          "commit": "7a4b725",
+          "date": "2026-09-16T11:41:38-04:00",
+          "subject": "add"
+        },
+        {
+          "commit": "9ecc330",
+          "date": "2026-09-17T18:48:07-04:00",
+          "subject": "all good"
+        },
+        {
+          "commit": "63a73a6",
+          "date": "2026-09-21T17:55:27-04:00",
+          "subject": "add"
+        }
+      ],
+      "report_count_rule_at_run": "\"prohibited_content_reports\": sum(\n                1\n                for e in llm_reports\n                if any(\"Prohibited\" in err for err in e[\"validation_errors\"]",
+      "report_count_rule_at_creation": "\"prohibited_content_reports\": sum(\n                1\n                for e in llm_reports\n                if any(\"Prohibited\" in err for err in e[\"validation_errors\"]"
+    },
+    "result_artifact": {
+      "file": "tests/eval/reporting/results/reporting_groundedness.json",
+      "history": [
+        {
+          "commit": "7a4b725",
+          "date": "2026-09-16T11:41:38-04:00",
+          "subject": "add"
+        },
+        {
+          "commit": "9ecc330",
+          "date": "2026-09-17T18:48:07-04:00",
+          "subject": "all good"
+        }
+      ],
+      "at_run": {
+        "n_llm_reports": 11,
+        "prohibited_content_reports": 0,
+        "reports_passing_validation": 0,
+        "report_text_preserved": false
+      }
+    },
+    "config_dependency": "none: patterns are a module-level constant in reporting_client.py; no settings are read by validate_report"
+  },
+  "r11_8_unaccounted_mass": {
+    "episode_type_7/intended": {
+      "per_child": {
+        "brett": {
+          "frame_episodes": 269,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "play": 7,
+            "other": 5
+          }
+        },
+        "carl": {
+          "frame_episodes": 141,
+          "unaccounted_episodes": 30,
+          "unaccounted_pct": 21.28,
+          "missing_types": {
+            "other": {
+              "frame_episodes": 27,
+              "share_of_child_frame_pct": 19.15
+            },
+            "initiation": {
+              "frame_episodes": 3,
+              "share_of_child_frame_pct": 2.13
+            }
+          },
+          "sampled_types": {
+            "request": 2,
+            "response": 1,
+            "protest": 3,
+            "joint_attention": 4,
+            "play": 1
+          }
+        },
+        "jack": {
+          "frame_episodes": 170,
+          "unaccounted_episodes": 1,
+          "unaccounted_pct": 0.59,
+          "missing_types": {
+            "initiation": {
+              "frame_episodes": 1,
+              "share_of_child_frame_pct": 0.59
+            }
+          },
+          "sampled_types": {
+            "other": 6,
+            "play": 6
+          }
+        },
+        "josh": {
+          "frame_episodes": 68,
+          "unaccounted_episodes": 2,
+          "unaccounted_pct": 2.94,
+          "missing_types": {
+            "initiation": {
+              "frame_episodes": 2,
+              "share_of_child_frame_pct": 2.94
+            }
+          },
+          "sampled_types": {
+            "other": 2,
+            "response": 2,
+            "protest": 1,
+            "play": 4,
+            "joint_attention": 1,
+            "request": 2
+          }
+        },
+        "mark": {
+          "frame_episodes": 273,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "play": 4,
+            "other": 8
+          }
+        },
+        "mars": {
+          "frame_episodes": 233,
+          "unaccounted_episodes": 96,
+          "unaccounted_pct": 41.2,
+          "missing_types": {
+            "protest": {
+              "frame_episodes": 45,
+              "share_of_child_frame_pct": 19.31
+            },
+            "response": {
+              "frame_episodes": 40,
+              "share_of_child_frame_pct": 17.17
+            },
+            "play": {
+              "frame_episodes": 11,
+              "share_of_child_frame_pct": 4.72
+            }
+          },
+          "sampled_types": {
+            "joint_attention": 2,
+            "other": 4,
+            "request": 3,
+            "initiation": 1
+          }
+        },
+        "rick": {
+          "frame_episodes": 195,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "play": 3
+          }
+        },
+        "roger_flusberg": {
+          "frame_episodes": 281,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "play": 3
+          }
+        },
+        "roger_rollins": {
+          "frame_episodes": 60,
+          "unaccounted_episodes": 2,
+          "unaccounted_pct": 3.33,
+          "missing_types": {
+            "play": {
+              "frame_episodes": 2,
+              "share_of_child_frame_pct": 3.33
+            }
+          },
+          "sampled_types": {
+            "response": 1,
+            "joint_attention": 1,
+            "request": 1,
+            "protest": 2,
+            "other": 1
+          }
+        },
+        "sid": {
+          "frame_episodes": 167,
+          "unaccounted_episodes": 29,
+          "unaccounted_pct": 17.37,
+          "missing_types": {
+            "joint_attention": {
+              "frame_episodes": 20,
+              "share_of_child_frame_pct": 11.98
+            },
+            "play": {
+              "frame_episodes": 6,
+              "share_of_child_frame_pct": 3.59
+            },
+            "initiation": {
+              "frame_episodes": 3,
+              "share_of_child_frame_pct": 1.8
+            }
+          },
+          "sampled_types": {
+            "other": 6,
+            "request": 3,
+            "response": 1,
+            "protest": 1
+          }
+        },
+        "stuart": {
+          "frame_episodes": 194,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 7,
+            "play": 4
+          }
+        }
+      },
+      "total_frame_episodes": 2051,
+      "total_unaccounted": 160,
+      "overall_unaccounted_pct": 7.8,
+      "mean_of_child_pct": 7.88
+    },
+    "episode_type_7/analysed": {
+      "per_child": {
+        "brett": {
+          "frame_episodes": 269,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "play": 7,
+            "other": 5
+          }
+        },
+        "carl": {
+          "frame_episodes": 127,
+          "unaccounted_episodes": 22,
+          "unaccounted_pct": 17.32,
+          "missing_types": {
+            "other": {
+              "frame_episodes": 19,
+              "share_of_child_frame_pct": 14.96
+            },
+            "initiation": {
+              "frame_episodes": 3,
+              "share_of_child_frame_pct": 2.36
+            }
+          },
+          "sampled_types": {
+            "request": 2,
+            "response": 1,
+            "protest": 3,
+            "joint_attention": 4,
+            "play": 1
+          }
+        },
+        "jack": {
+          "frame_episodes": 157,
+          "unaccounted_episodes": 1,
+          "unaccounted_pct": 0.64,
+          "missing_types": {
+            "initiation": {
+              "frame_episodes": 1,
+              "share_of_child_frame_pct": 0.64
+            }
+          },
+          "sampled_types": {
+            "other": 6,
+            "play": 6
+          }
+        },
+        "josh": {
+          "frame_episodes": 64,
+          "unaccounted_episodes": 2,
+          "unaccounted_pct": 3.12,
+          "missing_types": {
+            "initiation": {
+              "frame_episodes": 2,
+              "share_of_child_frame_pct": 3.12
+            }
+          },
+          "sampled_types": {
+            "other": 2,
+            "response": 2,
+            "protest": 1,
+            "play": 4,
+            "joint_attention": 1,
+            "request": 2
+          }
+        },
+        "mark": {
+          "frame_episodes": 269,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "play": 4,
+            "other": 8
+          }
+        },
+        "mars": {
+          "frame_episodes": 194,
+          "unaccounted_episodes": 75,
+          "unaccounted_pct": 38.66,
+          "missing_types": {
+            "protest": {
+              "frame_episodes": 40,
+              "share_of_child_frame_pct": 20.62
+            },
+            "response": {
+              "frame_episodes": 26,
+              "share_of_child_frame_pct": 13.4
+            },
+            "play": {
+              "frame_episodes": 9,
+              "share_of_child_frame_pct": 4.64
+            }
+          },
+          "sampled_types": {
+            "joint_attention": 2,
+            "other": 4,
+            "request": 3,
+            "initiation": 1
+          }
+        },
+        "rick": {
+          "frame_episodes": 195,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "play": 3
+          }
+        },
+        "roger_flusberg": {
+          "frame_episodes": 271,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "play": 3
+          }
+        },
+        "roger_rollins": {
+          "frame_episodes": 38,
+          "unaccounted_episodes": 1,
+          "unaccounted_pct": 2.63,
+          "missing_types": {
+            "play": {
+              "frame_episodes": 1,
+              "share_of_child_frame_pct": 2.63
+            }
+          },
+          "sampled_types": {
+            "response": 1,
+            "joint_attention": 1,
+            "request": 1,
+            "protest": 2,
+            "other": 1
+          }
+        },
+        "sid": {
+          "frame_episodes": 149,
+          "unaccounted_episodes": 25,
+          "unaccounted_pct": 16.78,
+          "missing_types": {
+            "joint_attention": {
+              "frame_episodes": 18,
+              "share_of_child_frame_pct": 12.08
+            },
+            "play": {
+              "frame_episodes": 4,
+              "share_of_child_frame_pct": 2.68
+            },
+            "initiation": {
+              "frame_episodes": 3,
+              "share_of_child_frame_pct": 2.01
+            }
+          },
+          "sampled_types": {
+            "other": 6,
+            "request": 3,
+            "response": 1,
+            "protest": 1
+          }
+        },
+        "stuart": {
+          "frame_episodes": 182,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 7,
+            "play": 4
+          }
+        }
+      },
+      "total_frame_episodes": 1915,
+      "total_unaccounted": 126,
+      "overall_unaccounted_pct": 6.58,
+      "mean_of_child_pct": 7.2
+    },
+    "other_vs_typed/intended": {
+      "per_child": {
+        "brett": {
+          "frame_episodes": 269,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 7,
+            "other": 5
+          }
+        },
+        "carl": {
+          "frame_episodes": 141,
+          "unaccounted_episodes": 27,
+          "unaccounted_pct": 19.15,
+          "missing_types": {
+            "other": {
+              "frame_episodes": 27,
+              "share_of_child_frame_pct": 19.15
+            }
+          },
+          "sampled_types": {
+            "typed": 11
+          }
+        },
+        "jack": {
+          "frame_episodes": 170,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 6,
+            "typed": 6
+          }
+        },
+        "josh": {
+          "frame_episodes": 68,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 2,
+            "typed": 10
+          }
+        },
+        "mark": {
+          "frame_episodes": 273,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 4,
+            "other": 8
+          }
+        },
+        "mars": {
+          "frame_episodes": 233,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 6,
+            "other": 4
+          }
+        },
+        "rick": {
+          "frame_episodes": 195,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "typed": 3
+          }
+        },
+        "roger_flusberg": {
+          "frame_episodes": 281,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "typed": 3
+          }
+        },
+        "roger_rollins": {
+          "frame_episodes": 60,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 5,
+            "other": 1
+          }
+        },
+        "sid": {
+          "frame_episodes": 167,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 6,
+            "typed": 5
+          }
+        },
+        "stuart": {
+          "frame_episodes": 194,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 7,
+            "typed": 4
+          }
+        }
+      },
+      "total_frame_episodes": 2051,
+      "total_unaccounted": 27,
+      "overall_unaccounted_pct": 1.32,
+      "mean_of_child_pct": 1.74
+    },
+    "other_vs_typed/analysed": {
+      "per_child": {
+        "brett": {
+          "frame_episodes": 269,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 7,
+            "other": 5
+          }
+        },
+        "carl": {
+          "frame_episodes": 127,
+          "unaccounted_episodes": 19,
+          "unaccounted_pct": 14.96,
+          "missing_types": {
+            "other": {
+              "frame_episodes": 19,
+              "share_of_child_frame_pct": 14.96
+            }
+          },
+          "sampled_types": {
+            "typed": 11
+          }
+        },
+        "jack": {
+          "frame_episodes": 157,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 6,
+            "typed": 6
+          }
+        },
+        "josh": {
+          "frame_episodes": 64,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 2,
+            "typed": 10
+          }
+        },
+        "mark": {
+          "frame_episodes": 269,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 4,
+            "other": 8
+          }
+        },
+        "mars": {
+          "frame_episodes": 194,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 6,
+            "other": 4
+          }
+        },
+        "rick": {
+          "frame_episodes": 195,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "typed": 3
+          }
+        },
+        "roger_flusberg": {
+          "frame_episodes": 271,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 9,
+            "typed": 3
+          }
+        },
+        "roger_rollins": {
+          "frame_episodes": 38,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "typed": 5,
+            "other": 1
+          }
+        },
+        "sid": {
+          "frame_episodes": 149,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 6,
+            "typed": 5
+          }
+        },
+        "stuart": {
+          "frame_episodes": 182,
+          "unaccounted_episodes": 0,
+          "unaccounted_pct": 0.0,
+          "missing_types": {},
+          "sampled_types": {
+            "other": 7,
+            "typed": 4
+          }
+        }
+      },
+      "total_frame_episodes": 1915,
+      "total_unaccounted": 19,
+      "overall_unaccounted_pct": 0.99,
+      "mean_of_child_pct": 1.36
+    },
+    "handling": "round4_analysis.same_universe.poststrat: covered = sum of target counts over types present in the child's sample; weight = (target[k] / covered) / (sample[k] / n_child). Types absent from the sample receive no weight and are not imputed, redistributed to another type, or merged; their target mass is excluded from 'covered' and reported as unaccounted."
+  }
+}
