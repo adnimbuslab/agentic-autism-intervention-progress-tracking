@@ -30,7 +30,7 @@ from __future__ import annotations
 import json
 import os
 import re
-from datetime import date, timedelta
+from datetime import UTC, datetime, timedelta
 from typing import Any
 
 import pytest
@@ -91,9 +91,12 @@ async def _new_child(client: AsyncClient, i_token: str, name: str, *, contributo
 
 
 async def _review_period(client: AsyncClient, i_token: str, child_id: str) -> str:
+    # Built from the UTC date: the backend matches observations to a period by
+    # submitted_at in UTC days (see conftest seed_review_period).
+    today_utc = datetime.now(UTC).date()
     r = await client.post(f"/children/{child_id}/review-periods", headers=_auth(i_token), json={
-        "start_date": (date.today() - timedelta(days=30)).isoformat(),
-        "end_date": date.today().isoformat(),
+        "start_date": (today_utc - timedelta(days=30)).isoformat(),
+        "end_date": today_utc.isoformat(),
     })
     assert r.status_code == 201, r.text
     return r.json()["id"]

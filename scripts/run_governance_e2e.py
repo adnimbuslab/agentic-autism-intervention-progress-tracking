@@ -97,6 +97,31 @@ PRE_RUN_FIXES = [
                "S5 in both suites now requires each withheld analysis to be stated as withheld, "
                "with its reason, in one sentence.",
     },
+    {
+        "found": "2026-10-01",
+        "tests": [
+            "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::"
+            "test_s2_verify_or_correct_makes_eligible",
+            "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::"
+            "test_s3_correction_propagates_and_original_is_preserved",
+            "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::"
+            "test_s4_s5_insufficient_evidence_withheld_and_named_in_report",
+            "tests/phase6/integration/test_interventionist_e2e.py::TestInterventionistE2E::"
+            "test_full_analytics_report_flow",
+            "tests/phase6/integration/test_reporting_provenance_e2e.py::TestReportingProvenanceE2E::"
+            "test_full_report_via_api",
+        ],
+        "cause": "Test clock. The first frozen attempt at commit 027ed9c (started 2026-10-02T01:55Z, "
+                 "21:55 EDT) failed 5 of 77: every evidence packet was empty. The backend matches "
+                 "observations to a review period by submitted_at in UTC days; the suite built the "
+                 "period from the local date, which lags UTC between 20:00 and 24:00 EDT, so every "
+                 "observation fell after the period end. S1 passed in that attempt only vacuously "
+                 "(it asserts zero admitted records); S2 caught the fault.",
+        "fix": "The suite builds review periods from the UTC date. Test code only; no application "
+               "code changed. Open product question, not addressed here: review periods have no "
+               "site timezone, so an evening observation west of UTC can fall outside a period "
+               "ending 'today'.",
+    },
 ]
 
 SCENARIOS = {
