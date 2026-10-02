@@ -59,6 +59,44 @@ PRE_RUN_FIXES = [
                "that were produced. No application code changed. Suite then passed 3 of 3 runs; "
                "widening the analytics gate to admit VALIDATED still fails S1 and S2.",
     },
+    {
+        "found": "2026-10-01",
+        "tests": ["tests/phase6/e2e/governance.spec.ts (browser run; could not start)"],
+        "cause": "The frontend data layer src/frontend/lib/ (API client, auth, types, hooks, "
+                 "formatters, role guards; 15 modules imported by every page) had never been "
+                 "committed: an unanchored 'lib/' .gitignore rule excluded it. The UI could not "
+                 "build from version control.",
+        "fix": "Reconstructed src/frontend/lib/ from its call sites, the frontend unit tests and "
+               "the backend API schemas. All 111 frontend tests pass and next build succeeds. "
+               "Frontend code only; no backend change.",
+    },
+    {
+        "found": "2026-10-01",
+        "tests": ["tests/phase6/e2e/governance.spec.ts (S1, S4 adequacy display)"],
+        "cause": "The backend reports adequacy level in lowercase ('insufficient'); the analytics "
+                 "views compare against uppercase ('INSUFFICIENT'). Against the live backend the "
+                 "explicit 'Analytics are withheld' notice never rendered and an adequate result "
+                 "would have been styled as insufficient. Frontend tests passed because their "
+                 "mocks used uppercase.",
+        "fix": "useAnalytics normalises adequacy.level to uppercase once, before any component "
+               "reads it. Frontend code only.",
+    },
+    {
+        "found": "2026-10-01",
+        "tests": ["tests/phase6/e2e/governance.spec.ts::S5",
+                  "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::"
+                  "test_s4_s5_insufficient_evidence_withheld_and_named_in_report"],
+        "cause": "At insufficient evidence the analytics engine withholds everything behind one "
+                 "'all_analytics' KPI, which the deterministic reporter excluded from its withheld "
+                 "list. The report stated 'Evidence level: insufficient' but never that analytics "
+                 "were withheld. The earlier S5 check passed because it accepted 'insufficient' "
+                 "and matched the abstention reason ('Evidence level: insufficient') against the "
+                 "evidence-level line.",
+        "fix": "The deterministic summary now states 'All longitudinal analytics were withheld: "
+               "<reason>.' and carries it as the section's abstention note (unit test added). "
+               "S5 in both suites now requires each withheld analysis to be stated as withheld, "
+               "with its reason, in one sentence.",
+    },
 ]
 
 SCENARIOS = {

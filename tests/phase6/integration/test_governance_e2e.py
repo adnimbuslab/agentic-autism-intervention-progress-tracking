@@ -29,6 +29,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import date, timedelta
 from typing import Any
 
@@ -343,8 +344,10 @@ class TestGovernanceE2E:
         assert report["is_experimental"] is False
         assert report["validation_passed"] is True, report.get("validation_errors")
         prose = " ".join(s["body"] for s in report["sections"]).lower()
-        assert "withheld" in prose or "insufficient" in prose
-        named = [k for k in withheld if k["name"].replace("_", " ") in prose or k["abstention_reason"].lower() in prose]
+        # Each withheld analysis must be stated as withheld, with its reason,
+        # in one sentence. Mentioning the evidence level alone does not count.
+        sentences = [x for x in re.split(r"(?<=\.)\s+", prose) if "withheld" in x]
+        named = [k for k in withheld if any(k["abstention_reason"].lower() in x for x in sentences)]
         assert len(named) == len(withheld), (
             f"report silent about withheld analyses: "
             f"{[k['name'] for k in withheld if k not in named]}")

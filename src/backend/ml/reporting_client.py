@@ -378,11 +378,21 @@ class ReportingClient:
                     label += f" ({domain})"
                 goal_items.append(label)
             parts.append(f"Active goals: {'; '.join(goal_items)}.")
+        # Insufficient evidence withholds every analysis behind a single
+        # all_analytics KPI, which no per-indicator section names. Say so
+        # here rather than leave the reader to infer it from the level.
+        withholding = None
+        blanket = self._kpi_lookup(ep).get("all_analytics")
+        if blanket and blanket.abstained:
+            withholding = (
+                f"All longitudinal analytics were withheld: {blanket.abstention_reason}."
+            )
+            parts.append(withholding)
         return {
             "heading": "Review Period Summary",
             "body": " ".join(parts),
             "evidence_refs": [],
-            "abstention_note": None,
+            "abstention_note": withholding,
         }
 
     def _deterministic_coverage(self, ep: EvidencePacket, kpis: dict) -> dict:

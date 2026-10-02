@@ -211,6 +211,34 @@ class TestDeterministicSections:
         limitations = next(s for s in sections if s["heading"] == "Evidence Limitations")
         assert "independence rate" in limitations["body"].lower()
 
+    def test_deterministic_states_blanket_withholding(self):
+        # Insufficient evidence withholds every analysis behind one
+        # all_analytics KPI. Stating only the evidence level leaves the reader
+        # to infer that nothing was computed; the report must say so.
+        client = ReportingClient(api_key="test-key")
+        ep = make_evidence_packet(adequacy=make_adequate_result(AdequacyLevel.INSUFFICIENT))
+        ep.analytics.kpis = [
+            KpiResult(
+                name="all_analytics", numerator=0, denominator=0,
+                abstained=True, abstention_reason="Evidence level: insufficient",
+                prerequisites_met=False, display_eligible=False,
+            ),
+        ]
+        sections = client._build_deterministic_sections(ep)
+
+        statement = "All longitudinal analytics were withheld: Evidence level: insufficient."
+        summary = next(s for s in sections if s["heading"] == "Review Period Summary")
+        assert statement in summary["body"]
+        assert summary["abstention_note"] == statement
+
+    def test_deterministic_summary_has_no_withholding_when_computed(self):
+        client = ReportingClient(api_key="test-key")
+        ep = make_rich_evidence_packet()
+        sections = client._build_deterministic_sections(ep)
+        summary = next(s for s in sections if s["heading"] == "Review Period Summary")
+        assert "withheld" not in summary["body"].lower()
+        assert summary["abstention_note"] is None
+
     def test_deterministic_preserves_numerator_denominator(self):
         client = ReportingClient(api_key="test-key")
         ep = make_rich_evidence_packet()
