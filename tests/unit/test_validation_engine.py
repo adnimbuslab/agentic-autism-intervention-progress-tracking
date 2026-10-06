@@ -37,37 +37,44 @@ engine = ValidationEngine()
 
 
 class TestValidationRouting:
+    # @spec VALID-014
     def test_valid_observation_accepts(self) -> None:
         obs = _make_observation()
         result = engine.validate(obs)
         assert result.routing == RoutingDecision.ACCEPT
         assert result.is_valid is True
 
+    # @spec VALID-010
     def test_all_critical_missing_rejects(self) -> None:
         obs = _make_observation(behavior=None, domain=None)
         result = engine.validate(obs)
         assert result.routing == RoutingDecision.REJECT
 
+    # @spec VALID-011
     def test_one_critical_missing_routes_to_review(self) -> None:
         obs = _make_observation(behavior=None)
         result = engine.validate(obs)
         assert result.routing == RoutingDecision.INTERVENTIONIST_REVIEW
 
+    # @spec VALID-011
     def test_domain_missing_routes_to_review(self) -> None:
         obs = _make_observation(domain=None)
         result = engine.validate(obs)
         assert result.routing == RoutingDecision.INTERVENTIONIST_REVIEW
 
+    # @spec VALID-011
     def test_low_confidence_routes_to_review(self) -> None:
         obs = _make_observation(confidence=0.2)
         result = engine.validate(obs)
         assert result.routing == RoutingDecision.INTERVENTIONIST_REVIEW
 
+    # @spec VALID-013
     def test_medium_confidence_retains(self) -> None:
         obs = _make_observation(confidence=0.5)
         result = engine.validate(obs)
         assert result.routing == RoutingDecision.RETAIN_WITH_UNKNOWN
 
+    # @spec VALID-013
     def test_important_fields_missing_retains(self) -> None:
         obs = _make_observation(modality=None, prompt_level=None, outcome=None)
         result = engine.validate(obs)
@@ -121,6 +128,7 @@ class TestCrossFieldValidation:
 
 
 class TestGoalValidation:
+    # @spec VALID-023
     def test_invalid_goal_context_warning(self) -> None:
         obs = _make_observation(goal_context="G999")
         result = engine.validate(obs, goal_ids=["G1", "G2"])
@@ -158,6 +166,7 @@ class TestCompleteness:
 
 
 class TestDeterminism:
+    # @spec VALID-001
     def test_same_input_same_output(self) -> None:
         obs = _make_observation(confidence=0.5, modality=None)
         results = [engine.validate(obs) for _ in range(10)]

@@ -1,0 +1,1982 @@
+{
+  "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_002": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_002",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Said he wanted to play with the railroad tracks.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He clearly stated what he wanted, and the adult accepted it with 'okay'.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_021100.cha_seg_010": {
+    "segment_id": "sid_rollins_sid_021100.cha_seg_010",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Moved the pig, sheep, and cow in and out of the trough.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was self-directed object play with no accuracy target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_043": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_043",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Closed the mirror and later knocked on it during the hiding game.",
+      "modality": null,
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "The location question was repeated, and knocking showed some participation but did not fully answer it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070700.cha_seg_025": {
+    "segment_id": "mark_flusberg_mark_070700.cha_seg_025",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Answered no when asked whether fish live in a tree.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He answered the factual question correctly on the first opportunity.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_051002.cha_seg_089": {
+    "segment_id": "brett_flusberg_brett_051002.cha_seg_089",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered questions about washing the salad but left the last answer unfinished.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He answered some action questions correctly, but the final response was incomplete.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_020500.cha_seg_007": {
+    "segment_id": "josh_rollins_josh_020500.cha_seg_007",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Tried to work with the spout but did not open it before the adult did.",
+      "modality": null,
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "He attempted the target after the first instruction, but the adult completed the opening.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_070517.cha_seg_006": {
+    "segment_id": "brett_flusberg_brett_070517.cha_seg_006",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Gave partly unclear answers about where the things were.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The questions had clear targets, but the child's answers were not clear enough to judge.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_030700.cha_seg_030": {
+    "segment_id": "carl_rollins_carl_030700.cha_seg_030",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Changed the eye placement after correction but still put the eyes in the wrong place.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "incorrect"
+    },
+    "notes": "The adult added verbal and pointing support, but the final placement was still questioned as wrong.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_080221.cha_seg_006": {
+    "segment_id": "jack_flusberg_jack_080221.cha_seg_006",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Talked about covering his mouth and then told the adult to stop.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was a social interaction about boundaries, not an accuracy task.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_030000.cha_seg_006": {
+    "segment_id": "carl_rollins_carl_030000.cha_seg_006",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Put some pieces back and then removed one again.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He partly followed the put-back request, but the cleanup was not completed.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Used pretend-play language about singing and saying goodnight.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was pretend-play narration with no right-or-wrong target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030800.cha_seg_020": {
+    "segment_id": "mars_rollins_mars_030800.cha_seg_020",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Pointed to the pizza after the adult named it.",
+      "modality": "gestural",
+      "prompt_level": "model",
+      "outcome": "correct"
+    },
+    "notes": "The adult supplied 'pizza' and the child pointed to the matching picture.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070812.cha_seg_142": {
+    "segment_id": "mark_flusberg_mark_070812.cha_seg_142",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "behavior",
+      "behavior": "Said he was done instead of sitting down.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "incorrect"
+    },
+    "notes": "The sit-down direction was repeated, but he did not complete it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_050800.cha_seg_081": {
+    "segment_id": "brett_flusberg_brett_050800.cha_seg_081",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Gave an off-target answer when asked what the gate did.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The response did not answer the clear question about the gate's action.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030300.cha_seg_091": {
+    "segment_id": "mars_rollins_mars_030300.cha_seg_091",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Took the book and stood up to begin putting it away.",
+      "modality": null,
+      "prompt_level": "gestural",
+      "outcome": "partial"
+    },
+    "notes": "The adult paired the instruction with a book gesture, and he started but did not finish the put-away.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_060818.cha_seg_001": {
+    "segment_id": "rick_flusberg_rick_060818.cha_seg_001",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Changed 'record player' to 'record' after the adult corrected him.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "correct"
+    },
+    "notes": "He needed the adult's correction and then gave the accepted label.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_021100.cha_seg_013": {
+    "segment_id": "josh_rollins_josh_021100.cha_seg_013",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Reached for the blue block the adult was holding.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The reach was a functional request, but the transcript does not show whether the block was given.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_060207.cha_seg_014": {
+    "segment_id": "brett_flusberg_brett_060207.cha_seg_014",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Explained that the fire should be put out because the building was burning.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "correct"
+    },
+    "notes": "The adult clarified the why-question, and he then gave the correct causal answer.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_030806.cha_seg_056": {
+    "segment_id": "stuart_flusberg_stuart_030806.cha_seg_056",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named a shovel and boats when asked.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult positively confirmed the naming responses.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030800.cha_seg_021": {
+    "segment_id": "mars_rollins_mars_030800.cha_seg_021",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named the flowers after the adult pointed to them.",
+      "modality": "verbal",
+      "prompt_level": "gestural",
+      "outcome": "correct"
+    },
+    "notes": "The pointing supported the naming target, and the adult repeated the correct label.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_060011.cha_seg_051": {
+    "segment_id": "brett_flusberg_brett_060011.cha_seg_051",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Verbally refused spaghetti.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was a preference or refusal statement without an accuracy criterion.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_026": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_026",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Identified the circle during the shape activity.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The circle label was spontaneous; the later color question was not answered in the segment.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_040521.cha_seg_015": {
+    "segment_id": "stuart_flusberg_stuart_040521.cha_seg_015",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Repeated 'piano' after being told to play the piano.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He responded with the word but did not carry out the requested play action.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_031009.cha_seg_032": {
+    "segment_id": "stuart_flusberg_stuart_031009.cha_seg_032",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named the items as blocks.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult immediately acknowledged the label positively.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_059": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_059",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Used pretend dentist and table-play language.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was spontaneous pretend play with no accuracy target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_065": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_065",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Pulled the old balloon back out of the trash instead of throwing it away.",
+      "modality": null,
+      "prompt_level": "verbal",
+      "outcome": "incorrect"
+    },
+    "notes": "The throw-away instruction was repeated and paired with pointing, but he still did the opposite.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_030200.cha_seg_005": {
+    "segment_id": "sid_rollins_sid_030200.cha_seg_005",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Tried to open the door after repeated instructions but needed the adult to do key parts.",
+      "modality": null,
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "He attempted the target, but the adult unhooked and pushed the door for him.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_060622.cha_seg_012": {
+    "segment_id": "brett_flusberg_brett_060622.cha_seg_012",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Explained how to use the play-doh tool by flattening and cutting the play-doh.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "correct"
+    },
+    "notes": "The adult clarified the procedure question, and he gave relevant steps.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_080012.cha_seg_010": {
+    "segment_id": "jack_flusberg_jack_080012.cha_seg_010",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Said he wanted the playground on a different day.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The request was clear, but the transcript does not show whether it was fulfilled.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_030700.cha_seg_043": {
+    "segment_id": "carl_rollins_carl_030700.cha_seg_043",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Finished the drying routine and dropped the used item into the wastebasket.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He was already completing the routine and disposed of the item appropriately.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_021100.cha_seg_029": {
+    "segment_id": "sid_rollins_sid_021100.cha_seg_029",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Pointed to the board for some body-part cues and then drew on it.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He responded to part of the body-part sequence but did not complete the full target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_060622.cha_seg_021": {
+    "segment_id": "brett_flusberg_brett_060622.cha_seg_021",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Recalled new clothes but did not provide another requested item.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "The adult added several verbal cues, and he supplied only part of the requested recall.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_030806.cha_seg_043": {
+    "segment_id": "stuart_flusberg_stuart_030806.cha_seg_043",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "behavior",
+      "behavior": "Repeated 'down' after being told to put his hands down.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He verbally responded to the instruction, but the target hand movement was not shown.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030300.cha_seg_011": {
+    "segment_id": "mars_rollins_mars_030300.cha_seg_011",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Dropped the paper towel instead of wiping as instructed.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The clear wiping instruction was not completed.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070700.cha_seg_065": {
+    "segment_id": "mark_flusberg_mark_070700.cha_seg_065",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Read the word incorrectly despite correction and repeated opportunities.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "incorrect"
+    },
+    "notes": "The adult explicitly rejected the responses.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_020500.cha_seg_027": {
+    "segment_id": "josh_rollins_josh_020500.cha_seg_027",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Pulled the clinician back toward the railing instead of going downstairs.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The pull communicated refusal of the clear downstairs instruction.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_020200.cha_seg_025": {
+    "segment_id": "sid_rollins_sid_020200.cha_seg_025",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Gestured and kicked to refuse being held, and the adult put him down.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The nonverbal refusal was clear and the adult responded by putting him down.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_021100.cha_seg_065": {
+    "segment_id": "carl_rollins_carl_021100.cha_seg_065",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Made another horse eat during pretend play.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was self-directed pretend play with no accuracy criterion.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_030300.cha_seg_021": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_021",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Reached for the play-doh the adult was holding.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The functional request was clear, but the adult continued holding the play-doh instead of giving it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070700.cha_seg_062": {
+    "segment_id": "mark_flusberg_mark_070700.cha_seg_062",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Failed to name the holiday associated with fancy eggs after repeated prompts.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "incorrect"
+    },
+    "notes": "The holiday question was repeated and narrowed, but he did not provide the target answer.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_040700.cha_seg_108": {
+    "segment_id": "rick_flusberg_rick_040700.cha_seg_108",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named the object as a train.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult immediately repeated the correct label.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030300.cha_seg_080": {
+    "segment_id": "mars_rollins_mars_030300.cha_seg_080",
+    "child_id": "mars",
+    "field_values": {
+      "domain": null,
+      "behavior": "Made an unclear vocal sound after the adult modeled the letter O, then played with the chair.",
+      "modality": "unknown",
+      "prompt_level": null,
+      "outcome": null
+    },
+    "notes": "No clear target behavior was established, and the vocalization was not recognizable speech.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_040306.cha_seg_023": {
+    "segment_id": "stuart_flusberg_stuart_040306.cha_seg_023",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Verbally acknowledged cleanup directions but did not clearly complete them.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "incorrect"
+    },
+    "notes": "The adult added several cleanup directions, but no completed cleanup action is shown.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_046": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_046",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "behavior",
+      "behavior": "Kept playing with the horse instead of going for a walk after repeated requests.",
+      "modality": null,
+      "prompt_level": "verbal",
+      "outcome": "incorrect"
+    },
+    "notes": "The walk request was repeated, but he stayed with the horse.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_020800.cha_seg_008": {
+    "segment_id": "josh_rollins_josh_020800.cha_seg_008",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Completed the puzzle and smiled after the adult praised him.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult explicitly confirmed the puzzle success.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_048": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_048",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Guided the adult's hand to the doorknob to request help.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The hand-guiding clearly communicated a functional request, but the result is not shown.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_060819.cha_seg_016": {
+    "segment_id": "brett_flusberg_brett_060819.cha_seg_016",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Named a relevant object after repeated questions about how to knock the pins down.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "He identified the ball after added support but did not yet give the full action.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_020800.cha_seg_011": {
+    "segment_id": "josh_rollins_josh_020800.cha_seg_011",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Pushed the clinician's arm to request his juice and then received it.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The gesture functioned as a request and the clinician gave him the juice.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_051": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_051",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Used pretend-play language about cooking and watching television.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was pretend-play narration without an accuracy target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030800.cha_seg_076": {
+    "segment_id": "mars_rollins_mars_030800.cha_seg_076",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Went toward the stairs instead of the door the adult pointed to.",
+      "modality": null,
+      "prompt_level": "gestural",
+      "outcome": "incorrect"
+    },
+    "notes": "The adult's point showed the intended exit, but he chose the stairs.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_030700.cha_seg_039": {
+    "segment_id": "carl_rollins_carl_030700.cha_seg_039",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Repeated 'hat' after the adult named and showed the hat.",
+      "modality": "verbal",
+      "prompt_level": "model",
+      "outcome": "correct"
+    },
+    "notes": "The adult supplied the target word and the child repeated it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_061028.cha_seg_048": {
+    "segment_id": "jack_flusberg_jack_061028.cha_seg_048",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered with character names instead of saying what Mister Rogers does.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The question asked for an action, but the response gave names.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_030100.cha_seg_004": {
+    "segment_id": "josh_rollins_josh_030100.cha_seg_004",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Started down the hall after being asked whether he needed to go potty.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "His movement fit the toileting routine, but the full target was not resolved.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_030700.cha_seg_038": {
+    "segment_id": "carl_rollins_carl_030700.cha_seg_038",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Turned the water off when asked.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He completed the clear instruction on the first opportunity.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_080506.cha_seg_003": {
+    "segment_id": "jack_flusberg_jack_080506.cha_seg_003",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named Grover and Sesame Street.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult repeated both answers, supporting that they were correct.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_078": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_078",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Refused to turn the channel.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The turn-channel instruction was clear and he verbally refused it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_021100.cha_seg_048": {
+    "segment_id": "sid_rollins_sid_021100.cha_seg_048",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Pulled animals from the barn in response to a question about what was inside.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "The action showed some response to the question, but he did not clearly identify the contents.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_061028.cha_seg_007": {
+    "segment_id": "jack_flusberg_jack_061028.cha_seg_007",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Asked repeatedly what was wrong with the picture or situation.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "He was using speech to continue a social exchange rather than answering a scored target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_020800.cha_seg_048": {
+    "segment_id": "carl_rollins_carl_020800.cha_seg_048",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Handled the tractor and sheep while making jargon sounds.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The main behavior was object play, and the sounds were not recognizable speech.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_021100.cha_seg_045": {
+    "segment_id": "carl_rollins_carl_021100.cha_seg_045",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Stacked the last card after the cleanup instruction but did not put the cards on the shelf.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He participated in cleanup but did not complete the final shelf step.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_051002.cha_seg_007": {
+    "segment_id": "brett_flusberg_brett_051002.cha_seg_007",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered that he was working on the puzzle.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult explicitly said 'that's right'.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070700.cha_seg_073": {
+    "segment_id": "mark_flusberg_mark_070700.cha_seg_073",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Produced several related words and was finally told he was right.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult's final confirmation supports a correct response.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_031100.cha_seg_027": {
+    "segment_id": "mars_rollins_mars_031100.cha_seg_027",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Spontaneously described another red firetruck.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was a spontaneous comment, not a scored naming target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_020200.cha_seg_019": {
+    "segment_id": "sid_rollins_sid_020200.cha_seg_019",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "behavior",
+      "behavior": "Moved away and cried.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The crying was an emotional reaction rather than recognizable speech or a scored response.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_020800.cha_seg_004": {
+    "segment_id": "josh_rollins_josh_020800.cha_seg_004",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Dumped and handled puzzle pieces during self-directed play.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "There was no target response to score.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_030200.cha_seg_063": {
+    "segment_id": "sid_rollins_sid_030200.cha_seg_063",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Hooked the car to the truck and continued driving it through a Lego path.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He completed the first clear hook-it instruction and was thanked.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_030100.cha_seg_038": {
+    "segment_id": "josh_rollins_josh_030100.cha_seg_038",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Made an unclear refusal-like response to putting the juice away.",
+      "modality": "unknown",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The adult's 'why not?' shows the unclear vocalization was understood as refusal of the request.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_030500.cha_seg_056": {
+    "segment_id": "sid_rollins_sid_030500.cha_seg_056",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Completed the book phrase with 'last'.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "correct"
+    },
+    "notes": "The sentence stem verbally cued the target word, and the adult repeated it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070812.cha_seg_146": {
+    "segment_id": "mark_flusberg_mark_070812.cha_seg_146",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Asked for a new block and the adult accepted the request.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The functional request was clear and the adult responded 'okay'.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_060011.cha_seg_033": {
+    "segment_id": "brett_flusberg_brett_060011.cha_seg_033",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Asked for three swirls during the clay activity.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The request was clear and the adult accepted it with 'alright'.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_060522.cha_seg_002": {
+    "segment_id": "rick_flusberg_rick_060522.cha_seg_002",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named the pictured item as a stove.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The naming target was clear, but the transcript gives no confirmation.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_070106.cha_seg_007": {
+    "segment_id": "jack_flusberg_jack_070106.cha_seg_007",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Correctly named blocks and a blanket.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult explicitly said 'right' after both responses.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_030500.cha_seg_004": {
+    "segment_id": "sid_rollins_sid_030500.cha_seg_004",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Repeated 'the end' after the adult modeled it.",
+      "modality": "verbal",
+      "prompt_level": "model",
+      "outcome": "correct"
+    },
+    "notes": "The adult supplied the phrase and the child repeated it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_080915.cha_seg_003": {
+    "segment_id": "mark_flusberg_mark_080915.cha_seg_003",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Verbally refused the request to open the play-doh.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "He refused the clear play action on the first opportunity.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_080012.cha_seg_007": {
+    "segment_id": "jack_flusberg_jack_080012.cha_seg_007",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Talked about seeing Julie and Michael and whether he had fun with them.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was ordinary social conversation with no accuracy criterion.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_042": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_042",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Pointed to himself in the mirror and continued the hiding interaction.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The pointing was a communicative joint-attention gesture in a social play exchange.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_040700.cha_seg_073": {
+    "segment_id": "rick_flusberg_rick_040700.cha_seg_073",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Repeated part of the instruction to turn the crank without doing the action.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He echoed the target words but did not complete the requested play action.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070812.cha_seg_025": {
+    "segment_id": "mark_flusberg_mark_070812.cha_seg_025",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Changed from an incorrect answer to an approximation of 'Alicia' after the adult modeled it.",
+      "modality": "verbal",
+      "prompt_level": "model",
+      "outcome": "approximation"
+    },
+    "notes": "The adult supplied the target name and the child later produced a shortened version.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_030200.cha_seg_061": {
+    "segment_id": "sid_rollins_sid_030200.cha_seg_061",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Closed the door and then returned to the blocks.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He completed the first clear door-closing target before returning to play.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_021100.cha_seg_078": {
+    "segment_id": "carl_rollins_carl_021100.cha_seg_078",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Spontaneously labeled a rooster and took it from the barn.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The rooster label occurred during self-directed play rather than a naming test.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_047": {
+    "segment_id": "stuart_flusberg_stuart_030400.cha_seg_047",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered a naming question with 'this' instead of identifying the item.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The response did not satisfy the clear naming target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_051104.cha_seg_032": {
+    "segment_id": "rick_flusberg_rick_051104.cha_seg_032",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named the item as a sheep.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult immediately repeated the answer, supporting correctness.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_030806.cha_seg_064": {
+    "segment_id": "stuart_flusberg_stuart_030806.cha_seg_064",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Asked for a chip.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The request was clear, but the transcript does not show whether a chip was given.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_031009.cha_seg_029": {
+    "segment_id": "stuart_flusberg_stuart_031009.cha_seg_029",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Asked for water and then repeated the request more clearly.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "He initiated the request himself, but fulfillment is not shown.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_070315.cha_seg_004": {
+    "segment_id": "jack_flusberg_jack_070315.cha_seg_004",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Gave uncertain labels after repeated picture questions.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "unknown"
+    },
+    "notes": "The adult asked again, but the final answer is not confirmed.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_040700.cha_seg_054": {
+    "segment_id": "rick_flusberg_rick_040700.cha_seg_054",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Asked for Dan.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The request was clear, but the transcript does not show whether Dan was provided.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_020800.cha_seg_026": {
+    "segment_id": "josh_rollins_josh_020800.cha_seg_026",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Did not complete the puzzle placement despite repeated instructions and pointing.",
+      "modality": null,
+      "prompt_level": "verbal",
+      "outcome": "no_response"
+    },
+    "notes": "Added verbal and gestural support did not lead to the target placement.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_060900.cha_seg_015": {
+    "segment_id": "jack_flusberg_jack_060900.cha_seg_015",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Verbally refused coloring and sharing.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "He clearly refused the requested activities.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_040700.cha_seg_076": {
+    "segment_id": "rick_flusberg_rick_040700.cha_seg_076",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Said 'cow' after being told to get the cow but did not pick it up.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He responded to the cow target verbally, but the requested play action was not completed.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_010": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_010",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Continued self-directed horse and rein play.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The child was engaged in toy play with no scored target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_062": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_062",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Talked about singing but did not clearly sing the requested song.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "The adult added a direct singing prompt, but the target song was not completed.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_040306.cha_seg_024": {
+    "segment_id": "stuart_flusberg_stuart_040306.cha_seg_024",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Asked for juice.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The juice request was clear, but fulfillment is not shown.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_049": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_049",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Placed vehicles on the horse during self-directed play.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was object play and did not answer the brief question.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_090818.cha_seg_003": {
+    "segment_id": "mark_flusberg_mark_090818.cha_seg_003",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Answered yes when asked if he wanted to buy fish.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was a preference answer with no accuracy criterion.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_056": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_056",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Did not put the shirt on after the instruction was repeated.",
+      "modality": "unknown",
+      "prompt_level": "verbal",
+      "outcome": "no_response"
+    },
+    "notes": "The direction was repeated, but no target action was completed and the child's vocalization was unclear.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_061028.cha_seg_065": {
+    "segment_id": "jack_flusberg_jack_061028.cha_seg_065",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named Snoopy when asked who the character was.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult explicitly said 'right' and 'good'.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_050904.cha_seg_025": {
+    "segment_id": "rick_flusberg_rick_050904.cha_seg_025",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Named the item as a hat.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult immediately praised the response.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_021100.cha_seg_011": {
+    "segment_id": "sid_rollins_sid_021100.cha_seg_011",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Moved animals in the trough while making unclear sounds.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The main behavior was object play, and the sounds were not recognizable speech.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_030700.cha_seg_032": {
+    "segment_id": "carl_rollins_carl_030700.cha_seg_032",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Answered yes when asked whether the character was Spot.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He directly answered the identification question without correction.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_020800.cha_seg_004": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_004",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Put the cookie into the correct hole of the toy.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The successful placement was visible and the adult positively acknowledged it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030300.cha_seg_013": {
+    "segment_id": "mars_rollins_mars_030300.cha_seg_013",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Reached and pulled the adult's sleeve to request the shape.",
+      "modality": "gestural",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The request was clear, but the adult continued holding the shape out of reach.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_061012.cha_seg_009": {
+    "segment_id": "rick_flusberg_rick_061012.cha_seg_009",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered what he was doing after the question was repeated.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "correct"
+    },
+    "notes": "The repeated question led to the clear answer 'I playing'.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070700.cha_seg_066": {
+    "segment_id": "mark_flusberg_mark_070700.cha_seg_066",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Said 'Kimberely' and was immediately told no.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The adult explicitly rejected the answer.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_025": {
+    "segment_id": "stuart_flusberg_stuart_030610.cha_seg_025",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered 'bear' to a naming question.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "There is a clear target, but the transcript provides no confirmation.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_050904.cha_seg_049": {
+    "segment_id": "rick_flusberg_rick_050904.cha_seg_049",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Repeated 'honey' after the adult named it.",
+      "modality": "verbal",
+      "prompt_level": "model",
+      "outcome": "correct"
+    },
+    "notes": "The adult supplied the target word and the child repeated it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_030100.cha_seg_020": {
+    "segment_id": "josh_rollins_josh_030100.cha_seg_020",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Beat the can on the table instead of getting the item out.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The get-it-out instruction was clear, but he used an unrelated action.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_060819.cha_seg_001": {
+    "segment_id": "brett_flusberg_brett_060819.cha_seg_001",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Answered yes when asked whether he wanted to play with clay.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was a preference question rather than an accuracy task.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_030100.cha_seg_025": {
+    "segment_id": "josh_rollins_josh_030100.cha_seg_025",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Put the horse and other toys into the bucket.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He followed the clear play instruction on the first opportunity.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_040700.cha_seg_066": {
+    "segment_id": "rick_flusberg_rick_040700.cha_seg_066",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Spontaneously labeled a little girl.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult immediately confirmed the label.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_013": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_013",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Requested to play with his marble, and the adult delayed the request.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The functional request was clear, but the adult said they would play with it later.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_040029.cha_seg_012": {
+    "segment_id": "stuart_flusberg_stuart_040029.cha_seg_012",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "social_communication",
+      "behavior": "Called for his mother repeatedly instead of engaging with the puzzle.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The puzzle request was clear, but he responded by calling for Mom.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030300.cha_seg_083": {
+    "segment_id": "mars_rollins_mars_030300.cha_seg_083",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Put the shapes into the box but did not use the indicated shape hole.",
+      "modality": null,
+      "prompt_level": "gestural",
+      "outcome": "partial"
+    },
+    "notes": "The adult pointed to the target hole, and the child completed only part of the intended task.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "stuart_flusberg_stuart_030806.cha_seg_023": {
+    "segment_id": "stuart_flusberg_stuart_030806.cha_seg_023",
+    "child_id": "stuart",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Repeated 'on' after being told to put the item on without doing the action.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "The word echoed the instruction, but the target action was not shown.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "josh_rollins_josh_021100.cha_seg_043": {
+    "segment_id": "josh_rollins_josh_021100.cha_seg_043",
+    "child_id": "josh",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Said 'move' after the adult explicitly told him to say it.",
+      "modality": "verbal",
+      "prompt_level": "model",
+      "outcome": "correct"
+    },
+    "notes": "The adult supplied the target word and the child repeated it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "brett_flusberg_brett_051002.cha_seg_028": {
+    "segment_id": "brett_flusberg_brett_051002.cha_seg_028",
+    "child_id": "brett",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered 'I did' when asked who put it together.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult praised the response, confirming it.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_070812.cha_seg_002": {
+    "segment_id": "mark_flusberg_mark_070812.cha_seg_002",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Answered with the month but not the requested full date.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "The adult narrowed the question, but the complete date was still not given.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_014": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_014",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Used pretend-play language about strawberry milk, pizza, and feeding a lady.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was spontaneous pretend play with no accuracy target.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "sid_rollins_sid_030200.cha_seg_006": {
+    "segment_id": "sid_rollins_sid_030200.cha_seg_006",
+    "child_id": "sid",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Rolled the train of cars to the gas station and continued selecting toys.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was spontaneous play following the adult's narration.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_021100.cha_seg_047": {
+    "segment_id": "carl_rollins_carl_021100.cha_seg_047",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Lifted the bucket after added directions, but the adult put it on the shelf.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "partial"
+    },
+    "notes": "He completed part of the cleanup sequence after extra support, but the adult finished the task.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_026": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_026",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "adaptive",
+      "behavior": "Followed part of the walking transition but did not follow all door-related directions.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "partial"
+    },
+    "notes": "He followed the walk but did not complete the full transition sequence.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_079": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_079",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Hit the trash can with a wrench and then walked toward a door.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was self-directed object play, and the vocal sound was not recognizable speech.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "rick_flusberg_rick_040700.cha_seg_008": {
+    "segment_id": "rick_flusberg_rick_040700.cha_seg_008",
+    "child_id": "rick",
+    "field_values": {
+      "domain": "cognitive",
+      "behavior": "Answered 'three' when asked to identify a number and was told no.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "incorrect"
+    },
+    "notes": "The adult explicitly rejected the answer.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030300.cha_seg_002": {
+    "segment_id": "mars_rollins_mars_030300.cha_seg_002",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "motor",
+      "behavior": "Made unclear vocal sounds but did not complete the push action after added guidance.",
+      "modality": "unknown",
+      "prompt_level": "verbal",
+      "outcome": "no_response"
+    },
+    "notes": "The adult clarified the direction, but no child pushing action was shown.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mark_flusberg_mark_071026.cha_seg_012": {
+    "segment_id": "mark_flusberg_mark_071026.cha_seg_012",
+    "child_id": "mark",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Answered 'boy' when asked what was gone.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "The adult said 'yeah', supporting the answer.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_060900.cha_seg_063": {
+    "segment_id": "jack_flusberg_jack_060900.cha_seg_063",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Eventually said 'guy' after repeated naming questions.",
+      "modality": "verbal",
+      "prompt_level": "verbal",
+      "outcome": "unknown"
+    },
+    "notes": "The question was repeated, but the transcript does not confirm whether the final label was correct.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_010": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_010",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Asked for help with something bothering his finger.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The request language was recognizable, but the transcript does not show whether the help was provided.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_008": {
+    "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_008",
+    "child_id": "roger_rollins",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Turned the block over and put it on the stack.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": "correct"
+    },
+    "notes": "He completed the first block-placement instruction without added support.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "jack_flusberg_jack_061028.cha_seg_017": {
+    "segment_id": "jack_flusberg_jack_061028.cha_seg_017",
+    "child_id": "jack",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Repeated several phrases supplied by the adult in the story routine.",
+      "modality": "verbal",
+      "prompt_level": "model",
+      "outcome": "correct"
+    },
+    "notes": "The adult provided the phrases and the child repeated them.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_030100.cha_seg_048": {
+    "segment_id": "mars_rollins_mars_030100.cha_seg_048",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "motor",
+      "behavior": "Walked away from the chicken-coop activity and climbed the wall.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "This was self-directed physical movement rather than a communicative or scored task.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "carl_rollins_carl_020800.cha_seg_034": {
+    "segment_id": "carl_rollins_carl_020800.cha_seg_034",
+    "child_id": "carl",
+    "field_values": {
+      "domain": "motor",
+      "behavior": "Moved the horse's leg after the adult demonstrated the action.",
+      "modality": null,
+      "prompt_level": "model",
+      "outcome": "correct"
+    },
+    "notes": "The adult modeled the movement and the child then did it, followed by praise.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "mars_rollins_mars_031100.cha_seg_002": {
+    "segment_id": "mars_rollins_mars_031100.cha_seg_002",
+    "child_id": "mars",
+    "field_values": {
+      "domain": "play",
+      "behavior": "Took character toys from the box while making unclear sounds.",
+      "modality": null,
+      "prompt_level": "independent",
+      "outcome": null
+    },
+    "notes": "The main behavior was object play; the sounds were not recognizable speech.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_037": {
+    "segment_id": "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_037",
+    "child_id": "roger_flusberg",
+    "field_values": {
+      "domain": "language",
+      "behavior": "Gave an unconfirmed label of 'green frog' to a character question.",
+      "modality": "verbal",
+      "prompt_level": "independent",
+      "outcome": "unknown"
+    },
+    "notes": "The question had a clear naming target, but the transcript does not confirm the answer.",
+    "annotator": "holdout_annotator_b",
+    "source": "spreadsheet",
+    "round": 1
+  }
+}

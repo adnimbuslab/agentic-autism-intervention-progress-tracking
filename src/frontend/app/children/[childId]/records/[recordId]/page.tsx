@@ -7,6 +7,7 @@ import { LoadingState } from "@/components/common/LoadingState";
 import { ErrorState } from "@/components/common/ErrorState";
 import { StructuredRecordView } from "@/components/records/StructuredRecordView";
 import { CorrectionForm } from "@/components/records/CorrectionForm";
+import { VerificationPanel } from "@/components/records/VerificationPanel";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -36,6 +37,11 @@ export default function RecordDetailPage() {
       </div>
 
       <StructuredRecordView record={record} />
+
+      <VerificationPanel
+        record={record}
+        onCorrect={() => setShowCorrection(true)}
+      />
 
       {showCorrection && (
         <CorrectionForm

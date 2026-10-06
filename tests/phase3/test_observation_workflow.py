@@ -143,6 +143,45 @@ class TestValidateNode:
         assert parsed.is_valid is False
         assert parsed.routing == RoutingDecision.REJECT
 
+    # @spec EXTRACT-003
+    async def test_multi_observation_only_first_is_validated(self):
+        """With 2+ observations, only observations[0] is passed to
+        ValidationEngine.validate(); observations[1:] must not influence
+        the routing decision."""
+        incomplete_first = StructuredObservation(
+            child_id="child-1",
+            session_id="session-1",
+            domain=None,
+            behavior=None,
+            modality=None,
+            prompt_level=None,
+            outcome=None,
+            setting=Setting.HOME,
+            contributor_role=ContributorRole.INTERVENTIONIST,
+            observation_date=str(date.today()),
+        )
+        complete_second = _mock_extraction_result().observations[0]
+
+        extraction = ExtractionResult(
+            status=ExtractionStatus.SUCCESS,
+            observations=[incomplete_first, complete_second],
+            provider="temporary_llm",
+            model="claude-sonnet-4-20250514",
+            prompt_version="1.0",
+        )
+        state = _base_state(
+            extraction_result=extraction.model_dump(mode="json"),
+            status="extracting",
+        )
+        result = await validate_node(state)
+        parsed = ValidationResult.model_validate(result["validation_result"])
+
+        # observations[0] is missing both critical fields -> REJECT.
+        # If observations[1] (fully populated) had been validated instead,
+        # routing would be ACCEPT -- so REJECT here proves only the first
+        # element was passed to the Deterministic Validation Engine.
+        assert parsed.routing == RoutingDecision.REJECT
+
 
 class TestRouteNode:
     async def test_routes_with_valid_state(self):
@@ -193,6 +232,7 @@ class TestRouteEdge:
         state = _base_state(routing_decision="reject")
         assert route_edge(state) == "reject"
 
+    # @spec ABSTAIN-020
     def test_unknown_defaults_to_reject(self):
         state = _base_state(routing_decision="unknown_value")
         assert route_edge(state) == "reject"

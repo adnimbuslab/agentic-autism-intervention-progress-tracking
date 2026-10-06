@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import date
 from pathlib import Path
 
-from data.pipeline.chat_parser import parse_chat_file
+from data.pipeline.chat_parser import parse_chat_file, parse_corpus_directory
 
 
 class TestChatParserHeaders:
@@ -147,3 +147,65 @@ class TestChatParserEdgeCases:
         session = parse_chat_file(f, corpus="test", child_id="test")
         assert session.utterance_count == 0
         assert "CHI" in session.header.participants
+
+
+class TestCorpusDirectoryChildAttribution:
+    """Child attribution over a real corpus directory layout.
+
+    The ASDBank corpora identify the child by *directory* (``Rollins/Carl/020800.cha``),
+    not by filename -- filenames are bare session ages and repeat across children.
+    Every test above supplies ``child_id`` directly to ``parse_chat_file``, so the
+    attribution step itself needs its own coverage: an unattributed corpus silently
+    collapses every child to ``"unknown"``, which defeats the child-level split
+    that leakage-safe evaluation depends on.
+    """
+
+    def _corpus(self, tmp_path: Path, content: str) -> Path:
+        corpus = tmp_path / "Rollins"
+        for child, sessions in (("Carl", ["020800", "021100"]), ("Mars", ["030100"])):
+            child_dir = corpus / child
+            child_dir.mkdir(parents=True)
+            for session in sessions:
+                (child_dir / f"{session}.cha").write_text(content, encoding="utf-8")
+        return corpus
+
+    def test_attributes_child_from_directory_name(
+        self, sample_chat_content: str, tmp_path: Path
+    ) -> None:
+        corpus = self._corpus(tmp_path, sample_chat_content)
+        sessions = parse_corpus_directory(
+            corpus, "rollins", {"carl": ["carl"], "mars": ["mars"]}
+        )
+
+        assert {s.child_id for s in sessions} == {"carl", "mars"}
+        assert sorted(s.child_id for s in sessions) == ["carl", "carl", "mars"]
+
+    def test_no_session_is_left_unattributed(
+        self, sample_chat_content: str, tmp_path: Path
+    ) -> None:
+        corpus = self._corpus(tmp_path, sample_chat_content)
+        sessions = parse_corpus_directory(
+            corpus, "rollins", {"carl": ["carl"], "mars": ["mars"]}
+        )
+
+        assert [s for s in sessions if s.child_id == "unknown"] == []
+
+    def test_unmatched_child_still_falls_back_to_unknown(
+        self, sample_chat_content: str, tmp_path: Path
+    ) -> None:
+        corpus = self._corpus(tmp_path, sample_chat_content)
+        sessions = parse_corpus_directory(corpus, "rollins", {"carl": ["carl"]})
+
+        assert sorted(s.child_id for s in sessions) == ["carl", "carl", "unknown"]
+
+    def test_filename_borne_child_id_still_matches(
+        self, sample_chat_content: str, tmp_path: Path
+    ) -> None:
+        """Flat layouts that encode the child in the filename must keep working."""
+        corpus = tmp_path / "Flat"
+        corpus.mkdir()
+        (corpus / "brett_070315.cha").write_text(sample_chat_content, encoding="utf-8")
+
+        sessions = parse_corpus_directory(corpus, "flusberg", {"brett": ["brett"]})
+
+        assert [s.child_id for s in sessions] == ["brett"]

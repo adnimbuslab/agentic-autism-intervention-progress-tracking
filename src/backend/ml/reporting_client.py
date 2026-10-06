@@ -83,6 +83,7 @@ PROHIBITED_PATTERNS = [
 ]
 
 
+# @spec REPORT-020, REPORT-021, REPORT-022
 def validate_report(
     sections: list[ReportSection],
     evidence_packet: EvidencePacket,
@@ -118,40 +119,74 @@ def validate_report(
 
 
 class ReportingClient:
-    """Generates progress reports using the configured LLM provider."""
+    """Generates progress reports using the configured LLM provider.
+
+    ``provider`` selects the vendor SDK ``_call_llm`` uses ("anthropic" or
+    "ollama" -- an OpenAI-compatible endpoint, Ollama by default). The
+    method signature and return shape of ``_call_llm`` are identical across
+    both, so callers (and tests that patch ``_call_llm`` directly) are
+    unaffected by which provider is active.
+    """
 
     def __init__(
         self,
         api_key: str | None = None,
         model: str | None = None,
+        provider: str | None = None,
+        base_url: str | None = None,
+        mode: str | None = None,
     ):
-        self._api_key = api_key or settings.anthropic_api_key
-        self._model = model or settings.reporting_model
+        self._mode = mode or settings.reporting_mode
+        self._provider = provider or settings.reporting_provider
+        if self._provider == "ollama":
+            self._api_key = api_key or settings.ollama_api_key
+            self._model = model or settings.ollama_model
+            self._base_url = base_url or settings.ollama_base_url
+        else:
+            self._api_key = api_key or settings.anthropic_api_key
+            self._model = model or settings.reporting_model
+            self._base_url = base_url
 
+    # @spec REPORT-001, REPORT-010, REPORT-011, REPORT-012
+    #
+    # Two modes. "deterministic" is operational: the sections are rendered
+    # from the evidence packet in code, so every number in them is a number
+    # the analytics engine computed and every withheld analysis is named.
+    # "generative_experimental" calls the reporting LLM; in evaluation that
+    # layer produced no prohibited content but failed the governance contract
+    # on all 11 reports by omitting that an analysis had been withheld, so its
+    # output is returned marked experimental and falls back to the
+    # deterministic reporter if the call fails.
     async def generate_report(
         self, evidence_packet: EvidencePacket
     ) -> GeneratedReportData:
-        user_message = json.dumps(evidence_packet.model_dump(mode="json"), indent=2)
-
-        used_fallback = False
-        try:
-            sections = await self._call_llm(user_message)
-        except Exception:
-            logger.exception("Report generation LLM call failed, using deterministic fallback")
-            sections = self._build_fallback_sections(evidence_packet)
-            used_fallback = True
+        used_llm = False
+        if self._mode == "generative_experimental":
+            user_message = json.dumps(
+                evidence_packet.model_dump(mode="json"), indent=2
+            )
+            try:
+                sections = await self._call_llm(user_message)
+                used_llm = True
+            except Exception:
+                logger.exception(
+                    "Report generation LLM call failed, using deterministic reporter"
+                )
+                sections = self._build_deterministic_sections(evidence_packet)
+        else:
+            sections = self._build_deterministic_sections(evidence_packet)
 
         parsed_sections = self._parse_sections(sections)
         validation_errors = validate_report(parsed_sections, evidence_packet)
 
-        if used_fallback:
-            provider = "deterministic_fallback"
-            model = "deterministic_fallback_v1"
-            prompt_version = "N/A"
-        else:
-            provider = "anthropic"
+        if used_llm:
+            provider = self._provider
             model = self._model
             prompt_version = settings.reporting_prompt_version
+        else:
+            provider = "deterministic"
+            model = "deterministic_reporter_v1"
+            prompt_version = "N/A"
 
         return GeneratedReportData(
             child_id=evidence_packet.child_id,
@@ -163,9 +198,60 @@ class ReportingClient:
             prompt_version=prompt_version,
             validation_passed=len(validation_errors) == 0,
             validation_errors=validation_errors,
+            is_experimental=used_llm,
         )
 
+    # Schema the reporting model's output must conform to. Supplying it as a
+    # decoding constraint rather than an instruction is the difference between
+    # a usable report and prose: asked in the prompt alone, locally served
+    # models returned narrative summaries and every generation fell back to the
+    # deterministic template. Constrained, the same models produce conformant
+    # sections.
+    REPORT_SCHEMA: dict = {
+        "type": "object",
+        "properties": {
+            "sections": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "heading": {"type": "string"},
+                        "body": {"type": "string"},
+                        "evidence_refs": {
+                            "type": "array",
+                            "items": {"type": "string"},
+                        },
+                        "abstention_note": {"type": ["string", "null"]},
+                    },
+                    "required": ["heading", "body", "evidence_refs"],
+                },
+            }
+        },
+        "required": ["sections"],
+    }
+
     async def _call_llm(self, user_message: str) -> list[dict]:
+        if self._provider == "ollama":
+            text = await self._call_llm_ollama_native(user_message)
+        else:
+            text = await self._call_llm_anthropic(user_message)
+
+        try:
+            parsed = json.loads(text)
+        except json.JSONDecodeError:
+            json_match = re.search(r"\[.*\]", text, re.DOTALL)
+            if not json_match:
+                raise
+            parsed = json.loads(json_match.group())
+
+        # The schema wraps the sections in an object; an unconstrained model
+        # may still return the bare array. Accept both rather than failing on
+        # the shape the constraint produces.
+        if isinstance(parsed, dict):
+            return parsed.get("sections") or []
+        return parsed
+
+    async def _call_llm_anthropic(self, user_message: str) -> str:
         import anthropic
 
         client = anthropic.AsyncAnthropic(api_key=self._api_key)
@@ -175,15 +261,54 @@ class ReportingClient:
             system=REPORTING_SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_message}],
         )
+        return response.content[0].text
 
-        text = response.content[0].text
+    async def _call_llm_ollama_native(self, user_message: str) -> str:
+        """Call Ollama's own /api/chat so the schema constraint is honoured.
+
+        Ollama's OpenAI-compatible /v1 endpoint silently drops `format`, as it
+        drops other native options, so the constraint has to go through the
+        native API. Falls back to the compatible endpoint if the native one is
+        unreachable, which keeps a non-Ollama OpenAI-compatible server working.
+        """
+        import httpx
+
+        base = self._base_url.rstrip("/")
+        native = base[: -len("/v1")] if base.endswith("/v1") else base
+        payload = {
+            "model": self._model,
+            "messages": [
+                {"role": "system", "content": REPORTING_SYSTEM_PROMPT},
+                {"role": "user", "content": user_message},
+            ],
+            "stream": False,
+            "format": self.REPORT_SCHEMA,
+            "options": {"num_ctx": settings.reporting_num_ctx},
+        }
         try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            json_match = re.search(r"\[.*\]", text, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group())
-            raise
+            async with httpx.AsyncClient(timeout=settings.reporting_timeout_s) as client:
+                response = await client.post(f"{native}/api/chat", json=payload)
+                response.raise_for_status()
+                return (response.json().get("message") or {}).get("content") or ""
+        except Exception:
+            logger.warning(
+                "Ollama native endpoint unavailable; falling back to the "
+                "OpenAI-compatible endpoint, which cannot enforce the schema."
+            )
+            return await self._call_llm_openai_compatible(user_message)
+
+    async def _call_llm_openai_compatible(self, user_message: str) -> str:
+        import openai
+
+        client = openai.AsyncOpenAI(base_url=self._base_url, api_key=self._api_key)
+        response = await client.chat.completions.create(
+            model=self._model,
+            messages=[
+                {"role": "system", "content": REPORTING_SYSTEM_PROMPT},
+                {"role": "user", "content": user_message},
+            ],
+        )
+        return response.choices[0].message.content
 
     def _parse_sections(self, raw_sections: list[dict]) -> list[ReportSection]:
         sections: list[ReportSection] = []
@@ -198,38 +323,38 @@ class ReportingClient:
             )
         return sections
 
-    def _build_fallback_sections(
+    def _build_deterministic_sections(
         self, evidence_packet: EvidencePacket
     ) -> list[dict]:
         ep = evidence_packet
         kpis = self._kpi_lookup(ep)
         sections: list[dict] = []
 
-        sections.append(self._fallback_summary(ep))
-        sections.append(self._fallback_coverage(ep, kpis))
+        sections.append(self._deterministic_summary(ep))
+        sections.append(self._deterministic_coverage(ep, kpis))
 
-        key_indicators = self._fallback_key_indicators(kpis)
+        key_indicators = self._deterministic_key_indicators(kpis)
         if key_indicators:
             sections.append(key_indicators)
 
-        patterns = self._fallback_patterns(kpis)
+        patterns = self._deterministic_patterns(kpis)
         if patterns:
             sections.append(patterns)
 
-        progress = self._fallback_progress(kpis)
+        progress = self._deterministic_progress(kpis)
         if progress:
             sections.append(progress)
 
-        cross = self._fallback_cross_observations(kpis)
+        cross = self._deterministic_cross_observations(kpis)
         if cross:
             sections.append(cross)
 
-        sections.append(self._fallback_limitations(ep, kpis))
+        sections.append(self._deterministic_limitations(ep, kpis))
 
         return sections
 
     @staticmethod
-    def _kpi_lookup(ep: EvidencePacket) -> dict[str, "KpiResult"]:
+    def _kpi_lookup(ep: EvidencePacket) -> dict[str, KpiResult]:
         if not ep.analytics:
             return {}
         return {k.name: k for k in ep.analytics.kpis}
@@ -238,7 +363,7 @@ class ReportingClient:
     def _fmt_pct(value: float) -> str:
         return f"{value * 100:.1f}%"
 
-    def _fallback_summary(self, ep: EvidencePacket) -> dict:
+    def _deterministic_summary(self, ep: EvidencePacket) -> dict:
         parts = [
             f"Review period: {ep.review_period_start} to {ep.review_period_end}.",
             f"Total observations: {ep.observation_count}.",
@@ -253,14 +378,24 @@ class ReportingClient:
                     label += f" ({domain})"
                 goal_items.append(label)
             parts.append(f"Active goals: {'; '.join(goal_items)}.")
+        # Insufficient evidence withholds every analysis behind a single
+        # all_analytics KPI, which no per-indicator section names. Say so
+        # here rather than leave the reader to infer it from the level.
+        withholding = None
+        blanket = self._kpi_lookup(ep).get("all_analytics")
+        if blanket and blanket.abstained:
+            withholding = (
+                f"All longitudinal analytics were withheld: {blanket.abstention_reason}."
+            )
+            parts.append(withholding)
         return {
             "heading": "Review Period Summary",
             "body": " ".join(parts),
             "evidence_refs": [],
-            "abstention_note": None,
+            "abstention_note": withholding,
         }
 
-    def _fallback_coverage(self, ep: EvidencePacket, kpis: dict) -> dict:
+    def _deterministic_coverage(self, ep: EvidencePacket, kpis: dict) -> dict:
         parts = [f"{ep.observation_count} observations were recorded."]
         if ep.contributor_summary:
             contrib = ", ".join(f"{k}: {v}" for k, v in ep.contributor_summary.items())
@@ -285,7 +420,7 @@ class ReportingClient:
             "abstention_note": None,
         }
 
-    def _fallback_key_indicators(self, kpis: dict) -> dict | None:
+    def _deterministic_key_indicators(self, kpis: dict) -> dict | None:
         parts: list[str] = []
         abstention_notes: list[str] = []
 
@@ -324,7 +459,7 @@ class ReportingClient:
             "abstention_note": " ".join(abstention_notes) if abstention_notes else None,
         }
 
-    def _fallback_patterns(self, kpis: dict) -> dict | None:
+    def _deterministic_patterns(self, kpis: dict) -> dict | None:
         parts: list[str] = []
 
         for kpi_name, label in [
@@ -349,7 +484,7 @@ class ReportingClient:
             "abstention_note": None,
         }
 
-    def _fallback_progress(self, kpis: dict) -> dict | None:
+    def _deterministic_progress(self, kpis: dict) -> dict | None:
         parts: list[str] = []
         abstention_notes: list[str] = []
 
@@ -394,7 +529,7 @@ class ReportingClient:
             "abstention_note": " ".join(abstention_notes) if abstention_notes else None,
         }
 
-    def _fallback_cross_observations(self, kpis: dict) -> dict | None:
+    def _deterministic_cross_observations(self, kpis: dict) -> dict | None:
         parts: list[str] = []
         abstention_notes: list[str] = []
 
@@ -431,7 +566,7 @@ class ReportingClient:
             "abstention_note": " ".join(abstention_notes) if abstention_notes else None,
         }
 
-    def _fallback_limitations(self, ep: EvidencePacket, kpis: dict) -> dict:
+    def _deterministic_limitations(self, ep: EvidencePacket, kpis: dict) -> dict:
         parts: list[str] = []
 
         if ep.adequacy.quality_flags:

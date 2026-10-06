@@ -1,0 +1,597 @@
+{
+  "run": "Frozen governance-critical end-to-end run",
+  "started_utc": "2026-10-02T01:58:09+00:00",
+  "finished_utc": "2026-10-02T01:58:54+00:00",
+  "build": {
+    "branch": "model-finetuning",
+    "commit": "be8acaf555af27d6c95590f49633b18621bd3cae",
+    "commit_short": "be8acaf",
+    "commit_date": "2026-10-01T21:58:09-04:00",
+    "working_tree_clean": true
+  },
+  "extractor": {
+    "provider": "ollama",
+    "model": "qwen2.5:7b",
+    "ollama_digest": "845dbda0ea48",
+    "ollama_version": "0.33.3",
+    "quantization": "Q4_K_M",
+    "parameter_size": "7.6B",
+    "how_configured": "Environment for this run (EXTRACTION_PROVIDER=ollama, OLLAMA_MODEL=qwen2.5:7b). The application's code default is unchanged.",
+    "mocked": false
+  },
+  "reporting_mode": "deterministic",
+  "test_data": "Controlled synthetic observations written for the suite (six contributor notes: three home, three school). No corpus-derived text.",
+  "scenarios": [
+    {
+      "id": "S0",
+      "description": "Frozen configuration: extractor is ollama/qwen2.5:7b; reporting mode is deterministic",
+      "test": "test_s0_frozen_configuration",
+      "outcome": "passed",
+      "observed": null
+    },
+    {
+      "id": "S1",
+      "description": "Unverified-block: AI-extracted records not professionally verified never enter analytics",
+      "test": "test_s1_unverified_records_are_blocked",
+      "outcome": "passed",
+      "observed": {
+        "observations": 6,
+        "routing": [
+          "accept",
+          "retain_with_unknown",
+          "accept",
+          "retain_with_unknown",
+          "accept",
+          "accept"
+        ],
+        "record_status": [
+          "validated",
+          "validated",
+          "validated",
+          "validated",
+          "validated",
+          "validated"
+        ],
+        "models": [
+          "qwen2.5:7b"
+        ],
+        "admitted_to_analytics": 0,
+        "adequacy": "insufficient"
+      }
+    },
+    {
+      "id": "S2",
+      "description": "Verify/correct: only VERIFIED or CORRECTED records become analytics-eligible; a PENDING record cannot be verified as written (409)",
+      "test": "test_s2_verify_or_correct_makes_eligible",
+      "outcome": "passed",
+      "observed": {
+        "observations": 6,
+        "routing": [
+          "accept",
+          "retain_with_unknown",
+          "accept",
+          "clarify",
+          "accept",
+          "accept"
+        ],
+        "verified": 2,
+        "corrected": 2,
+        "pending_refused_409": 0,
+        "rejected_by_pipeline": 0,
+        "left_unreviewed": 2,
+        "admitted_to_analytics": 4
+      }
+    },
+    {
+      "id": "S3",
+      "description": "Correction propagation: analytics/reporting use the corrected version; the original record version and source observation are preserved",
+      "test": "test_s3_correction_propagates_and_original_is_preserved",
+      "outcome": "passed",
+      "observed": {
+        "corrected_field": "prompt_level",
+        "original_value": "independent",
+        "corrected_value": "full_physical",
+        "analytics_uses_version": 2,
+        "original_version_preserved": true,
+        "source_text_unchanged": true
+      }
+    },
+    {
+      "id": "S4",
+      "description": "Insufficient evidence: affected analytics withheld (no value, reason given), not forced",
+      "test": "test_s4_s5_insufficient_evidence_withheld_and_named_in_report",
+      "outcome": "passed",
+      "observed": {
+        "adequacy": "insufficient",
+        "withheld": [
+          "all_analytics"
+        ],
+        "produced": []
+      }
+    },
+    {
+      "id": "S5",
+      "description": "Reporting preservation: the operational deterministic report names every withheld analysis",
+      "test": "test_s4_s5_insufficient_evidence_withheld_and_named_in_report",
+      "outcome": "passed",
+      "observed": {
+        "report_provider": "deterministic",
+        "is_experimental": false,
+        "validation_passed": true,
+        "withheld_named": 1,
+        "withheld_total": 1
+      }
+    },
+    {
+      "id": "S6",
+      "description": "Authorization negative: contributors (parent, teacher) cannot verify, correct, compute analytics or generate reports (403)",
+      "test": "test_s6_contributor_cannot_verify_or_access_analytics",
+      "outcome": "passed",
+      "observed": {
+        "roles": [
+          "parent",
+          "teacher"
+        ],
+        "refused": [
+          "verify",
+          "correct",
+          "analytics",
+          "report"
+        ],
+        "status_code": 403,
+        "record_unchanged": true
+      }
+    }
+  ],
+  "integration_package": {
+    "totals": {
+      "passed": 77,
+      "failed": 0,
+      "skipped": 0
+    },
+    "cases": [
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_adequate_scenario",
+        "outcome": "passed",
+        "seconds": 0.69
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_limited_scenario",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_insufficient_scenario",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_analytics_withheld_when_insufficient",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_deterministic_repeatability",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_corrected_record_supersedes",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_no_double_counting",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_contributor_representation_single",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_setting_representation_single",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_independence_rate_computation",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_adequacy_analytics_e2e.TestAdequacyAnalyticsE2E::test_adequate_via_api",
+        "outcome": "passed",
+        "seconds": 0.32
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_observation_submit_creates_audit",
+        "outcome": "passed",
+        "seconds": 0.06
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_clarification_creates_audit",
+        "outcome": "passed",
+        "seconds": 0.1
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_correction_creates_audit",
+        "outcome": "passed",
+        "seconds": 0.13
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_report_generation_creates_audit",
+        "outcome": "passed",
+        "seconds": 0.18
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_flag_report_creates_audit",
+        "outcome": "passed",
+        "seconds": 0.21
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_audit_trail_order_descending",
+        "outcome": "passed",
+        "seconds": 0.06
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_audit_requires_interventionist_role",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_audit_events_include_child_id",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_audit_provenance_e2e.TestAuditProvenanceE2E::test_audit_events_include_user_id",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_authorization_e2e.TestAuthorizationE2E::test_contributor_confined_to_assigned_child",
+        "outcome": "passed",
+        "seconds": 0.21
+      },
+      {
+        "test": "tests.phase6.integration.test_authorization_e2e.TestAuthorizationE2E::test_contributor_cannot_create_or_edit_goals",
+        "outcome": "passed",
+        "seconds": 0.15
+      },
+      {
+        "test": "tests.phase6.integration.test_authorization_e2e.TestAuthorizationE2E::test_revoked_contributor_loses_access_immediately",
+        "outcome": "passed",
+        "seconds": 0.18
+      },
+      {
+        "test": "tests.phase6.integration.test_authorization_e2e.TestAuthorizationE2E::test_unrelated_professional_cannot_reach_analytics_or_reports",
+        "outcome": "passed",
+        "seconds": 0.38
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_parse_synthetic_cha",
+        "outcome": "passed",
+        "seconds": 0.01
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_deidentify_synthetic",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_segment_synthetic",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_select_segments_synthetic",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_full_pipeline_provenance",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_segment_to_extraction_request",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_mocked_extraction_from_segment",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_chat_pipeline_e2e.TestChatPipelineE2E::test_deidentification_removes_pii",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_login",
+        "outcome": "passed",
+        "seconds": 0.19
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_list_authorized_children",
+        "outcome": "passed",
+        "seconds": 0.03
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_submit_observation_accept",
+        "outcome": "passed",
+        "seconds": 0.03
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_submit_observation_clarify",
+        "outcome": "passed",
+        "seconds": 0.06
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_sees_own_history",
+        "outcome": "passed",
+        "seconds": 0.06
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_records",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_analytics",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_reports",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_audit",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_see_actors",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_contributor_cannot_access_unauthorized_child",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_contributor_e2e.TestContributorE2E::test_other_contributor_cannot_see_parent_observations",
+        "outcome": "passed",
+        "seconds": 0.06
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_success_preserves_app_metadata",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_success_validates_accept",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_success_routes_accept",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_partial_routes_clarify",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_abstained_routes_review_or_reject",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_metadata_cannot_be_overwritten_by_llm",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_full_pipeline_via_service",
+        "outcome": "passed",
+        "seconds": 0.06
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_schema_rejects_invalid_confidence",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_extraction_pipeline_e2e.TestExtractionPipelineE2E::test_validation_cross_field_verbal_no_speech",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s0_frozen_configuration",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s1_unverified_records_are_blocked",
+        "outcome": "passed",
+        "seconds": 10.94
+      },
+      {
+        "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s2_verify_or_correct_makes_eligible",
+        "outcome": "passed",
+        "seconds": 10.62
+      },
+      {
+        "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s3_correction_propagates_and_original_is_preserved",
+        "outcome": "passed",
+        "seconds": 10.89
+      },
+      {
+        "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s4_s5_insufficient_evidence_withheld_and_named_in_report",
+        "outcome": "passed",
+        "seconds": 3.57
+      },
+      {
+        "test": "tests.phase6.integration.test_governance_e2e.TestGovernanceE2E::test_s6_contributor_cannot_verify_or_access_analytics",
+        "outcome": "passed",
+        "seconds": 1.98
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_interventionist_login",
+        "outcome": "passed",
+        "seconds": 0.2
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_create_child",
+        "outcome": "passed",
+        "seconds": 0.02
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_list_children",
+        "outcome": "passed",
+        "seconds": 0.03
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_create_goals",
+        "outcome": "passed",
+        "seconds": 0.03
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_invite_actor",
+        "outcome": "passed",
+        "seconds": 0.03
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_full_observation_to_record_flow",
+        "outcome": "passed",
+        "seconds": 0.19
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_list_records_for_child",
+        "outcome": "passed",
+        "seconds": 0.06
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_create_review_period",
+        "outcome": "passed",
+        "seconds": 0.04
+      },
+      {
+        "test": "tests.phase6.integration.test_interventionist_e2e.TestInterventionistE2E::test_full_analytics_report_flow",
+        "outcome": "passed",
+        "seconds": 0.34
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_validate_clean_report",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_validate_detects_prohibited_content",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_validate_detects_missing_insufficient_acknowledgment",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_validate_accepts_insufficient_acknowledgment",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_reporting_client_generates_valid_report",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_reporting_client_catches_prohibited",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_reporting_fallback_on_failure",
+        "outcome": "passed",
+        "seconds": 0.0
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_full_report_via_api",
+        "outcome": "passed",
+        "seconds": 0.24
+      },
+      {
+        "test": "tests.phase6.integration.test_reporting_provenance_e2e.TestReportingProvenanceE2E::test_report_flag_and_audit",
+        "outcome": "passed",
+        "seconds": 0.27
+      }
+    ]
+  },
+  "pre_run_fixes": [
+    {
+      "found": "2026-09-25",
+      "tests": [
+        "tests/phase6/integration/test_reporting_provenance_e2e.py::TestReportingProvenanceE2E::test_reporting_client_generates_valid_report",
+        "tests/phase6/integration/test_reporting_provenance_e2e.py::TestReportingProvenanceE2E::test_reporting_client_catches_prohibited"
+      ],
+      "cause": "Stale tests. Both exercise the generative reporter but did not request it; since commit 63a73a6 the default reporting_mode is 'deterministic', so the LLM was never called. The unit tests were updated in 63a73a6; this integration package had been excluded from that run.",
+      "fix": "Pass mode='generative_experimental' explicitly. No application code changed."
+    },
+    {
+      "found": "2026-09-25",
+      "tests": [
+        "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::test_s3_correction_propagates_and_original_is_preserved"
+      ],
+      "cause": "Test design. The first frozen attempt at commit 1b154d4 failed S3 (72 passed, 1 failed) because qwen2.5:7b returned no observation for one synthetic note and the pipeline correctly rejected it (observation FAILED, no record). The helper assumed every note yields a record. Measured rate: 1 rejection in 30 calls.",
+      "fix": "A rejection is now asserted as its own governance outcome (observation FAILED, no record persisted, source text preserved) and each scenario uses the records that were produced. No application code changed. Suite then passed 3 of 3 runs; widening the analytics gate to admit VALIDATED still fails S1 and S2."
+    },
+    {
+      "found": "2026-10-01",
+      "tests": [
+        "tests/phase6/e2e/governance.spec.ts (browser run; could not start)"
+      ],
+      "cause": "The frontend data layer src/frontend/lib/ (API client, auth, types, hooks, formatters, role guards; 15 modules imported by every page) had never been committed: an unanchored 'lib/' .gitignore rule excluded it. The UI could not build from version control.",
+      "fix": "Reconstructed src/frontend/lib/ from its call sites, the frontend unit tests and the backend API schemas. All 111 frontend tests pass and next build succeeds. Frontend code only; no backend change."
+    },
+    {
+      "found": "2026-10-01",
+      "tests": [
+        "tests/phase6/e2e/governance.spec.ts (S1, S4 adequacy display)"
+      ],
+      "cause": "The backend reports adequacy level in lowercase ('insufficient'); the analytics views compare against uppercase ('INSUFFICIENT'). Against the live backend the explicit 'Analytics are withheld' notice never rendered and an adequate result would have been styled as insufficient. Frontend tests passed because their mocks used uppercase.",
+      "fix": "useAnalytics normalises adequacy.level to uppercase once, before any component reads it. Frontend code only."
+    },
+    {
+      "found": "2026-10-01",
+      "tests": [
+        "tests/phase6/e2e/governance.spec.ts::S5",
+        "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::test_s4_s5_insufficient_evidence_withheld_and_named_in_report"
+      ],
+      "cause": "At insufficient evidence the analytics engine withholds everything behind one 'all_analytics' KPI, which the deterministic reporter excluded from its withheld list. The report stated 'Evidence level: insufficient' but never that analytics were withheld. The earlier S5 check passed because it accepted 'insufficient' and matched the abstention reason ('Evidence level: insufficient') against the evidence-level line.",
+      "fix": "The deterministic summary now states 'All longitudinal analytics were withheld: <reason>.' and carries it as the section's abstention note (unit test added). S5 in both suites now requires each withheld analysis to be stated as withheld, with its reason, in one sentence."
+    },
+    {
+      "found": "2026-10-01",
+      "tests": [
+        "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::test_s2_verify_or_correct_makes_eligible",
+        "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::test_s3_correction_propagates_and_original_is_preserved",
+        "tests/phase6/integration/test_governance_e2e.py::TestGovernanceE2E::test_s4_s5_insufficient_evidence_withheld_and_named_in_report",
+        "tests/phase6/integration/test_interventionist_e2e.py::TestInterventionistE2E::test_full_analytics_report_flow",
+        "tests/phase6/integration/test_reporting_provenance_e2e.py::TestReportingProvenanceE2E::test_full_report_via_api"
+      ],
+      "cause": "Test clock. The first frozen attempt at commit 027ed9c (started 2026-10-02T01:55Z, 21:55 EDT) failed 5 of 77: every evidence packet was empty. The backend matches observations to a review period by submitted_at in UTC days; the suite built the period from the local date, which lags UTC between 20:00 and 24:00 EDT, so every observation fell after the period end. S1 passed in that attempt only vacuously (it asserts zero admitted records); S2 caught the fault.",
+      "fix": "The suite builds review periods from the UTC date. Test code only; no application code changed. Open product question, not addressed here: review periods have no site timezone, so an evening observation west of UTC can fall outside a period ending 'today'."
+    }
+  ],
+  "overall": "All predefined governance-critical E2E scenarios passed"
+}

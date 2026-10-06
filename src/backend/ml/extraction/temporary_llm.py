@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import time
 from datetime import UTC, datetime
 from typing import Any
@@ -17,6 +16,8 @@ from src.backend.ml.extraction.prompts import (
     build_user_prompt_conversational,
 )
 from src.backend.ml.extraction.schemas import (
+    ControlConfidenceState,
+    ExtractionProvenance,
     ExtractionRequest,
     ExtractionResult,
     ExtractionStatus,
@@ -38,10 +39,35 @@ _ABSTENTION_CONFIDENCE = 0.3
 class TemporaryLLMExtractionProvider:
     """Extraction provider backed by a general-purpose Claude model."""
 
-    def __init__(self, api_key: str, model: str = "claude-sonnet-4-20250514") -> None:
+    # Structured extraction into a fixed tool schema. Effort is held low
+    # deliberately: the task is reading one short transcript and filling five
+    # fields, not reasoning, and on a corpus-sized run the depth would be paid
+    # for on every segment. max_tokens leaves room for adaptive thinking, which
+    # is on by default on this model family and is billed inside that budget --
+    # at the previous 1024 a thinking turn could exhaust the budget before the
+    # tool block was emitted, which surfaces as an empty extraction rather than
+    # as an error.
+    DEFAULT_MODEL = "claude-opus-5"
+    DEFAULT_MAX_TOKENS = 4096
+    DEFAULT_EFFORT = "low"
+
+    def __init__(
+        self,
+        api_key: str | None = None,
+        model: str = DEFAULT_MODEL,
+        max_tokens: int = DEFAULT_MAX_TOKENS,
+        effort: str = DEFAULT_EFFORT,
+    ) -> None:
+        # ``None`` is not "no credential": the SDK then resolves one itself
+        # (ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN, or a stored auth profile).
+        # Passing an empty string instead would defeat that chain.
         self._client = AsyncAnthropic(api_key=api_key)
         self._model = model
+        self._max_tokens = max_tokens
+        self._effort = effort
 
+    # @spec EXTRACT-001, EXTRACT-010, EXTRACT-017, EXTRACT-018
+    # @spec EXTRACT-020, EXTRACT-021, EXTRACT-022
     async def extract(self, request: ExtractionRequest) -> ExtractionResult:
         """Extract structured observation from source text via Claude tool_use."""
         start_ms = _now_ms()
@@ -49,7 +75,8 @@ class TemporaryLLMExtractionProvider:
             user_prompt = self._build_user_prompt(request)
             response = await self._client.messages.create(
                 model=self._model,
-                max_tokens=1024,
+                max_tokens=self._max_tokens,
+                output_config={"effort": self._effort},
                 system=build_system_prompt(),
                 messages=[{"role": "user", "content": user_prompt}],
                 tools=[EXTRACTION_TOOL_SCHEMA],
@@ -74,6 +101,9 @@ class TemporaryLLMExtractionProvider:
                     "output_tokens": response.usage.output_tokens,
                 }
 
+            # EXTRACT-022: this provider generates directly, so the quantity
+            # deterministic validation gates on is the observation's own
+            # confidence. Composing providers combine several (MARS-032).
             return ExtractionResult(
                 status=status,
                 observations=[observation],
@@ -84,6 +114,17 @@ class TemporaryLLMExtractionProvider:
                 raw_llm_response=self._serialize_response(response),
                 extraction_duration_ms=_now_ms() - start_ms,
                 token_usage=token_usage,
+                control_confidence=observation.confidence,
+                control_confidence_state=(
+                    ControlConfidenceState.AVAILABLE
+                    if observation.confidence is not None
+                    else None
+                ),
+                provenance=ExtractionProvenance(
+                    provider_type=self.get_info().name,
+                    generator_ids=[self._model],
+                    generator_confidence=observation.confidence,
+                ),
             )
 
         except APIError as exc:
@@ -106,6 +147,7 @@ class TemporaryLLMExtractionProvider:
             version=PROMPT_VERSION,
         )
 
+    # @spec EXTRACT-011, EXTRACT-012
     def _build_user_prompt(self, request: ExtractionRequest) -> str:
         history = request.clarification_history or None
         if request.source_type == SourceType.CHAT_SEGMENT:
@@ -147,6 +189,7 @@ class TemporaryLLMExtractionProvider:
             abstention_reason=tool_input.get("abstention_reason"),
         )
 
+    # @spec EXTRACT-013, EXTRACT-014, EXTRACT-015, EXTRACT-016
     @staticmethod
     def _determine_status(
         tool_input: dict[str, Any],

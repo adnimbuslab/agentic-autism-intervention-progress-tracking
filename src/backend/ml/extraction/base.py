@@ -11,6 +11,7 @@ from src.backend.ml.extraction.schemas import (
 )
 
 
+# @spec EXTRACT-002
 @runtime_checkable
 class ExtractionProvider(Protocol):
     """Protocol for structured observation extraction from text.

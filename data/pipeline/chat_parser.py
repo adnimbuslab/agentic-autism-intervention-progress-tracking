@@ -15,7 +15,6 @@ from __future__ import annotations
 import re
 from datetime import date
 from pathlib import Path
-from typing import Optional
 
 from data.pipeline.models import DependentTier, Session, SessionHeader, Utterance
 
@@ -105,7 +104,7 @@ def _parse_id_line(value: str, header: SessionHeader) -> None:
             header.participant_ids[code] = info
 
 
-def _parse_date(value: str) -> Optional[date]:
+def _parse_date(value: str) -> date | None:
     """Parse CHAT date formats: DD-MMM-YYYY or other variants."""
     months = {
         "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAY": 5, "JUN": 6,
@@ -135,8 +134,8 @@ def _parse_date(value: str) -> Optional[date]:
 def _parse_utterances(lines: list[str]) -> list[Utterance]:
     """Parse utterance lines (*SPK:) and dependent tiers (%tier:)."""
     utterances: list[Utterance] = []
-    current_utterance: Optional[Utterance] = None
-    current_tier_type: Optional[str] = None
+    current_utterance: Utterance | None = None
+    current_tier_type: str | None = None
     current_tier_content: list[str] = []
 
     for line_number, line in enumerate(lines, start=1):
@@ -183,8 +182,8 @@ def _parse_utterances(lines: list[str]) -> list[Utterance]:
 
 
 def _flush_tier(
-    utterance: Optional[Utterance],
-    tier_type: Optional[str],
+    utterance: Utterance | None,
+    tier_type: str | None,
     tier_content: list[str],
 ) -> None:
     """Attach accumulated tier content to the parent utterance."""
@@ -207,8 +206,11 @@ def parse_corpus_directory(
     Args:
         corpus_dir: Path to the corpus directory containing .cha files.
         corpus_name: Name of the corpus (e.g., "rollins", "flusberg").
-        child_map: Mapping of child_id to list of filename patterns that
-                   belong to that child.
+        child_map: Mapping of child_id to list of path patterns that belong
+                   to that child. Patterns are matched against each file's
+                   path relative to ``corpus_dir``, so a child identified by
+                   directory (``Carl/020800.cha``) and one identified by
+                   filename (``brett_070315.cha``) both resolve.
 
     Returns:
         List of parsed Session objects.
@@ -217,7 +219,11 @@ def parse_corpus_directory(
     cha_files = sorted(corpus_dir.glob("**/*.cha"))
 
     for cha_file in cha_files:
-        child_id = _match_child(cha_file.name, child_map)
+        # Match on the corpus-relative path, not the bare filename: the ASDBank
+        # corpora name the child in the directory and use bare session ages as
+        # filenames, which repeat across children.
+        relative_path = cha_file.relative_to(corpus_dir).as_posix()
+        child_id = _match_child(relative_path, child_map)
         if child_id is None:
             child_id = "unknown"
 
@@ -227,13 +233,18 @@ def parse_corpus_directory(
     return sessions
 
 
-def _match_child(filename: str, child_map: dict[str, list[str]]) -> Optional[str]:
-    """Match a filename to a child_id using the child_map patterns."""
-    filename_lower = filename.lower()
-    for child_id, patterns in child_map.items():
-        for pattern in patterns:
-            if pattern.lower() in filename_lower:
-                return child_id
+def _match_child(relative_path: str, child_map: dict[str, list[str]]) -> str | None:
+    """Match a corpus-relative path to a child_id using the child_map patterns.
+
+    Directory components are tested before the filename so that a child-named
+    directory wins over an incidental substring in the filename.
+    """
+    parts = [part.lower() for part in relative_path.split("/")]
+    for candidate in parts[:-1] + parts[-1:]:
+        for child_id, patterns in child_map.items():
+            for pattern in patterns:
+                if pattern.lower() in candidate:
+                    return child_id
     return None
 
 

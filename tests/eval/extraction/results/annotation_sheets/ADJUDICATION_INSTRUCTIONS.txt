@@ -1,0 +1,37 @@
+Instructions for the adjudicator
+================================
+
+Each row is one field two annotators recorded differently. Read the transcript
+and decide what the field should be.
+
+In the `decision` column write ONE of:
+
+  a            adopt annotator A's value, exactly as shown
+  b            adopt annotator B's value, exactly as shown
+  <a value>    neither -- type the value you judge correct
+  none         the transcript supports no value for this field
+  (empty)      you have not decided this row yet
+
+Leaving a row empty is not neutral. A segment left undecided on ANY field is
+excluded from the gold standard entirely, rather than being half-recorded, so
+an unfinished row removes that whole segment from the study.
+
+For `behavior`, `a` or `b` is almost always right -- the two descriptions
+usually say the same thing in different words. Type your own only where neither
+is accurate. These rows come last within each segment.
+
+`codebook_rule` is filled in where docs/annotation_codebook.md already settles
+the pair. Where it is filled in, apply the rule rather than re-judging the
+segment: one annotator simply did not apply it. Where it is empty, the codebook
+is silent and the call is yours.
+
+Rows are grouped by segment, so read each transcript once and settle all of
+that segment's rows together.
+
+`notes` is optional. A note on why a call was hard is worth recording.
+
+Do not reorder, rename, add or delete columns, and do not edit `segment_id`,
+`field`, or either annotator column -- they are how your decisions are matched
+back up.
+
+Save as CSV with the same file name and send it back.

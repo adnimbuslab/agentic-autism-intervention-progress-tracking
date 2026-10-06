@@ -214,6 +214,7 @@ class TestAdequacyAnalyticsE2E:
         active = list(latest_by_obs.values())
         assert len(active) == 1
 
+    # @spec ADEQ-023
     def test_contributor_representation_single(self):
         records = [
             _make_record_dict(record_id=f"rec-{i}", obs_id=f"obs-{i}",
@@ -233,6 +234,7 @@ class TestAdequacyAnalyticsE2E:
         assert len(contributor_flags) >= 1
         assert "cross_contributor_comparison" in adequacy.partial_abstentions
 
+    # @spec ADEQ-024
     def test_setting_representation_single(self):
         records = [
             _make_record_dict(record_id=f"rec-{i}", obs_id=f"obs-{i}",

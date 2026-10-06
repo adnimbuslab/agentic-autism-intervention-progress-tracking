@@ -1,0 +1,447 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/phase6/e2e/governance.config.ts"
+    ],
+    "configFile": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/tests/phase6/e2e/governance.config.ts",
+    "rootDir": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/tests/phase6/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/tests/phase6/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "governance.spec.ts"
+        ],
+        "timeout": 900000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../../../test-results/governance-e2e/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "governance.spec.ts",
+      "file": "governance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "S0 · frozen configuration and fresh synthetic child",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12499,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T01:59:14.564Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S0-·-frozen-con-b2b3c-n-and-fresh-synthetic-child-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-2cfc2cb52fc67d45f1e4",
+          "file": "governance.spec.ts",
+          "line": 186,
+          "column": 5
+        },
+        {
+          "title": "S1a · contributor submits synthetic observations through the chat UI",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20867,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T01:59:27.234Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S1a-·-contribut-ecfe2-vations-through-the-chat-UI-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-ecb049a7864403c92a01",
+          "file": "governance.spec.ts",
+          "line": 234,
+          "column": 5
+        },
+        {
+          "title": "S1b · unverified AI-extracted records are blocked from analytics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10187,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T01:59:48.104Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S1b-·-unverifie-2ff8c--are-blocked-from-analytics-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-b0d7bed3b3aec497afd7",
+          "file": "governance.spec.ts",
+          "line": 303,
+          "column": 5
+        },
+        {
+          "title": "S2 · interventionist verifies one record and corrects another",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16687,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T01:59:58.296Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S2-·-interventi-219b5-record-and-corrects-another-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-01041d92f27cc479678b",
+          "file": "governance.spec.ts",
+          "line": 332,
+          "column": 5
+        },
+        {
+          "title": "S3 · correction creates a new version; original and source are preserved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T02:00:14.987Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S3-·-correction-c2747-al-and-source-are-preserved-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-3e67d440bbbe120bf6d9",
+          "file": "governance.spec.ts",
+          "line": 393,
+          "column": 5
+        },
+        {
+          "title": "S4 · insufficient evidence: analytics are withheld, not forced",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5441,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T02:00:25.624Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S4-·-insufficie-553dc-ics-are-withheld-not-forced-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-74236376cc18868ac3a4",
+          "file": "governance.spec.ts",
+          "line": 425,
+          "column": 5
+        },
+        {
+          "title": "S5 · deterministic report preserves the withheld state and uses the corrected version",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11862,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T02:00:31.068Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S5-·-determinis-b9a30--uses-the-corrected-version-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-42dd647fc95db16ef880",
+          "file": "governance.spec.ts",
+          "line": 449,
+          "column": 5
+        },
+        {
+          "title": "S6 · a contributor cannot verify or reach professional analytics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11096,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T02:00:42.934Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S6-·-a-contribu-5aefd-each-professional-analytics-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-55d8cb34e3defbbbfa83",
+          "file": "governance.spec.ts",
+          "line": 497,
+          "column": 5
+        },
+        {
+          "title": "S6b · the refused verification left the record unreviewed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T02:00:54.033Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/debashis/workspace/agentic-autism-intervention-progress-tracking/test-results/governance-e2e/governance-S6b-·-the-refus-36a11--left-the-record-unreviewed-chromium/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd80fa2e263003b85faf-ca7263a88f56f81d7787",
+          "file": "governance.spec.ts",
+          "line": 523,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-02T01:59:14.384Z",
+    "duration": 104480.35900000001,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

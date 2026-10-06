@@ -1,0 +1,179 @@
+{
+  "n_judged_segments": 142,
+  "n_returned": 265,
+  "n_short_circuit": 123,
+  "best_generator": "qwen2.5:7b",
+  "fields": [
+    "domain",
+    "modality",
+    "prompt_level",
+    "outcome"
+  ],
+  "n_bootstrap": 10000,
+  "seed": 20260916,
+  "per_field": {
+    "domain": {
+      "mars": 0.331,
+      "best_generator": 0.4577,
+      "random_candidate": 0.223,
+      "per_generator": {
+        "llama3.2:latest": 0.1338,
+        "qwen2.5:3b": 0.0775,
+        "qwen2.5:7b": 0.4577
+      },
+      "vs_best_generator": {
+        "difference": -0.1271,
+        "lower": -0.1972,
+        "upper": -0.0634,
+        "excludes_zero": true,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": -0.1262,
+        "lower": -0.1793,
+        "upper": -0.0677,
+        "excludes_zero": true,
+        "unit": "child"
+      },
+      "vs_random_candidate": {
+        "difference": 0.0781,
+        "lower": -0.007,
+        "upper": 0.162,
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.0761,
+        "lower": 0.0067,
+        "upper": 0.1494,
+        "excludes_zero": true,
+        "unit": "child"
+      }
+    },
+    "modality": {
+      "mars": 0.7746,
+      "best_generator": 0.8028,
+      "random_candidate": 0.5698,
+      "per_generator": {
+        "llama3.2:latest": 0.6338,
+        "qwen2.5:3b": 0.2746,
+        "qwen2.5:7b": 0.8028
+      },
+      "vs_best_generator": {
+        "difference": -0.0283,
+        "lower": -0.0915,
+        "upper": 0.0282,
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": -0.028,
+        "lower": -0.0878,
+        "upper": 0.0261,
+        "excludes_zero": false,
+        "unit": "child"
+      },
+      "vs_random_candidate": {
+        "difference": 0.2046,
+        "lower": 0.1127,
+        "upper": 0.2958,
+        "excludes_zero": true,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.201,
+        "lower": 0.115,
+        "upper": 0.2769,
+        "excludes_zero": true,
+        "unit": "child"
+      }
+    },
+    "prompt_level": {
+      "mars": 0.2394,
+      "best_generator": 0.2113,
+      "random_candidate": 0.2119,
+      "per_generator": {
+        "llama3.2:latest": 0.338,
+        "qwen2.5:3b": 0.0845,
+        "qwen2.5:7b": 0.2113
+      },
+      "vs_best_generator": {
+        "difference": 0.0285,
+        "lower": -0.0423,
+        "upper": 0.0986,
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": 0.0281,
+        "lower": -0.0291,
+        "upper": 0.0894,
+        "excludes_zero": false,
+        "unit": "child"
+      },
+      "vs_random_candidate": {
+        "difference": 0.0363,
+        "lower": -0.0352,
+        "upper": 0.1127,
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.0376,
+        "lower": -0.0392,
+        "upper": 0.1186,
+        "excludes_zero": false,
+        "unit": "child"
+      }
+    },
+    "outcome": {
+      "mars": 0.331,
+      "best_generator": 0.3028,
+      "random_candidate": 0.2872,
+      "per_generator": {
+        "llama3.2:latest": 0.2676,
+        "qwen2.5:3b": 0.2887,
+        "qwen2.5:7b": 0.3028
+      },
+      "vs_best_generator": {
+        "difference": 0.0282,
+        "lower": -0.0211,
+        "upper": 0.0775,
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_best_generator_clustered": {
+        "difference": 0.0262,
+        "lower": -0.037,
+        "upper": 0.0847,
+        "excludes_zero": false,
+        "unit": "child"
+      },
+      "vs_random_candidate": {
+        "difference": 0.0497,
+        "lower": -0.0211,
+        "upper": 0.1268,
+        "excludes_zero": false,
+        "unit": "segment"
+      },
+      "vs_random_candidate_clustered": {
+        "difference": 0.0469,
+        "lower": -0.0248,
+        "upper": 0.1056,
+        "excludes_zero": false,
+        "unit": "child"
+      }
+    }
+  },
+  "mars_selection_counts": {
+    "llama3.2:latest": 37,
+    "qwen2.5:3b": 23,
+    "qwen2.5:7b": 82
+  },
+  "mars_share_of_best_generator": 0.5775,
+  "mean_accuracy": {
+    "mars": 0.419,
+    "best_generator": 0.4436,
+    "random_candidate": 0.323
+  }
+}

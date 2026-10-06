@@ -86,6 +86,7 @@ class TestRoutingDecisions:
         routings = {r.routing for r in results}
         assert len(routings) == 1
 
+    # @spec VALID-012
     def test_two_warnings_trigger_clarify(self) -> None:
         obs = _make_observation(
             modality=Modality.VERBAL,

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from src.backend.ml.extraction.base import ExtractionProvider
 from src.backend.ml.extraction.finetuned_model import FineTunedExtractionProvider
+from src.backend.ml.extraction.ollama_llm import OllamaExtractionProvider
 from src.backend.ml.extraction.schemas import (
     ExtractionRequest,
     ExtractionResult,
@@ -19,6 +20,7 @@ __all__ = [
     "ExtractionResult",
     "ExtractionStatus",
     "FineTunedExtractionProvider",
+    "OllamaExtractionProvider",
     "ProviderInfo",
     "SourceType",
     "TemporaryLLMExtractionProvider",
@@ -30,6 +32,8 @@ def get_extraction_provider(provider_type: str, **kwargs: object) -> ExtractionP
     """Factory for creating extraction providers by type string."""
     if provider_type == "temporary_llm":
         return TemporaryLLMExtractionProvider(**kwargs)  # type: ignore[arg-type]
+    if provider_type == "ollama":
+        return OllamaExtractionProvider(**kwargs)  # type: ignore[arg-type]
     if provider_type == "finetuned_model":
         return FineTunedExtractionProvider()
     raise ValueError(f"Unknown extraction provider type: {provider_type}")

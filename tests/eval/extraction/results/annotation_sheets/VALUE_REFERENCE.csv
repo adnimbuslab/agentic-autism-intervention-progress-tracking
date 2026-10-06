@@ -1,0 +1,10 @@
+﻿field,what it records,allowed values
+domain,The developmental domain the observed behaviour belongs to.,social_communication | language | play | behavior | motor | cognitive | adaptive | sensory
+behavior,"What the child did, in your own words, grounded in the transcript.","free text -- describe what the child did, in your own words"
+modality,How the child communicated it.,verbal | gestural | sign | aac | written | multimodal | unknown
+prompt_level,"The support the child needed, if the transcript shows it.",independent | gestural | verbal | model | partial_physical | full_physical | unknown
+outcome,"How the attempt resolved, if the transcript shows it.",correct | incorrect | approximation | no_response | partial | unknown
+
+CONVENTION,meaning,
+none,"the transcript supports no value for this field -- a finding, please use it rather than guessing",
+(empty cell),"not yet annotated -- these rows are reported as incomplete, not treated as 'none'",

@@ -11,6 +11,7 @@ from src.backend.schemas.observation_schema import (
 
 PROMPT_VERSION = "1.0.0"
 
+# @spec EXTRACT-019
 EXTRACTION_TOOL_SCHEMA: dict = {
     "name": "record_observation",
     "description": "Record a structured behavioral observation extracted from the source text.",
@@ -66,6 +67,22 @@ EXTRACTION_TOOL_SCHEMA: dict = {
             },
         },
         "required": ["domain", "behavior", "modality", "prompt_level", "outcome", "confidence"],
+    },
+}
+
+
+# OpenAI-compatible (function-calling) tool schema, derived from
+# EXTRACTION_TOOL_SCHEMA above. The Anthropic and OpenAI tool-call shapes
+# differ at the envelope level ("input_schema" vs. "function.parameters")
+# but both use standard JSON Schema for the body, so the field list is
+# reused rather than duplicated -- keeps the two vendor schemas from
+# drifting out of sync with each other.
+EXTRACTION_TOOL_SCHEMA_OPENAI: dict = {
+    "type": "function",
+    "function": {
+        "name": EXTRACTION_TOOL_SCHEMA["name"],
+        "description": EXTRACTION_TOOL_SCHEMA["description"],
+        "parameters": EXTRACTION_TOOL_SCHEMA["input_schema"],
     },
 }
 

@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="corpus-flow" name="Page-1">
+    <mxGraphModel dx="3218" dy="1048" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=0;align=center;verticalAlign=middle;fontSize=30;fontStyle=1;fontColor=#123F5F;fontFamily=Helvetica;whiteSpace=wrap;" value="Corpus construction, reference finalization, and evaluation sampling" vertex="1">
+          <mxGeometry height="45" width="1300" x="20" as="geometry" />
+        </mxCell>
+        <mxCell id="source" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#164A6B;strokeWidth=2.5;fillColor=#F1F6F9;fontFamily=Helvetica;fontSize=16;fontColor=#164A6B;" value="Source data&#xa;11 children | 85 sessions | 75,003 utterances" vertex="1">
+          <mxGeometry height="80" width="740" x="300" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="episode" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#687D8C;strokeWidth=2.5;fillColor=#F7F8F9;fontFamily=Helvetica;fontSize=16;fontColor=#687D8C;" value="Deterministic episode construction&#xa;9,018 behavioral episodes | 2–8 turns" vertex="1">
+          <mxGeometry height="72" width="730" x="305" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mainhdr" parent="1" style="text;html=0;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#123F5F;fontFamily=Helvetica;whiteSpace=wrap;" value="MAIN EVALUATION" vertex="1">
+          <mxGeometry height="35" width="420" x="-30" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="frozenhdr" parent="1" style="text;html=0;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#178A98;fontFamily=Helvetica;whiteSpace=wrap;" value="SEPARATELY FROZEN EVALUATION" vertex="1">
+          <mxGeometry height="35" width="520" x="1020" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="balanced" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#164A6B;strokeWidth=2.5;fillColor=#F1F6F9;fontFamily=Helvetica;fontSize=16;fontColor=#164A6B;" value="Balanced annotation universe&#xa;273/child ceiling → 2,442" vertex="1">
+          <mxGeometry height="75" width="405" x="90" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="seeded" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#164A6B;strokeWidth=2.5;fillColor=#F1F6F9;fontFamily=Helvetica;fontSize=16;fontColor=#164A6B;" value="Seeded pool&#xa;120/child → 1,320 | seed 42 + child ID" vertex="1">
+          <mxGeometry height="75" width="405" x="90" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="batch" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#164A6B;strokeWidth=2.5;fillColor=#F1F6F9;fontFamily=Helvetica;fontSize=16;fontColor=#164A6B;" value="Model-conditioned main batch&#xa;506 examined → 330 retained | 30/child" vertex="1">
+          <mxGeometry height="75" width="405" x="90" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="refdev" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#164A6B;strokeWidth=2.5;fillColor=#F1F6F9;fontFamily=Helvetica;fontSize=16;fontColor=#164A6B;" value="Reference-standard development&#xa;Independent annotation → codebook clarification&#xa;→ re-annotation of 178 → consensus" vertex="1">
+          <mxGeometry height="95" width="405" x="90" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#C3423F;strokeWidth=2.5;fillColor=#FCEEEE;fontFamily=Helvetica;fontSize=16;fontColor=#C3423F;" value="Final-codebook compliance audit&#xa;Model-blind joint specialist review of 152 unreissued segments&#xa;456 targeted labels checked | 98 labels changed in 85 segments" vertex="1">
+          <mxGeometry height="105" width="405" x="90" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="postref" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#278A58;strokeWidth=2.5;fillColor=#EEF8F1;fontFamily=Helvetica;fontSize=16;fontColor=#278A58;" value="Post-compliance-audit reference&#xa;330 segments | used for final main-batch scoring" vertex="1">
+          <mxGeometry height="75" width="405" x="90" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="higher" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#178A98;strokeWidth=2.5;fillColor=#EAF8FA;fontFamily=Helvetica;fontSize=16;fontColor=#178A98;" value="Higher-cap universe&#xa;455/child ceiling → 3,371" vertex="1">
+          <mxGeometry height="75" width="405" x="850" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="exclude" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#178A98;strokeWidth=2.5;fillColor=#EAF8FA;fontFamily=Helvetica;fontSize=16;fontColor=#178A98;" value="Identifier-based pool exclusion&#xa;3,371 − 1,320 IDs → 2,051 ID-eligible" vertex="1">
+          <mxGeometry height="75" width="405" x="850" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="frozen" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#178A98;strokeWidth=2.5;fillColor=#EAF8FA;fontFamily=Helvetica;fontSize=16;fontColor=#178A98;" value="Original frozen evaluation set&#xa;132 retained | 12/child | seed 20260916" vertex="1">
+          <mxGeometry height="75" width="405" x="850" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="frameaudit" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#C3423F;strokeWidth=2.5;fillColor=#FCEEEE;fontFamily=Helvetica;fontSize=16;fontColor=#C3423F;" value="Stable-identity frame audit&#xa;136 pool retained / 136 non-pool excluded&#xa;11/132 frozen episodes overlap the pool" vertex="1">
+          <mxGeometry height="95" width="405" x="850" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="postanalysis" parent="1" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=12;strokeColor=#278A58;strokeWidth=2.5;fillColor=#EEF8F1;fontFamily=Helvetica;fontSize=16;fontColor=#278A58;" value="Post-audit overlap-excluded analysis&#xa;121 episodes | all 11 children | no redraw" vertex="1">
+          <mxGeometry height="75" width="405" x="850" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="source" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="episode">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="episode" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#164A6B;strokeWidth=2.5;endArrow=block;endFill=1;" target="balanced">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="episode" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#178A98;strokeWidth=2.5;endArrow=block;endFill=1;" target="higher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="balanced" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="seeded">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="seeded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="batch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="refdev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="refdev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="postref">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="higher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="exclude">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="exclude" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="frozen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="frozen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="frameaudit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="frameaudit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#687D8C;strokeWidth=2.5;endArrow=block;endFill=1;" target="postanalysis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="text;html=0;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#65798A;fontFamily=Helvetica;whiteSpace=wrap;" value="The main-batch compliance audit finalizes the scored reference; the original 132 evaluation sample is retained for transparency and the 121 removes known exact-episode overlap without redrawing." vertex="1">
+          <mxGeometry height="40" width="1270" x="120" y="955" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

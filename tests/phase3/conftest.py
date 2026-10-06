@@ -100,6 +100,10 @@ def make_record(
     m.validation_result = {"is_valid": True}
     m.corrected_by = None
     m.correction_reason = None
+    # Explicitly None: a bare Mock would auto-create these attributes and the
+    # response schema would try to validate a Mock as a UUID.
+    m.verified_by = None
+    m.verified_at = None
     m.previous_version_id = None
     m.provider = "temporary_llm"
     m.model = "claude-sonnet-4-20250514"

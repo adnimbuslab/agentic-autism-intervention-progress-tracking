@@ -1,0 +1,562 @@
+{
+  "generated_at": "2026-08-28T19:38:36.879891+00:00",
+  "decoding_params": {
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "prompt_version": "1.0.0",
+  "models": [
+    {
+      "model": "llama3.2:latest",
+      "n_segments": 15,
+      "n_repeats": 3,
+      "n_trials": 45,
+      "status_counts": {
+        "success": 21,
+        "partial": 0,
+        "abstained": 21,
+        "failed": 3
+      },
+      "status_proportions": {
+        "success": 0.4666666666666667,
+        "partial": 0.0,
+        "abstained": 0.4666666666666667,
+        "failed": 0.06666666666666667
+      },
+      "mean_duration_ms": 4818.533333333334,
+      "stdev_duration_ms": 2536.4118141400245,
+      "repeat_agreement_rate": 1.0,
+      "trials": [
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_006",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 5221
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_006",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 3204
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_006",
+          "repeat_index": 2,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 3321
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+          "repeat_index": 0,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4291
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+          "repeat_index": 1,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3360
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+          "repeat_index": 2,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3536
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+          "repeat_index": 0,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 12819
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+          "repeat_index": 1,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 13615
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+          "repeat_index": 2,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 11912
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_067",
+          "repeat_index": 0,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3863
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_067",
+          "repeat_index": 1,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3110
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_067",
+          "repeat_index": 2,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3144
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+          "repeat_index": 0,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 3366
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+          "repeat_index": 1,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 2977
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+          "repeat_index": 2,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 3883
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+          "repeat_index": 0,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 5577
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+          "repeat_index": 1,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4430
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+          "repeat_index": 2,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3528
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030000.cha_seg_001",
+          "repeat_index": 0,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 5370
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030000.cha_seg_001",
+          "repeat_index": 1,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 4136
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030000.cha_seg_001",
+          "repeat_index": 2,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 4050
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_002",
+          "repeat_index": 0,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4294
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_002",
+          "repeat_index": 1,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3572
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_002",
+          "repeat_index": 2,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3672
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_035",
+          "repeat_index": 0,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4679
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_035",
+          "repeat_index": 1,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3472
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_035",
+          "repeat_index": 2,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4232
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_021",
+          "repeat_index": 0,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 4680
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_021",
+          "repeat_index": 1,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 3797
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_021",
+          "repeat_index": 2,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 4673
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_003",
+          "repeat_index": 0,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 5381
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_003",
+          "repeat_index": 1,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 7793
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_003",
+          "repeat_index": 2,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 10591
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_091",
+          "repeat_index": 0,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 5775
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_091",
+          "repeat_index": 1,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4326
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_091",
+          "repeat_index": 2,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3977
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_011",
+          "repeat_index": 0,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 4680
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_011",
+          "repeat_index": 1,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 3742
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_011",
+          "repeat_index": 2,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 3799
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_076",
+          "repeat_index": 0,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4462
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_076",
+          "repeat_index": 1,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 3408
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_076",
+          "repeat_index": 2,
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 4102
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_046",
+          "repeat_index": 0,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 3213
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_046",
+          "repeat_index": 1,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 2871
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_046",
+          "repeat_index": 2,
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 2930
+        }
+      ]
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "n_segments": 6,
+      "n_repeats": 2,
+      "n_trials": 12,
+      "status_counts": {
+        "success": 0,
+        "partial": 0,
+        "abstained": 0,
+        "failed": 12
+      },
+      "status_proportions": {
+        "success": 0.0,
+        "partial": 0.0,
+        "abstained": 0.0,
+        "failed": 1.0
+      },
+      "mean_duration_ms": 17950.5,
+      "stdev_duration_ms": 2715.840954641691,
+      "repeat_agreement_rate": 1.0,
+      "trials": [
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_006",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 19880
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_006",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 15528
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 13450
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 14203
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 17928
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 20432
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_067",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 20982
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_067",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 19252
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 16364
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 18351
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 22029
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 17007
+        }
+      ]
+    },
+    {
+      "model": "gemma3:1b",
+      "n_segments": 6,
+      "n_repeats": 2,
+      "n_trials": 12,
+      "status_counts": {
+        "success": 0,
+        "partial": 0,
+        "abstained": 0,
+        "failed": 12
+      },
+      "status_proportions": {
+        "success": 0.0,
+        "partial": 0.0,
+        "abstained": 0.0,
+        "failed": 1.0
+      },
+      "mean_duration_ms": 15.583333333333334,
+      "stdev_duration_ms": 40.977728614751726,
+      "repeat_agreement_rate": 1.0,
+      "trials": [
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_006",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 145
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_006",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 3
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 2
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 17
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 3
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 2
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_067",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 5
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_021100.cha_seg_067",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 2
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 2
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 2
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+          "repeat_index": 0,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 2
+        },
+        {
+          "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+          "repeat_index": 1,
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 2
+        }
+      ]
+    }
+  ]
+}

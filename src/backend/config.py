@@ -17,19 +17,58 @@ class Settings(BaseSettings):
     jwt_access_token_expire_minutes: int = 60
 
     # Extraction Provider
-    extraction_provider: Literal["temporary_llm", "finetuned_model"] = "temporary_llm"
+    extraction_provider: Literal["temporary_llm", "ollama", "finetuned_model"] = "ollama"
     anthropic_api_key: str = ""
+
+    # Ollama / OpenAI-compatible endpoint (used by the "ollama" extraction
+    # provider and, when reporting_provider="ollama", by ReportingClient)
+    ollama_base_url: str = "http://127.0.0.1:11434/v1"
+    ollama_api_key: str = "ollama"  # Ollama ignores this; the OpenAI client requires a non-empty string
+    ollama_model: str = "llama3.2:latest"
+
+    @property
+    def extraction_provider_kwargs(self) -> dict[str, str]:
+        """Constructor kwargs for the currently-configured extraction provider."""
+        if self.extraction_provider == "ollama":
+            return {
+                "base_url": self.ollama_base_url,
+                "api_key": self.ollama_api_key,
+                "model": self.ollama_model,
+            }
+        return {"api_key": self.anthropic_api_key}
 
     # Observation workflow
     clarification_max_turns: int = 3
 
-    # Adequacy thresholds
+    # Adequacy thresholds.
+    #
+    # Configurable prototype governance defaults, not validated clinical
+    # cutoffs. Their value is that withholding is deterministic and auditable,
+    # not that these are the counts at which evidence becomes clinically
+    # sufficient: no expert-consensus procedure set them and no sensitivity
+    # analysis has been run over them. A deploying site should revisit them.
     adequacy_min_observations: int = 5
     adequacy_limited_observations: int = 3
     adequacy_field_completeness_threshold: float = 0.7
     adequacy_temporal_cluster_max_ratio: float = 0.8
 
     # Reporting
+    # An evidence packet for one child runs to several thousand tokens; the
+    # default 4k context truncates it, and a truncated packet produces a report
+    # about the fragment that survived.
+    # The generative reporting layer failed its own governance contract in
+    # evaluation -- every report omitted the fact that an analysis had been
+    # withheld -- so it is not the operational path. "deterministic" renders
+    # reports from the evidence packet in code; "generative_experimental"
+    # enables the reporting LLM and marks everything it produces as
+    # experimental. Do not flip this default until the layer passes the
+    # governance check it currently fails.
+    reporting_mode: Literal["deterministic", "generative_experimental"] = (
+        "deterministic"
+    )
+    reporting_num_ctx: int = 8192
+    reporting_timeout_s: float = 600.0
+    reporting_provider: Literal["anthropic", "ollama"] = "ollama"
     reporting_model: str = "claude-sonnet-4-20250514"
     reporting_prompt_version: str = "1.0"
 

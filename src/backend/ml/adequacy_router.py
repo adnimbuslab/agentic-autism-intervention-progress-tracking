@@ -15,13 +15,13 @@ from src.backend.ml.schemas import (
     AdequacyLevel,
     AdequacyResult,
 )
-from src.backend.schemas.observation_schema import LLM_EXTRACTED_FIELDS
 
 
 class AdequacyRouter:
     """Deterministic assessment of whether accumulated evidence is sufficient
     and representative enough for longitudinal analytics and reporting."""
 
+    # @spec ADEQ-001, ADEQ-016, ADEQ-030, ADEQ-031
     def assess(
         self,
         records: list[dict],
@@ -69,6 +69,7 @@ class AdequacyRouter:
             quality_flags=quality_flags,
         )
 
+    # @spec ADEQ-010, ADEQ-011, ADEQ-012, ADEQ-013, ADEQ-014, ADEQ-015
     def _compute_level(
         self, checks: list[AdequacyCheckResult], record_count: int
     ) -> AdequacyLevel:
@@ -95,6 +96,7 @@ class AdequacyRouter:
 
         return AdequacyLevel.LIMITED
 
+    # @spec ADEQ-020
     def _check_coverage(
         self, records: list[dict], expected: int | None
     ) -> AdequacyCheckResult:
@@ -117,6 +119,7 @@ class AdequacyRouter:
             threshold=float(threshold),
         )
 
+    # @spec ADEQ-021, ADEQ-022
     def _check_temporal_distribution(
         self, records: list[dict], review_start: date, review_end: date
     ) -> AdequacyCheckResult:
@@ -160,6 +163,7 @@ class AdequacyRouter:
             threshold=settings.adequacy_temporal_cluster_max_ratio,
         )
 
+    # @spec ADEQ-023
     def _check_contributor_representation(
         self, records: list[dict]
     ) -> AdequacyCheckResult:
@@ -188,6 +192,7 @@ class AdequacyRouter:
             value=1.0,
         )
 
+    # @spec ADEQ-024
     def _check_setting_representation(
         self, records: list[dict]
     ) -> AdequacyCheckResult:
@@ -216,6 +221,7 @@ class AdequacyRouter:
             value=1.0,
         )
 
+    # @spec ADEQ-025
     def _check_goal_coverage(
         self, records: list[dict], goals: list[dict]
     ) -> AdequacyCheckResult:
@@ -248,6 +254,7 @@ class AdequacyRouter:
             threshold=0.5,
         )
 
+    # @spec ADEQ-026
     def _check_field_completeness(
         self, records: list[dict]
     ) -> AdequacyCheckResult:

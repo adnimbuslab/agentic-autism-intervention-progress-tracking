@@ -1,0 +1,125 @@
+{
+  "label": "annotator_a vs annotator_b (round 1, pre-codebook)",
+  "n_segments": 330,
+  "n_bootstrap": 10000,
+  "bootstrap_seed": 20260915,
+  "fields": {
+    "domain": {
+      "n": 330,
+      "n_categories_used": 9,
+      "observed_agreement": 0.8091,
+      "expected_agreement": 0.2327,
+      "kappa": 0.7512,
+      "kappa_max": 0.921,
+      "kappa_over_kappa_max": 0.8156,
+      "interpretation": "substantial",
+      "bootstrap_ci": {
+        "lower": 0.6974,
+        "upper": 0.803,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.7039,
+        "upper": 0.7896,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
+      },
+      "asymptotic_ci": {
+        "se": 0.0273,
+        "lower": 0.6976,
+        "upper": 0.8048
+      }
+    },
+    "modality": {
+      "n": 330,
+      "n_categories_used": 6,
+      "observed_agreement": 0.7242,
+      "expected_agreement": 0.3588,
+      "kappa": 0.5699,
+      "kappa_max": 0.6219,
+      "kappa_over_kappa_max": 0.9164,
+      "interpretation": "moderate",
+      "bootstrap_ci": {
+        "lower": 0.5172,
+        "upper": 0.6242,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.4343,
+        "upper": 0.696,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
+      },
+      "asymptotic_ci": {
+        "se": 0.0279,
+        "lower": 0.5153,
+        "upper": 0.6245
+      }
+    },
+    "prompt_level": {
+      "n": 330,
+      "n_categories_used": 7,
+      "observed_agreement": 0.7485,
+      "expected_agreement": 0.3787,
+      "kappa": 0.5952,
+      "kappa_max": 0.839,
+      "kappa_over_kappa_max": 0.7093,
+      "interpretation": "moderate",
+      "bootstrap_ci": {
+        "lower": 0.5161,
+        "upper": 0.6674,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.5186,
+        "upper": 0.6755,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
+      },
+      "asymptotic_ci": {
+        "se": 0.0383,
+        "lower": 0.5202,
+        "upper": 0.6702
+      }
+    },
+    "outcome": {
+      "n": 330,
+      "n_categories_used": 7,
+      "observed_agreement": 0.6424,
+      "expected_agreement": 0.2495,
+      "kappa": 0.5236,
+      "kappa_max": 0.7578,
+      "kappa_over_kappa_max": 0.691,
+      "interpretation": "moderate",
+      "bootstrap_ci": {
+        "lower": 0.4584,
+        "upper": 0.5891,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "segment"
+      },
+      "cluster_bootstrap_ci": {
+        "lower": 0.4668,
+        "upper": 0.5771,
+        "n_valid": 10000,
+        "n_requested": 10000,
+        "unit": "child"
+      },
+      "asymptotic_ci": {
+        "se": 0.0336,
+        "lower": 0.4578,
+        "upper": 0.5893
+      }
+    }
+  },
+  "mean_kappa": 0.61
+}

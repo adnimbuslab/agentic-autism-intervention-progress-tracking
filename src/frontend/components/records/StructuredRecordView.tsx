@@ -9,14 +9,17 @@ interface StructuredRecordViewProps {
   record: StructuredRecord;
 }
 
+// Only verified and corrected records are admitted to longitudinal
+// analytics, so only those two read as settled. "Validated" means the
+// deterministic engine found the record schema-conformant and nobody has
+// looked at it yet, which is a waiting state, not a good one.
 function statusVariant(status: string) {
   switch (status) {
-    case "validated":
+    case "verified":
+    case "corrected":
       return "success" as const;
     case "rejected":
       return "error" as const;
-    case "corrected":
-      return "info" as const;
     default:
       return "warning" as const;
   }
@@ -43,7 +46,9 @@ export function StructuredRecordView({ record }: StructuredRecordViewProps) {
       </div>
 
       <p className="mb-1 text-xs text-gray-400">
-        AI-derived — requires interventionist review
+        {record.status === "verified" || record.status === "corrected"
+          ? "Reviewed by an interventionist — included in longitudinal analytics"
+          : "AI-derived and unreviewed — excluded from longitudinal analytics until verified or corrected"}
       </p>
 
       <dl className="divide-y divide-gray-100">
@@ -71,6 +76,12 @@ export function StructuredRecordView({ record }: StructuredRecordViewProps) {
         <span>Model: {record.model}</span>
         <span>Prompt: {record.prompt_version}</span>
         <span>Created: {formatDateTime(record.created_at)}</span>
+        {record.verified_by && (
+          <span>Verified by: {record.verified_by}</span>
+        )}
+        {record.verified_at && (
+          <span>Verified: {formatDateTime(record.verified_at)}</span>
+        )}
         {record.corrected_by && (
           <span>Corrected by: {record.corrected_by}</span>
         )}

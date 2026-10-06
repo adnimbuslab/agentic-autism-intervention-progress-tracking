@@ -1,0 +1,22 @@
+Held-out round — please read before starting
+============================================
+
+These segments are new. None of them appeared in the earlier rounds, and they
+were selected without reference to any model's behaviour.
+
+The difference from last time is that you have the codebook from the start.
+Please read `annotation_codebook.md` before the first segment and apply it
+throughout, rather than forming your own reading and reconciling later.
+
+Everything else is as before:
+
+  - work independently, and do not confer on individual segments;
+  - `none` means the transcript supports no value for that field, and is a real
+    answer rather than a gap;
+  - leave a cell empty only if you have not reached that row yet;
+  - notes on why a call was difficult are valuable.
+
+We are measuring two things with this round: how well the field definitions
+work when they are available from the beginning, and how the extraction models
+perform on segments that were not selected because they happened to handle them.
+Neither depends on you agreeing with each other, so please do not try to.

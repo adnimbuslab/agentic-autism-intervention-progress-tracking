@@ -1,0 +1,312 @@
+{
+  "unknown_rollins_unknown_021100.cha_seg_002": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "incorrect",
+      "modality": "correct",
+      "prompt_level": "incorrect",
+      "outcome": "hallucinated"
+    },
+    "notes": "Domain appears more language-related than social communication. \u201cBus\u201d is an utterance rather than a full behavior description. Verbal modality is supported, but no clear verbal prompt precedes the utterance, and the transcript does not establish a definite correct outcome."
+  },
+  "unknown_rollins_unknown_030700.cha_seg_002": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "correct",
+      "outcome": "hallucinated"
+    },
+    "notes": "Verbal communication is supported, but grabbing/hugging the toy appears to be play behavior rather than a separate communication modality. No clear modeled prompt or defined correct outcome is established in the excerpt."
+  },
+  "unknown_rollins_unknown_020800.cha_seg_039": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "Child gave no verbal response, then independently got up and played with the tractor. The adult\u2019s statement does not clearly function as a prompt for the observed behavior."
+  },
+  "unknown_rollins_unknown_030300.cha_seg_001": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "correctly_null",
+      "outcome": "incorrect"
+    },
+    "notes": "Child verbally counted while repeatedly turning pages. Verbal modality is supported, but no clear prompting is shown. The transcript does not explicitly establish that the counting response was evaluated as correct."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_091": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correctly_null",
+      "outcome": "correctly_null"
+    },
+    "notes": "Child engaged socially through verbal and nonverbal behaviors, including saying \u201cyay,\u201d looking at the investigator, clapping, and playing with a person. No clear prompt for the target behavior or specific outcome evaluation is established in the excerpt."
+  },
+  "unknown_rollins_unknown_020800.cha_seg_011": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "hallucinated"
+    },
+    "notes": "The child picked up a toy after the investigator said \u201clet\u2019s put them away,\u201d so a verbal prompt is more plausible than independent. Picking up the toy is a physical action, not clearly a communicative gesture, and the excerpt does not establish that the behavior was incorrect."
+  },
+  "unknown_rollins_unknown_020800.cha_seg_046": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correctly_null",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child produced unintelligible vocalizations in response to the investigator\u2019s question. The excerpt does not provide enough information to identify a specific behavior, communication modality, prompt level, or outcome with confidence."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_070": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "hallucinated"
+    },
+    "notes": "The child laughed spontaneously and also produced a verbal utterance. No clear prompt for the laughter is shown, and the transcript does not establish the laughter as a correct or incorrect outcome."
+  },
+  "unknown_rollins_unknown_030000.cha_seg_017": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "hallucinated"
+    },
+    "notes": "he child independently placed a piece in the puzzle and also used verbal expressions such as \u201cbye\u201d and \u201chi.\u201d No clear prompt preceded the puzzle action, and the transcript does not explicitly establish or evaluate the action as a correct outcome."
+  },
+  "unknown_rollins_unknown_020500.cha_seg_002": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child repeatedly bent over without a clear prompt for that specific behavior. The movement is not clearly a communicative gesture, and the transcript does not establish any task or evidence that the behavior represented a correct outcome."
+  },
+  "unknown_rollins_unknown_020800.cha_seg_034": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child responded to verbal and gestural cues involving the paper towel and completed several functional actions, including obtaining the towel and drying his hands. The activity is more consistent with daily living than social communication. The transcript does not explicitly establish a specific outcome, so an unknown outcome is appropriate."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_016": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "incorrect",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child verbally responded to the investigator\u2019s reference to the horse and then engaged in play by putting the boy on the horse. The segment is more consistent with play than social communication, with a verbal cue preceding the child\u2019s response."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_051": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "correct"
+    },
+    "notes": "The child participated in reciprocal verbal interaction and responded to explicit verbal cues. The child attempted to follow the instruction to put the farmer in the pocket but missed the pocket, supporting a partial rather than fully correct outcome."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_030": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "incorrect",
+      "outcome": "incorrect"
+    },
+    "notes": "The child participated in a reciprocal verbal exchange with the investigator and produced meaningful spoken responses. Verbal prompting is evident, so the interaction is not independent, and \u201cno_response\u201d is not supported."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_098": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "incorrect",
+      "modality": "missing",
+      "prompt_level": "incorrect",
+      "outcome": "correct"
+    },
+    "notes": "The child participated in reciprocal verbal exchanges and responded to the investigator\u2019s questions. Verbal modality and verbal prompting are supported. \u201cA bus\u201d is response content rather than a behavior description, and the interaction provides evidence of an appropriate/correct response."
+  },
+  "unknown_rollins_unknown_030000.cha_seg_005": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "correct"
+    },
+    "notes": "The child manipulated puzzle pieces and attempted to place a piece after verbal and gestural cues. The behavior is more consistent with play than an adaptive domain. The interaction was prompted rather than independent, and the excerpt does not establish a definite outcome for the final attempt."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_007": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "correct"
+    },
+    "notes": "The segment primarily reflects play with objects rather than social communication. The child\u2019s verbal response occurred in the context of investigator cues, so verbal communication is supported and the response does not appear fully independent. The interaction provides reasonable evidence of a successful response."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_047": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child engaged in play with puzzle pieces and used both verbal and nonverbal communication, including naming and holding up the airplane. No single prompt level is clearly established for the full behavior sequence, while the investigator\u2019s confirmation supports a correct outcome."
+  },
+  "unknown_rollins_unknown_020800.cha_seg_043": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "correct"
+    },
+    "notes": "The child kissed the horse following the investigator\u2019s explicit verbal instruction, so the behavior was verbally prompted rather than independent. The requested action was completed, supporting a correct outcome. The broader activity is more consistent with play than social communication."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_045": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "correct",
+      "outcome": "correctly_null"
+    },
+    "notes": "The child verbally labeled pictured items, but the extracted behavior \u201crattles the door handle\u201d is a separate physical action with no clear prompt or evaluative outcome. Verbal modality is evident in the segment, while the door-handle action itself has no defined outcome."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_013": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child repeatedly identified the bus verbally during reciprocal interaction with the investigator. Verbal prompting is supported, and the investigator explicitly confirmed the response with \u201cgood job\u201d and \u201cthat\u2019s right,\u201d supporting a correct outcome."
+  },
+  "unknown_rollins_unknown_020800.cha_seg_036": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "correct"
+    },
+    "notes": "The child engaged in toy play and moved the horse\u2019s leg following an explicit verbal instruction. The behavior was prompted rather than independent, and the investigator\u2019s \u201cgood\u201d provides clear evidence of a correct outcome."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_097": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "incorrect"
+    },
+    "notes": "The child verbally responded to the investigator\u2019s question and then picked up the barn. Verbal modality and verbal prompting are supported, but the excerpt does not explicitly confirm that the response \u201cup\u201d was correct."
+  },
+  "unknown_rollins_unknown_030000.cha_seg_016": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "incorrect"
+    },
+    "notes": "The child turned the puzzle piece around and attempted to insert it following an explicit verbal instruction, so the behavior was verbally prompted rather than independent. Physical manipulation of the puzzle piece is not clearly a communicative gesture, and \u201cno_response\u201d is contradicted by the child\u2019s behavioral and verbal responses."
+  },
+  "unknown_rollins_unknown_020500.cha_seg_009": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "hallucinated",
+      "outcome": "incorrect"
+    },
+    "notes": "The child engaged in sink/water activities consistent with daily living. The instruction \u201cturn it off\u201d is a verbal prompt and is followed by the child turning the water off; no physical prompting is documented. The transcript does not clearly support a partial outcome."
+  },
+  "unknown_rollins_unknown_030000.cha_seg_003": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "incorrect",
+      "modality": "incorrect",
+      "prompt_level": "missing",
+      "outcome": "correct"
+    },
+    "notes": "The child manipulated puzzle pieces and produced verbal labels, but part of the extracted behavior is unsupported because the transcript does not show the child playing with an airplane. Verbal and gestural cues are present, so prompt information should not be null. The excerpt does not establish a definite outcome."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_006": {
+    "field_judgments": {
+      "domain": "incorrect",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child engaged in toy play, verbally responded during the interaction, and followed the investigator\u2019s explicit instruction to put the animals in the barn. The behavior was verbally prompted and successfully completed, supporting a correct outcome."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_054": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "correct",
+      "outcome": "correct"
+    },
+    "notes": "The child verbally identified the book during interaction with the investigator and then pulled out a book. Verbal prompting is supported, and the response/action is consistent with a correct outcome."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_057": {
+    "field_judgments": {
+      "domain": "missing",
+      "behavior": "incorrect",
+      "modality": "incorrect",
+      "prompt_level": "incorrect",
+      "outcome": "correctly_null"
+    },
+    "notes": "The child engaged with the school bus through verbal responses and toy play. A play domain and verbal modality are supported, and the interaction includes verbal cues rather than being fully independent. No definite evaluative outcome is established in the excerpt."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_074": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "correct",
+      "prompt_level": "incorrect",
+      "outcome": "correct"
+    },
+    "notes": "The child clapped in response to the investigator\u2019s explicit verbal instruction during an interactive song. The behavior was verbally prompted rather than independent, and the requested action was successfully completed, supporting a correct outcome."
+  },
+  "unknown_rollins_unknown_021100.cha_seg_011": {
+    "field_judgments": {
+      "domain": "correct",
+      "behavior": "correct",
+      "modality": "incorrect",
+      "prompt_level": "correct",
+      "outcome": "hallucinated"
+    },
+    "notes": "The child independently ran in the gym during a play activity. The running was not clearly prompted, and the transcript does not define or evaluate it as a correct outcome. Multimodal communication is also not clearly established."
+  }
+}

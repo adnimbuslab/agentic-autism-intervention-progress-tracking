@@ -86,6 +86,51 @@ async def correct_record(
     return RecordResponse.model_validate(new_record)
 
 
+@router.post("/records/{record_id}/verify", response_model=RecordResponse)
+async def verify_record(
+    record_id: uuid.UUID,
+    user: RequireInterventionist,
+    db: DBSession,
+) -> RecordResponse:
+    """Accept an extracted record as written, making it analytics-eligible.
+
+    This is the only path by which an unmodified AI-extracted record can reach
+    longitudinal analytics. Correcting a record achieves the same eligibility
+    and additionally changes its content.
+    """
+    record = await observation_service.get_record(db, record_id)
+    if record is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Record not found",
+        )
+    observation = await observation_service.get_observation(db, record.observation_id)
+    if observation is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Parent observation not found",
+        )
+    await authorize_child_access(user, observation.child_id, db)
+    previous_status = record.status.value
+    try:
+        verified = await observation_service.verify_record(
+            db, record_id=record_id, verified_by=user.id,
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT, detail=str(exc),
+        ) from exc
+    await audit_service.log_event(
+        db,
+        user_id=user.id,
+        action="verify_record",
+        resource_type="structured_record",
+        resource_id=str(verified.id),
+        child_id=observation.child_id,
+        detail={"previous_status": previous_status},
+    )
+    await db.commit()
+    return RecordResponse.model_validate(verified)
+
+
 @router.get("/records/{record_id}/history", response_model=list[RecordResponse])
 async def get_record_history(
     record_id: uuid.UUID,

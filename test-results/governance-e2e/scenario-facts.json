@@ -1,0 +1,120 @@
+{
+  "run": "Recorded UI governance end-to-end run",
+  "finished_utc": "2026-10-02T02:00:58.751Z",
+  "build": {
+    "commit": "d7446d6bc9652ee2c3b38f38d82f1959a244c54d",
+    "branch": "model-finetuning",
+    "working_tree_clean": true
+  },
+  "child": {
+    "name": "E2E Governance Child 2026-10-02 01:59",
+    "id": "6d74d4fc-5ffd-42b7-806f-791e82c015ca"
+  },
+  "scenarios": {
+    "S0": {
+      "extractor": {
+        "provider": "ollama",
+        "model": "qwen2.5:7b",
+        "digest": "845dbda0ea48",
+        "quantization": "Q4_K_M",
+        "parameter_size": "7.6B",
+        "ollama_version": "0.33.3"
+      },
+      "child_id": "6d74d4fc-5ffd-42b7-806f-791e82c015ca",
+      "review_period": {
+        "start": "2026-09-02",
+        "end": "2026-10-04"
+      }
+    },
+    "S1_submissions": [
+      {
+        "note": 1,
+        "outcome": "finalized",
+        "clarification_questions": []
+      },
+      {
+        "note": 2,
+        "outcome": "finalized",
+        "clarification_questions": []
+      },
+      {
+        "note": 3,
+        "outcome": "finalized",
+        "clarification_questions": []
+      },
+      {
+        "note": 4,
+        "outcome": "finalized",
+        "clarification_questions": []
+      }
+    ],
+    "S1": {
+      "records": 4,
+      "statuses": [
+        "validated",
+        "validated",
+        "validated",
+        "validated"
+      ],
+      "models": [
+        "qwen2.5:7b"
+      ],
+      "admitted_to_analytics": 0,
+      "adequacy": "insufficient"
+    },
+    "S2": {
+      "verified": 1,
+      "corrected": 1,
+      "left_unreviewed": 2,
+      "pending_offered_correction_only": false,
+      "admitted_to_analytics": 2
+    },
+    "S3": {
+      "corrected_field": "prompt_level",
+      "original_value": "independent",
+      "corrected_value": "full_physical",
+      "original_version_preserved": true,
+      "history_versions": [
+        1,
+        2
+      ],
+      "source_text_unchanged": true,
+      "v1_status_after_correction": "validated"
+    },
+    "S4": {
+      "adequacy": "insufficient",
+      "withheld": [
+        "all_analytics"
+      ],
+      "produced": [],
+      "failed_checks": [
+        "coverage",
+        "temporal_distribution",
+        "contributor_representation"
+      ]
+    },
+    "S5": {
+      "report_provider": "deterministic",
+      "is_experimental": false,
+      "validation_passed": true,
+      "withheld_named": 1,
+      "withheld_total": 1
+    },
+    "S3_reporting": {
+      "evidence_uses_corrected_version": true,
+      "original_version_excluded": true,
+      "evidence_record_count": 2
+    },
+    "S6": {
+      "role": "parent",
+      "refused": {
+        "verify": 403,
+        "correct": 403,
+        "analytics": 403,
+        "report": 403,
+        "read_record": 403
+      },
+      "record_unchanged": true
+    }
+  }
+}

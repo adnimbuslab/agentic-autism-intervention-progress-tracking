@@ -1,0 +1,930 @@
+{
+  "finalised_at": "2026-09-27T22:35:13.352080+00:00",
+  "segments_audited": 152,
+  "labels_audited": 456,
+  "per_field": {
+    "modality": {
+      "checked": 152,
+      "changed": 14
+    },
+    "outcome": {
+      "checked": 152,
+      "changed": 20
+    },
+    "prompt_level": {
+      "checked": 152,
+      "changed": 64
+    }
+  },
+  "segments_changed": [
+    "brett_flusberg_brett_050800.cha_seg_040",
+    "brett_flusberg_brett_051002.cha_seg_014",
+    "brett_flusberg_brett_051002.cha_seg_016",
+    "brett_flusberg_brett_051002.cha_seg_033",
+    "brett_flusberg_brett_051002.cha_seg_040",
+    "brett_flusberg_brett_051002.cha_seg_063",
+    "brett_flusberg_brett_060207.cha_seg_006",
+    "brett_flusberg_brett_060207.cha_seg_011",
+    "brett_flusberg_brett_060622.cha_seg_009",
+    "brett_flusberg_brett_060819.cha_seg_007",
+    "brett_flusberg_brett_060819.cha_seg_017",
+    "brett_flusberg_brett_060819.cha_seg_020",
+    "brett_flusberg_brett_060819.cha_seg_022",
+    "brett_flusberg_brett_060819.cha_seg_024",
+    "brett_flusberg_brett_060819.cha_seg_025",
+    "carl_rollins_carl_020800.cha_seg_035",
+    "carl_rollins_carl_021100.cha_seg_029",
+    "carl_rollins_carl_021100.cha_seg_043",
+    "carl_rollins_carl_021100.cha_seg_050",
+    "carl_rollins_carl_021100.cha_seg_064",
+    "carl_rollins_carl_021100.cha_seg_070",
+    "carl_rollins_carl_021100.cha_seg_085",
+    "carl_rollins_carl_030700.cha_seg_005",
+    "carl_rollins_carl_030700.cha_seg_021",
+    "jack_flusberg_jack_060900.cha_seg_006",
+    "jack_flusberg_jack_060900.cha_seg_008",
+    "jack_flusberg_jack_060900.cha_seg_010",
+    "jack_flusberg_jack_060900.cha_seg_025",
+    "jack_flusberg_jack_060900.cha_seg_046",
+    "jack_flusberg_jack_070315.cha_seg_002",
+    "jack_flusberg_jack_071001.cha_seg_022",
+    "josh_rollins_josh_020800.cha_seg_010",
+    "josh_rollins_josh_020800.cha_seg_048",
+    "josh_rollins_josh_021100.cha_seg_040",
+    "mark_flusberg_mark_070700.cha_seg_055",
+    "mark_flusberg_mark_070812.cha_seg_001",
+    "mark_flusberg_mark_071026.cha_seg_018",
+    "mark_flusberg_mark_080224.cha_seg_001",
+    "mark_flusberg_mark_080224.cha_seg_013",
+    "mark_flusberg_mark_080224.cha_seg_015",
+    "mark_flusberg_mark_080700.cha_seg_003",
+    "mark_flusberg_mark_080700.cha_seg_017",
+    "mark_flusberg_mark_080915.cha_seg_010",
+    "mark_flusberg_mark_080915.cha_seg_011",
+    "mars_rollins_mars_030100.cha_seg_042",
+    "mars_rollins_mars_030300.cha_seg_004",
+    "mars_rollins_mars_030300.cha_seg_039",
+    "mars_rollins_mars_030600.cha_seg_005",
+    "rick_flusberg_rick_040700.cha_seg_029",
+    "rick_flusberg_rick_040700.cha_seg_039",
+    "rick_flusberg_rick_040700.cha_seg_062",
+    "rick_flusberg_rick_040700.cha_seg_063",
+    "rick_flusberg_rick_040700.cha_seg_071",
+    "rick_flusberg_rick_050904.cha_seg_005",
+    "rick_flusberg_rick_060308.cha_seg_003",
+    "rick_flusberg_rick_060308.cha_seg_005",
+    "rick_flusberg_rick_061012.cha_seg_007",
+    "rick_flusberg_rick_061012.cha_seg_013",
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070",
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018",
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034",
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003",
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011",
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018",
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001",
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010",
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014",
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_001",
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_037",
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_005",
+    "sid_rollins_sid_021100.cha_seg_015",
+    "sid_rollins_sid_030200.cha_seg_026",
+    "stuart_flusberg_stuart_030400.cha_seg_009",
+    "stuart_flusberg_stuart_030400.cha_seg_043",
+    "stuart_flusberg_stuart_030400.cha_seg_045",
+    "stuart_flusberg_stuart_030400.cha_seg_049",
+    "stuart_flusberg_stuart_030400.cha_seg_060",
+    "stuart_flusberg_stuart_030400.cha_seg_062",
+    "stuart_flusberg_stuart_030610.cha_seg_015",
+    "stuart_flusberg_stuart_030610.cha_seg_020",
+    "stuart_flusberg_stuart_030610.cha_seg_040",
+    "stuart_flusberg_stuart_030610.cha_seg_041",
+    "stuart_flusberg_stuart_030610.cha_seg_061",
+    "stuart_flusberg_stuart_030806.cha_seg_020",
+    "stuart_flusberg_stuart_040306.cha_seg_018"
+  ],
+  "changes": [
+    {
+      "segment_id": "brett_flusberg_brett_050800.cha_seg_040",
+      "audit_id": "A084",
+      "field": "outcome",
+      "old": null,
+      "new": "correct",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_014",
+      "audit_id": "A078",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_016",
+      "audit_id": "A063",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_033",
+      "audit_id": "A107",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_040",
+      "audit_id": "A126",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_063",
+      "audit_id": "A053",
+      "field": "outcome",
+      "old": null,
+      "new": "correct",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060207.cha_seg_006",
+      "audit_id": "A150",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060207.cha_seg_011",
+      "audit_id": "A037",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060622.cha_seg_009",
+      "audit_id": "A046",
+      "field": "outcome",
+      "old": null,
+      "new": "incorrect",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_007",
+      "audit_id": "A052",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "model",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_017",
+      "audit_id": "A032",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_020",
+      "audit_id": "A058",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_022",
+      "audit_id": "A113",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_024",
+      "audit_id": "A061",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_025",
+      "audit_id": "A074",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_020800.cha_seg_035",
+      "audit_id": "A079",
+      "field": "outcome",
+      "old": "correct",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_029",
+      "audit_id": "A004",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_029",
+      "audit_id": "A004",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_043",
+      "audit_id": "A009",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_050",
+      "audit_id": "A128",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_064",
+      "audit_id": "A025",
+      "field": "modality",
+      "old": "multimodal",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_070",
+      "audit_id": "A035",
+      "field": "modality",
+      "old": "multimodal",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_085",
+      "audit_id": "A091",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_085",
+      "audit_id": "A091",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_005",
+      "audit_id": "A129",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_005",
+      "audit_id": "A129",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_021",
+      "audit_id": "A021",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_021",
+      "audit_id": "A021",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_006",
+      "audit_id": "A005",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_008",
+      "audit_id": "A029",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_010",
+      "audit_id": "A064",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_025",
+      "audit_id": "A055",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "model",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_046",
+      "audit_id": "A080",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_070315.cha_seg_002",
+      "audit_id": "A134",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_071001.cha_seg_022",
+      "audit_id": "A143",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "jack_flusberg_jack_071001.cha_seg_022",
+      "audit_id": "A143",
+      "field": "prompt_level",
+      "old": "independent",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_010",
+      "audit_id": "A031",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "gestural",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_048",
+      "audit_id": "A039",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_040",
+      "audit_id": "A133",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_040",
+      "audit_id": "A133",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "model",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070700.cha_seg_055",
+      "audit_id": "A088",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070812.cha_seg_001",
+      "audit_id": "A087",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_071026.cha_seg_018",
+      "audit_id": "A006",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080224.cha_seg_001",
+      "audit_id": "A045",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080224.cha_seg_013",
+      "audit_id": "A028",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080224.cha_seg_015",
+      "audit_id": "A144",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080700.cha_seg_003",
+      "audit_id": "A077",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080700.cha_seg_017",
+      "audit_id": "A108",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080915.cha_seg_010",
+      "audit_id": "A109",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080915.cha_seg_011",
+      "audit_id": "A007",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030100.cha_seg_042",
+      "audit_id": "A019",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030100.cha_seg_042",
+      "audit_id": "A019",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_004",
+      "audit_id": "A137",
+      "field": "prompt_level",
+      "old": "model",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_039",
+      "audit_id": "A103",
+      "field": "outcome",
+      "old": "approximation",
+      "new": null,
+      "old_source": "adjudicated_round1_conflict"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_039",
+      "audit_id": "A103",
+      "field": "prompt_level",
+      "old": "model",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030600.cha_seg_005",
+      "audit_id": "A073",
+      "field": "modality",
+      "old": "gestural",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "mars_rollins_mars_030600.cha_seg_005",
+      "audit_id": "A073",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_029",
+      "audit_id": "A146",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_039",
+      "audit_id": "A024",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_062",
+      "audit_id": "A127",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_063",
+      "audit_id": "A036",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_071",
+      "audit_id": "A132",
+      "field": "prompt_level",
+      "old": "model",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_050904.cha_seg_005",
+      "audit_id": "A145",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_060308.cha_seg_003",
+      "audit_id": "A018",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_060308.cha_seg_005",
+      "audit_id": "A094",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_061012.cha_seg_007",
+      "audit_id": "A042",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "model",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "rick_flusberg_rick_061012.cha_seg_013",
+      "audit_id": "A069",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070",
+      "audit_id": "A008",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018",
+      "audit_id": "A121",
+      "field": "outcome",
+      "old": "incorrect",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018",
+      "audit_id": "A121",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034",
+      "audit_id": "A135",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003",
+      "audit_id": "A049",
+      "field": "outcome",
+      "old": null,
+      "new": "correct",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011",
+      "audit_id": "A041",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018",
+      "audit_id": "A001",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "model",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001",
+      "audit_id": "A110",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010",
+      "audit_id": "A060",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "model",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014",
+      "audit_id": "A085",
+      "field": "outcome",
+      "old": null,
+      "new": "correct",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_001",
+      "audit_id": "A070",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_037",
+      "audit_id": "A076",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_005",
+      "audit_id": "A104",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "gestural",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_005",
+      "audit_id": "A104",
+      "field": "outcome",
+      "old": null,
+      "new": "correct",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "sid_rollins_sid_021100.cha_seg_015",
+      "audit_id": "A067",
+      "field": "modality",
+      "old": "multimodal",
+      "new": "gestural",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_026",
+      "audit_id": "A138",
+      "field": "outcome",
+      "old": "unknown",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_026",
+      "audit_id": "A138",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_009",
+      "audit_id": "A114",
+      "field": "outcome",
+      "old": null,
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_043",
+      "audit_id": "A122",
+      "field": "prompt_level",
+      "old": "model",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_045",
+      "audit_id": "A056",
+      "field": "prompt_level",
+      "old": "model",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_049",
+      "audit_id": "A096",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_060",
+      "audit_id": "A047",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "model",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_062",
+      "audit_id": "A034",
+      "field": "prompt_level",
+      "old": "model",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_015",
+      "audit_id": "A033",
+      "field": "outcome",
+      "old": "unknown",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_015",
+      "audit_id": "A033",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": null,
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_020",
+      "audit_id": "A136",
+      "field": "prompt_level",
+      "old": "model",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_040",
+      "audit_id": "A097",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_041",
+      "audit_id": "A051",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_061",
+      "audit_id": "A002",
+      "field": "outcome",
+      "old": "correct",
+      "new": "unknown",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030806.cha_seg_020",
+      "audit_id": "A125",
+      "field": "prompt_level",
+      "old": "verbal",
+      "new": "independent",
+      "old_source": "round1_agreed"
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_040306.cha_seg_018",
+      "audit_id": "A026",
+      "field": "prompt_level",
+      "old": "model",
+      "new": "verbal",
+      "old_source": "round1_agreed"
+    }
+  ],
+  "n_disputed_resolved_by_consensus": 0,
+  "status_counts": {
+    "specialist_1": {
+      "modality": {
+        "compliant": 11,
+        "change_required": 14,
+        "not_applicable": 127
+      },
+      "outcome": {
+        "compliant": 132,
+        "change_required": 20,
+        "not_applicable": 0
+      },
+      "prompt_level": {
+        "compliant": 86,
+        "change_required": 64,
+        "not_applicable": 2
+      }
+    },
+    "specialist_2": {
+      "modality": {
+        "compliant": 11,
+        "change_required": 14,
+        "not_applicable": 127
+      },
+      "outcome": {
+        "compliant": 132,
+        "change_required": 20,
+        "not_applicable": 0
+      },
+      "prompt_level": {
+        "compliant": 86,
+        "change_required": 64,
+        "not_applicable": 2
+      }
+    }
+  },
+  "auditors_blind_to_model_output": "worksheets contain transcript and retained reference values only (see audit_set_152.json worksheet_columns); blinding of the auditors' conduct must be confirmed by the study team"
+}

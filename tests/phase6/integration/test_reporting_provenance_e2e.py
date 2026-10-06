@@ -177,7 +177,9 @@ class TestReportingProvenanceE2E:
         mock_call_llm.side_effect = _mock_llm
 
         ep = _build_evidence_packet()
-        client = ReportingClient(api_key="test-key")
+        client = ReportingClient(
+            api_key="test-key", provider="anthropic", mode="generative_experimental"
+        )
         report_data = await client.generate_report(ep)
         assert len(report_data.sections) >= 4
         assert report_data.validation_passed is True
@@ -195,7 +197,7 @@ class TestReportingProvenanceE2E:
         mock_call_llm.side_effect = _mock_llm
 
         ep = _build_evidence_packet()
-        client = ReportingClient(api_key="test-key")
+        client = ReportingClient(api_key="test-key", mode="generative_experimental")
         report_data = await client.generate_report(ep)
         assert report_data.validation_passed is False
         assert len(report_data.validation_errors) >= 1

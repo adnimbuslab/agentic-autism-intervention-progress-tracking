@@ -57,7 +57,7 @@ async def extract_node(state: ObservationWorkflowState) -> dict:
     try:
         provider = get_extraction_provider(
             settings.extraction_provider,
-            api_key=settings.anthropic_api_key,
+            **settings.extraction_provider_kwargs,
         )
         request = ExtractionRequest(
             source_type=SourceType(state["source_type"]),
@@ -84,6 +84,7 @@ async def extract_node(state: ObservationWorkflowState) -> dict:
         }
 
 
+# @spec EXTRACT-003
 async def validate_node(state: ObservationWorkflowState) -> dict:
     if state.get("error") or state.get("extraction_result") is None:
         return {
@@ -188,6 +189,7 @@ async def reject_node(state: ObservationWorkflowState) -> dict:
 # ---------------------------------------------------------------------------
 
 
+# @spec ABSTAIN-020
 def route_edge(state: ObservationWorkflowState) -> str:
     decision = state.get("routing_decision")
     mapping = {

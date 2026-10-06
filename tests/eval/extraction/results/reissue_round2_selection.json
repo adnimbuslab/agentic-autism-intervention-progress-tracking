@@ -1,0 +1,2507 @@
+{
+  "round": 2,
+  "annotators": [
+    "annotator_a",
+    "annotator_b"
+  ],
+  "codebook": "docs/annotation_codebook.md",
+  "rules": {
+    "modality_gestural": "Codebook 1 -- gestural is a communicative gesture, not physical handling; multimodal needs two message-bearing channels; unknown vs none",
+    "outcome_target": "Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",
+    "prompt_antecedent": "Codebook 3 -- the turn creating the opportunity is an antecedent, not a prompt; child-initiated is independent; most-supportive level wins"
+  },
+  "n_shared": 330,
+  "n_selected": 178,
+  "n_on_boundary": 254,
+  "n_off_boundary": 101,
+  "selected": {
+    "brett_flusberg_brett_050800.cha_seg_025": [
+      {
+        "segment_id": "brett_flusberg_brett_050800.cha_seg_025",
+        "field": "outcome",
+        "values": "none / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_050800.cha_seg_045": [
+      {
+        "segment_id": "brett_flusberg_brett_050800.cha_seg_045",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_050800.cha_seg_064": [
+      {
+        "segment_id": "brett_flusberg_brett_050800.cha_seg_064",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_051002.cha_seg_018": [
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_018",
+        "field": "outcome",
+        "values": "unknown / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_051002.cha_seg_034": [
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_034",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_034",
+        "field": "outcome",
+        "values": "none / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_051002.cha_seg_045": [
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_045",
+        "field": "outcome",
+        "values": "unknown / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_051002.cha_seg_046": [
+      {
+        "segment_id": "brett_flusberg_brett_051002.cha_seg_046",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_060207.cha_seg_005": [
+      {
+        "segment_id": "brett_flusberg_brett_060207.cha_seg_005",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060207.cha_seg_005",
+        "field": "outcome",
+        "values": "correct / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_060622.cha_seg_015": [
+      {
+        "segment_id": "brett_flusberg_brett_060622.cha_seg_015",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "brett_flusberg_brett_060622.cha_seg_015",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "brett_flusberg_brett_060819.cha_seg_014": [
+      {
+        "segment_id": "brett_flusberg_brett_060819.cha_seg_014",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "carl_rollins_carl_020800.cha_seg_006": [
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_006",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_006",
+        "field": "prompt_level",
+        "values": "partial_physical / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_020800.cha_seg_012": [
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_012",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_020800.cha_seg_018": [
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_018",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_020800.cha_seg_020": [
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_020",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_020800.cha_seg_040": [
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_040",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_020800.cha_seg_046": [
+      {
+        "segment_id": "carl_rollins_carl_020800.cha_seg_046",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_023": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_023",
+        "field": "prompt_level",
+        "values": "gestural / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_055": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_055",
+        "field": "outcome",
+        "values": "unknown / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_083": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_083",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_086": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_086",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_086",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_088": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_088",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_088",
+        "field": "outcome",
+        "values": "none / no_response",
+        "rule": "outcome_target"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_090": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_090",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_090",
+        "field": "prompt_level",
+        "values": "verbal / gestural",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_101": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_101",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_021100.cha_seg_108": [
+      {
+        "segment_id": "carl_rollins_carl_021100.cha_seg_108",
+        "field": "modality",
+        "values": "verbal / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_030000.cha_seg_002": [
+      {
+        "segment_id": "carl_rollins_carl_030000.cha_seg_002",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_030000.cha_seg_008": [
+      {
+        "segment_id": "carl_rollins_carl_030000.cha_seg_008",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_030000.cha_seg_010": [
+      {
+        "segment_id": "carl_rollins_carl_030000.cha_seg_010",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "carl_rollins_carl_030000.cha_seg_010",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_030000.cha_seg_016": [
+      {
+        "segment_id": "carl_rollins_carl_030000.cha_seg_016",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "carl_rollins_carl_030000.cha_seg_021": [
+      {
+        "segment_id": "carl_rollins_carl_030000.cha_seg_021",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "carl_rollins_carl_030000.cha_seg_025": [
+      {
+        "segment_id": "carl_rollins_carl_030000.cha_seg_025",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "carl_rollins_carl_030700.cha_seg_003": [
+      {
+        "segment_id": "carl_rollins_carl_030700.cha_seg_003",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "jack_flusberg_jack_060900.cha_seg_027": [
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_027",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_027",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_060900.cha_seg_042": [
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_042",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_060900.cha_seg_043": [
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_043",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_060900.cha_seg_077": [
+      {
+        "segment_id": "jack_flusberg_jack_060900.cha_seg_077",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_061028.cha_seg_018": [
+      {
+        "segment_id": "jack_flusberg_jack_061028.cha_seg_018",
+        "field": "outcome",
+        "values": "unknown / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_061028.cha_seg_026": [
+      {
+        "segment_id": "jack_flusberg_jack_061028.cha_seg_026",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_061028.cha_seg_026",
+        "field": "outcome",
+        "values": "unknown / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_061028.cha_seg_027": [
+      {
+        "segment_id": "jack_flusberg_jack_061028.cha_seg_027",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_061028.cha_seg_027",
+        "field": "outcome",
+        "values": "unknown / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_070106.cha_seg_005": [
+      {
+        "segment_id": "jack_flusberg_jack_070106.cha_seg_005",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "jack_flusberg_jack_070106.cha_seg_013": [
+      {
+        "segment_id": "jack_flusberg_jack_070106.cha_seg_013",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_070106.cha_seg_016": [
+      {
+        "segment_id": "jack_flusberg_jack_070106.cha_seg_016",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_070106.cha_seg_017": [
+      {
+        "segment_id": "jack_flusberg_jack_070106.cha_seg_017",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "jack_flusberg_jack_070106.cha_seg_017",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_070726.cha_seg_002": [
+      {
+        "segment_id": "jack_flusberg_jack_070726.cha_seg_002",
+        "field": "outcome",
+        "values": "unknown / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "jack_flusberg_jack_071001.cha_seg_009": [
+      {
+        "segment_id": "jack_flusberg_jack_071001.cha_seg_009",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "jack_flusberg_jack_071001.cha_seg_011": [
+      {
+        "segment_id": "jack_flusberg_jack_071001.cha_seg_011",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_013": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_013",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_016": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_016",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_016",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_018": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_018",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_019": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_019",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_019",
+        "field": "prompt_level",
+        "values": "partial_physical / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_019",
+        "field": "outcome",
+        "values": "partial / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_024": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_024",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_024",
+        "field": "prompt_level",
+        "values": "gestural / independent",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_025": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_025",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_025",
+        "field": "prompt_level",
+        "values": "independent / full_physical",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_025",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_030": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_030",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_031": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_031",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_031",
+        "field": "prompt_level",
+        "values": "partial_physical / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_034": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_034",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_034",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_035": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_035",
+        "field": "modality",
+        "values": "gestural / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_020500.cha_seg_046": [
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_046",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "josh_rollins_josh_020500.cha_seg_046",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "josh_rollins_josh_020800.cha_seg_027": [
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_027",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "josh_rollins_josh_020800.cha_seg_028": [
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_028",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_020800.cha_seg_045": [
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_045",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_020800.cha_seg_046": [
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_046",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_020800.cha_seg_050": [
+      {
+        "segment_id": "josh_rollins_josh_020800.cha_seg_050",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_021100.cha_seg_003": [
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_003",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_021100.cha_seg_009": [
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_009",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_021100.cha_seg_011": [
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_011",
+        "field": "modality",
+        "values": "multimodal / verbal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_021100.cha_seg_020": [
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_020",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_020",
+        "field": "outcome",
+        "values": "correct / unknown",
+        "rule": "outcome_target"
+      }
+    ],
+    "josh_rollins_josh_021100.cha_seg_034": [
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_034",
+        "field": "modality",
+        "values": "gestural / multimodal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_034",
+        "field": "prompt_level",
+        "values": "verbal / gestural",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "josh_rollins_josh_021100.cha_seg_034",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "josh_rollins_josh_030100.cha_seg_015": [
+      {
+        "segment_id": "josh_rollins_josh_030100.cha_seg_015",
+        "field": "modality",
+        "values": "unknown / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_030100.cha_seg_018": [
+      {
+        "segment_id": "josh_rollins_josh_030100.cha_seg_018",
+        "field": "modality",
+        "values": "verbal / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "josh_rollins_josh_030100.cha_seg_022": [
+      {
+        "segment_id": "josh_rollins_josh_030100.cha_seg_022",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_030100.cha_seg_022",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "josh_rollins_josh_030100.cha_seg_022",
+        "field": "outcome",
+        "values": "correct / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "josh_rollins_josh_030100.cha_seg_023": [
+      {
+        "segment_id": "josh_rollins_josh_030100.cha_seg_023",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "josh_rollins_josh_030100.cha_seg_023",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mark_flusberg_mark_070700.cha_seg_047": [
+      {
+        "segment_id": "mark_flusberg_mark_070700.cha_seg_047",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "mark_flusberg_mark_070700.cha_seg_054": [
+      {
+        "segment_id": "mark_flusberg_mark_070700.cha_seg_054",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mark_flusberg_mark_070700.cha_seg_081": [
+      {
+        "segment_id": "mark_flusberg_mark_070700.cha_seg_081",
+        "field": "outcome",
+        "values": "unknown / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "mark_flusberg_mark_070812.cha_seg_029": [
+      {
+        "segment_id": "mark_flusberg_mark_070812.cha_seg_029",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mark_flusberg_mark_070812.cha_seg_033": [
+      {
+        "segment_id": "mark_flusberg_mark_070812.cha_seg_033",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "mark_flusberg_mark_080700.cha_seg_014": [
+      {
+        "segment_id": "mark_flusberg_mark_080700.cha_seg_014",
+        "field": "outcome",
+        "values": "none / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "mark_flusberg_mark_080915.cha_seg_008": [
+      {
+        "segment_id": "mark_flusberg_mark_080915.cha_seg_008",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "mark_flusberg_mark_080915.cha_seg_008",
+        "field": "outcome",
+        "values": "correct / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_009": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_009",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_024": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_024",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_030": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_030",
+        "field": "modality",
+        "values": "none / unknown",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_034": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_034",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_035": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_035",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_038": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_038",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_038",
+        "field": "prompt_level",
+        "values": "partial_physical / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_045": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_045",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_045",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_051": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_051",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030100.cha_seg_052": [
+      {
+        "segment_id": "mars_rollins_mars_030100.cha_seg_052",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030300.cha_seg_005": [
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_005",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_005",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_005",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "mars_rollins_mars_030300.cha_seg_014": [
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_014",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030300.cha_seg_017": [
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_017",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030300.cha_seg_018": [
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_018",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_018",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_018",
+        "field": "outcome",
+        "values": "none / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "mars_rollins_mars_030300.cha_seg_020": [
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_020",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030300.cha_seg_050": [
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_050",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_050",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_050",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "mars_rollins_mars_030300.cha_seg_060": [
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_060",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030300.cha_seg_060",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mars_rollins_mars_030600.cha_seg_006": [
+      {
+        "segment_id": "mars_rollins_mars_030600.cha_seg_006",
+        "field": "modality",
+        "values": "multimodal / verbal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "mars_rollins_mars_030600.cha_seg_006",
+        "field": "outcome",
+        "values": "none / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "mars_rollins_mars_030600.cha_seg_018": [
+      {
+        "segment_id": "mars_rollins_mars_030600.cha_seg_018",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_030600.cha_seg_037": [
+      {
+        "segment_id": "mars_rollins_mars_030600.cha_seg_037",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mars_rollins_mars_030800.cha_seg_009": [
+      {
+        "segment_id": "mars_rollins_mars_030800.cha_seg_009",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "mars_rollins_mars_030800.cha_seg_010": [
+      {
+        "segment_id": "mars_rollins_mars_030800.cha_seg_010",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "mars_rollins_mars_031100.cha_seg_001": [
+      {
+        "segment_id": "mars_rollins_mars_031100.cha_seg_001",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "mars_rollins_mars_031100.cha_seg_001",
+        "field": "outcome",
+        "values": "partial / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "rick_flusberg_rick_040700.cha_seg_033": [
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_033",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "rick_flusberg_rick_040700.cha_seg_046": [
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_046",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_046",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "rick_flusberg_rick_040700.cha_seg_055": [
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_055",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "rick_flusberg_rick_040700.cha_seg_082": [
+      {
+        "segment_id": "rick_flusberg_rick_040700.cha_seg_082",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "rick_flusberg_rick_060308.cha_seg_001": [
+      {
+        "segment_id": "rick_flusberg_rick_060308.cha_seg_001",
+        "field": "outcome",
+        "values": "unknown / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "rick_flusberg_rick_060308.cha_seg_010": [
+      {
+        "segment_id": "rick_flusberg_rick_060308.cha_seg_010",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "rick_flusberg_rick_070013.cha_seg_007": [
+      {
+        "segment_id": "rick_flusberg_rick_070013.cha_seg_007",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "rick_flusberg_rick_070013.cha_seg_007",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_028": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_028",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_009": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_009",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_012": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_012",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_015": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_015",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032": [
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_005": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_005",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_005",
+        "field": "outcome",
+        "values": "unknown / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_011": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_011",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_022": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_022",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_023": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_023",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_023",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_027": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_027",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_027",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_028": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_028",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_029": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_029",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_029",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_029",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_032": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_032",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_032",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_040": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_040",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_044": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_044",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_044",
+        "field": "prompt_level",
+        "values": "model / independent",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_051": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_051",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_057": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_057",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_059": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_059",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_059",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_063": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_063",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_073": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_073",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_073",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_078": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_078",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_080": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_080",
+        "field": "modality",
+        "values": "verbal / multimodal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_080",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_087": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_087",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_010": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_010",
+        "field": "modality",
+        "values": "verbal / multimodal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_020800.cha_seg_010",
+        "field": "outcome",
+        "values": "unknown / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_019": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_019",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_002": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_002",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_002",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_002",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_015": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_015",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_019": [
+      {
+        "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_019",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_001": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_001",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_001",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_007": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_007",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_011": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_011",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_011",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_017": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_017",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_017",
+        "field": "prompt_level",
+        "values": "partial_physical / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_022": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_022",
+        "field": "modality",
+        "values": "unknown / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_028": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_028",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_034": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_034",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_038": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_038",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_038",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_039": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_039",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_039",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_039",
+        "field": "outcome",
+        "values": "correct / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_042": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_042",
+        "field": "prompt_level",
+        "values": "model / gestural",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_049": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_049",
+        "field": "modality",
+        "values": "verbal / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_056": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_056",
+        "field": "modality",
+        "values": "unknown / multimodal",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_056",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_056",
+        "field": "outcome",
+        "values": "none / no_response",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_060": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_060",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_060",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "sid_rollins_sid_020200.cha_seg_072": [
+      {
+        "segment_id": "sid_rollins_sid_020200.cha_seg_072",
+        "field": "outcome",
+        "values": "none / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_021100.cha_seg_040": [
+      {
+        "segment_id": "sid_rollins_sid_021100.cha_seg_040",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "sid_rollins_sid_021100.cha_seg_040",
+        "field": "outcome",
+        "values": "correct / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_021100.cha_seg_053": [
+      {
+        "segment_id": "sid_rollins_sid_021100.cha_seg_053",
+        "field": "modality",
+        "values": "none / multimodal",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_003": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_003",
+        "field": "outcome",
+        "values": "none / incorrect",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_004": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_004",
+        "field": "prompt_level",
+        "values": "gestural / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_008": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_008",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_008",
+        "field": "prompt_level",
+        "values": "model / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_008",
+        "field": "outcome",
+        "values": "partial / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_013": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_013",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_014": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_014",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_017": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_017",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_025": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_025",
+        "field": "prompt_level",
+        "values": "independent / verbal",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_025",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_031": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_031",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_036": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_036",
+        "field": "modality",
+        "values": "multimodal / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_054": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_054",
+        "field": "modality",
+        "values": "multimodal / gestural",
+        "rule": "modality_gestural"
+      },
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_054",
+        "field": "outcome",
+        "values": "unknown / partial",
+        "rule": "outcome_target"
+      }
+    ],
+    "sid_rollins_sid_030200.cha_seg_055": [
+      {
+        "segment_id": "sid_rollins_sid_030200.cha_seg_055",
+        "field": "modality",
+        "values": "none / gestural",
+        "rule": "modality_gestural"
+      }
+    ],
+    "sid_rollins_sid_030500.cha_seg_001": [
+      {
+        "segment_id": "sid_rollins_sid_030500.cha_seg_001",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "stuart_flusberg_stuart_030400.cha_seg_006": [
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_006",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "stuart_flusberg_stuart_030400.cha_seg_012": [
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_012",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "stuart_flusberg_stuart_030400.cha_seg_022": [
+      {
+        "segment_id": "stuart_flusberg_stuart_030400.cha_seg_022",
+        "field": "prompt_level",
+        "values": "verbal / model",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "stuart_flusberg_stuart_030610.cha_seg_006": [
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_006",
+        "field": "outcome",
+        "values": "unknown / correct",
+        "rule": "outcome_target"
+      }
+    ],
+    "stuart_flusberg_stuart_030610.cha_seg_054": [
+      {
+        "segment_id": "stuart_flusberg_stuart_030610.cha_seg_054",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "stuart_flusberg_stuart_030806.cha_seg_016": [
+      {
+        "segment_id": "stuart_flusberg_stuart_030806.cha_seg_016",
+        "field": "prompt_level",
+        "values": "model / verbal",
+        "rule": "prompt_antecedent"
+      }
+    ],
+    "stuart_flusberg_stuart_031009.cha_seg_002": [
+      {
+        "segment_id": "stuart_flusberg_stuart_031009.cha_seg_002",
+        "field": "outcome",
+        "values": "unknown / no_response",
+        "rule": "outcome_target"
+      }
+    ],
+    "stuart_flusberg_stuart_040029.cha_seg_009": [
+      {
+        "segment_id": "stuart_flusberg_stuart_040029.cha_seg_009",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_040029.cha_seg_009",
+        "field": "outcome",
+        "values": "correct / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "stuart_flusberg_stuart_040029.cha_seg_014": [
+      {
+        "segment_id": "stuart_flusberg_stuart_040029.cha_seg_014",
+        "field": "prompt_level",
+        "values": "verbal / independent",
+        "rule": "prompt_antecedent"
+      },
+      {
+        "segment_id": "stuart_flusberg_stuart_040029.cha_seg_014",
+        "field": "outcome",
+        "values": "correct / none",
+        "rule": "outcome_target"
+      }
+    ],
+    "stuart_flusberg_stuart_040715.cha_seg_007": [
+      {
+        "segment_id": "stuart_flusberg_stuart_040715.cha_seg_007",
+        "field": "outcome",
+        "values": "none / correct",
+        "rule": "outcome_target"
+      }
+    ]
+  },
+  "off_boundary": [
+    {
+      "segment_id": "brett_flusberg_brett_050800.cha_seg_025",
+      "field": "domain",
+      "values": "social_communication / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "brett_flusberg_brett_050800.cha_seg_064",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_014",
+      "field": "outcome",
+      "values": "incorrect / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_033",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "brett_flusberg_brett_051002.cha_seg_040",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060207.cha_seg_011",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060622.cha_seg_015",
+      "field": "domain",
+      "values": "behavior / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "brett_flusberg_brett_060819.cha_seg_007",
+      "field": "outcome",
+      "values": "partial / approximation",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_020800.cha_seg_012",
+      "field": "outcome",
+      "values": "correct / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_020800.cha_seg_018",
+      "field": "outcome",
+      "values": "correct / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_020800.cha_seg_046",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_020800.cha_seg_046",
+      "field": "outcome",
+      "values": "no_response / incorrect",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_021100.cha_seg_055",
+      "field": "domain",
+      "values": "language / play",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_030000.cha_seg_002",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_030000.cha_seg_008",
+      "field": "outcome",
+      "values": "correct / approximation",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_030000.cha_seg_025",
+      "field": "domain",
+      "values": "social_communication / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_003",
+      "field": "domain",
+      "values": "play / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "carl_rollins_carl_030700.cha_seg_005",
+      "field": "domain",
+      "values": "play / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_025",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_043",
+      "field": "domain",
+      "values": "behavior / social_communication",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_060900.cha_seg_046",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_070315.cha_seg_002",
+      "field": "outcome",
+      "values": "approximation / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_070726.cha_seg_002",
+      "field": "domain",
+      "values": "social_communication / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_071001.cha_seg_009",
+      "field": "domain",
+      "values": "play / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_071001.cha_seg_009",
+      "field": "outcome",
+      "values": "partial / no_response",
+      "rule": ""
+    },
+    {
+      "segment_id": "jack_flusberg_jack_071001.cha_seg_022",
+      "field": "domain",
+      "values": "behavior / social_communication",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_020500.cha_seg_016",
+      "field": "domain",
+      "values": "motor / adaptive",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_020500.cha_seg_018",
+      "field": "domain",
+      "values": "play / motor",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_020500.cha_seg_019",
+      "field": "domain",
+      "values": "adaptive / sensory",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_020500.cha_seg_030",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_020500.cha_seg_034",
+      "field": "domain",
+      "values": "motor / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_027",
+      "field": "outcome",
+      "values": "approximation / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_020800.cha_seg_050",
+      "field": "outcome",
+      "values": "no_response / incorrect",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_003",
+      "field": "domain",
+      "values": "sensory / motor",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_009",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_020",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_024",
+      "field": "domain",
+      "values": "motor / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_024",
+      "field": "outcome",
+      "values": "no_response / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_021100.cha_seg_040",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "josh_rollins_josh_030100.cha_seg_022",
+      "field": "domain",
+      "values": "social_communication / sensory",
+      "rule": ""
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070700.cha_seg_074",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070812.cha_seg_001",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "mark_flusberg_mark_070812.cha_seg_029",
+      "field": "outcome",
+      "values": "correct / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080700.cha_seg_003",
+      "field": "domain",
+      "values": "social_communication / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080915.cha_seg_008",
+      "field": "domain",
+      "values": "language / social_communication",
+      "rule": ""
+    },
+    {
+      "segment_id": "mark_flusberg_mark_080915.cha_seg_011",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030100.cha_seg_035",
+      "field": "outcome",
+      "values": "incorrect / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030100.cha_seg_042",
+      "field": "domain",
+      "values": "motor / adaptive",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_004",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_039",
+      "field": "modality",
+      "values": "none / written",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_039",
+      "field": "outcome",
+      "values": "partial / approximation",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_050",
+      "field": "domain",
+      "values": "play / social_communication",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_054",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_060",
+      "field": "domain",
+      "values": "motor / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030300.cha_seg_060",
+      "field": "outcome",
+      "values": "partial / incorrect",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030600.cha_seg_005",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030600.cha_seg_005",
+      "field": "outcome",
+      "values": "correct / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030600.cha_seg_006",
+      "field": "domain",
+      "values": "play / social_communication",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030600.cha_seg_018",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "mars_rollins_mars_030800.cha_seg_009",
+      "field": "modality",
+      "values": "verbal / unknown",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_040700.cha_seg_034",
+      "field": "domain",
+      "values": "language / play",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_050904.cha_seg_005",
+      "field": "domain",
+      "values": "cognitive / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_050904.cha_seg_013",
+      "field": "outcome",
+      "values": "approximation / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_060308.cha_seg_001",
+      "field": "domain",
+      "values": "language / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_060818.cha_seg_008",
+      "field": "outcome",
+      "values": "incorrect / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_061012.cha_seg_007",
+      "field": "outcome",
+      "values": "partial / incorrect",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_070013.cha_seg_004",
+      "field": "domain",
+      "values": "play / language",
+      "rule": ""
+    },
+    {
+      "segment_id": "rick_flusberg_rick_070013.cha_seg_004",
+      "field": "outcome",
+      "values": "partial / incorrect",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_066",
+      "field": "domain",
+      "values": "adaptive / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011",
+      "field": "domain",
+      "values": "language / play",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003",
+      "field": "domain",
+      "values": "social_communication / play",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_009",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010",
+      "field": "outcome",
+      "values": "correct / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_005",
+      "field": "domain",
+      "values": "motor / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_011",
+      "field": "domain",
+      "values": "adaptive / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_023",
+      "field": "domain",
+      "values": "play / motor",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_027",
+      "field": "domain",
+      "values": "social_communication / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_029",
+      "field": "domain",
+      "values": "play / motor",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_032",
+      "field": "domain",
+      "values": "play / motor",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_040",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_073",
+      "field": "domain",
+      "values": "adaptive / play",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_020600.cha_seg_073",
+      "field": "outcome",
+      "values": "incorrect / no_response",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_004",
+      "field": "domain",
+      "values": "social_communication / adaptive",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_004",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_021000.cha_seg_013",
+      "field": "outcome",
+      "values": "correct / incorrect",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_002",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "roger_rollins_rollins_roger_rollins_030300.cha_seg_019",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_020200.cha_seg_011",
+      "field": "domain",
+      "values": "play / sensory",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_020200.cha_seg_028",
+      "field": "outcome",
+      "values": "no_response / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_020200.cha_seg_038",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_020200.cha_seg_039",
+      "field": "domain",
+      "values": "adaptive / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_020200.cha_seg_049",
+      "field": "outcome",
+      "values": "partial / no_response",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_021100.cha_seg_053",
+      "field": "domain",
+      "values": "play / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_003",
+      "field": "domain",
+      "values": "social_communication / cognitive",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_004",
+      "field": "domain",
+      "values": "behavior / social_communication",
+      "rule": ""
+    },
+    {
+      "segment_id": "sid_rollins_sid_030200.cha_seg_008",
+      "field": "domain",
+      "values": "play / behavior",
+      "rule": ""
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030400.cha_seg_009",
+      "field": "domain",
+      "values": "language / social_communication",
+      "rule": ""
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_008",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030610.cha_seg_015",
+      "field": "modality",
+      "values": "unknown / verbal",
+      "rule": ""
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_030806.cha_seg_016",
+      "field": "outcome",
+      "values": "correct / partial",
+      "rule": ""
+    },
+    {
+      "segment_id": "stuart_flusberg_stuart_040715.cha_seg_003",
+      "field": "outcome",
+      "values": "partial / correct",
+      "rule": ""
+    }
+  ]
+}

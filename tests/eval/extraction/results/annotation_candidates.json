@@ -1,0 +1,443 @@
+{
+  "generated_at": "2026-08-28T22:32:54.842034+00:00",
+  "model": "llama3.2:latest",
+  "n_reviewed_by_model": 100,
+  "n_candidates": 31,
+  "note": "These are MODEL OUTPUTS, not ground truth. Run annotate.py to have a human judge each field before computing any accuracy metric.",
+  "candidates": [
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_002",
+      "corpus": "rollins",
+      "chat_text": "*INV:\ta barn .\n%spa:\t$DJF:RT\n*CHI:\ta barn .\n%spa:\t$DJF:ST:WD\n%act:\topens the loft\n*CHI:\ta barn .\n%spa:\t$DJF:ST:WD\n*INV:\t0 .\n%act:\tcleans glitter off the table\n*CHI:\tbus .\n%spa:\t$NIA:RP:WD\n*INV:\tyou need the bus , too ?\n%spa:\t$DCC:YQ\n*CHI:\t0 .\n%act:\tgets off the table\n*CHI:\t0 .\n%act:\tclimbs on another table",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "bus",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_030700.cha_seg_002",
+      "corpus": "rollins",
+      "chat_text": "*CHI:\tgoodbye a [=? the] [*] mommy .\n%spa:\t$MRK:MK:WD\n*CHI:\tgoodbye .\n%spa:\t$MRK:MK:WD\n%act:\tgrabs the potato's head\n*CHI:\tyyy .\n%spa:\t$YYY:YY:VO\n%act:\tgrabs the potato and hugs it",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "play",
+        "behavior": "grabs the potato",
+        "modality": "multimodal",
+        "prompt_level": "model",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020800.cha_seg_039",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tthere's the farmer .\n%spa:\t$DJF:ST\n*CHI:\t0 .\n%act:\tgets up\n*INV:\t0 .\n%act:\tstarts to play with the tractor",
+      "status": "success",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "play",
+        "behavior": "gets up",
+        "modality": "unknown",
+        "prompt_level": "unknown",
+        "outcome": "no_response"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_030300.cha_seg_001",
+      "corpus": "rollins",
+      "chat_text": "*CHI:\tfour .\n%spa:\t$DJF:CN:WD\n%act:\tturns the page\n*CHI:\tfive .\n%spa:\t$DJF:CN:WD\n%act:\tturns the page\n*CHI:\tsix .\n%spa:\t$DJF:CN:WD\n%act:\tturns the page\n*CHI:\tseven .\n%spa:\t$DJF:CN:WD\n%act:\tturns the page\n*CHI:\teight .\n%spa:\t$DJF:CN:WD\n%act:\tturns the page\n*CHI:\txxx . [+ trn]\n%spa:\t$DJF:CN:VO\n%act:\tturns the page\n*CHI:\txxx . [+ trn]\n%spa:\t$DJF:CN:VO\n%act:\tturns the page\n*CHI:\txxx . [+ trn]\n%spa:\t$DJF:CN:VO\n%act:\tcloses the book .",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "behavior",
+        "behavior": "turns page",
+        "modality": "unknown",
+        "prompt_level": null,
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_091",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tthe wheels on the bus go (a)round and (a)round .\n%spa:\t$PRO:PR\n*CHI:\t0 .\n%act:\tlooks at the examiner\n*INV:\tearly in the morning .\n%spa:\t$PRO:PR\n*CHI:\tyay .\n%spa:\t$NIA:ET:WD\n%act:\tclaps\n*INV:\tyay .\n%spa:\t$NIA:ET:WD\n%act:\tclaps\n*INV:\twhat else ?\n%spa:\t$NIA:QN\n*CHI:\txxx .\n%act:\tplays with a person\n*INV:\tyou wanna sing about the kids ?\n%spa:\t$NIA:RQ",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "plays with a person",
+        "modality": "multimodal",
+        "prompt_level": null,
+        "outcome": null
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020800.cha_seg_011",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tlet's put them away .\n%spa:\t$NIA:RP\n%act:\tpicks up a toy\n*CHI:\t0 .\n%act:\topens the loft\n*INV:\t0 .\n%act:\tsets the bucket off the table\n*CHI:\t0 .\n%act:\tsits and takes a troft out of the loft\n*INV:\twe're not ready .\n%spa:\t$NIA:ST\n%act:\tsits\n*CHI:\txxx .\n*CHI:\txxx .\n*INV:\t0 .\n%act:\tpulls his chair out from the table some",
+      "status": "success",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "play",
+        "behavior": "picks up a toy",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "incorrect"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020800.cha_seg_046",
+      "corpus": "rollins",
+      "chat_text": "*INV:\twhat is that ?\n%spa:\t$DJF:QN\n*CHI:\txxx .\n*CHI:\txxx .",
+      "status": "partial",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": null,
+        "modality": "unknown",
+        "prompt_level": "unknown",
+        "outcome": "unknown"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_070",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tdum_dee_dum@si .\n%spa:\t$PRO:PR\n%act:\truns the horse on the table and up his arm\n*CHI:\t0 [=! squeals] .\n*INV:\tda_da_da@si .\n%spa:\t$PRO:PR\n*CHI:\t&=laughs .\n*INV:\t0 .\n%act:\tsmacks and touches the horse to his cheek\n*CHI:\t&=laughs .\n*INV:\ta kiss .\n%spa:\t$NIA:ST\n*CHI:\ta sheep .\n%spa:\t$DHA:ST:WD\n%act:\tstands the sheep up",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "language",
+        "behavior": "laughs",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_030000.cha_seg_017",
+      "corpus": "rollins",
+      "chat_text": "*INV:\t&=laugh [<] .\n*CHI:\tbye .\n%spa:\t$PRO:MK:WD\n%act:\tputs the piece in the puzzle\n*INV:\tbye birdie .\n%spa:\t$PRO:MK\n*CHI:\tyyy yyy [= jargon] .\n%spa:\t$YYY:YY:VJ\n*INV:\t&=gasp . [+ trn]\n%spa:\t$MRK:MK\n%act:\twaves\n*CHI:\tbye .\n%spa:\t$PRO:MK:WD\n*INV:\tbye birdie .\n%spa:\t$PRO:MK\n*CHI:\thi .\n%spa:\t$PRO:MK:WD\n%act:\twaves",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "language",
+        "behavior": "puts the piece in the puzzle",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020500.cha_seg_002",
+      "corpus": "rollins",
+      "chat_text": "*CHI:\t0 .\n%act:\twalks away\n*CHI:\txxx [=! voc] .\n%act:\tbends over\n*INV:\tChi .\n%spa:\t$NMA:CL\n*CHI:\txxx [=! voc] .\n%act:\tbends over\n*INV:\t0 .\n%act:\tputs hand on chi's back\n*CHI:\txxx [=! voc] .\n%act:\tbends over\n*INV:\tChi .\n%spa:\t$NMA:CL\n*INV:\tmore water ?\n%spa:\t$NIA:RQ",
+      "status": "success",
+      "confidence": 0.3,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "bends over",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020800.cha_seg_034",
+      "corpus": "rollins",
+      "chat_text": "*INV:\twe need a towel .\n%spa:\t$NIA:RP\n%gpx:\tpoints to the paper towel\n*CHI:\t0 .\n%act:\tgets a paper towel and drops it\n*INV:\twhoops .\n%spa:\t$MRK:MK\n%act:\tpulls out another towel\n*INV:\there you go .\n%spa:\t$NIA:TO\n%act:\thands him the towel\n*CHI:\t0 .\n%act:\tgets off the stool and takes the towel\n*CHI:\t0 .\n%act:\tpicks up the other towel off the floor\n*CHI:\t0 .\n%act:\tdries his hands\n*INV:\tdry them off .\n%spa:\t$NIA:RP",
+      "status": "success",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "picks up the other towel off the floor and gets off the stool",
+        "modality": "gestural",
+        "prompt_level": "gestural",
+        "outcome": "unknown"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_016",
+      "corpus": "rollins",
+      "chat_text": "*INV:\ta horse .\n%spa:\t$DJF:AP\n*CHI:\tthe horse .\n%spa:\t$DJF:RT:WDE\n*CHI:\t0 .\n%act:\tputs the boy on the horse",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "the horse",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_051",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tthat's right .\n%spa:\t$DJF:AP\n*CHI:\toutside .\n%spa:\t$DJF:RT:WDE\n%act:\tplays with the school bus door\n*CHI:\tyyy close .\n%spa:\t$NIA:SI:WD\n*INV:\tclose .\n%spa:\t$NIA:RT\n*CHI:\tclose .\n%spa:\t$NIA:RT:WDE\n*CHI:\t0 .\n%act:\ttries to put the farmer in his pocket\n*INV:\tput the farmer in your pocket .\n%spa:\t$NIA:SI\n*CHI:\t0 .\n%act:\tmisses pocket and starts to put it down his shirt",
+      "status": "success",
+      "confidence": 0.8,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "misses pocket and starts to put it down his shirt",
+        "modality": "gestural",
+        "prompt_level": "gestural",
+        "outcome": "unknown"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_030",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tcan you see the tiny dino(saur)s ?\n%spa:\t$NIA:YQ\n*CHI:\ttiny dino(saur)s .\n%spa:\t$NIA:RT:WDE\n*INV:\tguess they're gone .\n%spa:\t$NIA:ST\n*CHI:\tall gone .\n%spa:\t$NIA:RT:WDE\n*INV:\tall gone .\n%spa:\t$NIA:AP\n%act:\tputs him down\n*CHI:\tall gone .\n%spa:\t$NIA:RT:WDE\n*INV:\t0 .\n%act:\tlooks at the books\n*CHI:\t0 .\n%act:\tlooks at the books",
+      "status": "success",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "looks at the books",
+        "modality": "verbal",
+        "prompt_level": "independent",
+        "outcome": "no_response"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_098",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tnow where ?\n%spa:\t$NIA:QN\n*CHI:\ta bus .\n%spa:\t$DHA:ST:WD\n*INV:\tyep .\n%spa:\t$DJF:AP\n*INV:\ta bus .\n%spa:\t$DJF:AP\n%gpx:\ttouches the bus\n*CHI:\ta bus .\n%spa:\t$DJF:ST\n*INV:\twhere does your bucket go ?\n%spa:\t$NIA:QN\n%gpx:\ttaps the bucket\n*CHI:\tup [?] .\n%spa:\t$NIA:SA:WD\n*CHI:\tup .\n%spa:\t$NIA:SA:WD",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "a bus",
+        "modality": null,
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_030000.cha_seg_005",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tnow put the wheel there .\n%spa:\t$NIA:RP\n%gpx:\tpoints to the place for the wheel\n*CHI:\t0 .\n%act:\tputs the wheel in\n*INV:\t&-uh (.) upside down .\n%spa:\t$NIA:CR\n*CHI:\t0 .\n%act:\tturns the wheel over\n*CHI:\tthere .\n%spa:\t$NIA:MK:WD\n*INV:\tthere .\n%spa:\t$NIA:RT\n*CHI:\t0 .\n%act:\tgets another piece\n*CHI:\tyyy [= jargon] .\n%spa:\t$NIA:YY:VJ\n%act:\ttries to put the piece in",
+      "status": "success",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "adaptive",
+        "behavior": "tries to put the piece in",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": "unknown"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_007",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tfirst it goes .\n%spa:\t$NIA:RP\n%gpx:\ttouches the bucket\n*CHI:\tup .\n%spa:\t$NIA:ST:WD\n*INV:\t0 .\n%act:\topens the bucket\n*CHI:\topen .\n%spa:\t$NIA:SI\n*INV:\tin your bucket .\n%spa:\t$NIA:SI\n*CHI:\t0 [=! wa] . [+ trn]\n%spa:\t$NIA:RT:WDE\n%act:\tputs the barn in the bucket\n*INV:\t0 .\n%act:\tcloses the bucket\n*CHI:\t0 .\n%act:\tplays with the bus",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "touches the bucket",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_047",
+      "corpus": "rollins",
+      "chat_text": "*INV:\the's on the water .\n%spa:\t$DJF:ST\n*CHI:\t0 .\n%act:\ttakes the boat\n*CHI:\txxx . [+ trn]\n%spa:\t$DJF:RT:WDE\n%act:\tputs the boat back in the puzzle\n*CHI:\t0 .\n%act:\ttakes out the airplane\n*CHI:\ta airplane .\n%spa:\t$DHA:ST:WD\n%act:\tholds it up\n*INV:\tyep it's an airplane .\n%spa:\t$DJF:AP\n*CHI:\tairplane .\n%spa:\t$DJF:RT:WDE\n*INV:\tthere's one more we haven't played with .\n%spa:\t$DJF:ST\n%gpx:\tpoints to a puzzle piece",
+      "status": "success",
+      "confidence": 0.8,
+      "extracted_fields": {
+        "domain": "play",
+        "behavior": "takes the boat, puts the boat back in the puzzle, takes out the airplane, holds it up",
+        "modality": "multimodal",
+        "prompt_level": "unknown",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020800.cha_seg_043",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tgive her a kiss .\n%spa:\t$NIA:RP\n%act:\tholds the horse up\n*CHI:\t0 .\n%act:\tkisses the horse\n*INV:\t0 . [+ trn]\n%spa:\t$NIA:PR\n%act:\tsmacks\n*CHI:\t0 .\n%act:\ttakes the horse and plays with it\n*INV:\tthere's his tail .\n%spa:\t$DHA:ST\n%gpx:\ttouches it's tail\n*CHI:\tgo .\n%spa:\t$PRO:SS\n%act:\tlooks over at others in the room",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "kisses the horse",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_045",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tthat's the trash .\n%spa:\t$DJF:ST\n%gpx:\ttaps the picture\n*CHI:\ttrash .\n%spa:\t$DJF:RT:WD\n*INV:\ttrash .\n%spa:\t$DJF:RT\n*INV:\there's .\n%spa:\t$DHA:ST\n%gpx:\tpoints to another picture\n*CHI:\ta table .\n%spa:\t$DJF:ST:WD\n*INV:\tyeah tables and .\n%spa:\t$DJF:EC\n%gpx:\tpoints to the rest of the picture\n*CHI:\tand .\n%spa:\t$DJF:RT:WDE\n%act:\trattles the door handle\n*INV:\tthat's outside .\n%spa:\t$DJF:ST",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "behavior",
+        "behavior": "rattles the door handle",
+        "modality": "unknown",
+        "prompt_level": "unknown",
+        "outcome": null
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_013",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tCarson .\n%spa:\t$NMA:CL\n*CHI:\ta bus .\n%spa:\t$DJF:ST:WD\n%act:\tgets the bus\n*INV:\tyou got the bus .\n%spa:\t$NIA:ST\n*INV:\tgood job .\n%spa:\t$NIA:AB\n%act:\tlifts him off the table\n*CHI:\ta (.) a bus .\n%spa:\t$DJF:ST:WD\n%act:\tcarries it to the table\n*INV:\tthat's right .\n%spa:\t$DJF:AP\n*INV:\ta bus .\n%spa:\t$DJF:AP\n*CHI:\ta bus .\n%spa:\t$DJF:RT:WD",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "carries it to the table",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020800.cha_seg_036",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tthat's what a pg makes .\n%spa:\t$NIA:ST\n%act:\tsets the pig down\n*CHI:\t0 .\n%act:\tplays with the pig\n*INV:\t0 .\n%act:\tgets the horse\n*INV:\tmove his legs .\n%spa:\t$NIA:SI\n%act:\tmoves the horse's leg\n*INV:\tmove his legs .\n%spa:\t$NIA:SI\n%act:\tmoves the horse's leg\n*CHI:\t0 .\n%act:\tmoves the horse's leg\n*INV:\tgood .\n%spa:\t$NIA:AP\n*CHI:\t0 .\n%act:\tlooks off",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "play",
+        "behavior": "plays with the pig",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_097",
+      "corpus": "rollins",
+      "chat_text": "*INV:\twhere does it go ?\n%spa:\t$NIA:QN\n*CHI:\tall closed .\n%spa:\t$NIA:ST:WD\n*INV:\tall closed .\n%spa:\t$NIA:RT\n%gpx:\tnods\n*INV:\twhere does it go ?\n%spa:\t$NIA:QN\n*CHI:\tup .\n%spa:\t$NIA:ST\n%act:\tpicks up the barn",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "behavior",
+        "behavior": "picks up the barn",
+        "modality": "unknown",
+        "prompt_level": "unknown",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_030000.cha_seg_016",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tyou just hafta turn it around .\n%spa:\t$NIA:ST\n*CHI:\t0 .\n%act:\tturns it around and tries to put it in\n*CHI:\tbye bird .\n%spa:\t$PRO:MK:WD\n*CHI:\thi .\n%spa:\t$PRO:MK:WD\n%act:\ttakes the puzzle piece out\n*INV:\thi birdie .\n%spa:\t$PRO:MK\n*CHI:\thi birdie .\n%spa:\t$PRO:RT:WDE\n*CHI:\tyyy yyy [>] yyy [= jargon] .\n%spa:\t$YYY:YY:VJ\n*INV:\t&=laugh [<] .",
+      "status": "success",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "turns it around and tries to put it in",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "no_response"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_020500.cha_seg_009",
+      "corpus": "rollins",
+      "chat_text": "*INV:\t0 .\n%act:\tturns water on again\n*CHI:\t0 .\n%act:\tputs hand under water\n*CHI:\t0 .\n%act:\tswooshes water in sink\n*INV:\tturn it off .\n%spa:\t$PRO:SI\n%act:\tturns water off\n*CHI:\txxx . [+ trn]\n%spa:\t$NIA:YY:VNO\n%act:\tputs hand under faucet\n*CHI:\t0 .\n%act:\tplays with hand in sink\n*CHI:\txxx [=! voc] . [+ trn]\n%spa:\t$NIA:YY:VNO\n%act:\treaches for the faucet\n*INV:\tokay .\n%spa:\t$NIA:AD",
+      "status": "success",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": "behavior",
+        "behavior": "plays with hand in sink",
+        "modality": "multimodal",
+        "prompt_level": "full_physical",
+        "outcome": "partial"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_030000.cha_seg_003",
+      "corpus": "rollins",
+      "chat_text": "*CHI:\tO .\n%act:\tdumps the puzzle onto the floor\n*CHI:\t0 .\n%act:\ttries to take out a ball that is painted on\n*INV:\tis it stuck ?\n%spa:\t$DJF:YQ\n*INV:\toh I think that just stays there .\n%spa:\t$DJF:ST\n*INV:\tthat's not a piece .\n%spa:\t$DJF:ST\n%gpx:\trubs the picture\n*CHI:\tyyy a [=? the] [*] airplane .\n%spa:\t$DHA:YY:WD\n%act:\tpicks up a piece\n*INV:\tthat's a little girl .\n%spa:\t$DJF:CT\n%gpx:\tpoints to his piece\n*CHI:\tlittle girl .\n%spa:\t$DJF:RT:WDE",
+      "status": "success",
+      "confidence": 0.6,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "puzzles with pieces, attempts to take out painted balls, plays with an airplane",
+        "modality": "gestural",
+        "prompt_level": null,
+        "outcome": "unknown"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_006",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tthe barn ?\n%spa:\t$NIA:YQ\n*CHI:\tbarn .\n%spa:\t$NIA:RT:WDE\n%act:\tpicks up the barn\n*INV:\tput it away .\n%spa:\t$NIA:RP\n*CHI:\taway .\n%spa:\t$NIA:RT:WDE\n*CHI:\txxx .\n*INV:\tput all the animals in .\n%spa:\t$NIA:RP\n*CHI:\t0 .\n%act:\tputs the animals in the barn\n*CHI:\tyyy .\n%spa:\t$NIA:SI:WD\n%act:\tputs a toy in the barn",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "puts the animals in the barn",
+        "modality": "verbal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_054",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tor a book ?\n%spa:\t$NIA:TQ\n*CHI:\tbook .\n%spa:\t$NIA:AP:WDE\n%act:\topens another door\n*INV:\tnope those are the puzzles .\n%spa:\t$NIA:ST\n*CHI:\t0 .\n%act:\tcloses that door\n*CHI:\t0 .\n%act:\topens another closet door\n*INV:\tthere's the book .\n%spa:\t$DJF:ST\n*INV:\tbooks .\n%spa:\t$DJF:ST\n*CHI:\ta book .\n%spa:\t$DJF:ST:WD\n%act:\tpulls out a book",
+      "status": "success",
+      "confidence": 0.9,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "pulls out a book",
+        "modality": "multimodal",
+        "prompt_level": "verbal",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_057",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tschool bus .\n%spa:\t$NIA:RT\n*CHI:\ton a school bus .\n%spa:\t$NIA:ST:WD\n*INV:\tdo you wanna sing ?\n%spa:\t$NIA:RQ\n*CHI:\tgo .\n%spa:\t$NIA:AD:WD\n*INV:\tready ?\n%spa:\t$NIA:SS\n%act:\tpulls the school bus closer to her\n*CHI:\tgo .\n%spa:\t$PRO:PR:WD\n*INV:\tthe wheels on the bus go .\n%spa:\t$PRO:PR\n%gpx:\tpoints to the wheel\n*CHI:\t0 .\n%act:\ttakes the bus and rolls it",
+      "status": "partial",
+      "confidence": null,
+      "extracted_fields": {
+        "domain": null,
+        "behavior": "go ",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": null
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_074",
+      "corpus": "rollins",
+      "chat_text": "*INV:\tif you're happy and you know it clap your hands .\n%spa:\t$PRO:PR\n%act:\tclaps\n*CHI:\t0 .\n%act:\tclaps\n*INV:\tif you're happy and you know it clap your hands .\n%spa:\t$PRO:PR\n%gpx:\ttouches his shoulder\n*CHI:\t0 .\n%act:\tclaps\n*INV:\t0 .\n%act:\tclaps\n*INV:\tif you're happy and you know it then your .\n%spa:\t$PRO:PR\n%gpx:\ttouches his nose\n*CHI:\txxx .\n*INV:\tface will surely show it .\n%spa:\t$PRO:PR",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "social_communication",
+        "behavior": "claps",
+        "modality": "gestural",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    },
+    {
+      "segment_id": "unknown_rollins_unknown_021100.cha_seg_011",
+      "corpus": "rollins",
+      "chat_text": "*INV:\t0 .\n%act:\tknocks on the door\n*CHI:\t0 .\n%act:\topens the door\n*INV:\t&-uh hi .\n%spa:\t$MRK:MK\n*INV:\there we are .\n%spa:\t$NIA:ST\n%act:\tgoes in the gym\n*CHI:\t0 .\n%act:\truns in the gym\n*INV:\there we are .\n%spa:\t$NIA:ST\n*CHI:\t0 [=! squeals] .\n*INV:\tlet's go down the slide .\n%spa:\t$NIA:RP",
+      "status": "success",
+      "confidence": 1.0,
+      "extracted_fields": {
+        "domain": "play",
+        "behavior": "runs in the gym",
+        "modality": "multimodal",
+        "prompt_level": "independent",
+        "outcome": "correct"
+      }
+    }
+  ]
+}

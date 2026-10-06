@@ -1,0 +1,179 @@
+{
+  "generated_at": "2026-08-28T14:32:14.471522+00:00",
+  "models": [
+    {
+      "model": "llama3.2:latest",
+      "status_counts": {
+        "success": 2,
+        "partial": 0,
+        "abstained": 2,
+        "failed": 1
+      },
+      "mean_duration_ms": 11290.8,
+      "proper_tool_call_rate": 0.8,
+      "results": [
+        {
+          "case_id": "clean_success",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 31401,
+          "used_proper_tool_call": false,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "irrelevant_abstention",
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 8312,
+          "used_proper_tool_call": true,
+          "domain": "adaptive",
+          "behavior": "stayed inside most of the afternoon"
+        },
+        {
+          "case_id": "ambiguous_partial",
+          "status": "abstained",
+          "confidence": 0.0,
+          "duration_ms": 5065,
+          "used_proper_tool_call": true,
+          "domain": "play",
+          "behavior": null
+        },
+        {
+          "case_id": "prompted_verbal",
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 5703,
+          "used_proper_tool_call": true,
+          "domain": "social_communication",
+          "behavior": "pointed at the fridge"
+        },
+        {
+          "case_id": "contradiction",
+          "status": "success",
+          "confidence": 1.0,
+          "duration_ms": 5973,
+          "used_proper_tool_call": true,
+          "domain": "play",
+          "behavior": "requested the toy"
+        }
+      ]
+    },
+    {
+      "model": "deepseek-r1:1.5b",
+      "status_counts": {
+        "success": 0,
+        "partial": 0,
+        "abstained": 0,
+        "failed": 5
+      },
+      "mean_duration_ms": 49254,
+      "proper_tool_call_rate": 0.0,
+      "results": [
+        {
+          "case_id": "clean_success",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 167935,
+          "used_proper_tool_call": false,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "irrelevant_abstention",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 18949,
+          "used_proper_tool_call": false,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "ambiguous_partial",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 19935,
+          "used_proper_tool_call": false,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "prompted_verbal",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 20531,
+          "used_proper_tool_call": false,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "contradiction",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 18920,
+          "used_proper_tool_call": false,
+          "domain": null,
+          "behavior": null
+        }
+      ]
+    },
+    {
+      "model": "gemma3:1b",
+      "status_counts": {
+        "success": 0,
+        "partial": 0,
+        "abstained": 0,
+        "failed": 5
+      },
+      "mean_duration_ms": 122.4,
+      "proper_tool_call_rate": 0.0,
+      "results": [
+        {
+          "case_id": "clean_success",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 597,
+          "used_proper_tool_call": null,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "irrelevant_abstention",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 3,
+          "used_proper_tool_call": null,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "ambiguous_partial",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 3,
+          "used_proper_tool_call": null,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "prompted_verbal",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 5,
+          "used_proper_tool_call": null,
+          "domain": null,
+          "behavior": null
+        },
+        {
+          "case_id": "contradiction",
+          "status": "failed",
+          "confidence": null,
+          "duration_ms": 4,
+          "used_proper_tool_call": null,
+          "domain": null,
+          "behavior": null
+        }
+      ]
+    }
+  ]
+}

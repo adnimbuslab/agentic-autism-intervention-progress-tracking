@@ -1,0 +1,288 @@
+{
+  "model": "qwen2.5:7b",
+  "n_children": 11,
+  "n_llm_reports": 11,
+  "n_fallback_reports": 0,
+  "n_errors": 0,
+  "metadata_note": "Evidence packets built from adjudicated gold records; observation date, setting and contributor role derived from corpus structure, not from real intervention records.",
+  "summary": {
+    "mean_numeric_groundedness": 0.9324,
+    "reports_fully_grounded": 3,
+    "total_numbers_asserted": 122,
+    "total_numbers_ungrounded": 8,
+    "reports_with_invalid_refs": 1,
+    "total_invalid_refs": 2,
+    "reports_passing_validation": 0,
+    "prohibited_content_reports": 0,
+    "numeric_assertions": 122,
+    "numeric_ungrounded": 8,
+    "pooled_ungrounded_rate": 0.0656,
+    "evidence_references": 836,
+    "evidence_references_invalid": 2,
+    "pooled_invalid_reference_rate": 0.0024,
+    "mean_of_per_report_groundedness": 0.9324
+  },
+  "per_child": [
+    {
+      "child_id": "brett",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 4,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 17,
+      "n_numbers_ungrounded": 0,
+      "ungrounded_examples": [],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 1.0,
+      "n_evidence_refs": 35,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "carl",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 5,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 12,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "26"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.9167,
+      "n_evidence_refs": 150,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "jack",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 4,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 9,
+      "n_numbers_ungrounded": 0,
+      "ungrounded_examples": [],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 1.0,
+      "n_evidence_refs": 60,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "josh",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 4,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 10,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "26"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.9,
+      "n_evidence_refs": 60,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "mark",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 4,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 7,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "9"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.8571,
+      "n_evidence_refs": 57,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "mars",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 4,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 5,
+      "n_numbers_ungrounded": 0,
+      "ungrounded_examples": [],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 1.0,
+      "n_evidence_refs": 60,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "rick",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 5,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 13,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "16"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.9231,
+      "n_evidence_refs": 150,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "roger_flusberg",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 6,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 15,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "16"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.9333,
+      "n_evidence_refs": 122,
+      "n_invalid_refs": 2,
+      "invalid_ref_examples": [
+        "contributor_representation: All 30 observations from single contributor role: parent",
+        "setting_representation: All observations from single setting: home"
+      ],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "roger_rollins",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 5,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 14,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "26"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.9286,
+      "n_evidence_refs": 30,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "sid",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 4,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 9,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "26"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.8889,
+      "n_evidence_refs": 60,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    },
+    {
+      "child_id": "stuart",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "used_fallback": false,
+      "n_sections": 5,
+      "validation_passed": false,
+      "validation_errors": [
+        "Abstained KPI 'cross_setting_comparison' not acknowledged in report",
+        "Abstained KPI 'cross_contributor_comparison' not acknowledged in report"
+      ],
+      "n_numbers_asserted": 11,
+      "n_numbers_ungrounded": 1,
+      "ungrounded_examples": [
+        "16"
+      ],
+      "detector_calibration": "fallback reports are grounded by construction; a non-zero ungrounded count on one is a false positive of the rule",
+      "numeric_groundedness": 0.9091,
+      "n_evidence_refs": 52,
+      "n_invalid_refs": 0,
+      "invalid_ref_examples": [],
+      "adequacy_level": "limited",
+      "n_records": 30
+    }
+  ]
+}

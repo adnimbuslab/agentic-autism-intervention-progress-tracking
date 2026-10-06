@@ -59,6 +59,7 @@ class TestProviderAbstention:
         result = await provider.extract(_make_request())
         assert result.observations[0].abstention_reason == "Observation text lacks behavioral detail"
 
+    # @spec EXTRACT-013
     async def test_low_confidence_triggers_abstention_status(self) -> None:
         provider = TemporaryLLMExtractionProvider(api_key="test")
         provider._client = Mock()
@@ -92,6 +93,7 @@ class TestProviderAbstention:
         assert result.status == ExtractionStatus.ABSTAINED
         assert len(result.observations) == 1
 
+    # @spec EXTRACT-017
     async def test_api_error_returns_failed(self) -> None:
         provider = TemporaryLLMExtractionProvider(api_key="test")
         provider._client = Mock()
@@ -108,6 +110,7 @@ class TestProviderAbstention:
         assert result.status == ExtractionStatus.FAILED
         assert len(result.observations) == 0
 
+    # @spec EXTRACT-018
     async def test_no_tool_use_block_returns_failed(self) -> None:
         response = Mock()
         text_block = Mock()

@@ -1,0 +1,530 @@
+{
+  "artefacts": [
+    {
+      "path": "tests/eval/extraction/results/annotation_batch.json",
+      "description": "Frozen annotation batch: 330 segments, 11 children, 3 generators",
+      "produced_by": "build_annotation_batch",
+      "pinned": true,
+      "present": true,
+      "bytes": 528458,
+      "sha256": "efd165f1c0dee0cbd2d37a5def91bcfee0b71d3ed8ce26f34c2f117abfceac36"
+    },
+    {
+      "path": "tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_a_updated.csv",
+      "description": "Annotator A, round 1, returned sheet (primary data)",
+      "produced_by": "annotator",
+      "pinned": true,
+      "present": true,
+      "bytes": 156441,
+      "sha256": "2618ccacb715a1e471685435cf07eda1061c75436d4fea2921fb42579d8a4a93"
+    },
+    {
+      "path": "tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_b_updated.csv",
+      "description": "Annotator B, round 1, returned sheet (primary data)",
+      "produced_by": "annotator",
+      "pinned": true,
+      "present": true,
+      "bytes": 152567,
+      "sha256": "d19b3c5e114f0ac30f1b4e6f697c77bf7742474c24f3a231e5e6cca863339ba3"
+    },
+    {
+      "path": "tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_a_round2_updated.csv",
+      "description": "Annotator A, round 2, returned sheet (primary data)",
+      "produced_by": "annotator",
+      "pinned": true,
+      "present": true,
+      "bytes": 91877,
+      "sha256": "803dc5b4305562523280f6d2ca86cc6d619f5ed218a2bd29436c0f936cc998dc"
+    },
+    {
+      "path": "tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_b_round2_updated.csv",
+      "description": "Annotator B, round 2, returned sheet (primary data)",
+      "produced_by": "annotator",
+      "pinned": true,
+      "present": true,
+      "bytes": 93318,
+      "sha256": "4a6ff5e43d39d1e41e5ef7b2bfba52829270950cebc1bf4f60b3ab31cf243de7"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_annotator_a_round1.json",
+      "description": "Annotator A gold values, round 1, frozen before the round-2 merge",
+      "produced_by": "import_gold_sheet + reissue_gold_sheet freeze",
+      "pinned": true,
+      "present": true,
+      "bytes": 171837,
+      "sha256": "7950fcec0c87908e89b5b8fce09bfbe579ec07d2ccba9505b70c55de7bf581df"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_annotator_b_round1.json",
+      "description": "Annotator B gold values, round 1, frozen before the round-2 merge",
+      "produced_by": "import_gold_sheet + reissue_gold_sheet freeze",
+      "pinned": true,
+      "present": true,
+      "bytes": 168365,
+      "sha256": "7b556f910ef86e6eb946c88c25d803e77e0541834a8bf76d9176f9bb8943500f"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_annotator_a.json",
+      "description": "Annotator A gold values, merged (152 round-1 + 178 round-2)",
+      "produced_by": "import_gold_sheet --merge",
+      "pinned": true,
+      "present": true,
+      "bytes": 174992,
+      "sha256": "778e93971ae46bc2bfa395d16dae2d5333d56e4785e69a2d2661f51fd681efdb"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_annotator_b.json",
+      "description": "Annotator B gold values, merged (152 round-1 + 178 round-2)",
+      "produced_by": "import_gold_sheet --merge",
+      "pinned": true,
+      "present": true,
+      "bytes": 174986,
+      "sha256": "e0abd2ff4fe1d130ebc1ecb40a232e1346f1c3f5c0873766d3562d249bd82fc8"
+    },
+    {
+      "path": "tests/eval/extraction/results/reissue_round2_selection.json",
+      "description": "Round-2 selection: which conflicts sit on a codebook boundary, and why",
+      "produced_by": "reissue_gold_sheet",
+      "pinned": true,
+      "present": true,
+      "bytes": 74207,
+      "sha256": "caae573037e4ba6dfcbb837e2857ac4ce0f3ac3e85c7e2c89dbdacc7819249b6"
+    },
+    {
+      "path": "tests/eval/extraction/results/agreement_annotator_a_round1_annotator_b_round1.json",
+      "description": "Round-1 agreement report (kappa per field)",
+      "produced_by": "agreement_report",
+      "pinned": true,
+      "present": true,
+      "bytes": 17638,
+      "sha256": "e97c1918724bbb14d1263309c65da3df75efcbe42fcf1b024cc92b162ab28248"
+    },
+    {
+      "path": "tests/eval/extraction/results/agreement_annotator_a_annotator_b.json",
+      "description": "Post-codebook agreement report (kappa per field)",
+      "produced_by": "agreement_report",
+      "pinned": true,
+      "present": true,
+      "bytes": 17547,
+      "sha256": "cc51a86f6e16f67aa6c6504617b6e38c91489adbe5e4dc459d3d77a2d33e5659"
+    },
+    {
+      "path": "tests/eval/extraction/results/reliability_round1.json",
+      "description": "Round-1 reliability: kappa, kappa_max, both intervals (Table R1)",
+      "produced_by": "reliability_stats --round1",
+      "pinned": true,
+      "present": true,
+      "bytes": 3009,
+      "sha256": "c04c52d3deb948ee8e6e723461f7a63c81214cb8547c51f5a53c9bb5bdd1b188"
+    },
+    {
+      "path": "tests/eval/extraction/results/reliability_current.json",
+      "description": "Post-codebook reliability over the merged gold (Table R5)",
+      "produced_by": "reliability_stats",
+      "pinned": true,
+      "present": true,
+      "bytes": 2999,
+      "sha256": "8610afdeb79c471b14aa3fea2a89e8728be0145e6646437ca5d1b1d37273c371"
+    },
+    {
+      "path": "tests/eval/extraction/results/round_comparison.json",
+      "description": "Pre-registered before/after comparison, treated vs control (Table R4)",
+      "produced_by": "round_comparison",
+      "pinned": true,
+      "present": true,
+      "bytes": 8335,
+      "sha256": "2500dedd06b9400e6d295e46a584d3126c97f520303cd842e00df9cd7adedc60"
+    },
+    {
+      "path": "tests/eval/extraction/results/annotation_sheets/adjudication_sheet_updated.csv",
+      "description": "Returned adjudication sheet: 503 decisions with rationales (primary data)",
+      "produced_by": "adjudicator (consensus of both annotators)",
+      "pinned": true,
+      "present": true,
+      "bytes": 272213,
+      "sha256": "0e2a38568659b73a4783cfe0011555aeba3a277195af2052ad41e4e2bd5085e9"
+    },
+    {
+      "path": "tests/eval/extraction/results/adjudications.json",
+      "description": "Imported adjudication decisions",
+      "produced_by": "import_adjudication_sheet",
+      "pinned": true,
+      "present": true,
+      "bytes": 127198,
+      "sha256": "8f4a0790e921029036885fc97e99f97f8bcc4a2697a17fee7a1189da2ce19de3"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_labels.json",
+      "description": "Adjudicated gold standard: 330 of 330 segments (Table 5)",
+      "produced_by": "adjudicate --decisions",
+      "pinned": true,
+      "present": true,
+      "bytes": 121469,
+      "sha256": "32327d787648dac90c71ebf6af8f566a211f0507ab9aae4f499fb21cec32fc38"
+    },
+    {
+      "path": "tests/eval/extraction/results/scored_against_gold.json",
+      "description": "Per-generator judgements against gold, behavior excluded (Tables 6a-8)",
+      "produced_by": "score_against_gold --behavior-match excluded",
+      "pinned": true,
+      "present": true,
+      "bytes": 215465,
+      "sha256": "593674e34bcb9470ee4532e413af4ef507d405ac13e1872e61b04fe4d4347094"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_outcomes.json",
+      "description": "MARS decisions over all 330 segments, 5-model judge roster",
+      "produced_by": "run_mars",
+      "pinned": true,
+      "present": true,
+      "bytes": 138754,
+      "sha256": "5310fdff92588266f8afc73ab46bbd9306aacf0cd7d1025b0dc10e8b0523595d"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_run_summary.json",
+      "description": "MARS run configuration and per-judge discard rates",
+      "produced_by": "run_mars",
+      "pinned": true,
+      "present": true,
+      "bytes": 1374,
+      "sha256": "b9b66b921a6984ecab296ef8b4d99be9103d8b1db0d7a9721a4414894d5cc4ec"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_evaluation.json",
+      "description": "MARS accuracy, coverage, abstention profile, ceiling (Tables 9-10)",
+      "produced_by": "mars_evaluation",
+      "pinned": true,
+      "present": true,
+      "bytes": 1190,
+      "sha256": "0ca48149ada6eb786f8dd7f322709ca12aaac46a666ff94320bcf670a2a8b77a"
+    },
+    {
+      "path": "tests/eval/reporting/results/reporting_groundedness.json",
+      "description": "Reporting-layer groundedness run; records the 11/11 fallback finding",
+      "produced_by": "tests.eval.reporting.groundedness",
+      "pinned": true,
+      "present": true,
+      "bytes": 10167,
+      "sha256": "e4e054275fb755ace04ee95719af57b53eba22f75707a1f7085c6f58232df507"
+    },
+    {
+      "path": "tests/eval/extraction/results/annotation_batch_augmented.json",
+      "description": "Frozen batch plus a generator added after annotation (qwen3:14b)",
+      "produced_by": "add_generator",
+      "pinned": true,
+      "present": true,
+      "bytes": 686753,
+      "sha256": "de0e6f66be4eb17ed5e8a01b53b7d72b1d26ac885ea86e76caf2179294d1e7db"
+    },
+    {
+      "path": "tests/eval/extraction/results/scored_against_gold_augmented.json",
+      "description": "Four-generator judgements against the same gold",
+      "produced_by": "score_against_gold --batch annotation_batch_augmented.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 279917,
+      "sha256": "19a60625f34824aa451598044f0644f439df918ded06c55d928a1582b96ab8bf"
+    },
+    {
+      "path": "tests/eval/extraction/results/holdout_set.json",
+      "description": "Model-independent held-out set: 132 segments, frozen before generation",
+      "produced_by": "build_holdout_set",
+      "pinned": true,
+      "present": true,
+      "bytes": 59697,
+      "sha256": "51960c8cc482879ae0d4e2d5cc9b88b131ca0701c72791cff4d0ade0a257d968"
+    },
+    {
+      "path": "tests/eval/extraction/results/holdout_batch.json",
+      "description": "Four generators over the held-out set; membership frozen before any ran",
+      "produced_by": "add_generator --out holdout_batch.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 277471,
+      "sha256": "2f4b41ed742f6e4eefc35862c5b0d99a8595e625732c29559efff4c46041a8bc"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_holdout_annotator_a.json",
+      "description": "Annotator A values over the held-out set, codebook from the first segment",
+      "produced_by": "import_gold_sheet --segments holdout_set.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 73723,
+      "sha256": "aec54509e3a23214c555ab0d9f8b841017d0ed3702d1cbc415bc89ccc6d15e7a"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_holdout_annotator_b.json",
+      "description": "Annotator B values over the held-out set, codebook from the first segment",
+      "produced_by": "import_gold_sheet --segments holdout_set.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 71153,
+      "sha256": "b2ff833373565814d940fb961d2e691b416a5596102f1556a59dc2e7a96c8d6a"
+    },
+    {
+      "path": "tests/eval/extraction/results/reliability_holdout.json",
+      "description": "Held-out first-pass reliability under the final protocol",
+      "produced_by": "reliability_stats holdout_annotator_a holdout_annotator_b",
+      "pinned": true,
+      "present": true,
+      "bytes": 3019,
+      "sha256": "a406bde1f02a64c6d68b27c23c3fd8258ebc841d2d6ef3c6050a9e26a9903597"
+    },
+    {
+      "path": "tests/eval/extraction/results/annotation_sheets/holdout_adjudication_sheet_completed.csv",
+      "description": "Returned held-out adjudication sheet: 133 conflicted fields, all decided",
+      "produced_by": "export_adjudication_sheet, completed by both annotators jointly",
+      "pinned": true,
+      "present": true,
+      "bytes": 61251,
+      "sha256": "e48f22165d102df8aa2593853cc3a18b3797d01224a8b791172e8413a269271d"
+    },
+    {
+      "path": "tests/eval/extraction/results/holdout_adjudications.json",
+      "description": "Held-out adjudication decisions imported from the returned sheet",
+      "produced_by": "import_adjudication_sheet --path holdout_adjudication_sheet_completed.csv",
+      "pinned": true,
+      "present": true,
+      "bytes": 21776,
+      "sha256": "64acd954c72ebe8f16195af17cdca6a1adeafb0d30ddd4a2a57f989d1ba32462"
+    },
+    {
+      "path": "tests/eval/extraction/results/gold_holdout_labels.json",
+      "description": "Held-out adjudicated reference standard: 132 of 132 segments, none lost",
+      "produced_by": "adjudicate holdout_annotator_a holdout_annotator_b --out gold_holdout_labels.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 48329,
+      "sha256": "acd6b4f36ce3362fe7c604ef2d7cf948da4fa6592e4a1695c9cbbf6a35c3dd87"
+    },
+    {
+      "path": "tests/eval/extraction/results/scored_holdout.json",
+      "description": "Four-generator judgements against held-out gold, behavior excluded",
+      "produced_by": "score_against_gold --gold gold_holdout_labels.json --batch holdout_batch.json",
+      "pinned": true,
+      "present": true,
+      "bytes": 113367,
+      "sha256": "f85d63bdd959cb688fefade575b8655b337b497e753535a5f5f2a42cf17293db"
+    },
+    {
+      "path": "tests/eval/extraction/results/holdout_metrics.json",
+      "description": "Batch vs held-out accuracy and unsupported assertion, same scoring policy",
+      "produced_by": "holdout_metrics",
+      "pinned": true,
+      "present": true,
+      "bytes": 14861,
+      "sha256": "17fb997ba28907b39e24b117da385b5be2f7ff79e7c24b8122a7e352511b2eb1"
+    },
+    {
+      "path": "tests/eval/extraction/results/paper_metrics.json",
+      "description": "Consolidated paper-ready metrics, derived from the artefacts above",
+      "produced_by": "paper_metrics",
+      "pinned": true,
+      "present": true,
+      "bytes": 17243,
+      "sha256": "c4886ee99c6e90b61131aaa8885ee3cc70effa46839cb2a7157c9fc92963e3d0"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_selection_analysis.json",
+      "description": "Per-field selection quality vs both baselines (Tables 11-12)",
+      "produced_by": "mars_selection_analysis",
+      "pinned": true,
+      "present": true,
+      "bytes": 4376,
+      "sha256": "4a7cddcebde27c792eeb6fe1e96ce654e75f9c312d923edb7f16d3467c44e7b8"
+    },
+    {
+      "path": "tests/eval/extraction/results/mars_branch_replay.json",
+      "description": "Candidate-stage branch distribution and judge-roster comparison",
+      "produced_by": "mars_branch_replay",
+      "pinned": true,
+      "present": true,
+      "bytes": 3685,
+      "sha256": "33466b195d7413d68788354e57ef1777e992ace42fe42f825483b202cd173dc8"
+    },
+    {
+      "path": "docs/annotation_codebook.md",
+      "description": "The three rules, with decision tests and worked examples",
+      "produced_by": "written",
+      "pinned": false,
+      "present": true,
+      "bytes": 5267
+    },
+    {
+      "path": "docs/paper/results_reliability.md",
+      "description": "Manuscript section: reliability methods, results, limitations",
+      "produced_by": "written",
+      "pinned": false,
+      "present": true,
+      "bytes": 23251
+    },
+    {
+      "path": "docs/paper/results_extraction.md",
+      "description": "Manuscript section: extraction/MARS methods and gold-standard results",
+      "produced_by": "written",
+      "pinned": false,
+      "present": true,
+      "bytes": 34261
+    },
+    {
+      "path": "docs/paper/reliability_mathematics.md",
+      "description": "Derivations and worked calculations on the study's own data",
+      "produced_by": "written",
+      "pinned": false,
+      "present": true,
+      "bytes": 11874
+    },
+    {
+      "path": "docs/paper/figures/fig10_reliability_round1.png",
+      "description": "Figure 10 - round-1 kappa against the marginal ceiling",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 67287
+    },
+    {
+      "path": "docs/paper/figures/fig11_confusion_round1.png",
+      "description": "Figure 11 - annotator confusion, boundary cells outlined",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 113174
+    },
+    {
+      "path": "docs/paper/figures/fig12_conflict_decomposition.png",
+      "description": "Figure 12 - conflicts by cause",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 47120
+    },
+    {
+      "path": "docs/paper/figures/fig13_round_comparison.png",
+      "description": "Figure 13 - reliability before and after, with the control arm",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 62739
+    },
+    {
+      "path": "docs/paper/figures/fig14_protocol.png",
+      "description": "Figure 14 - two-round protocol with realised counts",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 118616
+    },
+    {
+      "path": "docs/paper/figures/fig15_codebook_rules.png",
+      "description": "Figure 15 - the three rules as decision tests",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 145012
+    },
+    {
+      "path": "docs/paper/figures/fig16_field_accuracy.png",
+      "description": "Figure 16 - agreement with the reference standard, split by whether the standard records a value",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 104360
+    },
+    {
+      "path": "docs/paper/figures/fig17_unsupported.png",
+      "description": "Figure 17 - values asserted where the transcript supports none",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 50268
+    },
+    {
+      "path": "docs/paper/figures/fig18_record_ceiling.png",
+      "description": "Figure 18 - whole-record accuracy and the selection ceiling",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 41987
+    },
+    {
+      "path": "docs/paper/figures/fig19_behavior_overlap.png",
+      "description": "Figure 19 - free-text behavior against the human reference band",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 63008
+    },
+    {
+      "path": "docs/paper/figures/fig20_mars_outcomes.png",
+      "description": "Figure 20 - MARS outcomes and comparison against the best generator",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 69334
+    },
+    {
+      "path": "docs/paper/figures/fig21_selection.png",
+      "description": "Figure 21 - selection quality against both baselines",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 90179
+    },
+    {
+      "path": "docs/paper/figures/fig22_extended_roster.png",
+      "description": "Figure 22 - four-generator agreement and the abstention trade-off",
+      "produced_by": "make_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 98421
+    },
+    {
+      "path": "docs/paper/figures/response/r2_holdout_selection_effect.png",
+      "description": "Response figure - batch vs held-out agreement and unsupported assertion",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 93962
+    },
+    {
+      "path": "docs/paper/figures/response/r3_reporting_governance.png",
+      "description": "Response figure - what the reporting governance check found",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 80340
+    },
+    {
+      "path": "docs/paper/figures/response/r4_field_scope.png",
+      "description": "Response figure - evaluation scope against analytics scope",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 120344
+    },
+    {
+      "path": "docs/paper/figures/response/r5_contribution_hierarchy.png",
+      "description": "Response figure - the contribution hierarchy",
+      "produced_by": "make_response_figures",
+      "pinned": false,
+      "present": true,
+      "bytes": 83756
+    },
+    {
+      "path": "docs/paper/Reviewer_Response.docx",
+      "description": "Point-by-point response to the strict-reviewer assessment, all 12 issues",
+      "produced_by": "make_reviewer_response",
+      "pinned": false,
+      "present": true,
+      "bytes": 599495
+    },
+    {
+      "path": "docs/paper/Manuscript_Working_Draft.docx",
+      "description": "Working-draft manuscript, assembled from the artefacts above",
+      "produced_by": "make_manuscript",
+      "pinned": false,
+      "present": true,
+      "bytes": 1800739
+    }
+  ]
+}

@@ -1,0 +1,2302 @@
+{
+  "decisions": {
+    "brett_flusberg_brett_050800.cha_seg_020": {
+      "behavior": "Repeated general words like 'animal' until the adult modeled 'horse', then said 'horse'."
+    },
+    "brett_flusberg_brett_050800.cha_seg_025": {
+      "domain": "language",
+      "behavior": "Talked about looking at and putting on the movie."
+    },
+    "brett_flusberg_brett_050800.cha_seg_040": {
+      "behavior": "Asked for the gate to be put in the placemats and repeated the request."
+    },
+    "brett_flusberg_brett_050800.cha_seg_045": {
+      "behavior": "Repeated 'I want the cow' and then stated what he wanted and did not want."
+    },
+    "brett_flusberg_brett_050800.cha_seg_064": {
+      "prompt_level": "verbal",
+      "behavior": "Answered yes/no questions about whether it was cold and what color it was."
+    },
+    "brett_flusberg_brett_050800.cha_seg_066": {
+      "behavior": "First said orange, then answered that the cow was resting."
+    },
+    "brett_flusberg_brett_051002.cha_seg_014": {
+      "outcome": "incorrect",
+      "behavior": "Answered broccoli when asked to name lettuce."
+    },
+    "brett_flusberg_brett_051002.cha_seg_016": {
+      "behavior": "Said you are putting lemon and then gave incomplete answers about Jenny and the stool."
+    },
+    "brett_flusberg_brett_051002.cha_seg_018": {
+      "behavior": "Answered questions about where Jenny and Shannon were."
+    },
+    "brett_flusberg_brett_051002.cha_seg_033": {
+      "domain": "cognitive",
+      "behavior": "Said a knife can cut someone badly and repeated that answer when asked."
+    },
+    "brett_flusberg_brett_051002.cha_seg_034": {
+      "domain": "language",
+      "outcome": null,
+      "behavior": "Refused moving away, talked about the present, and said 'open it'."
+    },
+    "brett_flusberg_brett_051002.cha_seg_035": {
+      "behavior": "Tried to answer whose cars and trucks they were, first saying yours and then Shannon's."
+    },
+    "brett_flusberg_brett_051002.cha_seg_040": {
+      "domain": "cognitive",
+      "behavior": "Named the truck and car colors as orange, yellow and blue."
+    },
+    "brett_flusberg_brett_051002.cha_seg_045": {
+      "modality": "unknown",
+      "behavior": "Said 'woof' after the adult began asking about a noise."
+    },
+    "brett_flusberg_brett_051002.cha_seg_046": {
+      "behavior": "Answered 'yes' when asked if he wanted to do the activity."
+    },
+    "brett_flusberg_brett_051002.cha_seg_055": {
+      "behavior": "Said he wanted to go night-night and asked to take him to bed."
+    },
+    "brett_flusberg_brett_051002.cha_seg_063": {
+      "behavior": "Asked about going to a father's house and then protested that he did not want to go."
+    },
+    "brett_flusberg_brett_060207.cha_seg_005": {
+      "behavior": "Commented on having two green spaces and counted 'one two'."
+    },
+    "brett_flusberg_brett_060207.cha_seg_006": {
+      "behavior": "Explained that he could have two raisins because he played Candy Land and passed two."
+    },
+    "brett_flusberg_brett_060207.cha_seg_011": {
+      "outcome": "partial",
+      "behavior": "Described the girl's shirt and guitar and said she was inside."
+    },
+    "brett_flusberg_brett_060406.cha_seg_001": {
+      "behavior": "Said he wanted to make his own and answered yes about playing later."
+    },
+    "brett_flusberg_brett_060622.cha_seg_009": {
+      "behavior": "Asked can I play after being told there would be no work-box activity."
+    },
+    "brett_flusberg_brett_060622.cha_seg_015": {
+      "behavior": "Answered 'letters' about school and then said he did not want to talk."
+    },
+    "brett_flusberg_brett_060819.cha_seg_007": {
+      "outcome": "approximation",
+      "behavior": "Tried several words related to the material and attempted to sound out a word after prompting."
+    },
+    "brett_flusberg_brett_060819.cha_seg_014": {
+      "behavior": "Said 'yeah' when asked if he wanted the red clay made into a ball."
+    },
+    "brett_flusberg_brett_060819.cha_seg_017": {
+      "behavior": "Explained where to throw the bowling ball and what happens if it goes in the gutter."
+    },
+    "brett_flusberg_brett_060819.cha_seg_020": {
+      "behavior": "Talked about activities and answered that they ate dinner."
+    },
+    "brett_flusberg_brett_060819.cha_seg_022": {
+      "behavior": "Recalled the song and described what happened to the meatball."
+    },
+    "brett_flusberg_brett_060819.cha_seg_024": {
+      "behavior": "Answered that it was a big tree and that meatballs were on it."
+    },
+    "brett_flusberg_brett_060819.cha_seg_025": {
+      "behavior": "Explained why the meatball fell and later answered what he did in circle time."
+    },
+    "carl_rollins_carl_020800.cha_seg_006": {
+      "prompt_level": "verbal",
+      "outcome": "partial",
+      "behavior": "Closed the barn doors and rearranged the toys after repeated directions."
+    },
+    "carl_rollins_carl_020800.cha_seg_012": {
+      "outcome": "partial",
+      "behavior": "Gathered the toys to put them in the bucket after the instruction was rephrased."
+    },
+    "carl_rollins_carl_020800.cha_seg_018": {
+      "outcome": "correct",
+      "behavior": "Threw the used towels in the trash and then ran when it was time to go."
+    },
+    "carl_rollins_carl_020800.cha_seg_020": {
+      "domain": "adaptive",
+      "outcome": "incorrect",
+      "behavior": "Left the marker activity instead of helping put the markers away."
+    },
+    "carl_rollins_carl_020800.cha_seg_035": {
+      "behavior": "Said hi and waved after the adult repeatedly greeted and waved."
+    },
+    "carl_rollins_carl_020800.cha_seg_040": {
+      "behavior": "Pushed the tractor back inside and closed the barn door during play."
+    },
+    "carl_rollins_carl_020800.cha_seg_046": {
+      "domain": "cognitive",
+      "behavior": "Did not search for or identify the pig when asked where it was."
+    },
+    "carl_rollins_carl_021100.cha_seg_023": {
+      "prompt_level": "model",
+      "outcome": "correct",
+      "behavior": "Repeated 'on hand' after the adult said and demonstrated the phrase."
+    },
+    "carl_rollins_carl_021100.cha_seg_029": {
+      "behavior": "Put the item in and then said done."
+    },
+    "carl_rollins_carl_021100.cha_seg_043": {
+      "behavior": "Named the house and put the house piece into the card."
+    },
+    "carl_rollins_carl_021100.cha_seg_050": {
+      "behavior": "Took out the airplane, held it up and labeled it as airplane."
+    },
+    "carl_rollins_carl_021100.cha_seg_055": {
+      "domain": "play",
+      "behavior": "Named animals while putting the toys into the barn."
+    },
+    "carl_rollins_carl_021100.cha_seg_064": {
+      "behavior": "Pretended to feed the horse and laughed during the pretend eating game."
+    },
+    "carl_rollins_carl_021100.cha_seg_070": {
+      "behavior": "Kissed the toy dog, made it eat and laughed during pretend play."
+    },
+    "carl_rollins_carl_021100.cha_seg_083": {
+      "domain": "play",
+      "prompt_level": "independent",
+      "outcome": null,
+      "behavior": "Said 'airplane' and made an airplane sound during the play exchange."
+    },
+    "carl_rollins_carl_021100.cha_seg_085": {
+      "behavior": "Named the school bus and airplane, made vroom sounds and flew the airplane."
+    },
+    "carl_rollins_carl_021100.cha_seg_086": {
+      "domain": "play",
+      "outcome": "partial",
+      "behavior": "Ran back after the cleanup instruction but did not visibly put the puzzle away."
+    },
+    "carl_rollins_carl_021100.cha_seg_088": {
+      "domain": "behavior",
+      "behavior": "Stomped, turned away, and vocalized around the book interaction."
+    },
+    "carl_rollins_carl_021100.cha_seg_090": {
+      "prompt_level": "partial_physical",
+      "outcome": "partial",
+      "behavior": "Opened and closed the toy door after the adult said 'open.'"
+    },
+    "carl_rollins_carl_021100.cha_seg_101": {
+      "prompt_level": "gestural",
+      "behavior": "Found the chicken and then labeled it 'a chicken'."
+    },
+    "carl_rollins_carl_021100.cha_seg_108": {
+      "behavior": "Named a teddy bear and a house after the adult pointed to the cards."
+    },
+    "carl_rollins_carl_030000.cha_seg_002": {
+      "behavior": "Dumped out the puzzle after being asked to do so."
+    },
+    "carl_rollins_carl_030000.cha_seg_008": {
+      "behavior": "Said 'ice cream' and the adult repeated the words."
+    },
+    "carl_rollins_carl_030000.cha_seg_010": {
+      "outcome": "correct",
+      "behavior": "Worked on fitting puzzle pieces and was positively acknowledged by the adult."
+    },
+    "carl_rollins_carl_030000.cha_seg_016": {
+      "behavior": "Corrected the upside-down wheel and placed it properly after verbal feedback."
+    },
+    "carl_rollins_carl_030000.cha_seg_021": {
+      "behavior": "Said 'stop' while handling the stop-sign piece and was told 'that's right'."
+    },
+    "carl_rollins_carl_030000.cha_seg_025": {
+      "modality": "multimodal",
+      "prompt_level": "independent",
+      "outcome": null,
+      "behavior": "Repeated words such as 'thank you', 'airplane', and 'up here' during the exchange."
+    },
+    "carl_rollins_carl_030700.cha_seg_003": {
+      "outcome": null,
+      "behavior": "Said he broke the baby toy, then put the shoes back on and continued talking about the toy."
+    },
+    "carl_rollins_carl_030700.cha_seg_005": {
+      "domain": "play",
+      "behavior": "Named body parts and the daddy potato, answered yes, and continued assembling the toy."
+    },
+    "carl_rollins_carl_030700.cha_seg_021": {
+      "behavior": "Turned off the water when asked and commented that the bubbles were gone."
+    },
+    "jack_flusberg_jack_060900.cha_seg_006": {
+      "behavior": "Produced the phrase 'the right colors' across several short turns."
+    },
+    "jack_flusberg_jack_060900.cha_seg_008": {
+      "behavior": "Read or said the words shown, including greedy, color and hearts."
+    },
+    "jack_flusberg_jack_060900.cha_seg_010": {
+      "behavior": "Correctly named the picture as a dog but then gave unclear responses to the reading question."
+    },
+    "jack_flusberg_jack_060900.cha_seg_019": {
+      "behavior": "Identified the letter I, attempted the phrase with Indian and then repeated Indian."
+    },
+    "jack_flusberg_jack_060900.cha_seg_025": {
+      "domain": "cognitive",
+      "behavior": "Named colors including blue, orange and pink, with correction and modeling from the adult."
+    },
+    "jack_flusberg_jack_060900.cha_seg_027": {
+      "behavior": "Said 'bye' and 'byebye' during the transition to another room."
+    },
+    "jack_flusberg_jack_060900.cha_seg_037": {
+      "behavior": "Answered an alphabet-work question with NFL Today and then said write the NFL Today."
+    },
+    "jack_flusberg_jack_060900.cha_seg_042": {
+      "behavior": "Answered 'yes' to the plan to buy a Christmas tree."
+    },
+    "jack_flusberg_jack_060900.cha_seg_043": {
+      "prompt_level": "verbal",
+      "outcome": "incorrect",
+      "behavior": "Refused the drawing activity by saying he hated it and then saying no."
+    },
+    "jack_flusberg_jack_060900.cha_seg_046": {
+      "domain": "cognitive",
+      "behavior": "Said the cars go on the road, described the direction, and answered yes about drawing the school."
+    },
+    "jack_flusberg_jack_060900.cha_seg_064": {
+      "behavior": "First said guy, then guys and dinosaur after repeated naming questions."
+    },
+    "jack_flusberg_jack_060900.cha_seg_065": {
+      "behavior": "Asked the adult if the dinosaurs were hers."
+    },
+    "jack_flusberg_jack_060900.cha_seg_074": {
+      "behavior": "Said he would get the chipmunks and named Alvin, Simon and Theodore."
+    },
+    "jack_flusberg_jack_060900.cha_seg_076": {
+      "behavior": "Answered yes about school and number work but did not give the number worked on."
+    },
+    "jack_flusberg_jack_060900.cha_seg_077": {
+      "behavior": "Named Christmas gifts he wanted, including chipmunks and a Nerf football."
+    },
+    "jack_flusberg_jack_061028.cha_seg_018": {
+      "behavior": "Answered 'seven and eleven' when asked if the object was a radio."
+    },
+    "jack_flusberg_jack_061028.cha_seg_019": {
+      "behavior": "Talked about a television phrase and Freddie Rogers during the conversation."
+    },
+    "jack_flusberg_jack_061028.cha_seg_026": {
+      "behavior": "Made repeated comments about Ford and Toyota while mother offered toys."
+    },
+    "jack_flusberg_jack_061028.cha_seg_027": {
+      "behavior": "Corrected or commented that the toy was a Ford during play."
+    },
+    "jack_flusberg_jack_070106.cha_seg_004": {
+      "behavior": "Repeated Nanny Bartlane instead of responding to the tennis-ball question."
+    },
+    "jack_flusberg_jack_070106.cha_seg_005": {
+      "behavior": "First called the item a dolly, then repeated 'gingerbread' and later labeled a giraffe."
+    },
+    "jack_flusberg_jack_070106.cha_seg_009": {
+      "behavior": "Repeated vest and correctly labeled the ball."
+    },
+    "jack_flusberg_jack_070106.cha_seg_013": {
+      "behavior": "Talked about the toys coming back and agreed to visit the other house."
+    },
+    "jack_flusberg_jack_070106.cha_seg_016": {
+      "behavior": "Said no to one play option and then said he wanted to lie down."
+    },
+    "jack_flusberg_jack_070106.cha_seg_017": {
+      "behavior": "Declined the play offers and said he was staying to nap with baby Joy."
+    },
+    "jack_flusberg_jack_070315.cha_seg_002": {
+      "outcome": "approximation",
+      "behavior": "Read the sentence inside was a toy kangaroo."
+    },
+    "jack_flusberg_jack_070726.cha_seg_002": {
+      "outcome": "unknown",
+      "behavior": "Answered 'okay' to a yes/no question about whether someone played with Bassillio."
+    },
+    "jack_flusberg_jack_071001.cha_seg_009": {
+      "domain": "play",
+      "prompt_level": "verbal",
+      "outcome": "no_response",
+      "behavior": "Did not roll the play-doh after repeated instructions and asked for play-doh during the task."
+    },
+    "jack_flusberg_jack_071001.cha_seg_011": {
+      "behavior": "Agreed to make pretend pizza and then said he wanted Amazing Spiderman on the play-doh."
+    },
+    "jack_flusberg_jack_071001.cha_seg_022": {
+      "domain": "social_communication",
+      "behavior": "Repeated 'stop' to protest the adult joining the writing activity."
+    },
+    "josh_rollins_josh_020500.cha_seg_013": {
+      "domain": "adaptive",
+      "modality": "gestural",
+      "outcome": null,
+      "behavior": "Opened the door after the instruction and then smiled and held the clinician's hand."
+    },
+    "josh_rollins_josh_020500.cha_seg_016": {
+      "outcome": "partial",
+      "behavior": "Went to the door after being told to open it, but did not open it in the visible segment."
+    },
+    "josh_rollins_josh_020500.cha_seg_018": {
+      "domain": "sensory",
+      "behavior": "Pulled, pushed, and held the poles while vocalizing during exploration."
+    },
+    "josh_rollins_josh_020500.cha_seg_019": {
+      "domain": "sensory",
+      "outcome": null,
+      "behavior": "Turned the water off after being instructed to do so."
+    },
+    "josh_rollins_josh_020500.cha_seg_024": {
+      "behavior": "Turned the pages and then closed the book."
+    },
+    "josh_rollins_josh_020500.cha_seg_025": {
+      "domain": "motor",
+      "modality": null,
+      "prompt_level": "independent",
+      "behavior": "Hung from the railing while the adult bounced him and talked about hopping."
+    },
+    "josh_rollins_josh_020500.cha_seg_030": {
+      "behavior": "Opened the door after reaching for the doorknob on his own."
+    },
+    "josh_rollins_josh_020500.cha_seg_031": {
+      "modality": "gestural",
+      "behavior": "Opened the juice spout and drank after the adult said it needed to be opened."
+    },
+    "josh_rollins_josh_020500.cha_seg_034": {
+      "domain": "motor",
+      "behavior": "Sat down after being told to sit and moved with the clinician toward the stairs."
+    },
+    "josh_rollins_josh_020500.cha_seg_035": {
+      "behavior": "Grabbed the clinician's hand, went to the door, and tried to open it."
+    },
+    "josh_rollins_josh_020500.cha_seg_043": {
+      "behavior": "Pointed to parts of the elephant picture and grabbed the clinician's arm."
+    },
+    "josh_rollins_josh_020500.cha_seg_046": {
+      "outcome": "unknown",
+      "behavior": "Reached for the juice and later gave it to the clinician to get help with it."
+    },
+    "josh_rollins_josh_020800.cha_seg_027": {
+      "behavior": "Said an approximation of 'pig' after the adult mentioned the pigs."
+    },
+    "josh_rollins_josh_020800.cha_seg_028": {
+      "modality": null,
+      "prompt_level": "model",
+      "behavior": "Did not place the duck puzzle piece despite repeated directions and attention cues."
+    },
+    "josh_rollins_josh_020800.cha_seg_045": {
+      "behavior": "Looked at the puzzle while the adult demonstrated where the piece should go."
+    },
+    "josh_rollins_josh_020800.cha_seg_046": {
+      "behavior": "Put his hand on the puzzle piece after the adult moved it to the correct spot, but did not finish pushing it in."
+    },
+    "josh_rollins_josh_020800.cha_seg_048": {
+      "behavior": "Repeated 'put in' and then pushed the puzzle piece into place."
+    },
+    "josh_rollins_josh_020800.cha_seg_050": {
+      "prompt_level": "model",
+      "behavior": "Reached toward the puzzle after being told to push the piece in, but did not complete the placement."
+    },
+    "josh_rollins_josh_021100.cha_seg_003": {
+      "behavior": "Tapped the wall while walking after the adult talked about dots."
+    },
+    "josh_rollins_josh_021100.cha_seg_009": {
+      "behavior": "Dropped another toy into the container and then moved away."
+    },
+    "josh_rollins_josh_021100.cha_seg_011": {
+      "behavior": "Said 'more' to request more blocks and received another block."
+    },
+    "josh_rollins_josh_021100.cha_seg_020": {
+      "domain": "play",
+      "behavior": "Handled the blocks while giving unclear vocal responses to questions about finding more blocks."
+    },
+    "josh_rollins_josh_021100.cha_seg_024": {
+      "domain": "motor",
+      "outcome": "partial",
+      "behavior": "Made an unclear response to the boy question, did not clearly stand up, and later repeated 'doors'."
+    },
+    "josh_rollins_josh_021100.cha_seg_034": {
+      "domain": "language",
+      "prompt_level": "gestural",
+      "behavior": "Took the adult's hand and walked away instead of climbing the slide."
+    },
+    "josh_rollins_josh_021100.cha_seg_040": {
+      "domain": "cognitive",
+      "behavior": "Took a Lego and threw it in while vocalizing, then made more jargon sounds."
+    },
+    "josh_rollins_josh_030100.cha_seg_015": {
+      "behavior": "Cried and held his head after bumping into the machine."
+    },
+    "josh_rollins_josh_030100.cha_seg_018": {
+      "modality": null,
+      "outcome": "partial",
+      "behavior": "Cried and moved away when the clinician tried to lead him."
+    },
+    "josh_rollins_josh_030100.cha_seg_022": {
+      "behavior": "Moved toward the clinician after she repeatedly called him to look."
+    },
+    "josh_rollins_josh_030100.cha_seg_023": {
+      "modality": null,
+      "outcome": "incorrect",
+      "behavior": "Continued playing with the horse instead of putting the cowboy on it."
+    },
+    "mark_flusberg_mark_070700.cha_seg_019": {
+      "behavior": "Said the item was broken, then no, then broken again when asked about the problem."
+    },
+    "mark_flusberg_mark_070700.cha_seg_047": {
+      "prompt_level": "verbal",
+      "behavior": "Said no to coming over and then yes to reading the book."
+    },
+    "mark_flusberg_mark_070700.cha_seg_054": {
+      "behavior": "Named several pictured items after a sound cue from the adult."
+    },
+    "mark_flusberg_mark_070700.cha_seg_055": {
+      "behavior": "Named the people in the boat as a boy and a bear."
+    },
+    "mark_flusberg_mark_070700.cha_seg_059": {
+      "behavior": "Gave different answers for who was on the cow and correctly said the cat was not on it."
+    },
+    "mark_flusberg_mark_070700.cha_seg_071": {
+      "behavior": "Gave Ginger Bread Man when asked to show under."
+    },
+    "mark_flusberg_mark_070700.cha_seg_074": {
+      "domain": "language",
+      "behavior": "Answered that the horse had a hat and said horses do not wear hats."
+    },
+    "mark_flusberg_mark_070700.cha_seg_081": {
+      "prompt_level": "verbal",
+      "behavior": "Tried to read the words, saying 'jam' and 'lantern,' then said 'no' when asked if it was jam."
+    },
+    "mark_flusberg_mark_070812.cha_seg_001": {
+      "domain": "cognitive",
+      "behavior": "Identified the day as Thursday and then said today is Thursday."
+    },
+    "mark_flusberg_mark_070812.cha_seg_004": {
+      "behavior": "Named Pape as the person who drove him to school but did not make the full sentence requested."
+    },
+    "mark_flusberg_mark_070812.cha_seg_017": {
+      "behavior": "Repeated front after the adult model."
+    },
+    "mark_flusberg_mark_070812.cha_seg_029": {
+      "prompt_level": "independent",
+      "behavior": "Used 'in' in the sentence 'sit in back seat of car.'"
+    },
+    "mark_flusberg_mark_070812.cha_seg_033": {
+      "behavior": "Said 'good' after the adult said 'sleep'."
+    },
+    "mark_flusberg_mark_070812.cha_seg_046": {
+      "behavior": "Repeated 'stayed' and then answered 'room' when asked where he stayed."
+    },
+    "mark_flusberg_mark_070812.cha_seg_059": {
+      "behavior": "Answered yes to playing a game but did not name which game he wanted."
+    },
+    "mark_flusberg_mark_080224.cha_seg_001": {
+      "behavior": "Said it broke and repeatedly requested more balloon."
+    },
+    "mark_flusberg_mark_080224.cha_seg_004": {
+      "behavior": "Described a boy holding a balloon and named the balloon color, but did not give the requested full sentence."
+    },
+    "mark_flusberg_mark_080224.cha_seg_013": {
+      "behavior": "Repeated blowing to complete the adult phrase about the balloon."
+    },
+    "mark_flusberg_mark_080224.cha_seg_015": {
+      "behavior": "Said the balloon was bigger and broken, then asked done."
+    },
+    "mark_flusberg_mark_080700.cha_seg_001": {
+      "behavior": "Produced short phrases using 'play' and named who plays ball but did not give the requested full sentence."
+    },
+    "mark_flusberg_mark_080700.cha_seg_002": {
+      "behavior": "Produced a short sentence about playing ball and tried to answer who he plays with."
+    },
+    "mark_flusberg_mark_080700.cha_seg_003": {
+      "domain": "social_communication",
+      "behavior": "Answered yes about playing ball at school."
+    },
+    "mark_flusberg_mark_080700.cha_seg_009": {
+      "behavior": "First said play duck toy and then repeated I play duck toy after the adult model."
+    },
+    "mark_flusberg_mark_080700.cha_seg_014": {
+      "domain": "social_communication",
+      "outcome": "incorrect",
+      "behavior": "Said 'stop' and 'block' after the adult asked him to look."
+    },
+    "mark_flusberg_mark_080700.cha_seg_017": {
+      "behavior": "Named the slide and swing when asked what else he played with."
+    },
+    "mark_flusberg_mark_080915.cha_seg_005": {
+      "behavior": "Said not to eat play-doh and later identified the color as white."
+    },
+    "mark_flusberg_mark_080915.cha_seg_008": {
+      "prompt_level": "independent",
+      "behavior": "Clarified the word 'boomerang' after the adult asked what he had said."
+    },
+    "mark_flusberg_mark_080915.cha_seg_010": {
+      "behavior": "Said phrases about a kite and balloon during the exchange."
+    },
+    "mark_flusberg_mark_080915.cha_seg_011": {
+      "domain": "cognitive",
+      "behavior": "Said yes to balloons in the sky, then gave balloon again when asked what else could go there."
+    },
+    "mars_rollins_mars_030100.cha_seg_009": {
+      "behavior": "Walked away toward the camera instead of staying with the activity."
+    },
+    "mars_rollins_mars_030100.cha_seg_024": {
+      "domain": null,
+      "prompt_level": "partial_physical",
+      "outcome": "no_response",
+      "behavior": "Looked at the camera while the clinician tried to lead him back to feed the chickens."
+    },
+    "mars_rollins_mars_030100.cha_seg_030": {
+      "modality": null,
+      "behavior": "Did not engage with the puzzle despite the adult's repeated attention prompts."
+    },
+    "mars_rollins_mars_030100.cha_seg_034": {
+      "behavior": "Put the puzzle piece in after being told to turn it."
+    },
+    "mars_rollins_mars_030100.cha_seg_035": {
+      "prompt_level": "verbal",
+      "behavior": "Removed puzzle pieces after being told to take out the head, but not the requested piece."
+    },
+    "mars_rollins_mars_030100.cha_seg_038": {
+      "behavior": "Climbed up the slide after the adult told him to climb."
+    },
+    "mars_rollins_mars_030100.cha_seg_042": {
+      "domain": "adaptive",
+      "behavior": "Pushed the door open after being asked and said bye."
+    },
+    "mars_rollins_mars_030100.cha_seg_045": {
+      "domain": "cognitive",
+      "outcome": "partial",
+      "behavior": "Put the faucet back in after the adult clarified that it had to be pushed into the hole."
+    },
+    "mars_rollins_mars_030100.cha_seg_051": {
+      "behavior": "Took pieces out of the puzzle after the adult gave repeated instructions."
+    },
+    "mars_rollins_mars_030100.cha_seg_052": {
+      "outcome": "partial",
+      "behavior": "Put one puzzle piece in, then did not respond to the next body-part question."
+    },
+    "mars_rollins_mars_030300.cha_seg_001": {
+      "behavior": "Made an unclear vocal response."
+    },
+    "mars_rollins_mars_030300.cha_seg_004": {
+      "domain": "cognitive",
+      "behavior": "Continued the counting sequence with two, three and four as pages were turned."
+    },
+    "mars_rollins_mars_030300.cha_seg_005": {
+      "domain": "behavior",
+      "prompt_level": "verbal",
+      "outcome": "partial",
+      "behavior": "Moved away from the book activity and only turned back when his name was called."
+    },
+    "mars_rollins_mars_030300.cha_seg_014": {
+      "prompt_level": "model",
+      "behavior": "Put the shape through the correct hole after the adult showed where it should go."
+    },
+    "mars_rollins_mars_030300.cha_seg_017": {
+      "prompt_level": "partial_physical",
+      "behavior": "Helped squeeze the glue after the adult physically assisted the movement."
+    },
+    "mars_rollins_mars_030300.cha_seg_018": {
+      "domain": "sensory",
+      "outcome": "incorrect",
+      "behavior": "Played with the sticky glue instead of responding to the request to push."
+    },
+    "mars_rollins_mars_030300.cha_seg_020": {
+      "domain": "cognitive",
+      "behavior": "Played with the eye pieces instead of following the glue and squeeze instructions."
+    },
+    "mars_rollins_mars_030300.cha_seg_039": {
+      "modality": null,
+      "outcome": "approximation",
+      "behavior": "Continued scribbling on the mirror while the adult modeled the letter M."
+    },
+    "mars_rollins_mars_030300.cha_seg_044": {
+      "behavior": "Made jargon sounds while the adult wiped the mirror."
+    },
+    "mars_rollins_mars_030300.cha_seg_050": {
+      "behavior": "Reached and vocalized for a shape, then pulled it from the adult's hand."
+    },
+    "mars_rollins_mars_030300.cha_seg_054": {
+      "domain": "cognitive",
+      "behavior": "Repeated 'five trucks' several times, including when the adult moved on to counting one."
+    },
+    "mars_rollins_mars_030300.cha_seg_060": {
+      "domain": "play",
+      "modality": null,
+      "behavior": "Tried to open the toy, hit it, and then stopped after repeated 'open it' directions."
+    },
+    "mars_rollins_mars_030600.cha_seg_005": {
+      "domain": "cognitive",
+      "outcome": "partial",
+      "behavior": "Picked up a train when asked what he found but did not verbally name it."
+    },
+    "mars_rollins_mars_030600.cha_seg_006": {
+      "domain": "social_communication",
+      "behavior": "Repeated 'bye' during several questions and continued playing with the garage toy."
+    },
+    "mars_rollins_mars_030600.cha_seg_018": {
+      "behavior": "Opened the garage door after being told to open the house and tried to put the train in."
+    },
+    "mars_rollins_mars_030600.cha_seg_037": {
+      "behavior": "Made a dog-like 'roof roof' sound after hearing the adult say 'doggie.'"
+    },
+    "mars_rollins_mars_030800.cha_seg_009": {
+      "domain": "cognitive",
+      "modality": "unknown",
+      "prompt_level": "model",
+      "outcome": "unknown",
+      "behavior": "Vocalized while the adult demonstrated putting the bike piece into the puzzle."
+    },
+    "mars_rollins_mars_030800.cha_seg_010": {
+      "behavior": "Put the puzzle piece in after the adult acknowledged the placement."
+    },
+    "mars_rollins_mars_031100.cha_seg_001": {
+      "behavior": "Tried to attach the cart to the tractor and vocalized when it was difficult."
+    },
+    "rick_flusberg_rick_040700.cha_seg_019": {
+      "behavior": "Used 'moo' for an animal and then repeated 'horse' after the adult named it."
+    },
+    "rick_flusberg_rick_040700.cha_seg_021": {
+      "behavior": "Made an unclear vocalization and did not clearly put the item down after being told."
+    },
+    "rick_flusberg_rick_040700.cha_seg_029": {
+      "behavior": "Repeated words about the dishes and color, then asked to go to the bathroom."
+    },
+    "rick_flusberg_rick_040700.cha_seg_033": {
+      "behavior": "Talked about making and cooking hotcakes during pretend play."
+    },
+    "rick_flusberg_rick_040700.cha_seg_034": {
+      "domain": "language",
+      "behavior": "Repeated cake and said it cook while looking at the play item."
+    },
+    "rick_flusberg_rick_040700.cha_seg_046": {
+      "domain": "language",
+      "prompt_level": "model",
+      "behavior": "Repeated 'basket' after the adult told him to put the bear in the basket."
+    },
+    "rick_flusberg_rick_040700.cha_seg_055": {
+      "domain": "language",
+      "behavior": "Said 'Dan' after being asked if he wanted Dan."
+    },
+    "rick_flusberg_rick_040700.cha_seg_062": {
+      "behavior": "Repeated want Dan."
+    },
+    "rick_flusberg_rick_040700.cha_seg_071": {
+      "behavior": "Said 'stairs' after being told to make the figure walk and after the adult said 'up the stairs'."
+    },
+    "rick_flusberg_rick_040700.cha_seg_082": {
+      "behavior": "Asked for the page and labeled the pictured item as water."
+    },
+    "rick_flusberg_rick_040700.cha_seg_089": {
+      "behavior": "Named numbers, first saying two and then six after correction."
+    },
+    "rick_flusberg_rick_040700.cha_seg_096": {
+      "behavior": "First called the animal a dog, then corrected to kitty cat and said 'meow'."
+    },
+    "rick_flusberg_rick_050904.cha_seg_005": {
+      "domain": "cognitive",
+      "behavior": "Identified the color as blue."
+    },
+    "rick_flusberg_rick_050904.cha_seg_013": {
+      "outcome": "approximation",
+      "behavior": "Requested the fence, saying want fence after the adult modeled more fence."
+    },
+    "rick_flusberg_rick_050904.cha_seg_023": {
+      "behavior": "Repeated the word 'no' after being asked to say it."
+    },
+    "rick_flusberg_rick_060107.cha_seg_002": {
+      "behavior": "Answered what he was doing and then repeated 'I play' after the adult model."
+    },
+    "rick_flusberg_rick_060308.cha_seg_001": {
+      "prompt_level": "independent",
+      "outcome": "unknown",
+      "behavior": "Repeated 'come sit' and then said 'cymbal' after being asked to play quietly."
+    },
+    "rick_flusberg_rick_060308.cha_seg_003": {
+      "behavior": "Said I am play drums when asked what he was doing."
+    },
+    "rick_flusberg_rick_060308.cha_seg_005": {
+      "behavior": "Spontaneously asked for help and later answered yes when asked if he needed help."
+    },
+    "rick_flusberg_rick_060308.cha_seg_010": {
+      "prompt_level": "verbal",
+      "behavior": "Responded to repeated questions about what he wanted to play, saying 'put away' and later 'play.'"
+    },
+    "rick_flusberg_rick_060818.cha_seg_008": {
+      "outcome": "partial",
+      "behavior": "Made an unclear response, then said 'I playing' and 'pencil' when asked what the adult was doing."
+    },
+    "rick_flusberg_rick_060818.cha_seg_013": {
+      "behavior": "Answered what he was doing by saying I play eraser, and repeated it when asked again."
+    },
+    "rick_flusberg_rick_061012.cha_seg_007": {
+      "outcome": "partial",
+      "behavior": "Said off when asked what he was taking out and later said whoops."
+    },
+    "rick_flusberg_rick_061012.cha_seg_008": {
+      "behavior": "Talked about giving characters to the Count and Guy Smiley during toy play."
+    },
+    "rick_flusberg_rick_061012.cha_seg_013": {
+      "behavior": "Responded guitar and then identified Big Bird as the one playing the guitar."
+    },
+    "rick_flusberg_rick_070013.cha_seg_004": {
+      "domain": "language",
+      "outcome": "incorrect",
+      "behavior": "Talked about playing with Gonzo, biting it, and where he wanted to leave it."
+    },
+    "rick_flusberg_rick_070013.cha_seg_006": {
+      "behavior": "Asked the adult questions about Potato Head and whether he was going to school."
+    },
+    "rick_flusberg_rick_070013.cha_seg_007": {
+      "outcome": null,
+      "behavior": "Asked to play with an item and answered yes during the conversation."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_011": {
+      "behavior": "Named a horsie, then repeated 'cow' after the adult provided the word."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_013": {
+      "behavior": "Named a horsie, then echoed the question instead of naming the birds."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_019": {
+      "behavior": "Repeated making donut while looking at the new play item."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024": {
+      "behavior": "Said 'no' and corrected the book description to 'kids.'"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_027": {
+      "behavior": "Tried to name or talk about an item, but much of the speech was unclear."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_028": {
+      "behavior": "Repeated 'play your blocks' and 'build a building' after mother said them."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053": {
+      "behavior": "Responded 'yeah' and then offered a bite."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_066": {
+      "domain": "adaptive",
+      "behavior": "Talked about the car falling, then repeated put the blocks away without showing the cleanup action."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070": {
+      "behavior": "Said good boy when asked which car belonged to Ann."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003": {
+      "prompt_level": "model",
+      "outcome": null,
+      "behavior": "Used bedtime language during pretend play, saying 'go to sleep' and 'good night.'"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_009": {
+      "outcome": "partial",
+      "behavior": "Repeated 'need help' after the adult asked whether he needed help."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_012": {
+      "behavior": "Repeated 'give me the airplane' after the adult gave that exact phrase."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018": {
+      "behavior": "Repeatedly called the astronaut a duck and also said 'hat'."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_022": {
+      "behavior": "Repeated phrases about no rain and taking pants after the adult models."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034": {
+      "behavior": "Named the Etch A Sketch and referred to stairs, which the adult confirmed."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_042": {
+      "behavior": "Repeated location words and phrases such as bag and in basket."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003": {
+      "behavior": "Described setting the table and eating supper during pretend play."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010": {
+      "prompt_level": "model",
+      "behavior": "Answered 'tower' to a naming question and repeated 'build a tower' during play."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011": {
+      "domain": "play"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_013": {
+      "behavior": "Said Ernie was taking a bath, which the adult confirmed, then gave another item label."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_015": {
+      "behavior": "Asked where the ABC puzzle was and said he did not know."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018": {
+      "behavior": "Answered that Santa would bring toys and a Christmas tree."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003": {
+      "domain": "social_communication",
+      "prompt_level": "independent",
+      "outcome": null,
+      "behavior": "Answered yes about coloring and talked about putting the people to sleep in the barn."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001": {
+      "behavior": "Said he was playing with toys, then called the adult table your table and was corrected."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_006": {
+      "behavior": "Repeated several adult phrases such as come here and sit down and play."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018": {
+      "behavior": "Requested to play with the car by saying 'I play car please.'"
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032": {
+      "outcome": "correct",
+      "behavior": "Requested to play with the bus and then said he wanted to lie down and sleep."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_009": {
+      "outcome": "correct",
+      "behavior": "First said 'look up' but then answered that he was doing a puzzle."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010": {
+      "outcome": "partial",
+      "behavior": "Named Lee School after the adult gave part of the school name."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014": {
+      "behavior": "Said he wanted to do the puzzle and later talked about wanting to color."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_001": {
+      "behavior": "Led the adult by the hand to the cabinet and moved the adult hand upward to show what he wanted."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_005": {
+      "modality": null,
+      "outcome": null,
+      "behavior": "Tried the door after being told to try, but did not complete the action."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_011": {
+      "behavior": "Did not put the blocks on the shelf and chose a hammer instead."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_022": {
+      "behavior": "Reached up for the balloon while watching it float."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_023": {
+      "behavior": "Caught and grabbed the balloon during the play routine."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_028": {
+      "domain": "sensory",
+      "behavior": "Put the balloon to his face and bit it while playing."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_029": {
+      "outcome": null,
+      "behavior": "Released the balloon after being told to let it go."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_032": {
+      "domain": "play",
+      "modality": "gestural",
+      "behavior": "Reached for and watched the balloon during play."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_037": {
+      "behavior": "Led the adult to the sandbox, placed the adult's hand on the lid and pushed up on it."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_040": {
+      "prompt_level": "model",
+      "behavior": "Hit the wrench in the sand after the adult made a 'knock knock' sound."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_044": {
+      "behavior": "Played with the truck while the adult talked and made car sounds."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_051": {
+      "behavior": "Played with the balloon, picked it up, and walked away from the vent."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_057": {
+      "behavior": "Pushed the blocks over once, then stacked blocks instead of knocking them down."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_059": {
+      "behavior": "Said 'go' and pushed the truck during the play routine."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_060": {
+      "behavior": "Picked up the balloon and handed it to the adult after the adult pointed it out."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_062": {
+      "behavior": "Ran to get the balloon, gave it to the examiner, and put it to his mouth."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_063": {
+      "behavior": "Pointed to himself in the mirror during the shared interaction."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_073": {
+      "domain": "adaptive",
+      "outcome": null,
+      "behavior": "Kept trying to use the hammer and did not put the lid back on."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_078": {
+      "behavior": "Hit the trash can with a wrench while the adult repeatedly labeled 'trash'."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_080": {
+      "prompt_level": "independent",
+      "outcome": null,
+      "behavior": "Said 'go' in the truck-play routine and then pushed the truck."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_087": {
+      "domain": "play",
+      "outcome": "correct",
+      "behavior": "Turned the toy truck around after the adult said 'come back'."
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_005": {
+      "behavior": "Reached for the cookie and later said get set, go while moving around the room."
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_010": {
+      "domain": "play",
+      "behavior": "Made an unclear vocal sound after the adult modeled 'mmmm' during pretend play."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_004": {
+      "domain": "adaptive",
+      "outcome": "partial",
+      "behavior": "Said door and guided the adult's hand to the door while the adult worked on opening it."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_013": {
+      "outcome": "correct",
+      "behavior": "Called the bus a car while pointing and then made jargon sounds."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_019": {
+      "behavior": "Climbed back onto the horse and got both knees on it using the wall for support."
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_002": {
+      "behavior": "Took out the play-doh and tried to open the container."
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_015": {
+      "outcome": "incorrect",
+      "behavior": "Wrapped play-doh around the rolling pin instead of rolling it out."
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_019": {
+      "behavior": "Reached into, turned, and banged the play-doh container while looking inside it."
+    },
+    "sid_rollins_sid_020200.cha_seg_001": {
+      "domain": "language",
+      "behavior": "Reached upward for something and brushed away offered items to refuse them."
+    },
+    "sid_rollins_sid_020200.cha_seg_007": {
+      "behavior": "Held the balloon toward the adult's mouth to indicate he wanted it blown."
+    },
+    "sid_rollins_sid_020200.cha_seg_011": {
+      "behavior": "Played with the cone by putting it in his mouth and on his finger."
+    },
+    "sid_rollins_sid_020200.cha_seg_017": {
+      "prompt_level": "partial_physical",
+      "behavior": "Continued drawing and did not transition despite repeated 'let's go' directions."
+    },
+    "sid_rollins_sid_020200.cha_seg_022": {
+      "domain": "behavior",
+      "modality": "unknown",
+      "behavior": "Made unclear vocal sounds while looking at the book."
+    },
+    "sid_rollins_sid_020200.cha_seg_028": {
+      "domain": "behavior",
+      "behavior": "Got the carrot and then moved away instead of feeding the baby."
+    },
+    "sid_rollins_sid_020200.cha_seg_034": {
+      "domain": "motor",
+      "behavior": "Walked away and then jumped on the trampoline."
+    },
+    "sid_rollins_sid_020200.cha_seg_038": {
+      "behavior": "Rolled over the board, walked across the room, and pushed on the door."
+    },
+    "sid_rollins_sid_020200.cha_seg_039": {
+      "behavior": "Turned the lights off after the adult commented that they were on."
+    },
+    "sid_rollins_sid_020200.cha_seg_042": {
+      "prompt_level": "model",
+      "behavior": "Vocalized and pointed to the picture after the adult repeatedly labeled Ernie."
+    },
+    "sid_rollins_sid_020200.cha_seg_049": {
+      "behavior": "Cried during the ball activity after the adult suggested getting the ball."
+    },
+    "sid_rollins_sid_020200.cha_seg_056": {
+      "behavior": "Closed the book, cried, and tried to get the ball while the adult repeatedly offered another book."
+    },
+    "sid_rollins_sid_020200.cha_seg_060": {
+      "domain": "adaptive",
+      "modality": "unknown",
+      "prompt_level": "verbal",
+      "outcome": "incorrect",
+      "behavior": "Walked away instead of putting the blocks away after the cleanup instruction."
+    },
+    "sid_rollins_sid_020200.cha_seg_072": {
+      "domain": "language",
+      "outcome": "partial",
+      "behavior": "Held out his arms to the clinician instead of turning off the light."
+    },
+    "sid_rollins_sid_021100.cha_seg_015": {
+      "behavior": "Made unclear vocalizations, took the chalk and pointed to the chalkboard."
+    },
+    "sid_rollins_sid_021100.cha_seg_040": {
+      "outcome": "correct",
+      "behavior": "Pointed repeatedly to the board while vocalizing to show what he wanted."
+    },
+    "sid_rollins_sid_021100.cha_seg_053": {
+      "behavior": "Tried to put the pig in the pen and fix the fence."
+    },
+    "sid_rollins_sid_030200.cha_seg_003": {
+      "domain": "social_communication",
+      "outcome": null,
+      "behavior": "Pushed the Lego back instead of placing it as expected."
+    },
+    "sid_rollins_sid_030200.cha_seg_004": {
+      "domain": "language",
+      "behavior": "Pointed to the balloon, vocalized, then got it and brought it back after the adult pointed and instructed him."
+    },
+    "sid_rollins_sid_030200.cha_seg_008": {
+      "behavior": "Connected Legos and hit the toy truck on the floor during play."
+    },
+    "sid_rollins_sid_030200.cha_seg_013": {
+      "prompt_level": "gestural",
+      "behavior": "Put the person into the fire truck after the adult pointed to the target location."
+    },
+    "sid_rollins_sid_030200.cha_seg_014": {
+      "behavior": "Put a person in the truck after the adult pointed to it and said it needed a driver."
+    },
+    "sid_rollins_sid_030200.cha_seg_017": {
+      "behavior": "Pointed to the adult's finger and then to his own while vocalizing."
+    },
+    "sid_rollins_sid_030200.cha_seg_025": {
+      "domain": "social_communication",
+      "behavior": "Let the balloon go over the vent and later pointed across the room."
+    },
+    "sid_rollins_sid_030200.cha_seg_026": {
+      "behavior": "Pointed during a greeting and then moved around on the floor."
+    },
+    "sid_rollins_sid_030200.cha_seg_036": {
+      "domain": "language",
+      "outcome": null,
+      "behavior": "Held the ladder out toward the examiner while vocalizing."
+    },
+    "sid_rollins_sid_030200.cha_seg_054": {
+      "behavior": "Looked up and pointed upward in response to the question about where it went."
+    },
+    "sid_rollins_sid_030200.cha_seg_055": {
+      "behavior": "Moved the balloon around and jumped during play."
+    },
+    "sid_rollins_sid_030500.cha_seg_001": {
+      "behavior": "Made a lion growling sound after the adult labeled the lion and added a verbal cue."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_006": {
+      "behavior": "Answered 'hair' when asked to name an item."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_009": {
+      "domain": "language",
+      "behavior": "Repeated cracker during the interaction."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_012": {
+      "behavior": "Said no to tickling and requested a cracker."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_022": {
+      "behavior": "Gave an unclear answer to the naming question, then said 'open' when mother suggested opening the book."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_027": {
+      "behavior": "Repeated papa and hello after being asked to say them."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_043": {
+      "behavior": "Repeated do this several times after the adult said it."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_045": {
+      "behavior": "Repeated the phrase 'do this'."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_049": {
+      "behavior": "Named nose and later said car during the activity."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_056": {
+      "behavior": "Said clap when asked how to roll them, even after the adult said roll them."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_060": {
+      "behavior": "Named a bag and then said 'pillow' after the adult's cue."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_061": {
+      "behavior": "Repeated bunny after the adult model."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_062": {
+      "behavior": "Repeated 'baby' and 'close door'."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_006": {
+      "behavior": "Said 'key' and then answered 'pillow' when asked what the item was."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_008": {
+      "outcome": "correct",
+      "behavior": "Repeated bear and then said sleep after the adult modeled sleeping."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_009": {
+      "behavior": "Named baby and then repeated pants after the adult model."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_015": {
+      "modality": "unknown",
+      "behavior": "Produced the short sound 'ba' after the adult mentioned water."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_019": {
+      "behavior": "Repeated frog after being asked to say it."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_020": {
+      "behavior": "Repeated squirrel after the adult named it."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_040": {
+      "behavior": "Named the body parts as hair and nose."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_054": {
+      "behavior": "Repeated 'byebye car' after the adult modeled the phrase."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_061": {
+      "behavior": "Requested more bubbles and changed the phrase to 'want bubble' after modeling."
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_016": {
+      "behavior": "Repeated 'bear' after the adult modeled it and later said 'ball' to a naming question."
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_020": {
+      "behavior": "Named a toy and a horsie when asked."
+    },
+    "stuart_flusberg_stuart_031009.cha_seg_002": {
+      "prompt_level": "model",
+      "behavior": "Gave an unclear answer when asked what the item was, and the adult then supplied 'toy'."
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_009": {
+      "outcome": null,
+      "behavior": "Named the item as 'drum' while it was being presented."
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_014": {
+      "behavior": "Said 'piano' and then 'bang' while talking about the toy."
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_018": {
+      "behavior": "Repeated 'cover' and 'push' and answered yes about playing with toys."
+    },
+    "stuart_flusberg_stuart_040715.cha_seg_003": {
+      "outcome": "partial",
+      "behavior": "Repeated push after the adult said push."
+    },
+    "stuart_flusberg_stuart_040715.cha_seg_007": {
+      "behavior": "Answered yes after the adult repeated and narrowed the question about what he wanted to play with."
+    }
+  },
+  "notes": {
+    "brett_flusberg_brett_050800.cha_seg_020": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_050800.cha_seg_025": {
+      "domain": "The main child behavior is a functional request or information-seeking use of language.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_050800.cha_seg_040": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_050800.cha_seg_045": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_050800.cha_seg_064": {
+      "prompt_level": "The first cold question did not produce the target answer, so the repeated question was added verbal support.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_050800.cha_seg_066": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_014": {
+      "outcome": "The clearest scored target is naming the vegetable, and the child said broccoli before the adult corrected it to lettuce.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_016": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_018": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_033": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_034": {
+      "domain": "The main child behavior is a functional request or information-seeking use of language.",
+      "outcome": "The primary behavior does not have a clear accuracy criterion.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_035": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_040": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_045": {
+      "modality": "The child vocalized, but the vocalization was not recognizable speech.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_046": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_055": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_051002.cha_seg_063": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060207.cha_seg_005": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060207.cha_seg_006": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060207.cha_seg_011": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060406.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060622.cha_seg_009": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060622.cha_seg_015": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060819.cha_seg_007": {
+      "outcome": "The child attempted the word after 'sound it out' but did not produce the full target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060819.cha_seg_014": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060819.cha_seg_017": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060819.cha_seg_020": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060819.cha_seg_022": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060819.cha_seg_024": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "brett_flusberg_brett_060819.cha_seg_025": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_020800.cha_seg_006": {
+      "prompt_level": "Extra verbal support was added after the first opportunity.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_020800.cha_seg_012": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_020800.cha_seg_018": {
+      "outcome": "There is an identifiable target and the child completed it or received positive acknowledgement.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_020800.cha_seg_020": {
+      "domain": "The primary action is a functional daily-task behavior.",
+      "outcome": "A clear cleanup instruction was given and the child did not carry it out.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_020800.cha_seg_035": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_020800.cha_seg_040": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_020800.cha_seg_046": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_023": {
+      "prompt_level": "The adult supplied or demonstrated the target response for the child.",
+      "outcome": "The child produced the modeled phrase and the adult's response supports that it matched the target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_029": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_043": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_050": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_055": {
+      "domain": "The main behavior is object or pretend play; the speech is secondary to the play activity.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_064": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_070": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_083": {
+      "domain": "The main behavior is object or pretend play; the speech is secondary to the play activity.",
+      "prompt_level": "The child acted on the first opportunity or initiated the behavior without added support.",
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_085": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_086": {
+      "domain": "The child's main behavior is object play.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "I used the cleanup response as the primary behavior because it is the clearest adult-directed target at the end of the segment."
+    },
+    "carl_rollins_carl_021100.cha_seg_088": {
+      "domain": "The primary behavior is refusal, disengagement, or emotional behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_090": {
+      "prompt_level": "Direct physical assistance was used for the target behavior.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_101": {
+      "prompt_level": "The adult used an upward gesture with the first location question, so the target was supported gesturally.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_021100.cha_seg_108": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030000.cha_seg_002": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030000.cha_seg_008": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030000.cha_seg_010": {
+      "outcome": "There is an identifiable target and the child completed it or received positive acknowledgement.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030000.cha_seg_016": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030000.cha_seg_021": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030000.cha_seg_025": {
+      "modality": "The child used recognizable speech and reached toward the shelf; both channels carried the airplane-puzzle message.",
+      "prompt_level": "The child acted on the first opportunity or initiated the behavior without added support.",
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030700.cha_seg_003": {
+      "outcome": "The primary child behavior is spontaneous talk and toy repair, not a scored response target.",
+      "behavior": "This keeps the child's spontaneous statement and the visible repair action without turning the adult correction into the child's behavior."
+    },
+    "carl_rollins_carl_030700.cha_seg_005": {
+      "domain": "The segment is mainly Potato Head assembly play; the labels occur within that play activity.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "carl_rollins_carl_030700.cha_seg_021": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_006": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_008": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_010": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_025": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_027": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_037": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_042": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_043": {
+      "prompt_level": "The drawing request was repeated and narrowed after the first refusal, so extra verbal support was added.",
+      "outcome": "The adult gave a clear drawing request and the child verbally refused it.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_046": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_064": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_065": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_074": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_076": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_060900.cha_seg_077": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_061028.cha_seg_018": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_061028.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_061028.cha_seg_026": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_061028.cha_seg_027": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070106.cha_seg_004": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070106.cha_seg_005": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070106.cha_seg_009": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070106.cha_seg_013": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070106.cha_seg_016": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070106.cha_seg_017": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070315.cha_seg_002": {
+      "outcome": "The child produced part of the requested phrase rather than the full modeled target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_070726.cha_seg_002": {
+      "outcome": "The yes/no target is clear, but 'okay' does not resolve it and the second question is unanswered.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_071001.cha_seg_009": {
+      "domain": "The main target is the play-doh rolling activity; the request for play-doh occurs inside that task.",
+      "prompt_level": "After the initial opportunity, the adult added instructions about how to roll the play-doh and repeated the direction.",
+      "outcome": "The rolling target is clear, but the child does not complete the requested action in the segment.",
+      "behavior": "I treated the rolling task as primary, while keeping the child's request because it is also clearly present."
+    },
+    "jack_flusberg_jack_071001.cha_seg_011": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "jack_flusberg_jack_071001.cha_seg_022": {
+      "domain": "The child uses 'stop' directly to another person to control the interaction, so the main function is interpersonal communication.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_013": {
+      "domain": "The primary target is a functional action.",
+      "modality": "The movement is directed to a partner and carries a message.",
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_016": {
+      "outcome": "I kept the outcome that best matches the visible resolution of the primary target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_018": {
+      "domain": "The child is exploring holes and poles through touch and movement; sensory exploration is the dominant behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_019": {
+      "domain": "The dominant behavior is sensory exploration.",
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_024": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_025": {
+      "domain": "The primary behavior is gross-motor movement.",
+      "modality": "The child did not use recognizable speech and no communicative channel is clearly shown.",
+      "prompt_level": "The child's hanging behavior is not an imitation of the adult's 'hop hop' model, so it is best treated as self-initiated.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_030": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_031": {
+      "modality": "Giving the juice bottle to the clinician is a partner-directed communicative act.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_034": {
+      "domain": "The primary behavior is physical movement or motor control.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_035": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_043": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020500.cha_seg_046": {
+      "outcome": "A target or request exists, but the segment does not show enough to judge the resolution.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020800.cha_seg_027": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020800.cha_seg_028": {
+      "modality": "The child did not use recognizable speech and no communicative channel is clearly shown.",
+      "prompt_level": "I kept the prompt level that reflects the most supportive help actually needed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020800.cha_seg_045": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020800.cha_seg_046": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020800.cha_seg_048": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_020800.cha_seg_050": {
+      "prompt_level": "The adult supplied or demonstrated the target response for the child.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_021100.cha_seg_003": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_021100.cha_seg_009": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_021100.cha_seg_011": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_021100.cha_seg_020": {
+      "domain": "The child is mainly manipulating blocks in the play activity; the vocal responses are unclear.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_021100.cha_seg_024": {
+      "domain": "I kept the domain that best matches the primary behavior in the segment.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_021100.cha_seg_034": {
+      "domain": "The gesture is mainly being used to request, refuse, or obtain something, so I treated it as functional language.",
+      "prompt_level": "The adult tapped the slide while giving the climb instruction, providing a gestural prompt.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_021100.cha_seg_040": {
+      "domain": "The main target is problem solving or concept knowledge.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_030100.cha_seg_015": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_030100.cha_seg_018": {
+      "modality": "The movement is object handling or physical action, not a communicative gesture.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_030100.cha_seg_022": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "josh_rollins_josh_030100.cha_seg_023": {
+      "modality": "The child uses object play and non-word vocalizations; no recognizable speech or clear communicative gesture is shown.",
+      "outcome": "A clear instruction to put the cowboy on the horse was given, but the child continued playing with the horse instead.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_047": {
+      "prompt_level": "The book offer was repeated/rephrased before the child answered yes, so the response followed added verbal support.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_054": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_055": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_059": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_071": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_074": {
+      "domain": "The primary target is naming or verbal expression.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070700.cha_seg_081": {
+      "prompt_level": "Extra verbal support was added after the first opportunity.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070812.cha_seg_001": {
+      "domain": "The target is knowledge of the day of the week, which is primarily a cognitive concept.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070812.cha_seg_004": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070812.cha_seg_017": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070812.cha_seg_029": {
+      "prompt_level": "The child acted on the first opportunity or initiated the behavior without added support.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070812.cha_seg_033": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070812.cha_seg_046": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_070812.cha_seg_059": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080224.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080224.cha_seg_004": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080224.cha_seg_013": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080224.cha_seg_015": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080700.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080700.cha_seg_002": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080700.cha_seg_003": {
+      "domain": "Both domains fit, so I used social communication as the tie-breaker.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080700.cha_seg_009": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080700.cha_seg_014": {
+      "domain": "Both domains fit, so I used social communication as the tie-breaker.",
+      "outcome": "The adult gave a clear 'look at me' instruction and the child responded with other words rather than the target behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080700.cha_seg_017": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080915.cha_seg_005": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080915.cha_seg_008": {
+      "prompt_level": "The child acted on the first opportunity or initiated the behavior without added support.",
+      "behavior": "The important child behavior is the clarification after the adult's question."
+    },
+    "mark_flusberg_mark_080915.cha_seg_010": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mark_flusberg_mark_080915.cha_seg_011": {
+      "domain": "The question asks for category knowledge about what belongs in the sky, so the primary target is cognitive.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_009": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_024": {
+      "domain": "The child stares at the camera; there is no play behavior supporting a play-domain label.",
+      "prompt_level": "Direct physical assistance was used for the target behavior.",
+      "outcome": "A clear target was presented and no target response was completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_030": {
+      "modality": "The child did not use recognizable speech and no communicative channel is clearly shown.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_034": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_035": {
+      "prompt_level": "Extra verbal support was added after the first opportunity.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_038": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_042": {
+      "domain": "The primary action is a functional daily-task behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_045": {
+      "domain": "The main target is problem solving or concept knowledge.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_051": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030100.cha_seg_052": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_004": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_005": {
+      "domain": "The primary behavior is refusal, disengagement, or emotional behavior.",
+      "prompt_level": "The child turned back only after the adult called his name, which is added verbal support.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_014": {
+      "prompt_level": "The adult demonstrated the target action.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_017": {
+      "prompt_level": "Direct physical assistance was used for the target behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_018": {
+      "domain": "The main behavior is sensory exploration rather than conventional play.",
+      "outcome": "A clear push request was given, but the child continued playing with the glue instead.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_020": {
+      "domain": "The activity requires following the glue/eye task sequence; the issue is task/problem-solving rather than pure motor movement.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_039": {
+      "modality": "Scribbling is not enough to call the child's communication written.",
+      "outcome": "The child scribbled after an M was modeled; this is closer to an attempted approximation of the writing target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_044": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_050": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_054": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030300.cha_seg_060": {
+      "domain": "The main behavior is play.",
+      "modality": "The movement is object handling or physical action, not a communicative gesture.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030600.cha_seg_005": {
+      "domain": "The child selected the train in response to 'what did you find?', showing object recognition even without a verbal label.",
+      "outcome": "The child selected the correct object but did not provide the requested verbal answer, so the target was only partly met.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030600.cha_seg_006": {
+      "domain": "The repeated 'bye' is socially directed even though it occurs during play.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030600.cha_seg_018": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030600.cha_seg_037": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030800.cha_seg_009": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "modality": "I kept the modality that is directly supported by the child's communication channel.",
+      "prompt_level": "The adult demonstrated the puzzle placement, so the target had been modeled.",
+      "outcome": "A target exists, but after the adult performs the placement the child's unclear response does not show whether the child could complete it.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_030800.cha_seg_010": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "mars_rollins_mars_031100.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_021": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_029": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_033": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_034": {
+      "domain": "The spoken behavior is the clearest primary target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_046": {
+      "domain": "The spoken behavior is the clearest primary target.",
+      "prompt_level": "The adult supplied 'in the basket' and the child then repeated 'basket', so the target word was modeled.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_055": {
+      "domain": "The child is expressing a functional want for Dan, so I treated this as language rather than social-only interaction.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_062": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_071": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_082": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_089": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_040700.cha_seg_096": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_050904.cha_seg_005": {
+      "domain": "The primary target is concept knowledge, counting, location, or problem solving rather than language form.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_050904.cha_seg_013": {
+      "outcome": "The child produced part of the requested phrase rather than the full modeled target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_050904.cha_seg_023": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_060107.cha_seg_002": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_060308.cha_seg_001": {
+      "prompt_level": "The child acted on the first opportunity or initiated the behavior without added support.",
+      "outcome": "The request to play quietly creates a target, but the child's word 'cymbal' does not show whether he actually played quietly.",
+      "behavior": "Both child utterances are directly supported, so I kept a neutral description rather than judging whether he played quietly."
+    },
+    "rick_flusberg_rick_060308.cha_seg_003": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_060308.cha_seg_005": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_060308.cha_seg_010": {
+      "prompt_level": "The choice question was repeated after earlier responses, so the final response followed added verbal support.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_060818.cha_seg_008": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_060818.cha_seg_013": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_061012.cha_seg_007": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_061012.cha_seg_008": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_061012.cha_seg_013": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_070013.cha_seg_004": {
+      "domain": "The spoken behavior is the clearest primary target.",
+      "outcome": "The child gave a location response and the adult explicitly corrected it, so the target was not met.",
+      "behavior": "I kept the child's actual play comments rather than describing them as unrelated."
+    },
+    "rick_flusberg_rick_070013.cha_seg_006": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "rick_flusberg_rick_070013.cha_seg_007": {
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_011": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_013": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_024": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_027": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_028": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_053": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_066": {
+      "domain": "I kept the domain that best matches the primary behavior in the segment.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_003": {
+      "prompt_level": "The adult supplied or demonstrated the target response for the child.",
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_009": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_012": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_022": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_042": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_010": {
+      "prompt_level": "The adult supplied or demonstrated the target response for the child.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011": {
+      "domain": "The main behavior is object or pretend play; the speech is secondary to the play activity."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_013": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_015": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_003": {
+      "domain": "Both domains fit, so I used social communication as the tie-breaker.",
+      "prompt_level": "The main child behavior is an ordinary preference/conversation response; the later repeated phrase is not an explicit imitation target.",
+      "outcome": "The exchange is ordinary preference and pretend-play conversation with no accuracy criterion.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_006": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_018": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_032": {
+      "outcome": "The child requested the bus and the adult visibly granted the request by saying okay.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_009": {
+      "outcome": "The identifiable target was completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_005": {
+      "modality": "The child did not use recognizable speech and no communicative channel is clearly shown.",
+      "outcome": "'Now try' does not establish a specific enough target in the segment to score the child's door hitting as correct or incorrect.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_011": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_022": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_023": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_028": {
+      "domain": "The main behavior is sensory exploration rather than conventional play.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_029": {
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_032": {
+      "domain": "The main behavior is object or pretend play; the speech is secondary to the play activity.",
+      "modality": "The child reached toward the balloon in a partner-mediated play exchange, which functions as a request.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_037": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_040": {
+      "prompt_level": "The adult supplied or demonstrated the target response for the child.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_044": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_051": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_057": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_059": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_060": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_062": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_063": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_073": {
+      "domain": "The target is a functional task rather than play.",
+      "outcome": "The lid-closing instruction comes at the end and is not resolved within the segment; the visible child behavior is self-directed play.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_078": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_080": {
+      "prompt_level": "'On your mark, get set' is the natural play routine antecedent; the child supplied 'go' without extra support.",
+      "outcome": "The 'go' exchange is part of a natural play routine rather than a scored accuracy target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_087": {
+      "domain": "Turning the truck around is a play action with the toy, not primarily a behavior-regulation event.",
+      "outcome": "In context, 'come back' is followed by turning the truck around, which completes the play instruction.",
+      "behavior": "The transcript directly shows the truck turning, so I used the visible play action."
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_005": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_010": {
+      "domain": "The main behavior is object or pretend play; the speech is secondary to the play activity.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_004": {
+      "domain": "The primary target is a functional action.",
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_013": {
+      "outcome": "I kept the outcome that best matches the visible resolution of the primary target.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_002": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_015": {
+      "outcome": "The adult clearly asked the child to roll the play-doh, but the child manipulated it in a different way.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_001": {
+      "domain": "The gesture is mainly being used to request, refuse, or obtain something, so I treated it as functional language.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_007": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_011": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_017": {
+      "prompt_level": "Direct physical assistance was used for the target behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_022": {
+      "domain": "Crying and disengagement are the clearest primary child behaviors in this segment.",
+      "modality": "I kept the modality that is directly supported by the child's communication channel.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_028": {
+      "domain": "I kept the domain that best matches the primary behavior in the segment.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_034": {
+      "domain": "The primary behavior is gross-motor movement.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_038": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_039": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_042": {
+      "prompt_level": "The adult supplied or demonstrated the target response for the child.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_049": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_056": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_020200.cha_seg_060": {
+      "domain": "The primary target is a functional action.",
+      "modality": "I kept the modality that is directly supported by the child's communication channel.",
+      "prompt_level": "Extra verbal support was added after the first opportunity.",
+      "outcome": "A clear cleanup instruction was given and the child walked away instead of completing it.",
+      "behavior": "I used cleanup as the primary target because it is the clearest unresolved task in the segment."
+    },
+    "sid_rollins_sid_020200.cha_seg_072": {
+      "domain": "Holding out the arms after the light-off instruction functions as a request for help, so the main communication is functional language.",
+      "outcome": "The child showed part of the target behavior, but the overall target was not fully met.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_021100.cha_seg_015": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_021100.cha_seg_040": {
+      "outcome": "The child pointed to the board to request the drawing addition, and the adult fulfilled that request by drawing the arms/hands.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_021100.cha_seg_053": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_003": {
+      "domain": "Pushing the Lego back functions as an interpersonal refusal; when both fit, social communication takes precedence.",
+      "outcome": "The primary behavior does not have a clear accuracy criterion.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_004": {
+      "domain": "The child points to the balloon location and participates in retrieving it, functioning as a practical request/communication about the object.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_008": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_013": {
+      "prompt_level": "The adult pointed to the target location before the child placed the person, so gestural support was used.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_014": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_017": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_025": {
+      "domain": "I kept the domain that best matches the primary behavior in the segment.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_026": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_036": {
+      "domain": "Holding the ladder out to the examiner functions as a practical request for help or action with the object.",
+      "outcome": "There is no identifiable target to score.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_054": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030200.cha_seg_055": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "sid_rollins_sid_030500.cha_seg_001": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_006": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_009": {
+      "domain": "The main child behavior is a functional request or information-seeking use of language.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_012": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_022": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_027": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_043": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_045": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_049": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_056": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_060": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_061": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_062": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_006": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_008": {
+      "outcome": "The child correctly said 'bear' after the model and later produced 'sleep' after the adult supplied it; the targets shown were achieved.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_009": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_015": {
+      "modality": "The child vocalized, but the vocalization was not recognizable speech.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_019": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_020": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_040": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_054": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_061": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_016": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_020": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_031009.cha_seg_002": {
+      "prompt_level": "The adult supplied or demonstrated the target response for the child.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_009": {
+      "outcome": "The exchange does not establish a clear accuracy target for the primary behavior.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_014": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_018": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_040715.cha_seg_003": {
+      "outcome": "The segment contains a clear target with only part of the target or task sequence completed.",
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    },
+    "stuart_flusberg_stuart_040715.cha_seg_007": {
+      "behavior": "Both describe the same child behavior; I kept the clearer, more transcript-grounded wording."
+    }
+  },
+  "n_decided": 503,
+  "incomplete_segments": []
+}

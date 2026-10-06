@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import enum
 from datetime import UTC, date, datetime
-from typing import Literal, Optional
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -54,6 +54,93 @@ class ExtractionStatus(str, enum.Enum):
     FAILED = "failed"
 
 
+class ControlConfidenceState(enum.StrEnum):
+    """Whether a control confidence exists, and if not, why.
+
+    ``None`` on this field means the provider does not participate in
+    control-confidence routing at all (the legacy contract). An explicit
+    ``NOT_AVAILABLE_*`` is a different claim: this provider does participate,
+    and it is telling you no confidence could be established. Downstream that
+    absence is insufficient evidence for automatic acceptance -- never
+    evidence of high confidence.
+    """
+
+    AVAILABLE = "available"
+    NOT_AVAILABLE_SHORT_CIRCUIT = "not_available_short_circuit"
+    NOT_AVAILABLE_ABSTAINED = "not_available_abstained"
+
+
+class ModelRole(enum.StrEnum):
+    """What a model did in producing a result.
+
+    Part of the shared contract rather than MARS-private: a single-model
+    provider records one generator, a composing provider records generators
+    and judges, and both use the same vocabulary.
+    """
+
+    GENERATOR = "generator"
+    JUDGE = "judge"
+
+
+class ModelDescriptor(BaseModel):
+    """One model invoked during extraction.
+
+    ``family`` is recorded alongside ``identifier`` so same-family
+    generator/judge overlap -- permitted, unlike exact overlap -- stays
+    measurable after the fact (MARS-020, MARS-027).
+    """
+
+    identifier: str
+    family: str = ""
+    config_hash: str = ""
+    role: ModelRole | None = None
+
+
+class ExtractionProvenance(BaseModel):
+    """How a result was obtained -- not what was observed.
+
+    Deliberately lives on ExtractionResult rather than StructuredObservation:
+    the observation describes the child's behavior, and derivation metadata
+    must not leak into the clinical record.
+
+    Every provider populates the same shape. A provider that generates
+    directly leaves ``judge_ids`` and ``ranking`` empty, which is an accurate
+    statement that judging did not occur rather than missing data.
+    """
+
+    provider_type: str
+    generator_ids: list[str] = Field(default_factory=list)
+    judge_ids: list[str] = Field(default_factory=list)
+    # One entry per valid judge, each an ordering of internal candidate ids.
+    ranking: list[list[str]] = Field(default_factory=list)
+
+    # Preserved separately so neither can be mistaken for the other, and so
+    # control_confidence's derivation stays auditable (MARS-022).
+    generator_confidence: float | None = Field(default=None, ge=0.0, le=1.0)
+    mars_selection_confidence: float | None = Field(default=None, ge=0.0, le=1.0)
+
+    # Selection evidence. Every field is present on every result, empty where
+    # its stage did not execute -- an abstention raised before judging is a
+    # complete record of what happened, not a truncated one.
+    candidate_count: int = 0
+    selected_internal_id: str | None = None
+    fused_scores: dict[str, float] = Field(default_factory=dict)
+    top_choice_support: float | None = None
+    modal_internal_ids: list[str] = Field(default_factory=list)
+    agreement_threshold: float | None = None
+    agreement_failure: str | None = None
+    diagnostic_statistics: dict[str, float] = Field(default_factory=dict)
+    seeds: dict[str, str] = Field(default_factory=dict)
+
+    # Every discarded input, so a rejection is auditable rather than invisible.
+    discarded_generators: list[list[str]] = Field(default_factory=list)
+    discarded_judges: list[list[str]] = Field(default_factory=list)
+
+    models: list[ModelDescriptor] = Field(default_factory=list)
+
+    details: dict[str, object] = Field(default_factory=dict)
+
+
 class ExtractionResult(BaseModel):
     """Output from the extraction provider.
 
@@ -63,6 +150,20 @@ class ExtractionResult(BaseModel):
 
     status: ExtractionStatus
     observations: list[StructuredObservation] = Field(default_factory=list)
+
+    # The single confidence deterministic validation gates on, whichever
+    # provider produced the result. A provider that generates directly sets
+    # it to the observation's own confidence; a composing provider combines
+    # its generator and selection confidences. Consumers depend on this
+    # value, never on how it was derived.
+    control_confidence: float | None = Field(default=None, ge=0.0, le=1.0)
+    # Distinguishes "no confidence could be established" from "this provider
+    # does not report one". Only the former forces review.
+    control_confidence_state: ControlConfidenceState | None = None
+
+    # Optional across all providers -- shape is identical, applicability differs.
+    provenance: ExtractionProvenance | None = None
+    reason_code: str | None = None
 
     # Provider metadata
     provider: str
@@ -75,18 +176,18 @@ class ExtractionResult(BaseModel):
     clarification_questions: list[str] = Field(default_factory=list)
 
     # Raw provenance for audit
-    raw_llm_response: Optional[str] = None
+    raw_llm_response: str | None = None
 
     # Processing metadata
-    extraction_duration_ms: Optional[int] = None
-    token_usage: Optional[dict[str, int]] = None
+    extraction_duration_ms: int | None = None
+    token_usage: dict[str, int] | None = None
 
 
 class ProviderInfo(BaseModel):
     """Metadata about an extraction provider."""
 
     name: str
-    provider_type: Literal["temporary_llm", "finetuned_model"]
+    provider_type: Literal["temporary_llm", "ollama", "finetuned_model"]
     model_id: str
     version: str
     is_available: bool = True

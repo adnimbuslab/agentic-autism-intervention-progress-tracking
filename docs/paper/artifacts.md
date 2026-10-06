@@ -1,0 +1,141 @@
+# Artefacts and reproduction
+
+Every quantity reported in `results_reliability.md` and derived in
+`reliability_mathematics.md` comes from a file listed below. This page is
+generated from `artifact_manifest.json` by
+`verify_artifacts.py --write-doc`; do not edit it by hand.
+
+## Reproduction
+
+The pipeline is deterministic from the frozen batch onward. Stage 1 calls
+models; nothing after it does.
+
+```
+# 1. batch construction (model calls; the batch is frozen and not regenerated)
+uv run python -m tests.eval.extraction.build_annotation_batch
+
+# 2. round 1 -- export blind sheets, import what the annotators return
+uv run python -m tests.eval.extraction.export_gold_sheet annotator_a annotator_b
+uv run python -m tests.eval.extraction.import_gold_sheet annotator_a --path <sheet>
+uv run python -m tests.eval.extraction.import_gold_sheet annotator_b --path <sheet>
+uv run python -m tests.eval.extraction.agreement_report annotator_a annotator_b
+
+# 3. codebook selection -- freezes round 1, issues round 2
+uv run python -m tests.eval.extraction.reissue_gold_sheet annotator_a annotator_b
+
+# 4. round 2 -- merge over the frozen round 1
+uv run python -m tests.eval.extraction.import_gold_sheet annotator_a --path <sheet> --merge
+uv run python -m tests.eval.extraction.import_gold_sheet annotator_b --path <sheet> --merge
+
+# 5. adjudication -- one sheet, one decision-maker
+uv run python -m tests.eval.extraction.export_adjudication_sheet annotator_a annotator_b
+uv run python -m tests.eval.extraction.import_adjudication_sheet --path <returned sheet>
+uv run python -m tests.eval.extraction.adjudicate annotator_a annotator_b \
+    --decisions results/adjudications.json --adjudicator "<who, and how>"
+uv run python -m tests.eval.extraction.score_against_gold --behavior-match excluded
+
+# 6. statistics and figures
+uv run python -m tests.eval.extraction.reliability_stats annotator_a annotator_b --round1
+uv run python -m tests.eval.extraction.reliability_stats annotator_a annotator_b
+uv run python -m tests.eval.extraction.round_comparison annotator_a annotator_b
+uv run python -m tests.eval.extraction.mars_selection_analysis
+uv run python -m tests.eval.reporting.groundedness
+uv run python -m tests.eval.extraction.paper_metrics
+uv run python docs/paper/make_manuscript.py
+uv run python docs/paper/make_figures.py
+
+# 7. check the prose against the data, and the data against the manifest
+uv run pytest tests/eval/extraction/test_manuscript_numbers.py
+uv run pytest tests/eval/extraction/test_extraction_results_numbers.py
+uv run python docs/paper/verify_artifacts.py
+```
+
+Seeds are fixed and recorded in the artefacts themselves: sheet ordering 42
+(round 1) and 4242 (round 2), bootstrap 20260915 at 10,000 replicates.
+
+## What is pinned
+
+Data artefacts are hashed: they are evidence, and a re-run under a changed seed
+or input would otherwise replace a reported number silently. Prose and figures
+are listed but not hashed -- they are rewritten whenever a number is added or a
+label is nudged, and a checksum failing on every honest edit teaches its reader
+to ignore it.
+
+`verify_artifacts.py` exits non-zero if a pinned file has moved. Re-record only
+when a re-run was intended:
+
+```
+uv run python docs/paper/verify_artifacts.py --record
+```
+
+
+## Pinned data artefacts
+
+| artefact | what it is | produced by | bytes | sha256 |
+|---|---|---|---:|---|
+| `tests/eval/extraction/results/annotation_batch.json` | Frozen annotation batch: 330 segments, 11 children, 3 generators | `build_annotation_batch` | 528,458 | `efd165f1c0dee0cb...` |
+| `tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_a_updated.csv` | Annotator A, round 1, returned sheet (primary data) | `annotator` | 156,441 | `2618ccacb715a1e4...` |
+| `tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_b_updated.csv` | Annotator B, round 1, returned sheet (primary data) | `annotator` | 152,567 | `d19b3c5e114f0ac3...` |
+| `tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_a_round2_updated.csv` | Annotator A, round 2, returned sheet (primary data) | `annotator` | 91,877 | `803dc5b430556252...` |
+| `tests/eval/extraction/results/annotation_sheets/gold_sheet_annotator_b_round2_updated.csv` | Annotator B, round 2, returned sheet (primary data) | `annotator` | 93,318 | `4a6ff5e43d39d1e4...` |
+| `tests/eval/extraction/results/gold_annotator_a_round1.json` | Annotator A gold values, round 1, frozen before the round-2 merge | `import_gold_sheet + reissue_gold_sheet freeze` | 171,837 | `7950fcec0c87908e...` |
+| `tests/eval/extraction/results/gold_annotator_b_round1.json` | Annotator B gold values, round 1, frozen before the round-2 merge | `import_gold_sheet + reissue_gold_sheet freeze` | 168,365 | `7b556f910ef86e6e...` |
+| `tests/eval/extraction/results/gold_annotator_a.json` | Annotator A gold values, merged (152 round-1 + 178 round-2) | `import_gold_sheet --merge` | 174,992 | `778e93971ae46bc2...` |
+| `tests/eval/extraction/results/gold_annotator_b.json` | Annotator B gold values, merged (152 round-1 + 178 round-2) | `import_gold_sheet --merge` | 174,986 | `e0abd2ff4fe1d130...` |
+| `tests/eval/extraction/results/reissue_round2_selection.json` | Round-2 selection: which conflicts sit on a codebook boundary, and why | `reissue_gold_sheet` | 74,207 | `caae573037e4ba6d...` |
+| `tests/eval/extraction/results/agreement_annotator_a_round1_annotator_b_round1.json` | Round-1 agreement report (kappa per field) | `agreement_report` | 17,638 | `e97c1918724bbb14...` |
+| `tests/eval/extraction/results/agreement_annotator_a_annotator_b.json` | Post-codebook agreement report (kappa per field) | `agreement_report` | 17,547 | `cc51a86f6e16f67a...` |
+| `tests/eval/extraction/results/reliability_round1.json` | Round-1 reliability: kappa, kappa_max, both intervals (Table R1) | `reliability_stats --round1` | 3,009 | `c04c52d3deb948ee...` |
+| `tests/eval/extraction/results/reliability_current.json` | Post-codebook reliability over the merged gold (Table R5) | `reliability_stats` | 2,999 | `8610afdeb79c471b...` |
+| `tests/eval/extraction/results/round_comparison.json` | Pre-registered before/after comparison, treated vs control (Table R4) | `round_comparison` | 8,335 | `2500dedd06b9400e...` |
+| `tests/eval/extraction/results/annotation_sheets/adjudication_sheet_updated.csv` | Returned adjudication sheet: 503 decisions with rationales (primary data) | `adjudicator (consensus of both annotators)` | 272,213 | `0e2a38568659b73a...` |
+| `tests/eval/extraction/results/adjudications.json` | Imported adjudication decisions | `import_adjudication_sheet` | 127,198 | `8f4a0790e9210290...` |
+| `tests/eval/extraction/results/gold_labels.json` | Adjudicated gold standard: 330 of 330 segments (Table 5) | `adjudicate --decisions` | 121,469 | `32327d787648dac9...` |
+| `tests/eval/extraction/results/scored_against_gold.json` | Per-generator judgements against gold, behavior excluded (Tables 6a-8) | `score_against_gold --behavior-match excluded` | 215,465 | `593674e34bcb9470...` |
+| `tests/eval/extraction/results/mars_outcomes.json` | MARS decisions over all 330 segments, 5-model judge roster | `run_mars` | 138,754 | `5310fdff92588266...` |
+| `tests/eval/extraction/results/mars_run_summary.json` | MARS run configuration and per-judge discard rates | `run_mars` | 1,374 | `b9b66b921a6984ec...` |
+| `tests/eval/extraction/results/mars_evaluation.json` | MARS accuracy, coverage, abstention profile, ceiling (Tables 9-10) | `mars_evaluation` | 1,190 | `0ca48149ada6eb78...` |
+| `tests/eval/reporting/results/reporting_groundedness.json` | Reporting-layer groundedness run; records the 11/11 fallback finding | `tests.eval.reporting.groundedness` | 10,167 | `e4e054275fb755ac...` |
+| `tests/eval/extraction/results/annotation_batch_augmented.json` | Frozen batch plus a generator added after annotation (qwen3:14b) | `add_generator` | 686,753 | `de0e6f66be4eb17e...` |
+| `tests/eval/extraction/results/scored_against_gold_augmented.json` | Four-generator judgements against the same gold | `score_against_gold --batch annotation_batch_augmented.json` | 279,917 | `19a60625f34824aa...` |
+| `tests/eval/extraction/results/holdout_set.json` | Model-independent held-out set: 132 segments, frozen before generation | `build_holdout_set` | 59,697 | `51960c8cc482879a...` |
+| `tests/eval/extraction/results/holdout_batch.json` | Four generators over the held-out set; membership frozen before any ran | `add_generator --out holdout_batch.json` | 277,471 | `2f4b41ed742f6e4e...` |
+| `tests/eval/extraction/results/gold_holdout_annotator_a.json` | Annotator A values over the held-out set, codebook from the first segment | `import_gold_sheet --segments holdout_set.json` | 73,723 | `aec54509e3a23214...` |
+| `tests/eval/extraction/results/gold_holdout_annotator_b.json` | Annotator B values over the held-out set, codebook from the first segment | `import_gold_sheet --segments holdout_set.json` | 71,153 | `b2ff833373565814...` |
+| `tests/eval/extraction/results/reliability_holdout.json` | Held-out first-pass reliability under the final protocol | `reliability_stats holdout_annotator_a holdout_annotator_b` | 3,019 | `a406bde1f02a64c6...` |
+| `tests/eval/extraction/results/annotation_sheets/holdout_adjudication_sheet_completed.csv` | Returned held-out adjudication sheet: 133 conflicted fields, all decided | `export_adjudication_sheet, completed by both annotators jointly` | 61,251 | `e48f22165d102df8...` |
+| `tests/eval/extraction/results/holdout_adjudications.json` | Held-out adjudication decisions imported from the returned sheet | `import_adjudication_sheet --path holdout_adjudication_sheet_completed.csv` | 21,776 | `64acd954c72ebe8f...` |
+| `tests/eval/extraction/results/gold_holdout_labels.json` | Held-out adjudicated reference standard: 132 of 132 segments, none lost | `adjudicate holdout_annotator_a holdout_annotator_b --out gold_holdout_labels.json` | 48,329 | `acd6b4f36ce3362f...` |
+| `tests/eval/extraction/results/scored_holdout.json` | Four-generator judgements against held-out gold, behavior excluded | `score_against_gold --gold gold_holdout_labels.json --batch holdout_batch.json` | 113,367 | `f85d63bdd959cb68...` |
+| `tests/eval/extraction/results/holdout_metrics.json` | Batch vs held-out accuracy and unsupported assertion, same scoring policy | `holdout_metrics` | 14,861 | `17fb997ba28907b3...` |
+| `tests/eval/extraction/results/paper_metrics.json` | Consolidated paper-ready metrics, derived from the artefacts above | `paper_metrics` | 17,243 | `c4886ee99c6e90b6...` |
+| `tests/eval/extraction/results/mars_selection_analysis.json` | Per-field selection quality vs both baselines (Tables 11-12) | `mars_selection_analysis` | 4,376 | `4a7cddcebde27c79...` |
+| `tests/eval/extraction/results/mars_branch_replay.json` | Candidate-stage branch distribution and judge-roster comparison | `mars_branch_replay` | 3,685 | `33466b195d7413d6...` |
+
+## Prose and figures (listed, not pinned)
+
+| artefact | what it is | produced by |
+|---|---|---|
+| `docs/annotation_codebook.md` | The three rules, with decision tests and worked examples | `written` |
+| `docs/paper/results_reliability.md` | Manuscript section: reliability methods, results, limitations | `written` |
+| `docs/paper/results_extraction.md` | Manuscript section: extraction/MARS methods and gold-standard results | `written` |
+| `docs/paper/reliability_mathematics.md` | Derivations and worked calculations on the study's own data | `written` |
+| `docs/paper/figures/fig10_reliability_round1.png` | Figure 10 - round-1 kappa against the marginal ceiling | `make_figures` |
+| `docs/paper/figures/fig11_confusion_round1.png` | Figure 11 - annotator confusion, boundary cells outlined | `make_figures` |
+| `docs/paper/figures/fig12_conflict_decomposition.png` | Figure 12 - conflicts by cause | `make_figures` |
+| `docs/paper/figures/fig13_round_comparison.png` | Figure 13 - reliability before and after, with the control arm | `make_figures` |
+| `docs/paper/figures/fig14_protocol.png` | Figure 14 - two-round protocol with realised counts | `make_figures` |
+| `docs/paper/figures/fig15_codebook_rules.png` | Figure 15 - the three rules as decision tests | `make_figures` |
+| `docs/paper/figures/fig16_field_accuracy.png` | Figure 16 - agreement with the reference standard, split by whether the standard records a value | `make_figures` |
+| `docs/paper/figures/fig17_unsupported.png` | Figure 17 - values asserted where the transcript supports none | `make_figures` |
+| `docs/paper/figures/fig18_record_ceiling.png` | Figure 18 - whole-record accuracy and the selection ceiling | `make_figures` |
+| `docs/paper/figures/fig19_behavior_overlap.png` | Figure 19 - free-text behavior against the human reference band | `make_figures` |
+| `docs/paper/figures/fig20_mars_outcomes.png` | Figure 20 - MARS outcomes and comparison against the best generator | `make_figures` |
+| `docs/paper/figures/fig21_selection.png` | Figure 21 - selection quality against both baselines | `make_figures` |
+| `docs/paper/figures/fig22_extended_roster.png` | Figure 22 - four-generator agreement and the abstention trade-off | `make_figures` |
+| `docs/paper/figures/response/r2_holdout_selection_effect.png` | Response figure - batch vs held-out agreement and unsupported assertion | `make_response_figures` |
+| `docs/paper/figures/response/r3_reporting_governance.png` | Response figure - what the reporting governance check found | `make_response_figures` |
+| `docs/paper/figures/response/r4_field_scope.png` | Response figure - evaluation scope against analytics scope | `make_response_figures` |
+| `docs/paper/figures/response/r5_contribution_hierarchy.png` | Response figure - the contribution hierarchy | `make_response_figures` |
+| `docs/paper/Reviewer_Response.docx` | Point-by-point response to the strict-reviewer assessment, all 12 issues | `make_reviewer_response` |
+| `docs/paper/Manuscript_Working_Draft.docx` | Working-draft manuscript, assembled from the artefacts above | `make_manuscript` |

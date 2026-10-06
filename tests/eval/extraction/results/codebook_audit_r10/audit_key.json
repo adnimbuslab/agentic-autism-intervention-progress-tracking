@@ -1,0 +1,3954 @@
+{
+  "brett_flusberg_brett_050800.cha_seg_020": {
+    "audit_id": "A139",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "brett_flusberg_brett_050800.cha_seg_040": {
+    "audit_id": "A084",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "brett_flusberg_brett_050800.cha_seg_066": {
+    "audit_id": "A048",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_051002.cha_seg_014": {
+    "audit_id": "A078",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "incorrect",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_051002.cha_seg_016": {
+    "audit_id": "A063",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_051002.cha_seg_033": {
+    "audit_id": "A107",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_051002.cha_seg_035": {
+    "audit_id": "A011",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_051002.cha_seg_040": {
+    "audit_id": "A126",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_051002.cha_seg_055": {
+    "audit_id": "A101",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "brett_flusberg_brett_051002.cha_seg_063": {
+    "audit_id": "A053",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "brett_flusberg_brett_060207.cha_seg_006": {
+    "audit_id": "A150",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_060207.cha_seg_011": {
+    "audit_id": "A037",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_060406.cha_seg_001": {
+    "audit_id": "A086",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "brett_flusberg_brett_060622.cha_seg_009": {
+    "audit_id": "A046",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "brett_flusberg_brett_060819.cha_seg_007": {
+    "audit_id": "A052",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "approximation",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "approximation"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_060819.cha_seg_017": {
+    "audit_id": "A032",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_060819.cha_seg_020": {
+    "audit_id": "A058",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_060819.cha_seg_022": {
+    "audit_id": "A113",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_060819.cha_seg_024": {
+    "audit_id": "A061",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "brett_flusberg_brett_060819.cha_seg_025": {
+    "audit_id": "A074",
+    "child_id": "brett",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "carl_rollins_carl_020800.cha_seg_035": {
+    "audit_id": "A079",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "carl_rollins_carl_021100.cha_seg_029": {
+    "audit_id": "A004",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "carl_rollins_carl_021100.cha_seg_043": {
+    "audit_id": "A009",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "carl_rollins_carl_021100.cha_seg_050": {
+    "audit_id": "A128",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "carl_rollins_carl_021100.cha_seg_064": {
+    "audit_id": "A025",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "carl_rollins_carl_021100.cha_seg_070": {
+    "audit_id": "A035",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "carl_rollins_carl_021100.cha_seg_085": {
+    "audit_id": "A091",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "carl_rollins_carl_030700.cha_seg_005": {
+    "audit_id": "A129",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "carl_rollins_carl_030700.cha_seg_021": {
+    "audit_id": "A021",
+    "child_id": "carl",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_006": {
+    "audit_id": "A005",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "unknown",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_008": {
+    "audit_id": "A029",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_010": {
+    "audit_id": "A064",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_019": {
+    "audit_id": "A014",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_025": {
+    "audit_id": "A055",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_037": {
+    "audit_id": "A124",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "incorrect",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_046": {
+    "audit_id": "A080",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_064": {
+    "audit_id": "A044",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_065": {
+    "audit_id": "A118",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_074": {
+    "audit_id": "A066",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_060900.cha_seg_076": {
+    "audit_id": "A098",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_061028.cha_seg_019": {
+    "audit_id": "A123",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "jack_flusberg_jack_070106.cha_seg_004": {
+    "audit_id": "A040",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "incorrect",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_070106.cha_seg_009": {
+    "audit_id": "A142",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "jack_flusberg_jack_070315.cha_seg_002": {
+    "audit_id": "A134",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "approximation",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "approximation",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "jack_flusberg_jack_071001.cha_seg_022": {
+    "audit_id": "A143",
+    "child_id": "jack",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "josh_rollins_josh_020500.cha_seg_043": {
+    "audit_id": "A010",
+    "child_id": "josh",
+    "retained": {
+      "modality": "gestural",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "josh_rollins_josh_020800.cha_seg_010": {
+    "audit_id": "A031",
+    "child_id": "josh",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "josh_rollins_josh_020800.cha_seg_048": {
+    "audit_id": "A039",
+    "child_id": "josh",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "josh_rollins_josh_021100.cha_seg_024": {
+    "audit_id": "A012",
+    "child_id": "josh",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "no_response",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "josh_rollins_josh_021100.cha_seg_040": {
+    "audit_id": "A133",
+    "child_id": "josh",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070700.cha_seg_019": {
+    "audit_id": "A119",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070700.cha_seg_055": {
+    "audit_id": "A088",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070700.cha_seg_059": {
+    "audit_id": "A075",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070700.cha_seg_071": {
+    "audit_id": "A105",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "incorrect",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070700.cha_seg_074": {
+    "audit_id": "A072",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070812.cha_seg_001": {
+    "audit_id": "A087",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070812.cha_seg_004": {
+    "audit_id": "A022",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070812.cha_seg_017": {
+    "audit_id": "A050",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "mark_flusberg_mark_070812.cha_seg_046": {
+    "audit_id": "A115",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_070812.cha_seg_059": {
+    "audit_id": "A151",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_071026.cha_seg_018": {
+    "audit_id": "A006",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080224.cha_seg_001": {
+    "audit_id": "A045",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "mark_flusberg_mark_080224.cha_seg_004": {
+    "audit_id": "A083",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080224.cha_seg_013": {
+    "audit_id": "A028",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080224.cha_seg_015": {
+    "audit_id": "A144",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080700.cha_seg_001": {
+    "audit_id": "A149",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080700.cha_seg_002": {
+    "audit_id": "A092",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080700.cha_seg_003": {
+    "audit_id": "A077",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080700.cha_seg_009": {
+    "audit_id": "A089",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "mark_flusberg_mark_080700.cha_seg_017": {
+    "audit_id": "A108",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080915.cha_seg_005": {
+    "audit_id": "A020",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080915.cha_seg_010": {
+    "audit_id": "A109",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "unknown",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mark_flusberg_mark_080915.cha_seg_011": {
+    "audit_id": "A007",
+    "child_id": "mark",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mars_rollins_mars_030100.cha_seg_042": {
+    "audit_id": "A019",
+    "child_id": "mars",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mars_rollins_mars_030300.cha_seg_001": {
+    "audit_id": "A131",
+    "child_id": "mars",
+    "retained": {
+      "modality": "unknown",
+      "outcome": null,
+      "prompt_level": null
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      }
+    }
+  },
+  "mars_rollins_mars_030300.cha_seg_004": {
+    "audit_id": "A137",
+    "child_id": "mars",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "mars_rollins_mars_030300.cha_seg_006": {
+    "audit_id": "A130",
+    "child_id": "mars",
+    "retained": {
+      "modality": "unknown",
+      "outcome": "unknown",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "mars_rollins_mars_030300.cha_seg_039": {
+    "audit_id": "A103",
+    "child_id": "mars",
+    "retained": {
+      "modality": null,
+      "outcome": "approximation",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": null,
+        "annotator_b": "written"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "approximation"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "mars_rollins_mars_030300.cha_seg_044": {
+    "audit_id": "A017",
+    "child_id": "mars",
+    "retained": {
+      "modality": "unknown",
+      "outcome": null,
+      "prompt_level": null
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      }
+    }
+  },
+  "mars_rollins_mars_030300.cha_seg_054": {
+    "audit_id": "A013",
+    "child_id": "mars",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "mars_rollins_mars_030600.cha_seg_005": {
+    "audit_id": "A073",
+    "child_id": "mars",
+    "retained": {
+      "modality": "gestural",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "correct",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_019": {
+    "audit_id": "A071",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_021": {
+    "audit_id": "A082",
+    "child_id": "rick",
+    "retained": {
+      "modality": "unknown",
+      "outcome": "no_response",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "no_response",
+        "annotator_b": "no_response"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_029": {
+    "audit_id": "A146",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_034": {
+    "audit_id": "A148",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_039": {
+    "audit_id": "A024",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_062": {
+    "audit_id": "A127",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_063": {
+    "audit_id": "A036",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_071": {
+    "audit_id": "A132",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_089": {
+    "audit_id": "A152",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_040700.cha_seg_096": {
+    "audit_id": "A027",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_050904.cha_seg_005": {
+    "audit_id": "A145",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_050904.cha_seg_013": {
+    "audit_id": "A038",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "approximation",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "approximation",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "rick_flusberg_rick_050904.cha_seg_023": {
+    "audit_id": "A057",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "rick_flusberg_rick_060107.cha_seg_002": {
+    "audit_id": "A111",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "rick_flusberg_rick_060308.cha_seg_003": {
+    "audit_id": "A018",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_060308.cha_seg_005": {
+    "audit_id": "A094",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "rick_flusberg_rick_060818.cha_seg_008": {
+    "audit_id": "A043",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "incorrect",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_060818.cha_seg_013": {
+    "audit_id": "A054",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_061012.cha_seg_007": {
+    "audit_id": "A042",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_061012.cha_seg_008": {
+    "audit_id": "A141",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "rick_flusberg_rick_061012.cha_seg_013": {
+    "audit_id": "A069",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_070013.cha_seg_004": {
+    "audit_id": "A147",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "rick_flusberg_rick_070013.cha_seg_006": {
+    "audit_id": "A068",
+    "child_id": "rick",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_011": {
+    "audit_id": "A093",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_013": {
+    "audit_id": "A081",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_019": {
+    "audit_id": "A016",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_027": {
+    "audit_id": "A106",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "unknown",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_066": {
+    "audit_id": "A112",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_070": {
+    "audit_id": "A008",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "incorrect",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_018": {
+    "audit_id": "A121",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "incorrect",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_022": {
+    "audit_id": "A100",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_034": {
+    "audit_id": "A135",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_042": {
+    "audit_id": "A120",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_003": {
+    "audit_id": "A049",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_011": {
+    "audit_id": "A041",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_013": {
+    "audit_id": "A140",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_040518.cha_seg_018": {
+    "audit_id": "A001",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_001": {
+    "audit_id": "A110",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_041007.cha_seg_006": {
+    "audit_id": "A023",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_009": {
+    "audit_id": "A090",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_010": {
+    "audit_id": "A060",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "correct",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_flusberg_flusberg_roger_flusberg_050006.cha_seg_014": {
+    "audit_id": "A085",
+    "child_id": "roger_flusberg",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_001": {
+    "audit_id": "A070",
+    "child_id": "roger_rollins",
+    "retained": {
+      "modality": "gestural",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_037": {
+    "audit_id": "A076",
+    "child_id": "roger_rollins",
+    "retained": {
+      "modality": "gestural",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_060": {
+    "audit_id": "A116",
+    "child_id": "roger_rollins",
+    "retained": {
+      "modality": "gestural",
+      "outcome": "correct",
+      "prompt_level": "gestural"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      }
+    }
+  },
+  "roger_rollins_rollins_roger_rollins_020600.cha_seg_062": {
+    "audit_id": "A117",
+    "child_id": "roger_rollins",
+    "retained": {
+      "modality": "gestural",
+      "outcome": "correct",
+      "prompt_level": "gestural"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      }
+    }
+  },
+  "roger_rollins_rollins_roger_rollins_020800.cha_seg_005": {
+    "audit_id": "A104",
+    "child_id": "roger_rollins",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_004": {
+    "audit_id": "A102",
+    "child_id": "roger_rollins",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "roger_rollins_rollins_roger_rollins_021000.cha_seg_013": {
+    "audit_id": "A015",
+    "child_id": "roger_rollins",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": "correct",
+      "prompt_level": "gestural"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "correct",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      }
+    }
+  },
+  "sid_rollins_sid_021100.cha_seg_015": {
+    "audit_id": "A067",
+    "child_id": "sid",
+    "retained": {
+      "modality": "multimodal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "multimodal",
+        "annotator_b": "multimodal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "sid_rollins_sid_030200.cha_seg_026": {
+    "audit_id": "A138",
+    "child_id": "sid",
+    "retained": {
+      "modality": "gestural",
+      "outcome": "unknown",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "gestural",
+        "annotator_b": "gestural"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_009": {
+    "audit_id": "A114",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": null,
+      "prompt_level": "independent"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": null,
+        "annotator_b": null
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "independent",
+        "annotator_b": "independent"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_027": {
+    "audit_id": "A059",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_043": {
+    "audit_id": "A122",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_045": {
+    "audit_id": "A056",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_049": {
+    "audit_id": "A096",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "partial",
+        "annotator_b": "partial"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_056": {
+    "audit_id": "A003",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "incorrect",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "incorrect",
+        "annotator_b": "incorrect"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_060": {
+    "audit_id": "A047",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_061": {
+    "audit_id": "A095",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030400.cha_seg_062": {
+    "audit_id": "A034",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_008": {
+    "audit_id": "A099",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_009": {
+    "audit_id": "A065",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_015": {
+    "audit_id": "A033",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "unknown",
+      "outcome": "unknown",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "unknown",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "unknown",
+        "annotator_b": "unknown"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_019": {
+    "audit_id": "A062",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_020": {
+    "audit_id": "A136",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_040": {
+    "audit_id": "A097",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_041": {
+    "audit_id": "A051",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030610.cha_seg_061": {
+    "audit_id": "A002",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_030806.cha_seg_020": {
+    "audit_id": "A125",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "verbal"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_040306.cha_seg_018": {
+    "audit_id": "A026",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "correct",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "round1_agreed",
+        "annotator_a": "correct",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  },
+  "stuart_flusberg_stuart_040715.cha_seg_003": {
+    "audit_id": "A030",
+    "child_id": "stuart",
+    "retained": {
+      "modality": "verbal",
+      "outcome": "partial",
+      "prompt_level": "model"
+    },
+    "provenance": {
+      "modality": {
+        "source": "round1_agreed",
+        "annotator_a": "verbal",
+        "annotator_b": "verbal"
+      },
+      "outcome": {
+        "source": "adjudicated_round1_conflict",
+        "annotator_a": "partial",
+        "annotator_b": "correct"
+      },
+      "prompt_level": {
+        "source": "round1_agreed",
+        "annotator_a": "model",
+        "annotator_b": "model"
+      }
+    }
+  }
+}

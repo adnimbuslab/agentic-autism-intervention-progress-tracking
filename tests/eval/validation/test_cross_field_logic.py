@@ -40,6 +40,7 @@ engine = ValidationEngine()
 
 @pytest.mark.eval
 class TestCrossFieldLogic:
+    # @spec VALID-020
     def test_verbal_modality_without_speech_words_warns(self) -> None:
         obs = _make_observation(modality=Modality.VERBAL, behavior="Child reached for cookie")
         result = engine.validate(obs)
@@ -67,6 +68,7 @@ class TestCrossFieldLogic:
         ]
         assert len(modality_warnings) == 0
 
+    # @spec VALID-021
     def test_independent_prompt_with_context_warns(self) -> None:
         obs = _make_observation(
             prompt_level=PromptLevel.INDEPENDENT,
@@ -88,6 +90,7 @@ class TestCrossFieldLogic:
         ]
         assert len(prompt_warnings) == 0
 
+    # @spec VALID-022
     def test_outcome_present_behavior_missing_errors(self) -> None:
         obs = _make_observation(outcome=Outcome.CORRECT, behavior=None)
         result = engine.validate(obs)

@@ -1,0 +1,1525 @@
+﻿segment_id,child_id,field,transcript,annotator_a,annotator_b,codebook_rule,decision,notes
+brett_flusberg_brett_050800.cha_seg_081,brett,behavior,"*MOT:	what did the gate do ?
+*CHI:	gate .
+*CHI:	Old_McDonald had a farm eei [/] eei , oh .
+*MOT:	and on this farm .
+*CHI:	I hafta fix it .
+*CHI:	no .",Repeated 'gate' and then talked about fixing it instead of answering what the gate did.,Gave an off-target answer when asked what the gate did.,,,
+brett_flusberg_brett_051002.cha_seg_028,brett,domain,"*MOT:	okay ?
+*CHI:	I put it together .
+*MOT:	I mean +/.
+*MOT:	you did !
+*MOT:	who did ?
+*CHI:	I did .
+*MOT:	good working .
+*MOT:	hey [/] [NAME] , how many babys are in that picture ?",social_communication,language,,,
+brett_flusberg_brett_051002.cha_seg_028,brett,behavior,"*MOT:	okay ?
+*CHI:	I put it together .
+*MOT:	I mean +/.
+*MOT:	you did !
+*MOT:	who did ?
+*CHI:	I did .
+*MOT:	good working .
+*MOT:	hey [/] [NAME] , how many babys are in that picture ?",Said he had put it together and answered 'I did' when asked who did it.,Answered 'I did' when asked who put it together.,,,
+brett_flusberg_brett_051002.cha_seg_089,brett,behavior,"*MOT:	what am I doing ?
+*CHI:	you're washing the salad .
+*MOT:	yeah +/.
+*MOT:	what am I doing ?
+*CHI:	you are +/.
+*CHI:	you are washing the salad .
+*MOT:	what are you doing ?
+*CHI:	I am +/.",Answered action questions about washing the salad but left the final self-action answer incomplete.,Answered questions about washing the salad but left the last answer unfinished.,,,
+brett_flusberg_brett_060011.cha_seg_033,brett,outcome,"*MOT:	what are we gonna make ?
+*CHI:	these .
+*MOT:	you wanna make swirls ?
+*CHI:	yes .
+*CHI:	want three swirls .
+*MOT:	alright .
+*MOT:	let me see you make a swirl .
+*CHI:	xxx .",unknown,correct,"Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",,
+brett_flusberg_brett_060011.cha_seg_033,brett,behavior,"*MOT:	what are we gonna make ?
+*CHI:	these .
+*MOT:	you wanna make swirls ?
+*CHI:	yes .
+*CHI:	want three swirls .
+*MOT:	alright .
+*MOT:	let me see you make a swirl .
+*CHI:	xxx .",Said he wanted three swirls during the clay activity.,Asked for three swirls during the clay activity.,,,
+brett_flusberg_brett_060207.cha_seg_014,brett,behavior,"*MOT:	why are they trying to put the fire out ?
+*CHI:	with water .
+*MOT:	no , why ?
+*CHI:	well , because the building is burning .
+*MOT:	exactly !
+*MOT:	boy are you +/.
+*CHI:	the fire is bad's@n dangerous .
+*MOT:	it sure is [NAME] .",Explained that the building fire should be put out because the building was burning.,Explained that the fire should be put out because the building was burning.,,,
+brett_flusberg_brett_060622.cha_seg_012,brett,prompt_level,"*MOT:	why are you gonna make christmas trees in the play-doh ?
+*CHI:	because it was fun .
+*MOT:	because it's fun .
+*MOT:	but how ?
+*MOT:	what do you do with this thing ?
+*CHI:	flat the play-doh .
+*CHI:	cut the play-doh .
+*MOT:	<oh oh> [/] okay .",independent,verbal,"Codebook 3 -- the turn creating the opportunity is an antecedent, not a prompt; child-initiated is independent; most-supportive level wins",,
+brett_flusberg_brett_060622.cha_seg_012,brett,behavior,"*MOT:	why are you gonna make christmas trees in the play-doh ?
+*CHI:	because it was fun .
+*MOT:	because it's fun .
+*MOT:	but how ?
+*MOT:	what do you do with this thing ?
+*CHI:	flat the play-doh .
+*CHI:	cut the play-doh .
+*MOT:	<oh oh> [/] okay .",Explained how to use the play-doh tool by saying to flatten and cut the play-doh.,Explained how to use the play-doh tool by flattening and cutting the play-doh.,,,
+brett_flusberg_brett_060622.cha_seg_021,brett,behavior,"*MOT:	what else did he put in his cart ?
+*CHI:	xxx many cl +/.
+*MOT:	did he put in games or hats or lollipops or puppies or +/.
+*MOT:	what else did he put in his cart ?
+*MOT:	what else did Santa buy at the store ?
+*CHI:	new clothes .
+*MOT:	yeah , but what else , he bought new clothes and +/.
+*MOT:	what else did he buy besides all his new clothes ?",Recalled that Santa bought new clothes but did not supply another requested item.,Recalled new clothes but did not provide another requested item.,,,
+brett_flusberg_brett_060819.cha_seg_016,brett,behavior,"*MOT:	before you press the button .
+*CHI:	<throw the> [/] the sweeper comes and takes them .
+*MOT:	no , what do you do ?
+*MOT:	what do you do ?
+*MOT:	what do you do to try and get the pins to fall down ?
+*CHI:	a ball .
+*MOT:	you throw the ball .
+*MOT:	where do you throw it ?",Identified the ball after repeated questions about how to knock the pins down.,Named a relevant object after repeated questions about how to knock the pins down.,,,
+brett_flusberg_brett_070517.cha_seg_006,brett,prompt_level,"*MOT:	what happened to my things ?
+*CHI:	they're at the xxx .
+*MOT:	they're a blub@b ?
+*CHI:	that's the play+room .
+*MOT:	looks like it .
+*MOT:	what happened to my things inside their house ?
+*CHI:	xxx xxx nice .
+*MOT:	that's nice ?",verbal,independent,"Codebook 3 -- the turn creating the opportunity is an antecedent, not a prompt; child-initiated is independent; most-supportive level wins",,
+brett_flusberg_brett_070517.cha_seg_006,brett,behavior,"*MOT:	what happened to my things ?
+*CHI:	they're at the xxx .
+*MOT:	they're a blub@b ?
+*CHI:	that's the play+room .
+*MOT:	looks like it .
+*MOT:	what happened to my things inside their house ?
+*CHI:	xxx xxx nice .
+*MOT:	that's nice ?",Gave partly unclear answers to repeated questions about where the things were.,Gave partly unclear answers about where the things were.,,,
+carl_rollins_carl_020800.cha_seg_034,carl,domain,"*INV:	that's what a pg makes .
+%spa:	$NIA:ST
+%act:	sets the pig down
+*CHI:	0 .
+%act:	plays with the pig
+*INV:	0 .
+%act:	gets the horse
+*INV:	move his legs .
+%spa:	$NIA:SI
+%act:	moves the horse's leg
+*INV:	move his legs .
+%spa:	$NIA:SI
+%act:	moves the horse's leg
+*CHI:	0 .
+%act:	moves the horse's leg
+*INV:	good .
+%spa:	$NIA:AP
+*CHI:	0 .
+%act:	looks off",play,motor,,,
+carl_rollins_carl_020800.cha_seg_048,carl,domain,"*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	who are you talking to ?
+%spa:	$DCC:QN
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	reaches across table and knocks the man out of the tractor
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	gets the tractor
+*INV:	I'll get the farmer .
+%spa:	$NIA:SI
+%act:	stands to reach the farmer for him
+*CHI:	0 .
+%act:	plays with the sheep in the tractor",language,play,,,
+carl_rollins_carl_020800.cha_seg_048,carl,modality,"*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	who are you talking to ?
+%spa:	$DCC:QN
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	reaches across table and knocks the man out of the tractor
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	gets the tractor
+*INV:	I'll get the farmer .
+%spa:	$NIA:SI
+%act:	stands to reach the farmer for him
+*CHI:	0 .
+%act:	plays with the sheep in the tractor",unknown,none,"Codebook 1 -- gestural is a communicative gesture, not physical handling; multimodal needs two message-bearing channels; unknown vs none",,
+carl_rollins_carl_020800.cha_seg_048,carl,outcome,"*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	who are you talking to ?
+%spa:	$DCC:QN
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	reaches across table and knocks the man out of the tractor
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	gets the tractor
+*INV:	I'll get the farmer .
+%spa:	$NIA:SI
+%act:	stands to reach the farmer for him
+*CHI:	0 .
+%act:	plays with the sheep in the tractor",unknown,none,"Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",,
+carl_rollins_carl_020800.cha_seg_048,carl,behavior,"*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	who are you talking to ?
+%spa:	$DCC:QN
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	reaches across table and knocks the man out of the tractor
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	gets the tractor
+*INV:	I'll get the farmer .
+%spa:	$NIA:SI
+%act:	stands to reach the farmer for him
+*CHI:	0 .
+%act:	plays with the sheep in the tractor",Responded to a question with jargon or unclear speech while continuing tractor play.,Handled the tractor and sheep while making jargon sounds.,,,
+carl_rollins_carl_021100.cha_seg_045,carl,behavior,"*INV:	that's right .
+%spa:	$NIA:AP
+%gpx:	nods
+*CHI:	0 .
+%act:	starts stacking the cards
+*INV:	done .
+%spa:	$DJF:ST
+%gpx:	points to a card
+*CHI:	done .
+%spa:	$DJF:RT:WDE
+*INV:	let's put (th)em away .
+%spa:	$NIA:RP
+*CHI:	away .
+%spa:	$NIA:RT:WDE
+%act:	stacks the last card
+*CHI:	bi(cycle) .
+%spa:	$DJF:ST:WD
+*INV:	0on 0the shelf .
+%spa:	$NIA:RP",Said 'away' and stacked the last card during cleanup.,Stacked the last card after the cleanup instruction but did not put the cards on the shelf.,,,
+carl_rollins_carl_021100.cha_seg_047,carl,modality,"*INV:	now we needta put your bucket on the shelf .
+%spa:	$NIA:RP
+%gpx:	points to the bucket
+*CHI:	the shelf [?] .
+%spa:	$NIA:RT:WDE
+%act:	goes to the bucket and grabs it by the lid
+*INV:	pick it up here .
+%spa:	$NIA:RP
+%gpx:	taps the bottom of the bucket
+*CHI:	up .
+%spa:	$NIA:SI:WD
+%act:	lifts the bucket
+*INV:	up [>] ?
+%spa:	$NIA:RT
+*CHI:	up [<] .
+%spa:	$NIA:RT:WD
+*INV:	okay .
+%spa:	$NIA:AD
+*INV:	I'll do it .
+%spa:	$NIA:SI
+%act:	puts the bucket on the shelf",none,verbal,,,
+carl_rollins_carl_021100.cha_seg_047,carl,behavior,"*INV:	now we needta put your bucket on the shelf .
+%spa:	$NIA:RP
+%gpx:	points to the bucket
+*CHI:	the shelf [?] .
+%spa:	$NIA:RT:WDE
+%act:	goes to the bucket and grabs it by the lid
+*INV:	pick it up here .
+%spa:	$NIA:RP
+%gpx:	taps the bottom of the bucket
+*CHI:	up .
+%spa:	$NIA:SI:WD
+%act:	lifts the bucket
+*INV:	up [>] ?
+%spa:	$NIA:RT
+*CHI:	up [<] .
+%spa:	$NIA:RT:WD
+*INV:	okay .
+%spa:	$NIA:AD
+*INV:	I'll do it .
+%spa:	$NIA:SI
+%act:	puts the bucket on the shelf",Lifted the bucket after added directions but the adult ultimately put it on the shelf.,"Lifted the bucket after added directions, but the adult put it on the shelf.",,,
+carl_rollins_carl_021100.cha_seg_065,carl,behavior,"*INV:	yummy says the horsie .
+%spa:	$DFW:ST
+*CHI:	0 .
+%act:	rubs his tummy
+*INV:	yummy .
+%spa:	$DFW:ST
+%act:	rubs his tummy
+*INV:	thank you .
+%spa:	$DFW:ST
+*CHI:	0 .
+%act:	picks up another horse and makes him eat
+*INV:	that horse is hungry too ?
+%spa:	$DFW:YQ
+*INV:	xxx . [+ trn]
+%spa:	$DFW:PR
+%act:	pretends to eat him
+*CHI:	&=laughs .",Used the horse in pretend eating play and made another horse eat.,Made another horse eat during pretend play.,,,
+carl_rollins_carl_021100.cha_seg_078,carl,domain,"*INV:	face will surely show it .
+%spa:	$PRO:PR
+*CHI:	&=laughs .
+%act:	stands and plays with the barn
+*INV:	if you're happy and you know it .
+%spa:	$PRO:PR
+*CHI:	rooster .
+%spa:	$DHA:ST:WD
+*INV:	what ?
+%spa:	$DCC:RR
+*CHI:	rooster .
+%spa:	$DHA:ST:WD
+%act:	gets a rooster out of the barn",language,play,,,
+carl_rollins_carl_021100.cha_seg_078,carl,behavior,"*INV:	face will surely show it .
+%spa:	$PRO:PR
+*CHI:	&=laughs .
+%act:	stands and plays with the barn
+*INV:	if you're happy and you know it .
+%spa:	$PRO:PR
+*CHI:	rooster .
+%spa:	$DHA:ST:WD
+*INV:	what ?
+%spa:	$DCC:RR
+*CHI:	rooster .
+%spa:	$DHA:ST:WD
+%act:	gets a rooster out of the barn",Repeated 'rooster' and took a rooster from the barn.,Spontaneously labeled a rooster and took it from the barn.,,,
+carl_rollins_carl_030000.cha_seg_006,carl,domain,"*INV:	can we put (th)em back ?
+%spa:	$NIA:RP
+*CHI:	a [=? the] [*] door .
+%spa:	$DJF:ST:WD
+%act:	puts the door back on
+*INV:	there's the door .
+%spa:	$DJF:AP
+*CHI:	yyy bird .
+%spa:	$DJF:ST:WD
+%act:	puts a piece in
+*CHI:	bye .
+%spa:	$PRO:MK:WD
+*INV:	bye birdie .
+%spa:	$PRO:MK
+*CHI:	0 .
+%act:	takes the piece back out",cognitive,adaptive,,,
+carl_rollins_carl_030000.cha_seg_006,carl,modality,"*INV:	can we put (th)em back ?
+%spa:	$NIA:RP
+*CHI:	a [=? the] [*] door .
+%spa:	$DJF:ST:WD
+%act:	puts the door back on
+*INV:	there's the door .
+%spa:	$DJF:AP
+*CHI:	yyy bird .
+%spa:	$DJF:ST:WD
+%act:	puts a piece in
+*CHI:	bye .
+%spa:	$PRO:MK:WD
+*INV:	bye birdie .
+%spa:	$PRO:MK
+*CHI:	0 .
+%act:	takes the piece back out",verbal,none,,,
+carl_rollins_carl_030000.cha_seg_006,carl,behavior,"*INV:	can we put (th)em back ?
+%spa:	$NIA:RP
+*CHI:	a [=? the] [*] door .
+%spa:	$DJF:ST:WD
+%act:	puts the door back on
+*INV:	there's the door .
+%spa:	$DJF:AP
+*CHI:	yyy bird .
+%spa:	$DJF:ST:WD
+%act:	puts a piece in
+*CHI:	bye .
+%spa:	$PRO:MK:WD
+*INV:	bye birdie .
+%spa:	$PRO:MK
+*CHI:	0 .
+%act:	takes the piece back out","Put some pieces back while naming them, then took one piece out again.",Put some pieces back and then removed one again.,,,
+carl_rollins_carl_030700.cha_seg_030,carl,behavior,"*INV:	is that where the eyes go ?
+%spa:	$DJF:YQ
+*CHI:	yes [=! laughs] .
+%spa:	$DJF:AA:WD
+*INV:	do you think so ?
+%spa:	$DHS:YQ
+%gpx:	looks at the potato and back at him
+*CHI:	no .
+%spa:	$DHS:AN:WD
+*INV:	no .
+%spa:	$DHS:RT
+*INV:	I think they go up here .
+%spa:	$DSS:ST
+%gpx:	points to where the eyes belong
+*CHI:	yyy yyy right here .
+%spa:	$YYY:YY:WD
+%act:	pulls the eyes out and sticks them on top of the potato
+*INV:	do those eyes go on top of her head ?
+%spa:	$DJF:YQ
+%gpx:	taps the potato",Changed the eye placement after the adult corrected and pointed to the expected location.,Changed the eye placement after correction but still put the eyes in the wrong place.,,,
+carl_rollins_carl_030700.cha_seg_032,carl,behavior,"*INV:	is that Spot ?
+%spa:	$DJF:YQ
+%gpx:	points in the book
+*CHI:	yes .
+%spa:	$DJF:AA:WD
+*INV:	he's got his lunch pail .
+%spa:	$DJF:ST
+%gpx:	points to it",Answered yes when asked whether the pictured character was Spot.,Answered yes when asked whether the character was Spot.,,,
+carl_rollins_carl_030700.cha_seg_039,carl,behavior,"*CHI:	a [=? the] [*] face on helicopter .
+%spa:	$DJF:ST:WD
+*CHI:	xxx .
+%act:	picks up the baby potato
+*CHI:	0 [=! smacks] . [+ trn]
+%spa:	$NIA:PR:VO
+%act:	kisses the baby repeatedly
+*INV:	I'm gonna put this hat on the potato head .
+%spa:	$NIA:SI
+%gpx:	holds up a hat
+*CHI:	a [=? the] [*] hat .
+%spa:	$NIA:RT:WDE
+*INV:	look how pretty .
+%spa:	$DHA:ST
+%act:	puts the hat on her potato
+*CHI:	xxx .
+%act:	twists the feet off the baby
+*CHI:	xxx .",Repeated 'hat' after the adult held up and named the hat.,Repeated 'hat' after the adult named and showed the hat.,,,
+carl_rollins_carl_030700.cha_seg_043,carl,behavior,"*INV:	0 .
+%act:	pulls one out
+*CHI:	yyy Exp .
+%spa:	$YYY:YY:WD
+*CHI:	I think I can .
+%spa:	$NIA:ST:WD
+%act:	pulls one out
+*INV:	yeah you can .
+%spa:	$NIA:AP
+*CHI:	I think I can .
+%spa:	$NIA:YY:WD
+%act:	walks out of the bath+room drying his hands
+*INV:	dry your hands .
+%spa:	$NIA:RP
+*CHI:	xxx .
+%act:	drops it in the wastebasket and runs off
+*INV:	Chi where should I sit ?
+%spa:	$NIA:QN",Finished drying up and dropped the used item into the wastebasket.,Finished the drying routine and dropped the used item into the wastebasket.,,,
+jack_flusberg_jack_060900.cha_seg_015,jack,behavior,"*MOT:	do you wanna color this book here ?
+*CHI:	no .
+*CHI:	no .
+*MOT:	oh „ you're going to color the fruit and vegetable .
+*MOT:	can you share with joy ?
+*CHI:	no .
+*MOT:	and have her color ?
+*CHI:	I'm too big .",Verbally refused coloring and sharing with Joy.,Verbally refused coloring and sharing.,,,
+jack_flusberg_jack_060900.cha_seg_063,jack,behavior,"*MOT:	you wanna set those guys up ?
+*CHI:	xxx .
+*MOT:	what is this ?
+*MOT:	[NAME] , what's this ?
+*CHI:	xxx .
+*MOT:	what's this ?
+*MOT:	what is that ?
+*CHI:	guy .",Eventually said 'guy' after repeated questions asking what the item was.,Eventually said 'guy' after repeated naming questions.,,,
+jack_flusberg_jack_061028.cha_seg_007,jack,behavior,"*MOT:	he says hi to all the boys and girls .
+*CHI:	hi picture [/] picture .
+*MOT:	and picture [/] picture .
+*MOT:	he's picture [/] picture .
+*CHI:	what's wrong with that ?
+*MOT:	what's wrong with that ?
+*CHI:	what's wrong with that ?
+*CHI:	tell me what's wrong with that ?",Asked several times what was wrong with the picture or situation.,Asked repeatedly what was wrong with the picture or situation.,,,
+jack_flusberg_jack_061028.cha_seg_017,jack,behavior,"*MOT:	indeed he did .
+*CHI:	indeed he did .
+*MOT:	indeed he did .
+*CHI:	he loved that goat .
+*MOT:	he loved that goat .
+*CHI:	just like a kid .
+*MOT:	just like a kid .
+*CHI:	indeed he did .",Repeated several story phrases supplied by the adult.,Repeated several phrases supplied by the adult in the story routine.,,,
+jack_flusberg_jack_061028.cha_seg_048,jack,behavior,"*MOT:	Freddie_Rogers paints .
+*CHI:	paints .
+*MOT:	and what else does he do ?
+*CHI:	Uncle_Friday .
+*CHI:	King_Friday .
+*MOT:	oh „ King_Friday .
+*MOT:	that's on Mister_Rogers .
+*CHI:	Uncle_Friday .",Answered a question about Mister Rogers with character names instead of describing another action.,Answered with character names instead of saying what Mister Rogers does.,,,
+jack_flusberg_jack_070315.cha_seg_004,jack,behavior,"*MOT:	look .
+*CHI:	xxx .
+*MOT:	oh , .
+*MOT:	what's that a picture of ?
+*MOT:	do you know what these are ?
+*CHI:	things you can bake .
+*MOT:	these are +/.
+*CHI:	gumball .",Gave uncertain category or item labels when asked about the picture.,Gave uncertain labels after repeated picture questions.,,,
+jack_flusberg_jack_080012.cha_seg_007,jack,behavior,"*MOT:	did you go ride your bike with Julie and Michael ?
+*CHI:	see them this afternoon .
+*MOT:	not this afternoon , but we'll see them again soon .
+*MOT:	did [NAME] have fun playing with Julie and Michael ?
+*CHI:	yeah .",Talked about seeing Julie and Michael and answered yes about having fun with them.,Talked about seeing Julie and Michael and whether he had fun with them.,,,
+jack_flusberg_jack_080012.cha_seg_010,jack,behavior,"*MOT:	okay ?
+*CHI:	xxx .
+*MOT:	would you like to do that ?
+*MOT:	that will be in a few months [NAME] .
+*CHI:	I wanna play+ground on a different day .
+*MOT:	you wanna what ?
+*CHI:	to play+ground on a different day .
+*MOT:	you wanna go on the play+ground on a different day ?",Said he wanted the playground on a different day and repeated it when asked for clarification.,Said he wanted the playground on a different day.,,,
+jack_flusberg_jack_080221.cha_seg_006,jack,behavior,"*MOT:	we don't do that .
+*CHI:	&~co [/] cover your mouth .
+*MOT:	no covering mouths .
+*MOT:	no we don't do that .
+*CHI:	cover my mouth .
+*MOT:	no .
+*MOT:	unless you're just playing , it's okay .
+*CHI:	stop .",Talked about covering his mouth and told the adult to stop.,Talked about covering his mouth and then told the adult to stop.,,,
+jack_flusberg_jack_080506.cha_seg_003,jack,behavior,"*MOT:	and who's that ?
+*CHI:	Grover .
+*MOT:	Grover .
+*MOT:	what does that say ?
+*CHI:	Sesame_Street .
+*MOT:	Sesame_Street .
+*CHI:	Big_Bird color forms play set .",Named Grover and read or named Sesame Street.,Named Grover and Sesame Street.,,,
+josh_rollins_josh_020500.cha_seg_007,josh,outcome,"*INV:	yyy open it .
+%spa:	$NIA:YY
+*CHI:	0 .
+%act:	puts hand on the top
+*INV:	0 .
+%act:	puts finger on spout
+*INV:	open it up .
+%spa:	$NIA:SI
+%act:	opens the spout
+*CHI:	0 .
+%act:	walks away
+*CHI:	0 .
+%act:	walks around the room
+*CHI:	xxx [=! voc] .
+%act:	bends over
+*CHI:	0 .
+%act:	stands up",no_response,partial,,,
+josh_rollins_josh_020500.cha_seg_007,josh,behavior,"*INV:	yyy open it .
+%spa:	$NIA:YY
+*CHI:	0 .
+%act:	puts hand on the top
+*INV:	0 .
+%act:	puts finger on spout
+*INV:	open it up .
+%spa:	$NIA:SI
+%act:	opens the spout
+*CHI:	0 .
+%act:	walks away
+*CHI:	0 .
+%act:	walks around the room
+*CHI:	xxx [=! voc] .
+%act:	bends over
+*CHI:	0 .
+%act:	stands up",Did not open the spout after repeated directions and moved away.,Tried to work with the spout but did not open it before the adult did.,,,
+josh_rollins_josh_020800.cha_seg_004,josh,behavior,"*CHI:	&=laughs .
+%act:	looks at Clinician and smiles
+*CHI:	0 .
+%act:	plays with puzzle
+*INV:	you silly boy .
+%spa:	$DHS:ST
+%act:	touches chi's back
+*CHI:	0 .
+%act:	dumps the puzzle over
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+%act:	holds hands up
+*CHI:	0 .
+%act:	dumps puzzle
+*INV:	oh no .
+%spa:	$MRK:MK
+*INV:	they all fell out .
+%spa:	$DRE:ST
+%act:	picking up pieces from the floor",Dumped and handled puzzle pieces while smiling and laughing.,Dumped and handled puzzle pieces during self-directed play.,,,
+josh_rollins_josh_020800.cha_seg_008,josh,behavior,"*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+%act:	puts hands up
+*CHI:	0 .
+%act:	looks at puzzle
+*INV:	you did it !
+%spa:	$DRE:ET
+%act:	leans over to look at chi
+*CHI:	0 .
+%act:	looks at puzzle and smiles
+*INV:	good job .
+%spa:	$NIA:PM
+*CHI:	xxx .
+%act:	takes piece out of puzzle
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+%act:	puts hands in air
+*INV:	you took the giraffe out .
+%spa:	$DRE:ST",Completed the puzzle and smiled after the adult praised the success.,Completed the puzzle and smiled after the adult praised him.,,,
+josh_rollins_josh_020800.cha_seg_011,josh,behavior,"*INV:	I'm gonna put the puzzle up here on the shelf .
+%spa:	$NIA:SI
+*CHI:	xxx .
+%act:	grabs chair and leans over it
+*CHI:	0 .
+%act:	grabs doorknob
+*CHI:	0 .
+%act:	looks at Clinician
+*INV:	push your chair in .
+%spa:	$NIA:SI
+%act:	pushes chair in
+*CHI:	yyy yyy .
+%spa:	$NIA:YY:VO
+%act:	pushes Clinician's arm
+*INV:	0 .
+%act:	reaches for chi's juice
+*INV:	here's your juice .
+%spa:	$NIA:TO
+%act:	gives juice to chi",Pushed the clinician's arm in a way that led to getting his juice.,Pushed the clinician's arm to request his juice and then received it.,,,
+josh_rollins_josh_030100.cha_seg_004,josh,behavior,"*INV:	close the door .
+%spa:	$NIA:SI
+%act:	pushes it closed
+*CHI:	xxx .
+*INV:	closed .
+%spa:	$NIA:ST
+*CHI:	xxx .
+*INV:	okay .
+%spa:	$MRK:MK
+*INV:	Chi you needta go pottie ?
+%spa:	$NIA:YQ
+*CHI:	xxx .
+%act:	rounds the corner and starts down the hall
+*CHI:	xxx .",Started down the hall after the adult asked whether he needed to go potty.,Started down the hall after being asked whether he needed to go potty.,,,
+josh_rollins_josh_030100.cha_seg_020,josh,domain,"*INV:	get it out .
+%spa:	$DJF:RP
+*CHI:	0 .
+%act:	beats the can on the table
+*INV:	can I help you ?
+%spa:	$DJF:RP
+%act:	stops him from beating",motor,cognitive,,,
+josh_rollins_josh_030100.cha_seg_038,josh,behavior,"*INV:	come on Chi let's put the juice up .
+%spa:	$NIA:RP
+*CHI:	yyy .
+%spa:	$NIA:RD:VO
+*INV:	oh why not ?
+%spa:	$NIA:QN",Refused the request to put the juice away.,Made an unclear refusal-like response to putting the juice away.,,,
+mark_flusberg_mark_070700.cha_seg_062,mark,behavior,"*MOT:	when do you find pretty eggs like that ?
+*CHI:	yeah .
+*MOT:	what holiday do we have fancy eggs ?
+*MOT:	pretty eggs ?
+*CHI:	xxx .
+*MOT:	huh ?
+*MOT:	which holiday , [NAME] ?
+*CHI:	that one .",Gave vague responses instead of naming the holiday associated with fancy eggs.,Failed to name the holiday associated with fancy eggs after repeated prompts.,,,
+mark_flusberg_mark_070700.cha_seg_065,mark,behavior,"*MOT:	I don't think you read this one .
+*CHI:	farmer .
+*MOT:	no .
+*MOT:	read that .
+*CHI:	father .
+*MOT:	no .
+*MOT:	read that .
+*CHI:	father .",Read the word incorrectly despite repeated directions and correction.,Read the word incorrectly despite correction and repeated opportunities.,,,
+mark_flusberg_mark_070700.cha_seg_073,mark,behavior,"*MOT:	that's right .
+*CHI:	&~h [/] hat .
+*CHI:	head .
+*CHI:	house .
+*CHI:	house .
+*CHI:	horse .
+*CHI:	house .
+*MOT:	yeah , you're right .",Produced several similar words and was finally told he was right.,Produced several related words and was finally told he was right.,,,
+mark_flusberg_mark_070812.cha_seg_025,mark,behavior,"*MOT:	who sits in the back seat ?
+*CHI:	peter .
+*MOT:	no .
+*MOT:	Alicia .
+*CHI:	xxx .
+*MOT:	Alicia .
+*MOT:	who else ?
+*CHI:	&~Ali .",Tried to answer who sits in the back seat and later produced an approximation of Alicia.,Changed from an incorrect answer to an approximation of 'Alicia' after the adult modeled it.,,,
+mark_flusberg_mark_070812.cha_seg_142,mark,behavior,"*MOT:	[NAME] .
+*CHI:	xxx .
+*MOT:	sit down .
+*CHI:	done .
+*MOT:	no done .
+*MOT:	do you want jello ?
+*CHI:	yes .
+*MOT:	then you come sit down .",Did not sit down and instead said he was done while negotiating for jello.,Said he was done instead of sitting down.,,,
+mark_flusberg_mark_070812.cha_seg_146,mark,outcome,"*MOT:	[NAME] ?
+*CHI:	watermelon umbrella .
+*MOT:	I know you want that .
+*MOT:	you want that block don't you ?
+*MOT:	I don't know if we can find it .
+*CHI:	get new one .
+*MOT:	you want a new one , okay .
+*CHI:	orange .",unknown,correct,"Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",,
+mark_flusberg_mark_070812.cha_seg_146,mark,behavior,"*MOT:	[NAME] ?
+*CHI:	watermelon umbrella .
+*MOT:	I know you want that .
+*MOT:	you want that block don't you ?
+*MOT:	I don't know if we can find it .
+*CHI:	get new one .
+*MOT:	you want a new one , okay .
+*CHI:	orange .",Asked for a new block after the adult discussed the block he wanted.,Asked for a new block and the adult accepted the request.,,,
+mark_flusberg_mark_080915.cha_seg_003,mark,domain,"*MOT:	can you open up the play-doh ?
+*CHI:	no Timmy .
+*CHI:	no Timmy .",social_communication,play,,,
+mars_rollins_mars_030300.cha_seg_002,mars,behavior,"*INV:	push [/] push .
+%spa:	$NIA:SI
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+*INV:	right there .
+%spa:	$NIA:ST
+*CHI:	xxx .",Made unclear vocal sounds but did not complete the pushing action after added verbal guidance.,Made unclear vocal sounds but did not complete the push action after added guidance.,,,
+mars_rollins_mars_030300.cha_seg_011,mars,behavior,"*INV:	<wipe wipe> [/] wipe .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	drops his paper towel
+*INV:	it fell Chi .
+%spa:	$DRE:ST",Dropped the paper towel instead of following the wipe instruction.,Dropped the paper towel instead of wiping as instructed.,,,
+mars_rollins_mars_030300.cha_seg_013,mars,behavior,"*INV:	here's one .
+%spa:	$DHA:ST
+%act:	picks up another shape
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:CR
+%act:	reaches for the shape
+*INV:	you want it ?
+%spa:	$NIA:YQ
+%act:	holds it out of his reach
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VNO
+%act:	pulls her shirt sleeve to get it
+*INV:	four .
+%spa:	$NIA:CN
+*INV:	0 .
+%act:	picks up another shape
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:CR
+%act:	reaches for the shape",Reached and pulled the adult's sleeve to request the shape she was holding.,Reached and pulled the adult's sleeve to request the shape.,,,
+mars_rollins_mars_030300.cha_seg_080,mars,domain,"*INV:	o@l .
+%spa:	$DHA:ST
+%gpx:	points to the mirror with her marker
+*CHI:	xxx .
+*INV:	here's o@l .
+%spa:	$DHA:ST
+%act:	draws an o@l on the mirror
+*INV:	o@l .
+%spa:	$DHA:ST
+*CHI:	0 .
+%act:	plays with chair seat",language,none,,,
+mars_rollins_mars_030300.cha_seg_080,mars,prompt_level,"*INV:	o@l .
+%spa:	$DHA:ST
+%gpx:	points to the mirror with her marker
+*CHI:	xxx .
+*INV:	here's o@l .
+%spa:	$DHA:ST
+%act:	draws an o@l on the mirror
+*INV:	o@l .
+%spa:	$DHA:ST
+*CHI:	0 .
+%act:	plays with chair seat",model,none,,,
+mars_rollins_mars_030300.cha_seg_080,mars,outcome,"*INV:	o@l .
+%spa:	$DHA:ST
+%gpx:	points to the mirror with her marker
+*CHI:	xxx .
+*INV:	here's o@l .
+%spa:	$DHA:ST
+%act:	draws an o@l on the mirror
+*INV:	o@l .
+%spa:	$DHA:ST
+*CHI:	0 .
+%act:	plays with chair seat",unknown,none,"Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",,
+mars_rollins_mars_030300.cha_seg_080,mars,behavior,"*INV:	o@l .
+%spa:	$DHA:ST
+%gpx:	points to the mirror with her marker
+*CHI:	xxx .
+*INV:	here's o@l .
+%spa:	$DHA:ST
+%act:	draws an o@l on the mirror
+*INV:	o@l .
+%spa:	$DHA:ST
+*CHI:	0 .
+%act:	plays with chair seat",Made an unclear sound after the adult modeled the letter and then moved to the chair.,"Made an unclear vocal sound after the adult modeled the letter O, then played with the chair.",,,
+mars_rollins_mars_030300.cha_seg_083,mars,behavior,"*INV:	put that in here .
+%spa:	$NIA:RP
+%gpx:	points to a shape hole in the box
+*CHI:	xxx .
+%act:	opens the top and puts the shape in
+*INV:	xxx . [+ trn]
+%spa:	$MRK:MK
+*INV:	you're just gonna drop (th)em in .
+%spa:	$NIA:ST
+*INV:	one .
+%spa:	$NIA:CN
+*CHI:	0 .
+%act:	picks up another shape and puts it in the box
+*INV:	two .
+%spa:	$NIA:CN
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+%act:	picks up a shape and pulls the rest out of his reach",Put shapes into the box but used the open top instead of the indicated shape hole.,Put the shapes into the box but did not use the indicated shape hole.,,,
+mars_rollins_mars_030300.cha_seg_091,mars,behavior,"*INV:	you're helping Vicki .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	turns through the pages
+*INV:	0 .
+%act:	closes the book and holds it up
+*INV:	0 .
+%act:	checks her watch
+*INV:	there you go .
+%spa:	$NIA:MK
+%act:	tries to look out the door
+*CHI:	0 .
+%gpx:	points to the book
+*INV:	let's go put this away .
+%spa:	$NIA:RP
+%gpx:	shakes the book
+*CHI:	0 .
+%act:	takes the book and stands up",Took the book and stood up after being told and gesturally cued to put it away.,Took the book and stood up to begin putting it away.,,,
+mars_rollins_mars_030800.cha_seg_020,mars,behavior,"*INV:	there's a guitar .
+%spa:	$DHA:ST
+%gpx:	strums her tummy
+*CHI:	yyy yyy .
+%spa:	$YYY:YY:VO
+%act:	turns the page
+*INV:	&~mm soup .
+%spa:	$DHA:ST
+%gpx:	points in the book
+*INV:	pizza .
+%spa:	$DHA:ST
+%gpx:	points
+*CHI:	0 . [+ trn]
+%spa:	$YYY:YY:CP
+%gpx:	points to the pizza
+*INV:	pizza .
+%spa:	$DJF:ST
+*INV:	what's that ?
+%spa:	$DHA:QN
+%gpx:	points in the book
+*CHI:	yyy .
+%spa:	$DJF:YY:VO",Pointed to the pizza after the adult labeled it and later made an unclear response to a naming question.,Pointed to the pizza after the adult named it.,,,
+mars_rollins_mars_030800.cha_seg_021,mars,behavior,"*INV:	what are those ?
+%spa:	$DJF:QN
+%gpx:	rubs her finger on the spot
+*CHI:	flower .
+%spa:	$DJF:SA:WD
+*INV:	flowers .
+%spa:	$DJF:AP
+*CHI:	0 . [+ trn]
+%spa:	$DJF:PR:CO
+%act:	puts his nose on the picture and sniffs
+*INV:	0 . [+ trn]
+%spa:	$DJF:PR
+%act:	sniffs
+*INV:	oh you smelled the flowers .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	turns the page
+*INV:	turn the page .
+%spa:	$NIA:SI",Named the flowers after the adult asked and pointed to them.,Named the flowers after the adult pointed to them.,,,
+mars_rollins_mars_030800.cha_seg_076,mars,behavior,"*INV:	we needta go out .
+%spa:	$NIA:RP
+%gpx:	points to the door
+*CHI:	0 .
+%act:	walks past her to the stairs
+*INV:	oh you wanna go up the stairs ?
+%spa:	$DCA:YQ
+*CHI:	0 .
+%act:	starts up the stairs",Went toward the stairs instead of the door after the adult pointed toward going out.,Went toward the stairs instead of the door the adult pointed to.,,,
+mars_rollins_mars_031100.cha_seg_002,mars,behavior,"*INV:	Winnie the Pooh .
+%spa:	$NIA:ST
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+%act:	takes Tigger out of box
+*INV:	there's Tigger .
+%spa:	$DJF:ST
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	takes piglet out of box
+*INV:	there's piglet .
+%spa:	$DJF:ST
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+%act:	takes eore out of box
+*INV:	Egore .
+%spa:	$DJF:ST
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	sits down",Took character toys from the box while making jargon or unclear vocal sounds.,Took character toys from the box while making unclear sounds.,,,
+mars_rollins_mars_031100.cha_seg_027,mars,behavior,"*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VO
+%act:	touches picture
+*CHI:	another red [//] red firetruck .
+%spa:	$DJF:RT:WD
+%act:	touching picture
+*INV:	&-uh huh .
+%spa:	$DJF:AC",Described the picture as another red firetruck.,Spontaneously described another red firetruck.,,,
+rick_flusberg_rick_040700.cha_seg_008,rick,behavior,"*MOT:	wanna put some pegs in ?
+*CHI:	no .
+*MOT:	no pegs in ?
+*CHI:	xxx .
+*CHI:	xxx .
+*MOT:	[NAME] , what's this number ?
+*CHI:	three .
+*MOT:	no , what's this ?",Answered 'three' when asked to identify a number.,Answered 'three' when asked to identify a number and was told no.,,,
+rick_flusberg_rick_040700.cha_seg_054,rick,behavior,"*MOT:	that's good .
+*CHI:	xxx .
+*CHI:	xxx .
+*MOT:	good boy .
+*CHI:	face .
+*MOT:	what ?
+*CHI:	face .
+*CHI:	want Dan .",Said he wanted Dan.,Asked for Dan.,,,
+rick_flusberg_rick_040700.cha_seg_073,rick,behavior,"*MOT:	put her in here and turn the crank .
+*CHI:	turn the crank .
+*MOT:	look .",Repeated 'turn the crank' after the adult instructed him to put the figure in and turn it.,Repeated part of the instruction to turn the crank without doing the action.,,,
+rick_flusberg_rick_040700.cha_seg_076,rick,behavior,"*MOT:	get the cow [NAME] .
+*CHI:	cow .
+*MOT:	[NAME] pick up the cow .",Said 'cow' after being told to get the cow but did not pick it up in the segment.,Said 'cow' after being told to get the cow but did not pick it up.,,,
+rick_flusberg_rick_040700.cha_seg_108,rick,behavior,"*MOT:	[NAME] , what's this ?
+*CHI:	train .
+*MOT:	the train .",Named the item as a train.,Named the object as a train.,,,
+rick_flusberg_rick_051104.cha_seg_032,rick,behavior,"*MOT:	what's in your hand ?
+*CHI:	sheep .
+*MOT:	sheep .",Named the item in his hand as a sheep.,Named the item as a sheep.,,,
+rick_flusberg_rick_060522.cha_seg_002,rick,behavior,"*MOT:	and there are the kids .
+*CHI:	no playing in refrigerator .
+*MOT:	there .
+*MOT:	you did a nice job setting that up , [NAME] .
+*MOT:	it looks good .
+*CHI:	are you +/.
+*MOT:	what's this [NAME] ?
+*CHI:	a stove .",Named the object as a stove.,Named the pictured item as a stove.,,,
+rick_flusberg_rick_060818.cha_seg_001,rick,behavior,"*MOT:	good boy .
+*CHI:	Stan help to sprinkle .
+*MOT:	[NAME] , look .
+*MOT:	what's this ?
+*CHI:	a record player .
+*MOT:	no .
+*CHI:	record .
+*MOT:	these are records .",Changed his answer from 'record player' to 'record' after the adult said no.,Changed 'record player' to 'record' after the adult corrected him.,,,
+rick_flusberg_rick_061012.cha_seg_009,rick,behavior,"*MOT:	what are you doing ?
+*CHI:	I <put a> [/] put a horn .
+*MOT:	what are you doing ?
+*CHI:	I playing .",Answered what he was doing by saying he was playing.,Answered what he was doing after the question was repeated.,,,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_010,roger_flusberg,behavior,"*MOT:	what's this on your finger ?
+*CHI:	could these xxx .
+*MOT:	whatever it is it's bothering him .
+*CHI:	wipe these .
+*CHI:	wipe these .
+*MOT:	open it .
+*CHI:	could these xxx .
+*CHI:	hey [/] prestos .",Asked for help with wiping or opening something on his finger.,Asked for help with something bothering his finger.,,,
+roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_026,roger_flusberg,behavior,"*MOT:	take the shapes out .
+*CHI:	oh , !
+*CHI:	yeah , it's +/.
+*CHI:	xxx .
+*MOT:	[NAME] .
+*CHI:	yeah it's the circle .
+*MOT:	put the circle in the box .
+*MOT:	what color's the circle ?",Identified the circle while handling the shapes.,Identified the circle during the shape activity.,,,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_014,roger_flusberg,behavior,"*MOT:	oh , okay .
+*CHI:	strawberry milk .
+*MOT:	strawberry milk .
+*MOT:	open the door oh , .
+*CHI:	open the door .
+*CHI:	eat pizza .
+*MOT:	oh , you're feeding the lady .
+*CHI:	yeah .","Used pretend-play language about strawberry milk, opening the door, eating pizza, and feeding a lady.","Used pretend-play language about strawberry milk, pizza, and feeding a lady.",,,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_037,roger_flusberg,behavior,"*MOT:	it's all gone .
+*CHI:	all gone .
+*CHI:	wash your hands .
+*CHI:	wash your face .
+*CHI:	take a bath .
+*MOT:	[NAME] who's this ?
+*CHI:	look .
+*CHI:	green frog .",Answered the character question with 'green frog'.,Gave an unconfirmed label of 'green frog' to a character question.,,,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_051,roger_flusberg,behavior,"*MOT:	cook the supper .
+*CHI:	cook it supper .
+*MOT:	you hafta sit like mommy .
+*CHI:	mommy .
+*CHI:	tv thirty eight .
+*MOT:	oh , they wanna watch tv ?
+*CHI:	go watch tv .
+*MOT:	let's watch Sesame_Street .",Used language while acting out cooking and television in pretend play.,Used pretend-play language about cooking and watching television.,,,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_059,roger_flusberg,behavior,"*MOT:	sit her in the chair .
+*CHI:	sit down .
+*CHI:	xxx .
+*CHI:	let me see your teeth , [NAME] .
+*CHI:	oh , you wanna tell the dentist how you cracked your tooth .
+*CHI:	get off .
+*CHI:	get off the table !
+*CHI:	get off .","Used pretend-play language about sitting, the dentist, and getting off the table.",Used pretend dentist and table-play language.,,,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_062,roger_flusberg,behavior,"*MOT:	do you wanna sing ?
+*CHI:	sing ?
+*MOT:	sing wham .
+*CHI:	xxx .
+*CHI:	xxx .
+*CHI:	[NAME] sing .
+*CHI:	xxx .",Talked about singing but did not clearly carry out the requested song.,Talked about singing but did not clearly sing the requested song.,,,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_078,roger_flusberg,behavior,"*MOT:	oh , what's on +/.
+*CHI:	tv thirty eight .
+*MOT:	channel four .
+*CHI:	channel four .
+*MOT:	turn the channel .
+*CHI:	no !
+*CHI:	no .
+*CHI:	stay .",Repeated 'channel four' and then verbally refused to turn the channel.,Refused to turn the channel.,,,
+roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004,roger_flusberg,outcome,"*MOT:	[NAME] are you singing a song ?
+*CHI:	yes .
+*MOT:	what are you singing ?
+*CHI:	a microphone .
+*CHI:	play .
+*CHI:	good_night .
+*MOT:	kiss them good_night .
+*CHI:	good_night .",partial,none,"Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",,
+roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004,roger_flusberg,behavior,"*MOT:	[NAME] are you singing a song ?
+*CHI:	yes .
+*MOT:	what are you singing ?
+*CHI:	a microphone .
+*CHI:	play .
+*CHI:	good_night .
+*MOT:	kiss them good_night .
+*CHI:	good_night .",Used 'goodnight' in the pretend-play routine after the adult said to kiss them goodnight.,Used pretend-play language about singing and saying goodnight.,,,
+roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_002,roger_flusberg,behavior,"*MOT:	do you wanna put the cars in the barn ?
+*CHI:	yeah .
+*CHI:	I wanna .
+*MOT:	what do you want ?
+*CHI:	I wanna play a railroad tracks .
+*MOT:	okay .
+*CHI:	the tracks .
+*CHI:	no [/] no !",Said he wanted to play with railroad tracks.,Said he wanted to play with the railroad tracks.,,,
+roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_013,roger_flusberg,behavior,"*MOT:	what do you wanna do , [NAME] ?
+*CHI:	I wanna play my marble .
+*MOT:	okay , let's take it apart .
+*MOT:	we can play with it later .
+*MOT:	you wanna play with something else ?
+*CHI:	yeah .
+*MOT:	what ?
+*MOT:	what do you wanna do ?",Said he wanted to play with his marble.,"Requested to play with his marble, and the adult delayed the request.",,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_008,roger_rollins,behavior,"*INV:	put this block .
+%spa:	$NIA:RP
+*CHI:	xxx .
+%act:	turns it over then puts it on the stack
+*CHI:	xxx .
+%act:	takes the next block
+*INV:	0 .
+%act:	straightens the stack
+*CHI:	0 .
+%act:	pushes the blocks over",Turned the block over and placed it on the stack.,Turned the block over and put it on the stack.,,,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_065,roger_rollins,behavior,"*INV:	throw it away .
+%spa:	$NIA:ST
+*CHI:	xxx .
+%act:	reaches for new balloon
+*INV:	there you go .
+%spa:	$NIA:TO
+%act:	gives balloon to CHI
+*INV:	there you go .
+%spa:	$NIA:MK
+*CHI:	0 .
+%act:	looks back into trash
+*CHI:	0 .
+%act:	grabs old balloon out of trash
+*INV:	throw it away .
+%spa:	$NIA:RP
+%gpx:	points to trash
+*INV:	no good .
+%spa:	$NIA:ST
+%gpx:	points to trash again",Reached for and pulled the old balloon back out of the trash instead of throwing it away.,Pulled the old balloon back out of the trash instead of throwing it away.,,,
+roger_rollins_rollins_roger_rollins_020800.cha_seg_004,roger_rollins,behavior,"*CHI:	xxx .
+%act:	turns cookie monster around
+*CHI:	xxx . [+ trn]
+%spa:	$PRO:PR:VO
+*CHI:	xxx . [+ trn]
+%spa:	$PRO:PR:VO
+*CHI:	0 .
+%act:	opens the mouth and puts the cookie in the correct hole
+*INV:	there you go .
+%spa:	$NIA:MK
+*INV:	put it in .
+%spa:	$NIA:SI
+%act:	takes the cookie out the back
+*CHI:	0 . [+ trn]
+%spa:	$PRO:PR:VCO
+%act:	opens and closes the mouth
+*INV:	xxx . [+ trn]
+%spa:	$PRO:PR",Put the cookie in the correct hole of the toy.,Put the cookie into the correct hole of the toy.,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_010,roger_rollins,behavior,"*INV:	pull it out .
+%spa:	$NIA:SI
+%act:	pulls the rein out of the hole
+*CHI:	0 .
+%act:	swings the rein rather than picking it back up
+*INV:	neigh@o .
+%spa:	$NIA:PR
+%act:	rears the horse
+*INV:	horse .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	plays with the rein on the horse's head",Swung the horse rein and continued playing with it.,Continued self-directed horse and rein play.,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_026,roger_rollins,behavior,"*INV:	push the door .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	goes through the door
+*INV:	let's go for a walk .
+%spa:	$NIA:RP
+%act:	walks past CHI
+*CHI:	0 .
+%act:	follows
+*INV:	another door .
+%spa:	$NIA:ST
+%gpx:	points to a door
+*CHI:	0 .
+%act:	turns around and walks away",Followed the adult for part of the walking transition but did not follow all door-related directions.,Followed part of the walking transition but did not follow all door-related directions.,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_042,roger_rollins,domain,"*INV:	I see Chi .
+%spa:	$NIA:ST
+%gpx:	looks in the mirror and points at his reflection
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	pull .
+%spa:	$NIA:SI
+%act:	opens the mirror
+*INV:	there's Chi .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*CHI:	0 . [+ trn]
+%spa:	$DNP:SA:CO
+%act:	knocks on the mirror cover",play,social_communication,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_042,roger_rollins,modality,"*INV:	I see Chi .
+%spa:	$NIA:ST
+%gpx:	looks in the mirror and points at his reflection
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	pull .
+%spa:	$NIA:SI
+%act:	opens the mirror
+*INV:	there's Chi .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*CHI:	0 . [+ trn]
+%spa:	$DNP:SA:CO
+%act:	knocks on the mirror cover",none,gestural,"Codebook 1 -- gestural is a communicative gesture, not physical handling; multimodal needs two message-bearing channels; unknown vs none",,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_042,roger_rollins,prompt_level,"*INV:	I see Chi .
+%spa:	$NIA:ST
+%gpx:	looks in the mirror and points at his reflection
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	pull .
+%spa:	$NIA:SI
+%act:	opens the mirror
+*INV:	there's Chi .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*CHI:	0 . [+ trn]
+%spa:	$DNP:SA:CO
+%act:	knocks on the mirror cover",verbal,independent,"Codebook 3 -- the turn creating the opportunity is an antecedent, not a prompt; child-initiated is independent; most-supportive level wins",,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_042,roger_rollins,outcome,"*INV:	I see Chi .
+%spa:	$NIA:ST
+%gpx:	looks in the mirror and points at his reflection
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	pull .
+%spa:	$NIA:SI
+%act:	opens the mirror
+*INV:	there's Chi .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*CHI:	0 . [+ trn]
+%spa:	$DNP:SA:CO
+%act:	knocks on the mirror cover",partial,none,"Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_042,roger_rollins,behavior,"*INV:	I see Chi .
+%spa:	$NIA:ST
+%gpx:	looks in the mirror and points at his reflection
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	pull .
+%spa:	$NIA:SI
+%act:	opens the mirror
+*INV:	there's Chi .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*CHI:	0 . [+ trn]
+%spa:	$DNP:SA:CO
+%act:	knocks on the mirror cover",Closed the mirror and later knocked on the mirror cover during the hiding game.,Pointed to himself in the mirror and continued the hiding interaction.,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_043,roger_rollins,prompt_level,"*INV:	there he is .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	close it .
+%spa:	$NIA:SI
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*CHI:	0 . [+ trn]
+%spa:	$PRO:YY:CO
+%act:	knocks",independent,verbal,"Codebook 3 -- the turn creating the opportunity is an antecedent, not a prompt; child-initiated is independent; most-supportive level wins",,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_043,roger_rollins,outcome,"*INV:	there he is .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	close it .
+%spa:	$NIA:SI
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*CHI:	0 . [+ trn]
+%spa:	$PRO:YY:CO
+%act:	knocks",none,partial,"Codebook 2 -- correct/incorrect/partial/no_response need an identifiable target; absent acknowledgement is unknown, not incorrect",,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_043,roger_rollins,behavior,"*INV:	there he is .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	close it .
+%spa:	$NIA:SI
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*CHI:	0 . [+ trn]
+%spa:	$PRO:YY:CO
+%act:	knocks",Closed and knocked on the mirror during the hiding game.,Closed the mirror and later knocked on it during the hiding game.,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_046,roger_rollins,behavior,"*INV:	where's Chi ?
+%spa:	$PRO:QN
+*CHI:	0 .
+%act:	looks then walks away
+*INV:	let's go for a walk .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	plays with the horse
+*INV:	Chi you wanna go for a walk ?
+%spa:	$NIA:RQ
+*CHI:	0 .
+%act:	plays with the horse",Continued playing with the horse instead of going for a walk after the request was repeated.,Kept playing with the horse instead of going for a walk after repeated requests.,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_048,roger_rollins,behavior,"*INV:	Chi .
+%spa:	$NCS:CL
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RD:NO
+%act:	plays with doorknob
+*INV:	what's in there ?
+%spa:	$NIA:QN
+%act:	comes back on camera
+*INV:	what's in there ?
+%spa:	$NIA:QN
+*INV:	0 .
+%act:	knocks
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NT
+%act:	grabs her hand
+*INV:	<knock knock> [/] knock .
+%spa:	$PRO:PR
+%act:	knocks
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NT
+%gpx:	guides her hand to the knob",Guided the adult's hand to the doorknob to request help with the door.,Guided the adult's hand to the doorknob to request help.,,,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_049,roger_rollins,behavior,"*INV:	what's that ?
+%spa:	$YYY:QN
+%act:	grabs a spring
+*CHI:	0 .
+%act:	pats the horse's back
+*INV:	good horse .
+%spa:	$NIA:ST
+%act:	pats its back
+*CHI:	0 .
+%act:	puts the school bus on the horse's back
+*INV:	0 .
+%act:	rolls the truck up the horse's back
+*CHI:	0 .
+%act:	taps the horse above the tail
+*CHI:	0 .
+%act:	puts the school bus on the horse's back
+*CHI:	0 .
+%act:	puts the school bus on the horse's head",Placed vehicles on the horse and tapped the horse during self-directed play.,Placed vehicles on the horse during self-directed play.,,,
+roger_rollins_rollins_roger_rollins_030300.cha_seg_021,roger_rollins,behavior,"*CHI:	0 .
+%act:	places the large piece of play+doh on top of the rolling pin
+*CHI:	0 .
+%gpx:	reaches for the other piece of play+doh in the EXP hand
+*INV:	0 .
+%act:	holds tight to the play+doh
+*CHI:	0 .
+%act:	takes the large piece of play+doh off the top of the rolling pin
+*INV:	there's his hat .
+%spa:	$DJF:ST
+%gpx:	points to the piece of play+doh CHI is holding
+*CHI:	0 .
+%act:	puts the piece of play+doh down on the counter",Reached toward the play-doh held by the adult to request it.,Reached for the play-doh the adult was holding.,,,
+sid_rollins_sid_020200.cha_seg_019,sid,behavior,"*INV:	it fell .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	moves out of view
+*INV:	oop .
+%spa:	$MRK:MK
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+*CHI:	0 [=! cries] . [+ trn]
+%spa:	$NIA:EM:VO",Moved away and then cried.,Moved away and cried.,,,
+sid_rollins_sid_021100.cha_seg_010,sid,behavior,"*INV:	the pg and the sheep are in the trough .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	takes pig out of trough
+*INV:	you took the pg out .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	takes sheep out of trough
+*INV:	you took the sheep out .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	puts cow in the trough
+*INV:	cow's too big .
+%spa:	$DJF:ST
+*INV:	she's too big isn't she ?
+%spa:	$DJF:ST $DJF:YQ",Moved the farm animals in and out of the trough.,"Moved the pig, sheep, and cow in and out of the trough.",,,
+sid_rollins_sid_021100.cha_seg_011,sid,behavior,"*INV:	she's too big isn't she ?
+%spa:	$DJF:ST $DJF:YQ
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	puts cow back in trough
+*INV:	oh [/] oh .
+%spa:	$MRK:MK
+*INV:	the cow is out .
+%spa:	$DJF:ST
+%act:	takes cow out of trough
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	puts sheep in trough",Moved farm animals in the trough while making unclear vocal sounds.,Moved animals in the trough while making unclear sounds.,,,
+sid_rollins_sid_021100.cha_seg_029,sid,behavior,"*INV:	Chi's nose .
+%spa:	$DJF:ST
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RP:VCP
+%act:	points to board
+*INV:	eye .
+%spa:	$DJF:ST
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:CP
+%act:	points to board .
+*INV:	another eye .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	takes chalk from Clinician
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	draws on board
+*INV:	draw hair .
+%spa:	$NIA:SI",Pointed to the board for body-part cues and then drew on the board.,Pointed to the board for some body-part cues and then drew on it.,,,
+sid_rollins_sid_021100.cha_seg_048,sid,domain,"*INV:	0 .
+%act:	opens barn door
+*CHI:	0 .
+%act:	reaches inside the barn
+*INV:	0 .
+%act:	moves the gas pump out of child's reach
+*INV:	0 .
+%act:	puts horse in silo and looks at child
+*INV:	what's in there ?
+%spa:	$NIA:QN
+%act:	shakes silo and puts it down
+*CHI:	0 .
+%act:	reaches past the silo into the barn
+*CHI:	0 .
+%act:	pulls animals out of the barn
+*CHI:	0 .
+%act:	picks up silo",play,cognitive,,,
+sid_rollins_sid_021100.cha_seg_048,sid,behavior,"*INV:	0 .
+%act:	opens barn door
+*CHI:	0 .
+%act:	reaches inside the barn
+*INV:	0 .
+%act:	moves the gas pump out of child's reach
+*INV:	0 .
+%act:	puts horse in silo and looks at child
+*INV:	what's in there ?
+%spa:	$NIA:QN
+%act:	shakes silo and puts it down
+*CHI:	0 .
+%act:	reaches past the silo into the barn
+*CHI:	0 .
+%act:	pulls animals out of the barn
+*CHI:	0 .
+%act:	picks up silo",Reached into the barn and pulled animals out while the adult asked what was inside.,Pulled animals from the barn in response to a question about what was inside.,,,
+sid_rollins_sid_030200.cha_seg_005,sid,modality,"*INV:	unhook it .
+%spa:	$NIA:EI
+%act:	reaches up
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*INV:	unhook it .
+%spa:	$NIA:SI
+%act:	unhooks the door
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VC
+%act:	tries to open the door
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:EM:VNT
+%act:	pushes the examiner
+*INV:	open .
+%spa:	$NIA:SI
+%act:	pushes the door for him
+*CHI:	0 .
+%act:	looks in the closet",gestural,none,"Codebook 1 -- gestural is a communicative gesture, not physical handling; multimodal needs two message-bearing channels; unknown vs none",,
+sid_rollins_sid_030200.cha_seg_005,sid,behavior,"*INV:	unhook it .
+%spa:	$NIA:EI
+%act:	reaches up
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*INV:	unhook it .
+%spa:	$NIA:SI
+%act:	unhooks the door
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VC
+%act:	tries to open the door
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:EM:VNT
+%act:	pushes the examiner
+*INV:	open .
+%spa:	$NIA:SI
+%act:	pushes the door for him
+*CHI:	0 .
+%act:	looks in the closet",Tried to open the door and pushed the examiner after repeated directions to unhook or open it.,Tried to open the door after repeated instructions but needed the adult to do key parts.,,,
+sid_rollins_sid_030200.cha_seg_006,sid,behavior,"*INV:	the gas station .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	rolls the train of cars up to the gas station
+*INV:	0 .
+%act:	gets a blue car and some people from behind him",Rolled the train of cars up to the gas station and then continued selecting toys.,Rolled the train of cars to the gas station and continued selecting toys.,,,
+sid_rollins_sid_030200.cha_seg_061,sid,domain,"*INV:	push it .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	closes the other door
+*INV:	0 .
+%act:	locks the doors
+*CHI:	0 .
+%act:	goes back to the blocks
+*INV:	what are you going to build ?
+%spa:	$NIA:QN
+*CHI:	0 .
+%act:	takes a truck out of the bucket
+*CHI:	0 .
+%act:	dumps all the legos out of the bucket
+*CHI:	0 .
+%act:	throws the bucket",play,adaptive,,,
+sid_rollins_sid_030200.cha_seg_061,sid,behavior,"*INV:	push it .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	closes the other door
+*INV:	0 .
+%act:	locks the doors
+*CHI:	0 .
+%act:	goes back to the blocks
+*INV:	what are you going to build ?
+%spa:	$NIA:QN
+*CHI:	0 .
+%act:	takes a truck out of the bucket
+*CHI:	0 .
+%act:	dumps all the legos out of the bucket
+*CHI:	0 .
+%act:	throws the bucket",Closed the door and then returned to playing with the blocks and truck.,Closed the door and then returned to the blocks.,,,
+sid_rollins_sid_030500.cha_seg_004,sid,behavior,"*INV:	the end .
+%spa:	$DJF:MK
+*CHI:	a [=? the] [*] end .
+%spa:	$DJF:RT:WD
+*INV:	beep [/] beep .
+%spa:	$NIA:PR
+*INV:	is your car going home ?
+%spa:	$NIA:YQ
+*CHI:	yyy .
+%spa:	$NIA:RT:VO",Repeated 'the end' after the adult and later gave an unclear response about the car.,Repeated 'the end' after the adult modeled it.,,,
+stuart_flusberg_stuart_030400.cha_seg_047,stuart,behavior,"*MOT:	good boy .
+*CHI:	cracker .
+*MOT:	what's this ?
+*CHI:	this .",Said 'this' when asked to name the item.,Answered a naming question with 'this' instead of identifying the item.,,,
+stuart_flusberg_stuart_030610.cha_seg_025,stuart,behavior,"*MOT:	what is this ?
+*CHI:	bear .
+*CHI:	uhoh !",Answered 'bear' when asked what the item was.,Answered 'bear' to a naming question.,,,
+stuart_flusberg_stuart_030806.cha_seg_023,stuart,behavior,"*MOT:	put it on .
+*CHI:	on .
+*CHI:	on .","Repeated 'on' after being told to put the item on, without the target action being shown.",Repeated 'on' after being told to put the item on without doing the action.,,,
+stuart_flusberg_stuart_030806.cha_seg_056,stuart,behavior,"*MOT:	what's that ?
+*CHI:	shovel .
+*MOT:	good boy .
+*MOT:	what's that ?
+*CHI:	boat .
+*MOT:	good job .
+*MOT:	what's this ?
+*CHI:	boat .",Named a shovel and boats in response to repeated naming questions.,Named a shovel and boats when asked.,,,
+stuart_flusberg_stuart_030806.cha_seg_064,stuart,behavior,"*MOT:	let me see you do pattycake .
+*CHI:	pattycake .
+*MOT:	that's good .
+*CHI:	want chip .
+*MOT:	you're a good boy .
+*CHI:	want chip .
+*MOT:	you're a good boy .
+*MOT:	you like chips huh ?",Asked for a chip after the pattycake exchange.,Asked for a chip.,,,
+stuart_flusberg_stuart_031009.cha_seg_029,stuart,behavior,"*MOT:	what a good job writing .
+*CHI:	I want water .
+*MOT:	what do you want ?
+*CHI:	water .
+*MOT:	look at me .
+*CHI:	mama I want water , please .",Asked for water and repeated the request more clearly.,Asked for water and then repeated the request more clearly.,,,
+stuart_flusberg_stuart_040029.cha_seg_012,stuart,behavior,"*MOT:	play with the puzzle .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .",Repeatedly called for his mother instead of engaging with the puzzle.,Called for his mother repeatedly instead of engaging with the puzzle.,,,
+stuart_flusberg_stuart_040306.cha_seg_023,stuart,outcome,"*MOT:	dump the blocks out [NAME] .
+*CHI:	xxx .
+*MOT:	no .
+*MOT:	pick them up .
+*CHI:	okay xxx .
+*CHI:	xxx .
+*MOT:	put the cover on .
+*MOT:	you needta turn it over .",partial,incorrect,,,
+stuart_flusberg_stuart_040306.cha_seg_023,stuart,behavior,"*MOT:	dump the blocks out [NAME] .
+*CHI:	xxx .
+*MOT:	no .
+*MOT:	pick them up .
+*CHI:	okay xxx .
+*CHI:	xxx .
+*MOT:	put the cover on .
+*MOT:	you needta turn it over .",Verbally acknowledged the cleanup directions but did not clearly complete the multi-step cleanup.,Verbally acknowledged cleanup directions but did not clearly complete them.,,,
+stuart_flusberg_stuart_040306.cha_seg_024,stuart,behavior,"*MOT:	and red .
+*CHI:	mama .
+*CHI:	red .
+*CHI:	xxx .
+*CHI:	toy .
+*CHI:	potato .
+*CHI:	thank you .
+*CHI:	I want juice .",Asked for juice after producing several words during the activity.,Asked for juice.,,,
+stuart_flusberg_stuart_040521.cha_seg_015,stuart,domain,"*MOT:	<bang , bang> [/] bang .
+*CHI:	candy ?
+*MOT:	how about a piano ?
+*MOT:	have the piano .
+*MOT:	play the piano .
+*CHI:	piano .",language,play,,,
+stuart_flusberg_stuart_040521.cha_seg_015,stuart,behavior,"*MOT:	<bang , bang> [/] bang .
+*CHI:	candy ?
+*MOT:	how about a piano ?
+*MOT:	have the piano .
+*MOT:	play the piano .
+*CHI:	piano .",Repeated 'piano' after the adult talked about and instructed him to play the piano.,Repeated 'piano' after being told to play the piano.,,,

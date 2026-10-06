@@ -1,0 +1,34 @@
+Round 2 -- why you are seeing some segments again
+=================================================
+
+Thank you for completing the first sheet. Comparing the two independent sets
+of annotations showed that three of the field definitions were underspecified,
+and the two of you had reasonably read them differently. That is a fault in the
+instructions, not in your work.
+
+Those three boundaries are now written down in `annotation_codebook.md`:
+
+  1. when a modality counts as `gestural`
+  2. when `correct`/`incorrect` apply at all
+  3. when an adult's turn counts as a verbal prompt
+
+Your round-2 sheet holds the 178 segments where one of these three
+distinctions was in play. Please annotate them again from scratch, under the
+codebook.
+
+Two requests, and they matter more than speed:
+
+  - **Read the codebook first.** It has the tests and worked examples. The
+    point of this round is that both of you apply the same stated rule.
+
+  - **Do not try to recall what you put last time, and do not go back to your
+    first sheet.** Annotate each segment fresh from the transcript. The
+    segments are in a new order for exactly this reason. If your answer comes
+    out the same as before, good; if it comes out different, that is the
+    codebook doing its job. Neither outcome is the one we are hoping for.
+
+Everything else is as before: same columns, same `none` convention, empty cells
+only for rows you have not reached. Your round-1 sheet is kept as-is -- nothing
+you did is being discarded.
+
+Send back: gold_sheet_<your name>_round2.csv

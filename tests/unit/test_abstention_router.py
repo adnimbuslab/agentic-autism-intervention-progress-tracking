@@ -71,17 +71,20 @@ router = AbstentionRouter()
 
 
 class TestRouting:
+    # @spec ABSTAIN-001
     def test_failed_extraction_rejects(self) -> None:
         extraction = _make_extraction(status=ExtractionStatus.FAILED)
         validation = _make_validation(routing=RoutingDecision.ACCEPT)
         assert router.route(extraction, validation) == RoutingDecision.REJECT
 
+    # @spec ABSTAIN-002
     def test_validation_reject_preserved(self) -> None:
         obs = _make_observation()
         extraction = _make_extraction(observations=[obs])
         validation = _make_validation(routing=RoutingDecision.REJECT)
         assert router.route(extraction, validation) == RoutingDecision.REJECT
 
+    # @spec ABSTAIN-003
     def test_clarify_with_recoverable_fields(self) -> None:
         obs = _make_observation(behavior=None)
         extraction = _make_extraction(observations=[obs])
@@ -93,29 +96,43 @@ class TestRouting:
         )
         assert router.route(extraction, validation) == RoutingDecision.CLARIFY
 
+    # @spec ABSTAIN-003
     def test_clarify_without_observations_falls_back(self) -> None:
         extraction = _make_extraction(observations=[])
         validation = _make_validation(routing=RoutingDecision.CLARIFY)
         result = router.route(extraction, validation)
         assert result == RoutingDecision.CLARIFY
 
+    # @spec ABSTAIN-005
     def test_accept_passes_through(self) -> None:
         obs = _make_observation()
         extraction = _make_extraction(observations=[obs])
         validation = _make_validation(routing=RoutingDecision.ACCEPT)
         assert router.route(extraction, validation) == RoutingDecision.ACCEPT
 
+    # @spec ABSTAIN-005
     def test_retain_passes_through(self) -> None:
         obs = _make_observation()
         extraction = _make_extraction(observations=[obs])
         validation = _make_validation(routing=RoutingDecision.RETAIN_WITH_UNKNOWN)
         assert router.route(extraction, validation) == RoutingDecision.RETAIN_WITH_UNKNOWN
 
+    # @spec ABSTAIN-005
     def test_interventionist_review_passes_through(self) -> None:
         obs = _make_observation()
         extraction = _make_extraction(observations=[obs])
         validation = _make_validation(routing=RoutingDecision.INTERVENTIONIST_REVIEW)
         assert router.route(extraction, validation) == RoutingDecision.INTERVENTIONIST_REVIEW
+
+    # @spec ABSTAIN-006
+    def test_abstained_status_does_not_force_reject(self) -> None:
+        """An ABSTAINED extraction whose observation nonetheless has behavior
+        and domain present must be routed on ValidationEngine's merits, not
+        forced to REJECT merely because the extraction status is ABSTAINED."""
+        obs = _make_observation()
+        extraction = _make_extraction(status=ExtractionStatus.ABSTAINED, observations=[obs])
+        validation = _make_validation(routing=RoutingDecision.ACCEPT)
+        assert router.route(extraction, validation) == RoutingDecision.ACCEPT
 
 
 class TestClarificationQuestions:
@@ -139,6 +156,7 @@ class TestClarificationQuestions:
         questions = router.generate_clarification_questions(obs, validation)
         assert any("skill area" in q.lower() for q in questions)
 
+    # @spec ABSTAIN-010
     def test_max_three_questions(self) -> None:
         obs = _make_observation(
             behavior=None, domain=None, modality=None,
@@ -153,6 +171,7 @@ class TestClarificationQuestions:
         questions = router.generate_clarification_questions(obs, validation)
         assert len(questions) <= 3
 
+    # @spec ABSTAIN-011
     def test_critical_fields_first(self) -> None:
         obs = _make_observation(behavior=None, domain=None, modality=None)
         validation = _make_validation(
@@ -166,6 +185,7 @@ class TestClarificationQuestions:
         assert len(questions) >= 2
         assert "describe" in questions[0].lower() or "skill area" in questions[0].lower()
 
+    # @spec ABSTAIN-013
     def test_questions_not_leading(self) -> None:
         obs = _make_observation(behavior=None, domain=None, modality=None)
         validation = _make_validation(

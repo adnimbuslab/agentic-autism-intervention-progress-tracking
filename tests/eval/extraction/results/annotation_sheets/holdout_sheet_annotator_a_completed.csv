@@ -1,0 +1,1359 @@
+﻿segment_id,child_id,corpus,session_id,transcript,domain,behavior,modality,prompt_level,outcome,notes,
+mark_flusberg_mark_090818.cha_seg_003,mark,flusberg,flusberg_mark_090818.cha,"*MOT:	did you wanna buy fishies ?
+*CHI:	yes .
+*MOT:	what toys did you buy in Florida ?",social_communication,Answered yes when asked if he wanted to buy fish.,verbal,independent,none,"This was a preference answer on the first question, so there was no accuracy target.",
+brett_flusberg_brett_050800.cha_seg_081,brett,flusberg,flusberg_brett_050800.cha,"*MOT:	what did the gate do ?
+*CHI:	gate .
+*CHI:	Old_McDonald had a farm eei [/] eei , oh .
+*MOT:	and on this farm .
+*CHI:	I hafta fix it .
+*CHI:	no .",language,Repeated 'gate' and then talked about fixing it instead of answering what the gate did.,verbal,independent,incorrect,"The question asked for what the gate did, but the response did not answer that target.",
+roger_rollins_rollins_roger_rollins_020600.cha_seg_065,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	throw it away .
+%spa:	$NIA:ST
+*CHI:	xxx .
+%act:	reaches for new balloon
+*INV:	there you go .
+%spa:	$NIA:TO
+%act:	gives balloon to CHI
+*INV:	there you go .
+%spa:	$NIA:MK
+*CHI:	0 .
+%act:	looks back into trash
+*CHI:	0 .
+%act:	grabs old balloon out of trash
+*INV:	throw it away .
+%spa:	$NIA:RP
+%gpx:	points to trash
+*INV:	no good .
+%spa:	$NIA:ST
+%gpx:	points to trash again",adaptive,Reached for and pulled the old balloon back out of the trash instead of throwing it away.,none,verbal,incorrect,"The throw-away direction was repeated and then paired with pointing, but he still did the opposite.",
+jack_flusberg_jack_080506.cha_seg_003,jack,flusberg,flusberg_jack_080506.cha,"*MOT:	and who's that ?
+*CHI:	Grover .
+*MOT:	Grover .
+*MOT:	what does that say ?
+*CHI:	Sesame_Street .
+*MOT:	Sesame_Street .
+*CHI:	Big_Bird color forms play set .",language,Named Grover and read or named Sesame Street.,verbal,independent,correct,"He answered the naming questions on the first opportunity, and the adult repeated the answers.",
+josh_rollins_josh_030100.cha_seg_025,josh,rollins,rollins_josh_030100.cha,"*INV:	can you put the horse in the bucket ?
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	drops the horse in
+*INV:	thank you .
+%spa:	$MRK:MK
+*INV:	thank you .
+%spa:	$MRK:MK
+*INV:	in the bucket .
+%spa:	$NIA:SI
+%act:	drops more in
+*CHI:	0 .
+%act:	looks the toys over then puts them in the bucket",play,Put the horse and other toys into the bucket.,none,independent,correct,He followed the first clear play instruction and the adult thanked him.,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_042,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	I see Chi .
+%spa:	$NIA:ST
+%gpx:	looks in the mirror and points at his reflection
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	pull .
+%spa:	$NIA:SI
+%act:	opens the mirror
+*INV:	there's Chi .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*INV:	where's Chi ?
+%spa:	$DNP:QN
+*CHI:	0 . [+ trn]
+%spa:	$DNP:SA:CO
+%act:	knocks on the mirror cover",play,Closed the mirror and later knocked on the mirror cover during the hiding game.,none,verbal,partial,"The 'where's Chi?' question was repeated, and knocking showed some participation but did not fully answer the location target.",
+stuart_flusberg_stuart_031009.cha_seg_029,stuart,flusberg,flusberg_stuart_031009.cha,"*MOT:	what a good job writing .
+*CHI:	I want water .
+*MOT:	what do you want ?
+*CHI:	water .
+*MOT:	look at me .
+*CHI:	mama I want water , please .",language,Asked for water and repeated the request more clearly.,verbal,independent,unknown,"He initiated the water request himself, but the transcript does not show whether he received it.",
+stuart_flusberg_stuart_040306.cha_seg_024,stuart,flusberg,flusberg_stuart_040306.cha,"*MOT:	and red .
+*CHI:	mama .
+*CHI:	red .
+*CHI:	xxx .
+*CHI:	toy .
+*CHI:	potato .
+*CHI:	thank you .
+*CHI:	I want juice .",language,Asked for juice after producing several words during the activity.,verbal,independent,unknown,"The juice request was clear and child-initiated, but fulfillment is not shown.",
+mars_rollins_mars_030300.cha_seg_080,mars,rollins,rollins_mars_030300.cha,"*INV:	o@l .
+%spa:	$DHA:ST
+%gpx:	points to the mirror with her marker
+*CHI:	xxx .
+*INV:	here's o@l .
+%spa:	$DHA:ST
+%act:	draws an o@l on the mirror
+*INV:	o@l .
+%spa:	$DHA:ST
+*CHI:	0 .
+%act:	plays with chair seat",language,Made an unclear sound after the adult modeled the letter and then moved to the chair.,unknown,model,unknown,"The adult supplied the target, but the child's vocal response was not recognizable enough to judge.",
+josh_rollins_josh_020500.cha_seg_027,josh,rollins,rollins_josh_020500.cha,"*INV:	let's go downstairs .
+%spa:	$NIA:RP
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:NO
+%act:	pulls Clinician up and back to railing
+*CHI:	0 .
+%act:	goes to pole and puts fingers in holes",social_communication,Pulled the clinician back toward the railing instead of going downstairs.,gestural,independent,incorrect,The pull was directed at the clinician and communicated refusal of the first instruction.,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_079,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	0 .
+%act:	hits it with the hammer again
+*CHI:	0 .
+%act:	hits the trash can with the wrench
+*INV:	trash .
+%spa:	$DJF:ST
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VNO
+%act:	walks around room to a door",play,Hit the trash can with a wrench and then walked toward a door.,none,independent,none,This was self-directed object play; the unclear sound was not recognizable speech.,
+rick_flusberg_rick_040700.cha_seg_076,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	get the cow [NAME] .
+*CHI:	cow .
+*MOT:	[NAME] pick up the cow .",play,Said 'cow' after being told to get the cow but did not pick it up in the segment.,verbal,independent,partial,"He responded to the cow target verbally, but the requested play action was not completed.",
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_078,roger_flusberg,flusberg,flusberg_roger_flusberg_040309.cha,"*MOT:	oh , what's on +/.
+*CHI:	tv thirty eight .
+*MOT:	channel four .
+*CHI:	channel four .
+*MOT:	turn the channel .
+*CHI:	no !
+*CHI:	no .
+*CHI:	stay .",play,Repeated 'channel four' and then verbally refused to turn the channel.,verbal,independent,incorrect,The turn-channel instruction was clear and he refused it.,
+jack_flusberg_jack_060900.cha_seg_015,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	do you wanna color this book here ?
+*CHI:	no .
+*CHI:	no .
+*MOT:	oh „ you're going to color the fruit and vegetable .
+*MOT:	can you share with joy ?
+*CHI:	no .
+*MOT:	and have her color ?
+*CHI:	I'm too big .",social_communication,Verbally refused coloring and sharing with Joy.,verbal,independent,incorrect,He clearly refused the requested activities on the first opportunity.,
+carl_rollins_carl_030700.cha_seg_030,carl,rollins,rollins_carl_030700.cha,"*INV:	is that where the eyes go ?
+%spa:	$DJF:YQ
+*CHI:	yes [=! laughs] .
+%spa:	$DJF:AA:WD
+*INV:	do you think so ?
+%spa:	$DHS:YQ
+%gpx:	looks at the potato and back at him
+*CHI:	no .
+%spa:	$DHS:AN:WD
+*INV:	no .
+%spa:	$DHS:RT
+*INV:	I think they go up here .
+%spa:	$DSS:ST
+%gpx:	points to where the eyes belong
+*CHI:	yyy yyy right here .
+%spa:	$YYY:YY:WD
+%act:	pulls the eyes out and sticks them on top of the potato
+*INV:	do those eyes go on top of her head ?
+%spa:	$DJF:YQ
+%gpx:	taps the potato",cognitive,Changed the eye placement after the adult corrected and pointed to the expected location.,verbal,verbal,incorrect,"The adult added verbal and pointing support, but the eyes were still placed on top of the head and the adult questioned that placement.",
+rick_flusberg_rick_040700.cha_seg_008,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	wanna put some pegs in ?
+*CHI:	no .
+*MOT:	no pegs in ?
+*CHI:	xxx .
+*CHI:	xxx .
+*MOT:	[NAME] , what's this number ?
+*CHI:	three .
+*MOT:	no , what's this ?",cognitive,Answered 'three' when asked to identify a number.,verbal,independent,incorrect,He answered on the first opportunity and the adult immediately said it was not correct.,
+mars_rollins_mars_030800.cha_seg_020,mars,rollins,rollins_mars_030800.cha,"*INV:	there's a guitar .
+%spa:	$DHA:ST
+%gpx:	strums her tummy
+*CHI:	yyy yyy .
+%spa:	$YYY:YY:VO
+%act:	turns the page
+*INV:	&~mm soup .
+%spa:	$DHA:ST
+%gpx:	points in the book
+*INV:	pizza .
+%spa:	$DHA:ST
+%gpx:	points
+*CHI:	0 . [+ trn]
+%spa:	$YYY:YY:CP
+%gpx:	points to the pizza
+*INV:	pizza .
+%spa:	$DJF:ST
+*INV:	what's that ?
+%spa:	$DHA:QN
+%gpx:	points in the book
+*CHI:	yyy .
+%spa:	$DJF:YY:VO",language,Pointed to the pizza after the adult labeled it and later made an unclear response to a naming question.,gestural,model,correct,"The adult supplied 'pizza' and the child pointed to the matching picture, which the adult labeled again.",
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_059,roger_flusberg,flusberg,flusberg_roger_flusberg_040309.cha,"*MOT:	sit her in the chair .
+*CHI:	sit down .
+*CHI:	xxx .
+*CHI:	let me see your teeth , [NAME] .
+*CHI:	oh , you wanna tell the dentist how you cracked your tooth .
+*CHI:	get off .
+*CHI:	get off the table !
+*CHI:	get off .",play,"Used pretend-play language about sitting, the dentist, and getting off the table.",verbal,independent,none,This was spontaneous pretend-play narration with no accuracy target.,
+stuart_flusberg_stuart_040521.cha_seg_015,stuart,flusberg,flusberg_stuart_040521.cha,"*MOT:	<bang , bang> [/] bang .
+*CHI:	candy ?
+*MOT:	how about a piano ?
+*MOT:	have the piano .
+*MOT:	play the piano .
+*CHI:	piano .",language,Repeated 'piano' after the adult talked about and instructed him to play the piano.,verbal,independent,partial,"He responded with the target word, but the requested piano-playing action was not shown.",
+mars_rollins_mars_030300.cha_seg_011,mars,rollins,rollins_mars_030300.cha,"*INV:	<wipe wipe> [/] wipe .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	drops his paper towel
+*INV:	it fell Chi .
+%spa:	$DRE:ST",adaptive,Dropped the paper towel instead of following the wipe instruction.,none,independent,incorrect,The first clear wiping instruction was not carried out.,
+sid_rollins_sid_030200.cha_seg_005,sid,rollins,rollins_sid_030200.cha,"*INV:	unhook it .
+%spa:	$NIA:EI
+%act:	reaches up
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+*INV:	unhook it .
+%spa:	$NIA:SI
+%act:	unhooks the door
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VC
+%act:	tries to open the door
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:EM:VNT
+%act:	pushes the examiner
+*INV:	open .
+%spa:	$NIA:SI
+%act:	pushes the door for him
+*CHI:	0 .
+%act:	looks in the closet",adaptive,Tried to open the door and pushed the examiner after repeated directions to unhook or open it.,gestural,verbal,partial,"He needed repeated verbal support and attempted the door task, but the adult completed key parts for him.",
+jack_flusberg_jack_080012.cha_seg_007,jack,flusberg,flusberg_jack_080012.cha,"*MOT:	did you go ride your bike with Julie and Michael ?
+*CHI:	see them this afternoon .
+*MOT:	not this afternoon , but we'll see them again soon .
+*MOT:	did [NAME] have fun playing with Julie and Michael ?
+*CHI:	yeah .",social_communication,Talked about seeing Julie and Michael and answered yes about having fun with them.,verbal,independent,none,This was ordinary social conversation rather than a right-or-wrong task.,
+stuart_flusberg_stuart_030400.cha_seg_047,stuart,flusberg,flusberg_stuart_030400.cha,"*MOT:	good boy .
+*CHI:	cracker .
+*MOT:	what's this ?
+*CHI:	this .",language,Said 'this' when asked to name the item.,verbal,independent,incorrect,"The naming question had a clear target, but 'this' did not identify the item.",
+roger_rollins_rollins_roger_rollins_021000.cha_seg_010,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	pull it out .
+%spa:	$NIA:SI
+%act:	pulls the rein out of the hole
+*CHI:	0 .
+%act:	swings the rein rather than picking it back up
+*INV:	neigh@o .
+%spa:	$NIA:PR
+%act:	rears the horse
+*INV:	horse .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	plays with the rein on the horse's head",play,Swung the horse rein and continued playing with it.,none,independent,none,The child was engaged in self-directed toy play with no scored target.,
+roger_rollins_rollins_roger_rollins_020600.cha_seg_008,roger_rollins,rollins,rollins_roger_rollins_020600.cha,"*INV:	put this block .
+%spa:	$NIA:RP
+*CHI:	xxx .
+%act:	turns it over then puts it on the stack
+*CHI:	xxx .
+%act:	takes the next block
+*INV:	0 .
+%act:	straightens the stack
+*CHI:	0 .
+%act:	pushes the blocks over",play,Turned the block over and placed it on the stack.,none,independent,correct,He completed the first block-placement instruction without added support.,
+brett_flusberg_brett_060207.cha_seg_014,brett,flusberg,flusberg_brett_060207.cha,"*MOT:	why are they trying to put the fire out ?
+*CHI:	with water .
+*MOT:	no , why ?
+*CHI:	well , because the building is burning .
+*MOT:	exactly !
+*MOT:	boy are you +/.
+*CHI:	the fire is bad's@n dangerous .
+*MOT:	it sure is [NAME] .",cognitive,Explained that the building fire should be put out because the building was burning.,verbal,verbal,correct,"After the adult clarified 'why', he gave the correct causal explanation and was praised.",
+roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_026,roger_flusberg,flusberg,flusberg_roger_flusberg_031020.cha,"*MOT:	take the shapes out .
+*CHI:	oh , !
+*CHI:	yeah , it's +/.
+*CHI:	xxx .
+*MOT:	[NAME] .
+*CHI:	yeah it's the circle .
+*MOT:	put the circle in the box .
+*MOT:	what color's the circle ?",cognitive,Identified the circle while handling the shapes.,verbal,independent,none,"The circle label was spontaneous in the shape activity, and the later color target was not answered in this segment.",
+roger_rollins_rollins_roger_rollins_030300.cha_seg_021,roger_rollins,rollins,rollins_roger_rollins_030300.cha,"*CHI:	0 .
+%act:	places the large piece of play+doh on top of the rolling pin
+*CHI:	0 .
+%gpx:	reaches for the other piece of play+doh in the EXP hand
+*INV:	0 .
+%act:	holds tight to the play+doh
+*CHI:	0 .
+%act:	takes the large piece of play+doh off the top of the rolling pin
+*INV:	there's his hat .
+%spa:	$DJF:ST
+%gpx:	points to the piece of play+doh CHI is holding
+*CHI:	0 .
+%act:	puts the piece of play+doh down on the counter",language,Reached toward the play-doh held by the adult to request it.,gestural,independent,incorrect,"The reach was a functional request, but the adult held onto the play-doh and did not give it.",
+josh_rollins_josh_020800.cha_seg_011,josh,rollins,rollins_josh_020800.cha,"*INV:	I'm gonna put the puzzle up here on the shelf .
+%spa:	$NIA:SI
+*CHI:	xxx .
+%act:	grabs chair and leans over it
+*CHI:	0 .
+%act:	grabs doorknob
+*CHI:	0 .
+%act:	looks at Clinician
+*INV:	push your chair in .
+%spa:	$NIA:SI
+%act:	pushes chair in
+*CHI:	yyy yyy .
+%spa:	$NIA:YY:VO
+%act:	pushes Clinician's arm
+*INV:	0 .
+%act:	reaches for chi's juice
+*INV:	here's your juice .
+%spa:	$NIA:TO
+%act:	gives juice to chi",language,Pushed the clinician's arm in a way that led to getting his juice.,gestural,independent,correct,The gesture functioned as a request and the clinician then gave him the juice.,
+rick_flusberg_rick_050904.cha_seg_025,rick,flusberg,flusberg_rick_050904.cha,"*MOT:	what's this ?
+*CHI:	hat .
+*MOT:	good boy .",language,Named the item as a hat.,verbal,independent,correct,The adult immediately praised the naming response.,
+brett_flusberg_brett_060011.cha_seg_033,brett,flusberg,flusberg_brett_060011.cha,"*MOT:	what are we gonna make ?
+*CHI:	these .
+*MOT:	you wanna make swirls ?
+*CHI:	yes .
+*CHI:	want three swirls .
+*MOT:	alright .
+*MOT:	let me see you make a swirl .
+*CHI:	xxx .",language,Said he wanted three swirls during the clay activity.,verbal,independent,unknown,"The request was clear, but the transcript does not show whether the requested swirls were provided.",
+roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004,roger_flusberg,flusberg,flusberg_roger_flusberg_040727.cha,"*MOT:	[NAME] are you singing a song ?
+*CHI:	yes .
+*MOT:	what are you singing ?
+*CHI:	a microphone .
+*CHI:	play .
+*CHI:	good_night .
+*MOT:	kiss them good_night .
+*CHI:	good_night .",play,Used 'goodnight' in the pretend-play routine after the adult said to kiss them goodnight.,verbal,independent,partial,"He joined the routine verbally, but the requested kissing action was not shown.",
+stuart_flusberg_stuart_031009.cha_seg_032,stuart,flusberg,flusberg_stuart_031009.cha,"*MOT:	what are [/] these ?
+*CHI:	block .
+*MOT:	yeah , beautiful .",language,Named the items as blocks.,verbal,independent,correct,The adult positively acknowledged the naming response.,
+rick_flusberg_rick_060818.cha_seg_001,rick,flusberg,flusberg_rick_060818.cha,"*MOT:	good boy .
+*CHI:	Stan help to sprinkle .
+*MOT:	[NAME] , look .
+*MOT:	what's this ?
+*CHI:	a record player .
+*MOT:	no .
+*CHI:	record .
+*MOT:	these are records .",language,Changed his answer from 'record player' to 'record' after the adult said no.,verbal,verbal,correct,"The adult's correction was added verbal support, and the revised answer matched the adult's final label.",
+jack_flusberg_jack_060900.cha_seg_063,jack,flusberg,flusberg_jack_060900.cha,"*MOT:	you wanna set those guys up ?
+*CHI:	xxx .
+*MOT:	what is this ?
+*MOT:	[NAME] , what's this ?
+*CHI:	xxx .
+*MOT:	what's this ?
+*MOT:	what is that ?
+*CHI:	guy .",language,Eventually said 'guy' after repeated questions asking what the item was.,verbal,verbal,unknown,"The naming question was repeated, but the transcript does not confirm whether 'guy' was the correct label.",
+sid_rollins_sid_021100.cha_seg_048,sid,rollins,rollins_sid_021100.cha,"*INV:	0 .
+%act:	opens barn door
+*CHI:	0 .
+%act:	reaches inside the barn
+*INV:	0 .
+%act:	moves the gas pump out of child's reach
+*INV:	0 .
+%act:	puts horse in silo and looks at child
+*INV:	what's in there ?
+%spa:	$NIA:QN
+%act:	shakes silo and puts it down
+*CHI:	0 .
+%act:	reaches past the silo into the barn
+*CHI:	0 .
+%act:	pulls animals out of the barn
+*CHI:	0 .
+%act:	picks up silo",play,Reached into the barn and pulled animals out while the adult asked what was inside.,none,independent,partial,"He showed some understanding by taking animals out, but did not clearly answer the question.",
+rick_flusberg_rick_040700.cha_seg_073,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	put her in here and turn the crank .
+*CHI:	turn the crank .
+*MOT:	look .",play,Repeated 'turn the crank' after the adult instructed him to put the figure in and turn it.,verbal,independent,partial,He echoed part of the instruction but the requested play action was not shown.,
+mars_rollins_mars_031100.cha_seg_027,mars,rollins,rollins_mars_031100.cha,"*CHI:	xxx . [+ trn]
+%spa:	$DJF:YY:VO
+%act:	touches picture
+*CHI:	another red [//] red firetruck .
+%spa:	$DJF:RT:WD
+%act:	touching picture
+*INV:	&-uh huh .
+%spa:	$DJF:AC",language,Described the picture as another red firetruck.,verbal,independent,none,This was a spontaneous descriptive comment rather than a scored target.,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_037,roger_flusberg,flusberg,flusberg_roger_flusberg_040309.cha,"*MOT:	it's all gone .
+*CHI:	all gone .
+*CHI:	wash your hands .
+*CHI:	wash your face .
+*CHI:	take a bath .
+*MOT:	[NAME] who's this ?
+*CHI:	look .
+*CHI:	green frog .",language,Answered the character question with 'green frog'.,verbal,independent,unknown,"There was a clear naming target, but the transcript does not show confirmation of the answer.",
+josh_rollins_josh_020500.cha_seg_007,josh,rollins,rollins_josh_020500.cha,"*INV:	yyy open it .
+%spa:	$NIA:YY
+*CHI:	0 .
+%act:	puts hand on the top
+*INV:	0 .
+%act:	puts finger on spout
+*INV:	open it up .
+%spa:	$NIA:SI
+%act:	opens the spout
+*CHI:	0 .
+%act:	walks away
+*CHI:	0 .
+%act:	walks around the room
+*CHI:	xxx [=! voc] .
+%act:	bends over
+*CHI:	0 .
+%act:	stands up",adaptive,Did not open the spout after repeated directions and moved away.,none,verbal,no_response,"The opening direction was repeated, but no child completion of the target action is shown.",
+josh_rollins_josh_021100.cha_seg_013,josh,rollins,rollins_josh_021100.cha,"*INV:	okay .
+%spa:	$MRK:MK
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	walks off into the walkway
+*INV:	I have more blocks to put in the basket .
+%spa:	$DHA:ST
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	0 .
+%act:	holds up a block
+*INV:	I have a blue block .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	reaches for the block
+*INV:	wanna do it again ?
+%spa:	$NIA:RQ",language,Reached for the blue block the adult was holding.,gestural,independent,unknown,"The reach was a functional request, but the transcript does not show whether the block was given.",
+carl_rollins_carl_030700.cha_seg_032,carl,rollins,rollins_carl_030700.cha,"*INV:	is that Spot ?
+%spa:	$DJF:YQ
+%gpx:	points in the book
+*CHI:	yes .
+%spa:	$DJF:AA:WD
+*INV:	he's got his lunch pail .
+%spa:	$DJF:ST
+%gpx:	points to it",cognitive,Answered yes when asked whether the pictured character was Spot.,verbal,independent,correct,He answered the identification question directly and the interaction continued without correction.,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_026,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	push the door .
+%spa:	$NIA:SI
+*CHI:	0 .
+%act:	goes through the door
+*INV:	let's go for a walk .
+%spa:	$NIA:RP
+%act:	walks past CHI
+*CHI:	0 .
+%act:	follows
+*INV:	another door .
+%spa:	$NIA:ST
+%gpx:	points to a door
+*CHI:	0 .
+%act:	turns around and walks away",adaptive,Followed the adult for part of the walking transition but did not follow all door-related directions.,none,independent,partial,"He followed the walk on the first opportunity, but other parts of the transition were not completed.",
+carl_rollins_carl_021100.cha_seg_065,carl,rollins,rollins_carl_021100.cha,"*INV:	yummy says the horsie .
+%spa:	$DFW:ST
+*CHI:	0 .
+%act:	rubs his tummy
+*INV:	yummy .
+%spa:	$DFW:ST
+%act:	rubs his tummy
+*INV:	thank you .
+%spa:	$DFW:ST
+*CHI:	0 .
+%act:	picks up another horse and makes him eat
+*INV:	that horse is hungry too ?
+%spa:	$DFW:YQ
+*INV:	xxx . [+ trn]
+%spa:	$DFW:PR
+%act:	pretends to eat him
+*CHI:	&=laughs .",play,Used the horse in pretend eating play and made another horse eat.,none,independent,none,This was self-directed pretend play with no accuracy criterion.,
+sid_rollins_sid_030200.cha_seg_061,sid,rollins,rollins_sid_030200.cha,"*INV:	push it .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	closes the other door
+*INV:	0 .
+%act:	locks the doors
+*CHI:	0 .
+%act:	goes back to the blocks
+*INV:	what are you going to build ?
+%spa:	$NIA:QN
+*CHI:	0 .
+%act:	takes a truck out of the bucket
+*CHI:	0 .
+%act:	dumps all the legos out of the bucket
+*CHI:	0 .
+%act:	throws the bucket",play,Closed the door and then returned to playing with the blocks and truck.,none,independent,correct,He completed the first push/close target before moving back to play.,
+mars_rollins_mars_030800.cha_seg_021,mars,rollins,rollins_mars_030800.cha,"*INV:	what are those ?
+%spa:	$DJF:QN
+%gpx:	rubs her finger on the spot
+*CHI:	flower .
+%spa:	$DJF:SA:WD
+*INV:	flowers .
+%spa:	$DJF:AP
+*CHI:	0 . [+ trn]
+%spa:	$DJF:PR:CO
+%act:	puts his nose on the picture and sniffs
+*INV:	0 . [+ trn]
+%spa:	$DJF:PR
+%act:	sniffs
+*INV:	oh you smelled the flowers .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	turns the page
+*INV:	turn the page .
+%spa:	$NIA:SI",language,Named the flowers after the adult asked and pointed to them.,verbal,gestural,correct,The adult pointed to the target and then positively restated the child's answer.,
+mark_flusberg_mark_070812.cha_seg_025,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	who sits in the back seat ?
+*CHI:	peter .
+*MOT:	no .
+*MOT:	Alicia .
+*CHI:	xxx .
+*MOT:	Alicia .
+*MOT:	who else ?
+*CHI:	&~Ali .",language,Tried to answer who sits in the back seat and later produced an approximation of Alicia.,verbal,model,approximation,"After an incorrect first answer, the adult supplied 'Alicia' and the child later produced a shortened version.",
+mars_rollins_mars_030300.cha_seg_091,mars,rollins,rollins_mars_030300.cha,"*INV:	you're helping Vicki .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	turns through the pages
+*INV:	0 .
+%act:	closes the book and holds it up
+*INV:	0 .
+%act:	checks her watch
+*INV:	there you go .
+%spa:	$NIA:MK
+%act:	tries to look out the door
+*CHI:	0 .
+%gpx:	points to the book
+*INV:	let's go put this away .
+%spa:	$NIA:RP
+%gpx:	shakes the book
+*CHI:	0 .
+%act:	takes the book and stands up",adaptive,Took the book and stood up after being told and gesturally cued to put it away.,none,gestural,partial,He started the transition with the book but the actual put-away was not shown.,
+brett_flusberg_brett_070517.cha_seg_006,brett,flusberg,flusberg_brett_070517.cha,"*MOT:	what happened to my things ?
+*CHI:	they're at the xxx .
+*MOT:	they're a blub@b ?
+*CHI:	that's the play+room .
+*MOT:	looks like it .
+*MOT:	what happened to my things inside their house ?
+*CHI:	xxx xxx nice .
+*MOT:	that's nice ?",language,Gave partly unclear answers to repeated questions about where the things were.,verbal,verbal,unknown,"The adult rephrased the question, but the final answers are not clear enough to judge.",
+sid_rollins_sid_021100.cha_seg_010,sid,rollins,rollins_sid_021100.cha,"*INV:	the pg and the sheep are in the trough .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	takes pig out of trough
+*INV:	you took the pg out .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	takes sheep out of trough
+*INV:	you took the sheep out .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	puts cow in the trough
+*INV:	cow's too big .
+%spa:	$DJF:ST
+*INV:	she's too big isn't she ?
+%spa:	$DJF:ST $DJF:YQ",play,Moved the farm animals in and out of the trough.,none,independent,none,This was spontaneous toy play without a target response.,
+carl_rollins_carl_020800.cha_seg_034,carl,rollins,rollins_carl_020800.cha,"*INV:	that's what a pg makes .
+%spa:	$NIA:ST
+%act:	sets the pig down
+*CHI:	0 .
+%act:	plays with the pig
+*INV:	0 .
+%act:	gets the horse
+*INV:	move his legs .
+%spa:	$NIA:SI
+%act:	moves the horse's leg
+*INV:	move his legs .
+%spa:	$NIA:SI
+%act:	moves the horse's leg
+*CHI:	0 .
+%act:	moves the horse's leg
+*INV:	good .
+%spa:	$NIA:AP
+*CHI:	0 .
+%act:	looks off",play,Moved the horse's leg after the adult demonstrated the action.,none,model,correct,"The adult modeled moving the leg and the child then did the same, followed by praise.",
+carl_rollins_carl_030000.cha_seg_006,carl,rollins,rollins_carl_030000.cha,"*INV:	can we put (th)em back ?
+%spa:	$NIA:RP
+*CHI:	a [=? the] [*] door .
+%spa:	$DJF:ST:WD
+%act:	puts the door back on
+*INV:	there's the door .
+%spa:	$DJF:AP
+*CHI:	yyy bird .
+%spa:	$DJF:ST:WD
+%act:	puts a piece in
+*CHI:	bye .
+%spa:	$PRO:MK:WD
+*INV:	bye birdie .
+%spa:	$PRO:MK
+*CHI:	0 .
+%act:	takes the piece back out",cognitive,"Put some pieces back while naming them, then took one piece out again.",verbal,independent,partial,"He partly followed the put-back request, but the cleanup was not fully maintained.",
+roger_rollins_rollins_roger_rollins_021000.cha_seg_049,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	what's that ?
+%spa:	$YYY:QN
+%act:	grabs a spring
+*CHI:	0 .
+%act:	pats the horse's back
+*INV:	good horse .
+%spa:	$NIA:ST
+%act:	pats its back
+*CHI:	0 .
+%act:	puts the school bus on the horse's back
+*INV:	0 .
+%act:	rolls the truck up the horse's back
+*CHI:	0 .
+%act:	taps the horse above the tail
+*CHI:	0 .
+%act:	puts the school bus on the horse's back
+*CHI:	0 .
+%act:	puts the school bus on the horse's head",play,Placed vehicles on the horse and tapped the horse during self-directed play.,none,independent,none,The child continued object play instead of answering the brief question.,
+roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_010,roger_flusberg,flusberg,flusberg_roger_flusberg_030900.cha,"*MOT:	what's this on your finger ?
+*CHI:	could these xxx .
+*MOT:	whatever it is it's bothering him .
+*CHI:	wipe these .
+*CHI:	wipe these .
+*MOT:	open it .
+*CHI:	could these xxx .
+*CHI:	hey [/] prestos .",language,Asked for help with wiping or opening something on his finger.,verbal,independent,unknown,"The request language was clear enough, but the transcript does not show whether the help was provided.",
+roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_056,roger_flusberg,flusberg,flusberg_roger_flusberg_040028.cha,"*MOT:	you hafta put his shirt on .
+*CHI:	xxx .
+*MOT:	put his shirt on .",play,Did not put the shirt on after the instruction was repeated.,unknown,verbal,no_response,"The direction was repeated, but there is no completed shirt-on action and the vocal response is unclear.",
+jack_flusberg_jack_061028.cha_seg_048,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	Freddie_Rogers paints .
+*CHI:	paints .
+*MOT:	and what else does he do ?
+*CHI:	Uncle_Friday .
+*CHI:	King_Friday .
+*MOT:	oh „ King_Friday .
+*MOT:	that's on Mister_Rogers .
+*CHI:	Uncle_Friday .",language,Answered a question about Mister Rogers with character names instead of describing another action.,verbal,independent,incorrect,"The question asked what else he does, but the response gave names rather than an action.",
+stuart_flusberg_stuart_030806.cha_seg_064,stuart,flusberg,flusberg_stuart_030806.cha,"*MOT:	let me see you do pattycake .
+*CHI:	pattycake .
+*MOT:	that's good .
+*CHI:	want chip .
+*MOT:	you're a good boy .
+*CHI:	want chip .
+*MOT:	you're a good boy .
+*MOT:	you like chips huh ?",language,Asked for a chip after the pattycake exchange.,verbal,independent,unknown,"The chip request was child-initiated, but the transcript does not show whether he received one.",
+sid_rollins_sid_021100.cha_seg_011,sid,rollins,rollins_sid_021100.cha,"*INV:	she's too big isn't she ?
+%spa:	$DJF:ST $DJF:YQ
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	puts cow back in trough
+*INV:	oh [/] oh .
+%spa:	$MRK:MK
+*INV:	the cow is out .
+%spa:	$DJF:ST
+%act:	takes cow out of trough
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	puts sheep in trough",play,Moved farm animals in the trough while making unclear vocal sounds.,none,independent,none,"The activity was object play, and the sounds were not recognizable speech.",
+mark_flusberg_mark_080915.cha_seg_003,mark,flusberg,flusberg_mark_080915.cha,"*MOT:	can you open up the play-doh ?
+*CHI:	no Timmy .
+*CHI:	no Timmy .",social_communication,Verbally refused the request to open the play-doh.,verbal,independent,incorrect,He responded on the first opportunity by refusing the clear request.,
+mark_flusberg_mark_070812.cha_seg_146,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	[NAME] ?
+*CHI:	watermelon umbrella .
+*MOT:	I know you want that .
+*MOT:	you want that block don't you ?
+*MOT:	I don't know if we can find it .
+*CHI:	get new one .
+*MOT:	you want a new one , okay .
+*CHI:	orange .",language,Asked for a new block after the adult discussed the block he wanted.,verbal,independent,unknown,"The request was clear, but the transcript does not show that the new block was provided.",
+rick_flusberg_rick_061012.cha_seg_009,rick,flusberg,flusberg_rick_061012.cha,"*MOT:	what are you doing ?
+*CHI:	I <put a> [/] put a horn .
+*MOT:	what are you doing ?
+*CHI:	I playing .",language,Answered what he was doing by saying he was playing.,verbal,verbal,correct,"The question was repeated, and the second answer directly described his activity.",
+stuart_flusberg_stuart_030806.cha_seg_056,stuart,flusberg,flusberg_stuart_030806.cha,"*MOT:	what's that ?
+*CHI:	shovel .
+*MOT:	good boy .
+*MOT:	what's that ?
+*CHI:	boat .
+*MOT:	good job .
+*MOT:	what's this ?
+*CHI:	boat .",language,Named a shovel and boats in response to repeated naming questions.,verbal,independent,correct,The adult praised the first two naming responses.,
+sid_rollins_sid_021100.cha_seg_029,sid,rollins,rollins_sid_021100.cha,"*INV:	Chi's nose .
+%spa:	$DJF:ST
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:RP:VCP
+%act:	points to board
+*INV:	eye .
+%spa:	$DJF:ST
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:CP
+%act:	points to board .
+*INV:	another eye .
+%spa:	$DJF:ST
+*CHI:	0 .
+%act:	takes chalk from Clinician
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VO
+%act:	draws on board
+*INV:	draw hair .
+%spa:	$NIA:SI",cognitive,Pointed to the board for body-part cues and then drew on the board.,gestural,independent,partial,"He responded to some body-part cues, but the full requested sequence was not completed in the segment.",
+sid_rollins_sid_030200.cha_seg_063,sid,rollins,rollins_sid_030200.cha,"*INV:	can you hook that ?
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	hooks the car to the truck
+*INV:	thank you .
+%spa:	$MRK:MK
+*INV:	0 .
+%act:	moves legos around to make a path for the truck
+*CHI:	0 .
+%act:	rolls the truck through the path
+*INV:	where's he going ?
+%spa:	$NIA:QN
+*INV:	going to the gas station ?
+%spa:	$NIA:RQ
+%gpx:	taps the top of a lego structure
+*CHI:	0 .
+%act:	starts to put a ladder on the truck",play,Hooked the car to the truck and continued driving it through a Lego path.,none,independent,correct,He completed the hook-it request on the first opportunity and was thanked.,
+stuart_flusberg_stuart_030806.cha_seg_043,stuart,flusberg,flusberg_stuart_030806.cha,"*MOT:	put your hands down .
+*CHI:	down .
+*MOT:	good boy [NAME] .",behavior,Repeated 'down' after being told to put his hands down.,verbal,independent,partial,"He responded to the instruction verbally, but the transcript does not show that his hands were actually lowered.",
+rick_flusberg_rick_040700.cha_seg_066,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	there's another one .
+*CHI:	girl .
+*MOT:	that's a little girl , yeah .",language,Spontaneously labeled a little girl.,verbal,independent,correct,The adult immediately confirmed the label.,
+stuart_flusberg_stuart_030610.cha_seg_025,stuart,flusberg,flusberg_stuart_030610.cha,"*MOT:	what is this ?
+*CHI:	bear .
+*CHI:	uhoh !",language,Answered 'bear' when asked what the item was.,verbal,independent,unknown,"There is a clear naming target, but no confirmation of the answer appears in the segment.",
+mark_flusberg_mark_070700.cha_seg_066,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	no .
+*CHI:	Kimberely .
+*MOT:	no .",language,Said 'Kimberely' and was immediately told no.,verbal,independent,incorrect,The adult explicitly rejected the response.,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_014,roger_flusberg,flusberg,flusberg_roger_flusberg_040309.cha,"*MOT:	oh , okay .
+*CHI:	strawberry milk .
+*MOT:	strawberry milk .
+*MOT:	open the door oh , .
+*CHI:	open the door .
+*CHI:	eat pizza .
+*MOT:	oh , you're feeding the lady .
+*CHI:	yeah .",play,"Used pretend-play language about strawberry milk, opening the door, eating pizza, and feeding a lady.",verbal,independent,none,This was spontaneous pretend play rather than a scored task.,
+carl_rollins_carl_030700.cha_seg_038,carl,rollins,rollins_carl_030700.cha,"*INV:	pop .
+%spa:	$NIA:PR
+*CHI:	xxx .
+%act:	dances around
+*INV:	okay .
+%spa:	$NIA:MK
+*INV:	very good .
+%spa:	$NIA:AB
+*INV:	can you turn the water off ?
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	turns the water off
+*CHI:	xxx . [+ trn]
+%spa:	$MRK:MK:VO
+%act:	sticks his hands in the bubbles still in the sink
+*CHI:	a [=? the] [*] bubbles yyy is gone .
+%spa:	$DJF:ST:WD",adaptive,Turned the water off when asked.,none,independent,correct,He completed the first clear instruction and then continued talking about the bubbles.,
+roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_002,roger_flusberg,flusberg,flusberg_roger_flusberg_050218.cha,"*MOT:	do you wanna put the cars in the barn ?
+*CHI:	yeah .
+*CHI:	I wanna .
+*MOT:	what do you want ?
+*CHI:	I wanna play a railroad tracks .
+*MOT:	okay .
+*CHI:	the tracks .
+*CHI:	no [/] no !",language,Said he wanted to play with railroad tracks.,verbal,independent,correct,The child stated a functional request and the adult accepted it with 'okay'.,
+mark_flusberg_mark_070700.cha_seg_025,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	do fish live in the tree ?
+*CHI:	no .
+*MOT:	no .",cognitive,Answered no when asked whether fish live in a tree.,verbal,independent,correct,The answer matched the factual target and the adult repeated it.,
+mark_flusberg_mark_070812.cha_seg_002,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	what's the date today ?
+*CHI:	December .
+*MOT:	December what ?
+*CHI:	month .
+*CHI:	month .",cognitive,Answered with the month but not the requested full date.,verbal,verbal,partial,"The adult narrowed the question with 'December what?', but the full date was still not given.",
+josh_rollins_josh_020800.cha_seg_004,josh,rollins,rollins_josh_020800.cha,"*CHI:	&=laughs .
+%act:	looks at Clinician and smiles
+*CHI:	0 .
+%act:	plays with puzzle
+*INV:	you silly boy .
+%spa:	$DHS:ST
+%act:	touches chi's back
+*CHI:	0 .
+%act:	dumps the puzzle over
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+%act:	holds hands up
+*CHI:	0 .
+%act:	dumps puzzle
+*INV:	oh no .
+%spa:	$MRK:MK
+*INV:	they all fell out .
+%spa:	$DRE:ST
+%act:	picking up pieces from the floor",play,Dumped and handled puzzle pieces while smiling and laughing.,none,independent,none,This was self-directed puzzle play with no target to score.,
+sid_rollins_sid_020200.cha_seg_019,sid,rollins,rollins_sid_020200.cha,"*INV:	it fell .
+%spa:	$DRE:ST
+*CHI:	0 .
+%act:	moves out of view
+*INV:	oop .
+%spa:	$MRK:MK
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+*CHI:	0 [=! cries] . [+ trn]
+%spa:	$NIA:EM:VO",behavior,Moved away and then cried.,none,independent,none,"The crying was an emotional reaction, not recognizable speech or a scored response.",
+jack_flusberg_jack_061028.cha_seg_007,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	he says hi to all the boys and girls .
+*CHI:	hi picture [/] picture .
+*MOT:	and picture [/] picture .
+*MOT:	he's picture [/] picture .
+*CHI:	what's wrong with that ?
+*MOT:	what's wrong with that ?
+*CHI:	what's wrong with that ?
+*CHI:	tell me what's wrong with that ?",social_communication,Asked several times what was wrong with the picture or situation.,verbal,independent,none,"The child was using speech to keep a social exchange going, not answering an accuracy target.",
+brett_flusberg_brett_060011.cha_seg_051,brett,flusberg,flusberg_brett_060011.cha,"*MOT:	see ?
+*CHI:	don't want spaghetti .
+*MOT:	yeah .",language,Verbally refused spaghetti.,verbal,independent,none,This was a functional refusal or preference statement with no accuracy criterion.,
+roger_rollins_rollins_roger_rollins_020800.cha_seg_004,roger_rollins,rollins,rollins_roger_rollins_020800.cha,"*CHI:	xxx .
+%act:	turns cookie monster around
+*CHI:	xxx . [+ trn]
+%spa:	$PRO:PR:VO
+*CHI:	xxx . [+ trn]
+%spa:	$PRO:PR:VO
+*CHI:	0 .
+%act:	opens the mouth and puts the cookie in the correct hole
+*INV:	there you go .
+%spa:	$NIA:MK
+*INV:	put it in .
+%spa:	$NIA:SI
+%act:	takes the cookie out the back
+*CHI:	0 . [+ trn]
+%spa:	$PRO:PR:VCO
+%act:	opens and closes the mouth
+*INV:	xxx . [+ trn]
+%spa:	$PRO:PR",cognitive,Put the cookie in the correct hole of the toy.,none,independent,correct,The successful placement was visible and the adult positively acknowledged it.,
+brett_flusberg_brett_051002.cha_seg_089,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	what am I doing ?
+*CHI:	you're washing the salad .
+*MOT:	yeah +/.
+*MOT:	what am I doing ?
+*CHI:	you are +/.
+*CHI:	you are washing the salad .
+*MOT:	what are you doing ?
+*CHI:	I am +/.",language,Answered action questions about washing the salad but left the final self-action answer incomplete.,verbal,independent,partial,"Some answers were correct, but the last response was unfinished.",
+carl_rollins_carl_021100.cha_seg_078,carl,rollins,rollins_carl_021100.cha,"*INV:	face will surely show it .
+%spa:	$PRO:PR
+*CHI:	&=laughs .
+%act:	stands and plays with the barn
+*INV:	if you're happy and you know it .
+%spa:	$PRO:PR
+*CHI:	rooster .
+%spa:	$DHA:ST:WD
+*INV:	what ?
+%spa:	$DCC:RR
+*CHI:	rooster .
+%spa:	$DHA:ST:WD
+%act:	gets a rooster out of the barn",language,Repeated 'rooster' and took a rooster from the barn.,verbal,independent,none,The rooster label was spontaneous in the play context rather than a scored naming target.,
+mark_flusberg_mark_071026.cha_seg_012,mark,flusberg,flusberg_mark_071026.cha,"*MOT:	what's gone ?
+*CHI:	boy .
+*MOT:	yeah , he threw the ball .
+*MOT:	we're watching the ball .
+*MOT:	go down the +/.
+*CHI:	xxx .
+*MOT:	alley .
+*MOT:	and the balls , what do the balls do here ?",language,Answered 'boy' when asked what was gone.,verbal,independent,correct,"The adult responded 'yeah', supporting that the answer was correct.",
+carl_rollins_carl_030700.cha_seg_043,carl,rollins,rollins_carl_030700.cha,"*INV:	0 .
+%act:	pulls one out
+*CHI:	yyy Exp .
+%spa:	$YYY:YY:WD
+*CHI:	I think I can .
+%spa:	$NIA:ST:WD
+%act:	pulls one out
+*INV:	yeah you can .
+%spa:	$NIA:AP
+*CHI:	I think I can .
+%spa:	$NIA:YY:WD
+%act:	walks out of the bath+room drying his hands
+*INV:	dry your hands .
+%spa:	$NIA:RP
+*CHI:	xxx .
+%act:	drops it in the wastebasket and runs off
+*INV:	Chi where should I sit ?
+%spa:	$NIA:QN",adaptive,Finished drying up and dropped the used item into the wastebasket.,none,independent,correct,He was already doing the routine and completed the disposal without needing the later reminder.,
+mars_rollins_mars_030100.cha_seg_048,mars,rollins,rollins_mars_030100.cha,"*INV:	look .
+%spa:	$DHA:RP
+%act:	drops food into chicken coop
+*CHI:	0 .
+%act:	walks to the wall behind the chicken coop and climbs up it
+*INV:	where are you going ?
+%spa:	$NIA:QN
+%act:	walks over to CHI",motor,Walked away from the chicken-coop activity and climbed the wall.,none,independent,none,This was self-directed physical movement rather than communication or a scored task.,
+mars_rollins_mars_030300.cha_seg_083,mars,rollins,rollins_mars_030300.cha,"*INV:	put that in here .
+%spa:	$NIA:RP
+%gpx:	points to a shape hole in the box
+*CHI:	xxx .
+%act:	opens the top and puts the shape in
+*INV:	xxx . [+ trn]
+%spa:	$MRK:MK
+*INV:	you're just gonna drop (th)em in .
+%spa:	$NIA:ST
+*INV:	one .
+%spa:	$NIA:CN
+*CHI:	0 .
+%act:	picks up another shape and puts it in the box
+*INV:	two .
+%spa:	$NIA:CN
+*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+%act:	picks up a shape and pulls the rest out of his reach",cognitive,Put shapes into the box but used the open top instead of the indicated shape hole.,none,gestural,partial,"The adult pointed to the target hole, and the child got the shapes into the box without fully following the indicated method.",
+josh_rollins_josh_030100.cha_seg_004,josh,rollins,rollins_josh_030100.cha,"*INV:	close the door .
+%spa:	$NIA:SI
+%act:	pushes it closed
+*CHI:	xxx .
+*INV:	closed .
+%spa:	$NIA:ST
+*CHI:	xxx .
+*INV:	okay .
+%spa:	$MRK:MK
+*INV:	Chi you needta go pottie ?
+%spa:	$NIA:YQ
+*CHI:	xxx .
+%act:	rounds the corner and starts down the hall
+*CHI:	xxx .",adaptive,Started down the hall after the adult asked whether he needed to go potty.,none,independent,partial,"He moved in the likely toileting direction, but the need or full routine was not clearly resolved.",
+sid_rollins_sid_030500.cha_seg_004,sid,rollins,rollins_sid_030500.cha,"*INV:	the end .
+%spa:	$DJF:MK
+*CHI:	a [=? the] [*] end .
+%spa:	$DJF:RT:WD
+*INV:	beep [/] beep .
+%spa:	$NIA:PR
+*INV:	is your car going home ?
+%spa:	$NIA:YQ
+*CHI:	yyy .
+%spa:	$NIA:RT:VO",language,Repeated 'the end' after the adult and later gave an unclear response about the car.,verbal,model,correct,"The clearest target was the modeled phrase 'the end', which he repeated accurately.",
+mark_flusberg_mark_070700.cha_seg_073,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	that's right .
+*CHI:	&~h [/] hat .
+*CHI:	head .
+*CHI:	house .
+*CHI:	house .
+*CHI:	horse .
+*CHI:	house .
+*MOT:	yeah , you're right .",language,Produced several similar words and was finally told he was right.,verbal,independent,correct,The adult's final positive confirmation supports the successful word response.,
+mars_rollins_mars_030800.cha_seg_076,mars,rollins,rollins_mars_030800.cha,"*INV:	we needta go out .
+%spa:	$NIA:RP
+%gpx:	points to the door
+*CHI:	0 .
+%act:	walks past her to the stairs
+*INV:	oh you wanna go up the stairs ?
+%spa:	$DCA:YQ
+*CHI:	0 .
+%act:	starts up the stairs",adaptive,Went toward the stairs instead of the door after the adult pointed toward going out.,none,gestural,incorrect,"The pointing cue showed the intended exit, but he chose the stairs instead.",
+carl_rollins_carl_030700.cha_seg_039,carl,rollins,rollins_carl_030700.cha,"*CHI:	a [=? the] [*] face on helicopter .
+%spa:	$DJF:ST:WD
+*CHI:	xxx .
+%act:	picks up the baby potato
+*CHI:	0 [=! smacks] . [+ trn]
+%spa:	$NIA:PR:VO
+%act:	kisses the baby repeatedly
+*INV:	I'm gonna put this hat on the potato head .
+%spa:	$NIA:SI
+%gpx:	holds up a hat
+*CHI:	a [=? the] [*] hat .
+%spa:	$NIA:RT:WDE
+*INV:	look how pretty .
+%spa:	$DHA:ST
+%act:	puts the hat on her potato
+*CHI:	xxx .
+%act:	twists the feet off the baby
+*CHI:	xxx .",language,Repeated 'hat' after the adult held up and named the hat.,verbal,model,correct,"The adult supplied the target word while showing the object, and the child repeated it.",
+rick_flusberg_rick_051104.cha_seg_032,rick,flusberg,flusberg_rick_051104.cha,"*MOT:	what's in your hand ?
+*CHI:	sheep .
+*MOT:	sheep .",language,Named the item in his hand as a sheep.,verbal,independent,correct,"The adult repeated the child's answer, supporting the label.",
+brett_flusberg_brett_060819.cha_seg_001,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	wanna play with some clay ?
+*CHI:	yeah .
+*MOT:	yeah , that would be fun .",social_communication,Answered yes when asked whether he wanted to play with clay.,verbal,independent,none,This was a preference question rather than a right-or-wrong target.,
+mars_rollins_mars_030300.cha_seg_013,mars,rollins,rollins_mars_030300.cha,"*INV:	here's one .
+%spa:	$DHA:ST
+%act:	picks up another shape
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:CR
+%act:	reaches for the shape
+*INV:	you want it ?
+%spa:	$NIA:YQ
+%act:	holds it out of his reach
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VNO
+%act:	pulls her shirt sleeve to get it
+*INV:	four .
+%spa:	$NIA:CN
+*INV:	0 .
+%act:	picks up another shape
+*CHI:	0 . [+ trn]
+%spa:	$NIA:YY:CR
+%act:	reaches for the shape",language,Reached and pulled the adult's sleeve to request the shape she was holding.,gestural,independent,incorrect,"The request was clear, but the adult continued holding the shape out of reach.",
+stuart_flusberg_stuart_040029.cha_seg_012,stuart,flusberg,flusberg_stuart_040029.cha,"*MOT:	play with the puzzle .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .
+*CHI:	mom .",social_communication,Repeatedly called for his mother instead of engaging with the puzzle.,verbal,independent,incorrect,"The puzzle request was clear, but he responded by calling for Mom rather than doing the activity.",
+roger_rollins_rollins_roger_rollins_021000.cha_seg_048,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	Chi .
+%spa:	$NCS:CL
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RD:NO
+%act:	plays with doorknob
+*INV:	what's in there ?
+%spa:	$NIA:QN
+%act:	comes back on camera
+*INV:	what's in there ?
+%spa:	$NIA:QN
+*INV:	0 .
+%act:	knocks
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NT
+%act:	grabs her hand
+*INV:	<knock knock> [/] knock .
+%spa:	$PRO:PR
+%act:	knocks
+*CHI:	0 . [+ trn]
+%spa:	$NIA:RP:NT
+%gpx:	guides her hand to the knob",language,Guided the adult's hand to the doorknob to request help with the door.,gestural,independent,unknown,"The hand-guiding clearly communicated a functional request, but the door-opening result is not shown.",
+josh_rollins_josh_020800.cha_seg_026,josh,rollins,rollins_josh_020800.cha,"*INV:	right here ?
+%spa:	$NIA:RP
+%gpx:	points to space
+*CHI:	0 .
+%act:	plays with the piece
+*INV:	let's turn it over .
+%spa:	$NIA:SI
+%act:	turns piece over
+*INV:	push it in .
+%spa:	$NIA:SI
+%act:	puts piece on puzzle
+*CHI:	0 .
+%act:	looks down
+*INV:	can you push it in Chi ?
+%spa:	$NIA:RP
+%gpx:	points to piece
+*INV:	I'll push your chair up .
+%spa:	$NIA:SI
+%act:	pushes chair up
+*CHI:	0 [=! coughs] .",cognitive,Did not complete the puzzle placement despite repeated instructions and pointing.,none,verbal,no_response,"The adult added verbal and gestural support, but no target placement by the child is shown.",
+mark_flusberg_mark_070700.cha_seg_062,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	when do you find pretty eggs like that ?
+*CHI:	yeah .
+*MOT:	what holiday do we have fancy eggs ?
+*MOT:	pretty eggs ?
+*CHI:	xxx .
+*MOT:	huh ?
+*MOT:	which holiday , [NAME] ?
+*CHI:	that one .",cognitive,Gave vague responses instead of naming the holiday associated with fancy eggs.,verbal,verbal,incorrect,"The holiday question was repeated and narrowed, but he never gave the required holiday.",
+jack_flusberg_jack_070106.cha_seg_007,jack,flusberg,flusberg_jack_070106.cha,"*MOT:	these are +/.
+*CHI:	blocks .
+*MOT:	right .
+*MOT:	very good .
+*MOT:	what's the next one ?
+*CHI:	blanket .
+*MOT:	right .
+*MOT:	and the next one is +/.",language,Correctly named blocks and a blanket.,verbal,independent,correct,The adult explicitly said 'right' after both responses.,
+josh_rollins_josh_030100.cha_seg_038,josh,rollins,rollins_josh_030100.cha,"*INV:	come on Chi let's put the juice up .
+%spa:	$NIA:RP
+*CHI:	yyy .
+%spa:	$NIA:RD:VO
+*INV:	oh why not ?
+%spa:	$NIA:QN",adaptive,Refused the request to put the juice away.,unknown,independent,incorrect,The adult's 'why not?' shows the unclear vocal response was understood as refusal.,
+mars_rollins_mars_031100.cha_seg_002,mars,rollins,rollins_mars_031100.cha,"*INV:	Winnie the Pooh .
+%spa:	$NIA:ST
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+%act:	takes Tigger out of box
+*INV:	there's Tigger .
+%spa:	$DJF:ST
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VO
+%act:	takes piglet out of box
+*INV:	there's piglet .
+%spa:	$DJF:ST
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+%act:	takes eore out of box
+*INV:	Egore .
+%spa:	$DJF:ST
+*CHI:	yyy .
+%spa:	$YYY:YY:VO
+%act:	sits down",play,Took character toys from the box while making jargon or unclear vocal sounds.,none,independent,none,The main behavior was object play; the sounds were not recognizable speech.,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_051,roger_flusberg,flusberg,flusberg_roger_flusberg_040309.cha,"*MOT:	cook the supper .
+*CHI:	cook it supper .
+*MOT:	you hafta sit like mommy .
+*CHI:	mommy .
+*CHI:	tv thirty eight .
+*MOT:	oh , they wanna watch tv ?
+*CHI:	go watch tv .
+*MOT:	let's watch Sesame_Street .",play,Used language while acting out cooking and television in pretend play.,verbal,independent,none,The exchange was pretend-play narration with no clear accuracy target.,
+roger_rollins_rollins_roger_rollins_021000.cha_seg_043,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	there he is .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	closes the mirror
+*INV:	close it .
+%spa:	$NIA:SI
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*INV:	where's Chi ?
+%spa:	$PRO:QN
+*CHI:	0 . [+ trn]
+%spa:	$PRO:YY:CO
+%act:	knocks",play,Closed and knocked on the mirror during the hiding game.,none,independent,none,"The child initiated the mirror actions, so I treated the main behavior as play rather than a scored response.",
+rick_flusberg_rick_050904.cha_seg_049,rick,flusberg,flusberg_rick_050904.cha,"*MOT:	that's honey [NAME] .
+*CHI:	honey .
+*MOT:	honey .
+*MOT:	pots of honey .
+*CHI:	honey .",language,Repeated 'honey' after the adult named it.,verbal,model,correct,The adult supplied the target word and the child repeated it.,
+mark_flusberg_mark_070812.cha_seg_142,mark,flusberg,flusberg_mark_070812.cha,"*MOT:	[NAME] .
+*CHI:	xxx .
+*MOT:	sit down .
+*CHI:	done .
+*MOT:	no done .
+*MOT:	do you want jello ?
+*CHI:	yes .
+*MOT:	then you come sit down .",behavior,Did not sit down and instead said he was done while negotiating for jello.,verbal,verbal,incorrect,The sit-down direction was repeated in the segment and the target action was not completed.,
+brett_flusberg_brett_060622.cha_seg_021,brett,flusberg,flusberg_brett_060622.cha,"*MOT:	what else did he put in his cart ?
+*CHI:	xxx many cl +/.
+*MOT:	did he put in games or hats or lollipops or puppies or +/.
+*MOT:	what else did he put in his cart ?
+*MOT:	what else did Santa buy at the store ?
+*CHI:	new clothes .
+*MOT:	yeah , but what else , he bought new clothes and +/.
+*MOT:	what else did he buy besides all his new clothes ?",cognitive,Recalled that Santa bought new clothes but did not supply another requested item.,verbal,verbal,partial,"The adult gave extra verbal support and one relevant answer was produced, but the full recall target was not met.",
+mark_flusberg_mark_070700.cha_seg_065,mark,flusberg,flusberg_mark_070700.cha,"*MOT:	I don't think you read this one .
+*CHI:	farmer .
+*MOT:	no .
+*MOT:	read that .
+*CHI:	father .
+*MOT:	no .
+*MOT:	read that .
+*CHI:	father .",language,Read the word incorrectly despite repeated directions and correction.,verbal,verbal,incorrect,The adult rejected both 'farmer' and 'father' for the reading target.,
+carl_rollins_carl_021100.cha_seg_047,carl,rollins,rollins_carl_021100.cha,"*INV:	now we needta put your bucket on the shelf .
+%spa:	$NIA:RP
+%gpx:	points to the bucket
+*CHI:	the shelf [?] .
+%spa:	$NIA:RT:WDE
+%act:	goes to the bucket and grabs it by the lid
+*INV:	pick it up here .
+%spa:	$NIA:RP
+%gpx:	taps the bottom of the bucket
+*CHI:	up .
+%spa:	$NIA:SI:WD
+%act:	lifts the bucket
+*INV:	up [>] ?
+%spa:	$NIA:RT
+*CHI:	up [<] .
+%spa:	$NIA:RT:WD
+*INV:	okay .
+%spa:	$NIA:AD
+*INV:	I'll do it .
+%spa:	$NIA:SI
+%act:	puts the bucket on the shelf",adaptive,Lifted the bucket after added directions but the adult ultimately put it on the shelf.,none,verbal,partial,"He completed part of the cleanup task after extra support, but the adult finished the final placement.",
+jack_flusberg_jack_061028.cha_seg_017,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	indeed he did .
+*CHI:	indeed he did .
+*MOT:	indeed he did .
+*CHI:	he loved that goat .
+*MOT:	he loved that goat .
+*CHI:	just like a kid .
+*MOT:	just like a kid .
+*CHI:	indeed he did .",language,Repeated several story phrases supplied by the adult.,verbal,model,correct,The adult provided the phrases and the child repeated them accurately in the story routine.,
+jack_flusberg_jack_061028.cha_seg_065,jack,flusberg,flusberg_jack_061028.cha,"*MOT:	who's that guy ?
+*CHI:	Snoopy .
+*MOT:	right .
+*MOT:	good .
+*MOT:	that's Snoopy .
+*CHI:	xxx .
+*MOT:	you open it , go ahead .
+*CHI:	don't be fussy .",language,Named Snoopy when asked who the character was.,verbal,independent,correct,The adult immediately said 'right' and 'good'.,
+jack_flusberg_jack_070315.cha_seg_004,jack,flusberg,flusberg_jack_070315.cha,"*MOT:	look .
+*CHI:	xxx .
+*MOT:	oh , .
+*MOT:	what's that a picture of ?
+*MOT:	do you know what these are ?
+*CHI:	things you can bake .
+*MOT:	these are +/.
+*CHI:	gumball .",language,Gave uncertain category or item labels when asked about the picture.,verbal,verbal,unknown,"The adult asked more than once, but the transcript does not establish whether the final answer was correct.",
+roger_rollins_rollins_roger_rollins_021000.cha_seg_046,roger_rollins,rollins,rollins_roger_rollins_021000.cha,"*INV:	where's Chi ?
+%spa:	$PRO:QN
+*CHI:	0 .
+%act:	looks then walks away
+*INV:	let's go for a walk .
+%spa:	$NIA:RP
+*CHI:	0 .
+%act:	plays with the horse
+*INV:	Chi you wanna go for a walk ?
+%spa:	$NIA:RQ
+*CHI:	0 .
+%act:	plays with the horse",behavior,Continued playing with the horse instead of going for a walk after the request was repeated.,none,verbal,incorrect,"The walk request was repeated, but he stayed with the horse.",
+rick_flusberg_rick_040700.cha_seg_054,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	that's good .
+*CHI:	xxx .
+*CHI:	xxx .
+*MOT:	good boy .
+*CHI:	face .
+*MOT:	what ?
+*CHI:	face .
+*CHI:	want Dan .",language,Said he wanted Dan.,verbal,independent,unknown,"The functional request was clear, but the transcript does not show whether Dan was provided or brought over.",
+jack_flusberg_jack_080221.cha_seg_006,jack,flusberg,flusberg_jack_080221.cha,"*MOT:	we don't do that .
+*CHI:	&~co [/] cover your mouth .
+*MOT:	no covering mouths .
+*MOT:	no we don't do that .
+*CHI:	cover my mouth .
+*MOT:	no .
+*MOT:	unless you're just playing , it's okay .
+*CHI:	stop .",social_communication,Talked about covering his mouth and told the adult to stop.,verbal,independent,none,"This was a social exchange about behavior and boundaries, not an accuracy task.",
+roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_013,roger_flusberg,flusberg,flusberg_roger_flusberg_050218.cha,"*MOT:	what do you wanna do , [NAME] ?
+*CHI:	I wanna play my marble .
+*MOT:	okay , let's take it apart .
+*MOT:	we can play with it later .
+*MOT:	you wanna play with something else ?
+*CHI:	yeah .
+*MOT:	what ?
+*MOT:	what do you wanna do ?",language,Said he wanted to play with his marble.,verbal,independent,incorrect,"The request was clear, and the adult explicitly delayed or refused it for the moment.",
+stuart_flusberg_stuart_040306.cha_seg_023,stuart,flusberg,flusberg_stuart_040306.cha,"*MOT:	dump the blocks out [NAME] .
+*CHI:	xxx .
+*MOT:	no .
+*MOT:	pick them up .
+*CHI:	okay xxx .
+*CHI:	xxx .
+*MOT:	put the cover on .
+*MOT:	you needta turn it over .",adaptive,Verbally acknowledged the cleanup directions but did not clearly complete the multi-step cleanup.,verbal,verbal,partial,"The adult changed and added cleanup directions, and only partial cooperation is visible.",
+rick_flusberg_rick_040700.cha_seg_108,rick,flusberg,flusberg_rick_040700.cha,"*MOT:	[NAME] , what's this ?
+*CHI:	train .
+*MOT:	the train .",language,Named the item as a train.,verbal,independent,correct,The adult immediately repeated the correct label.,
+sid_rollins_sid_020200.cha_seg_025,sid,rollins,rollins_sid_020200.cha,"*INV:	pick you up .
+%spa:	$NIA:SI
+*CHI:	xxx . [+ trn]
+%spa:	$YYY:YY:VNB
+%gpx:	motions out with one hand
+*CHI:	xxx . [+ trn]
+%spa:	$NIA:YY:VNO
+%act:	kicks feet
+*INV:	0 .
+%act:	puts CHI down
+*CHI:	xxx .
+*INV:	xxx . [+ trn]
+%spa:	$YYY:RT
+*CHI:	0 .
+%act:	tries to push door open
+*INV:	Chi .
+%spa:	$NCS:CL",social_communication,"Gestured and kicked to refuse being held, and the adult put him down.",gestural,independent,correct,The refusal was clearly communicated nonverbally and the adult responded by putting him down.,
+josh_rollins_josh_021100.cha_seg_043,josh,rollins,rollins_josh_021100.cha,"*INV:	&=gasp what do I needta do ?
+%spa:	$NIA:QN
+*CHI:	xxx [>] . [+ trn]
+%spa:	$YYY:YY:VO
+*INV:	<say move> [<] please .
+%spa:	$NIA:EI
+*CHI:	move .
+%spa:	$NIA:RT:WD",language,Said 'move' after the adult explicitly told him to say it.,verbal,model,correct,The adult supplied the target word and he repeated it.,
+stuart_flusberg_stuart_030806.cha_seg_023,stuart,flusberg,flusberg_stuart_030806.cha,"*MOT:	put it on .
+*CHI:	on .
+*CHI:	on .",play,"Repeated 'on' after being told to put the item on, without the target action being shown.",verbal,independent,partial,"The instruction was for an action, so the echoed word alone was only a partial response.",
+sid_rollins_sid_030500.cha_seg_056,sid,rollins,rollins_sid_030500.cha,"*INV:	&=gasp what do you see ?
+%spa:	$DHA:QN
+%gpx:	points to page
+*CHI:	yyy .
+%spa:	$DJF:SA:WD
+*INV:	the bird .
+%spa:	$DJF:CT
+*INV:	and there's the little red caboose .
+%spa:	$DHA:ST
+*INV:	the little red caboose always came +...
+%spa:	$TXT:EX
+*CHI:	last .
+%spa:	$TXT:CX:WD
+*INV:	last .
+%spa:	$DJF:CT
+*INV:	&=gasp what are those ?
+%spa:	$DHA:QN
+%gpx:	points to page",language,Completed the book phrase with 'last'.,verbal,verbal,correct,"The sentence stem verbally cued the target word, and the adult repeated 'last'.",
+brett_flusberg_brett_051002.cha_seg_028,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	okay ?
+*CHI:	I put it together .
+*MOT:	I mean +/.
+*MOT:	you did !
+*MOT:	who did ?
+*CHI:	I did .
+*MOT:	good working .
+*MOT:	hey [/] [NAME] , how many babys are in that picture ?",social_communication,Said he had put it together and answered 'I did' when asked who did it.,verbal,independent,correct,"The adult praised the response, confirming the answer.",
+mars_rollins_mars_030300.cha_seg_002,mars,rollins,rollins_mars_030300.cha,"*INV:	push [/] push .
+%spa:	$NIA:SI
+*CHI:	yyy .
+%spa:	$NIA:YY:VO
+*INV:	right there .
+%spa:	$NIA:ST
+*CHI:	xxx .",motor,Made unclear vocal sounds but did not complete the pushing action after added verbal guidance.,unknown,verbal,no_response,"The direction was clarified with 'right there', but no child pushing action is shown.",
+carl_rollins_carl_021100.cha_seg_045,carl,rollins,rollins_carl_021100.cha,"*INV:	that's right .
+%spa:	$NIA:AP
+%gpx:	nods
+*CHI:	0 .
+%act:	starts stacking the cards
+*INV:	done .
+%spa:	$DJF:ST
+%gpx:	points to a card
+*CHI:	done .
+%spa:	$DJF:RT:WDE
+*INV:	let's put (th)em away .
+%spa:	$NIA:RP
+*CHI:	away .
+%spa:	$NIA:RT:WDE
+%act:	stacks the last card
+*CHI:	bi(cycle) .
+%spa:	$DJF:ST:WD
+*INV:	0on 0the shelf .
+%spa:	$NIA:RP",adaptive,Said 'away' and stacked the last card during cleanup.,verbal,independent,partial,"He participated in cleanup, but the final instruction to put the cards on the shelf was not completed in the segment.",
+brett_flusberg_brett_051002.cha_seg_007,brett,flusberg,flusberg_brett_051002.cha,"*MOT:	what were you doing ?
+*CHI:	I was working on the puzzle .
+*MOT:	that's right .
+*CHI:	no .",language,Answered that he was working on the puzzle.,verbal,independent,correct,The adult explicitly said 'that's right'.,
+roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_062,roger_flusberg,flusberg,flusberg_roger_flusberg_040309.cha,"*MOT:	do you wanna sing ?
+*CHI:	sing ?
+*MOT:	sing wham .
+*CHI:	xxx .
+*CHI:	xxx .
+*CHI:	[NAME] sing .
+*CHI:	xxx .",play,Talked about singing but did not clearly carry out the requested song.,verbal,verbal,partial,"The adult gave extra verbal direction about singing, but the target song was not completed.",
+carl_rollins_carl_020800.cha_seg_048,carl,rollins,rollins_carl_020800.cha,"*CHI:	yyy .
+%spa:	$YYY:YY:VO
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+*INV:	who are you talking to ?
+%spa:	$DCC:QN
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	reaches across table and knocks the man out of the tractor
+*CHI:	yyy [= jargon] .
+%spa:	$YYY:YY:VJ
+%act:	gets the tractor
+*INV:	I'll get the farmer .
+%spa:	$NIA:SI
+%act:	stands to reach the farmer for him
+*CHI:	0 .
+%act:	plays with the sheep in the tractor",language,Responded to a question with jargon or unclear speech while continuing tractor play.,unknown,independent,unknown,"There was a clear question, but the child's response was not recognizable enough to judge.",
+josh_rollins_josh_020800.cha_seg_008,josh,rollins,rollins_josh_020800.cha,"*INV:	&=gasp . [+ trn]
+%spa:	$MRK:MK
+%act:	puts hands up
+*CHI:	0 .
+%act:	looks at puzzle
+*INV:	you did it !
+%spa:	$DRE:ET
+%act:	leans over to look at chi
+*CHI:	0 .
+%act:	looks at puzzle and smiles
+*INV:	good job .
+%spa:	$NIA:PM
+*CHI:	xxx .
+%act:	takes piece out of puzzle
+*INV:	&-uh oh .
+%spa:	$MRK:MK
+%act:	puts hands in air
+*INV:	you took the giraffe out .
+%spa:	$DRE:ST",cognitive,Completed the puzzle and smiled after the adult praised the success.,none,independent,correct,"The adult said 'you did it' and 'good job', directly confirming success.",
+josh_rollins_josh_030100.cha_seg_020,josh,rollins,rollins_josh_030100.cha,"*INV:	get it out .
+%spa:	$DJF:RP
+*CHI:	0 .
+%act:	beats the can on the table
+*INV:	can I help you ?
+%spa:	$DJF:RP
+%act:	stops him from beating",motor,Beat the can on the table instead of getting the item out.,none,independent,incorrect,"The get-it-out instruction was clear, but he used an unrelated action.",
+brett_flusberg_brett_060622.cha_seg_012,brett,flusberg,flusberg_brett_060622.cha,"*MOT:	why are you gonna make christmas trees in the play-doh ?
+*CHI:	because it was fun .
+*MOT:	because it's fun .
+*MOT:	but how ?
+*MOT:	what do you do with this thing ?
+*CHI:	flat the play-doh .
+*CHI:	cut the play-doh .
+*MOT:	<oh oh> [/] okay .",cognitive,Explained how to use the play-doh tool by saying to flatten and cut the play-doh.,verbal,independent,correct,He answered the procedure question with relevant steps and the adult accepted the response.,
+brett_flusberg_brett_060819.cha_seg_016,brett,flusberg,flusberg_brett_060819.cha,"*MOT:	before you press the button .
+*CHI:	<throw the> [/] the sweeper comes and takes them .
+*MOT:	no , what do you do ?
+*MOT:	what do you do ?
+*MOT:	what do you do to try and get the pins to fall down ?
+*CHI:	a ball .
+*MOT:	you throw the ball .
+*MOT:	where do you throw it ?",cognitive,Identified the ball after repeated questions about how to knock the pins down.,verbal,verbal,partial,He named a relevant object after added verbal support but did not yet give the full action.,
+sid_rollins_sid_030200.cha_seg_006,sid,rollins,rollins_sid_030200.cha,"*INV:	the gas station .
+%spa:	$NIA:ST
+*CHI:	0 .
+%act:	rolls the train of cars up to the gas station
+*INV:	0 .
+%act:	gets a blue car and some people from behind him",play,Rolled the train of cars up to the gas station and then continued selecting toys.,none,independent,none,"This was spontaneous play following the adult's narration, not a scored instruction.",
+rick_flusberg_rick_060522.cha_seg_002,rick,flusberg,flusberg_rick_060522.cha,"*MOT:	and there are the kids .
+*CHI:	no playing in refrigerator .
+*MOT:	there .
+*MOT:	you did a nice job setting that up , [NAME] .
+*MOT:	it looks good .
+*CHI:	are you +/.
+*MOT:	what's this [NAME] ?
+*CHI:	a stove .",language,Named the object as a stove.,verbal,independent,unknown,"There was a clear naming question, but the transcript ends without confirmation of the answer.",
+jack_flusberg_jack_080012.cha_seg_010,jack,flusberg,flusberg_jack_080012.cha,"*MOT:	okay ?
+*CHI:	xxx .
+*MOT:	would you like to do that ?
+*MOT:	that will be in a few months [NAME] .
+*CHI:	I wanna play+ground on a different day .
+*MOT:	you wanna what ?
+*CHI:	to play+ground on a different day .
+*MOT:	you wanna go on the play+ground on a different day ?",language,Said he wanted the playground on a different day and repeated it when asked for clarification.,verbal,independent,unknown,"The preference or request was clear, but the transcript does not show whether it was fulfilled.",

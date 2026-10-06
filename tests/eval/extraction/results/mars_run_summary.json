@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-09-16T11:41:33.395619+00:00",
+  "source_batch": "annotation_batch.json",
+  "generators": [
+    "llama3.2:latest",
+    "qwen2.5:3b",
+    "qwen2.5:7b"
+  ],
+  "generator_source": "replayed from annotation_batch.json",
+  "judges": [
+    "llama3.2:latest",
+    "qwen2.5:3b",
+    "qwen2.5:7b",
+    "mistral:latest",
+    "qwen3:14b"
+  ],
+  "agreement_threshold": 0.5,
+  "min_eligible_judges": 2,
+  "min_valid_judge_responses": 2,
+  "generator_confidence_policy": "minimum",
+  "run_seed": "mars-full-330-v2",
+  "n_segments": 330,
+  "n_judges_configured": 5,
+  "single_judge_ablation": false,
+  "statuses": {
+    "success": 265,
+    "abstained": 65
+  },
+  "abstention_reasons": {
+    "judge_disagreement": 21,
+    "no_reviewable_candidate": 42,
+    "insufficient_valid_judge_responses": 2
+  },
+  "judge_reliability": {
+    "llama3.2:latest": {
+      "consulted": 48,
+      "discarded": 0,
+      "discard_rate": 0.0
+    },
+    "mistral:latest": {
+      "consulted": 168,
+      "discarded": 3,
+      "discard_rate": 0.017857142857142856
+    },
+    "qwen2.5:3b": {
+      "consulted": 70,
+      "discarded": 0,
+      "discard_rate": 0.0
+    },
+    "qwen2.5:7b": {
+      "consulted": 6,
+      "discarded": 0,
+      "discard_rate": 0.0
+    },
+    "qwen3:14b": {
+      "consulted": 167,
+      "discarded": 2,
+      "discard_rate": 0.011976047904191617
+    }
+  }
+}

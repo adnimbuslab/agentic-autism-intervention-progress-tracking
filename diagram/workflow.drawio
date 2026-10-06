@@ -1,0 +1,110 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="workflow" name="End-to-End Workflow">
+    <mxGraphModel dx="1494" dy="968" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=30;fontStyle=1;fontColor=#172B4D;" value="End-to-End Application Workflow" vertex="1">
+          <mxGeometry height="45" width="700" x="70" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#5E6C84;" value="Human-led evidence workflow • AI assists with structure and organization • intervention specialist retains decision authority" vertex="1">
+          <mxGeometry height="30" width="1000" x="70" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8FF;strokeColor=#D6E4FF;fontColor=#0747A6;fontStyle=1;fontSize=14;align=left;spacingLeft=18;arcSize=12;" value="1  SETUP &amp; EVIDENCE CAPTURE" vertex="1">
+          <mxGeometry height="42" width="450" x="70" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2FBFC;strokeColor=#B3E5EA;fontColor=#006B76;fontStyle=1;fontSize=14;align=left;spacingLeft=18;arcSize=12;" value="2  AI STRUCTURING &amp; VALIDATION" vertex="1">
+          <mxGeometry height="42" width="450" x="575" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F8FA;strokeColor=#DFE1E6;fontColor=#344563;fontStyle=1;fontSize=14;align=left;spacingLeft=18;arcSize=12;" value="3  GOVERNED ANALYTICS &amp; REVIEW" vertex="1">
+          <mxGeometry height="42" width="450" x="1080" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4C9AFF;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;1. Professional setup&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Child workspace • goals &amp;amp; indicators • review period&lt;br&gt;contributors • settings • observation schedules&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="90" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4C9AFF;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;2. Distributed observation&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Authorized contributors submit observations in context.&lt;br&gt;Overdue expectations surface as missing evidence.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="90" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#36B37E;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;3. Conversational capture&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Natural-language observation stored with app-known child,&lt;br&gt;role, date, session, setting, and goal context.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="90" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#00A3BF;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;4. Qwen 2.5 7B proposes structure&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Model fills supported fields and may ask a focused clarification&lt;br&gt;only when a missing detail is recoverable.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="595" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#FFAB00;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;5. Deterministic validation&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Code checks schema, allowed values, provenance,&lt;br&gt;and explicit null / unknown states.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="595" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F0;strokeColor=#FF5630;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;6. Mandatory professional verification&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Intervention specialist compares proposal with source and&lt;br&gt;verifies, corrects, or rejects it.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="595" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFFFF4;strokeColor=#36B37E;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;7. Versioned evidence store&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Original source remains immutable; verified/corrected versions&lt;br&gt;and audit history stay linked.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="595" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E6;strokeColor=#FFAB00;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;8. Adequacy &amp;amp; representation routing&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Coverage, time, contributor roles, settings, goal-domain coverage,&lt;br&gt;and completeness determine what may be analyzed.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="1100" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#00A3BF;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;9. Deterministic analytics or abstention&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Eligible KPIs are computed by code; unsupported analyses&lt;br&gt;are withheld with a reason.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="1100" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4C9AFF;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;10. Professional dashboard &amp;amp; report&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Evidence, warnings, KPIs, withheld states, and source drill-down&lt;br&gt;are presented together.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="1100" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4C9AFF;strokeWidth=2;fontSize=14;align=left;verticalAlign=middle;spacing=14;arcSize=10;shadow=1;" value="&lt;b&gt;11. Specialist interpretation &amp;amp; next review&lt;/b&gt;&lt;br&gt;&lt;font color=&#39;#5E6C84&#39;&gt;Professional decides what the evidence means and whether goals&lt;br&gt;or strategies continue, change, pause, or end.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="410" x="1100" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="control" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F8FA;strokeColor=#8993A4;strokeWidth=1.5;fontColor=#344563;fontSize=14;align=center;verticalAlign=middle;spacing=10;arcSize=10;" value="&lt;b&gt;Cross-cutting governance controls&lt;/b&gt;&lt;br&gt;Authorization  •  Provenance  •  Immutable source  •  Versioning  •  Audit trail  •  Explicit abstention" vertex="1">
+          <mxGeometry height="70" width="900" x="350" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="authority" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DEEBFF;strokeColor=#4C9AFF;fontColor=#0747A6;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="HUMAN DECISION AUTHORITY" vertex="1">
+          <mxGeometry height="40" width="240" x="1270" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="n1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="n2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e45" edge="1" parent="1" source="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e56" edge="1" parent="1" source="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e67" edge="1" parent="1" source="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e89" edge="1" parent="1" source="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e910" edge="1" parent="1" source="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1011" edge="1" parent="1" source="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;" target="n11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="loop" edge="1" parent="1" source="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4C9AFF;strokeWidth=2;dashed=1;endArrow=block;endFill=1;fontSize=11;fontColor=#0747A6;labelBackgroundColor=#FFFFFF;" target="n1" value="next review cycle">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="760" />
+              <mxPoint x="1540" y="115" />
+              <mxPoint x="520" y="115" />
+              <mxPoint x="520" y="252" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Udszy7zOhFncSYcKMJHU-4" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="460" as="sourcePoint" />
+            <mxPoint x="560" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Udszy7zOhFncSYcKMJHU-5" edge="1" parent="1" source="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7A869A;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="740" as="sourcePoint" />
+            <mxPoint x="635" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

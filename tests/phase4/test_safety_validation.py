@@ -48,6 +48,7 @@ class TestAnalyticsDeterminism:
 class TestAnalyticsNeverLLM:
     """All KPIs must be computed by code, never by LLM."""
 
+    # @spec ANALYTICS-002
     def test_no_llm_imports_in_analytics_engine(self):
         import inspect
         from src.backend.ml import analytics_engine
@@ -57,6 +58,7 @@ class TestAnalyticsNeverLLM:
         assert "openai" not in source
         assert "langchain" not in source
 
+    # @spec ADEQ-001
     def test_no_llm_imports_in_adequacy_router(self):
         import inspect
         from src.backend.ml import adequacy_router
@@ -79,6 +81,7 @@ class TestReportSafetyPatterns:
         "Results are abnormal for this age group.",
         "You should change the goal to focus on verbal skills.",
     ])
+    # @spec REPORT-020
     def test_prohibited_text_detected(self, text):
         sections = [ReportSection(heading="Test", body=text)]
         ep = make_evidence_packet()
@@ -91,6 +94,7 @@ class TestReportSafetyPatterns:
         "Evidence was collected from home and school settings.",
         "The observation count was 5 for this period.",
     ])
+    # @spec REPORT-020
     def test_safe_text_passes(self, text):
         sections = [ReportSection(heading="Test", body=text)]
         ep = make_evidence_packet()
@@ -166,6 +170,7 @@ class TestAbstentionAsFirstClass:
 
 
 class TestEdgeCases:
+    # @spec ANALYTICS-012
     def test_unknown_outcome_excluded(self):
         engine = AnalyticsEngine()
         records = [make_record_dict(outcome="unknown") for _ in range(5)]

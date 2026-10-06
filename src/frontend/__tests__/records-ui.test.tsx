@@ -17,6 +17,8 @@ const baseRecord: StructuredRecord = {
   validation_result: { passed: true, errors: [] },
   corrected_by: null,
   correction_reason: null,
+  verified_by: null,
+  verified_at: null,
   provider: "temporary_llm",
   model: "claude-3-5-sonnet",
   prompt_version: "1.0",
@@ -27,6 +29,30 @@ describe("StructuredRecordView", () => {
   it("renders AI-derived label", () => {
     render(<StructuredRecordView record={baseRecord} />);
     expect(screen.getByText(/AI-derived/)).toBeInTheDocument();
+  });
+
+  it("says a validated record is excluded from analytics", () => {
+    // Validated means schema-conformant and unseen. The badge and the label
+    // must not let it read as settled.
+    render(<StructuredRecordView record={baseRecord} />);
+    expect(
+      screen.getByText(/excluded from longitudinal analytics/),
+    ).toBeInTheDocument();
+  });
+
+  it("shows verification provenance once verified", () => {
+    const verified: StructuredRecord = {
+      ...baseRecord,
+      status: "verified",
+      verified_by: "user-9",
+      verified_at: "2026-06-16T00:00:00Z",
+    };
+    render(<StructuredRecordView record={verified} />);
+    expect(screen.getByText("Verified")).toBeInTheDocument();
+    expect(screen.getByText(/Verified by: user-9/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/included in longitudinal analytics/),
+    ).toBeInTheDocument();
   });
 
   it("renders version badge", () => {
@@ -66,6 +92,9 @@ describe("StructuredRecordView", () => {
     expect(screen.getByText("v2")).toBeInTheDocument();
     expect(screen.getByText(/Corrected by: user-1/)).toBeInTheDocument();
     expect(screen.getByText(/Reason: Wrong domain/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/included in longitudinal analytics/),
+    ).toBeInTheDocument();
   });
 
   it("shows validation result", () => {

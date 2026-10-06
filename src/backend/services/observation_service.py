@@ -85,7 +85,7 @@ async def _run_pipeline(
     )
     provider = get_extraction_provider(
         settings.extraction_provider,
-        api_key=settings.anthropic_api_key,
+        **settings.extraction_provider_kwargs,
     )
     extraction = await provider.extract(request)
 
@@ -488,6 +488,41 @@ async def correct_record(
     db.add(corrected)
     await db.flush()
     return corrected
+
+
+async def verify_record(
+    db: AsyncSession,
+    record_id: uuid.UUID,
+    verified_by: uuid.UUID,
+) -> StructuredRecord:
+    """Record that an interventionist reviewed this record and accepts it.
+
+    No new version is created: verification changes the record's review state,
+    not its content, and the immutability rule exists to protect content. Who
+    verified and when are stored on the record; the act itself is audited by
+    the caller.
+
+    Only a record that passed deterministic validation can be verified. A
+    `PENDING` record is one the abstention router sent for review because the
+    evidence was inadequate, and accepting it unchanged would defeat that
+    routing -- it must be corrected or rejected instead.
+    """
+    record = await db.get(StructuredRecord, record_id)
+    if record is None:
+        raise ValueError(f"StructuredRecord {record_id} not found")
+    if record.status in (RecordStatus.VERIFIED, RecordStatus.CORRECTED):
+        return record
+    if record.status is not RecordStatus.VALIDATED:
+        raise ValueError(
+            f"Only a validated record can be verified; {record_id} is "
+            f"{record.status.value}."
+        )
+
+    record.status = RecordStatus.VERIFIED
+    record.verified_by = verified_by
+    record.verified_at = datetime.now(UTC)
+    await db.flush()
+    return record
 
 
 async def get_record(

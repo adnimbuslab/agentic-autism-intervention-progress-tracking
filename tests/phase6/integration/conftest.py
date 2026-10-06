@@ -233,10 +233,15 @@ async def _seed_all(setup_test_database):
         session.add(goal)
         await session.flush()
 
+        # Review-period dates are UTC days in the backend (observations are
+        # matched on submitted_at in UTC), so the period is built from the UTC
+        # date. The local date lags it in the evening west of UTC and would
+        # leave every observation submitted then outside the period.
+        today_utc = datetime.now(UTC).date()
         period = ReviewPeriod(
             child_id=child.id,
-            start_date=date.today() - timedelta(days=60),
-            end_date=date.today(),
+            start_date=today_utc - timedelta(days=60),
+            end_date=today_utc,
         )
         session.add(period)
         await session.flush()

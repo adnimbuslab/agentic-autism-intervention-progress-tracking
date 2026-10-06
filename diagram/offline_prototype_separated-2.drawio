@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="offline-prototype" name="Page-1">
+    <mxGraphModel dx="1494" dy="968" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1732" pageHeight="1002" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=34;fontStyle=1;fontColor=#123F5D;" value="Offline research and prototype request path are separated by design" vertex="1">
+          <mxGeometry height="48" width="1450" x="190" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leftGroup" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFCFD;strokeColor=#D5DCE1;strokeWidth=3;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="768" width="535" x="175" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="rightGroup" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFCFD;strokeColor=#D5DCE1;strokeWidth=3;arcSize=2;" value="" vertex="1">
+          <mxGeometry height="783" width="535" x="885" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="lh" parent="1" style="text;html=1;align=center;fontSize=26;fontStyle=1;fontColor=#123F5D;" value="OFFLINE COMPONENT EVALUATION" vertex="1">
+          <mxGeometry height="40" width="510" x="205" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="rh" parent="1" style="text;html=1;align=center;fontSize=26;fontStyle=1;fontColor=#238D97;" value="PROTOTYPE REQUEST PATH" vertex="1">
+          <mxGeometry height="40" width="500" x="885" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#183C58;fillColor=#EEF3F6;strokeColor=#123F5D;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Reference standard&lt;/b&gt;&lt;br&gt;&lt;br&gt;ASDBank proxy episodes&lt;br&gt;+ human adjudication" vertex="1">
+          <mxGeometry height="105" width="455" x="232.5" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#183C58;fillColor=#EEF3F6;strokeColor=#123F5D;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Generator evaluation&lt;/b&gt;&lt;br&gt;&lt;br&gt;Four locally served generators" vertex="1">
+          <mxGeometry height="88" width="455" x="232.5" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#183C58;fillColor=#EEF3F6;strokeColor=#123F5D;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Reranking experiment&lt;/b&gt;&lt;br&gt;&lt;br&gt;MARS: original 3-generator roster" vertex="1">
+          <mxGeometry height="88" width="455" x="232.5" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#183C58;fillColor=#EEF3F6;strokeColor=#123F5D;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Evaluation-set assessment&lt;/b&gt;&lt;br&gt;&lt;br&gt;Original frozen 132&lt;br&gt;+ overlap-excluded 121" vertex="1">
+          <mxGeometry height="105" width="455" x="232.5" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#183C58;fillColor=#EEF3F6;strokeColor=#123F5D;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Reporting experiment&lt;/b&gt;&lt;br&gt;&lt;br&gt;Experimental generative reporting&lt;br&gt;+ deterministic governance checks" vertex="1">
+          <mxGeometry height="105" width="455" x="232.5" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="findings" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;fontSize=16;fontColor=#63727E;fillColor=#FFFFFF;strokeColor=#6D7B85;strokeWidth=3;arcSize=8;" value="&lt;b&gt;Research&lt;br&gt;findings&lt;/b&gt;&lt;br&gt;&lt;br&gt;inform model&lt;br&gt;choice + safeguards" vertex="1">
+          <mxGeometry height="152" width="130" x="736" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#183C58;fillColor=#EEF3F6;strokeColor=#123F5D;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Observation&lt;/b&gt;&lt;br&gt;&lt;br&gt;Authorized natural-language submission" vertex="1">
+          <mxGeometry height="82" width="455" x="900" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#238D97;fillColor=#E7F3F4;strokeColor=#238D97;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Structured extraction&lt;/b&gt;&lt;br&gt;&lt;br&gt;Qwen 2.5 7B" vertex="1">
+          <mxGeometry height="82" width="455" x="900" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#CC7A00;fillColor=#FFF3DD;strokeColor=#D78300;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Deterministic validation&lt;/b&gt;&lt;br&gt;&lt;br&gt;Schema + provenance&lt;br&gt;Null / unknown handling" vertex="1">
+          <mxGeometry height="98" width="455" x="900" y="428" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#C94545;fillColor=#FCEBED;strokeColor=#D04A4A;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Professional verification&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mandatory verify / correct / reject" vertex="1">
+          <mxGeometry height="82" width="455" x="900" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#CC7A00;fillColor=#FFF3DD;strokeColor=#D78300;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Evidence governance&lt;/b&gt;&lt;br&gt;&lt;br&gt;Adequacy router&lt;br&gt;Deterministic analytics" vertex="1">
+          <mxGeometry height="98" width="455" x="900" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;fontColor=#238D97;fillColor=#E7F3F4;strokeColor=#238D97;strokeWidth=3;arcSize=10;" value="&lt;b&gt;Operational report&lt;/b&gt;&lt;br&gt;&lt;br&gt;Deterministic evidence-linked report" vertex="1">
+          <mxGeometry height="82" width="455" x="900" y="773" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6D7B85;" target="r2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6D7B85;" target="r3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6D7B85;" target="r4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6D7B85;" target="r5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6D7B85;" target="r6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lf" edge="1" parent="1" source="l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#123F5D;" target="findings">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="384" />
+              <mxPoint x="720" y="311" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fr" edge="1" parent="1" source="findings" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#D04A4A;" target="r2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="311" />
+              <mxPoint x="880" y="381" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="foot" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=2;fontColor=#71818D;" value="MARS and the generative-reporting experiment are not invoked in the prototype request path." vertex="1">
+          <mxGeometry height="35" width="1050" x="250" y="875" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

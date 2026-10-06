@@ -1,0 +1,4073 @@
+{
+  "generated_at": "2026-09-22T13:51:18.961918+00:00",
+  "source_gold": "gold_holdout_labels.json",
+  "source_batch": "holdout_batch.json",
+  "models": [
+    "llama3.2:latest",
+    "qwen2.5:3b",
+    "qwen2.5:7b",
+    "qwen3:14b"
+  ],
+  "fields": [
+    "domain",
+    "behavior",
+    "modality",
+    "prompt_level",
+    "outcome"
+  ],
+  "scoring_fields": [
+    "domain",
+    "modality",
+    "prompt_level",
+    "outcome"
+  ],
+  "behavior_match": "excluded",
+  "behavior_overlap_threshold": null,
+  "n_segments_scored": 132,
+  "n_gold_segments_absent_from_batch": 0,
+  "gold_segments_absent_from_batch": [],
+  "per_field_counts": {
+    "llama3.2:latest": {
+      "domain:incorrect": 98,
+      "modality:missing": 20,
+      "prompt_level:missing": 40,
+      "outcome:missing": 37,
+      "domain:missing": 19,
+      "prompt_level:correct": 45,
+      "modality:correct": 51,
+      "outcome:correct": 20,
+      "prompt_level:incorrect": 46,
+      "outcome:incorrect": 50,
+      "domain:correct": 14,
+      "outcome:hallucinated": 19,
+      "modality:incorrect": 25,
+      "modality:hallucinated": 32,
+      "outcome:correctly_null": 6,
+      "modality:correctly_null": 4,
+      "domain:hallucinated": 1,
+      "prompt_level:hallucinated": 1
+    },
+    "qwen2.5:3b": {
+      "domain:correct": 6,
+      "modality:incorrect": 23,
+      "prompt_level:missing": 119,
+      "outcome:missing": 80,
+      "domain:incorrect": 55,
+      "modality:missing": 66,
+      "domain:missing": 70,
+      "outcome:hallucinated": 9,
+      "outcome:correctly_null": 16,
+      "prompt_level:incorrect": 6,
+      "outcome:incorrect": 25,
+      "modality:correctly_null": 28,
+      "modality:hallucinated": 8,
+      "prompt_level:correct": 6,
+      "modality:correct": 7,
+      "outcome:correct": 2,
+      "domain:hallucinated": 1,
+      "prompt_level:correctly_null": 1
+    },
+    "qwen2.5:7b": {
+      "domain:correct": 44,
+      "modality:correct": 72,
+      "prompt_level:incorrect": 65,
+      "outcome:incorrect": 54,
+      "domain:incorrect": 83,
+      "prompt_level:correct": 29,
+      "outcome:correct": 29,
+      "prompt_level:missing": 37,
+      "outcome:hallucinated": 15,
+      "modality:hallucinated": 16,
+      "modality:missing": 14,
+      "modality:correctly_null": 20,
+      "outcome:correctly_null": 10,
+      "domain:missing": 4,
+      "outcome:missing": 24,
+      "modality:incorrect": 10,
+      "domain:hallucinated": 1,
+      "prompt_level:correctly_null": 1
+    },
+    "qwen3:14b": {
+      "domain:correct": 42,
+      "modality:correct": 81,
+      "prompt_level:incorrect": 82,
+      "outcome:incorrect": 66,
+      "domain:incorrect": 78,
+      "prompt_level:correct": 45,
+      "outcome:correct": 39,
+      "outcome:hallucinated": 22,
+      "domain:missing": 11,
+      "outcome:correctly_null": 3,
+      "modality:hallucinated": 34,
+      "modality:incorrect": 15,
+      "prompt_level:missing": 4,
+      "modality:correctly_null": 2,
+      "outcome:missing": 2,
+      "domain:hallucinated": 1,
+      "prompt_level:hallucinated": 1
+    }
+  },
+  "gold": {
+    "brett_flusberg_brett_050800.cha_seg_081": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "brett_flusberg_brett_051002.cha_seg_007": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "brett_flusberg_brett_051002.cha_seg_028": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "brett_flusberg_brett_051002.cha_seg_089": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "brett_flusberg_brett_060011.cha_seg_033": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "brett_flusberg_brett_060011.cha_seg_051": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "brett_flusberg_brett_060207.cha_seg_014": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "brett_flusberg_brett_060622.cha_seg_012": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "brett_flusberg_brett_060622.cha_seg_021": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "brett_flusberg_brett_060819.cha_seg_001": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correctly_null"
+      }
+    },
+    "brett_flusberg_brett_060819.cha_seg_016": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "brett_flusberg_brett_070517.cha_seg_006": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "carl_rollins_carl_020800.cha_seg_034": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "carl_rollins_carl_020800.cha_seg_048": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      }
+    },
+    "carl_rollins_carl_021100.cha_seg_045": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "carl_rollins_carl_021100.cha_seg_047": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "carl_rollins_carl_021100.cha_seg_065": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "carl_rollins_carl_021100.cha_seg_078": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "carl_rollins_carl_030000.cha_seg_006": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "carl_rollins_carl_030700.cha_seg_030": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "carl_rollins_carl_030700.cha_seg_032": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "carl_rollins_carl_030700.cha_seg_038": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "carl_rollins_carl_030700.cha_seg_039": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "carl_rollins_carl_030700.cha_seg_043": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "jack_flusberg_jack_060900.cha_seg_015": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "jack_flusberg_jack_060900.cha_seg_063": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "jack_flusberg_jack_061028.cha_seg_007": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      }
+    },
+    "jack_flusberg_jack_061028.cha_seg_017": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "jack_flusberg_jack_061028.cha_seg_048": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "jack_flusberg_jack_061028.cha_seg_065": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "jack_flusberg_jack_070106.cha_seg_007": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "jack_flusberg_jack_070315.cha_seg_004": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "jack_flusberg_jack_080012.cha_seg_007": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      }
+    },
+    "jack_flusberg_jack_080012.cha_seg_010": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "jack_flusberg_jack_080221.cha_seg_006": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "missing",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "jack_flusberg_jack_080506.cha_seg_003": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "josh_rollins_josh_020500.cha_seg_007": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "josh_rollins_josh_020500.cha_seg_027": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "josh_rollins_josh_020800.cha_seg_004": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "josh_rollins_josh_020800.cha_seg_008": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "josh_rollins_josh_020800.cha_seg_011": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "josh_rollins_josh_020800.cha_seg_026": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "josh_rollins_josh_021100.cha_seg_013": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correct"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "josh_rollins_josh_021100.cha_seg_043": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "josh_rollins_josh_030100.cha_seg_004": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "josh_rollins_josh_030100.cha_seg_020": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "josh_rollins_josh_030100.cha_seg_025": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "correct",
+        "modality": "correctly_null",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "josh_rollins_josh_030100.cha_seg_038": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_070700.cha_seg_025": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "mark_flusberg_mark_070700.cha_seg_062": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_070700.cha_seg_065": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "mark_flusberg_mark_070700.cha_seg_066": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_070700.cha_seg_073": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_070812.cha_seg_002": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_070812.cha_seg_025": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_070812.cha_seg_142": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "mark_flusberg_mark_070812.cha_seg_146": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      }
+    },
+    "mark_flusberg_mark_071026.cha_seg_012": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_080915.cha_seg_003": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mark_flusberg_mark_090818.cha_seg_003": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      }
+    },
+    "mars_rollins_mars_030100.cha_seg_048": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "mars_rollins_mars_030300.cha_seg_002": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "mars_rollins_mars_030300.cha_seg_011": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "mars_rollins_mars_030300.cha_seg_013": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mars_rollins_mars_030300.cha_seg_080": {
+      "llama3.2:latest": {
+        "domain": "hallucinated",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "hallucinated",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "hallucinated",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "correctly_null",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "hallucinated",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "correctly_null",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "hallucinated",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "hallucinated",
+        "outcome": "hallucinated"
+      }
+    },
+    "mars_rollins_mars_030300.cha_seg_083": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mars_rollins_mars_030300.cha_seg_091": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mars_rollins_mars_030800.cha_seg_020": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mars_rollins_mars_030800.cha_seg_021": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "mars_rollins_mars_030800.cha_seg_076": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "mars_rollins_mars_031100.cha_seg_002": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "mars_rollins_mars_031100.cha_seg_027": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      }
+    },
+    "rick_flusberg_rick_040700.cha_seg_008": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "rick_flusberg_rick_040700.cha_seg_054": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      }
+    },
+    "rick_flusberg_rick_040700.cha_seg_066": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "rick_flusberg_rick_040700.cha_seg_073": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "rick_flusberg_rick_040700.cha_seg_076": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "rick_flusberg_rick_040700.cha_seg_108": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "correct"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "rick_flusberg_rick_050904.cha_seg_025": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "rick_flusberg_rick_050904.cha_seg_049": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "rick_flusberg_rick_051104.cha_seg_032": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "rick_flusberg_rick_060522.cha_seg_002": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "rick_flusberg_rick_060818.cha_seg_001": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "rick_flusberg_rick_061012.cha_seg_009": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_030900.cha_seg_010": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_031020.cha_seg_026": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040028.cha_seg_056": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_014": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_037": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_051": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_059": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_062": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040309.cha_seg_078": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_040727.cha_seg_004": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_002": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "roger_flusberg_flusberg_roger_flusberg_050218.cha_seg_013": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_008": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_065": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_020600.cha_seg_079": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_020800.cha_seg_004": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_010": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_026": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_042": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_043": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_046": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_048": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_021000.cha_seg_049": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "missing",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "roger_rollins_rollins_roger_rollins_030300.cha_seg_021": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_020200.cha_seg_019": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "sid_rollins_sid_020200.cha_seg_025": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_021100.cha_seg_010": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "sid_rollins_sid_021100.cha_seg_011": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "hallucinated"
+      }
+    },
+    "sid_rollins_sid_021100.cha_seg_029": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_021100.cha_seg_048": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_030200.cha_seg_005": {
+      "llama3.2:latest": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_030200.cha_seg_006": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "correct",
+        "modality": "hallucinated",
+        "prompt_level": "correct",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "hallucinated"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "correct",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "correctly_null"
+      }
+    },
+    "sid_rollins_sid_030200.cha_seg_061": {
+      "llama3.2:latest": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_030200.cha_seg_063": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "correctly_null",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "hallucinated",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_030500.cha_seg_004": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "sid_rollins_sid_030500.cha_seg_056": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      }
+    },
+    "stuart_flusberg_stuart_030400.cha_seg_047": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "stuart_flusberg_stuart_030610.cha_seg_025": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_023": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_043": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_056": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "correct"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "stuart_flusberg_stuart_030806.cha_seg_064": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "stuart_flusberg_stuart_031009.cha_seg_029": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    },
+    "stuart_flusberg_stuart_031009.cha_seg_032": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "incorrect",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "correct"
+      }
+    },
+    "stuart_flusberg_stuart_040029.cha_seg_012": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_023": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "missing",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      }
+    },
+    "stuart_flusberg_stuart_040306.cha_seg_024": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "missing",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      },
+      "qwen3:14b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "missing",
+        "outcome": "missing"
+      }
+    },
+    "stuart_flusberg_stuart_040521.cha_seg_015": {
+      "llama3.2:latest": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen2.5:3b": {
+        "domain": "missing",
+        "behavior": "incorrect",
+        "modality": "incorrect",
+        "prompt_level": "correct",
+        "outcome": "missing"
+      },
+      "qwen2.5:7b": {
+        "domain": "incorrect",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "correct",
+        "outcome": "incorrect"
+      },
+      "qwen3:14b": {
+        "domain": "correct",
+        "behavior": "incorrect",
+        "modality": "correct",
+        "prompt_level": "incorrect",
+        "outcome": "incorrect"
+      }
+    }
+  },
+  "note": "Judgements are derived from adjudicated gold values, not authored by annotators per candidate. Every generator is scored against the same reference, so the oracle ceiling is computed over a common set."
+}
